@@ -1,0 +1,1913 @@
+{
+ "_about": "The UI word dictionary (second dictionary of the text decoder; menu/status/info labels and name fragments referenced by 2-byte macro tokens on the UI render path). u16 offset table (offsets relative to the dictionary base) followed by NUL-terminated strings. offset_entries = re-aimed table slots; string_edits = in-place re-encoded entry text (offset relative to the base, jp = original text at the same offset).",
+ "base": {
+  "file_offset": "0x12D770",
+  "count": 4080
+ },
+ "offset_entries": [
+  {
+   "index": 12,
+   "offset": "0x678C",
+   "jp": "ジオン",
+   "zh": "吉恩"
+  },
+  {
+   "index": 30,
+   "offset": "0x6792",
+   "jp": "連邦",
+   "zh": "联邦"
+  }
+ ],
+ "string_edits": [
+  {
+   "offset": "0x2002",
+   "jp": "ダメージ",
+   "zh": "伤害",
+   "payload_hex": "e8f9e988"
+  },
+  {
+   "offset": "0x2088",
+   "jp": "ティターンズ",
+   "zh": "提坦斯",
+   "payload_hex": "e821e843e7c8"
+  },
+  {
+   "offset": "0x20E7",
+   "jp": "ハマーン",
+   "zh": "哈曼",
+   "payload_hex": "e7e8e874"
+  },
+  {
+   "offset": "0x214C",
+   "jp": "ターン",
+   "zh": "回合{00}",
+   "payload_hex": "8ca000"
+  },
+  {
+   "offset": "0x21B7",
+   "jp": "タイプ",
+   "zh": "型{00}",
+   "payload_hex": "e97700"
+  },
+  {
+   "offset": "0x21CB",
+   "jp": "失敗",
+   "zh": "失败",
+   "payload_hex": "e2aae88f"
+  },
+  {
+   "offset": "0x222E",
+   "jp": "実行",
+   "zh": "实行",
+   "payload_hex": "e87f9f"
+  },
+  {
+   "offset": "0x227E",
+   "jp": "パイロット",
+   "zh": "机师{00}",
+   "payload_hex": "e7e4e96c00"
+  },
+  {
+   "offset": "0x22D8",
+   "jp": "確か",
+   "zh": "确{00}",
+   "payload_hex": "e88c00"
+  },
+  {
+   "offset": "0x22F6",
+   "jp": "ジュドー",
+   "zh": "{SLOT:2204}多",
+   "payload_hex": "e7bce7e9"
+  },
+  {
+   "offset": "0x233A",
+   "jp": "邪磨",
+   "zh": "妨碍",
+   "payload_hex": "e559e8c6"
+  },
+  {
+   "offset": "0x234B",
+   "jp": "指揮",
+   "zh": "指挥",
+   "payload_hex": "e8c0e949"
+  },
+  {
+   "offset": "0x235D",
+   "jp": "聞話",
+   "zh": "对话",
+   "payload_hex": "e7bee81f"
+  },
+  {
+   "offset": "0x2362",
+   "jp": "カウンタ",
+   "zh": "反击",
+   "payload_hex": "e87ce7cc"
+  },
+  {
+   "offset": "0x237F",
+   "jp": "黒裂史",
+   "zh": "黑历史",
+   "payload_hex": "ef3ee8fbe27f"
+  },
+  {
+   "offset": "0x23E0",
+   "jp": "危険",
+   "zh": "危险",
+   "payload_hex": "e141e932"
+  },
+  {
+   "offset": "0x240F",
+   "jp": "システム",
+   "zh": "系统",
+   "payload_hex": "e941e929"
+  },
+  {
+   "offset": "0x2486",
+   "jp": "強化",
+   "zh": "强化",
+   "payload_hex": "e8ade0d9"
+  },
+  {
+   "offset": "0x24A3",
+   "jp": "現在",
+   "zh": "现在",
+   "payload_hex": "e82fef29"
+  },
+  {
+   "offset": "0x24B0",
+   "jp": "不敗",
+   "zh": "不败",
+   "payload_hex": "e505e88f"
+  },
+  {
+   "offset": "0x24C2",
+   "jp": "状狂",
+   "zh": "状况",
+   "payload_hex": "e31ee8d0"
+  },
+  {
+   "offset": "0x24F0",
+   "jp": "畳包",
+   "zh": "情报",
+   "payload_hex": "e88be913"
+  },
+  {
+   "offset": "0x2561",
+   "jp": "反応",
+   "zh": "反应",
+   "payload_hex": "e87ce873"
+  },
+  {
+   "offset": "0x2584",
+   "jp": "覚悟",
+   "zh": "觉悟",
+   "payload_hex": "e8aee20a"
+  },
+  {
+   "offset": "0x25BF",
+   "jp": "愚か",
+   "zh": "愚{00}",
+   "payload_hex": "e1ad00"
+  },
+  {
+   "offset": "0x25E9",
+   "jp": "ナチュラル",
+   "zh": "自然人{00}",
+   "payload_hex": "abe7efb400"
+  },
+  {
+   "offset": "0x2607",
+   "jp": "決中",
+   "zh": "决断",
+   "payload_hex": "e8abe40c"
+  },
+  {
+   "offset": "0x260C",
+   "jp": "程土",
+   "zh": "程度",
+   "payload_hex": "e44fe46e"
+  },
+  {
+   "offset": "0x26C4",
+   "jp": "確認",
+   "zh": "确认",
+   "payload_hex": "e88ce8a0"
+  },
+  {
+   "offset": "0x277B",
+   "jp": "忍務",
+   "zh": "忍务",
+   "payload_hex": "e4a7e94f"
+  },
+  {
+   "offset": "0x2780",
+   "jp": "問題",
+   "zh": "问题",
+   "payload_hex": "e997ea12"
+  },
+  {
+   "offset": "0x27BF",
+   "jp": "コマンド",
+   "zh": "指令",
+   "payload_hex": "e8c0e94e"
+  },
+  {
+   "offset": "0x282D",
+   "jp": "マザーバンガード",
+   "zh": "母先锋{00}{00}{00}",
+   "payload_hex": "e9d5b8e967000000"
+  },
+  {
+   "offset": "0x2872",
+   "jp": "過居",
+   "zh": "过居",
+   "payload_hex": "ef36e17a"
+  },
+  {
+   "offset": "0x2892",
+   "jp": "目標",
+   "zh": "目标",
+   "payload_hex": "d5e96f"
+  },
+  {
+   "offset": "0x28A3",
+   "jp": "量産",
+   "zh": "量产",
+   "payload_hex": "e5dcec05"
+  },
+  {
+   "offset": "0x28CA",
+   "jp": "昇知",
+   "zh": "升知",
+   "payload_hex": "ed2be411"
+  },
+  {
+   "offset": "0x28CF",
+   "jp": "進路",
+   "zh": "进路",
+   "payload_hex": "e892e8d2"
+  },
+  {
+   "offset": "0x28EE",
+   "jp": "場所",
+   "zh": "场所{00}状态",
+   "payload_hex": "e876e2eb00e31ee994"
+  },
+  {
+   "offset": "0x2923",
+   "jp": "防衛",
+   "zh": "防卫",
+   "payload_hex": "e560e9b2"
+  },
+  {
+   "offset": "0x2997",
+   "jp": "細法",
+   "zh": "细法",
+   "payload_hex": "eb9ae54e"
+  },
+  {
+   "offset": "0x29C3",
+   "jp": "ミサイル",
+   "zh": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x29DE",
+   "jp": "帰還",
+   "zh": "归还",
+   "payload_hex": "e947e7f7"
+  },
+  {
+   "offset": "0x29FD",
+   "jp": "離脱",
+   "zh": "离脱",
+   "payload_hex": "e901e9e5"
+  },
+  {
+   "offset": "0x2A84",
+   "jp": "試作",
+   "zh": "试作",
+   "payload_hex": "e91de266"
+  },
+  {
+   "offset": "0x2B10",
+   "jp": "結果",
+   "zh": "结果",
+   "payload_hex": "e868e0e2"
+  },
+  {
+   "offset": "0x2B30",
+   "jp": "立場",
+   "zh": "立场",
+   "payload_hex": "e5cfe876"
+  },
+  {
+   "offset": "0x2B5C",
+   "jp": "記億",
+   "zh": "记亿",
+   "payload_hex": "e996edd4"
+  },
+  {
+   "offset": "0x2BC2",
+   "jp": "要請",
+   "zh": "要请",
+   "payload_hex": "e5b9e83a"
+  },
+  {
+   "offset": "0x2BDC",
+   "jp": "応援",
+   "zh": "应援",
+   "payload_hex": "e873e0c1"
+  },
+  {
+   "offset": "0x2C0F",
+   "jp": "現状",
+   "zh": "现状",
+   "payload_hex": "e82fe98b"
+  },
+  {
+   "offset": "0x2D2A",
+   "jp": "敗北",
+   "zh": "败北",
+   "payload_hex": "e88febb7"
+  },
+  {
+   "offset": "0x2D59",
+   "jp": "研級所",
+   "zh": "研级所{00}仕掛け",
+   "payload_hex": "e1e7eaeee2eb00e27ae1141f"
+  },
+  {
+   "offset": "0x2DAC",
+   "jp": "第匂",
+   "zh": "第气",
+   "payload_hex": "e3ede8ed"
+  },
+  {
+   "offset": "0x2DB8",
+   "jp": "放棄",
+   "zh": "放弃",
+   "payload_hex": "e54ce938"
+  },
+  {
+   "offset": "0x2E19",
+   "jp": "ビーム",
+   "zh": "光{00}",
+   "payload_hex": "e83d00"
+  },
+  {
+   "offset": "0x2E2D",
+   "jp": "フィールド",
+   "zh": "屏障{00}",
+   "payload_hex": "ed4eebfc00"
+  },
+  {
+   "offset": "0x2E3B",
+   "jp": "確勉",
+   "zh": "确勉",
+   "payload_hex": "e88ce53f"
+  },
+  {
+   "offset": "0x2E86",
+   "jp": "搭載",
+   "zh": "搭载",
+   "payload_hex": "e479eb1d"
+  },
+  {
+   "offset": "0x2E8B",
+   "jp": "背負",
+   "zh": "背负",
+   "payload_hex": "e4bee92c"
+  },
+  {
+   "offset": "0x2F17",
+   "jp": "終了",
+   "zh": "频了",
+   "payload_hex": "eec6e5d7"
+  },
+  {
+   "offset": "0x2F20",
+   "jp": "選択",
+   "zh": "选择",
+   "payload_hex": "e966eaaa"
+  },
+  {
+   "offset": "0x2F25",
+   "jp": "全員",
+   "zh": "全员",
+   "payload_hex": "bbe849"
+  },
+  {
+   "offset": "0x2F47",
+   "jp": "ハイパー",
+   "zh": "超级",
+   "payload_hex": "eaf6eaee"
+  },
+  {
+   "offset": "0x2F62",
+   "jp": "進攻",
+   "zh": "进攻",
+   "payload_hex": "e8929e"
+  },
+  {
+   "offset": "0x2F66",
+   "jp": "正規",
+   "zh": "正规",
+   "payload_hex": "e365ea42"
+  },
+  {
+   "offset": "0x2F73",
+   "jp": "撤収",
+   "zh": "撤收",
+   "payload_hex": "e90ae926"
+  },
+  {
+   "offset": "0x2FD0",
+   "jp": "裂史",
+   "zh": "历史",
+   "payload_hex": "e8fbe27f"
+  },
+  {
+   "offset": "0x3003",
+   "jp": "回収",
+   "zh": "回收",
+   "payload_hex": "8ce926"
+  },
+  {
+   "offset": "0x3018",
+   "jp": "匂土",
+   "zh": "气土",
+   "payload_hex": "e8ede46f"
+  },
+  {
+   "offset": "0x30A5",
+   "jp": "実験",
+   "zh": "实验",
+   "payload_hex": "e87fea99"
+  },
+  {
+   "offset": "0x30DB",
+   "jp": "栄光",
+   "zh": "荣光",
+   "payload_hex": "eb19e211"
+  },
+  {
+   "offset": "0x3137",
+   "jp": "援護",
+   "zh": "援护",
+   "payload_hex": "e0c1e8e0"
+  },
+  {
+   "offset": "0x313F",
+   "jp": "経験",
+   "zh": "经验",
+   "payload_hex": "e8b7ea99"
+  },
+  {
+   "offset": "0x3144",
+   "jp": "計画",
+   "zh": "计画",
+   "payload_hex": "ea55e0ed"
+  },
+  {
+   "offset": "0x31AA",
+   "jp": "態勢",
+   "zh": "态势",
+   "payload_hex": "e994e8fd"
+  },
+  {
+   "offset": "0x31AF",
+   "jp": "調整",
+   "zh": "调整",
+   "payload_hex": "e95ce363"
+  },
+  {
+   "offset": "0x31BD",
+   "jp": "変更",
+   "zh": "变更",
+   "payload_hex": "e955e222"
+  },
+  {
+   "offset": "0x31C2",
+   "jp": "編成",
+   "zh": "编成",
+   "payload_hex": "ec89e361"
+  },
+  {
+   "offset": "0x3217",
+   "jp": "護衛",
+   "zh": "护卫",
+   "payload_hex": "e8e0e9b2"
+  },
+  {
+   "offset": "0x3276",
+   "jp": "演習",
+   "zh": "演习",
+   "payload_hex": "e0c3eab6"
+  },
+  {
+   "offset": "0x3284",
+   "jp": "衝準",
+   "zh": "冲准{00}上が",
+   "payload_hex": "e95ee2e500b21c"
+  },
+  {
+   "offset": "0x32E5",
+   "jp": "出現",
+   "zh": "出现",
+   "payload_hex": "afe82f"
+  },
+  {
+   "offset": "0x32EE",
+   "jp": "性拡",
+   "zh": "性扩",
+   "payload_hex": "e360ec1a"
+  },
+  {
+   "offset": "0x332A",
+   "jp": "エネルギー",
+   "zh": "能量{00}",
+   "payload_hex": "e7c6e85100"
+  },
+  {
+   "offset": "0x3364",
+   "jp": "作業",
+   "zh": "作业",
+   "payload_hex": "e266eada"
+  },
+  {
+   "offset": "0x3369",
+   "jp": "実際",
+   "zh": "实际",
+   "payload_hex": "e87fedc3"
+  },
+  {
+   "offset": "0x337A",
+   "jp": "生産",
+   "zh": "生产",
+   "payload_hex": "b6ec05"
+  },
+  {
+   "offset": "0x33EF",
+   "jp": "運命",
+   "zh": "运命",
+   "payload_hex": "e986e584"
+  },
+  {
+   "offset": "0x340D",
+   "jp": "前進",
+   "zh": "前进",
+   "payload_hex": "bae892"
+  },
+  {
+   "offset": "0x3461",
+   "jp": "フィンガー",
+   "zh": "指{00}{00}{00}",
+   "payload_hex": "e8c0000000"
+  },
+  {
+   "offset": "0x347E",
+   "jp": "効果",
+   "zh": "效果",
+   "payload_hex": "ea8fe871"
+  },
+  {
+   "offset": "0x34AB",
+   "jp": "白録",
+   "zh": "白录",
+   "payload_hex": "e4c8ec16"
+  },
+  {
+   "offset": "0x3598",
+   "jp": "仮面",
+   "zh": "假面",
+   "payload_hex": "eb28e589"
+  },
+  {
+   "offset": "0x359D",
+   "jp": "価値",
+   "zh": "价值",
+   "payload_hex": "eb25ec48"
+  },
+  {
+   "offset": "0x35AB",
+   "jp": "関係",
+   "zh": "关系",
+   "payload_hex": "e8bbe1c5"
+  },
+  {
+   "offset": "0x35B0",
+   "jp": "啓弟",
+   "zh": "启弟",
+   "payload_hex": "ea3be44c"
+  },
+  {
+   "offset": "0x35B5",
+   "jp": "結構",
+   "zh": "结构",
+   "payload_hex": "e868ece3"
+  },
+  {
+   "offset": "0x35D6",
+   "jp": "増援",
+   "zh": "增援",
+   "payload_hex": "ea3de863"
+  },
+  {
+   "offset": "0x35DB",
+   "jp": "知識",
+   "zh": "知识",
+   "payload_hex": "e411e92f"
+  },
+  {
+   "offset": "0x35E0",
+   "jp": "登場",
+   "zh": "登场",
+   "payload_hex": "e46ae876"
+  },
+  {
+   "offset": "0x35E9",
+   "jp": "補充",
+   "zh": "补充",
+   "payload_hex": "ea81ea86"
+  },
+  {
+   "offset": "0x35FB",
+   "jp": "レーザー",
+   "zh": "激光",
+   "payload_hex": "e9b9e83d"
+  },
+  {
+   "offset": "0x3644",
+   "jp": "決起",
+   "zh": "决起",
+   "payload_hex": "e8abe156"
+  },
+  {
+   "offset": "0x3649",
+   "jp": "研級",
+   "zh": "研级",
+   "payload_hex": "e1e7eaee"
+  },
+  {
+   "offset": "0x3663",
+   "jp": "沈黙",
+   "zh": "沉默",
+   "payload_hex": "e983ec02"
+  },
+  {
+   "offset": "0x3679",
+   "jp": "優良",
+   "zh": "优良",
+   "payload_hex": "e9afe5db"
+  },
+  {
+   "offset": "0x367E",
+   "jp": "話聞",
+   "zh": "话聞",
+   "payload_hex": "e81fe3b6"
+  },
+  {
+   "offset": "0x36A1",
+   "jp": "マシン",
+   "zh": "机{00}",
+   "payload_hex": "e7e400"
+  },
+  {
+   "offset": "0x36E7",
+   "jp": "確信",
+   "zh": "确信",
+   "payload_hex": "e88ce32e"
+  },
+  {
+   "offset": "0x36FE",
+   "jp": "決定",
+   "zh": "决定",
+   "payload_hex": "e8abe449"
+  },
+  {
+   "offset": "0x371B",
+   "jp": "進衛",
+   "zh": "进卫",
+   "payload_hex": "e892e9b2"
+  },
+  {
+   "offset": "0x37C3",
+   "jp": "影響",
+   "zh": "影响",
+   "payload_hex": "e0b3ecbf"
+  },
+  {
+   "offset": "0x37D0",
+   "jp": "活躍",
+   "zh": "活跃",
+   "payload_hex": "e116eeab"
+  },
+  {
+   "offset": "0x37EB",
+   "jp": "乗挙",
+   "zh": "乘举",
+   "payload_hex": "ebb1ea21"
+  },
+  {
+   "offset": "0x3830",
+   "jp": "複数",
+   "zh": "复数",
+   "payload_hex": "e9eee353"
+  },
+  {
+   "offset": "0x389E",
+   "jp": "永遠",
+   "zh": "永远",
+   "payload_hex": "e0b6e94c"
+  },
+  {
+   "offset": "0x38CE",
+   "jp": "調子",
+   "zh": "调子",
+   "payload_hex": "e95ce284"
+  },
+  {
+   "offset": "0x38D8",
+   "jp": "特弔",
+   "zh": "特吊",
+   "payload_hex": "e490e444"
+  },
+  {
+   "offset": "0x395D",
+   "jp": "再郷",
+   "zh": "再乡",
+   "payload_hex": "e24feb4c"
+  },
+  {
+   "offset": "0x39A1",
+   "jp": "不覚",
+   "zh": "不觉",
+   "payload_hex": "e505e8ae"
+  },
+  {
+   "offset": "0x39C1",
+   "jp": "巨場所",
+   "zh": "巨场所{00}好都合",
+   "payload_hex": "e17be876e2eb00e218e46da0"
+  },
+  {
+   "offset": "0x3A08",
+   "jp": "衛星",
+   "zh": "卫星",
+   "payload_hex": "e9b2b5"
+  },
+  {
+   "offset": "0x3A0C",
+   "jp": "覚醒",
+   "zh": "觉醒",
+   "payload_hex": "e8aee371"
+  },
+  {
+   "offset": "0x3A18",
+   "jp": "帰搭",
+   "zh": "归搭",
+   "payload_hex": "e947e479"
+  },
+  {
+   "offset": "0x3B23",
+   "jp": "挙点",
+   "zh": "举点",
+   "payload_hex": "ea21e463"
+  },
+  {
+   "offset": "0x3B4A",
+   "jp": "進化",
+   "zh": "进化",
+   "payload_hex": "e892e0d9"
+  },
+  {
+   "offset": "0x3BD5",
+   "jp": "拡納",
+   "zh": "扩纳",
+   "payload_hex": "ec1ae882"
+  },
+  {
+   "offset": "0x3BF6",
+   "jp": "資拡",
+   "zh": "资扩",
+   "payload_hex": "eba7ec1a"
+  },
+  {
+   "offset": "0x3C16",
+   "jp": "世紀",
+   "zh": "世纪",
+   "payload_hex": "e35aeb99"
+  },
+  {
+   "offset": "0x3C41",
+   "jp": "優秀",
+   "zh": "优秀",
+   "payload_hex": "e9afe2cc"
+  },
+  {
+   "offset": "0x3C4A",
+   "jp": "預か",
+   "zh": "预{00}",
+   "payload_hex": "ea5a00"
+  },
+  {
+   "offset": "0x3CD4",
+   "jp": "緊急",
+   "zh": "紧急",
+   "payload_hex": "eaede171"
+  },
+  {
+   "offset": "0x3D2B",
+   "jp": "同調",
+   "zh": "同调",
+   "payload_hex": "e487e95c"
+  },
+  {
+   "offset": "0x3D88",
+   "jp": "未確認",
+   "zh": "未确认",
+   "payload_hex": "e577e88ce8a0"
+  },
+  {
+   "offset": "0x3DF7",
+   "jp": "結局",
+   "zh": "结局",
+   "payload_hex": "e868e19d"
+  },
+  {
+   "offset": "0x3E03",
+   "jp": "姿勢",
+   "zh": "姿势",
+   "payload_hex": "e283e8fd"
+  },
+  {
+   "offset": "0x3E38",
+   "jp": "態土",
+   "zh": "态土",
+   "payload_hex": "e994e46f"
+  },
+  {
+   "offset": "0x3E46",
+   "jp": "弾数",
+   "zh": "弹数",
+   "payload_hex": "e946e914"
+  },
+  {
+   "offset": "0x3E61",
+   "jp": "勉護",
+   "zh": "勉护",
+   "payload_hex": "e53fe8e0"
+  },
+  {
+   "offset": "0x3E97",
+   "jp": "レベル",
+   "zh": "级{00}",
+   "payload_hex": "eaee00"
+  },
+  {
+   "offset": "0x3EB2",
+   "jp": "シールド",
+   "zh": "盾牌",
+   "payload_hex": "eb63ec2b"
+  },
+  {
+   "offset": "0x3EE7",
+   "jp": "なし",
+   "zh": "无",
+   "payload_hex": "e7dc"
+  },
+  {
+   "offset": "0x3F17",
+   "jp": "可変",
+   "zh": "可变",
+   "payload_hex": "e0dee955"
+  },
+  {
+   "offset": "0x3F2F",
+   "jp": "権離",
+   "zh": "权离",
+   "payload_hex": "eb39e901"
+  },
+  {
+   "offset": "0x3F97",
+   "jp": "有効",
+   "zh": "有效",
+   "payload_hex": "e7cbea8f"
+  },
+  {
+   "offset": "0x4072",
+   "jp": "決弾",
+   "zh": "决弾",
+   "payload_hex": "e8abe40a"
+  },
+  {
+   "offset": "0x407A",
+   "jp": "光栄",
+   "zh": "光荣",
+   "payload_hex": "e211eb19"
+  },
+  {
+   "offset": "0x40C8",
+   "jp": "転進",
+   "zh": "转进",
+   "payload_hex": "e9c2e892"
+  },
+  {
+   "offset": "0x40E7",
+   "jp": "勉虜",
+   "zh": "勉虏",
+   "payload_hex": "e53febee"
+  },
+  {
+   "offset": "0x4126",
+   "jp": "メイン",
+   "zh": "主{00}",
+   "payload_hex": "e95400"
+  },
+  {
+   "offset": "0x417F",
+   "jp": "バズーカ",
+   "zh": "火箭",
+   "payload_hex": "e8daec32"
+  },
+  {
+   "offset": "0x41ED",
+   "jp": "協審",
+   "zh": "协审",
+   "payload_hex": "e8f6ecca"
+  },
+  {
+   "offset": "0x4232",
+   "jp": "処粋",
+   "zh": "处粹",
+   "payload_hex": "e903ec85"
+  },
+  {
+   "offset": "0x4273",
+   "jp": "不離",
+   "zh": "不离",
+   "payload_hex": "e505e901"
+  },
+  {
+   "offset": "0x42E0",
+   "jp": "キャノン",
+   "zh": "炮{00}{00}{00}",
+   "payload_hex": "e95a000000"
+  },
+  {
+   "offset": "0x4351",
+   "jp": "観念",
+   "zh": "观念",
+   "payload_hex": "eaf2e4ac"
+  },
+  {
+   "offset": "0x4374",
+   "jp": "構成",
+   "zh": "构成",
+   "payload_hex": "ece3e361"
+  },
+  {
+   "offset": "0x439A",
+   "jp": "乗明",
+   "zh": "乘明",
+   "payload_hex": "ebb1e585"
+  },
+  {
+   "offset": "0x43A7",
+   "jp": "推進",
+   "zh": "推进",
+   "payload_hex": "e34ae892"
+  },
+  {
+   "offset": "0x4406",
+   "jp": "辺離",
+   "zh": "边离",
+   "payload_hex": "e899e901"
+  },
+  {
+   "offset": "0x4419",
+   "jp": "眠衆",
+   "zh": "眠众",
+   "payload_hex": "e57ceafb"
+  },
+  {
+   "offset": "0x4422",
+   "jp": "明響",
+   "zh": "明响",
+   "payload_hex": "e585ecbf"
+  },
+  {
+   "offset": "0x451F",
+   "jp": "圏内",
+   "zh": "圈内",
+   "payload_hex": "e9fbe49b"
+  },
+  {
+   "offset": "0x4560",
+   "jp": "焦費",
+   "zh": "消费",
+   "payload_hex": "e928e95d"
+  },
+  {
+   "offset": "0x4575",
+   "jp": "信強",
+   "zh": "信强",
+   "payload_hex": "e32ee8ad"
+  },
+  {
+   "offset": "0x45B8",
+   "jp": "断か",
+   "zh": "断{00}",
+   "payload_hex": "e40c00"
+  },
+  {
+   "offset": "0x45C4",
+   "jp": "調査",
+   "zh": "调查",
+   "payload_hex": "e95ceae9"
+  },
+  {
+   "offset": "0x45CE",
+   "jp": "土脅",
+   "zh": "土胁",
+   "payload_hex": "e46fedad"
+  },
+  {
+   "offset": "0x45D8",
+   "jp": "討伐",
+   "zh": "讨伐",
+   "payload_hex": "e9f7e4d1"
+  },
+  {
+   "offset": "0x45F4",
+   "jp": "飛行",
+   "zh": "飞行",
+   "payload_hex": "ea459f"
+  },
+  {
+   "offset": "0x4605",
+   "jp": "武門",
+   "zh": "武门",
+   "payload_hex": "e517e90c"
+  },
+  {
+   "offset": "0x4611",
+   "jp": "副帰",
+   "zh": "副归",
+   "payload_hex": "e51de947"
+  },
+  {
+   "offset": "0x4616",
+   "jp": "変化",
+   "zh": "变化",
+   "payload_hex": "e955e0d9"
+  },
+  {
+   "offset": "0x4628",
+   "jp": "問闘",
+   "zh": "问闘{00}",
+   "payload_hex": "e997c500"
+  },
+  {
+   "offset": "0x4774",
+   "jp": "応闘",
+   "zh": "应闘{00}",
+   "payload_hex": "e873c500"
+  },
+  {
+   "offset": "0x477E",
+   "jp": "協同",
+   "zh": "协同",
+   "payload_hex": "e8f6e487"
+  },
+  {
+   "offset": "0x47AC",
+   "jp": "再編",
+   "zh": "再编",
+   "payload_hex": "e24fec89"
+  },
+  {
+   "offset": "0x47B5",
+   "jp": "最強",
+   "zh": "最强",
+   "payload_hex": "e250e8ad"
+  },
+  {
+   "offset": "0x47BA",
+   "jp": "賛成",
+   "zh": "赞成",
+   "payload_hex": "ec3ee361"
+  },
+  {
+   "offset": "0x47BF",
+   "jp": "残虜",
+   "zh": "残虏",
+   "payload_hex": "e279ebee"
+  },
+  {
+   "offset": "0x47ED",
+   "jp": "正確",
+   "zh": "正确",
+   "payload_hex": "e365e88c"
+  },
+  {
+   "offset": "0x4806",
+   "jp": "同脳",
+   "zh": "同脑",
+   "payload_hex": "e487eb67"
+  },
+  {
+   "offset": "0x4810",
+   "jp": "納得",
+   "zh": "纳得",
+   "payload_hex": "e882e48d"
+  },
+  {
+   "offset": "0x482B",
+   "jp": "余計",
+   "zh": "余计",
+   "payload_hex": "e5b0ea55"
+  },
+  {
+   "offset": "0x4951",
+   "jp": "遠両",
+   "zh": "远两",
+   "payload_hex": "e94ce97d"
+  },
+  {
+   "offset": "0x495E",
+   "jp": "拡好",
+   "zh": "扩好",
+   "payload_hex": "ec1ae218"
+  },
+  {
+   "offset": "0x497A",
+   "jp": "郷味",
+   "zh": "乡味",
+   "payload_hex": "eb4ce576"
+  },
+  {
+   "offset": "0x49AC",
+   "jp": "実態",
+   "zh": "实态",
+   "payload_hex": "e87fe994"
+  },
+  {
+   "offset": "0x49CD",
+   "jp": "信変",
+   "zh": "信变",
+   "payload_hex": "e32ee955"
+  },
+  {
+   "offset": "0x49DF",
+   "jp": "成敗",
+   "zh": "成败",
+   "payload_hex": "e361e88f"
+  },
+  {
+   "offset": "0x4A03",
+   "jp": "続行",
+   "zh": "馈行",
+   "payload_hex": "eeca9f"
+  },
+  {
+   "offset": "0x4A47",
+   "jp": "汎用",
+   "zh": "通用",
+   "payload_hex": "ef59d8"
+  },
+  {
+   "offset": "0x4A66",
+   "jp": "勉乗",
+   "zh": "勉乘",
+   "payload_hex": "e53febb1"
+  },
+  {
+   "offset": "0x4A8D",
+   "jp": "薬物",
+   "zh": "药物",
+   "payload_hex": "ebede525"
+  },
+  {
+   "offset": "0x4A9B",
+   "jp": "誘動",
+   "zh": "诱動{00}",
+   "payload_hex": "eb44c600"
+  },
+  {
+   "offset": "0x4BCD",
+   "jp": "{01}匂",
+   "zh": "气{00}",
+   "payload_hex": "e8ed00"
+  },
+  {
+   "offset": "0x4BF4",
+   "jp": "確実",
+   "zh": "确实",
+   "payload_hex": "e88ce87f"
+  },
+  {
+   "offset": "0x4C1C",
+   "jp": "欠陥",
+   "zh": "欠陷",
+   "payload_hex": "e1d0eaf9"
+  },
+  {
+   "offset": "0x4C3B",
+   "jp": "口実",
+   "zh": "口实",
+   "payload_hex": "e216e87f"
+  },
+  {
+   "offset": "0x4C52",
+   "jp": "細か",
+   "zh": "细{00}",
+   "payload_hex": "eb9a00"
+  },
+  {
+   "offset": "0x4C64",
+   "jp": "姉埋",
+   "zh": "姐埋",
+   "payload_hex": "e921e56b"
+  },
+  {
+   "offset": "0x4C76",
+   "jp": "実権",
+   "zh": "实权",
+   "payload_hex": "e87feb39"
+  },
+  {
+   "offset": "0x4CBE",
+   "jp": "親編",
+   "zh": "亲编",
+   "payload_hex": "e894ec89"
+  },
+  {
+   "offset": "0x4CCC",
+   "jp": "性張",
+   "zh": "性张",
+   "payload_hex": "e360eac5"
+  },
+  {
+   "offset": "0x4D25",
+   "jp": "調話",
+   "zh": "调话",
+   "payload_hex": "e95ce81f"
+  },
+  {
+   "offset": "0x4D33",
+   "jp": "徹底",
+   "zh": "彻底",
+   "payload_hex": "ebc5e44a"
+  },
+  {
+   "offset": "0x4D64",
+   "jp": "評価",
+   "zh": "评价",
+   "payload_hex": "ee9eeb25"
+  },
+  {
+   "offset": "0x4D69",
+   "jp": "不調",
+   "zh": "不调",
+   "payload_hex": "e505e95c"
+  },
+  {
+   "offset": "0x4FD2",
+   "jp": "規模",
+   "zh": "规模",
+   "payload_hex": "ea42e58a"
+  },
+  {
+   "offset": "0x4FDB",
+   "jp": "強週",
+   "zh": "强周",
+   "payload_hex": "e8ade2c7"
+  },
+  {
+   "offset": "0x4FE5",
+   "jp": "極被",
+   "zh": "极彼{00}",
+   "payload_hex": "eacac900"
+  },
+  {
+   "offset": "0x4FFD",
+   "jp": "決信",
+   "zh": "决信",
+   "payload_hex": "e8abe32e"
+  },
+  {
+   "offset": "0x5002",
+   "jp": "結末",
+   "zh": "结末",
+   "payload_hex": "e868e572"
+  },
+  {
+   "offset": "0x502C",
+   "jp": "失態",
+   "zh": "失态",
+   "payload_hex": "e2aae994"
+  },
+  {
+   "offset": "0x5063",
+   "jp": "精鋭",
+   "zh": "精锐",
+   "payload_hex": "e369ed14"
+  },
+  {
+   "offset": "0x507A",
+   "jp": "増加",
+   "zh": "刷加",
+   "payload_hex": "ede9e0dd"
+  },
+  {
+   "offset": "0x50C9",
+   "jp": "変角",
+   "zh": "变角",
+   "payload_hex": "e955e110"
+  },
+  {
+   "offset": "0x50CE",
+   "jp": "補旧",
+   "zh": "补旧",
+   "payload_hex": "ea81e178"
+  },
+  {
+   "offset": "0x50D3",
+   "jp": "補修",
+   "zh": "补修",
+   "payload_hex": "ea81e2ca"
+  },
+  {
+   "offset": "0x5191",
+   "jp": "サーベル",
+   "zh": "剑{00}{00}",
+   "payload_hex": "ecb30000"
+  },
+  {
+   "offset": "0x526D",
+   "jp": "過酷",
+   "zh": "过酷",
+   "payload_hex": "ef36e238"
+  },
+  {
+   "offset": "0x5288",
+   "jp": "完敗",
+   "zh": "完败",
+   "payload_hex": "e122e88f"
+  },
+  {
+   "offset": "0x529E",
+   "jp": "議務",
+   "zh": "議务",
+   "payload_hex": "e163e94f"
+  },
+  {
+   "offset": "0x52B2",
+   "jp": "強か",
+   "zh": "强{00}",
+   "payload_hex": "e8ad00"
+  },
+  {
+   "offset": "0x5314",
+   "jp": "執務",
+   "zh": "执务",
+   "payload_hex": "e9fce94f"
+  },
+  {
+   "offset": "0x534F",
+   "jp": "静か",
+   "zh": "静{00}",
+   "payload_hex": "e37300"
+  },
+  {
+   "offset": "0x537D",
+   "jp": "退場",
+   "zh": "退场",
+   "payload_hex": "e3e9e876"
+  },
+  {
+   "offset": "0x538C",
+   "jp": "知慶",
+   "zh": "知庆",
+   "payload_hex": "e411ee18"
+  },
+  {
+   "offset": "0x5402",
+   "jp": "必殺",
+   "zh": "必杀",
+   "payload_hex": "e860e89b"
+  },
+  {
+   "offset": "0x5419",
+   "jp": "負荷",
+   "zh": "负荷",
+   "payload_hex": "e92ce0e8"
+  },
+  {
+   "offset": "0x5426",
+   "jp": "分離",
+   "zh": "分离",
+   "payload_hex": "cde901"
+  },
+  {
+   "offset": "0x54AE",
+   "jp": "正念場",
+   "zh": "正念场",
+   "payload_hex": "e365e4ace876"
+  },
+  {
+   "offset": "0x563D",
+   "jp": "応急",
+   "zh": "应急",
+   "payload_hex": "e873e171"
+  },
+  {
+   "offset": "0x568A",
+   "jp": "確乗",
+   "zh": "确乘",
+   "payload_hex": "e88cebb1"
+  },
+  {
+   "offset": "0x56A2",
+   "jp": "完{01}",
+   "zh": "完{00}",
+   "payload_hex": "e12200"
+  },
+  {
+   "offset": "0x56A6",
+   "jp": "感覚",
+   "zh": "感觉",
+   "payload_hex": "e126e8ae"
+  },
+  {
+   "offset": "0x56CA",
+   "jp": "偽名",
+   "zh": "伪名",
+   "payload_hex": "eca7e583"
+  },
+  {
+   "offset": "0x56E7",
+   "jp": "許勢",
+   "zh": "许势",
+   "payload_hex": "e8a7e8fd"
+  },
+  {
+   "offset": "0x5729",
+   "jp": "経過",
+   "zh": "经过",
+   "payload_hex": "e8b7ef36"
+  },
+  {
+   "offset": "0x572E",
+   "jp": "経由",
+   "zh": "经由",
+   "payload_hex": "e8b7e5ab"
+  },
+  {
+   "offset": "0x573C",
+   "jp": "決吉",
+   "zh": "决吉",
+   "payload_hex": "e8abe164"
+  },
+  {
+   "offset": "0x5741",
+   "jp": "決別",
+   "zh": "决别",
+   "payload_hex": "e8abe7e5"
+  },
+  {
+   "offset": "0x574B",
+   "jp": "血塗",
+   "zh": "血涂",
+   "payload_hex": "e1d5ee53"
+  },
+  {
+   "offset": "0x5755",
+   "jp": "権限",
+   "zh": "权限",
+   "payload_hex": "eb39eb23"
+  },
+  {
+   "offset": "0x575A",
+   "jp": "牽制",
+   "zh": "牵制",
+   "payload_hex": "eb94e35e"
+  },
+  {
+   "offset": "0x5787",
+   "jp": "互獲",
+   "zh": "互获",
+   "payload_hex": "e206e9d8"
+  },
+  {
+   "offset": "0x57A2",
+   "jp": "誤解",
+   "zh": "误解",
+   "payload_hex": "ea33e89d"
+  },
+  {
+   "offset": "0x57A7",
+   "jp": "候補",
+   "zh": "候补",
+   "payload_hex": "e210ea81"
+  },
+  {
+   "offset": "0x57F4",
+   "jp": "賛同",
+   "zh": "赞同",
+   "payload_hex": "ec3ee487"
+  },
+  {
+   "offset": "0x5819",
+   "jp": "資源",
+   "zh": "资源",
+   "payload_hex": "eba7ebd6"
+  },
+  {
+   "offset": "0x5832",
+   "jp": "識別",
+   "zh": "识别",
+   "payload_hex": "e92fe7e5"
+  },
+  {
+   "offset": "0x586E",
+   "jp": "所調",
+   "zh": "所调",
+   "payload_hex": "e2ebe95c"
+  },
+  {
+   "offset": "0x587D",
+   "jp": "障願",
+   "zh": "障愿",
+   "payload_hex": "e312e961"
+  },
+  {
+   "offset": "0x5895",
+   "jp": "真請",
+   "zh": "真请",
+   "payload_hex": "e339e83a"
+  },
+  {
+   "offset": "0x58B3",
+   "jp": "製作",
+   "zh": "制作",
+   "payload_hex": "e35ee266"
+  },
+  {
+   "offset": "0x58E4",
+   "jp": "全弾",
+   "zh": "全弹",
+   "payload_hex": "bbe946"
+  },
+  {
+   "offset": "0x595A",
+   "jp": "頂命",
+   "zh": "顶命",
+   "payload_hex": "eca1e584"
+  },
+  {
+   "offset": "0x5992",
+   "jp": "匂従",
+   "zh": "气从",
+   "payload_hex": "e8ede88a"
+  },
+  {
+   "offset": "0x5997",
+   "jp": "匂流",
+   "zh": "气流",
+   "payload_hex": "e8ede5cd"
+  },
+  {
+   "offset": "0x599C",
+   "jp": "罵棄",
+   "zh": "骂弃",
+   "payload_hex": "eecce938"
+  },
+  {
+   "offset": "0x59B6",
+   "jp": "{01}元",
+   "zh": "元{00}",
+   "payload_hex": "e1ef00"
+  },
+  {
+   "offset": "0x59BA",
+   "jp": "表現",
+   "zh": "表现",
+   "payload_hex": "e9e7e82f"
+  },
+  {
+   "offset": "0x59BF",
+   "jp": "不{01}",
+   "zh": "不{00}",
+   "payload_hex": "e50500"
+  },
+  {
+   "offset": "0x59C7",
+   "jp": "武運",
+   "zh": "武运",
+   "payload_hex": "e517e986"
+  },
+  {
+   "offset": "0x59CC",
+   "jp": "部鎖",
+   "zh": "部锁{00}",
+   "payload_hex": "ccebfa00"
+  },
+  {
+   "offset": "0x59D1",
+   "jp": "副郷",
+   "zh": "副乡",
+   "payload_hex": "e51deb4c"
+  },
+  {
+   "offset": "0x59F5",
+   "jp": "編還",
+   "zh": "编还",
+   "payload_hex": "ec89e7f7"
+  },
+  {
+   "offset": "0x59FA",
+   "jp": "編闘",
+   "zh": "编闘{00}",
+   "payload_hex": "ec89c500"
+  },
+  {
+   "offset": "0x59FF",
+   "jp": "便護",
+   "zh": "便护",
+   "payload_hex": "e53ee8e0"
+  },
+  {
+   "offset": "0x5A3C",
+   "jp": "憂両",
+   "zh": "忧两",
+   "payload_hex": "ee1de97d"
+  },
+  {
+   "offset": "0x5A45",
+   "jp": "有線",
+   "zh": "有线",
+   "payload_hex": "e7cbe916"
+  },
+  {
+   "offset": "0x5A57",
+   "jp": "容認",
+   "zh": "容认",
+   "payload_hex": "e5b4e8a0"
+  },
+  {
+   "offset": "0x5A65",
+   "jp": "了昇",
+   "zh": "了升",
+   "payload_hex": "e5d7ed2b"
+  },
+  {
+   "offset": "0x5DDE",
+   "jp": "フラッシュ",
+   "zh": "闪光{00}",
+   "payload_hex": "ea44e83d00"
+  },
+  {
+   "offset": "0x5F02",
+   "jp": "義問",
+   "zh": "义问",
+   "payload_hex": "e8cee997"
+  },
+  {
+   "offset": "0x5F0F",
+   "jp": "急進",
+   "zh": "急进",
+   "payload_hex": "e171e892"
+  },
+  {
+   "offset": "0x5F2E",
+   "jp": "興か",
+   "zh": "兴{00}",
+   "payload_hex": "eaba00"
+  },
+  {
+   "offset": "0x5F3B",
+   "jp": "苦難",
+   "zh": "苦难",
+   "payload_hex": "e1a9e866"
+  },
+  {
+   "offset": "0x5F70",
+   "jp": "考両",
+   "zh": "考两",
+   "payload_hex": "e22de97d"
+  },
+  {
+   "offset": "0x5F8E",
+   "jp": "採掘",
+   "zh": "采掘",
+   "payload_hex": "e257e1b2"
+  },
+  {
+   "offset": "0x5FB9",
+   "jp": "実感",
+   "zh": "实感",
+   "payload_hex": "e87fe126"
+  },
+  {
+   "offset": "0x5FEA",
+   "jp": "城弔",
+   "zh": "城吊",
+   "payload_hex": "e316e444"
+  },
+  {
+   "offset": "0x5FF4",
+   "jp": "審舞",
+   "zh": "审舞",
+   "payload_hex": "eccae518"
+  },
+  {
+   "offset": "0x6074",
+   "jp": "電子",
+   "zh": "电子",
+   "payload_hex": "ead3e284"
+  },
+  {
+   "offset": "0x608B",
+   "jp": "難弱",
+   "zh": "难弱",
+   "payload_hex": "e866e2bb"
+  },
+  {
+   "offset": "0x6094",
+   "jp": "日進",
+   "zh": "日进",
+   "payload_hex": "e4a3e892"
+  },
+  {
+   "offset": "0x60B4",
+   "jp": "反転",
+   "zh": "反转",
+   "payload_hex": "e4d8e9c2"
+  },
+  {
+   "offset": "0x60D1",
+   "jp": "普か",
+   "zh": "普{00}",
+   "payload_hex": "e50f00"
+  },
+  {
+   "offset": "0x60FC",
+   "jp": "傍害",
+   "zh": "旁害",
+   "payload_hex": "ef04e101"
+  },
+  {
+   "offset": "0x6308",
+   "jp": "か月",
+   "zh": "月{00}",
+   "payload_hex": "e1d600"
+  },
+  {
+   "offset": "0x63FC",
+   "jp": "奇週",
+   "zh": "奇周",
+   "payload_hex": "e145e2c7"
+  },
+  {
+   "offset": "0x640A",
+   "jp": "久転",
+   "zh": "久转",
+   "payload_hex": "e16be9c2"
+  },
+  {
+   "offset": "0x643C",
+   "jp": "欠か",
+   "zh": "欠{00}",
+   "payload_hex": "e1d000"
+  },
+  {
+   "offset": "0x6445",
+   "jp": "嫌義",
+   "zh": "嫌义",
+   "payload_hex": "e1dde8ce"
+  },
+  {
+   "offset": "0x64B1",
+   "jp": "試験",
+   "zh": "试验",
+   "payload_hex": "e91dea99"
+  },
+  {
+   "offset": "0x6501",
+   "jp": "沼進",
+   "zh": "沼进",
+   "payload_hex": "e305e892"
+  },
+  {
+   "offset": "0x651B",
+   "jp": "新鋭",
+   "zh": "新锐",
+   "payload_hex": "e335ed14"
+  },
+  {
+   "offset": "0x65C1",
+   "jp": "中実",
+   "zh": "中实{00}",
+   "payload_hex": "c0e87f00"
+  },
+  {
+   "offset": "0x65ED",
+   "jp": "迭墜",
+   "zh": "迭坠",
+   "payload_hex": "e45ceb53"
+  },
+  {
+   "offset": "0x65F2",
+   "jp": "転換",
+   "zh": "转换",
+   "payload_hex": "e9c2ea78"
+  },
+  {
+   "offset": "0x6624",
+   "jp": "軟西",
+   "zh": "软西",
+   "payload_hex": "eb47e36c"
+  },
+  {
+   "offset": "0x6629",
+   "jp": "難航",
+   "zh": "难航",
+   "payload_hex": "e866e22e"
+  },
+  {
+   "offset": "0x662E",
+   "jp": "匂入",
+   "zh": "气入",
+   "payload_hex": "e8ede4a4"
+  },
+  {
+   "offset": "0x664F",
+   "jp": "疲穫",
+   "zh": "疲获",
+   "payload_hex": "e4ebe9d8"
+  },
+  {
+   "offset": "0x6654",
+   "jp": "皮併",
+   "zh": "皮并",
+   "payload_hex": "e4ece957"
+  },
+  {
+   "offset": "0x6667",
+   "jp": "不話",
+   "zh": "不话",
+   "payload_hex": "e505e81f"
+  },
+  {
+   "offset": "0x667D",
+   "jp": "聞穏",
+   "zh": "聞稳",
+   "payload_hex": "e3b6eb3e"
+  },
+  {
+   "offset": "0x6686",
+   "jp": "補進",
+   "zh": "补进",
+   "payload_hex": "ea81e892"
+  },
+  {
+   "offset": "0x66AA",
+   "jp": "密か",
+   "zh": "密{00}",
+   "payload_hex": "e57900"
+  },
+  {
+   "offset": "0x66C9",
+   "jp": "明か",
+   "zh": "明{00}",
+   "payload_hex": "e58500"
+  },
+  {
+   "offset": "0x66F0",
+   "jp": "虜守",
+   "zh": "虏守",
+   "payload_hex": "ebeee2be"
+  },
+  {
+   "offset": "0x670C",
+   "jp": "腕試",
+   "zh": "腕试",
+   "payload_hex": "e609e91d"
+  },
+  {
+   "offset": "0x678C",
+   "jp": "",
+   "zh": "吉恩",
+   "payload_hex": "e7d9e7ee"
+  },
+  {
+   "offset": "0x6792",
+   "jp": "",
+   "zh": "联邦",
+   "payload_hex": "ef2eefaa"
+  }
+ ]
+}

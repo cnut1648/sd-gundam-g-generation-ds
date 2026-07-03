@@ -1,0 +1,43 @@
+{
+ "file": "48a.bin",
+ "what": "In-combat terrain-legend OBJ tiles (raw 4bpp sprite tiles): the terrain aptitude badges repainted (汎→通, 飛→飞) so the legend reads 回避/通/宇/飞/地/水.",
+ "format": "graphics",
+ "regions": [
+  {
+   "offset": "0x3b9",
+   "size": 23,
+   "jp_hex": "f002f000202ff0000022f0002f00f000f202f0002002f0",
+   "zh_hex": "0000f00000f0fff00000f000f0ffff00f00000f0f0ffff"
+  },
+  {
+   "offset": "0x3d8",
+   "size": 48,
+   "jp_hex": "ff2f0000222f0000022f0000022f00002f2f0000f22f0000000000f000f002f000f0022f002f022f002ff02200222002",
+   "zh_hex": "0f000000ff00000000000000ffff0000f0f00000ffff0000f0f0000ff0f0fffff0f0000f000f000f00f0000f00f0ffff"
+  },
+  {
+   "offset": "0x410",
+   "size": 23,
+   "jp_hex": "222f0000022f0000022f0000002f2f0000ff2f00002222",
+   "zh_hex": "f0f00000ffff0000f0f00000ff00000000000000ffff0f"
+  },
+  {
+   "offset": "0x4bd",
+   "size": 19,
+   "jp_hex": "2022220000fff200ff2ff200222ff000ffffff",
+   "zh_hex": "0000000000000000000f0000f000f0f0f0000f"
+  },
+  {
+   "offset": "0x4d9",
+   "size": 47,
+   "jp_hex": "2f2f0022ff2200022f2f0002f2220002202f00ff2f220000222ff200002ff000f022f000f002f0002f02f000220020",
+   "zh_hex": "0f0000000f0000f00000000f000000000000000000000000f0f0000000ff000000f000000000000000000000000000"
+  },
+  {
+   "offset": "0x510",
+   "size": 23,
+   "jp_hex": "222f2f0002ff2200022f2f0002f2220002202f00020022",
+   "zh_hex": "0000000000000000000000000000000000000000000000"
+  }
+ ]
+}
