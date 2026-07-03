@@ -242,6 +242,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | free-battle (索敵) counter | — | byte @ `0x0227CC80` (5 literal refs; capped at 7 by the increment) |
 | post-battle unlock handler | — | `0x0202AAFC` (increment @ `0x0202AB2C`, decision call @ `0x0202AB3C`); decision fn `0x02032690..0x020326FE` (maps (stage, counter) → next stage); backstage check caller `0x020324BA`; unlock setup `0x0202AC70` |
 | free-battle threshold patch sites | `0x326A2 / 0x326AC / 0x326B6 / 0x326CA / 0x326DE / 0x326E8 / 0x326F2` | JP `cmp r5,#3/#4; bne` → shipped `cmp r5,#1; blo` (`01 2d 00 d3`) — the owner-requested "1 free battle unlocks the next special stage" gameplay patch (all seven gated transitions) |
+| Eternal carrier-capacity stat | `0xDAFF1` | unit master table `+0x0D` u16 (utid 639): JP `2` → shipped `6` — owner-requested gameplay data edit giving the Eternal the standard 6-unit warship capacity. Spec/default only: an existing save keeps its baked per-group slot allocation (edit the save too for already-owned Eternals) |
 | stage-id examples | — | `0x1A`=11SP, `0x35`=24a, `0x36`=24b, `0x3A`=SP2b, `0x3B`=SP3a, `0x3C`=SP3b, `0x3D`=SP4a, `0x3E`=SP4b, `0x3F`=SP4s, `0x47`=SP7b |
 | BackStage 一覧 cursor row | — | byte @ `0x0227D059` (row ≠ charID on partial rosters!) |
 | parts inventory | — | `0x0227CDDC` (active at save-load) |
@@ -271,6 +272,7 @@ fall into these classes (each must be reproducible by the build):
    * briefing viewer return fixup @ `0x1330E` + global `0x18F47C`;
    * ID-ability out-of-table bounds check @ getter `0x02098DC8` → cave `0x18F600`;
    * free-battle thresholds (7 × 4-byte windows, §4.4);
+   * the Eternal carrier-capacity stat word (`0xDAFF1`, §4.4 — gameplay data, not code);
    * renderB font slot 4 content = digit “3” (restored JP glyph — never repoint it).
 5. **The appended tail** — atlas + pools + autoload list (§2/§3).
 

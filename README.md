@@ -30,12 +30,12 @@ python3 -m venv .venv
 Expected output:
 
 ```
-[build] final ROM sha1 421896087f0f2b827529d1b1172b9ddcc5d219fc  (MATCHES the shipped translation)
+[build] final ROM sha1 919eb5026501bdc757bbb304d2b02340e320a5b9  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,324,584 bytes)
 ```
 
 Add `--pad32m PATH` to also write a 32 MiB padded image for flash carts that
-want power-of-two sizes (sha1 `e0cfa1eba0e0b7c53d0b116202b820a93c71d364`).
+want power-of-two sizes (sha1 `f6d0a65c26c43b1a699dc0af2d029faeb097c5ef`).
 
 The source ROM must be the Japanese cartridge dump with sha1
 `12443b91297a57bcd2ace8da989c26ae635a79fd` (33,554,432 bytes) — the build

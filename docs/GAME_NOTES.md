@@ -28,7 +28,10 @@ compressed tile text, session-number chrome).
   roster lists), MS開発 (development: 格納庫 hangar, development trees), システム (system).
   Progression state lives in RAM: current stage id @ `0x0227CC48`, free-battle counter @
   `0x0227CC80` (the shipped ROM patches all seven 索敵-gated transitions from 3-or-4 free
-  battles down to **1**, an owner gameplay tweak).
+  battles down to **1**, an owner gameplay tweak). A second owner gameplay tweak lives in
+  the unit master table: the Eternal (永恒号) gets the standard **6**-unit carrier capacity
+  instead of its original 2 (spec value only — an existing save keeps the slot allocation it
+  was created with).
 * **索敵 (free battle)** both levels the roster and *gates* the SP-arc transitions
   (24a→SP1a, 24b→SP1b, SP2b→SP3b, SP3a→SP4a, SP3b→SP4b, SP2b→SP4b, 11SP→SP4s).
 * **二周目 / New Game+**: clear-count ≥1 unlocks route choices that a first playthrough
