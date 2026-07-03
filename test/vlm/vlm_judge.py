@@ -49,8 +49,15 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import signal
 import sys
 from pathlib import Path
+
+# behave under `| head` etc.
+try:
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+except (AttributeError, ValueError):
+    pass
 
 TEST_DIR = Path(__file__).resolve().parent.parent
 PROMPT_MD = Path(__file__).resolve().parent / "judge_prompt.md"

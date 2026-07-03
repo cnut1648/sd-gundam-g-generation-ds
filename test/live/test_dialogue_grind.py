@@ -61,7 +61,14 @@ def main():
 
     try:
         hz.boot_to_title(emu, rom, sav=Path(a.sav) if a.sav else None)
-        hz.start_new_game(emu)
+        if not hz.preflight_input(emu, out):
+            print("input preflight failed: the environment is not accepting game input — "
+                  "no ROM verdict (exit 3)", file=sys.stderr)
+            emu.kill()
+            return 3
+        emu.tap(*hz.NEWGAME_BUTTON)
+        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        time.sleep(hz.INTRO_CRAWL_S)
     except Exception as e:
         print(f"harness failure during boot: {e}", file=sys.stderr)
         emu.kill()

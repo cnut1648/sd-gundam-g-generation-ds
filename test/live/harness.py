@@ -435,6 +435,42 @@ def boot_to_title(emu: Emulator, rom: Path, sav: Path | None = None):
     time.sleep(TITLE_WAIT_S)
 
 
+class InputEnvironmentError(RuntimeError):
+    """The EMULATION ENVIRONMENT is not accepting game input (not a ROM bug)."""
+
+
+def preflight_input(emu: Emulator, out: Path, presses: int = 6) -> bool:
+    """Verify the environment can actually DRIVE the game: from the title
+    screen, press START until the bottom screen flips from the title art to the
+    main menu.  Returns True when the menu appears.
+
+    WHY THIS EXISTS: every input layer can look healthy (X delivers key events,
+    the emulator's key mapping fires, the emulated KEYINPUT register reflects
+    the press) and the game can still sit on 'press START' if the emulated
+    ARM7-side input service never comes up — an emulator/host-environment
+    fault.  When that happens EVERY interactive test would fail identically
+    while the ROM is fine, so interactive tests run this preflight and exit
+    with code 3 (environment, not a verdict) instead of failing the build.
+    The no-input render checks (test_boot_render.py) still gate the ROM."""
+    refs = []
+    for i in range(2):
+        p = out / f"preflight_ref{i}.png"
+        emu.shot(p)
+        refs.append(load_gray(p))
+        time.sleep(0.8)
+    for i in range(presses):
+        emu.key("START", hold_ms=200, pause=1.6)
+        p = out / f"preflight_{i}.png"
+        emu.shot(p)
+        g = load_gray(p)
+        changed = all(region_mae(r, g, BOTTOM_SCREEN) > 25.0 for r in refs)
+        if changed or mean_luma(g, BOTTOM_SCREEN) < 55.0:
+            log(f"input preflight OK (menu/screen change after {i + 1} press(es))")
+            return True
+    log("input preflight FAILED — the game never left the title under START presses")
+    return False
+
+
 def start_new_game(emu: Emulator):
     """From the title screen: START -> tap the New Game button -> intro crawl."""
     emu.key("START", pause=2.5)
