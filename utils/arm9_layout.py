@@ -138,10 +138,17 @@ def _apply_units(img: _Image, data_dir: Path):
     d = _load(data_dir, "names/units.json")
     t = d["table"]
     base, stride = _i(t["file_offset"]), _i(t["stride"])
+    capacity_field = _i(t["carrier_capacity"].lstrip("+")) if "carrier_capacity" in t else None
     for e in d["entries"]:
         if "ptr" in e:
             img.put_u32(base + e["utid"] * stride + UNIT_NAME_FIELD,
                         _i(e["ptr"]), f"unit name {e['utid']}")
+        if capacity_field is not None and "carrier_capacity" in e:
+            # warship carrier-capacity stat (u16). Spec/default value: applies to
+            # newly acquired units; existing saves bake their own slot allocation.
+            img.put_u16(base + e["utid"] * stride + capacity_field,
+                        int(e["carrier_capacity"]),
+                        f"unit {e['utid']} carrier capacity")
 
 
 def _apply_weapons(img: _Image, data_dir: Path):
