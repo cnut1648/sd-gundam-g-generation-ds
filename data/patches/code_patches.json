@@ -1,0 +1,257 @@
+{
+ "_about": "Documented code patches applied to the code binary (everything that is not translated data): render-path detours and their cave bodies, decoder hooks for the briefing system, and two gameplay tweaks. The builder asserts old_hex before writing new_hex. The autoload/font relocation words (module params, font pointer, heap floor) are computed by utils/arm9_layout.py, not listed here.",
+ "entries": [
+  {
+   "file_offset": "0x12C4A",
+   "old_hex": "688ac01dc710",
+   "new_hex": "a1f1eaf8c046",
+   "what": "tile-copy clamp trampoline (BG char-tile over-advance)",
+   "why": "12px glyphs overflow the 10-tile-per-row name field of the 8px UI; the copy helper is detoured to a cave that clamps the tile-row budget so a wide name cannot alias the neighbouring name's tiles (ghost fragments)."
+  },
+  {
+   "file_offset": "0x12CCC",
+   "old_hex": "4352701c",
+   "new_hex": "a1f17af9",
+   "what": "squad-list name-cell clear trampoline",
+   "why": "carried-unit names longer than the 6-cell squad field left stale glyph cells behind; detour blanks the cells beyond the field width."
+  },
+  {
+   "file_offset": "0x12FE6",
+   "old_hex": "87b0041c",
+   "new_hex": "a0f107fb",
+   "what": "management-list occluder clip trampoline",
+   "why": "the shared glyph rasterizer is detoured to a cave that clips tile writes past the list-row stride for the management list background only, removing a text occluder band next to wide 12px rows."
+  },
+  {
+   "file_offset": "0x131D8",
+   "old_hex": "48011618",
+   "new_hex": "07f162f8",
+   "what": "8x16-path 12x12 glyph injection",
+   "why": "the fixed 8x16 UI font has no CJK glyphs; the glyph-blit start is detoured to a trampoline that renders glyph slots >= 2196 from the relocated 12x12 atlas with a 12px advance, making every 8x16-font surface CJK-capable."
+  },
+  {
+   "file_offset": "0x1326E",
+   "old_hex": "288b8442",
+   "new_hex": "a0f1d7f9",
+   "what": "parts-caption pad-clip trampoline",
+   "why": "multi-line 12px caption lines end past the 80px strip the 8px engine allocates; the cell-pad loop is stopped at the strip boundary so captions keep the original tile budget (no ghost echo right of the box)."
+  },
+  {
+   "file_offset": "0x132E2",
+   "old_hex": "051c0c1c",
+   "new_hex": "7cf1cdf8",
+   "what": "text-decoder briefing hook (entry)",
+   "why": "mission-briefing records carry inline pointers to full-length text in the briefing blob bank; the decoder entry is detoured to resolve those pointers (and lift the glyph cap) when the source lies in the briefing region."
+  },
+  {
+   "file_offset": "0x1330E",
+   "old_hex": "201c70bc",
+   "new_hex": "7cf1e3f8",
+   "what": "text-decoder briefing hook (return fixup)",
+   "why": "companion to the entry hook: restores the decoder's cursor to the briefing record end so the interactive briefing viewer walks records correctly."
+  },
+  {
+   "file_offset": "0x134AE",
+   "old_hex": "688ac01d",
+   "new_hex": "a0f14cfd",
+   "what": "tile-copy clamp trampoline B",
+   "why": "second detour of the BG tile-copy helper (info-panel context) into the clamp cave; same over-advance fix as 0x12C4A for another copy path."
+  },
+  {
+   "file_offset": "0x1359A",
+   "old_hex": "688ac01d",
+   "new_hex": "a0f1b7fc",
+   "what": "tile-copy clamp trampoline (engine-A)",
+   "why": "the engine-A copy helper gets the same row-budget clamp via its own cave, removing stray glyph fragments above the info boxes."
+  },
+  {
+   "file_offset": "0x13C06",
+   "old_hex": "0e1c171c",
+   "new_hex": "a2f144fc",
+   "what": "menu OBJ-text palette trampoline",
+   "why": "menu text styles use a 3-colour LUT that maps 2bpp ink value 3 to transparent; CJK glyphs are drawn with ink 3 only, so menus rendered them blank. Detour patches LUT[3]=LUT[2] for such styles."
+  },
+  {
+   "file_offset": "0x14510",
+   "old_hex": "c2",
+   "new_hex": "c1",
+   "what": "glyph plotter ink-3 un-hide (strb r2->r1)",
+   "why": "one store in the OBJ-text plotter wrote the wrong register, keeping ink-value-3 pixels transparent on the aptitude labels; storing r1 renders them."
+  },
+  {
+   "file_offset": "0x2BCA6",
+   "old_hex": "02",
+   "new_hex": "03",
+   "what": "dialogue nameplate style init #2->#3",
+   "why": "the speaker-nameplate descriptor init only set style bit 1; setting bits 0+1 routes nameplates through the 12x12 glyph path so CJK speaker names render."
+  },
+  {
+   "file_offset": "0x326A2",
+   "old_hex": "032d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326AC",
+   "old_hex": "032d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326B6",
+   "old_hex": "042d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326CA",
+   "old_hex": "032d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326DE",
+   "old_hex": "042d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326E8",
+   "old_hex": "042d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x326F2",
+   "old_hex": "042d00d1",
+   "new_hex": "012d00d3",
+   "what": "free-battle gate threshold -> 1",
+   "why": "gameplay tweak: every stage transition gated on a free-battle (recon) count required 3-4 battles; each `cmp rN,#count ; bne` becomes `cmp rN,#1 ; blo` so a single free battle unlocks the next stage."
+  },
+  {
+   "file_offset": "0x4A340",
+   "old_hex": "207e0228",
+   "new_hex": "69f19cfd",
+   "what": "roster detail auto-populate trampoline",
+   "why": "the unit/character list detail panel is an empty template until a unit is inspected; the detour populates the highlighted entry's panel while browsing."
+  },
+  {
+   "file_offset": "0x4A66A",
+   "old_hex": "fff719fe",
+   "new_hex": "69f101f8",
+   "what": "roster navigation portrait trampoline",
+   "why": "companion detour that refreshes the portrait/detail state when the roster cursor moves, so the auto-populated panel tracks navigation."
+  },
+  {
+   "file_offset": "0x6588E",
+   "old_hex": "062800d0",
+   "new_hex": "2af1c1fb",
+   "what": "bark format-processor veneer",
+   "why": "the battle-bark formatter consumed the high byte of a 2-byte glyph token after a 00 control marker (reading it as a control type), garbling the line; veneer to a cave that re-reads it as a normal token."
+  },
+  {
+   "file_offset": "0x98DCA",
+   "old_hex": "81b000f0c4fa007901b008bc1847",
+   "new_hex": "00f0c5faf6f017fc00bdc046c046",
+   "what": "learn-level getter bounds check",
+   "why": "the ability learn-level getter is rebuilt to call a bounds-check helper cave so out-of-range learn slots cannot index past the table."
+  },
+  {
+   "file_offset": "0x11A2A0",
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090000260000980000a00000000000000000000000000000000000000000000000940000690200490200960200a80000000000000000000000000000002500002500002a0000000000000000",
+   "new_hex": "89231b01043399421fdb281cf8f62cff688a04306882034b184748011618024b184700000d320102dd3101029a29f4d16b8b9a2bf1d1ab8b8920000104308342ebdb412189010731dfe72b8b032b06d16b8b582b03d1ab8bdc2b00d105e021e0090000260000980000a0eb8b792bddd101a0015dd1e70000889c00000000000000940000690200490200960200a80000000000000000000000000000002500002500002a004b1847013b1b02",
+   "what": "12x12-on-8x16 trampoline cave",
+   "why": "code cave in the dead in-image 12x12 atlas (the live atlas is relocated to RAM): renders glyph slots >= 2196 from the relocated atlas and advances the pen 12px; called from the 8x16 blit injection at 0x131D8."
+  },
+  {
+   "file_offset": "0x11C1FC",
+   "old_hex": "0000000000000000000000000000000000000000000000000000",
+   "new_hex": "688a0730e96d090d682905d1e9880a2902db582800db50207047",
+   "what": "engine-A tile-copy clamp cave",
+   "why": "row-budget clamp body for the engine-A copy helper (called from 0x1359A), gated on the info-box context."
+  },
+  {
+   "file_offset": "0x18F480",
+   "old_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "104b994217d3104b994214d20b784c78240223438c7824042343cc78240623430a4ca34207d30a4ca34204d2094c2160191c002202e0074c00232360051c0c1c70470000a485190230ce1a0200703e02fc083f027cf4180207490868002807d00278002a01d00130fae700220a6000e0201c70bc704700007cf41802",
+   "what": "briefing decoder hook caves (entry + return)",
+   "why": "cave bodies for the 0x132E2/0x1330E hooks: detect a briefing-region source, load the inline blob pointer, clear the glyph cap, and restore the record cursor on return (shared state word lives just below the cave)."
+  },
+  {
+   "file_offset": "0x18F600",
+   "old_hex": "0000000000000000000000000000000000000000",
+   "new_hex": "0349884201d20079704700207047c04628821002",
+   "what": "learn-level bounds helper cave",
+   "why": "clamps the learn-level list index for the rebuilt getter at 0x98DCA."
+  },
+  {
+   "file_offset": "0x190014",
+   "old_hex": "00000000000000000000000000000000000000000000000000000000",
+   "new_hex": "062801d1034b1847e02800d32960024b18470000955806026f570602",
+   "what": "bark token un-consume cave",
+   "why": "re-dispatches control type 6 and un-consumes a >= 0xE0 token high byte for the bark formatter veneer at 0x6588E."
+  },
+  {
+   "file_offset": "0x1B35F8",
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "c46d074dac4231d1448a6418e4080589ac4202d3f0bc08bc184787b0041c704700980006",
+   "what": "management-list occluder clip cave",
+   "why": "early-returns the rasterizer write when the destination tile column exceeds the row stride, only for the management-list background context."
+  },
+  {
+   "file_offset": "0x1B3620",
+   "old_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "02b4e86d0b49884210d1a88813280dd1e88a0949884209d30849884206d8688a482803d902bc288ba442704702bc288b8442704700e0000637010000af010000",
+   "what": "parts-caption pad-clip cave",
+   "why": "stops the 8px pad-cell loop at the 80px caption strip boundary (caption compose context only); every other context falls through byte-identical."
+  },
+  {
+   "file_offset": "0x1B3664",
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c96f6fffd10bd00f8330264d02702",
+   "what": "roster navigation cave",
+   "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state."
+  },
+  {
+   "file_offset": "0x1B3B00",
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "b7290dd18920000104306b8b834203daab8b834200da16e042218901143110e09a2910d16b8b032b0dd1ab8b9a2b0ad1eb8b892000010430834204db412189010731024b1847024b1847c046aba21102cda21102",
+   "what": "12x12 trampoline support cave",
+   "why": "overflow helpers for the 12x12-on-8x16 trampoline (special-cases a few slots and jumps back into the trampoline body)."
+  },
+  {
+   "file_offset": "0x1B3E22",
+   "old_hex": "82ea91d682a63a25640a0000000091e097f195cf8d5889e696ca82a982e794b282af82e90a00914991f0834c83838393835a838b0a0089ba89e696ca8d58905682500a00000089ba89e696ca8d58905682510a0000004d656e755f5461697265747375282920456e642e0a000000443400002f4434008ba492ca89ba81468374838a815b836f8367838b0a0000008ba492ca89ba81468df593478145894692880a008ba492ca89ba81468df593478145926e8fe30a008ba492ca89ba8146814881488148814881480a008ba492ca89ba81468e9f82cc835a836283568387",
+   "new_hex": "688a0730c710e96d134a914221d1a988072903d10e2f19db0d271ae0152906d1e988102901d0112910d10a2711e011290cd012290ad0012908d00329ead00b2904d0082905d1e988052902db0a2f00dd0a277047c04600f0200600b52078012802d0022809d033e0607e002830d1207e01282dd1022020762ae0607e002824d1207e012824d1012000210a1c0b1c62f656fa201c1a30eaf676fe0420a076201c1a30eaf6acfe012000210a1c0b1c62f664fa207908490a78904203d00870201c96f6a7f80220207602e00249ff200870207e022800bdfc3e1b02ff000000",
+   "what": "tile-copy clamp + roster auto-populate caves",
+   "why": "the row-budget clamp body (called from 0x12C4A, gated on the affinity/list contexts) plus the roster browse auto-populate body (called from 0x4A340: draws the browse template and edge-calls the inspect routine)."
+  },
+  {
+   "file_offset": "0x1B3F0C",
+   "old_hex": "8ba492ca89ba81468cbb8ddd82cc835a8362835683878393835e83438367838b0a0000004d656e755375625f43737246726565315f437265617465537028290a000000004d656e755375625f43737246726565315f4372656174655370282920",
+   "new_hex": "688a0730e96d144a914201d0134b1847a988122906d1e98814290fdc70280ddb68200be0012903d00b2901d0152905d1e988172902dc582800db50207047688a0730e96d044a9142f8d1e9881429f5db2f28f3d12720704700e00006fdc11102",
+   "what": "tile-copy clamp cave B",
+   "why": "clamp body for the second copy-path detour at 0x134AE (info-panel row budget)."
+  },
+  {
+   "file_offset": "0x1B3FC4",
+   "old_hex": "0a0000004d656e755375625f43737246726565315f44726177424728290a00002a2a2a205363656e65204e6f3a25640a000000007370656465663a25640a00008386836a8362836794d48d86814625640a00000095908aed914991f0814625640a000000914991f082b382ea82bd95908aed94d48d868146",
+   "new_hex": "16b41b49820b92038a422dd130210902041c0c408c420ed1298a0f2421400e2909d1a988042901d0142904d10199092901db002318e09905890d49010d4a891800220c6822434c6822438c682243cc6822430c6922434c6922438c692243cc692243002a00d1002316bc4352701c704700c0200600002006",
+   "what": "squad-list name-cell clear cave",
+   "why": "clears glyph cells beyond the 6-cell squad name field (called from 0x12CCC); also covers the carried-unit name rows."
+  },
+  {
+   "file_offset": "0x1B6492",
+   "old_hex": "00000000000000000000000000000000",
+   "new_hex": "ec7b002c01d1ac7bec730e1c171c7047",
+   "what": "menu OBJ-text palette cave",
+   "why": "if the text style's LUT[3] is transparent, copy LUT[2] into it, then replay the clobbered instructions (called from 0x13C06)."
+  }
+ ]
+}

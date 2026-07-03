@@ -1,0 +1,14 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# ROM images (inputs/outputs; obtain the source ROM from your own cartridge dump)
+/*.nds
+
+# saves are ignored except test fixtures
+*.sav
+!test/fixtures/*.sav
+
+# scratch
+*.log

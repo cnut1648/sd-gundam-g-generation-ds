@@ -1,0 +1,222 @@
+{
+ "_what": "arm9 head regions where a candidate build may differ from the Japanese source. Everything else must be byte-identical (or a pointer-repoint word; see gate_code_image_parity in run_static.py). Regions are FILE offsets into the decompressed arm9 image. 'forbidden' bands may never be allow-listed.",
+ "regions": [
+  {
+   "lo": "0x000B0C",
+   "hi": "0x000B24",
+   "what": "module-params: autoload list start/end words + compressed-static-end marker"
+  },
+  {
+   "lo": "0x012C4A",
+   "hi": "0x012C50",
+   "what": "background copy-helper trampoline (char-tile over-advance clamp; ghost-glyph fix)"
+  },
+  {
+   "lo": "0x012CCC",
+   "hi": "0x012CD0",
+   "what": "tilemap-plot trampoline (blank stale trailing name cells; ghost-name fix)"
+  },
+  {
+   "lo": "0x012FE6",
+   "hi": "0x012FEA",
+   "what": "list rasterizer plot-clip trampoline (first-glyph bottom-clip fix)"
+  },
+  {
+   "lo": "0x01315C",
+   "hi": "0x013160",
+   "what": "dialogue-font (12x12 atlas) base pointer -> relocated autoload bank"
+  },
+  {
+   "lo": "0x0131D8",
+   "hi": "0x0131DC",
+   "what": "UI-font glyph-blit injection: ZH slots >= 2196 redirect to the 12x12 atlas"
+  },
+  {
+   "lo": "0x01321C",
+   "hi": "0x013220",
+   "what": "UI-font (8x16) base pointer literal"
+  },
+  {
+   "lo": "0x01322C",
+   "hi": "0x01322E",
+   "what": "UI text dispatch branch site (must stay the ORIGINAL branch; see ui_text_dispatch)"
+  },
+  {
+   "lo": "0x01326E",
+   "hi": "0x013272",
+   "what": "cell-drawer pad-clip trampoline (parts caption box ghost fix)"
+  },
+  {
+   "lo": "0x0132E2",
+   "hi": "0x0132E6",
+   "what": "text-decoder hook A (two-line briefing redirect)"
+  },
+  {
+   "lo": "0x01330E",
+   "hi": "0x013312",
+   "what": "text-decoder hook B (two-line briefing redirect)"
+  },
+  {
+   "lo": "0x0134AE",
+   "hi": "0x0134B2",
+   "what": "detail-panel copy-helper clamp trampoline (shield/value field ghost fix)"
+  },
+  {
+   "lo": "0x01359A",
+   "hi": "0x01359E",
+   "what": "engine-A copy-helper clamp trampoline (status-row right-edge ghost fix)"
+  },
+  {
+   "lo": "0x013C06",
+   "hi": "0x013C0A",
+   "what": "menu OBJ-text color-LUT trampoline (makes ZH ink visible on menu screens)"
+  },
+  {
+   "lo": "0x014510",
+   "hi": "0x014511",
+   "what": "label-helper ink-value patch (pen LUT: ink value 3 visible; ZH glyphs ink at 3)"
+  },
+  {
+   "lo": "0x02BCA6",
+   "hi": "0x02BCA7",
+   "what": "dialogue speaker-nameplate render-path immediate (8x16 -> 12x12 fix)"
+  },
+  {
+   "lo": "0x0326A2",
+   "hi": "0x0326F6",
+   "what": "backstage stage-progression threshold immediates (owner gameplay tweak)"
+  },
+  {
+   "lo": "0x04A340",
+   "hi": "0x04A344",
+   "what": "roster list detail-panel populate trampoline (browse view fix)"
+  },
+  {
+   "lo": "0x04A66A",
+   "hi": "0x04A66E",
+   "what": "roster list controller trampoline (portrait/cursor sync fix)"
+  },
+  {
+   "lo": "0x06588E",
+   "hi": "0x065892",
+   "what": "bark format-processor veneer (2-byte-token un-consume fix)"
+  },
+  {
+   "lo": "0x098DC8",
+   "hi": "0x098DD8",
+   "what": "ability learn-level getter bounds check (suppresses out-of-table garbage)"
+  },
+  {
+   "lo": "0x0A0400",
+   "hi": "0x0A0404",
+   "what": "memcpy veneer literal repoint (wild-source guard trampoline)"
+  },
+  {
+   "lo": "0x0A48F8",
+   "hi": "0x0A48FC",
+   "what": "heap arena floor literal (raised above the relocated text/font banks)"
+  },
+  {
+   "lo": "0x0B4000",
+   "hi": "0x0B94BC",
+   "what": "in-battle name/quote/label string pools (in-place translated strings)"
+  },
+  {
+   "lo": "0x0F9048",
+   "hi": "0x0F9448",
+   "what": "ID-command effect-detail 256-entry offset table (relocation repoints)"
+  },
+  {
+   "lo": "0x0F9448",
+   "hi": "0x0FC650",
+   "what": "ID-command effect-detail string pool (translated in place)"
+  },
+  {
+   "lo": "0x11A2A0",
+   "hi": "0x12D770",
+   "what": "original in-image 12x12 glyph atlas (superseded by the relocated atlas) + render-fix code caves parked in its dead space"
+  },
+  {
+   "lo": "0x12D770",
+   "hi": "0x133F14",
+   "what": "UI text dictionary bank (menu/status words, translated in place)"
+  },
+  {
+   "lo": "0x133F14",
+   "hi": "0x1444B4",
+   "what": "UI 8x16 font glyph cells BELOW the dialogue dictionary (simplified-Chinese glyph edits)"
+  },
+  {
+   "lo": "0x14AC34",
+   "hi": "0x155B14",
+   "what": "UI 8x16 font glyph cells ABOVE the dialogue dictionary + resident label arena"
+  },
+  {
+   "lo": "0x16B474",
+   "hi": "0x16B518",
+   "what": "parts-name offset table (parts list repacked with longer names)"
+  },
+  {
+   "lo": "0x16B86C",
+   "hi": "0x16B870",
+   "what": "UI-dictionary base pointer (decoder table entry 1)"
+  },
+  {
+   "lo": "0x16C444",
+   "hi": "0x16C448",
+   "what": "cut-in quote resource size word (grown quote bank)"
+  },
+  {
+   "lo": "0x16EEA8",
+   "hi": "0x16FD64",
+   "what": "cut-in quote offset table incl. the file-size sentinel (grown records repointed)"
+  },
+  {
+   "lo": "0x1775C8",
+   "hi": "0x177670",
+   "what": "ability-text bank offset-table words (relocated ability text blocks)"
+  },
+  {
+   "lo": "0x178278",
+   "hi": "0x17827C",
+   "what": "special-ability name-offset word (points one name into reclaimed dead space)"
+  },
+  {
+   "lo": "0x188000",
+   "hi": "0x198712",
+   "what": "resident name pool: relocated translated strings + small render/bounds caves in verified-free zero runs"
+  },
+  {
+   "lo": "0x198712",
+   "hi": "0x1AD536",
+   "what": "code-embedded dialogue script blocks + operation-briefing text blocks (translated in place; framing guarded by inline_dialogue_blocks)"
+  },
+  {
+   "lo": "0x1B35F0",
+   "hi": "0x1B4220",
+   "what": "dead development-string region: render-fix code caves (clamps, list populate, ghost blanking)"
+  },
+  {
+   "lo": "0x1B5050",
+   "hi": "0x1B6128",
+   "what": "panel/menu pointer tables (stat rows, move types, shield types, special-ability display)"
+  },
+  {
+   "lo": "0x1B6128",
+   "hi": "0x1B6DA0",
+   "what": "tail tables between the panel tables and the appended payload (pointer repoints)"
+  }
+ ],
+ "forbidden": [
+  {
+   "lo": "0x1444B4",
+   "hi": "0x14AC34",
+   "what": "dialogue compression dictionary (clobber = battle-entry freeze; gate dialogue_dict_frozen)"
+  },
+  {
+   "lo": "0x032060",
+   "hi": "0x0324A0",
+   "what": "stage-script VM dispatch code (the audited opcode model; gate stage_script_integrity)"
+  }
+ ]
+}

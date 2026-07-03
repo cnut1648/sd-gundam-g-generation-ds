@@ -1,0 +1,219 @@
+{
+ "_about": "Enhancement-part display names. The name strings live in the parts name bank file (b6e.bin, rebuilt from data/files); the code image holds a 41-entry u32 start-offset table for them (count word just before the table is untouched). Only changed offsets are listed; jp/zh decoded from the JP/translated bank for reference.",
+ "table": {
+  "file_offset": "0x16B474",
+  "count": 41
+ },
+ "entries": [
+  {
+   "index": 3,
+   "offset": "0x24",
+   "jp": "エルハス狭弟街チーコ",
+   "zh": "{01}艾尔系变换"
+  },
+  {
+   "index": 4,
+   "offset": "0x30",
+   "jp": "ハイザック狭弟街チーコ",
+   "zh": "{01}高扎古系变换"
+  },
+  {
+   "index": 5,
+   "offset": "0x3E",
+   "jp": "サイィ」狭弟街チーコ",
+   "zh": "{01}精神系变换"
+  },
+  {
+   "index": 6,
+   "offset": "0x4A",
+   "jp": "ジム狭弟街チーコ",
+   "zh": "{01}吉姆系变换"
+  },
+  {
+   "index": 7,
+   "offset": "0x56",
+   "jp": "ガンギム狭弟街チーコ",
+   "zh": "{01}高达系变换"
+  },
+  {
+   "index": 8,
+   "offset": "0x62",
+   "jp": "」↓狭弟街チーコ",
+   "zh": "{01}试作系变换"
+  },
+  {
+   "index": 9,
+   "offset": "0x6E",
+   "jp": "4・ザゃアス狭弟街↓",
+   "zh": "{01}迪亚斯系变换"
+  },
+  {
+   "index": 10,
+   "offset": "0x7C",
+   "jp": "大峡M\"狭弟街チーコ",
+   "zh": "{01}巨型系变换"
+  },
+  {
+   "index": 11,
+   "offset": "0x88",
+   "jp": "ガザ狭弟街チーコ",
+   "zh": "{01}加撒系变换"
+  },
+  {
+   "index": 12,
+   "offset": "0x94",
+   "jp": "シロッィ狭弟街チーコ",
+   "zh": "{01}西罗系变换"
+  },
+  {
+   "index": 13,
+   "offset": "0xA0",
+   "jp": "トーラス狭弟街チーコ",
+   "zh": "{01}金牛座系变换"
+  },
+  {
+   "index": 14,
+   "offset": "0xAE",
+   "jp": "ジン狭弟街チーコ",
+   "zh": "{01}金恩系变换"
+  },
+  {
+   "index": 15,
+   "offset": "0xBA",
+   "jp": "カスタムチーコ",
+   "zh": "{01}定制部件"
+  },
+  {
+   "index": 16,
+   "offset": "0xC4",
+   "jp": "クリアランスチーコ",
+   "zh": "{01}性能部件"
+  },
+  {
+   "index": 17,
+   "offset": "0xCE",
+   "jp": "アッデアレードチーコ",
+   "zh": "{01}升级部件"
+  },
+  {
+   "index": 18,
+   "offset": "0xD8",
+   "jp": "ハイクリアランスチーコ",
+   "zh": "{01}高级性能部件"
+  },
+  {
+   "index": 19,
+   "offset": "0xE6",
+   "jp": "ハイアレードチーコ",
+   "zh": "{01}高级部件"
+  },
+  {
+   "index": 20,
+   "offset": "0xF0",
+   "jp": "ムーバテルフレーム",
+   "zh": "{01}可动骨架"
+  },
+  {
+   "index": 21,
+   "offset": "0xFA",
+   "jp": "サイィィントローラー",
+   "zh": "{01}精神感应控制器"
+  },
+  {
+   "index": 22,
+   "offset": "0x10A",
+   "jp": "バイるセンサー",
+   "zh": "{01}生物感应器"
+  },
+  {
+   "index": 23,
+   "offset": "0x116",
+   "jp": "サイィフレーム",
+   "zh": "{01}精神感应ヶ架"
+  },
+  {
+   "index": 24,
+   "offset": "0x124",
+   "jp": "バイるィンぷュータ",
+   "zh": "{01}生物计算机"
+  },
+  {
+   "index": 25,
+   "offset": "0x130",
+   "jp": "！フゃールド",
+   "zh": "{01}I力场"
+  },
+  {
+   "index": 28,
+   "offset": "0x150",
+   "jp": "元縛長スラスター",
+   "zh": "{01}高机动推进器"
+  },
+  {
+   "index": 29,
+   "offset": "0x15E",
+   "jp": "ザゃフらンサーァズット",
+   "zh": "{01}防御者单元"
+  },
+  {
+   "index": 30,
+   "offset": "0x16A",
+   "jp": "邦動1",
+   "zh": "予方1"
+  },
+  {
+   "index": 31,
+   "offset": "0x16E",
+   "jp": "邦動。",
+   "zh": "予方。"
+  },
+  {
+   "index": 32,
+   "offset": "0x172",
+   "jp": "邦動·",
+   "zh": "予方·"
+  },
+  {
+   "index": 33,
+   "offset": "0x176",
+   "jp": "邦動.",
+   "zh": "予方."
+  },
+  {
+   "index": 34,
+   "offset": "0x17C",
+   "jp": "邦動〜",
+   "zh": "予方〜"
+  },
+  {
+   "index": 35,
+   "offset": "0x182",
+   "jp": "邦動:",
+   "zh": "予方:"
+  },
+  {
+   "index": 36,
+   "offset": "0x188",
+   "jp": "邦動ー",
+   "zh": "予方ー"
+  },
+  {
+   "index": 37,
+   "offset": "0x18E",
+   "jp": "邦動／",
+   "zh": "予方／"
+  },
+  {
+   "index": 38,
+   "offset": "0x194",
+   "jp": "邦動～",
+   "zh": "予方～"
+  },
+  {
+   "index": 39,
+   "offset": "0x19A",
+   "jp": "邦動1、",
+   "zh": "予方きし"
+  }
+ ]
+}

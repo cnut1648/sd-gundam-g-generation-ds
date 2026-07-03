@@ -1,0 +1,33 @@
+{
+ "_what": "Audited reachable dialogue payloads that legitimately stay Japanese (staff credits, layout-locked tutorial headers, scream onomatopoeia, non-dialogue data the static reachability walk over-approximates into). Keys are the raw payload bytes in hex; values describe why each is exempt. Used by gate_untranslated_dialogue.",
+ "allow": {
+  "01010101010cf4b531f4150d": "tutorial section header 『分解と改造』 (leading-0x01 layout-locked; intended ZH 改造)",
+  "010101010cf19b37f03b0d": "tutorial section header 『ユニットの捕獲』 (leading-0x01 layout-locked; intended ZH 捕获)",
+  "010101010cf626f01f31f0360d": "tutorial section header 『間接攻撃と散開』 (leading-0x01 layout-locked; ZH all-atlas exceeds the dict-compressed JP byte budget and leading-0x01 blocks cannot be grown under COMBAT_SAFE; intended ZH 间接散开 noted in regression_test.TUTORIAL_HEADER_ALLOW)",
+  "0101010cf25bf4ca31f341f4ca0d": "tutorial section header 『勝利条件と敗北条件』 (leading-0x01 layout-locked; intended ZH 胜负条件)",
+  "0101010cfb1f31f82e34f0ab2f0d": "tutorial section header 『補給と回復について』 (leading-0x01 layout-locked; intended ZH 补给与回复)",
+  "01010cf0ed31f0edf6380d": "tutorial section header 『指揮と指揮範囲』 (leading-0x01 layout-locked; intended ZH 指挥范围)",
+  "044ce90001": "short non-dialogue fragment 「・を」 + trailing 0x01 (UI/control micro-block)",
+  "044de90001": "short non-dialogue fragment 「・ん」 + trailing 0x01 (UI/control micro-block)",
+  "0e0033": "zero-padding artifact (non-display) (jp: 1|な; in _STG17B.bin)",
+  "0f0238e10001": "short non-dialogue fragment 「2、は外」 + trailing 0x01 (UI/control micro-block; not a story line)",
+  "184b15151515e81def97": "scream onomatopoeia うわぁぁぁぁ (no JP CFG pairing; reverts to the JP yell)",
+  "184b151515e81def97ef97": "scream onomatopoeia うわぁぁぁ (no JP CFG pairing; reverts to the JP yell)",
+  "46fa0001": "short non-dialogue fragment 「らコケ」 + trailing 0x01 (UI/control micro-block)",
+  "4afa0001": "short non-dialogue fragment 「ろコケ」 + trailing 0x01 (UI/control micro-block)",
+  "4e5f6164856bf4c36a7f08f976000100bee59601e3b6": "staff credits: アシスタントプロデューサー + JP staff name (proper nouns; never localized)",
+  "545bfefdfa0375f4c36a7f08f976000100e6d2e4aee61401e32d": "staff credits: エグゼクティブプロデューサー + JP staff name",
+  "558160ff02f96a086a5ef732000100e49be46601e2ebe16c": "staff credits: オリジナルキャラクターデザイン + JP staff name",
+  "558160ff02fa066a5ef732000100e538e6d601e6d787e602": "staff credits: オリジナルメカデザイン + JP staff name",
+  "5b80fa04675af821835af3f1000100e0d0d201e492e342": "staff credits: グラフィックディレクター + JP staff name",
+  "660874f4c36a7f08f976000100e36ce61401e6dfe6db": "staff credits: チーフプロデューサー + JP staff name",
+  "6a71675b0001006c81087b61": "debug/dev string (not player dialogue) (jp: デバッグ|<01>|ドリームス; in _STGSP7A.bin)",
+  "85861a1b1c1d001e8788898a": "data-table (CFG over-approx into a jump/data region) (jp: ン尉おかがき|く一俺下何; in _STG15A.bin)",
+  "e0666f8082f4c36a7f08f976000100e47be0fae5e201e5d4": "staff credits: ゼネラルプロデューサー + 東海林 JP staff name",
+  "e35ee266f13a000100e0d0e26501e3069f": "staff credits: 制作協力 + 岡崎 JP staff name",
+  "e35ee266f13a000100f2e6f48262010001e336e46601e301e1bd0001e564e21601e6da010001c0e47701e21be2a0": "staff credits: 制作協力 + サンライズ/堀口/… JP studio+staff names",
+  "e7fae870ef4be075e0618557086c": "staff credits: studio name (XXXヴァンガード)",
+  "e8deef2fe8f6efb0ef4b6b7b5a8154506b": "staff credits: studio name (XXXトムクリエイト)",
+  "e95ce91def4b6c81087b61": "staff credits: studio name (XXXドリームス)"
+ }
+}

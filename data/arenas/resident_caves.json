@@ -1,0 +1,7082 @@
+{
+ "_about": "Resident string caves: the name arena plus verified-free zero runs inside the code image, filled with relocated pilot/unit/weapon/ability names and ID-command summaries (all name readers accept pointers into this window; the runtime heap never touches it).",
+ "file_offset": "0x186000",
+ "end": "0x1985A4",
+ "entries": [
+  {
+   "offset": "0x270C",
+   "text": "（2D·特莱亚尔",
+   "payload_hex": "0a0fef96ef4be7cfe846e7d6e7e1"
+  },
+  {
+   "offset": "0x271B",
+   "text": "核心DG细胞",
+   "payload_hex": "e8f3e82def96eed1eb9aefab"
+  },
+  {
+   "offset": "0x3064",
+   "text": "様3格雷米军官",
+   "payload_hex": "d710e824e8afe878e7e0ef92"
+  },
+  {
+   "offset": "0x3071",
+   "text": "新吉恩兵",
+   "payload_hex": "ef8ae7d9e7eeef93"
+  },
+  {
+   "offset": "0x307A",
+   "text": "新吉恩骑士",
+   "payload_hex": "ef8ae7d9e7eeeca3ef64"
+  },
+  {
+   "offset": "0x3085",
+   "text": "格雷米军兵",
+   "payload_hex": "e824e8afe878e7e0ef93"
+  },
+  {
+   "offset": "0x3090",
+   "text": "新吉恩强化兵",
+   "payload_hex": "ef8ae7d9e7eee8ade9a5ef93"
+  },
+  {
+   "offset": "0x309D",
+   "text": "木星军兵",
+   "payload_hex": "efa9ef69e7e0ef93"
+  },
+  {
+   "offset": "0x30A6",
+   "text": "联邦高官",
+   "payload_hex": "ef2eefaae812ef92"
+  },
+  {
+   "offset": "0x30AF",
+   "text": "联邦精英兵",
+   "payload_hex": "ef2eefaae98deb6cef93"
+  },
+  {
+   "offset": "0x30BA",
+   "text": "核心战机",
+   "payload_hex": "e8f3e82def28e7e4"
+  },
+  {
+   "offset": "0x30C3",
+   "text": "零式系统",
+   "payload_hex": "eb74ea26e941e929"
+  },
+  {
+   "offset": "0x30CC",
+   "text": "OZ高官",
+   "payload_hex": "ed1ceedae812ef92"
+  },
+  {
+   "offset": "0x30D5",
+   "text": "玛丽美亚士官",
+   "payload_hex": "e845e9c5e9f4e7d6ef64ef92"
+  },
+  {
+   "offset": "0x30E2",
+   "text": "特列斯军兵",
+   "payload_hex": "e7cfe8b5e7c8e7e0ef93"
+  },
+  {
+   "offset": "0x30ED",
+   "text": "迪安娜·索雷尔",
+   "payload_hex": "ea11e7fce7eaef4be93ce8afe7e1"
+  },
+  {
+   "offset": "0x30FC",
+   "text": "科文中将",
+   "payload_hex": "ebe3ea4eef4ee84a"
+  },
+  {
+   "offset": "0x3105",
+   "text": "米涅瓦·扎比",
+   "payload_hex": "e878eacfe99fef4be84be825"
+  },
+  {
+   "offset": "0x3112",
+   "text": "雅尼·奥比斯",
+   "payload_hex": "ebfde896ef4be82be825e7c8"
+  },
+  {
+   "offset": "0x311F",
+   "text": "吉恩高官",
+   "payload_hex": "e7d9e7eee812ef92"
+  },
+  {
+   "offset": "0x3128",
+   "text": "阿迪纳乌阿",
+   "payload_hex": "e7d2ea11e882e94de7d2"
+  },
+  {
+   "offset": "0x3133",
+   "text": "操作员A",
+   "payload_hex": "eac7ef2fe849ea9c"
+  },
+  {
+   "offset": "0x313C",
+   "text": "亲卫队长",
+   "payload_hex": "e894e9b2e7c9ef34"
+  },
+  {
+   "offset": "0x3145",
+   "text": "军高官B",
+   "payload_hex": "e7e0e812ef92ef61"
+  },
+  {
+   "offset": "0x314E",
+   "text": "穿梭机部队",
+   "payload_hex": "ea7eeb8fe7e4ef70e7c9"
+  },
+  {
+   "offset": "0x3159",
+   "text": "政府高官B",
+   "payload_hex": "ea68ea60e812ef92ef61"
+  },
+  {
+   "offset": "0x3794",
+   "text": "こI翼{SLOT:2291}游炮",
+   "payload_hex": "2112ec35e813ea94e95a"
+  },
+  {
+   "offset": "0x379F",
+   "text": "中型光束炮",
+   "payload_hex": "ef4ee977e83de895e95a"
+  },
+  {
+   "offset": "0x37AA",
+   "text": "超大型光束炮",
+   "payload_hex": "eaf6efa5e977e83de895e95a"
+  },
+  {
+   "offset": "0x37B7",
+   "text": "核导弹",
+   "payload_hex": "e8f3ea4be946"
+  },
+  {
+   "offset": "0x37BE",
+   "text": "死亡军团",
+   "payload_hex": "ef6aebb2e7e0ea5e"
+  },
+  {
+   "offset": "0x37C7",
+   "text": "金棒型光束步枪",
+   "payload_hex": "e902ee41e977e83de895ea93eaae"
+  },
+  {
+   "offset": "0x37D6",
+   "text": "金棒",
+   "payload_hex": "e902ee41"
+  },
+  {
+   "offset": "0x37DB",
+   "text": "迪斯帕达",
+   "payload_hex": "ea11e7c8eb01ef2b"
+  },
+  {
+   "offset": "0x37E4",
+   "text": "灵能棒",
+   "payload_hex": "eaebe7c6ee41"
+  },
+  {
+   "offset": "0x37EB",
+   "text": "迪斯帕达／法夫纳",
+   "payload_hex": "ea11e7c8eb01ef2befafe84ee830e882"
+  },
+  {
+   "offset": "0x37FC",
+   "text": "恶魔高达",
+   "payload_hex": "e7dee8d8e812ef2b"
+  },
+  {
+   "offset": "0x3805",
+   "text": "恶魔闪光",
+   "payload_hex": "e7dee8d8ea44e83d"
+  },
+  {
+   "offset": "0x380E",
+   "text": "高达头",
+   "payload_hex": "e812ef2be92e"
+  },
+  {
+   "offset": "0x3815",
+   "text": "泰拉·斯欧诺",
+   "payload_hex": "eaeae7c2ef4be7c8eb91e972"
+  },
+  {
+   "offset": "0x3822",
+   "text": "手部发射器",
+   "payload_hex": "ef66ef70e870ef65e8c3"
+  },
+  {
+   "offset": "0x382D",
+   "text": "灵能炮",
+   "payload_hex": "eaebe7c6e95a"
+  },
+  {
+   "offset": "0x3834",
+   "text": "突击比特",
+   "payload_hex": "e8b6e7cce825e7cf"
+  },
+  {
+   "offset": "0x383D",
+   "text": "德拜恩狼",
+   "payload_hex": "e82ce91ae7eeec7b"
+  },
+  {
+   "offset": "0x3846",
+   "text": "斯库拉",
+   "payload_hex": "e7c8e9b3e7c2"
+  },
+  {
+   "offset": "0x384F",
+   "text": "金牛",
+   "payload_hex": "e902ee5f"
+  },
+  {
+   "offset": "0x3854",
+   "text": "金牛／SK规格",
+   "payload_hex": "e902ee5fe06b08ed1bea42e824"
+  },
+  {
+   "offset": "0x3862",
+   "text": "托尔吉斯",
+   "payload_hex": "e7f4e7e1e7d9e7c8"
+  },
+  {
+   "offset": "0x386B",
+   "text": "多ゾ枪",
+   "payload_hex": "e7e9eee9eaae"
+  },
+  {
+   "offset": "0x3872",
+   "text": "托尔吉斯3",
+   "payload_hex": "e7f4e7e1e7d9e7c8ef60"
+  },
+  {
+   "offset": "0x387D",
+   "text": "加撒C",
+   "payload_hex": "e854ed6feed0"
+  },
+  {
+   "offset": "0x3884",
+   "text": "德姆·格罗斯拜尔",
+   "payload_hex": "e82ce823ef4be824e7ece7c8e91ae7e1"
+  },
+  {
+   "offset": "0x3895",
+   "text": "热能刀",
+   "payload_hex": "ead1e7c6ed25"
+  },
+  {
+   "offset": "0x389C",
+   "text": "大型热能剑",
+   "payload_hex": "efa5e977ead1e7c6ecb3"
+  },
+  {
+   "offset": "0x38A7",
+   "text": "德姆·拜恩尼希兹",
+   "payload_hex": "e82ce823ef4be91ae7eee896e87be856"
+  },
+  {
+   "offset": "0x38B8",
+   "text": "火箭炮",
+   "payload_hex": "e8daec32e95a"
+  },
+  {
+   "offset": "0x38BF",
+   "text": "热能剑",
+   "payload_hex": "ead1e7c6ecb3"
+  },
+  {
+   "offset": "0x38C6",
+   "text": "德莱森",
+   "payload_hex": "e82ce846ebd2"
+  },
+  {
+   "offset": "0x38CD",
+   "text": "加农炮",
+   "payload_hex": "e854ef7ae95a"
+  },
+  {
+   "offset": "0x38D4",
+   "text": "手枪",
+   "payload_hex": "ef66eaae"
+  },
+  {
+   "offset": "0x38D9",
+   "text": "诺贝尔·吉尔",
+   "payload_hex": "e972e857e7e1ef4be7d9e7e1"
+  },
+  {
+   "offset": "0x38E6",
+   "text": "有线{SLOT:2292}臂",
+   "payload_hex": "e7cbe916e814ee92"
+  },
+  {
+   "offset": "0x38EF",
+   "text": "大型导弹发射器",
+   "payload_hex": "efa5e977ea4be946e870ef65e8c3"
+  },
+  {
+   "offset": "0x38FE",
+   "text": "加撒E",
+   "payload_hex": "e854ed6fef9f"
+  },
+  {
+   "offset": "0x3905",
+   "text": "巴萨姆",
+   "payload_hex": "e85be83be823"
+  },
+  {
+   "offset": "0x390C",
+   "text": "海扎克",
+   "payload_hex": "e91be84be7d5"
+  },
+  {
+   "offset": "0x3913",
+   "text": "扎古机枪改",
+   "payload_hex": "e84be84de7e4eaaee9f0"
+  },
+  {
+   "offset": "0x391E",
+   "text": "海扎克改",
+   "payload_hex": "e91be84be7d5e9f0"
+  },
+  {
+   "offset": "0x3927",
+   "text": "狙击光炮",
+   "payload_hex": "ef6ce7cce83de95a"
+  },
+  {
+   "offset": "0x3930",
+   "text": "巴乌",
+   "payload_hex": "e85be94d"
+  },
+  {
+   "offset": "0x3935",
+   "text": "红色角马",
+   "payload_hex": "e9e3e89feb1ae84f"
+  },
+  {
+   "offset": "0x393E",
+   "text": "量产型巴乌",
+   "payload_hex": "e851ec05e977e85be94d"
+  },
+  {
+   "offset": "0x3949",
+   "text": "猎犬",
+   "payload_hex": "ef81ef6b"
+  },
+  {
+   "offset": "0x394E",
+   "text": "利{SLOT:2292}",
+   "payload_hex": "e82ee814"
+  },
+  {
+   "offset": "0x3953",
+   "text": "巴塔拉",
+   "payload_hex": "e85be945e7c2"
+  },
+  {
+   "offset": "0x395A",
+   "text": "帕拉斯·雅典娜",
+   "payload_hex": "eb01e7c2e7c8ef4bebfdede0e7ea"
+  },
+  {
+   "offset": "0x3969",
+   "text": "卡普斯利",
+   "payload_hex": "e801e838e7c8e82e"
+  },
+  {
+   "offset": "0x3972",
+   "text": "强盗",
+   "payload_hex": "e8ade9f3"
+  },
+  {
+   "offset": "0x3977",
+   "text": "利刃导弹",
+   "payload_hex": "e82eede7ea4be946"
+  },
+  {
+   "offset": "0x3980",
+   "text": "汉布拉比",
+   "payload_hex": "ef82e831e7c2e825"
+  },
+  {
+   "offset": "0x3989",
+   "text": "海蛇",
+   "payload_hex": "e91bef6f"
+  },
+  {
+   "offset": "0x398E",
+   "text": "哈玛·哈玛",
+   "payload_hex": "e7e8e845ef4be7e8e845"
+  },
+  {
+   "offset": "0x3999",
+   "text": "有线光",
+   "payload_hex": "e7cbe916e83d"
+  },
+  {
+   "offset": "0x39A0",
+   "text": "大魔",
+   "payload_hex": "efa5e8d8"
+  },
+  {
+   "offset": "0x39A5",
+   "text": "基拉·大和",
+   "payload_hex": "e829e7c2ef4befa5e7d3"
+  },
+  {
+   "offset": "0x39B0",
+   "text": "对空弹",
+   "payload_hex": "e7bee93fe946"
+  },
+  {
+   "offset": "0x39B7",
+   "text": "比格罗",
+   "payload_hex": "e825e824e7ec"
+  },
+  {
+   "offset": "0x39BE",
+   "text": "百式",
+   "payload_hex": "ebdcea26"
+  },
+  {
+   "offset": "0x39C3",
+   "text": "卡{SLOT:2222}尼",
+   "payload_hex": "e801e7cee896"
+  },
+  {
+   "offset": "0x39CA",
+   "text": "百式改",
+   "payload_hex": "ebdcea26e9f0"
+  },
+  {
+   "offset": "0x39D1",
+   "text": "光束加特林",
+   "payload_hex": "e83de895e854e7cfe9b7"
+  },
+  {
+   "offset": "0x39DC",
+   "text": "全装甲百式改",
+   "payload_hex": "efb4e98febdbebdcea26e9f0"
+  },
+  {
+   "offset": "0x39E9",
+   "text": "炸裂螺栓",
+   "payload_hex": "e9c9ec3aef98ef99"
+  },
+  {
+   "offset": "0x39F2",
+   "text": "比尔基2",
+   "payload_hex": "e825e7e1e829ef5f"
+  },
+  {
+   "offset": "0x39FB",
+   "text": "禁断高达",
+   "payload_hex": "ebe2e982e812ef2b"
+  },
+  {
+   "offset": "0x3A04",
+   "text": "艾克札恩",
+   "payload_hex": "e8d6e7d5ef9ae7ee"
+  },
+  {
+   "offset": "0x3A0D",
+   "text": "尼德霍格",
+   "payload_hex": "e896e82cebfee824"
+  },
+  {
+   "offset": "0x3A16",
+   "text": "弗雷斯贝尔格",
+   "payload_hex": "e9b5e8afe7c8e857e7e1e824"
+  },
+  {
+   "offset": "0x3A23",
+   "text": "自由高达",
+   "payload_hex": "efb5e8a6e812ef2b"
+  },
+  {
+   "offset": "0x3A2C",
+   "text": "旗鱼",
+   "payload_hex": "eb0befdb"
+  },
+  {
+   "offset": "0x3A35",
+   "text": "砲鱼",
+   "payload_hex": "ef09efdb"
+  },
+  {
+   "offset": "0x3A3C",
+   "text": "自由／SEED",
+   "payload_hex": "efb5e8a6e06b08e00be00b05"
+  },
+  {
+   "offset": "0x3A49",
+   "text": "全弹发射",
+   "payload_hex": "efb4e946e870ef65"
+  },
+  {
+   "offset": "0x3A52",
+   "text": "天意高达",
+   "payload_hex": "e844ef3ce812ef2b"
+  },
+  {
+   "offset": "0x3A5B",
+   "text": "铁拳火箭",
+   "payload_hex": "eebbea65e8daec32"
+  },
+  {
+   "offset": "0x3A64",
+   "text": "师父高达",
+   "payload_hex": "e96ce888e812ef2b"
+  },
+  {
+   "offset": "0x3A6D",
+   "text": "十字",
+   "payload_hex": "ea4ae980"
+  },
+  {
+   "offset": "0x3A72",
+   "text": "十二王方牌大车轮",
+   "payload_hex": "ea4aea13e884efb1ec2befa5efa8ebf4"
+  },
+  {
+   "offset": "0x3A83",
+   "text": "暗黑指",
+   "payload_hex": "ea6aef3ee8c0"
+  },
+  {
+   "offset": "0x3A8A",
+   "text": "松永专用勇士",
+   "payload_hex": "e9e0e9bfeb4befb3eaddef64"
+  },
+  {
+   "offset": "0x3A97",
+   "text": "玛伊罗",
+   "payload_hex": "e845e969e7ec"
+  },
+  {
+   "offset": "0x3A9E",
+   "text": "玛拉赛",
+   "payload_hex": "e845e7c2ebf3"
+  },
+  {
+   "offset": "0x3AA5",
+   "text": "梅塔斯",
+   "payload_hex": "e9f2e945e7c8"
+  },
+  {
+   "offset": "0x3AAC",
+   "text": "臂光束枪",
+   "payload_hex": "ee92e83de895eaae"
+  },
+  {
+   "offset": "0x3AB5",
+   "text": "梅萨拉",
+   "payload_hex": "e9f2e83be7c2"
+  },
+  {
+   "offset": "0x3ABC",
+   "text": "亚克特·多加",
+   "payload_hex": "e7d6e7d5e7cfef4be7e9e854"
+  },
+  {
+   "offset": "0x3AC9",
+   "text": "光束突击枪",
+   "payload_hex": "e83de895e8b6e7cceaae"
+  },
+  {
+   "offset": "0x3AD4",
+   "text": "莱汀专用勇士",
+   "payload_hex": "e846ed7ceb4befb3eaddef64"
+  },
+  {
+   "offset": "0x3AE1",
+   "text": "里·加兹",
+   "payload_hex": "ef31ef4be854e856"
+  },
+  {
+   "offset": "0x3AEA",
+   "text": "里·加兹／BWS",
+   "payload_hex": "ef31ef4be854e856e06bef61e01a08"
+  },
+  {
+   "offset": "0x3AFA",
+   "text": "里克·迪亚斯",
+   "payload_hex": "ef31e7d5ef4bea11e7d6e7c8"
+  },
+  {
+   "offset": "0x3B07",
+   "text": "光束手枪",
+   "payload_hex": "e83de895ef66eaae"
+  },
+  {
+   "offset": "0x3B10",
+   "text": "里克·迪亚斯S",
+   "payload_hex": "ef31e7d5ef4bea11e7d6e7c808"
+  },
+  {
+   "offset": "0x3B1E",
+   "text": "远程火箭",
+   "payload_hex": "e94cea7de8daec32"
+  },
+  {
+   "offset": "0x3B27",
+   "text": "超级·迪亚斯",
+   "payload_hex": "eaf6eaeeef4bea11e7d6e7c8"
+  },
+  {
+   "offset": "0x3B34",
+   "text": "里克德姆",
+   "payload_hex": "ef31e7d5e82ce823"
+  },
+  {
+   "offset": "0x3B3F",
+   "text": "量产型F91",
+   "payload_hex": "e851ec05e977eca5eca402"
+  },
+  {
+   "offset": "0x3B4B",
+   "text": "量产型丘贝雷",
+   "payload_hex": "e851ec05e977ec46e857e8af"
+  },
+  {
+   "offset": "0x3B58",
+   "text": "主动炮",
+   "payload_hex": "e954ef30e95a"
+  },
+  {
+   "offset": "0x3B5F",
+   "text": "强袭红",
+   "payload_hex": "e8ade9aee9e3"
+  },
+  {
+   "offset": "0x3B66",
+   "text": "强袭红／下降",
+   "payload_hex": "e8ade9aee9e3efafef4de943"
+  },
+  {
+   "offset": "0x3B73",
+   "text": "掠袭高达",
+   "payload_hex": "ef83e9aee812ef2b"
+  },
+  {
+   "offset": "0x3B7C",
+   "text": "双联高速防盾炮",
+   "payload_hex": "eabcef2ee812e9dae968eb63e95a"
+  },
+  {
+   "offset": "0x3B8B",
+   "text": "雷神锤",
+   "payload_hex": "e8afe9aaedc2"
+  },
+  {
+   "offset": "0x3B92",
+   "text": "怒炮",
+   "payload_hex": "ee1ee95a"
+  },
+  {
+   "offset": "0x3B97",
+   "text": "力量脉冲高达",
+   "payload_hex": "efb0e851ebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x3BA4",
+   "text": "折ヘヒ刀",
+   "payload_hex": "ed64eeeceeebed25"
+  },
+  {
+   "offset": "0x3BAD",
+   "text": "剑式脉冲高达",
+   "payload_hex": "ecb3ea26ebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x3BBA",
+   "text": "昆曼沙",
+   "payload_hex": "ef7be874eb0c"
+  },
+  {
+   "offset": "0x3BC1",
+   "text": "闪光刃",
+   "payload_hex": "ea44e83dede7"
+  },
+  {
+   "offset": "0x3BC8",
+   "text": "爆裂脉冲高达",
+   "payload_hex": "ef84ec3aebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x3BD5",
+   "text": "德流吉",
+   "payload_hex": "e82cea2ee7d9"
+  },
+  {
+   "offset": "0x3BDC",
+   "text": "萤火虫",
+   "payload_hex": "ef9be8daeb6d"
+  },
+  {
+   "offset": "0x3BE3",
+   "text": "挑战者",
+   "payload_hex": "eae7ef28ef6e"
+  },
+  {
+   "offset": "0x3BEA",
+   "text": "地狱犬",
+   "payload_hex": "ef63ee64ef6b"
+  },
+  {
+   "offset": "0x3BF1",
+   "text": "混沌高达",
+   "payload_hex": "ea41ef85e812ef2b"
+  },
+  {
+   "offset": "0x3BFA",
+   "text": "巨炮改",
+   "payload_hex": "ea25e95ae9f0"
+  },
+  {
+   "offset": "0x3C01",
+   "text": "机动炮",
+   "payload_hex": "e7e4ef30e95a"
+  },
+  {
+   "offset": "0x3C08",
+   "text": "盖亚高达",
+   "payload_hex": "ec7ee7d6e812ef2b"
+  },
+  {
+   "offset": "0x3C11",
+   "text": "格里芬2",
+   "payload_hex": "e824ef31ef9cef5f"
+  },
+  {
+   "offset": "0x3C1A",
+   "text": "深渊高达",
+   "payload_hex": "eb0def86e812ef2b"
+  },
+  {
+   "offset": "0x3C23",
+   "text": "连装炮",
+   "payload_hex": "e86ee98fe95a"
+  },
+  {
+   "offset": "0x3C2A",
+   "text": "盖马克",
+   "payload_hex": "ec7ee84fe7d5"
+  },
+  {
+   "offset": "0x3C31",
+   "text": "3连光炮",
+   "payload_hex": "ef60e86ee83de95a"
+  },
+  {
+   "offset": "0x3C3A",
+   "text": "救星高达",
+   "payload_hex": "e8caef69e812ef2b"
+  },
+  {
+   "offset": "0x3C43",
+   "text": "巨型炮",
+   "payload_hex": "ea25e977e95a"
+  },
+  {
+   "offset": "0x3C4A",
+   "text": "扎古勇士",
+   "payload_hex": "e84be84deaddef64"
+  },
+  {
+   "offset": "0x3C53",
+   "text": "突击炮",
+   "payload_hex": "e8b6e7cce95a"
+  },
+  {
+   "offset": "0x3C5A",
+   "text": "百夫长",
+   "payload_hex": "ebdce830ef34"
+  },
+  {
+   "offset": "0x3C61",
+   "text": "双子发射器",
+   "payload_hex": "eabce886e870ef65e8c3"
+  },
+  {
+   "offset": "0x3C6C",
+   "text": "光辉之刃",
+   "payload_hex": "e83deeb0e7cdede7"
+  },
+  {
+   "offset": "0x3C75",
+   "text": "百夫长·军团长",
+   "payload_hex": "ebdce830ef34ef4be7e0ea5eef34"
+  },
+  {
+   "offset": "0x3C84",
+   "text": "屏障领域",
+   "payload_hex": "ed4eebfcea20eaa7"
+  },
+  {
+   "offset": "0x3C8D",
+   "text": "百夫长·执政官",
+   "payload_hex": "ebdce830ef34ef4be9fcea68ef92"
+  },
+  {
+   "offset": "0x3C9C",
+   "text": "机械之神",
+   "payload_hex": "e7e4eb90e7cde9aa"
+  },
+  {
+   "offset": "0x3CA5",
+   "text": "皇帝",
+   "payload_hex": "ecf2e8f8"
+  },
+  {
+   "offset": "0x3CAA",
+   "text": "特莱亚",
+   "payload_hex": "e7cfe846e7d6"
+  },
+  {
+   "offset": "0x3CB1",
+   "text": "丘贝雷MkⅡ／普露机",
+   "payload_hex": "ec46e857e8af07eedeeee1e06be838e858e7e4"
+  },
+  {
+   "offset": "0x3CC5",
+   "text": "预备",
+   "payload_hex": "ea5ae877"
+  },
+  {
+   "offset": "0x3CCA",
+   "text": "阿伽玛",
+   "payload_hex": "e7d2e8e8e845"
+  },
+  {
+   "offset": "0x3CD1",
+   "text": "单装炮",
+   "payload_hex": "e918e98fe95a"
+  },
+  {
+   "offset": "0x3CD8",
+   "text": "对空光",
+   "payload_hex": "e7bee93fe83d"
+  },
+  {
+   "offset": "0x3CDF",
+   "text": "主米加粒子炮",
+   "payload_hex": "e954e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x3CED",
+   "text": "光束炮",
+   "payload_hex": "e83de895e95a"
+  },
+  {
+   "offset": "0x3CF4",
+   "text": "实弹炮",
+   "payload_hex": "e87fe946e95a"
+  },
+  {
+   "offset": "0x3CFB",
+   "text": "重锤",
+   "payload_hex": "e8a1edc2"
+  },
+  {
+   "offset": "0x3D00",
+   "text": "速射机炮",
+   "payload_hex": "e9daef65e7e4e95a"
+  },
+  {
+   "offset": "0x3D09",
+   "text": "奥多姆拉",
+   "payload_hex": "e82be7e9e823e7c2"
+  },
+  {
+   "offset": "0x3D12",
+   "text": "阿尔比恩",
+   "payload_hex": "e7d2e7e1e825e7ee"
+  },
+  {
+   "offset": "0x3D1B",
+   "text": "阿尔玛雅",
+   "payload_hex": "e7d2e7e1e845ebfd"
+  },
+  {
+   "offset": "0x3D24",
+   "text": "加速炮",
+   "payload_hex": "e854e9dae95a"
+  },
+  {
+   "offset": "0x3D2B",
+   "text": "光束轮",
+   "payload_hex": "e83de895ebf4"
+  },
+  {
+   "offset": "0x3D32",
+   "text": "亚历山大",
+   "payload_hex": "e7d6e8fbef87efa5"
+  },
+  {
+   "offset": "0x3D3B",
+   "text": "威尔盖姆",
+   "payload_hex": "e96be7e1ec7ee823"
+  },
+  {
+   "offset": "0x3D44",
+   "text": "CIWS",
+   "payload_hex": "eed0ef62e01a08"
+  },
+  {
+   "offset": "0x3D4C",
+   "text": "永恒号",
+   "payload_hex": "e9bfeb85e833"
+  },
+  {
+   "offset": "0x3D53",
+   "text": "单能量炮",
+   "payload_hex": "e918e7c6e851e95a"
+  },
+  {
+   "offset": "0x3D5C",
+   "text": "连装轨炮",
+   "payload_hex": "e86ee98fe9cce95a"
+  },
+  {
+   "offset": "0x3D65",
+   "text": "恩多拉",
+   "payload_hex": "e7eee7e9e7c2"
+  },
+  {
+   "offset": "0x3D6C",
+   "text": "加鲁达",
+   "payload_hex": "e854e8a2ef2b"
+  },
+  {
+   "offset": "0x3D73",
+   "text": "灰色幽灵",
+   "payload_hex": "ef88e89fefc8eaeb"
+  },
+  {
+   "offset": "0x3D7C",
+   "text": "主炮",
+   "payload_hex": "e954e95a"
+  },
+  {
+   "offset": "0x3D81",
+   "text": "格瓦金",
+   "payload_hex": "e824e99fe902"
+  },
+  {
+   "offset": "0x3D88",
+   "text": "格瓦典",
+   "payload_hex": "e824e99fede0"
+  },
+  {
+   "offset": "0x3D8F",
+   "text": "殖民地",
+   "payload_hex": "e8a9ef38ef63"
+  },
+  {
+   "offset": "0x3D96",
+   "text": "萨达朗",
+   "payload_hex": "e83bef2bea90"
+  },
+  {
+   "offset": "0x3D9D",
+   "text": "萨拉米斯",
+   "payload_hex": "e83be7c2e878e7c8"
+  },
+  {
+   "offset": "0x3DA6",
+   "text": "桑吉巴尔",
+   "payload_hex": "ea2be7d9e85be7e1"
+  },
+  {
+   "offset": "0x3DAF",
+   "text": "J型导弹",
+   "payload_hex": "e00fe977ea4be946"
+  },
+  {
+   "offset": "0x3DB8",
+   "text": "桑吉巴尔2",
+   "payload_hex": "ea2be7d9e85be7e1ef5f"
+  },
+  {
+   "offset": "0x3DC3",
+   "text": "穿梭机",
+   "payload_hex": "ea7eeb8fe7e4"
+  },
+  {
+   "offset": "0x3DCA",
+   "text": "太阳系统2",
+   "payload_hex": "e86aeb72e941e929ef5f"
+  },
+  {
+   "offset": "0x3DD5",
+   "text": "太阳号",
+   "payload_hex": "e86aeb72e833"
+  },
+  {
+   "offset": "0x3DDC",
+   "text": "集束光束炮",
+   "payload_hex": "ea98e895e83de895e95a"
+  },
+  {
+   "offset": "0x3DE7",
+   "text": "散射光炮",
+   "payload_hex": "ef68ef65e83de95a"
+  },
+  {
+   "offset": "0x3DF0",
+   "text": "多戈斯·基亚",
+   "payload_hex": "e7e9ea63e7c8ef4be829e7d6"
+  },
+  {
+   "offset": "0x3DFD",
+   "text": "主天使",
+   "payload_hex": "e954e844e83f"
+  },
+  {
+   "offset": "0x3E06",
+   "text": "多洛斯",
+   "payload_hex": "e7e9e94ae7c8"
+  },
+  {
+   "offset": "0x3E0D",
+   "text": "新阿伽玛",
+   "payload_hex": "ef8ae7d2e8e8e845"
+  },
+  {
+   "offset": "0x3E16",
+   "text": "ォ红强袭／下降",
+   "payload_hex": "eee3e9e3e8ade9aeefafef4de943"
+  },
+  {
+   "offset": "0x3E28",
+   "text": "和平百万号",
+   "payload_hex": "e7d3e887ebdce9f8e833"
+  },
+  {
+   "offset": "0x3E33",
+   "text": "飞马",
+   "payload_hex": "ea45e84f"
+  },
+  {
+   "offset": "0x3E38",
+   "text": "白色基地",
+   "payload_hex": "e809e89fe829ef63"
+  },
+  {
+   "offset": "0x3E41",
+   "text": "大毒蛇",
+   "payload_hex": "efa5eb5fef6f"
+  },
+  {
+   "offset": "0x3E4A",
+   "text": "麦哲伦",
+   "payload_hex": "ec43ef8cea5b"
+  },
+  {
+   "offset": "0x3E51",
+   "text": "姆塞",
+   "payload_hex": "e823e950"
+  },
+  {
+   "offset": "0x3E56",
+   "text": "姆塞后期型",
+   "payload_hex": "e823e950e7feeac9e977"
+  },
+  {
+   "offset": "0x3E61",
+   "text": "拉·凯拉姆",
+   "payload_hex": "e7c2ef4be95fe7c2e823"
+  },
+  {
+   "offset": "0x3E6C",
+   "text": "S高达",
+   "payload_hex": "ef9ee812ef2b"
+  },
+  {
+   "offset": "0x3E73",
+   "text": "里恩霍斯Jr",
+   "payload_hex": "ef31e7eeebfee7c8effdeedf"
+  },
+  {
+   "offset": "0x3E80",
+   "text": "光束锤",
+   "payload_hex": "e83de895edc2"
+  },
+  {
+   "offset": "0x3E87",
+   "text": "莉莉·玛莲",
+   "payload_hex": "e81ee81eef4be845ecff"
+  },
+  {
+   "offset": "0x3E92",
+   "text": "预防者·风",
+   "payload_hex": "ea5ae968ef6eef4beb75"
+  },
+  {
+   "offset": "0x3E9D",
+   "text": "略留拉",
+   "payload_hex": "eb3de98ce7c2"
+  },
+  {
+   "offset": "0x3EA6",
+   "text": "维萨利乌斯",
+   "payload_hex": "ea54e83be82ee94de7c8"
+  },
+  {
+   "offset": "0x3EB1",
+   "text": "多蒙·生",
+   "payload_hex": "e7e9e942ef4bef8d"
+  },
+  {
+   "offset": "0x3EBA",
+   "text": "东方不败·生",
+   "payload_hex": "e8baefb1e7b5e88fef4bef8d"
+  },
+  {
+   "offset": "0x3EC7",
+   "text": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x3ECC",
+   "text": "诱饵单元",
+   "payload_hex": "eb44ed19e918ecae"
+  },
+  {
+   "offset": "0x3ED5",
+   "text": "波动骑士",
+   "payload_hex": "e9a8ef30eca3ef64"
+  },
+  {
+   "offset": "0x3EDE",
+   "text": "逃生舱",
+   "payload_hex": "e8c2ef8debeb"
+  },
+  {
+   "offset": "0x3EE5",
+   "text": "吉翁副官",
+   "payload_hex": "e7d9ee88ecb6ef92"
+  },
+  {
+   "offset": "0x3EEE",
+   "text": "西玛·卡拉豪",
+   "payload_hex": "e7f8e845ef4be801e7c2eea2"
+  },
+  {
+   "offset": "0x3EFB",
+   "text": "阿姆罗·雷",
+   "payload_hex": "e7d2e823e7ecef4be8af"
+  },
+  {
+   "offset": "0x3F06",
+   "text": "{SLOT:2204}多·亚西塔",
+   "payload_hex": "e7bce7e9ef4be7d6e7f8e945"
+  },
+  {
+   "offset": "0x3F13",
+   "text": "吉恩长官",
+   "payload_hex": "e7d9e7eeef34ef92"
+  },
+  {
+   "offset": "0x3F1C",
+   "text": "多蒙·卡修",
+   "payload_hex": "e7e9e942ef4be801e9b0"
+  },
+  {
+   "offset": "0x3F27",
+   "text": "布莱德·诺亚",
+   "payload_hex": "e831e846e82cef4be972e7d6"
+  },
+  {
+   "offset": "0x3F34",
+   "text": "诺玛·雷吉欧",
+   "payload_hex": "e972e845ef4be8afe7d9eb91"
+  },
+  {
+   "offset": "0x3F41",
+   "text": "芙蕾·阿尔斯塔",
+   "payload_hex": "e9d7e84cef4be7d2e7e1e7c8e945"
+  },
+  {
+   "offset": "0x3F50",
+   "text": "卡恩兹",
+   "payload_hex": "e801e7eee856"
+  },
+  {
+   "offset": "0x3F57",
+   "text": "卡迪珍娜·露丝",
+   "payload_hex": "e801ea11ed88e7eaef4be858e8a3"
+  },
+  {
+   "offset": "0x3F66",
+   "text": "基尼亚斯",
+   "payload_hex": "e829e896e7d6e7c8"
+  },
+  {
+   "offset": "0x3F6F",
+   "text": "死亡块",
+   "payload_hex": "ef6aebb2ec10"
+  },
+  {
+   "offset": "0x3F77",
+   "text": "基姆·金卡拉姆",
+   "payload_hex": "e829e823ef4be902e801e7c2e823"
+  },
+  {
+   "offset": "0x3F86",
+   "text": "卡拉·苏恩",
+   "payload_hex": "e801e7c2ef4bec8de7ee"
+  },
+  {
+   "offset": "0x3F91",
+   "text": "邱尼·加斯",
+   "payload_hex": "efa2e896ef4be854e7c8"
+  },
+  {
+   "offset": "0x3F9C",
+   "text": "奎丝·帕拉雅",
+   "payload_hex": "eb82e8a3ef4beb01e7c2ebfd"
+  },
+  {
+   "offset": "0x3FA9",
+   "text": "格拉克斯·德卡ァ",
+   "payload_hex": "e824e7c2e7d5e7c8ef4be82ce801eee2"
+  },
+  {
+   "offset": "0x3FBA",
+   "text": "格雷米·托托",
+   "payload_hex": "e824e8afe878ef4be7f4e7f4"
+  },
+  {
+   "offset": "0x3FC7",
+   "text": "格雷米·托托",
+   "payload_hex": "e824e8afe878ef4be7f4e7f4"
+  },
+  {
+   "offset": "0x3FD4",
+   "text": "牙买加",
+   "payload_hex": "ebd7efa3e854"
+  },
+  {
+   "offset": "0x3FDB",
+   "text": "加米托夫·海曼",
+   "payload_hex": "e854e878e7f4e830ef4be91be874"
+  },
+  {
+   "offset": "0x3FEA",
+   "text": "史列加·罗",
+   "payload_hex": "e925e8b5e854ef4be7ec"
+  },
+  {
+   "offset": "0x3FF5",
+   "text": "邓克尔·库珀",
+   "payload_hex": "ef89e7d5e7e1ef4be9b3efa4"
+  },
+  {
+   "offset": "0x4002",
+   "text": "提安姆",
+   "payload_hex": "e821e7fce823"
+  },
+  {
+   "offset": "0x4009",
+   "text": "巴斯克·奥姆",
+   "payload_hex": "e85be7c8e7d5ef4be82be823"
+  },
+  {
+   "offset": "0x4016",
+   "text": "西罗克",
+   "payload_hex": "e7f8e7ece7d5"
+  },
+  {
+   "offset": "0x401D",
+   "text": "闪光{SLOT:2291}游炮",
+   "payload_hex": "ea44e83de813ea94e95a"
+  },
+  {
+   "offset": "0x4029",
+   "text": "玛修曼·塞罗",
+   "payload_hex": "e845e9b0e874ef4be950e7ec"
+  },
+  {
+   "offset": "0x4036",
+   "text": "玛修曼（H）",
+   "payload_hex": "e845e9b0e874ef8eeed2ef8f"
+  },
+  {
+   "offset": "0x4043",
+   "text": "玛莉梅亚",
+   "payload_hex": "e845e81ee9f2e7d6"
+  },
+  {
+   "offset": "0x404C",
+   "text": "亚赞·盖布尔",
+   "payload_hex": "e7d6ec3eef4bec7ee831e7e1"
+  },
+  {
+   "offset": "0x4059",
+   "text": "莱拉",
+   "payload_hex": "e846e7c2"
+  },
+  {
+   "offset": "0x405E",
+   "text": "突击{SLOT:2291}游炮",
+   "payload_hex": "e8b6e7cce813ea94e95a"
+  },
+  {
+   "offset": "0x406A",
+   "text": "劳·鲁·克鲁泽",
+   "payload_hex": "ec4aef4be8a2ef4be7d5e8a2e984"
+  },
+  {
+   "offset": "0x407B",
+   "text": "拉姆萨斯",
+   "payload_hex": "e7c2e823e83be7c8"
+  },
+  {
+   "offset": "0x4084",
+   "text": "蕾茵(核心)",
+   "payload_hex": "e84ce971eb77e8f3e82deb78"
+  },
+  {
+   "offset": "0x4091",
+   "text": "蕾兹",
+   "payload_hex": "e84ce856"
+  },
+  {
+   "offset": "0x4096",
+   "text": "瓦肯",
+   "payload_hex": "e99fe93d"
+  },
+  {
+   "offset": "0x409B",
+   "text": "阿兹拉埃尔",
+   "payload_hex": "e7d2e856e7c2e96ae7e1"
+  },
+  {
+   "offset": "0x40A6",
+   "text": "雷吉恩",
+   "payload_hex": "e8afe7d9e7ee"
+  },
+  {
+   "offset": "0x40AE",
+   "text": "军团",
+   "payload_hex": "e7e0ea5e"
+  },
+  {
+   "offset": "0x40B3",
+   "text": "奥古兵",
+   "payload_hex": "e82be84def93"
+  },
+  {
+   "offset": "0x40BA",
+   "text": "金卡拉姆队大名",
+   "payload_hex": "e902e801e7c2e823e7c9efa5e8ac"
+  },
+  {
+   "offset": "0x40C9",
+   "text": "金卡拉姆兵",
+   "payload_hex": "e902e801e7c2e823ef93"
+  },
+  {
+   "offset": "0x40D4",
+   "text": "金卡拉姆队旗本",
+   "payload_hex": "e902e801e7c2e823e7c9eb0befa6"
+  },
+  {
+   "offset": "0x40E3",
+   "text": "扎夫特精英士官",
+   "payload_hex": "e84be830e7cfe98deb6cef64ef92"
+  },
+  {
+   "offset": "0x40F2",
+   "text": "扎夫特兵",
+   "payload_hex": "e84be830e7cfef93"
+  },
+  {
+   "offset": "0x40FB",
+   "text": "吉翁士官",
+   "payload_hex": "e7d9ee88ef64ef92"
+  },
+  {
+   "offset": "0x4104",
+   "text": "吉翁海兵队士官",
+   "payload_hex": "e7d9ee88e91bef93e7c9ef64ef92"
+  },
+  {
+   "offset": "0x4113",
+   "text": "吉翁老兵",
+   "payload_hex": "e7d9ee88e9caef93"
+  },
+  {
+   "offset": "0x411C",
+   "text": "吉翁海兵",
+   "payload_hex": "e7d9ee88e91bef93"
+  },
+  {
+   "offset": "0x4125",
+   "text": "DC士官",
+   "payload_hex": "ef96eed0ef64ef92"
+  },
+  {
+   "offset": "0x412E",
+   "text": "DC精英士官",
+   "payload_hex": "ef96eed0e98deb6cef64ef92"
+  },
+  {
+   "offset": "0x413B",
+   "text": "DC精英兵",
+   "payload_hex": "ef96eed0e98deb6cef93"
+  },
+  {
+   "offset": "0x4146",
+   "text": "提坦斯士官",
+   "payload_hex": "e821e843e7c8ef64ef92"
+  },
+  {
+   "offset": "0x4151",
+   "text": "提坦斯兵",
+   "payload_hex": "e821e843e7c8ef93"
+  },
+  {
+   "offset": "0x415A",
+   "text": "提坦斯精锐兵",
+   "payload_hex": "e821e843e7c8e98ded14ef93"
+  },
+  {
+   "offset": "0x4167",
+   "text": "迪拉兹士官",
+   "payload_hex": "ea11e7c2e856ef64ef92"
+  },
+  {
+   "offset": "0x4172",
+   "text": "新吉翁士官",
+   "payload_hex": "ef8ae7d9ee88ef64ef92"
+  },
+  {
+   "offset": "0x417D",
+   "text": "新吉翁高级士官",
+   "payload_hex": "ef8ae7d9ee88e812eaeeef64ef92"
+  },
+  {
+   "offset": "0x418C",
+   "text": "格雷米高官",
+   "payload_hex": "e824e8afe878e812ef92"
+  },
+  {
+   "offset": "0x419D",
+   "text": "新吉翁兵",
+   "payload_hex": "ef8ae7d9ee88ef93"
+  },
+  {
+   "offset": "0x41A6",
+   "text": "新吉翁骑士",
+   "payload_hex": "ef8ae7d9ee88eca3ef64"
+  },
+  {
+   "offset": "0x41B1",
+   "text": "格雷米军精锐兵",
+   "payload_hex": "e824e8afe878e7e0e98ded14ef93"
+  },
+  {
+   "offset": "0x41C0",
+   "text": "新吉翁强化兵",
+   "payload_hex": "ef8ae7d9ee88e8ade9a5ef93"
+  },
+  {
+   "offset": "0x41CD",
+   "text": "格雷米军NT",
+   "payload_hex": "e824e8afe878e7e0eed3eed6"
+  },
+  {
+   "offset": "0x41DA",
+   "text": "木星军士官",
+   "payload_hex": "efa9ef69e7e0ef64ef92"
+  },
+  {
+   "offset": "0x41E5",
+   "text": "木星军高级士官",
+   "payload_hex": "efa9ef69e7e0e812eaeeef64ef92"
+  },
+  {
+   "offset": "0x41F4",
+   "text": "木星军亲卫兵",
+   "payload_hex": "efa9ef69e7e0e894e9b2ef93"
+  },
+  {
+   "offset": "0x4201",
+   "text": "联邦士官",
+   "payload_hex": "ef2eefaaef64ef92"
+  },
+  {
+   "offset": "0x420A",
+   "text": "联邦精英士官",
+   "payload_hex": "ef2eefaae98deb6cef64ef92"
+  },
+  {
+   "offset": "0x4217",
+   "text": "联邦兵",
+   "payload_hex": "ef2eefaaef93"
+  },
+  {
+   "offset": "0x421E",
+   "text": "联邦精锐兵",
+   "payload_hex": "ef2eefaae98ded14ef93"
+  },
+  {
+   "offset": "0x4229",
+   "text": "生体单元",
+   "payload_hex": "ef8def4fe918ecae"
+  },
+  {
+   "offset": "0x4232",
+   "text": "DG细胞",
+   "payload_hex": "ef96eed1eb9aefab"
+  },
+  {
+   "offset": "0x423B",
+   "text": "MD系统",
+   "payload_hex": "efa7ef96e941e929"
+  },
+  {
+   "offset": "0x4244",
+   "text": "强化型MD系统",
+   "payload_hex": "e8ade9a5e977efa7ef96e941e929"
+  },
+  {
+   "offset": "0x4253",
+   "text": "OZ士官",
+   "payload_hex": "ed1ceedaef64ef92"
+  },
+  {
+   "offset": "0x425C",
+   "text": "OZ兵",
+   "payload_hex": "ed1ceedaef93"
+  },
+  {
+   "offset": "0x4263",
+   "text": "OZ特种兵",
+   "payload_hex": "ed1ceedae7cfe7d1ef93"
+  },
+  {
+   "offset": "0x426E",
+   "text": "特列斯派士官",
+   "payload_hex": "e7cfe8b5e7c8e985ef64ef92"
+  },
+  {
+   "offset": "0x427B",
+   "text": "玛莉梅亚兵",
+   "payload_hex": "e845e81ee9f2e7d6ef93"
+  },
+  {
+   "offset": "0x4286",
+   "text": "阿格里帕",
+   "payload_hex": "e7d2e824ef31eb01"
+  },
+  {
+   "offset": "0x428F",
+   "text": "阿斯托纳吉",
+   "payload_hex": "e7d2e7c8e7f4e882e7d9"
+  },
+  {
+   "offset": "0x429A",
+   "text": "乌兹米",
+   "payload_hex": "e94de856e878"
+  },
+  {
+   "offset": "0x42A1",
+   "text": "琪耶尔·海姆",
+   "payload_hex": "efa1ea31e7e1ef4be91be823"
+  },
+  {
+   "offset": "0x42AE",
+   "text": "反射感应炮",
+   "payload_hex": "e87cef65e87de873e95a"
+  },
+  {
+   "offset": "0x42B9",
+   "text": "多利安外务次官",
+   "payload_hex": "e7e9e82ee7fce8f7e94fe864ef92"
+  },
+  {
+   "offset": "0x42C8",
+   "text": "康斯康",
+   "payload_hex": "eb57e7c8eb57"
+  },
+  {
+   "offset": "0x42CF",
+   "text": "迪基姆·巴顿",
+   "payload_hex": "ea11e829e823ef4be85bedc7"
+  },
+  {
+   "offset": "0x42DC",
+   "text": "德金·扎比",
+   "payload_hex": "e82ce902ef4be84be825"
+  },
+  {
+   "offset": "0x42E7",
+   "text": "帕特里克·萨拉",
+   "payload_hex": "eb01e7cfef31e7d5ef4be83be7c2"
+  },
+  {
+   "offset": "0x42F6",
+   "text": "巴尔特菲尔德",
+   "payload_hex": "e85be7e1e7cfea6ce7e1e82c"
+  },
+  {
+   "offset": "0x4303",
+   "text": "米莉亚莉亚",
+   "payload_hex": "e878e81ee7d6e81ee7d6"
+  },
+  {
+   "offset": "0x4314",
+   "text": "莉莉娜",
+   "payload_hex": "e81ee81ee7ea"
+  },
+  {
+   "offset": "0x431B",
+   "text": "雷比尔将军",
+   "payload_hex": "e8afe825e7e1e84ae7e0"
+  },
+  {
+   "offset": "0x4326",
+   "text": "议长",
+   "payload_hex": "e8e3ef34"
+  },
+  {
+   "offset": "0x432B",
+   "text": "议长",
+   "payload_hex": "e8e3ef34"
+  },
+  {
+   "offset": "0x4330",
+   "text": "金·贾哈那姆",
+   "payload_hex": "e902ef4be9e8e7e8e7b7e823"
+  },
+  {
+   "offset": "0x433D",
+   "text": "莎克蒂·卡琳",
+   "payload_hex": "ef7ce7d5e9f5ef4be801e9a9"
+  },
+  {
+   "offset": "0x434A",
+   "text": "联邦军高官",
+   "payload_hex": "ef2eefaae7e0e812ef92"
+  },
+  {
+   "offset": "0x4355",
+   "text": "操作员B",
+   "payload_hex": "eac7ef2fe849ef61"
+  },
+  {
+   "offset": "0x435E",
+   "text": "查问官",
+   "payload_hex": "eae9e997ef92"
+  },
+  {
+   "offset": "0x4365",
+   "text": "亲卫队长A",
+   "payload_hex": "e894e9b2e7c9ef34ea9c"
+  },
+  {
+   "offset": "0x4370",
+   "text": "亲卫队长B",
+   "payload_hex": "e894e9b2e7c9ef34ef61"
+  },
+  {
+   "offset": "0x437B",
+   "text": "士兵B",
+   "payload_hex": "ef64ef93ef61"
+  },
+  {
+   "offset": "0x4382",
+   "text": "蜜安·瑟拉",
+   "payload_hex": "e98ee7fcef4be8aae7c2"
+  },
+  {
+   "offset": "0x438D",
+   "text": "军高官",
+   "payload_hex": "e7e0e812ef92"
+  },
+  {
+   "offset": "0x4394",
+   "text": "军高官A",
+   "payload_hex": "e7e0e812ef92ea9c"
+  },
+  {
+   "offset": "0x439D",
+   "text": "奥布兵",
+   "payload_hex": "e82be831ef93"
+  },
+  {
+   "offset": "0x43A4",
+   "text": "声A",
+   "payload_hex": "ea8aea9c"
+  },
+  {
+   "offset": "0x43A9",
+   "text": "卡拉巴兵",
+   "payload_hex": "e801e7c2e85bef93"
+  },
+  {
+   "offset": "0x43B2",
+   "text": "政府高官",
+   "payload_hex": "ea68ea60e812ef92"
+  },
+  {
+   "offset": "0x43BB",
+   "text": "广播",
+   "payload_hex": "ee17ed70"
+  },
+  {
+   "offset": "0x43C0",
+   "text": "播报员",
+   "payload_hex": "ed70e913e849"
+  },
+  {
+   "offset": "0x43C7",
+   "text": "少女",
+   "payload_hex": "efacefad"
+  },
+  {
+   "offset": "0x43CC",
+   "text": "少年",
+   "payload_hex": "eface909"
+  },
+  {
+   "offset": "0x43D1",
+   "text": "船员",
+   "payload_hex": "ea02e849"
+  },
+  {
+   "offset": "0x43D6",
+   "text": "政府高官A",
+   "payload_hex": "ea68ea60e812ef92ea9c"
+  },
+  {
+   "offset": "0x43E4",
+   "text": "新日本士官",
+   "payload_hex": "ef8ae98aefa6ef64ef92"
+  },
+  {
+   "offset": "0x43EF",
+   "text": "阿·巴瓦·库",
+   "payload_hex": "e7d2ef4be85be99fef4be9b3"
+  },
+  {
+   "offset": "0x43FC",
+   "text": "绿洲",
+   "payload_hex": "ec88eacd"
+  },
+  {
+   "offset": "0x4401",
+   "text": "大炮",
+   "payload_hex": "efa5e95a"
+  },
+  {
+   "offset": "0x4406",
+   "text": "天秤座",
+   "payload_hex": "e844ecf6ebc4"
+  },
+  {
+   "offset": "0x440D",
+   "text": "I力场",
+   "payload_hex": "ef62efb0e876"
+  },
+  {
+   "offset": "0x4419",
+   "text": "FF屏障",
+   "payload_hex": "eca5eca5ed4eebfc"
+  },
+  {
+   "offset": "0x4422",
+   "text": "分身",
+   "payload_hex": "efaee88d"
+  },
+  {
+   "offset": "0x4427",
+   "text": "分身·神之影",
+   "payload_hex": "efaee88def4be9aae7cdea8e"
+  },
+  {
+   "offset": "0x4438",
+   "text": "月光蝶",
+   "payload_hex": "e850e83dea03"
+  },
+  {
+   "offset": "0x443F",
+   "text": "TP装甲／G装甲",
+   "payload_hex": "eed6eed4e98febdbefafeed1e98febdb"
+  },
+  {
+   "offset": "0x4450",
+   "text": "光束战{SLOT:2896}",
+   "payload_hex": "e83de895ef28ea70"
+  },
+  {
+   "offset": "0x4459",
+   "text": "雷尔姆·D",
+   "payload_hex": "e8afe7e1e823ef4bef96"
+  },
+  {
+   "offset": "0x4464",
+   "text": "近接",
+   "payload_hex": "efd8efce"
+  },
+  {
+   "offset": "0x4469",
+   "text": "回避",
+   "payload_hex": "ef52efd9"
+  },
+  {
+   "offset": "0x446E",
+   "text": "飞行",
+   "payload_hex": "ea45efd6"
+  },
+  {
+   "offset": "0x4473",
+   "text": "金牛／SK规格",
+   "payload_hex": "e902ee5fefafef9eed1bea42e824"
+  },
+  {
+   "offset": "0x4482",
+   "text": "自由／SEED",
+   "payload_hex": "efb5e8a6efafef9eef9fef9fef96"
+  },
+  {
+   "offset": "0x4491",
+   "text": "里·加兹／BWS",
+   "payload_hex": "ef31ef4be854e856efafef61effcef9e"
+  },
+  {
+   "offset": "0x44A2",
+   "text": "里克·迪亚斯S",
+   "payload_hex": "ef31e7d5ef4bea11e7d6e7c8ef9e"
+  },
+  {
+   "offset": "0x44B1",
+   "text": "量产型F91",
+   "payload_hex": "e851ec05e977eca5eca4eff7"
+  },
+  {
+   "offset": "0x44BE",
+   "text": "丘贝雷／普露机",
+   "payload_hex": "ec46e857e8afefafe838e858e7e4"
+  },
+  {
+   "offset": "0x44D3",
+   "text": "∀高达（∀99）",
+   "payload_hex": "effee812ef2bef8eeffeeca4eca4ef8f"
+  },
+  {
+   "offset": "0x44E4",
+   "text": "∀高达（月光蝶）",
+   "payload_hex": "effee812ef2bef8ee850e83dea03ef8f"
+  },
+  {
+   "offset": "0x44F5",
+   "text": "高达F91",
+   "payload_hex": "e812ef2beca5eca4eff7"
+  },
+  {
+   "offset": "0x4500",
+   "text": "GP01Fb玉{SLOT:2285}",
+   "payload_hex": "eed1eed4e998eff7eca5ef72ee66e80d"
+  },
+  {
+   "offset": "0x4511",
+   "text": "Z高达（GD）",
+   "payload_hex": "eedae812ef2bef8eeed1ef96ef8f"
+  },
+  {
+   "offset": "0x4520",
+   "text": "W高达零式",
+   "payload_hex": "effce812ef2beb74ea26"
+  },
+  {
+   "offset": "0x452B",
+   "text": "光束[",
+   "payload_hex": "e83de895e00a"
+  },
+  {
+   "offset": "0x4533",
+   "text": "W高达零式／H",
+   "payload_hex": "effce812ef2beb74ea26efafeed2"
+  },
+  {
+   "offset": "0x4542",
+   "text": "通信员",
+   "payload_hex": "ef59e90fe849"
+  },
+  {
+   "offset": "0x454A",
+   "text": "加萨D",
+   "payload_hex": "e854e83bef96"
+  },
+  {
+   "offset": "0x4551",
+   "text": "MC高达",
+   "payload_hex": "efa7eed0e812ef2b"
+  },
+  {
+   "offset": "0x455A",
+   "text": "MC高达（破坏）",
+   "payload_hex": "efa7eed0e812ef2bef8eef6de9edef8f"
+  },
+  {
+   "offset": "0x456B",
+   "text": "高达Mk2",
+   "payload_hex": "e812ef2befa7eedeef5f"
+  },
+  {
+   "offset": "0x4576",
+   "text": "高达Mk5",
+   "payload_hex": "e812ef2befa7eedeec03"
+  },
+  {
+   "offset": "0x4581",
+   "text": "丘贝雷Mk2",
+   "payload_hex": "ec46e857e8afefa7eedeef5f"
+  },
+  {
+   "offset": "0x458E",
+   "text": "海盗高达X1",
+   "payload_hex": "e91be9f3e812ef2beed9eff7"
+  },
+  {
+   "offset": "0x459B",
+   "text": "海盗X1／强化",
+   "payload_hex": "e91be9f3eed9eff7efafe8ade9a5"
+  },
+  {
+   "offset": "0x45AA",
+   "text": "海盗高达X1改",
+   "payload_hex": "e91be9f3e812ef2beed9eff7e9f0"
+  },
+  {
+   "offset": "0x45B9",
+   "text": "海盗X1改／H",
+   "payload_hex": "e91be9f3eed9eff7e9f0efafeed2"
+  },
+  {
+   "offset": "0x45C8",
+   "text": "勇士M",
+   "payload_hex": "eaddef64efa7"
+  },
+  {
+   "offset": "0x45CF",
+   "text": "精神感应高达Mk2",
+   "payload_hex": "e98de9aae87de873e812ef2befa7eedeef5f"
+  },
+  {
+   "offset": "0x45E2",
+   "text": "西斯库德／形态1",
+   "payload_hex": "e7f8e7c8e9b3e82cefafec67e994eff7"
+  },
+  {
+   "offset": "0x45F3",
+   "text": "反応",
+   "payload_hex": "e4d8e0ca"
+  },
+  {
+   "offset": "0x45F8",
+   "text": "指揮",
+   "payload_hex": "e289e14b"
+  },
+  {
+   "offset": "0x45FD",
+   "text": "阿历克斯·迪诺",
+   "payload_hex": "e7d2e8fbe7d5e7c8ef4bea11e972"
+  },
+  {
+   "offset": "0x460C",
+   "text": "艾帕·西纳普斯",
+   "payload_hex": "e8d6eb01ef4be7f8e882e838e7c8"
+  },
+  {
+   "offset": "0x461B",
+   "text": "艾露比·普露",
+   "payload_hex": "e8d6e858e825ef4be838e858"
+  },
+  {
+   "offset": "0x4628",
+   "text": "卡缪·维丹",
+   "payload_hex": "e801e917ef4bea54eca6"
+  },
+  {
+   "offset": "0x4633",
+   "text": "卡缪（强化）",
+   "payload_hex": "e801e917ef8ee8ade9a5ef8f"
+  },
+  {
+   "offset": "0x4640",
+   "text": "卡洛德·兰",
+   "payload_hex": "e801e94ae82cef4be86f"
+  },
+  {
+   "offset": "0x464B",
+   "text": "威力型脉冲高达",
+   "payload_hex": "e96befb0e977ebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x465A",
+   "text": "西布克",
+   "payload_hex": "e7f8e831e7d5"
+  },
+  {
+   "offset": "0x4661",
+   "text": "凯利·雷兹纳",
+   "payload_hex": "e95fe82eef4be8afe856e882"
+  },
+  {
+   "offset": "0x466E",
+   "text": "巨剑型脉冲高达",
+   "payload_hex": "ea25ecb3e977ebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x467D",
+   "text": "强尼莱汀",
+   "payload_hex": "e8ade896e846ed7c"
+  },
+  {
+   "offset": "0x468A",
+   "text": "查普·阿德尔",
+   "payload_hex": "eae9e838ef4be7d2e82ce7e1"
+  },
+  {
+   "offset": "0x4697",
+   "text": "托比亚",
+   "payload_hex": "e7f4e825e7d6"
+  },
+  {
+   "offset": "0x469E",
+   "text": "亲手夺过来",
+   "payload_hex": "e894ef66ea17ef36efcf"
+  },
+  {
+   "offset": "0x46AA",
+   "text": "多蒙(明镜止水)",
+   "payload_hex": "e7e9e942eb77ef39ead7e869ebd4eb78"
+  },
+  {
+   "offset": "0x46BB",
+   "text": "诺里斯",
+   "payload_hex": "e972ef31e7c8"
+  },
+  {
+   "offset": "0x46C2",
+   "text": "不死兵",
+   "payload_hex": "e7b5ef6aef93"
+  },
+  {
+   "offset": "0x46CA",
+   "text": "哈利·奥德",
+   "payload_hex": "e7e8e82eef4be82be82c"
+  },
+  {
+   "offset": "0x46D5",
+   "text": "希罗·尤尔(零式)",
+   "payload_hex": "e87be7ecef4bea5fe7e1eb77eb74ea26eb78"
+  },
+  {
+   "offset": "0x46E8",
+   "text": "{SLOT:2558}·村雨",
+   "payload_hex": "e91eef4beb8eebad"
+  },
+  {
+   "offset": "0x46F3",
+   "text": "布雷克斯",
+   "payload_hex": "e831e8afe7d5e7c8"
+  },
+  {
+   "offset": "0x46FC",
+   "text": "汉肯·贝克纳",
+   "payload_hex": "ef82e93def4be857e7d5e882"
+  },
+  {
+   "offset": "0x4709",
+   "text": "莫阿·法拉奥",
+   "payload_hex": "eba0e7d2ef4be84ee7c2e82b"
+  },
+  {
+   "offset": "0x4716",
+   "text": "蜜安·法琳",
+   "payload_hex": "e98ee7fcef4be84ee9a9"
+  },
+  {
+   "offset": "0x4721",
+   "text": "穆",
+   "payload_hex": "eb10"
+  },
+  {
+   "offset": "0x4730",
+   "text": "拉克丝(SEED)",
+   "payload_hex": "e7c2e7d5e8a3eb77ef9eef9fef9fef96eb78"
+  },
+  {
+   "offset": "0x4743",
+   "text": "真·飞鸟",
+   "payload_hex": "e820ef4bea45ec42"
+  },
+  {
+   "offset": "0x474C",
+   "text": "子米加粒子炮",
+   "payload_hex": "e886e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x4759",
+   "text": "迪·特里埃尔",
+   "payload_hex": "ea11ef4be7cfef31e96ae7e1"
+  },
+  {
+   "offset": "0x4766",
+   "text": "全得",
+   "payload_hex": "efb4e80a"
+  },
+  {
+   "offset": "0x5BE0",
+   "text": "たあ盾牌导弹",
+   "payload_hex": "2a16eb63ec2bea4be946"
+  },
+  {
+   "offset": "0x5BEB",
+   "text": "试作光束步枪",
+   "payload_hex": "e91def2fe83de895ea93eaae"
+  },
+  {
+   "offset": "0x5BF8",
+   "text": "试作光束军刀",
+   "payload_hex": "e91def2fe83de895e7e0ed25"
+  },
+  {
+   "offset": "0x5C05",
+   "text": "盾牌破坏步枪",
+   "payload_hex": "eb63ec2bef6de9edea93eaae"
+  },
+  {
+   "offset": "0x5C12",
+   "text": "卫星加农炮",
+   "payload_hex": "e9b2ef69e854ef7ae95a"
+  },
+  {
+   "offset": "0x5C1D",
+   "text": "射击长枪",
+   "payload_hex": "ef65e7ccef34eaae"
+  },
+  {
+   "offset": "0x5C26",
+   "text": "有线头部光束",
+   "payload_hex": "e7cbe916e92eef70e83de895"
+  },
+  {
+   "offset": "0x5C33",
+   "text": "盾光束军刀",
+   "payload_hex": "eb63e83de895e7e0ed25"
+  },
+  {
+   "offset": "0x5C3E",
+   "text": "轨道加农炮",
+   "payload_hex": "e9cce82ae854ef7ae95a"
+  },
+  {
+   "offset": "0x5C49",
+   "text": "链式地雷",
+   "payload_hex": "eff6ea26ef63e8af"
+  },
+  {
+   "offset": "0x5C52",
+   "text": "双联加特林机枪",
+   "payload_hex": "eabcef2ee854e7cfe9b7e7e4eaae"
+  },
+  {
+   "offset": "0x5C61",
+   "text": "光束散弹步枪",
+   "payload_hex": "e83de895ef68e946ea93eaae"
+  },
+  {
+   "offset": "0x5C6E",
+   "text": "进攻形态",
+   "payload_hex": "e892ef67ec67e994"
+  },
+  {
+   "offset": "0x5C77",
+   "text": "血之包围",
+   "payload_hex": "e9f6e7cdeabbe9de"
+  },
+  {
+   "offset": "0x5C80",
+   "text": "救世主高达",
+   "payload_hex": "e8cae83ce954e812ef2b"
+  },
+  {
+   "offset": "0x5C8B",
+   "text": "卡库利康",
+   "payload_hex": "e801e9b3e82eeb57"
+  },
+  {
+   "offset": "0x5C94",
+   "text": "吉姆·吉嘉那姆",
+   "payload_hex": "e7d9e823ef4be7d9e89ee7b7e823"
+  },
+  {
+   "offset": "0x5CA3",
+   "text": "格拉克斯·德卡",
+   "payload_hex": "e824e7c2e7d5e7c8ef4be82ce801"
+  },
+  {
+   "offset": "0x5CB2",
+   "text": "杜卡奇克隆",
+   "payload_hex": "e8cbe801e904e7d5ed16"
+  },
+  {
+   "offset": "0x5CBD",
+   "text": "格雷米·普露2",
+   "payload_hex": "e824e8afe878ef4be838e858ef5f"
+  },
+  {
+   "offset": "0x5CCC",
+   "text": "苏埃森·斯特罗",
+   "payload_hex": "ec8de96aebd2ef4be7c8e7cfe7ec"
+  },
+  {
+   "offset": "0x5CDB",
+   "text": "巴斯克·欧姆",
+   "payload_hex": "e85be7c8e7d5ef4beb91e823"
+  },
+  {
+   "offset": "0x5CE8",
+   "text": "贝纳黛特",
+   "payload_hex": "e857e882ea9ae7cf"
+  },
+  {
+   "offset": "0x5CF1",
+   "text": "玛修玛·切洛",
+   "payload_hex": "e845e9b0e845ef4bef3fe94a"
+  },
+  {
+   "offset": "0x5CFE",
+   "text": "玛丽贝尔",
+   "payload_hex": "e845e9c5e857e7e1"
+  },
+  {
+   "offset": "0x5D07",
+   "text": "拉康·达卡兰",
+   "payload_hex": "e7c2eb57ef4bef2be801e86f"
+  },
+  {
+   "offset": "0x5D14",
+   "text": "深村ケ",
+   "payload_hex": "eb0deb8eeee4"
+  },
+  {
+   "offset": "0x5D1B",
+   "text": "合村",
+   "payload_hex": "a0eb8e"
+  },
+  {
+   "offset": "0x5D1F",
+   "text": "奥古士官",
+   "payload_hex": "e82be84def64ef92"
+  },
+  {
+   "offset": "0x5D28",
+   "text": "金加纳姆亲卫队",
+   "payload_hex": "e902e854e882e823e894e9b2e7c9"
+  },
+  {
+   "offset": "0x5D37",
+   "text": "扎夫特士官",
+   "payload_hex": "e84be830e7cfef64ef92"
+  },
+  {
+   "offset": "0x5D42",
+   "text": "扎夫特精英兵",
+   "payload_hex": "e84be830e7cfe98deb6cef93"
+  },
+  {
+   "offset": "0x5D4F",
+   "text": "吉恩士官",
+   "payload_hex": "e7d9e7eeef64ef92"
+  },
+  {
+   "offset": "0x5D58",
+   "text": "吉恩海兵队士官",
+   "payload_hex": "e7d9e7eee91bef93e7c9ef64ef92"
+  },
+  {
+   "offset": "0x5D67",
+   "text": "吉恩老兵",
+   "payload_hex": "e7d9e7eee9caef93"
+  },
+  {
+   "offset": "0x5D70",
+   "text": "吉恩海兵",
+   "payload_hex": "e7d9e7eee91bef93"
+  },
+  {
+   "offset": "0x5D79",
+   "text": "提坦斯高官",
+   "payload_hex": "e821e843e7c8e812ef92"
+  },
+  {
+   "offset": "0x5D84",
+   "text": "提坦斯支援兵",
+   "payload_hex": "e821e843e7c8e883e863ef93"
+  },
+  {
+   "offset": "0x5D91",
+   "text": "迪拉兹兵",
+   "payload_hex": "ea11e7c2e856ef93"
+  },
+  {
+   "offset": "0x5D9A",
+   "text": "新吉恩士官",
+   "payload_hex": "ef8ae7d9e7eeef64ef92"
+  },
+  {
+   "offset": "0x5DA5",
+   "text": "新吉恩高级士官",
+   "payload_hex": "ef8ae7d9e7eee812eaeeef64ef92"
+  },
+  {
+   "offset": "0x5F78",
+   "text": "軍あ偶揮異",
+   "payload_hex": "9816ea85ef02ef08"
+  },
+  {
+   "offset": "0x5F81",
+   "text": "CIWS",
+   "payload_hex": "eed0ef62effcef9e"
+  },
+  {
+   "offset": "0x5F8A",
+   "text": "J型导弹",
+   "payload_hex": "effde977ea4be946"
+  },
+  {
+   "offset": "0x5F93",
+   "text": "用用用",
+   "payload_hex": "efb3efb3efb3"
+  },
+  {
+   "offset": "0x5F9A",
+   "text": "阿斯兰·萨拉",
+   "payload_hex": "e7d2e7c8e86fef4be83be7c2"
+  },
+  {
+   "offset": "0x5FA7",
+   "text": "阿尔法",
+   "payload_hex": "e7d2e7e1e84e"
+  },
+  {
+   "offset": "0x5FAE",
+   "text": "暗黑手指",
+   "payload_hex": "ea6aef3eef66e8c0"
+  },
+  {
+   "offset": "0x5FB8",
+   "text": "胡索·艾{SLOT:2764}",
+   "payload_hex": "ec8be93cef4be8d6e9ec"
+  },
+  {
+   "offset": "0x5FC3",
+   "text": "艾{SLOT:2915}·迪拉兹",
+   "payload_hex": "e8d6ea83ef4bea11e7c2e856"
+  },
+  {
+   "offset": "0x5FD2",
+   "text": "爱玛·辛",
+   "payload_hex": "e8d5e845ef4bea58"
+  },
+  {
+   "offset": "0x5FDB",
+   "text": "奥尔加",
+   "payload_hex": "e82be7e1e854"
+  },
+  {
+   "offset": "0x5FE2",
+   "text": "等离子炮",
+   "payload_hex": "e826e901e886e95a"
+  },
+  {
+   "offset": "0x5FEC",
+   "text": "卡嘉莉·尤拉",
+   "payload_hex": "e801e89ee81eef4bea5fe7c2"
+  },
+  {
+   "offset": "0x5FF9",
+   "text": "専击型脉冲高达",
+   "payload_hex": "eefce7cce977ebe9e95ee812ef2b"
+  },
+  {
+   "offset": "0x600A",
+   "text": "金凯度·纳乌",
+   "payload_hex": "e902e95fe96def4be882e94d"
+  },
+  {
+   "offset": "0x6017",
+   "text": "迪兰达尔议长",
+   "payload_hex": "ea11e86fef2be7e1e8e3ef34"
+  },
+  {
+   "offset": "0x6024",
+   "text": "沙乌斯·巴宁",
+   "payload_hex": "eb0ce94de7c8ef4be85bebbf"
+  },
+  {
+   "offset": "0x6031",
+   "text": "西格·韦德纳",
+   "payload_hex": "e7f8e824ef4bebaee82ce882"
+  },
+  {
+   "offset": "0x603E",
+   "text": "夏尼",
+   "payload_hex": "ef37e896"
+  },
+  {
+   "offset": "0x6043",
+   "text": "对空激光",
+   "payload_hex": "e7bee93fe9b9e83d"
+  },
+  {
+   "offset": "0x604D",
+   "text": "索希耶·海姆",
+   "payload_hex": "e93ce87bea31ef4be91be823"
+  },
+  {
+   "offset": "0x605A",
+   "text": "蒂法·亚迪尔",
+   "payload_hex": "e9f5e84eef4be7d6ea11e7e1"
+  },
+  {
+   "offset": "0x6067",
+   "text": "德托洛夫",
+   "payload_hex": "e82ce7f4e94ae830"
+  },
+  {
+   "offset": "0x6070",
+   "text": "翁·里",
+   "payload_hex": "ee88ef4bef31"
+  },
+  {
+   "offset": "0x6078",
+   "text": "托雷斯",
+   "payload_hex": "e7f4e8afe7c8"
+  },
+  {
+   "offset": "0x607F",
+   "text": "菲尔·阿克曼",
+   "payload_hex": "ea6ce7e1ef4be7d2e7d5e874"
+  },
+  {
+   "offset": "0x608C",
+   "text": "贝拉·罗纳",
+   "payload_hex": "e857e7c2ef4be7ece882"
+  },
+  {
+   "offset": "0x6097",
+   "text": "玛琉",
+   "payload_hex": "e845ead2"
+  },
+  {
+   "offset": "0x609C",
+   "text": "光束冲角",
+   "payload_hex": "e83de895e95eeb1a"
+  },
+  {
+   "offset": "0x60A6",
+   "text": "莉娜·亚西塔",
+   "payload_hex": "e81ee7eaef4be7d6e7f8e945"
+  },
+  {
+   "offset": "0x60B3",
+   "text": "蕾{SLOT:2286}亚·朗德",
+   "payload_hex": "e84ce80ee7d6ef4bea90e82c"
+  },
+  {
+   "offset": "0x60C0",
+   "text": "∀高达",
+   "payload_hex": "effee812ef2b"
+  },
+  {
+   "offset": "0x60C7",
+   "text": "Z高达",
+   "payload_hex": "eedae812ef2b"
+  },
+  {
+   "offset": "0x60CE",
+   "text": "牛高达",
+   "payload_hex": "ee5fe812ef2b"
+  },
+  {
+   "offset": "0x60D5",
+   "text": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x60DA",
+   "text": "光束枪",
+   "payload_hex": "e83de895eaae"
+  },
+  {
+   "offset": "0x60E1",
+   "text": "机炮",
+   "payload_hex": "e7e4e95a"
+  },
+  {
+   "offset": "0x60E6",
+   "text": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x60EB",
+   "text": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x60F0",
+   "text": "生体力场",
+   "payload_hex": "ef8def4fefb0e876"
+  },
+  {
+   "offset": "0x60F9",
+   "text": "光束涂层",
+   "payload_hex": "e83de895ee53ebc1"
+  },
+  {
+   "offset": "0x6102",
+   "text": "相位装甲",
+   "payload_hex": "e8b1e834e98febdb"
+  },
+  {
+   "offset": "0x610B",
+   "text": "超相位装甲",
+   "payload_hex": "eaf6e8b1e834e98febdb"
+  },
+  {
+   "offset": "0x6116",
+   "text": "层压装甲",
+   "payload_hex": "ebc1e992e98febdb"
+  },
+  {
+   "offset": "0x611F",
+   "text": "普通",
+   "payload_hex": "e838ef59"
+  },
+  {
+   "offset": "0x6124",
+   "text": "光束",
+   "payload_hex": "e83de895"
+  },
+  {
+   "offset": "0x6129",
+   "text": "普通{01}",
+   "payload_hex": "e838ef5901"
+  },
+  {
+   "offset": "0x612F",
+   "text": "光束{01}",
+   "payload_hex": "e83de89501"
+  },
+  {
+   "offset": "0x6135",
+   "text": "逼你入绝境",
+   "payload_hex": "ebf6e7b8e891e91ceb81"
+  },
+  {
+   "offset": "0x6140",
+   "text": "憎恨生憎恨",
+   "payload_hex": "eb34e9beef8deb34e9be"
+  },
+  {
+   "offset": "0x614B",
+   "text": "岂能被压垮",
+   "payload_hex": "eac3e7c6e7f1e992ed43"
+  },
+  {
+   "offset": "0x6156",
+   "text": "强尼莱汀",
+   "payload_hex": "e8ade896e846ed7c"
+  },
+  {
+   "offset": "0x6161",
+   "text": "为荣耀而战",
+   "payload_hex": "e7c1eb19eda6e89cef28"
+  },
+  {
+   "offset": "0x616C",
+   "text": "这是月光蝶",
+   "payload_hex": "e7b9e7b6e850e83dea03"
+  },
+  {
+   "offset": "0x6177",
+   "text": "绝对不许死",
+   "payload_hex": "e91ce7bee7b5e8a7ef6a"
+  },
+  {
+   "offset": "0x6182",
+   "text": "为伙伴能战",
+   "payload_hex": "e7c1e7fdea72e7c6ef28"
+  },
+  {
+   "offset": "0x618D",
+   "text": "与爱娜共生",
+   "payload_hex": "e832e8d5e7eaea48ef8d"
+  },
+  {
+   "offset": "0x6198",
+   "text": "遇上白家伙",
+   "payload_hex": "ea43ef4ce809e7dfe7fd"
+  },
+  {
+   "offset": "0x61A3",
+   "text": "就这样倒下",
+   "payload_hex": "e7c5e7b9e7dae848ef4d"
+  },
+  {
+   "offset": "0x61AE",
+   "text": "非残杀工具",
+   "payload_hex": "e8f0e97be89beae4ea14"
+  },
+  {
+   "offset": "0x61B9",
+   "text": "一切旧事物",
+   "payload_hex": "efb6ef3feac8efb8e99e"
+  },
+  {
+   "offset": "0x61C4",
+   "text": "概念新人类",
+   "payload_hex": "ec76ea27ef8aefb2e841"
+  },
+  {
+   "offset": "0x61CF",
+   "text": "不是那称呼",
+   "payload_hex": "e7b5e7b6e7b7ea01ea3c"
+  },
+  {
+   "offset": "0x61DA",
+   "text": "没那个资格",
+   "payload_hex": "e7d8e7b7e828eba7e824"
+  },
+  {
+   "offset": "0x61E5",
+   "text": "让我见胜利",
+   "payload_hex": "e7f9efcce85ce8dbe82e"
+  },
+  {
+   "offset": "0x61F0",
+   "text": "补给岂能睡",
+   "payload_hex": "ea81e839eac3e7c6ebde"
+  },
+  {
+   "offset": "0x61FB",
+   "text": "听这歌声吧",
+   "payload_hex": "e8d1e7b9efd0ea8ae7d0"
+  },
+  {
+   "offset": "0x6206",
+   "text": "为了师父メメ",
+   "payload_hex": "e7c1e7bae96ce8887c7c"
+  },
+  {
+   "offset": "0x6211",
+   "text": "让你听歌声",
+   "payload_hex": "e7f9e7b8e8d1efd0ea8a"
+  },
+  {
+   "offset": "0x621C",
+   "text": "定要夺自由",
+   "payload_hex": "e867ef2aea17efb5e8a6"
+  },
+  {
+   "offset": "0x6227",
+   "text": "不让你烧毁",
+   "payload_hex": "e7b5e7f9e7b8ec29e97c"
+  },
+  {
+   "offset": "0x6232",
+   "text": "折断你羽翼",
+   "payload_hex": "ed64e982e7b8ee87ec35"
+  },
+  {
+   "offset": "0x623D",
+   "text": "不如放弃吧",
+   "payload_hex": "e7b5e7f0e86ce938e7d0"
+  },
+  {
+   "offset": "0x6248",
+   "text": "败北的事实",
+   "payload_hex": "e88febb7e7b4efb8e87f"
+  },
+  {
+   "offset": "0x6253",
+   "text": "那孩子危险",
+   "payload_hex": "e7b7e956e886e935e932"
+  },
+  {
+   "offset": "0x625E",
+   "text": "纷争的女神",
+   "payload_hex": "ecf8e852e7b4efade9aa"
+  },
+  {
+   "offset": "0x6269",
+   "text": "见识残酷吧",
+   "payload_hex": "e85ce92fe97bebf7e7d0"
+  },
+  {
+   "offset": "0x6274",
+   "text": "给我瞄准了",
+   "payload_hex": "e839efccea30e87ae7ba"
+  },
+  {
+   "offset": "0x627F",
+   "text": "回故乡去！",
+   "payload_hex": "ef52ea09eb4ce7ebd9"
+  },
+  {
+   "offset": "0x6289",
+   "text": "为西玛大人",
+   "payload_hex": "e7c1e7f8e845efa5efb2"
+  },
+  {
+   "offset": "0x6294",
+   "text": "东方不败！",
+   "payload_hex": "e8baefb1e7b5e88fd9"
+  },
+  {
+   "offset": "0x629E",
+   "text": "扎比家军人",
+   "payload_hex": "e84be825e7dfe7e0efb2"
+  },
+  {
+   "offset": "0x62A9",
+   "text": "我不会留情",
+   "payload_hex": "efcce7b5e7e2e98ce88b"
+  },
+  {
+   "offset": "0x62B4",
+   "text": "再苦也要战",
+   "payload_hex": "e80be9e6e7c0ef2aef28"
+  },
+  {
+   "offset": "0x62BF",
+   "text": "我也要燃烧",
+   "payload_hex": "efcce7c0ef2aeb93ec29"
+  },
+  {
+   "offset": "0x62CA",
+   "text": "复仇在消逝",
+   "payload_hex": "e9eeeaa3ef29e928ec9d"
+  },
+  {
+   "offset": "0x62D5",
+   "text": "不会祝福你",
+   "payload_hex": "e7b5e7e2ed97ea7ce7b8"
+  },
+  {
+   "offset": "0x62E0",
+   "text": "E[M最强！",
+   "payload_hex": "e00be00a07e8c5e8add9"
+  },
+  {
+   "offset": "0x62EB",
+   "text": "所以说你嫩",
+   "payload_hex": "e7fbe7f3e7ede7b8eb54"
+  },
+  {
+   "offset": "0x62F6",
+   "text": "确实会结束",
+   "payload_hex": "e88ce87fe7e2e868e895"
+  },
+  {
+   "offset": "0x6301",
+   "text": "找到葬身地",
+   "payload_hex": "e9d2e7d7ee96e88def63"
+  },
+  {
+   "offset": "0x630C",
+   "text": "我メ要上了",
+   "payload_hex": "efcc7cef2aef4ce7ba"
+  },
+  {
+   "offset": "0x6316",
+   "text": "世界的道理",
+   "payload_hex": "e83ce8f5e7b4e82ae872"
+  },
+  {
+   "offset": "0x6321",
+   "text": "因为有肉身",
+   "payload_hex": "ef33e7c1e7cbedabe88d"
+  },
+  {
+   "offset": "0x632C",
+   "text": "愚蠢地球人",
+   "payload_hex": "e959e94bef63efd3efb2"
+  },
+  {
+   "offset": "0x6337",
+   "text": "掌宇宙之力",
+   "payload_hex": "eb36e8bee8bfe7cdefb0"
+  },
+  {
+   "offset": "0x6342",
+   "text": "让一切沉没",
+   "payload_hex": "e7f9efb6ef3fe983e7d8"
+  },
+  {
+   "offset": "0x634D",
+   "text": "夏亚我守护",
+   "payload_hex": "ef37e7d6efcce8a8e8e0"
+  },
+  {
+   "offset": "0x6358",
+   "text": "岂能孤独死",
+   "payload_hex": "eac3e7c6eac2e8eeef6a"
+  },
+  {
+   "offset": "0x6363",
+   "text": "这不算命中",
+   "payload_hex": "e7b9e7b5e889e853ef4e"
+  },
+  {
+   "offset": "0x636E",
+   "text": "迪安娜审判",
+   "payload_hex": "ea11e7fce7eaeccaeb29"
+  },
+  {
+   "offset": "0x6379",
+   "text": "我的反抗！",
+   "payload_hex": "efcce7b4e87ce912d9"
+  },
+  {
+   "offset": "0x6383",
+   "text": "相信世界吧",
+   "payload_hex": "e8b1e90fe83ce8f5e7d0"
+  },
+  {
+   "offset": "0x638E",
+   "text": "人类皆弱者",
+   "payload_hex": "efb2e841ec7de9d1ef6e"
+  },
+  {
+   "offset": "0x6399",
+   "text": "以力让你懂",
+   "payload_hex": "e7f3efb0e7f9e7b8e8b0"
+  },
+  {
+   "offset": "0x63A4",
+   "text": "为月之民战",
+   "payload_hex": "e7c1e850e7cdef38ef28"
+  },
+  {
+   "offset": "0x63AF",
+   "text": "你夺走记忆",
+   "payload_hex": "e7b8ea17e890e996eac6"
+  },
+  {
+   "offset": "0x63BA",
+   "text": "非我之敌吧",
+   "payload_hex": "e8f0efcce7cde7e3e7d0"
+  },
+  {
+   "offset": "0x63C5",
+   "text": "弹幕太薄了",
+   "payload_hex": "e946ec14e86aee97e7ba"
+  },
+  {
+   "offset": "0x63D0",
+   "text": "我是普露兹",
+   "payload_hex": "efcce7b6e838e858e856"
+  },
+  {
+   "offset": "0x63DB",
+   "text": "说我没脑子",
+   "payload_hex": "e7edefcce7d8eb67e886"
+  },
+  {
+   "offset": "0x63E6",
+   "text": "和{SLOT:2204}多一起",
+   "payload_hex": "e7d3e7bce7e9efb6e847"
+  },
+  {
+   "offset": "0x63F1",
+   "text": "终于自由了",
+   "payload_hex": "e8e2e879efb5e8a6e7ba"
+  },
+  {
+   "offset": "0x63FC",
+   "text": "真情守护你",
+   "payload_hex": "e820e88be8a8e8e0e7b8"
+  },
+  {
+   "offset": "0x6407",
+   "text": "靠海盗过活",
+   "payload_hex": "e8c7e91be9f3ef36e8d4"
+  },
+  {
+   "offset": "0x6412",
+   "text": "照己意而活",
+   "payload_hex": "ea1ae8c9ef3ce89ce8d4"
+  },
+  {
+   "offset": "0x641D",
+   "text": "还要预备吗",
+   "payload_hex": "e7f7ef2aea5ae877e802"
+  },
+  {
+   "offset": "0x6428",
+   "text": "只顾看前方",
+   "payload_hex": "ef32ea1fe7f6ef51efb1"
+  },
+  {
+   "offset": "0x6433",
+   "text": "凭私人感情",
+   "payload_hex": "ea49efd5efb2e87de88b"
+  },
+  {
+   "offset": "0x643E",
+   "text": "如今那才对",
+   "payload_hex": "e7f0efb9e7b7e836e7be"
+  },
+  {
+   "offset": "0x6449",
+   "text": "ECM全开",
+   "payload_hex": "ef9feed0efa7efb4e7fa"
+  },
+  {
+   "offset": "0x6454",
+   "text": "不可靠舰长",
+   "payload_hex": "e7b5e7c4e8c7e7d4ef34"
+  },
+  {
+   "offset": "0x645F",
+   "text": "大家战斗吧",
+   "payload_hex": "efa5e7dfef28e7ffe7d0"
+  },
+  {
+   "offset": "0x646A",
+   "text": "喝酒是本行",
+   "payload_hex": "ec54eeb8e7b6efa6efd6"
+  },
+  {
+   "offset": "0x6475",
+   "text": "教你怎么战",
+   "payload_hex": "eaace7b8e7f2e7bdef28"
+  },
+  {
+   "offset": "0x6480",
+   "text": "化不能为能",
+   "payload_hex": "e9a5e7b5e7c6e7c1e7c6"
+  },
+  {
+   "offset": "0x648B",
+   "text": "你为何而战",
+   "payload_hex": "e7b8e7c1efbce89cef28"
+  },
+  {
+   "offset": "0x6496",
+   "text": "你要击我吗",
+   "payload_hex": "e7b8ef2ae7ccefcce802"
+  },
+  {
+   "offset": "0x64A1",
+   "text": "斩断之力！",
+   "payload_hex": "ed71e982e7cdefb0d9"
+  },
+  {
+   "offset": "0x64AB",
+   "text": "必须打倒你",
+   "payload_hex": "e860e9a2e7f5e848e7b8"
+  },
+  {
+   "offset": "0x64B6",
+   "text": "不可杀人哦",
+   "payload_hex": "e7b5e7c4e89befb2e919"
+  },
+  {
+   "offset": "0x64C1",
+   "text": "无意义之战",
+   "payload_hex": "e7dcef3ce8cee7cdef28"
+  },
+  {
+   "offset": "0x64CC",
+   "text": "学着点就好",
+   "payload_hex": "eb55e86de822e7c5e7c7"
+  },
+  {
+   "offset": "0x64D7",
+   "text": "也能幸福！",
+   "payload_hex": "e7c0e7c6ea8dea7cd9"
+  },
+  {
+   "offset": "0x64E1",
+   "text": "净干危险事",
+   "payload_hex": "ecb0e8d3e935e932efb8"
+  },
+  {
+   "offset": "0x64EC",
+   "text": "非思想信念",
+   "payload_hex": "e8f0efcae7e6e90fea27"
+  },
+  {
+   "offset": "0x64F7",
+   "text": "女人的满足",
+   "payload_hex": "efadefb2e7b4eb61ea1e"
+  },
+  {
+   "offset": "0x6502",
+   "text": "你做得正确",
+   "payload_hex": "e7b8e81ce80aef3be88c"
+  },
+  {
+   "offset": "0x650D",
+   "text": "只会照手册",
+   "payload_hex": "ef32e7e2ea1aef66ede2"
+  },
+  {
+   "offset": "0x6518",
+   "text": "历史不重演",
+   "payload_hex": "e8fbe925e7b5e8a1ea2f"
+  },
+  {
+   "offset": "0x6523",
+   "text": "偷袭拿手戏",
+   "payload_hex": "ebb4e9aee9a7ef66ea3e"
+  },
+  {
+   "offset": "0x652E",
+   "text": "我就直说メ",
+   "payload_hex": "efcce7c5e875e7ed7c"
+  },
+  {
+   "offset": "0x6538",
+   "text": "我不能输！",
+   "payload_hex": "efcce7b5e7c6e8b9d9"
+  },
+  {
+   "offset": "0x6542",
+   "text": "露出真面目",
+   "payload_hex": "e858efbee820e862efd4"
+  },
+  {
+   "offset": "0x654D",
+   "text": "迎战机人偶",
+   "payload_hex": "e931ef28e7e4efb2ea85"
+  },
+  {
+   "offset": "0x6558",
+   "text": "归殖民市民",
+   "payload_hex": "e947e8a9ef38ebc3ef38"
+  },
+  {
+   "offset": "0x6563",
+   "text": "以为藏住了",
+   "payload_hex": "e7f3e7c1ed03e859e7ba"
+  },
+  {
+   "offset": "0x656E",
+   "text": "该烧的就烧",
+   "payload_hex": "e898ec29e7b4e7c5ec29"
+  },
+  {
+   "offset": "0x6579",
+   "text": "在下是武人",
+   "payload_hex": "ef29ef4de7b6e8ecefb2"
+  },
+  {
+   "offset": "0x6584",
+   "text": "纯粹好战者",
+   "payload_hex": "eb66ec85e7c7ef28ef6e"
+  },
+  {
+   "offset": "0x658F",
+   "text": "已觉悟赴死",
+   "payload_hex": "ef3ae8aeea19eb1cef6a"
+  },
+  {
+   "offset": "0x659A",
+   "text": "这机体真强",
+   "payload_hex": "e7b9e7e4ef4fe820e8ad"
+  },
+  {
+   "offset": "0x65A5",
+   "text": "让你看厉害",
+   "payload_hex": "e7f9e7b8e7f6ecbbe988"
+  },
+  {
+   "offset": "0x65B0",
+   "text": "飞越宇宙翼",
+   "payload_hex": "ea45ea57e8bee8bfec35"
+  },
+  {
+   "offset": "0x65BB",
+   "text": "我怎会倒下",
+   "payload_hex": "efcce7f2e7e2e848ef4d"
+  },
+  {
+   "offset": "0x65C6",
+   "text": "管你是总帅",
+   "payload_hex": "e93be7b8e7b6e881e9a6"
+  },
+  {
+   "offset": "0x65D1",
+   "text": "压迫来了！",
+   "payload_hex": "e992eb70efcfe7bad9"
+  },
+  {
+   "offset": "0x65DB",
+   "text": "你无视警告",
+   "payload_hex": "e7b8e7dce9d9eb6ee8e5"
+  },
+  {
+   "offset": "0x65E6",
+   "text": "真的杜加奇",
+   "payload_hex": "e820e7b4e8cbe854e904"
+  },
+  {
+   "offset": "0x65F1",
+   "text": "说了不需要",
+   "payload_hex": "e7ede7bae7b5e92def2a"
+  },
+  {
+   "offset": "0x65FC",
+   "text": "从眼前消失",
+   "payload_hex": "e88ae90bef51e928e8a5"
+  },
+  {
+   "offset": "0x6607",
+   "text": "重现血王朝",
+   "payload_hex": "e8a1e82fe9f6e884eaad"
+  },
+  {
+   "offset": "0x6612",
+   "text": "D※\"不满足",
+   "payload_hex": "05e012e008e7b5eb61ea1e"
+  },
+  {
+   "offset": "0x661E",
+   "text": "岂能困本王",
+   "payload_hex": "eac3e7c6eaffefa6e884"
+  },
+  {
+   "offset": "0x6629",
+   "text": "没那么夸张",
+   "payload_hex": "e7d8e7b7e7bde8dfeac5"
+  },
+  {
+   "offset": "0x6634",
+   "text": "让你没立场",
+   "payload_hex": "e7f9e7b8e7d8e86be876"
+  },
+  {
+   "offset": "0x663F",
+   "text": "见识徒劳吧",
+   "payload_hex": "e85ce92feb02ec4ae7d0"
+  },
+  {
+   "offset": "0x664A",
+   "text": "提坦斯登场",
+   "payload_hex": "e821e843e7c8e9a0e876"
+  },
+  {
+   "offset": "0x6655",
+   "text": "正是提坦斯",
+   "payload_hex": "ef3be7b6e821e843e7c8"
+  },
+  {
+   "offset": "0x6660",
+   "text": "啊哈曼大人",
+   "payload_hex": "e7c3e7e8e874efa5efb2"
+  },
+  {
+   "offset": "0x666B",
+   "text": "好男人资质",
+   "payload_hex": "e7c7ea95efb2eba7eb45"
+  },
+  {
+   "offset": "0x6676",
+   "text": "你最好消失",
+   "payload_hex": "e7b8e8c5e7c7e928e8a5"
+  },
+  {
+   "offset": "0x6681",
+   "text": "最后之门开",
+   "payload_hex": "e8c5e7fee7cde90ce7fa"
+  },
+  {
+   "offset": "0x668C",
+   "text": "我即是结果",
+   "payload_hex": "efcce855e7b6e868e871"
+  },
+  {
+   "offset": "0x6697",
+   "text": "人类的梦想",
+   "payload_hex": "efb2e841e7b4ea40e7e6"
+  },
+  {
+   "offset": "0x66A2",
+   "text": "连装米加粒子炮",
+   "payload_hex": "e86ee98fe878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x66B1",
+   "text": "木星归来的男人",
+   "payload_hex": "efa9ef69e947efcfe7b4ea95efb2"
+  },
+  {
+   "offset": "0x66C0",
+   "text": "位相变移装甲",
+   "payload_hex": "e834e8b1e955ec83e98febdb"
+  },
+  {
+   "offset": "0x66CD",
+   "text": "金牛座／SK规格",
+   "payload_hex": "e902ee5febc4efafef9eed1bea42e824"
+  },
+  {
+   "offset": "0x66DE",
+   "text": "灵格斯BWS",
+   "payload_hex": "eaebe824e7c8ef61effcef9e"
+  },
+  {
+   "offset": "0x66EF",
+   "text": "卡{SLOT:2222}尼／普露机",
+   "payload_hex": "e801e7cee896efafe838e858e7e4"
+  },
+  {
+   "offset": "0x66FE",
+   "text": "卡{SLOT:2222}尼Mk2",
+   "payload_hex": "e801e7cee896efa7eedeef5f"
+  },
+  {
+   "offset": "0x670B",
+   "text": "基拉(SEED)",
+   "payload_hex": "e829e7c2eb77ef9eef9fef9fef96eb78"
+  },
+  {
+   "offset": "0x671C",
+   "text": "克瓦特罗",
+   "payload_hex": "e7d5e99fe7cfe7ec"
+  },
+  {
+   "offset": "0x6725",
+   "text": "X博士",
+   "payload_hex": "eed9ec4def64"
+  },
+  {
+   "offset": "0x672D",
+   "text": "史黛拉",
+   "payload_hex": "e925ea9ae7c2"
+  },
+  {
+   "offset": "0x6734",
+   "text": "士兵A",
+   "payload_hex": "ef64ef93ea9c"
+  },
+  {
+   "offset": "0x673C",
+   "text": "克罗特",
+   "payload_hex": "e7d5e7ece7cf"
+  },
+  {
+   "offset": "0x674B",
+   "text": "克罗特（弹尽）",
+   "payload_hex": "e7d5e7ece7cfef8ee946e8f2ef8f"
+  },
+  {
+   "offset": "0x675A",
+   "text": "夏亚",
+   "payload_hex": "ef37e7d6"
+  },
+  {
+   "offset": "0x675F",
+   "text": "重突击机枪",
+   "payload_hex": "e8a1e8b6e7cce7e4eaae"
+  },
+  {
+   "offset": "0x676B",
+   "text": "奥尔加（弹尽）",
+   "payload_hex": "e82be7e1e854ef8ee946e8f2ef8f"
+  },
+  {
+   "offset": "0x677A",
+   "text": "阿斯兰(SEED)",
+   "payload_hex": "e7d2e7c8e86feb77ef9eef9fef9fef96eb78"
+  },
+  {
+   "offset": "0x678D",
+   "text": "娜塔尔",
+   "payload_hex": "e7eae945e7e1"
+  },
+  {
+   "offset": "0x6794",
+   "text": "可折ヘ刀",
+   "payload_hex": "e7c4ed64eeeced25"
+  },
+  {
+   "offset": "0x679E",
+   "text": "多用途发射井",
+   "payload_hex": "e7e9efb3ebf5e870ef65edd3"
+  },
+  {
+   "offset": "0x67AB",
+   "text": "光束智能枪",
+   "payload_hex": "e83de895ec74e7c6eaae"
+  },
+  {
+   "offset": "0x67B6",
+   "text": "米加光束炮",
+   "payload_hex": "e878e854e83de895e95a"
+  },
+  {
+   "offset": "0x67C1",
+   "text": "米加光束步枪",
+   "payload_hex": "e878e854e83de895ea93eaae"
+  },
+  {
+   "offset": "0x67CE",
+   "text": "米加光束加农炮",
+   "payload_hex": "e878e854e83de895e854ef7ae95a"
+  },
+  {
+   "offset": "0x67DD",
+   "text": "导弹发射器",
+   "payload_hex": "ea4be946e870ef65e8c3"
+  },
+  {
+   "offset": "0x67E8",
+   "text": "高出力米加炮",
+   "payload_hex": "e812efbeefb0e878e854e95a"
+  },
+  {
+   "offset": "0x67F5",
+   "text": "超级米加发射器",
+   "payload_hex": "eaf6eaeee878e854e870ef65e8c3"
+  },
+  {
+   "offset": "0x6804",
+   "text": "有线米加臂炮",
+   "payload_hex": "e7cbe916e878e854ee92e95a"
+  },
+  {
+   "offset": "0x6811",
+   "text": "飞翼{SLOT:2291}游炮",
+   "payload_hex": "ea45ec35e813ea94e95a"
+  },
+  {
+   "offset": "0x681C",
+   "text": "{SLOT:2526}高达／强化",
+   "payload_hex": "e8fee812ef2befafe8ade9a5"
+  },
+  {
+   "offset": "0x6829",
+   "text": "大型米加粒子炮",
+   "payload_hex": "efa5e977e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6838",
+   "text": "米加粒子炮",
+   "payload_hex": "e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6843",
+   "text": "等离子引导器",
+   "payload_hex": "e826e901e886e9d0ea4be8c3"
+  },
+  {
+   "offset": "0x6850",
+   "text": "ゲ翼型强袭高达",
+   "payload_hex": "eee5ec35e977e8ade9aee812ef2b"
+  },
+  {
+   "offset": "0x685F",
+   "text": "ゲ翼型强袭／下降",
+   "payload_hex": "eee5ec35e977e8ade9aeefafef4de943"
+  },
+  {
+   "offset": "0x6870",
+   "text": "指节破坏炮",
+   "payload_hex": "e8c0ebecef6de9ede95a"
+  },
+  {
+   "offset": "0x687B",
+   "text": "卡多专用勇士",
+   "payload_hex": "e801e7e9eb4befb3eaddef64"
+  },
+  {
+   "offset": "0x6888",
+   "text": "费达因步枪",
+   "payload_hex": "e95def2bef33ea93eaae"
+  },
+  {
+   "offset": "0x6893",
+   "text": "加里波第ゼ",
+   "payload_hex": "e854ef31e9a8e940eee7"
+  },
+  {
+   "offset": "0x689E",
+   "text": "高能火箭炮",
+   "payload_hex": "e812e7c6e8daec32e95a"
+  },
+  {
+   "offset": "0x68A9",
+   "text": "胸部火神炮",
+   "payload_hex": "ee8cef70e8dae9aae95a"
+  },
+  {
+   "offset": "0x68B4",
+   "text": "卡{SLOT:2222}尼／哈曼机",
+   "payload_hex": "e801e7cee896efafe7e8e874e7e4"
+  },
+  {
+   "offset": "0x68C3",
+   "text": "卡{SLOT:2222}尼／强化",
+   "payload_hex": "e801e7cee896efafe8ade9a5"
+  },
+  {
+   "offset": "0x68D0",
+   "text": "卡{SLOT:2222}尼／普露兹机",
+   "payload_hex": "e801e7cee896efafe838e858e856e7e4"
+  },
+  {
+   "offset": "0x68E1",
+   "text": "超级米加粒子炮",
+   "payload_hex": "eaf6eaeee878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x68F0",
+   "text": "斩刀破坏枪",
+   "payload_hex": "ed71ed25ef6de9edeaae"
+  },
+  {
+   "offset": "0x68FB",
+   "text": "光束村正狂刀",
+   "payload_hex": "e83de895eb8eef3bebd9ed25"
+  },
+  {
+   "offset": "0x6908",
+   "text": "可变米加粒子炮",
+   "payload_hex": "e7c4e955e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6917",
+   "text": "双联光束{SLOT:2292}",
+   "payload_hex": "eabcef2ee83de895e814"
+  },
+  {
+   "offset": "0x6922",
+   "text": "巨型火箭炮",
+   "payload_hex": "ea25e977e8daec32e95a"
+  },
+  {
+   "offset": "0x692D",
+   "text": "核心推进机",
+   "payload_hex": "e8f3e82deaabe892e7e4"
+  },
+  {
+   "offset": "0x6938",
+   "text": "超级弾王电影弹",
+   "payload_hex": "eaf6eaeeeefde884ead3ea8ee946"
+  },
+  {
+   "offset": "0x6947",
+   "text": "散射米加粒子炮",
+   "payload_hex": "ef68ef65e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6956",
+   "text": "有线米加粒子炮",
+   "payload_hex": "e7cbe916e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6965",
+   "text": "特装型吉姆",
+   "payload_hex": "e7cfe98fe977e7d9e823"
+  },
+  {
+   "offset": "0x6970",
+   "text": "吉姆指挥型",
+   "payload_hex": "e7d9e823e8c0e949e977"
+  },
+  {
+   "offset": "0x697B",
+   "text": "夏亚专用勇士",
+   "payload_hex": "ef37e7d6eb4befb3eaddef64"
+  },
+  {
+   "offset": "0x6988",
+   "text": "法图姆-00",
+   "payload_hex": "e84eeb2de823ef71e998e998"
+  },
+  {
+   "offset": "0x6995",
+   "text": "斯摩／金色型",
+   "payload_hex": "e7c8ee35efafe902e89fe977"
+  },
+  {
+   "offset": "0x69A2",
+   "text": "倒X／月光蝶",
+   "payload_hex": "e848eed9efafe850e83dea03"
+  },
+  {
+   "offset": "0x69AF",
+   "text": "闪光手指",
+   "payload_hex": "ea44e83def66e8c0"
+  },
+  {
+   "offset": "0x69B8",
+   "text": "ABC披风",
+   "payload_hex": "ea9cef61eed0e816eb75"
+  },
+  {
+   "offset": "0x69C3",
+   "text": "行星防御器",
+   "payload_hex": "efd6ef69e968ec68e8c3"
+  },
+  {
+   "offset": "0x69CE",
+   "text": "斯库拉加农炮",
+   "payload_hex": "e7c8e9b3e7c2e854ef7ae95a"
+  },
+  {
+   "offset": "0x69DB",
+   "text": "舒拉克加农炮",
+   "payload_hex": "ebeae7c2e7d5e854ef7ae95a"
+  },
+  {
+   "offset": "0x69E8",
+   "text": "羽毛{SLOT:2291}游炮",
+   "payload_hex": "ee87eb60e813ea94e95a"
+  },
+  {
+   "offset": "0x69F3",
+   "text": "狙击光束炮",
+   "payload_hex": "ef6ce7cce83de895e95a"
+  },
+  {
+   "offset": "0x69FE",
+   "text": "有线光束炮",
+   "payload_hex": "e7cbe916e83de895e95a"
+  },
+  {
+   "offset": "0x6A09",
+   "text": "尊者光束布",
+   "payload_hex": "eccdef6ee83de895e831"
+  },
+  {
+   "offset": "0x6A14",
+   "text": "光束突击步枪",
+   "payload_hex": "e83de895e8b6e7ccea93eaae"
+  },
+  {
+   "offset": "0x6A21",
+   "text": "远程火箭炮",
+   "payload_hex": "e94cea7de8daec32e95a"
+  },
+  {
+   "offset": "0x6A2C",
+   "text": "主动加农炮",
+   "payload_hex": "e954ef30e854ef7ae95a"
+  },
+  {
+   "offset": "0x6A37",
+   "text": "卡利杜斯改",
+   "payload_hex": "e801e82ee8cbe7c8e9f0"
+  },
+  {
+   "offset": "0x6A42",
+   "text": "机动兵装舱",
+   "payload_hex": "e7e4ef30ef93e98febeb"
+  },
+  {
+   "offset": "0x6A4D",
+   "text": "3连装光束炮",
+   "payload_hex": "ef60e86ee98fe83de895e95a"
+  },
+  {
+   "offset": "0x6A5A",
+   "text": "光束突击炮",
+   "payload_hex": "e83de895e8b6e7cce95a"
+  },
+  {
+   "offset": "0x6A65",
+   "text": "粒子加速炮",
+   "payload_hex": "ec84e886e854e9dae95a"
+  },
+  {
+   "offset": "0x6A70",
+   "text": "单装能量炮",
+   "payload_hex": "e918e98fe7c6e851e95a"
+  },
+  {
+   "offset": "0x6A7B",
+   "text": "连装轨道炮",
+   "payload_hex": "e86ee98fe9cce82ae95a"
+  },
+  {
+   "offset": "0x6A86",
+   "text": "散射光束炮",
+   "payload_hex": "ef68ef65e83de895e95a"
+  },
+  {
+   "offset": "0x6A91",
+   "text": "反射线控炮",
+   "payload_hex": "e87cef65e916ea3fe95a"
+  },
+  {
+   "offset": "0x6A9C",
+   "text": "副米加粒子炮",
+   "payload_hex": "ecb6e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x6AA9",
+   "text": "高能米加加农炮",
+   "payload_hex": "e812e7c6e878e854e854ef7ae95a"
+  },
+  {
+   "offset": "0x6AB8",
+   "text": "高达流星锤",
+   "payload_hex": "e812ef2bea2eef69edc2"
+  },
+  {
+   "offset": "0x6AC3",
+   "text": "可动光束加农炮",
+   "payload_hex": "e7c4ef30e83de895e854ef7ae95a"
+  },
+  {
+   "offset": "0x6AD2",
+   "text": "原子火箭炮",
+   "payload_hex": "e8e4e886e8daec32e95a"
+  },
+  {
+   "offset": "0x6ADD",
+   "text": "可折火箭炮",
+   "payload_hex": "e7c4ed64e8daec32e95a"
+  },
+  {
+   "offset": "0x6AE8",
+   "text": "大型光束军刀",
+   "payload_hex": "efa5e977e83de895e7e0ed25"
+  },
+  {
+   "offset": "0x6AF5",
+   "text": "刺刀型光束步枪",
+   "payload_hex": "ed26ed25e977e83de895ea93eaae"
+  },
+  {
+   "offset": "0x6B04",
+   "text": "3连导弹舱",
+   "payload_hex": "ef60e86eea4be946ebeb"
+  },
+  {
+   "offset": "0x6B0F",
+   "text": "双管光束步枪",
+   "payload_hex": "eabce93be83de895ea93eaae"
+  },
+  {
+   "offset": "0x6B1C",
+   "text": "高能光束军刀",
+   "payload_hex": "e812e7c6e83de895e7e0ed25"
+  },
+  {
+   "offset": "0x6B29",
+   "text": "双管破坏步枪",
+   "payload_hex": "eabce93bef6de9edea93eaae"
+  },
+  {
+   "offset": "0x6B36",
+   "text": "旋转破坏步枪",
+   "payload_hex": "ec1fe9c2ef6de9edea93eaae"
+  },
+  {
+   "offset": "0x6B43",
+   "text": "大型光束步枪",
+   "payload_hex": "efa5e977e83de895ea93eaae"
+  },
+  {
+   "offset": "0x6B50",
+   "text": "甲虫二式",
+   "payload_hex": "ebdbeb6dea13ea26"
+  },
+  {
+   "offset": "0x847C",
+   "text": "後が爱娜·萨哈林",
+   "payload_hex": "9c1ce8d5e7ea04e83be7e8e9b7"
+  },
+  {
+   "offset": "0x848A",
+   "text": "吉恩副官",
+   "payload_hex": "e7d9e7eeecb68f"
+  },
+  {
+   "offset": "0x8492",
+   "text": "卡多",
+   "payload_hex": "e801e7e9"
+  },
+  {
+   "offset": "0x8497",
+   "text": "西玛·加拉霍",
+   "payload_hex": "e7f8e84504e854e7c2ebfe"
+  },
+  {
+   "offset": "0x84A3",
+   "text": "吉恩长官",
+   "payload_hex": "e7d9e7eeef348f"
+  },
+  {
+   "offset": "0x84AB",
+   "text": "迪拉兹军官",
+   "payload_hex": "ea11e7c2e856e7e08f"
+  },
+  {
+   "offset": "0x84B5",
+   "text": "迪拉兹",
+   "payload_hex": "ea11e7c2e856"
+  },
+  {
+   "offset": "0x84BC",
+   "text": "愛狼",
+   "payload_hex": "eefeec7b"
+  },
+  {
+   "offset": "0x84C3",
+   "text": "夸特罗",
+   "payload_hex": "e8dfe7cfe7ec"
+  },
+  {
+   "offset": "0x84CA",
+   "text": "布莱特·诺亚",
+   "payload_hex": "e831e846e7cf04e972e7d6"
+  },
+  {
+   "offset": "0x84D6",
+   "text": "金克都·瑙",
+   "payload_hex": "e902e7d5e84004ee68"
+  },
+  {
+   "offset": "0x84E0",
+   "text": "玛琉",
+   "payload_hex": "e845ead2"
+  },
+  {
+   "offset": "0x84E5",
+   "text": "浦木·宏",
+   "payload_hex": "ea7ad404ec5f"
+  },
+  {
+   "offset": "0x84EC",
+   "text": "扎古驾驶员",
+   "payload_hex": "e84be84de953e975e849"
+  },
+  {
+   "offset": "0x84F7",
+   "text": "{SLOT:3140}飞",
+   "payload_hex": "eb64ea45"
+  },
+  {
+   "offset": "0x84FC",
+   "text": "朱多·阿西达",
+   "payload_hex": "e939e7e904e7d2e7f8ef2b"
+  },
+  {
+   "offset": "0x8508",
+   "text": "吉恩士官",
+   "payload_hex": "e7d9e7eea58f"
+  },
+  {
+   "offset": "0x850F",
+   "text": "米利亚尔多",
+   "payload_hex": "e878e82ee7d6e7e1e7e9"
+  },
+  {
+   "offset": "0x851A",
+   "text": "指挥官",
+   "payload_hex": "e8c0e9498f"
+  },
+  {
+   "offset": "0x8520",
+   "text": "阿波利",
+   "payload_hex": "e7d2e9a8e82e"
+  },
+  {
+   "offset": "0x8527",
+   "text": "罗伯托",
+   "payload_hex": "e7eceaa4e7f4"
+  },
+  {
+   "offset": "0x852E",
+   "text": "金牛座",
+   "payload_hex": "e902ee5febc4"
+  },
+  {
+   "offset": "0x8535",
+   "text": "多兹尔·扎比",
+   "payload_hex": "e7e9e856e7e104e84be825"
+  },
+  {
+   "offset": "0x8541",
+   "text": "多蒙·卡修",
+   "payload_hex": "e7e9e94204e801e9b0"
+  },
+  {
+   "offset": "0x854B",
+   "text": "特列斯",
+   "payload_hex": "e7cfe8b5e7c8"
+  },
+  {
+   "offset": "0x8552",
+   "text": "新吉恩将官",
+   "payload_hex": "e800e7d9e7eee84a8f"
+  },
+  {
+   "offset": "0x855C",
+   "text": "联邦兵",
+   "payload_hex": "ef2ed1ce"
+  },
+  {
+   "offset": "0x8561",
+   "text": "吉恩兵",
+   "payload_hex": "e7d9e7eece"
+  },
+  {
+   "offset": "0x8567",
+   "text": "阿姆罗·雷",
+   "payload_hex": "e7d2e823e7ec04e8af"
+  },
+  {
+   "offset": "0x8571",
+   "text": "玛利根",
+   "payload_hex": "e845e82ee9b8"
+  },
+  {
+   "offset": "0x8578",
+   "text": "巴扎姆",
+   "payload_hex": "e85be84be823"
+  },
+  {
+   "offset": "0x857F",
+   "text": "蕾拉",
+   "payload_hex": "e84ce7c2"
+  },
+  {
+   "offset": "0x8584",
+   "text": "米加发射器",
+   "payload_hex": "e878e854e870ef65e8c3"
+  },
+  {
+   "offset": "0x858F",
+   "text": "铁奥",
+   "payload_hex": "eebbe82b"
+  },
+  {
+   "offset": "0x8594",
+   "text": "吉姆",
+   "payload_hex": "e7d9e823"
+  },
+  {
+   "offset": "0x8599",
+   "text": "高扎古",
+   "payload_hex": "e812e84be84d"
+  },
+  {
+   "offset": "0x85A0",
+   "text": "斯雷格·罗",
+   "payload_hex": "e7c8e8afe82404e7ec"
+  },
+  {
+   "offset": "0x85AA",
+   "text": "提坦斯军官",
+   "payload_hex": "e821e843e7c8e7e08f"
+  },
+  {
+   "offset": "0x85B4",
+   "text": "哈曼·卡恩",
+   "payload_hex": "e7e8e87404e801e7ee"
+  },
+  {
+   "offset": "0x85BE",
+   "text": "普露兹",
+   "payload_hex": "e838e858e856"
+  },
+  {
+   "offset": "0x85C7",
+   "text": "基连·扎比",
+   "payload_hex": "e829e86e04e84be825"
+  },
+  {
+   "offset": "0x85D1",
+   "text": "康斯康",
+   "payload_hex": "eb57e7c8eb57"
+  },
+  {
+   "offset": "0x85D8",
+   "text": "阿拉斯加守军",
+   "payload_hex": "e7d2e7c2e7c8e854e8a8e7e0"
+  },
+  {
+   "offset": "0x85E5",
+   "text": "莉莉娜",
+   "payload_hex": "e81ee81ee7ea"
+  },
+  {
+   "offset": "0x85EC",
+   "text": "诺里斯",
+   "payload_hex": "e972ef31e7c8"
+  },
+  {
+   "offset": "0x85F3",
+   "text": "拉拉·辛",
+   "payload_hex": "e7c2e7c2ef4bea58"
+  },
+  {
+   "offset": "0x85FC",
+   "text": "提坦斯兵",
+   "payload_hex": "e821e843e7c8ce"
+  },
+  {
+   "offset": "0x8604",
+   "text": "恶魔高达军官",
+   "payload_hex": "e7dee8d8e812ef2be7e08f"
+  },
+  {
+   "offset": "0x8610",
+   "text": "金·贾哈那姆",
+   "payload_hex": "e90204e9e8e7e8e7b7e823"
+  },
+  {
+   "offset": "0x861C",
+   "text": "蕾蒂·安",
+   "payload_hex": "e84ce9f504e7fc"
+  },
+  {
+   "offset": "0x8624",
+   "text": "罗贝托·卡帕",
+   "payload_hex": "e7ece857e7f404e801eb01"
+  },
+  {
+   "offset": "0x8630",
+   "text": "多鲁基斯",
+   "payload_hex": "e7e9e8a2e829e7c8"
+  },
+  {
+   "offset": "0x8639",
+   "text": "托鲁基斯3",
+   "payload_hex": "e7f4e8a2e829e7c8ef60"
+  },
+  {
+   "offset": "0x8645",
+   "text": "塞拉",
+   "payload_hex": "e950e7c2"
+  },
+  {
+   "offset": "0x864A",
+   "text": "米加加农炮",
+   "payload_hex": "e878e854e854ef7ae95a"
+  },
+  {
+   "offset": "0x8658",
+   "text": "西罗",
+   "payload_hex": "e7f8e7ec"
+  },
+  {
+   "offset": "0x865D",
+   "text": "东方不败",
+   "payload_hex": "e8bad0e7b5e88f"
+  },
+  {
+   "offset": "0x8665",
+   "text": "哈里",
+   "payload_hex": "e7e8ef31"
+  },
+  {
+   "offset": "0x866A",
+   "text": "希罗",
+   "payload_hex": "e87be7ec"
+  },
+  {
+   "offset": "0x866F",
+   "text": "蒙夏",
+   "payload_hex": "e942ef37"
+  },
+  {
+   "offset": "0x8674",
+   "text": "副官",
+   "payload_hex": "ecb68f"
+  },
+  {
+   "offset": "0x8678",
+   "text": "雇兵",
+   "payload_hex": "eec3ce"
+  },
+  {
+   "offset": "0x867C",
+   "text": "三翼旋刃",
+   "payload_hex": "eaa0ec35ec1fede7"
+  },
+  {
+   "offset": "0x8688",
+   "text": "牙买加",
+   "payload_hex": "ebd7efa3e854"
+  },
+  {
+   "offset": "0x868F",
+   "text": "爱娜·萨哈林",
+   "payload_hex": "e8d5e7eaef4be83be7e8e9b7"
+  },
+  {
+   "offset": "0x869C",
+   "text": "艾因·雷维",
+   "payload_hex": "e8d6ef33ef4be8afea54"
+  },
+  {
+   "offset": "0x86A7",
+   "text": "吉恩副官",
+   "payload_hex": "e7d9e7eeecb6ef92"
+  },
+  {
+   "offset": "0x86B0",
+   "text": "西玛·卡拉豪",
+   "payload_hex": "e7f8e845ef4be801e7c2eea2"
+  },
+  {
+   "offset": "0x86BD",
+   "text": "高扎古改",
+   "payload_hex": "e812e84be84de9f0"
+  },
+  {
+   "offset": "0x86C6",
+   "text": "卡多",
+   "payload_hex": "e801e7e9"
+  },
+  {
+   "offset": "0x86CB",
+   "text": "VSBR",
+   "payload_hex": "eed8ef9eef61eed5"
+  },
+  {
+   "offset": "0x86D5",
+   "text": "诺耶·吉尔",
+   "payload_hex": "e972ea31ef4be7d9e7e1"
+  },
+  {
+   "offset": "0x86E0",
+   "text": "阿姆罗·雷",
+   "payload_hex": "e7d2e823e7ecef4be8af"
+  },
+  {
+   "offset": "0x86EB",
+   "text": "布莱德·诺亚",
+   "payload_hex": "e831e846e82cef4be972e7d6"
+  },
+  {
+   "offset": "0x86F8",
+   "text": "金克都·瑙",
+   "payload_hex": "e902e7d5e840ef4bee68"
+  },
+  {
+   "offset": "0x8703",
+   "text": "浦木宏",
+   "payload_hex": "ea7aefa9ec5f"
+  },
+  {
+   "offset": "0x870C",
+   "text": "凯·西汀",
+   "payload_hex": "e95fef4be7f8ed7c"
+  },
+  {
+   "offset": "0x8715",
+   "text": "卡嘉莉(SEED)",
+   "payload_hex": "e801e89ee81eeb77ef9eef9fef9fef96eb78"
+  },
+  {
+   "offset": "0x8728",
+   "text": "{SLOT:2204}多·亚西塔",
+   "payload_hex": "e7bce7e9ef4be7d6e7f8e945"
+  },
+  {
+   "offset": "0x8735",
+   "text": "大扎姆",
+   "payload_hex": "efa5e84be823"
+  },
+  {
+   "offset": "0x873E",
+   "text": "指挥官",
+   "payload_hex": "e8c0e949ef92"
+  },
+  {
+   "offset": "0x8745",
+   "text": "金凯德·纳乌",
+   "payload_hex": "e902e95fe82cef4be882e94d"
+  },
+  {
+   "offset": "0x8752",
+   "text": "塞西莉",
+   "payload_hex": "e950e7f8e81e"
+  },
+  {
+   "offset": "0x8759",
+   "text": "格温",
+   "payload_hex": "e824e9c0"
+  },
+  {
+   "offset": "0x875E",
+   "text": "多兹鲁·扎比",
+   "payload_hex": "e7e9e856e8a2ef4be84be825"
+  },
+  {
+   "offset": "0x876B",
+   "text": "克莉丝",
+   "payload_hex": "e7d5e81ee8a3"
+  },
+  {
+   "offset": "0x8772",
+   "text": "多蒙·卡修",
+   "payload_hex": "e7e9e942ef4be801e9b0"
+  },
+  {
+   "offset": "0x877D",
+   "text": "新浦木宏",
+   "payload_hex": "e800ea7aefa9ec5f"
+  },
+  {
+   "offset": "0x8788",
+   "text": "东方不败",
+   "payload_hex": "e8baefb1e7b5e88f"
+  },
+  {
+   "offset": "0x8791",
+   "text": "萨比尼·夏尔",
+   "payload_hex": "e83be825e896ef4bef37e7e1"
+  },
+  {
+   "offset": "0x879E",
+   "text": "{SLOT:2204}利特·梅萨",
+   "payload_hex": "e7bce82ee7cfef4be9f2e83b"
+  },
+  {
+   "offset": "0x87AB",
+   "text": "联邦兵",
+   "payload_hex": "ef2eefaaef93"
+  },
+  {
+   "offset": "0x87B2",
+   "text": "吉恩兵",
+   "payload_hex": "e7d9e7eeef93"
+  },
+  {
+   "offset": "0x87B9",
+   "text": "副官",
+   "payload_hex": "ecb6ef92"
+  },
+  {
+   "offset": "0x87BE",
+   "text": "卡斯巴尔·戴肯",
+   "payload_hex": "e801e7c8e85be7e1ef4beb06e93d"
+  },
+  {
+   "offset": "0x87CD",
+   "text": "倒X",
+   "payload_hex": "e848eed9"
+  },
+  {
+   "offset": "0x87D2",
+   "text": "夏尼（弹尽）",
+   "payload_hex": "ef37e896ef8ee946e8f2ef8f"
+  },
+  {
+   "offset": "0x87DF",
+   "text": "施泰纳",
+   "payload_hex": "eb8deaeae882"
+  },
+  {
+   "offset": "0x87E6",
+   "text": "{SLOT:2204}多（强化）",
+   "payload_hex": "e7bce7e9ef8ee8ade9a5ef8f"
+  },
+  {
+   "offset": "0x87F3",
+   "text": "天田士郎",
+   "payload_hex": "e844efa0ef64eb1f"
+  },
+  {
+   "offset": "0x87FC",
+   "text": "士郎（强化）",
+   "payload_hex": "ef64eb1fef8ee8ade9a5ef8f"
+  },
+  {
+   "offset": "0x8809",
+   "text": "松永真",
+   "payload_hex": "e9e0e9bfe820"
+  },
+  {
+   "offset": "0x8812",
+   "text": "蕾蒂·安",
+   "payload_hex": "e84ce9f5ef4be7fc"
+  },
+  {
+   "offset": "0x881B",
+   "text": "塞拉·玛斯",
+   "payload_hex": "e950e7c2ef4be845e7c8"
+  },
+  {
+   "offset": "0x8826",
+   "text": "米利亚尔特",
+   "payload_hex": "e878e82ee7d6e7e1e7cf"
+  },
+  {
+   "offset": "0x8831",
+   "text": "米利亚尔特（零）",
+   "payload_hex": "e878e82ee7d6e7e1e7cfef8eeb74ef8f"
+  },
+  {
+   "offset": "0x8842",
+   "text": "杰克斯",
+   "payload_hex": "e8ebe7d5e7c8"
+  },
+  {
+   "offset": "0x8849",
+   "text": "多ゾ炮",
+   "payload_hex": "e7e9eee9e95a"
+  },
+  {
+   "offset": "0x8851",
+   "text": "瑟蕾因",
+   "payload_hex": "e8aae84cef33"
+  },
+  {
+   "offset": "0x8858",
+   "text": "瑟拉",
+   "payload_hex": "e8aae7c2"
+  },
+  {
+   "offset": "0x885D",
+   "text": "瑟蕾因",
+   "payload_hex": "e8aae84cef33"
+  },
+  {
+   "offset": "0x8864",
+   "text": "光束军刀",
+   "payload_hex": "e83de895e7e0ed25"
+  },
+  {
+   "offset": "0x8870",
+   "text": "零·村雨",
+   "payload_hex": "eb74ef4beb8eebad"
+  },
+  {
+   "offset": "0x8879",
+   "text": "钱恩·阿基",
+   "payload_hex": "ef91e7eeef4be7d2e829"
+  },
+  {
+   "offset": "0x8884",
+   "text": "钱恩（协战）",
+   "payload_hex": "ef91e7eeef8ee8f6ef28ef8f"
+  },
+  {
+   "offset": "0x8891",
+   "text": "斯雷格·罗",
+   "payload_hex": "e7c8e8afe824ef4be7ec"
+  },
+  {
+   "offset": "0x889C",
+   "text": "迪安娜",
+   "payload_hex": "ea11e7fce7ea"
+  },
+  {
+   "offset": "0x88A3",
+   "text": "佐恩炮",
+   "payload_hex": "efbae7eee95a"
+  },
+  {
+   "offset": "0x88AB",
+   "text": "提坦斯军官",
+   "payload_hex": "e821e843e7c8e7e0ef92"
+  },
+  {
+   "offset": "0x88B6",
+   "text": "多蒙（明镜止水）",
+   "payload_hex": "e7e9e942ef8eef39ead7e869ebd4ef8f"
+  },
+  {
+   "offset": "0x88C7",
+   "text": "多蒙·蕾茵",
+   "payload_hex": "e7e9e942ef4be84ce971"
+  },
+  {
+   "offset": "0x88D2",
+   "text": "盾米加粒子炮",
+   "payload_hex": "eb63e878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x88E1",
+   "text": "巴尼",
+   "payload_hex": "e85be896"
+  },
+  {
+   "offset": "0x88E6",
+   "text": "哈曼·卡恩",
+   "payload_hex": "e7e8e874ef4be801e7ee"
+  },
+  {
+   "offset": "0x88F1",
+   "text": "哈曼（强化）",
+   "payload_hex": "e7e8e874ef8ee8ade9a5ef8f"
+  },
+  {
+   "offset": "0x88FE",
+   "text": "小林隼人",
+   "payload_hex": "e83ee9b7ea35efb2"
+  },
+  {
+   "offset": "0x8909",
+   "text": "希罗·尤尔",
+   "payload_hex": "e87be7ecef4bea5fe7e1"
+  },
+  {
+   "offset": "0x8914",
+   "text": "{SLOT:2558}·村雨",
+   "payload_hex": "e91eef4beb8eebad"
+  },
+  {
+   "offset": "0x891D",
+   "text": "布拉德·法伦",
+   "payload_hex": "e831e7c2e82cef4be84eea5b"
+  },
+  {
+   "offset": "0x892A",
+   "text": "普露兹",
+   "payload_hex": "e838e858e856"
+  },
+  {
+   "offset": "0x8933",
+   "text": "基连·扎比",
+   "payload_hex": "e829e86eef4be84be825"
+  },
+  {
+   "offset": "0x893E",
+   "text": "芙蕾",
+   "payload_hex": "e9d7e84c"
+  },
+  {
+   "offset": "0x8943",
+   "text": "对空导弹",
+   "payload_hex": "e7bee93fea4be946"
+  },
+  {
+   "offset": "0x894D",
+   "text": "伯纳德·蒙夏",
+   "payload_hex": "eaa4e882e82cef4be942ef37"
+  },
+  {
+   "offset": "0x895C",
+   "text": "波·艾吉",
+   "payload_hex": "e9a8ef4be8d6e7d9"
+  },
+  {
+   "offset": "0x8965",
+   "text": "波·艾吉（哭）",
+   "payload_hex": "e9a8ef4be8d6e7d9ef8eed38ef8f"
+  },
+  {
+   "offset": "0x8974",
+   "text": "米莎",
+   "payload_hex": "e878ef7c"
+  },
+  {
+   "offset": "0x8979",
+   "text": "拉克丝",
+   "payload_hex": "e7c2e7d5e8a3"
+  },
+  {
+   "offset": "0x8980",
+   "text": "武装舱",
+   "payload_hex": "e8ece98febeb"
+  },
+  {
+   "offset": "0x8988",
+   "text": "拉拉·辛",
+   "payload_hex": "e7c2e7c2ef4bea58"
+  },
+  {
+   "offset": "0x8991",
+   "text": "提坦斯兵",
+   "payload_hex": "e821e843e7c8ef93"
+  },
+  {
+   "offset": "0x899A",
+   "text": "露·露卡",
+   "payload_hex": "e858ef4be858e801"
+  },
+  {
+   "offset": "0x89A3",
+   "text": "诺茵",
+   "payload_hex": "e972e971"
+  },
+  {
+   "offset": "0x89A8",
+   "text": "反射{SLOT:2291}游炮",
+   "payload_hex": "e87cef65e813ea94e95a"
+  },
+  {
+   "offset": "0x89B4",
+   "text": "蕾拉·雷蒙德",
+   "payload_hex": "e84ce7c2ef4be8afe942e82c"
+  },
+  {
+   "offset": "0x89C1",
+   "text": "恶魔高达军官",
+   "payload_hex": "e7dee8d8e812ef2be7e0ef92"
+  },
+  {
+   "offset": "0x89CE",
+   "text": "蕾{SLOT:2286}亚·朗德",
+   "payload_hex": "e84ce80ee7d6ef4bea90e82c"
+  },
+  {
+   "offset": "0x89DB",
+   "text": "金·贾哈那姆",
+   "payload_hex": "e902ef4be9e8e7e8e7b7e823"
+  },
+  {
+   "offset": "0x89E8",
+   "text": "罗伯托·卡帕",
+   "payload_hex": "e7eceaa4e7f4ef4be801eb01"
+  },
+  {
+   "offset": "0x89F5",
+   "text": "罗兰·赛亚克",
+   "payload_hex": "e7ece86fef4bebf3e7d6e7d5"
+  },
+  {
+   "offset": "0x8A02",
+   "text": "罗兰·赛亚克",
+   "payload_hex": "e7ece86fef4bebf3e7d6e7d5"
+  },
+  {
+   "offset": "0x8A0F",
+   "text": "真（SEED）",
+   "payload_hex": "e820ef8eef9eef9fef9fef96ef8f"
+  },
+  {
+   "offset": "0x8A1E",
+   "text": "奥尔·尼达",
+   "payload_hex": "e82be7e1ef4be896ef2b"
+  },
+  {
+   "offset": "0x8A29",
+   "text": "史汀",
+   "payload_hex": "e925ed7c"
+  },
+  {
+   "offset": "0x8A2E",
+   "text": "基西莉亚·扎比",
+   "payload_hex": "e829e7f8e81ee7d6ef4be84be825"
+  },
+  {
+   "offset": "0x8A3D",
+   "text": "尤里·哈斯勒",
+   "payload_hex": "ea5fef31ef4be7e8e7c8e9ce"
+  },
+  {
+   "offset": "0x8A4A",
+   "text": "迈克尔·格恩",
+   "payload_hex": "ea59e7d5e7e1ef4be824e7ee"
+  },
+  {
+   "offset": "0x8A57",
+   "text": "堵量产型{SLOT:3140}飞",
+   "payload_hex": "ee00e851ec05e977eb64ea45"
+  },
+  {
+   "offset": "0x8A64",
+   "text": "特里尔（增压）",
+   "payload_hex": "e7cfef31e7e1ef8eea3de992ef8f"
+  },
+  {
+   "offset": "0x8A73",
+   "text": "D·特里尔",
+   "payload_hex": "ef96ef4be7cfef31e7e1"
+  },
+  {
+   "offset": "0x8A7E",
+   "text": "精神感应高达",
+   "payload_hex": "e98de9aae87de873e812ef2b"
+  },
+  {
+   "offset": "0x8A8B",
+   "text": "光束剑",
+   "payload_hex": "e83de895ecb3"
+  },
+  {
+   "offset": "0x8A92",
+   "text": "高达铁锤",
+   "payload_hex": "e812ef2beebbedc2"
+  },
+  {
+   "offset": "0x8A9B",
+   "text": "∀高达(∀99)",
+   "payload_hex": "e704e812ef2b7de704eca4eca47e"
+  },
+  {
+   "offset": "0x8AAA",
+   "text": "光束步枪",
+   "payload_hex": "e83de895ea93eaae"
+  },
+  {
+   "offset": "0x8AB3",
+   "text": "双联光束枪",
+   "payload_hex": "eabcef2ee83de895eaae"
+  },
+  {
+   "offset": "0x8ABE",
+   "text": "∀高达(月光蝶)",
+   "payload_hex": "e704e812ef2b7de850e83dea037e"
+  },
+  {
+   "offset": "0x8ACD",
+   "text": "基灵",
+   "payload_hex": "e829eaeb"
+  },
+  {
+   "offset": "0x8AD2",
+   "text": "EX-S高达",
+   "payload_hex": "ef9feed9ef71ef9ee812ef2b"
+  },
+  {
+   "offset": "0x8ADF",
+   "text": "可动光束炮",
+   "payload_hex": "e7c4ef30e83de895e95a"
+  },
+  {
+   "offset": "0x8AEA",
+   "text": "大魔·格罗斯拜尔",
+   "payload_hex": "efa5e8d8ef4be824e7ece7c8e91ae7e1"
+  },
+  {
+   "offset": "0x8AFB",
+   "text": "卫兵",
+   "payload_hex": "e9b2ef93"
+  },
+  {
+   "offset": "0x8B01",
+   "text": "高达F91",
+   "payload_hex": "e812ef2beca5eca402"
+  },
+  {
+   "offset": "0x8B0B",
+   "text": "维斯巴",
+   "payload_hex": "ea54e7c8e85b"
+  },
+  {
+   "offset": "0x8B12",
+   "text": "MEPE攻击",
+   "payload_hex": "efa7ef9feed4ef9fef67e7cc"
+  },
+  {
+   "offset": "0x8B1F",
+   "text": "高达GP01Fb",
+   "payload_hex": "e812ef2beed1eed4e99802eca5ef72"
+  },
+  {
+   "offset": "0x8B2F",
+   "text": "GP02酸浆果",
+   "payload_hex": "eed1eed4e998ef5fef73ef74e871"
+  },
+  {
+   "offset": "0x8B3E",
+   "text": "克鲁泽",
+   "payload_hex": "e7d5e8a2e984"
+  },
+  {
+   "offset": "0x8B45",
+   "text": "原子火箭",
+   "payload_hex": "e8e4e886e8daec32"
+  },
+  {
+   "offset": "0x8B4E",
+   "text": "GP03雄蕊",
+   "payload_hex": "eed1eed4e998ef60edc4ef75"
+  },
+  {
+   "offset": "0x8B5F",
+   "text": "可折火箭",
+   "payload_hex": "e7c4ed64e8daec32"
+  },
+  {
+   "offset": "0x8B68",
+   "text": "GP03石斛兰",
+   "payload_hex": "eed1eed4e998ef60ef44ef76e86f"
+  },
+  {
+   "offset": "0x8B79",
+   "text": "集装导弹",
+   "payload_hex": "ea98e98fea4be946"
+  },
+  {
+   "offset": "0x8B82",
+   "text": "大型光剑",
+   "payload_hex": "efa5e977e83decb3"
+  },
+  {
+   "offset": "0x8B8B",
+   "text": "比尔歌2",
+   "payload_hex": "e825e7e1efd0ef5f"
+  },
+  {
+   "offset": "0x8B94",
+   "text": "微型导弹",
+   "payload_hex": "eb58e977ea4be946"
+  },
+  {
+   "offset": "0x8B9D",
+   "text": "爆导索",
+   "payload_hex": "ef84ea4be93c"
+  },
+  {
+   "offset": "0x8BA4",
+   "text": "R·贾贾",
+   "payload_hex": "eed5ef4be9e8e9e8"
+  },
+  {
+   "offset": "0x8BAD",
+   "text": "剑装光束枪",
+   "payload_hex": "ecb3e98fe83de895eaae"
+  },
+  {
+   "offset": "0x8BB8",
+   "text": "3连导弹",
+   "payload_hex": "ef60e86eea4be946"
+  },
+  {
+   "offset": "0x8BC1",
+   "text": "V2高达",
+   "payload_hex": "eed8ef5fe812ef2b"
+  },
+  {
+   "offset": "0x8BCA",
+   "text": "多重发射器",
+   "payload_hex": "e7e9e8a1e870ef65e8c3"
+  },
+  {
+   "offset": "0x8BD5",
+   "text": "V2突击破坏",
+   "payload_hex": "eed8ef5fe8b6e7ccef6de9ed"
+  },
+  {
+   "offset": "0x8BE2",
+   "text": "悍马·悍马",
+   "payload_hex": "ee21e84fef4bee21e84f"
+  },
+  {
+   "offset": "0x8BED",
+   "text": "光束喷射器",
+   "payload_hex": "e83de895edf9ef65e8c3"
+  },
+  {
+   "offset": "0x8BF8",
+   "text": "神意高达",
+   "payload_hex": "e9aaef3ce812ef2b"
+  },
+  {
+   "offset": "0x8C01",
+   "text": "V2突击破坏／H",
+   "payload_hex": "eed8ef5fe8b6e7ccef6de9edefafeed2"
+  },
+  {
+   "offset": "0x8C12",
+   "text": "光之翼",
+   "payload_hex": "e83de7cdec35"
+  },
+  {
+   "offset": "0x8C19",
+   "text": "ZZ高达",
+   "payload_hex": "eedaeedae812ef2b"
+  },
+  {
+   "offset": "0x8C22",
+   "text": "双光束步枪",
+   "payload_hex": "eabce83de895ea93eaae"
+  },
+  {
+   "offset": "0x8C2D",
+   "text": "超光束剑",
+   "payload_hex": "eaf6e83de895ecb3"
+  },
+  {
+   "offset": "0x8C36",
+   "text": "大魔·拜恩尼希兹",
+   "payload_hex": "efa5e8d8ef4be91ae7eee896e87be856"
+  },
+  {
+   "offset": "0x8C48",
+   "text": "ZZ高达／强化",
+   "payload_hex": "eedaeedae812ef2befafe8ade9a5"
+  },
+  {
+   "offset": "0x8C57",
+   "text": "全装甲ZZ",
+   "payload_hex": "efb4e98febdbeedaeeda"
+  },
+  {
+   "offset": "0x8C62",
+   "text": "全装甲ZZ／强化",
+   "payload_hex": "efb4e98febdbeedaeedaefafe8ade9a5"
+  },
+  {
+   "offset": "0x8C73",
+   "text": "線土火箭炮",
+   "payload_hex": "ef12ec56e8daec32e95a"
+  },
+  {
+   "offset": "0x8C7E",
+   "text": "Z高达／强化",
+   "payload_hex": "eedae812ef2befafe8ade9a5"
+  },
+  {
+   "offset": "0x8C8B",
+   "text": "突击",
+   "payload_hex": "e8b6e7cc"
+  },
+  {
+   "offset": "0x8C90",
+   "text": "α阿吉尔",
+   "payload_hex": "efffe7d2e7d9e7e1"
+  },
+  {
+   "offset": "0x8C99",
+   "text": "对空米加粒子炮",
+   "payload_hex": "e7bee93fe878e854ec84e886e95a"
+  },
+  {
+   "offset": "0x8CA9",
+   "text": "新·高能火箭炮",
+   "payload_hex": "ef8aef4be812e7c6e8daec32e95a"
+  },
+  {
+   "offset": "0x8CB8",
+   "text": "尊者高达",
+   "payload_hex": "eccdef6ee812ef2b"
+  },
+  {
+   "offset": "0x8CC1",
+   "text": "牛高达／强化",
+   "payload_hex": "ee5fe812ef2befafe8ade9a5"
+  },
+  {
+   "offset": "0x8CCE",
+   "text": "阿普萨拉斯3",
+   "payload_hex": "e7d2e838e83be7c2e7c8ef60"
+  },
+  {
+   "offset": "0x8CDB",
+   "text": "{SLOT:3140}骑兵系统",
+   "payload_hex": "eb64eca3ef93e941e929"
+  },
+  {
+   "offset": "0x8CE6",
+   "text": "玛希罗",
+   "payload_hex": "e845e87be7ec"
+  },
+  {
+   "offset": "0x8CED",
+   "text": "Z高达(GD)",
+   "payload_hex": "eedae812ef2b7deed1057e"
+  },
+  {
+   "offset": "0x8CF9",
+   "text": "阿列克斯",
+   "payload_hex": "e7d2e8b5e7d5e7c8"
+  },
+  {
+   "offset": "0x8D02",
+   "text": "加特林枪",
+   "payload_hex": "e854e7cfe9b7eaae"
+  },
+  {
+   "offset": "0x8D0B",
+   "text": "阿列克斯FA",
+   "payload_hex": "e7d2e8b5e7d5e7c8eca5ea9c"
+  },
+  {
+   "offset": "0x8D18",
+   "text": "{SLOT:2541}盾高达",
+   "payload_hex": "e90deb63e812ef2b"
+  },
+  {
+   "offset": "0x8D21",
+   "text": "炮台",
+   "payload_hex": "e95aea16"
+  },
+  {
+   "offset": "0x8D26",
+   "text": "{SLOT:2541}盾高达／下降",
+   "payload_hex": "e90deb63e812ef2befafef4de943"
+  },
+  {
+   "offset": "0x8D35",
+   "text": "瓦尔·瓦罗",
+   "payload_hex": "e99fe7e1ef4be99fe7ec"
+  },
+  {
+   "offset": "0x8D40",
+   "text": "利{SLOT:2292}",
+   "payload_hex": "e82ee814"
+  },
+  {
+   "offset": "0x8D45",
+   "text": "导弹管",
+   "payload_hex": "ea4be946e93b"
+  },
+  {
+   "offset": "0x8D4C",
+   "text": "玛拉塞",
+   "payload_hex": "e845e7c2e950"
+  },
+  {
+   "offset": "0x8D55",
+   "text": "W高达零式(EW)",
+   "payload_hex": "e01ae812ef2beb74ea267de00be01a7e"
+  },
+  {
+   "offset": "0x8D66",
+   "text": "双重破坏步枪",
+   "payload_hex": "eabce8a1ef6de9edea93eaae"
+  },
+  {
+   "offset": "0x8D73",
+   "text": "机炮",
+   "payload_hex": "e7e4e95a"
+  },
+  {
+   "offset": "0x8D78",
+   "text": "W高达零式(EW)／H",
+   "payload_hex": "e01ae812ef2beb74ea267de00be01a7ee06beed2"
+  },
+  {
+   "offset": "0x8D8D",
+   "text": "旋转TB步枪",
+   "payload_hex": "ec1fe9c2eed6ef61ea93eaae"
+  },
+  {
+   "offset": "0x8D9A",
+   "text": "沃德姆",
+   "payload_hex": "ef77e82ce823"
+  },
+  {
+   "offset": "0x8DA1",
+   "text": "光束炮",
+   "payload_hex": "e83de895e95a"
+  },
+  {
+   "offset": "0x8DA8",
+   "text": "大型导弹",
+   "payload_hex": "efa5e977ea4be946"
+  },
+  {
+   "offset": "0x8DB1",
+   "text": "空战强袭高达",
+   "payload_hex": "e93fef28e8ade9aee812ef2b"
+  },
+  {
+   "offset": "0x8DBE",
+   "text": "破甲者",
+   "payload_hex": "ef6debdbef6e"
+  },
+  {
+   "offset": "0x8DC7",
+   "text": "空战强袭／下降",
+   "payload_hex": "e93fef28e8ade9aeefafef4de943"
+  },
+  {
+   "offset": "0x8DD6",
+   "text": "艾尔美斯",
+   "payload_hex": "e8d6e7e1e9f4e7c8"
+  },
+  {
+   "offset": "0x8DDF",
+   "text": "比特",
+   "payload_hex": "e825e7cf"
+  },
+  {
+   "offset": "0x8DE4",
+   "text": "艾尔美斯4号机",
+   "payload_hex": "e8d6e7e1e9f4e7c8ea9be833e7e4"
+  },
+  {
+   "offset": "0x8DF3",
+   "text": "艾尔美斯3号机",
+   "payload_hex": "e8d6e7e1e9f4e7c8ef60e833e7e4"
+  },
+  {
+   "offset": "0x8E02",
+   "text": "格贝拉·泰特拉",
+   "payload_hex": "e824e857e7c2ef4beaeae7cfe7c2"
+  },
+  {
+   "offset": "0x8E11",
+   "text": "光束机枪",
+   "payload_hex": "e83de895e7e4eaae"
+  },
+  {
+   "offset": "0x8E1A",
+   "text": "机炮",
+   "payload_hex": "e7e4e95a"
+  },
+  {
+   "offset": "0x8E1F",
+   "text": "加萨C",
+   "payload_hex": "e854e83beed0"
+  },
+  {
+   "offset": "0x8E26",
+   "text": "灵格斯",
+   "payload_hex": "eaebe824e7c8"
+  },
+  {
+   "offset": "0x8E2F",
+   "text": "加萨D",
+   "payload_hex": "e854e83b05"
+  },
+  {
+   "offset": "0x8E35",
+   "text": "光炮",
+   "payload_hex": "e83de95a"
+  },
+  {
+   "offset": "0x8E3A",
+   "text": "士官",
+   "payload_hex": "ef64ef92"
+  },
+  {
+   "offset": "0x8E40",
+   "text": "特列斯",
+   "payload_hex": "e7cfe8b5e7c8"
+  },
+  {
+   "offset": "0x8E47",
+   "text": "哈曼·卡恩",
+   "payload_hex": "e7e8e87404e801e7ee"
+  },
+  {
+   "offset": "0x8E51",
+   "text": "声B",
+   "payload_hex": "ea8aef61"
+  },
+  {
+   "offset": "0x8E56",
+   "text": "罗伯托",
+   "payload_hex": "e7eceaa4e7f4"
+  },
+  {
+   "offset": "0x8E5D",
+   "text": "布莱特·诺亚",
+   "payload_hex": "e831e846e7cf04e972e7d6"
+  },
+  {
+   "offset": "0x8E69",
+   "text": "加萨E",
+   "payload_hex": "e854e83bef9f"
+  },
+  {
+   "offset": "0x8E70",
+   "text": "光束炮",
+   "payload_hex": "e83de895e95a"
+  },
+  {
+   "offset": "0x8E77",
+   "text": "装甲武装",
+   "payload_hex": "e98febdbe8ece98f"
+  },
+  {
+   "offset": "0x8E80",
+   "text": "卡托专用勇士",
+   "payload_hex": "e801e7f4eb4befb3eaddef64"
+  },
+  {
+   "offset": "0x8E8D",
+   "text": "大型光束枪",
+   "payload_hex": "efa5e977e83de895eaae"
+  },
+  {
+   "offset": "0x8E98",
+   "text": "光束対刀",
+   "payload_hex": "e83de895eefbed25"
+  },
+  {
+   "offset": "0x8EA1",
+   "text": "加布斯雷",
+   "payload_hex": "e854e831e7c8e8af"
+  },
+  {
+   "offset": "0x8EAA",
+   "text": "ォ红强袭",
+   "payload_hex": "eee3e9e3e8ade9ae"
+  },
+  {
+   "offset": "0x8EB3",
+   "text": "灾难高达",
+   "payload_hex": "ef78e866e812ef2b"
+  },
+  {
+   "offset": "0x8EBC",
+   "text": "死亡锤",
+   "payload_hex": "ef6aebb2edc2"
+  },
+  {
+   "offset": "0x8EC3",
+   "text": "甲虫二号",
+   "payload_hex": "ebdbeb6dea13e833"
+  },
+  {
+   "offset": "0x8ECC",
+   "text": "舒拉克",
+   "payload_hex": "ebeae7c2e7d5"
+  },
+  {
+   "offset": "0x8ED3",
+   "text": "加尔巴尔迪B",
+   "payload_hex": "e854e7e1e85be7e1ea11ef61"
+  },
+  {
+   "offset": "0x8EE0",
+   "text": "盾导弹",
+   "payload_hex": "eb63ea4be946"
+  },
+  {
+   "offset": "0x8EE7",
+   "text": "钢加农",
+   "payload_hex": "ef79e854ef7a"
+  },
+  {
+   "offset": "0x8EEE",
+   "text": "高达",
+   "payload_hex": "e812ef2b"
+  },
+  {
+   "offset": "0x8EF3",
+   "text": "加撒D",
+   "payload_hex": "e854ed6fef96"
+  },
+  {
+   "offset": "0x8EFA",
+   "text": "MC高达",
+   "payload_hex": "07eed0e812ef2b"
+  },
+  {
+   "offset": "0x8F02",
+   "text": "MC高达(破坏)",
+   "payload_hex": "07eed0e812ef2b7def6de9ed7e"
+  },
+  {
+   "offset": "0x8F10",
+   "text": "高达MkⅡ",
+   "payload_hex": "e812ef2b07eedeeee1"
+  },
+  {
+   "offset": "0x8F1A",
+   "text": "超级高达",
+   "payload_hex": "eaf6eaeee812ef2b"
+  },
+  {
+   "offset": "0x8F23",
+   "text": "长步枪",
+   "payload_hex": "ef34ea93eaae"
+  },
+  {
+   "offset": "0x8F2A",
+   "text": "高达Mk20号机",
+   "payload_hex": "e812ef2befa7eedeef5fe998e833e7e4"
+  },
+  {
+   "offset": "0x8F3B",
+   "text": "试作光束枪",
+   "payload_hex": "e91def2fe83de895eaae"
+  },
+  {
+   "offset": "0x8F46",
+   "text": "试作光剑",
+   "payload_hex": "e91def2fe83decb3"
+  },
+  {
+   "offset": "0x8F4F",
+   "text": "高达MkⅤ",
+   "payload_hex": "e812ef2b07eedee703"
+  },
+  {
+   "offset": "0x8F59",
+   "text": "高达X",
+   "payload_hex": "e812ef2beed9"
+  },
+  {
+   "offset": "0x8F60",
+   "text": "盾破坏步枪",
+   "payload_hex": "eb63ef6de9edea93eaae"
+  },
+  {
+   "offset": "0x8F6B",
+   "text": "大型光束剑",
+   "payload_hex": "efa5e977e83de895ecb3"
+  },
+  {
+   "offset": "0x8F76",
+   "text": "强夺高达",
+   "payload_hex": "e8adea17e812ef2b"
+  },
+  {
+   "offset": "0x8F7F",
+   "text": "高达X／卫星炮",
+   "payload_hex": "e812ef2beed9efafe9b2ef69e95a"
+  },
+  {
+   "offset": "0x8F8E",
+   "text": "卫星炮",
+   "payload_hex": "e9b2ef69e95a"
+  },
+  {
+   "offset": "0x8F95",
+   "text": "高达艾比安",
+   "payload_hex": "e812ef2be8d6e825e7fc"
+  },
+  {
+   "offset": "0x8FA0",
+   "text": "热能ゴ",
+   "payload_hex": "ead1e7c6eee6"
+  },
+  {
+   "offset": "0x8FA7",
+   "text": "光束剑",
+   "payload_hex": "e83de895ecb3"
+  },
+  {
+   "offset": "0x8FAE",
+   "text": "加普兰",
+   "payload_hex": "e854e838e86f"
+  },
+  {
+   "offset": "0x8FB5",
+   "text": "丘贝雷",
+   "payload_hex": "ec46e857e8af"
+  },
+  {
+   "offset": "0x8FBC",
+   "text": "光束枪",
+   "payload_hex": "e83de895eaae"
+  },
+  {
+   "offset": "0x8FC3",
+   "text": "丘贝雷／哈曼机",
+   "payload_hex": "ec46e857e8afefafe7e8e874e7e4"
+  },
+  {
+   "offset": "0x8FD2",
+   "text": "丘贝雷／强化",
+   "payload_hex": "ec46e857e8afefafe8ade9a5"
+  },
+  {
+   "offset": "0x8FDF",
+   "text": "丘贝雷／普露托机",
+   "payload_hex": "ec46e857e8afefafe838e858e7f4e7e4"
+  },
+  {
+   "offset": "0x8FF0",
+   "text": "光束S",
+   "payload_hex": "e83de89508"
+  },
+  {
+   "offset": "0x8FF8",
+   "text": "丘贝雷MkⅡ",
+   "payload_hex": "ec46e857e8af07eedeeee1"
+  },
+  {
+   "offset": "0x9004",
+   "text": "基拉·多加",
+   "payload_hex": "e829e7c2ef4be7e9e854"
+  },
+  {
+   "offset": "0x900F",
+   "text": "光束剑{SLOT:2896}",
+   "payload_hex": "e83de895ecb3ea70"
+  },
+  {
+   "offset": "0x9018",
+   "text": "手雷发射器",
+   "payload_hex": "ef66e8afe870ef65e8c3"
+  },
+  {
+   "offset": "0x9023",
+   "text": "{SLOT:2526}高达",
+   "payload_hex": "e8fee812ef2b"
+  },
+  {
+   "offset": "0x902A",
+   "text": "蕾兹专用基拉多加",
+   "payload_hex": "e84ce856eb4befb3e829e7c2e7e9e854"
+  },
+  {
+   "offset": "0x903D",
+   "text": "昆·曼莎",
+   "payload_hex": "ef7bef4be874ef7c"
+  },
+  {
+   "offset": "0x9046",
+   "text": "ソ得·多加",
+   "payload_hex": "eee8e80aef4be7e9e854"
+  },
+  {
+   "offset": "0x9051",
+   "text": "海盗高达X1",
+   "payload_hex": "e91be9f3e812ef2beed902"
+  },
+  {
+   "offset": "0x905D",
+   "text": "线控炮",
+   "payload_hex": "e916ea3fe95a"
+  },
+  {
+   "offset": "0x9064",
+   "text": "光束斩刀",
+   "payload_hex": "e83de895ed71ed25"
+  },
+  {
+   "offset": "0x906D",
+   "text": "海盗X1／强化",
+   "payload_hex": "e91be9f3eed902e06be8ade9a5"
+  },
+  {
+   "offset": "0x907B",
+   "text": "分身攻击",
+   "payload_hex": "efaee88def67e7cc"
+  },
+  {
+   "offset": "0x9084",
+   "text": "海盗高达X1改",
+   "payload_hex": "e91be9f3e812ef2beed902e9f0"
+  },
+  {
+   "offset": "0x9092",
+   "text": "螺旋钢ゴ",
+   "payload_hex": "ef98ec1fef79eee6"
+  },
+  {
+   "offset": "0x909B",
+   "text": "海盗X1改／H",
+   "payload_hex": "e91be9f3eed902e9f0e06beed2"
+  },
+  {
+   "offset": "0x90A9",
+   "text": "海盗高达X2",
+   "payload_hex": "e91be9f3e812ef2beed9ef5f"
+  },
+  {
+   "offset": "0x90B6",
+   "text": "实弹长枪",
+   "payload_hex": "e87fe946ef34eaae"
+  },
+  {
+   "offset": "0x90BF",
+   "text": "破坏发射器",
+   "payload_hex": "ef6de9ede870ef65e8c3"
+  },
+  {
+   "offset": "0x90CA",
+   "text": "海盗高达X2改",
+   "payload_hex": "e91be9f3e812ef2beed9ef5fe9f0"
+  },
+  {
+   "offset": "0x90D9",
+   "text": "海盗高达X3",
+   "payload_hex": "e91be9f3e812ef2beed9ef60"
+  },
+  {
+   "offset": "0x90E6",
+   "text": "村正狂刀",
+   "payload_hex": "eb8eef3bebd9ed25"
+  },
+  {
+   "offset": "0x90EF",
+   "text": "超级迪亚斯",
+   "payload_hex": "eaf6eaeeea11e7d6e7c8"
+  },
+  {
+   "offset": "0x90FA",
+   "text": "格罗姆林",
+   "payload_hex": "e824e7ece823e9b7"
+  },
+  {
+   "offset": "0x9103",
+   "text": "对空光",
+   "payload_hex": "e7bee93fe83d"
+  },
+  {
+   "offset": "0x910A",
+   "text": "有线头光",
+   "payload_hex": "e7cbe916e92ee83d"
+  },
+  {
+   "offset": "0x9113",
+   "text": "里克·大魔",
+   "payload_hex": "ef31e7d5ef4befa5e8d8"
+  },
+  {
+   "offset": "0x9120",
+   "text": "基玛尔克",
+   "payload_hex": "e829e845e7e1e7d5"
+  },
+  {
+   "offset": "0x9129",
+   "text": "子{SLOT:2291}游炮",
+   "payload_hex": "e886e813ea94e95a"
+  },
+  {
+   "offset": "0x9132",
+   "text": "母{SLOT:2291}游炮",
+   "payload_hex": "e9d5e813ea94e95a"
+  },
+  {
+   "offset": "0x913B",
+   "text": "盖茨",
+   "payload_hex": "ec7eef7d"
+  },
+  {
+   "offset": "0x9140",
+   "text": "王者之剑",
+   "payload_hex": "e884ef6ee7cdecb3"
+  },
+  {
+   "offset": "0x9149",
+   "text": "盖茨R",
+   "payload_hex": "ec7eef7deed5"
+  },
+  {
+   "offset": "0x9150",
+   "text": "盾光剑",
+   "payload_hex": "eb63e83decb3"
+  },
+  {
+   "offset": "0x9157",
+   "text": "轨道炮",
+   "payload_hex": "e9cce82ae95a"
+  },
+  {
+   "offset": "0x915E",
+   "text": "勇士",
+   "payload_hex": "eaddef64"
+  },
+  {
+   "offset": "0x9163",
+   "text": "勇士JG",
+   "payload_hex": "eaddef64effdeed1"
+  },
+  {
+   "offset": "0x916C",
+   "text": "狙击",
+   "payload_hex": "ef6ce7cc"
+  },
+  {
+   "offset": "0x9171",
+   "text": "勇士M",
+   "payload_hex": "eaddef6407"
+  },
+  {
+   "offset": "0x9177",
+   "text": "机枪",
+   "payload_hex": "e7e4eaae"
+  },
+  {
+   "offset": "0x917C",
+   "text": "指节盾",
+   "payload_hex": "e8c0ebeceb63"
+  },
+  {
+   "offset": "0x9183",
+   "text": "{SLOT:2288}宝{SLOT:2289}",
+   "payload_hex": "e810ec61e811"
+  },
+  {
+   "offset": "0x918A",
+   "text": "散弹枪",
+   "payload_hex": "ef68e946eaae"
+  },
+  {
+   "offset": "0x9191",
+   "text": "锁式地雷",
+   "payload_hex": "ebfaea26ef63e8af"
+  },
+  {
+   "offset": "0x919A",
+   "text": "光束长枪",
+   "payload_hex": "e83de895ef34eaae"
+  },
+  {
+   "offset": "0x91A3",
+   "text": "核心增压机",
+   "payload_hex": "e8f3e82dea3de992e7e4"
+  },
+  {
+   "offset": "0x91AE",
+   "text": "导弹",
+   "payload_hex": "ea4be946"
+  },
+  {
+   "offset": "0x91B3",
+   "text": "高机动型勇士",
+   "payload_hex": "e812e7e4ef30e977eaddef64"
+  },
+  {
+   "offset": "0x91C0",
+   "text": "火箭发射器",
+   "payload_hex": "e8daec32e870ef65e8c3"
+  },
+  {
+   "offset": "0x91CB",
+   "text": "高机动型扎古",
+   "payload_hex": "e812e7e4ef30e977e84be84d"
+  },
+  {
+   "offset": "0x91D8",
+   "text": "扎古机枪",
+   "payload_hex": "e84be84de7e4eaae"
+  },
+  {
+   "offset": "0x91E1",
+   "text": "热能{SLOT:2896}",
+   "payload_hex": "ead1e7c6ea70"
+  },
+  {
+   "offset": "0x91E8",
+   "text": "火箭炮",
+   "payload_hex": "e8daec32e95a"
+  },
+  {
+   "offset": "0x91EF",
+   "text": "神高达",
+   "payload_hex": "e9aae812ef2b"
+  },
+  {
+   "offset": "0x91F6",
+   "text": "神斩击",
+   "payload_hex": "e9aaed71e7cc"
+  },
+  {
+   "offset": "0x91FD",
+   "text": "爆热！神之手指",
+   "payload_hex": "ef84ead1ef97e9aae7cdef66e8c0"
+  },
+  {
+   "offset": "0x920C",
+   "text": "神高达／强化",
+   "payload_hex": "e9aae812ef2befafe8ade9a5"
+  },
+  {
+   "offset": "0x9219",
+   "text": "量产型卡{SLOT:2222}尼",
+   "payload_hex": "e851ec05e977e801e7cee896"
+  },
+  {
+   "offset": "0x9226",
+   "text": "石破天惊拳",
+   "payload_hex": "ef44ef6de844ec6dea65"
+  },
+  {
+   "offset": "0x9231",
+   "text": "瑟邦特",
+   "payload_hex": "e8aaefaae7cf"
+  },
+  {
+   "offset": "0x9238",
+   "text": "双加特林枪",
+   "payload_hex": "eabce854e7cfe9b7eaae"
+  },
+  {
+   "offset": "0x9243",
+   "text": "精神感应高达",
+   "payload_hex": "e98de9aae87de873e812ef2b"
+  },
+  {
+   "offset": "0x9250",
+   "text": "大天使号",
+   "payload_hex": "efa5e844e83fe833"
+  },
+  {
+   "offset": "0x925B",
+   "text": "精神感应高达MkⅡ",
+   "payload_hex": "e98de9aae87de873e812ef2b07eedeeee1"
+  },
+  {
+   "offset": "0x926D",
+   "text": "反射比特",
+   "payload_hex": "e87cef65e825e7cf"
+  },
+  {
+   "offset": "0x9276",
+   "text": "扎古1",
+   "payload_hex": "e84be84deff7"
+  },
+  {
+   "offset": "0x927D",
+   "text": "扎古2F",
+   "payload_hex": "e84be84def5feca5"
+  },
+  {
+   "offset": "0x9286",
+   "text": "扎古2FZ",
+   "payload_hex": "e84be84def5feca5eeda"
+  },
+  {
+   "offset": "0x9291",
+   "text": "火箭炮",
+   "payload_hex": "e8daec32e95a"
+  },
+  {
+   "offset": "0x9298",
+   "text": "扎古3",
+   "payload_hex": "e84be84def60"
+  },
+  {
+   "offset": "0x929F",
+   "text": "扎古3改",
+   "payload_hex": "e84be84def60e9f0"
+  },
+  {
+   "offset": "0x92A8",
+   "text": "沙扎比",
+   "payload_hex": "eb0ce84be825"
+  },
+  {
+   "offset": "0x92AF",
+   "text": "光束散弹枪",
+   "payload_hex": "e83de895ef68e946eaae"
+  },
+  {
+   "offset": "0x92BA",
+   "text": "火神炮",
+   "payload_hex": "e8dae9aae95a"
+  },
+  {
+   "offset": "0x92C1",
+   "text": "赞斯派恩",
+   "payload_hex": "ec3ee7c8e985e7ee"
+  },
+  {
+   "offset": "0x92CA",
+   "text": "闪光比特",
+   "payload_hex": "ea44e83de825e7cf"
+  },
+  {
+   "offset": "0x92D3",
+   "text": "吉·欧",
+   "payload_hex": "e7d9ef4beb91"
+  },
+  {
+   "offset": "0x92DA",
+   "text": "副机械臂",
+   "payload_hex": "ecb6e7e4eb90ee92"
+  },
+  {
+   "offset": "0x92E3",
+   "text": "杰刚",
+   "payload_hex": "e8ebe8bc"
+  },
+  {
+   "offset": "0x92E8",
+   "text": "吉翁号",
+   "payload_hex": "e7d9ee88e833"
+  },
+  {
+   "offset": "0x92EF",
+   "text": "阳电子炮",
+   "payload_hex": "eb72ead3e886e95a"
+  },
+  {
+   "offset": "0x92F8",
+   "text": "吉翁号头部",
+   "payload_hex": "e7d9ee88e833e92eef70"
+  },
+  {
+   "offset": "0x9303",
+   "text": "西斯库德",
+   "payload_hex": "e7f8e7c8e9b3e82c"
+  },
+  {
+   "offset": "0x930C",
+   "text": "{SLOT:2291}游炮",
+   "payload_hex": "e813ea94e95a"
+  },
+  {
+   "offset": "0x9313",
+   "text": "西斯库德／形态1",
+   "payload_hex": "e7f8e7c8e9b3e82ce06bec67e99402"
+  },
+  {
+   "offset": "0x9323",
+   "text": "攻击型2",
+   "payload_hex": "ef67e7cce977ef5f"
+  },
+  {
+   "offset": "0x932C",
+   "text": "吉姆",
+   "payload_hex": "e7d9e823"
+  },
+  {
+   "offset": "0x9331",
+   "text": "光束喷枪",
+   "payload_hex": "e83de895edf9eaae"
+  },
+  {
+   "offset": "0x933A",
+   "text": "吉姆2",
+   "payload_hex": "e7d9e823ef5f"
+  },
+  {
+   "offset": "0x9341",
+   "text": "吉姆3",
+   "payload_hex": "e7d9e823ef60"
+  },
+  {
+   "offset": "0x9348",
+   "text": "吉姆改",
+   "payload_hex": "e7d9e823e9f0"
+  },
+  {
+   "offset": "0x934F",
+   "text": "吉姆步枪",
+   "payload_hex": "e7d9e823ea93eaae"
+  },
+  {
+   "offset": "0x9358",
+   "text": "吉姆加农2",
+   "payload_hex": "e7d9e823e854ef7aef5f"
+  },
+  {
+   "offset": "0x9363",
+   "text": "吉姆指挥官",
+   "payload_hex": "e7d9e823e8c0e949ef92"
+  },
+  {
+   "offset": "0x936E",
+   "text": "夏亚勇士",
+   "payload_hex": "ef37e7d6eaddef64"
+  },
+  {
+   "offset": "0x937B",
+   "text": "正义高达",
+   "payload_hex": "ef3be8cee812ef2b"
+  },
+  {
+   "offset": "0x9384",
+   "text": "福提斯",
+   "payload_hex": "ea7ce821e7c8"
+  },
+  {
+   "offset": "0x938B",
+   "text": "先锋女王号",
+   "payload_hex": "ef8be967efade884e833"
+  },
+  {
+   "offset": "0x9396",
+   "text": "金恩",
+   "payload_hex": "e902e7ee"
+  },
+  {
+   "offset": "0x939B",
+   "text": "重突击机",
+   "payload_hex": "e8a1e8b6e7cce7e4"
+  },
+  {
+   "offset": "0x93A4",
+   "text": "重斩刀",
+   "payload_hex": "e8a1ed71ed25"
+  },
+  {
+   "offset": "0x93AB",
+   "text": "3连诱导弹",
+   "payload_hex": "ef60e86eeb44ea4be946"
+  },
+  {
+   "offset": "0x93B6",
+   "text": "超越高达",
+   "payload_hex": "eaf6ea57e812ef2b"
+  },
+  {
+   "offset": "0x93BF",
+   "text": "斯魔／金色型",
+   "payload_hex": "e7c8e8d8efafe902e89fe977"
+  },
+  {
+   "offset": "0x93CC",
+   "text": "热能ヨ",
+   "payload_hex": "ead1e7c6eef1"
+  },
+  {
+   "offset": "0x93D3",
+   "text": "I力场剑",
+   "payload_hex": "ef62efb0e876ecb3"
+  },
+  {
+   "offset": "0x93DC",
+   "text": "斯摩／银色型",
+   "payload_hex": "e7c8ee35efafef7ee89fe977"
+  },
+  {
+   "offset": "0x93E9",
+   "text": "赛克艾恩／重装1",
+   "payload_hex": "ebf3e7d5e8d6e7eeefafe8a1e98feff7"
+  },
+  {
+   "offset": "0x93FA",
+   "text": "市民",
+   "payload_hex": "ebc3ef38"
+  },
+  {
+   "offset": "0x9400",
+   "text": "手雷",
+   "payload_hex": "ef66e8af"
+  },
+  {
+   "offset": "0x9405",
+   "text": "赛克艾恩／重装2",
+   "payload_hex": "ebf3e7d5e8d6e7eeefafe8a1e98fef5f"
+  },
+  {
+   "offset": "0x9416",
+   "text": "司令",
+   "payload_hex": "eafee94e"
+  },
+  {
+   "offset": "0x941C",
+   "text": "连射型智能枪",
+   "payload_hex": "e86eef65e977ec74e7c6eaae"
+  },
+  {
+   "offset": "0x9429",
+   "text": "赛克·兹瓦",
+   "payload_hex": "ebf3e7d5ef4be856e99f"
+  },
+  {
+   "offset": "0x9434",
+   "text": "TurnX",
+   "payload_hex": "eed6ef7feedfef80eed9"
+  },
+  {
+   "offset": "0x943F",
+   "text": "圧断破碎机械手",
+   "payload_hex": "eef7e982ef6debe0e7e4eb90ef66"
+  },
+  {
+   "offset": "0x944E",
+   "text": "血色围城",
+   "payload_hex": "e9f6e89fe9deed45"
+  },
+  {
+   "offset": "0x9457",
+   "text": "TurnX月光蝶",
+   "payload_hex": "eed6ef7feedfef80eed9e850e83dea03"
+  },
+  {
+   "offset": "0x9468",
+   "text": "拉迪修号",
+   "payload_hex": "e7c2ea11e9b0e833"
+  },
+  {
+   "offset": "0x9471",
+   "text": "迪比尼达多",
+   "payload_hex": "ea11e825e896ef2be7e9"
+  },
+  {
+   "offset": "0x9615",
+   "text": "伤害耐性",
+   "payload_hex": "e8f9e988ecfbe951"
+  },
+  {
+   "offset": "0x961E",
+   "text": "伤害耐性(强)",
+   "payload_hex": "e8f9e988ecfbe9517de8ad7e"
+  },
+  {
+   "offset": "0x962B",
+   "text": "海盗",
+   "payload_hex": "e91be9f3"
+  },
+  {
+   "offset": "0x9630",
+   "text": "强化人间·",
+   "payload_hex": "e8ade9a5efb2e8fc04"
+  },
+  {
+   "offset": "0x963A",
+   "text": "强化人间〜",
+   "payload_hex": "e8ade9a5efb2e8fce003"
+  },
+  {
+   "offset": "0x9645",
+   "text": "强化人间。",
+   "payload_hex": "e8ade9a5efb2e8fc03"
+  },
+  {
+   "offset": "0x964F",
+   "text": "并列预测",
+   "payload_hex": "e957e8b5ea5aeace"
+  },
+  {
+   "offset": "0x9658",
+   "text": "D」细胞",
+   "payload_hex": "05e00deb9aefab"
+  },
+  {
+   "offset": "0x9660",
+   "text": "间接命中加成",
+   "payload_hex": "e8fcefcee853ef4ee854e837"
+  },
+  {
+   "offset": "0x966D",
+   "text": "射击",
+   "payload_hex": "ef65e7cc"
+  },
+  {
+   "offset": "0x9672",
+   "text": "无ID指令",
+   "payload_hex": "e7dcf003e8c0e94e"
+  },
+  {
+   "offset": "0x967B",
+   "text": "※5等级1",
+   "payload_hex": "e012e017e826eaee02"
+  },
+  {
+   "offset": "0x9685",
+   "text": "移动力6↓",
+   "payload_hex": "ec83ef30efb0e018e014"
+  },
+  {
+   "offset": "0x9690",
+   "text": "※5等级。",
+   "payload_hex": "e012e017e826eaee03"
+  },
+  {
+   "offset": "0x969A",
+   "text": "※5等级·",
+   "payload_hex": "e012e017e826eaee04"
+  },
+  {
+   "offset": "0x96A4",
+   "text": "※5等级.",
+   "payload_hex": "e012e017e826eaeee002"
+  },
+  {
+   "offset": "0x96AF",
+   "text": "※5等级〜",
+   "payload_hex": "e012e017e826eaeee003"
+  },
+  {
+   "offset": "0x96BA",
+   "text": "调整者〜",
+   "payload_hex": "e95ce9feef6ee003"
+  },
+  {
+   "offset": "0x96C3",
+   "text": "SEED觉醒",
+   "payload_hex": "08e00be00b05e8aeeb20"
+  },
+  {
+   "offset": "0x96CE",
+   "text": "近接加成",
+   "payload_hex": "efd8efcee854e837"
+  },
+  {
+   "offset": "0x96D7",
+   "text": "精神感应共振",
+   "payload_hex": "e98de9aae87de873ea48eb5b"
+  },
+  {
+   "offset": "0x96E4",
+   "text": "光之翼",
+   "payload_hex": "e83de7cdec35"
+  },
+  {
+   "offset": "0x96EB",
+   "text": "增强人类",
+   "payload_hex": "ea3de8adefb2e841"
+  },
+  {
+   "offset": "0x96F4",
+   "text": "击破S↓／全队",
+   "payload_hex": "e7ccef6d08e014e06befb4e7c9"
+  },
+  {
+   "offset": "0x9702",
+   "text": "超级化",
+   "payload_hex": "eaf6eaeee9a5"
+  },
+  {
+   "offset": "0x9709",
+   "text": "生体力场",
+   "payload_hex": "ef8def4fefb0e876"
+  },
+  {
+   "offset": "0x9712",
+   "text": "击破S↓增加",
+   "payload_hex": "e7ccef6d08e014ea3de854"
+  },
+  {
+   "offset": "0x971E",
+   "text": "面罩展开",
+   "payload_hex": "e862ee84e989e7fa"
+  },
+  {
+   "offset": "0x9727",
+   "text": "回合S↓增加",
+   "payload_hex": "ef52efc008e014ea3de854"
+  },
+  {
+   "offset": "0x9733",
+   "text": "射击加成",
+   "payload_hex": "ef65e7cce854e837"
+  },
+  {
+   "offset": "0x973C",
+   "text": "攻击模式",
+   "payload_hex": "ef67e7ccea91ea26"
+  },
+  {
+   "offset": "0x9745",
+   "text": "爱之力",
+   "payload_hex": "e8d5e7cdefb0"
+  },
+  {
+   "offset": "0x974C",
+   "text": "零式系统启动",
+   "payload_hex": "eb74ea26e941e929ea3bef30"
+  },
+  {
+   "offset": "0x9759",
+   "text": "强化人间.",
+   "payload_hex": "e8ade9a5efb2e8fce002"
+  },
+  {
+   "offset": "0x9764",
+   "text": "回合S↓／全队",
+   "payload_hex": "ef52efc008e014e06befb4e7c9"
+  },
+  {
+   "offset": "0x9772",
+   "text": "东方不败",
+   "payload_hex": "e8baefb1e7b5e88f"
+  },
+  {
+   "offset": "0x977B",
+   "text": "红心之王",
+   "payload_hex": "e9e3e82de7cde884"
+  },
+  {
+   "offset": "0x9784",
+   "text": "明镜止水",
+   "payload_hex": "ef39ead7e869ebd4"
+  },
+  {
+   "offset": "0x978D",
+   "text": "全队回避加成",
+   "payload_hex": "efb4e7c9ef52efd9e854e837"
+  },
+  {
+   "offset": "0x979A",
+   "text": "爱哭」",
+   "payload_hex": "e8d5ed38ec00"
+  },
+  {
+   "offset": "0x97A1",
+   "text": "爱哭」",
+   "payload_hex": "e8d5ed38ec00"
+  },
+  {
+   "offset": "0x97A8",
+   "text": "调整者.",
+   "payload_hex": "e95ce9feef6ee002"
+  },
+  {
+   "offset": "0x97B1",
+   "text": "全队命中加成",
+   "payload_hex": "efb4e7c9e853ef4ee854e837"
+  },
+  {
+   "offset": "0x97BE",
+   "text": "战斗力增强",
+   "payload_hex": "ef28e7ffefb0ea3de8ad"
+  },
+  {
+   "offset": "0x97C9",
+   "text": "机械之子",
+   "payload_hex": "e7e4eb90e7cde886"
+  },
+  {
+   "offset": "0x97D2",
+   "text": "过载推进",
+   "payload_hex": "ef36eb1deaabe892"
+  },
+  {
+   "offset": "0x97DB",
+   "text": "运动预测",
+   "payload_hex": "e986ef30ea5aeace"
+  },
+  {
+   "offset": "0x97E4",
+   "text": "共享自我",
+   "payload_hex": "ea48ec06efb5efcc"
+  },
+  {
+   "offset": "0x97ED",
+   "text": "绝对恶运",
+   "payload_hex": "e91ce7bee7dee986"
+  },
+  {
+   "offset": "0x97F6",
+   "text": "调整者1",
+   "payload_hex": "e95ce9feef6e02"
+  },
+  {
+   "offset": "0x97FE",
+   "text": "调整者。",
+   "payload_hex": "e95ce9feef6e03"
+  },
+  {
+   "offset": "0x9806",
+   "text": "生体单元",
+   "payload_hex": "ef8def4fe918ecae"
+  },
+  {
+   "offset": "0x980F",
+   "text": "等级{01}{01}习得",
+   "payload_hex": "e826eaee0101eab6e80a"
+  },
+  {
+   "offset": "0x981A",
+   "text": "领导力",
+   "payload_hex": "ea20ea4befb0"
+  },
+  {
+   "offset": "0x9821",
+   "text": "+↓回复〜、{SLOT:2022}",
+   "payload_hex": "e00ee014ef52e9eee003e001e706"
+  },
+  {
+   "offset": "0x9830",
+   "text": "+↓回复。〜{SLOT:2022}",
+   "payload_hex": "e00ee014ef52e9ee03e003e706"
+  },
+  {
+   "offset": "0x983E",
+   "text": "暗命回应甲{SLOT:2034}",
+   "payload_hex": "e088e853ef52e873ebdbe712"
+  },
+  {
+   "offset": "0x984B",
+   "text": "自军+↓全复",
+   "payload_hex": "efb5e7e0e00ee014efb4e9ee"
+  },
+  {
+   "offset": "0x9858",
+   "text": "自军+↓回复",
+   "payload_hex": "efb5e7e0e00ee014ef52e9ee"
+  },
+  {
+   "offset": "0x9865",
+   "text": "范围+↓回复",
+   "payload_hex": "ec8ee9dee00ee014ef52e9ee"
+  },
+  {
+   "offset": "0x9872",
+   "text": "击破・防御{SLOT:2034}",
+   "payload_hex": "e7ccef6ddbe968ec68e712"
+  },
+  {
+   "offset": "0x987E",
+   "text": "反应・威力{SLOT:2034}",
+   "payload_hex": "e87ce873dbe96befb0e712"
+  },
+  {
+   "offset": "0x988A",
+   "text": "命{SLOT:2034}・行动封",
+   "payload_hex": "e853e712dbefd6ef30eb83"
+  },
+  {
+   "offset": "0x9896",
+   "text": "命中・回避{SLOT:2034}",
+   "payload_hex": "e853ef4edbef52efd9e712"
+  },
+  {
+   "offset": "0x98A2",
+   "text": "命中・威力{SLOT:2034}",
+   "payload_hex": "e853ef4edbe96befb0e712"
+  },
+  {
+   "offset": "0x98AE",
+   "text": "命中・装甲{SLOT:2034}",
+   "payload_hex": "e853ef4edbe98febdbe712"
+  },
+  {
+   "offset": "0x98BA",
+   "text": "命中{SLOT:2034}・封散",
+   "payload_hex": "e853ef4ee712dbeb83ef68"
+  },
+  {
+   "offset": "0x98C6",
+   "text": "命回{SLOT:2034}・先攻",
+   "payload_hex": "e853ef52e712dbef8bef67"
+  },
+  {
+   "offset": "0x98D2",
+   "text": "回+↓・防{SLOT:2034}",
+   "payload_hex": "ef52e00ee014dbe968e712"
+  },
+  {
+   "offset": "0x98DE",
+   "text": "回避・反应{SLOT:2034}",
+   "payload_hex": "ef52efd9dbe87ce873e712"
+  },
+  {
+   "offset": "0x98EA",
+   "text": "回避・威力{SLOT:2034}",
+   "payload_hex": "ef52efd9dbe96befb0e712"
+  },
+  {
+   "offset": "0x98F6",
+   "text": "回避・装甲{SLOT:2034}",
+   "payload_hex": "ef52efd9dbe98febdbe712"
+  },
+  {
+   "offset": "0x9902",
+   "text": "回避{SLOT:2034}・先攻",
+   "payload_hex": "ef52efd9e712dbef8bef67"
+  },
+  {
+   "offset": "0x990E",
+   "text": "威{SLOT:2034}・破防甲",
+   "payload_hex": "e96be712dbef6de968ebdb"
+  },
+  {
+   "offset": "0x991A",
+   "text": "威{SLOT:2034}{SLOT:2034}・暴击",
+   "payload_hex": "e96be712e712dbea4fe7cc"
+  },
+  {
+   "offset": "0x9926",
+   "text": "威{SLOT:2034}暴・必闪",
+   "payload_hex": "e96be712ea4fdbe860ea44"
+  },
+  {
+   "offset": "0x9932",
+   "text": "威力・回避{SLOT:2034}",
+   "payload_hex": "e96befb0dbef52efd9e712"
+  },
+  {
+   "offset": "0x993E",
+   "text": "威力・装甲{SLOT:2034}",
+   "payload_hex": "e96befb0dbe98febdbe712"
+  },
+  {
+   "offset": "0x994A",
+   "text": "威力{SLOT:2034}・先功",
+   "payload_hex": "e96befb0e712dbef8be9b1"
+  },
+  {
+   "offset": "0x9956",
+   "text": "威力{SLOT:2034}・封散",
+   "payload_hex": "e96befb0e712dbeb83ef68"
+  },
+  {
+   "offset": "0x9962",
+   "text": "威力{SLOT:2034}・必闪",
+   "payload_hex": "e96befb0e712dbe860ea44"
+  },
+  {
+   "offset": "0x996E",
+   "text": "威力{SLOT:2034}・暴击",
+   "payload_hex": "e96befb0e712dbea4fe7cc"
+  },
+  {
+   "offset": "0x997A",
+   "text": "威命{SLOT:2034}・先攻",
+   "payload_hex": "e96be853e712dbef8bef67"
+  },
+  {
+   "offset": "0x9986",
+   "text": "威命{SLOT:2034}・封散",
+   "payload_hex": "e96be853e712dbeb83ef68"
+  },
+  {
+   "offset": "0x9992",
+   "text": "威命{SLOT:2034}・破甲",
+   "payload_hex": "e96be853e712dbef6debdb"
+  },
+  {
+   "offset": "0x999E",
+   "text": "威命{SLOT:2034}・破防",
+   "payload_hex": "e96be853e712dbef6de968"
+  },
+  {
+   "offset": "0x99AA",
+   "text": "暗暴击・封散",
+   "payload_hex": "e088ea4fe7ccdbeb83ef68"
+  },
+  {
+   "offset": "0x99B6",
+   "text": "威甲{SLOT:2034}・破甲",
+   "payload_hex": "e96bebdbe712dbef6debdb"
+  },
+  {
+   "offset": "0x99C2",
+   "text": "援护・威力{SLOT:2034}",
+   "payload_hex": "e863e8e0dbe96befb0e712"
+  },
+  {
+   "offset": "0x99CE",
+   "text": "援护・装甲{SLOT:2034}",
+   "payload_hex": "e863e8e0dbe98febdbe712"
+  },
+  {
+   "offset": "0x99DA",
+   "text": "依动！D超・暴",
+   "payload_hex": "e08def300605e436dbea4f"
+  },
+  {
+   "offset": "0x99E6",
+   "text": "自军S↓全复",
+   "payload_hex": "efb5e7e008e014efb4e9ee"
+  },
+  {
+   "offset": "0x99F2",
+   "text": "队・+↓回复",
+   "payload_hex": "e7c9dbe00ee014ef52e9ee"
+  },
+  {
+   "offset": "0x99FE",
+   "text": "队・命回甲{SLOT:2034}",
+   "payload_hex": "e7c9dbe853ef52ebdbe712"
+  },
+  {
+   "offset": "0x9A0A",
+   "text": "队・威命反{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be853e87ce712"
+  },
+  {
+   "offset": "0x9A16",
+   "text": "队・威命回{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be853ef52e712"
+  },
+  {
+   "offset": "0x9A22",
+   "text": "队・威命应{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be853e873e712"
+  },
+  {
+   "offset": "0x9A2E",
+   "text": "队・威应甲{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be873ebdbe712"
+  },
+  {
+   "offset": "0x9A3A",
+   "text": "队・战斗力{SLOT:2034}",
+   "payload_hex": "e7c9dbef28e7ffefb0e712"
+  },
+  {
+   "offset": "0x9A46",
+   "text": "+↓全回复",
+   "payload_hex": "e00ee014efb4ef52e9ee"
+  },
+  {
+   "offset": "0x9A51",
+   "text": "！D封战力{SLOT:2034}",
+   "payload_hex": "0605eb83ef28efb0e712"
+  },
+  {
+   "offset": "0x9A5C",
+   "text": "！D封战斗{SLOT:2034}",
+   "payload_hex": "0605eb83ef28e7ffe712"
+  },
+  {
+   "offset": "0x9A67",
+   "text": "！D封暴必闪",
+   "payload_hex": "0605eb83ea4fe860ea44"
+  },
+  {
+   "offset": "0x9A72",
+   "text": "SEED发动",
+   "payload_hex": "08e00be00b05e870ef30"
+  },
+  {
+   "offset": "0x9A7D",
+   "text": "减S↓・威{SLOT:2034}",
+   "payload_hex": "ed2408e014dbe96be712"
+  },
+  {
+   "offset": "0x9A88",
+   "text": "命回应甲{SLOT:2034}",
+   "payload_hex": "e853ef52e873ebdbe712"
+  },
+  {
+   "offset": "0x9A93",
+   "text": "威！D封必闪",
+   "payload_hex": "e96b0605eb83e860ea44"
+  },
+  {
+   "offset": "0x9A9E",
+   "text": "威{SLOT:2034}・移長封",
+   "payload_hex": "e96be712dbec83c1eb83"
+  },
+  {
+   "offset": "0x9AA9",
+   "text": "威命回先攻",
+   "payload_hex": "e96be853ef52ef8bef67"
+  },
+  {
+   "offset": "0x9AB4",
+   "text": "威命回甲{SLOT:2034}",
+   "payload_hex": "e96be853ef52ebdbe712"
+  },
+  {
+   "offset": "0x9ABF",
+   "text": "威命应甲{SLOT:2034}",
+   "payload_hex": "e96be853e873ebdbe712"
+  },
+  {
+   "offset": "0x9ACA",
+   "text": "威封散破甲",
+   "payload_hex": "e96beb83ef68ef6debdb"
+  },
+  {
+   "offset": "0x9AD5",
+   "text": "威暴・消S↓",
+   "payload_hex": "e96bea4fdbe92808e014"
+  },
+  {
+   "offset": "0x9AE0",
+   "text": "威暴击必闪",
+   "payload_hex": "e96bea4fe7cce860ea44"
+  },
+  {
+   "offset": "0x9AEB",
+   "text": "威暴击破甲",
+   "payload_hex": "e96bea4fe7ccef6debdb"
+  },
+  {
+   "offset": "0x9AF6",
+   "text": "威暴击破防",
+   "payload_hex": "e96bea4fe7ccef6de968"
+  },
+  {
+   "offset": "0x9B01",
+   "text": "战斗力大升",
+   "payload_hex": "ef28e7ffefb0efa5ed2b"
+  },
+  {
+   "offset": "0x9B0C",
+   "text": "攻击力大升",
+   "payload_hex": "ef67e7ccefb0efa5ed2b"
+  },
+  {
+   "offset": "0x9B17",
+   "text": "敌反应减少",
+   "payload_hex": "e7e3e87ce873ed24efac"
+  },
+  {
+   "offset": "0x9B22",
+   "text": "敌命中减少",
+   "payload_hex": "e7e3e853ef4eed24efac"
+  },
+  {
+   "offset": "0x9B2D",
+   "text": "敌命回减少",
+   "payload_hex": "e7e3e853ef52ed24efac"
+  },
+  {
+   "offset": "0x9B38",
+   "text": "敌命回反减",
+   "payload_hex": "e7e3e853ef52e87ced24"
+  },
+  {
+   "offset": "0x9B43",
+   "text": "敌命应减少",
+   "payload_hex": "e7e3e853e873ed24efac"
+  },
+  {
+   "offset": "0x9B4E",
+   "text": "敌命甲减少",
+   "payload_hex": "e7e3e853ebdbed24efac"
+  },
+  {
+   "offset": "0x9B59",
+   "text": "敌回应减少",
+   "payload_hex": "e7e3ef52e873ed24efac"
+  },
+  {
+   "offset": "0x9B64",
+   "text": "敌回甲减少",
+   "payload_hex": "e7e3ef52ebdbed24efac"
+  },
+  {
+   "offset": "0x9B6F",
+   "text": "敌回避减少",
+   "payload_hex": "e7e3ef52efd9ed24efac"
+  },
+  {
+   "offset": "0x9B7A",
+   "text": "敌威力减少",
+   "payload_hex": "e7e3e96befb0ed24efac"
+  },
+  {
+   "offset": "0x9B85",
+   "text": "敌威命减少",
+   "payload_hex": "e7e3e96be853ed24efac"
+  },
+  {
+   "offset": "0x9B90",
+   "text": "敌威命反减",
+   "payload_hex": "e7e3e96be853e87ced24"
+  },
+  {
+   "offset": "0x9B9B",
+   "text": "敌威命回减",
+   "payload_hex": "e7e3e96be853ef52ed24"
+  },
+  {
+   "offset": "0x9BA6",
+   "text": "敌威命应减",
+   "payload_hex": "e7e3e96be853e873ed24"
+  },
+  {
+   "offset": "0x9BB1",
+   "text": "敌威回反减",
+   "payload_hex": "e7e3e96bef52e87ced24"
+  },
+  {
+   "offset": "0x9BBC",
+   "text": "敌威应减少",
+   "payload_hex": "e7e3e96be873ed24efac"
+  },
+  {
+   "offset": "0x9BC7",
+   "text": "敌威甲减少",
+   "payload_hex": "e7e3e96bebdbed24efac"
+  },
+  {
+   "offset": "0x9BD2",
+   "text": "敌威甲应减",
+   "payload_hex": "e7e3e96bebdbe873ed24"
+  },
+  {
+   "offset": "0x9BDD",
+   "text": "敌战力减少",
+   "payload_hex": "e7e3ef28efb0ed24efac"
+  },
+  {
+   "offset": "0x9BE8",
+   "text": "敌装甲减少",
+   "payload_hex": "e7e3e98febdbed24efac"
+  },
+  {
+   "offset": "0x9BF3",
+   "text": "月光蝶发动",
+   "payload_hex": "e850e83dea03e870ef30"
+  },
+  {
+   "offset": "0x9BFE",
+   "text": "破防甲必闪",
+   "payload_hex": "ef6de968ebdbe860ea44"
+  },
+  {
+   "offset": "0x9C09",
+   "text": "自军S↓・应",
+   "payload_hex": "efb5e7e008e014dbe873"
+  },
+  {
+   "offset": "0x9C14",
+   "text": "自军战力{SLOT:2034}",
+   "payload_hex": "efb5e7e0ef28efb0e712"
+  },
+  {
+   "offset": "0x9C1F",
+   "text": "芙蕾的守护",
+   "payload_hex": "e9d7e84ce7b4e8a8e8e0"
+  },
+  {
+   "offset": "0x9C2A",
+   "text": "范围命中{SLOT:2034}",
+   "payload_hex": "ec8ee9dee853ef4ee712"
+  },
+  {
+   "offset": "0x9C35",
+   "text": "范围命回{SLOT:2034}",
+   "payload_hex": "ec8ee9dee853ef52e712"
+  },
+  {
+   "offset": "0x9C40",
+   "text": "范围命甲{SLOT:2034}",
+   "payload_hex": "ec8ee9dee853ebdbe712"
+  },
+  {
+   "offset": "0x9C4B",
+   "text": "范围命防{SLOT:2034}",
+   "payload_hex": "ec8ee9dee853e968e712"
+  },
+  {
+   "offset": "0x9C56",
+   "text": "范围回甲{SLOT:2034}",
+   "payload_hex": "ec8ee9deef52ebdbe712"
+  },
+  {
+   "offset": "0x9C61",
+   "text": "范围回避{SLOT:2034}",
+   "payload_hex": "ec8ee9deef52efd9e712"
+  },
+  {
+   "offset": "0x9C6C",
+   "text": "范围威力{SLOT:2034}",
+   "payload_hex": "ec8ee9dee96befb0e712"
+  },
+  {
+   "offset": "0x9C77",
+   "text": "范围威命{SLOT:2034}",
+   "payload_hex": "ec8ee9dee96be853e712"
+  },
+  {
+   "offset": "0x9C82",
+   "text": "范围威命回",
+   "payload_hex": "ec8ee9dee96be853ef52"
+  },
+  {
+   "offset": "0x9C8D",
+   "text": "范围威命甲",
+   "payload_hex": "ec8ee9dee96be853ebdb"
+  },
+  {
+   "offset": "0x9C98",
+   "text": "范围威回{SLOT:2034}",
+   "payload_hex": "ec8ee9dee96bef52e712"
+  },
+  {
+   "offset": "0x9CA3",
+   "text": "范围装甲{SLOT:2034}",
+   "payload_hex": "ec8ee9dee98febdbe712"
+  },
+  {
+   "offset": "0x9CAE",
+   "text": "行动！D封散",
+   "payload_hex": "efd6ef300605eb83ef68"
+  },
+  {
+   "offset": "0x9CB9",
+   "text": "言动・散开封",
+   "payload_hex": "9bef30dbef68e7faeb83"
+  },
+  {
+   "offset": "0x9CC4",
+   "text": "队・S↓回复",
+   "payload_hex": "e7c9db08e014ef52e9ee"
+  },
+  {
+   "offset": "0x9CCF",
+   "text": "防御力上升",
+   "payload_hex": "e968ec68efb0ef4ced2b"
+  },
+  {
+   "offset": "0x9CDA",
+   "text": "！D封・先攻",
+   "payload_hex": "0605eb83dbef8bef67"
+  },
+  {
+   "offset": "0x9CE4",
+   "text": "！D封・威暴",
+   "payload_hex": "0605eb83dbe96bea4f"
+  },
+  {
+   "offset": "0x9CEE",
+   "text": "！D封・必闪",
+   "payload_hex": "0605eb83dbe860ea44"
+  },
+  {
+   "offset": "0x9CF8",
+   "text": "击破・先攻",
+   "payload_hex": "e7ccef6ddbef8bef67"
+  },
+  {
+   "offset": "0x9D02",
+   "text": "命{SLOT:2034}・！D封",
+   "payload_hex": "e853e712db0605eb83"
+  },
+  {
+   "offset": "0x9D0C",
+   "text": "命{SLOT:2034}・破甲",
+   "payload_hex": "e853e712dbef6debdb"
+  },
+  {
+   "offset": "0x9D16",
+   "text": "命{SLOT:2034}・破防",
+   "payload_hex": "e853e712dbef6de968"
+  },
+  {
+   "offset": "0x9D20",
+   "text": "威・命{SLOT:2034}{SLOT:2034}",
+   "payload_hex": "e96bdbe853e712e712"
+  },
+  {
+   "offset": "0x9D2A",
+   "text": "威{SLOT:2034}・击破",
+   "payload_hex": "e96be712dbe7ccef6d"
+  },
+  {
+   "offset": "0x9D34",
+   "text": "威{SLOT:2034}・暴击",
+   "payload_hex": "e96be712dbea4fe7cc"
+  },
+  {
+   "offset": "0x9D3E",
+   "text": "威{SLOT:2034}・破防",
+   "payload_hex": "e96be712dbef6de968"
+  },
+  {
+   "offset": "0x9D48",
+   "text": "威命・封散",
+   "payload_hex": "e96be853dbeb83ef68"
+  },
+  {
+   "offset": "0x9D52",
+   "text": "威命・必闪",
+   "payload_hex": "e96be853dbe860ea44"
+  },
+  {
+   "offset": "0x9D5C",
+   "text": "援护・必闪",
+   "payload_hex": "e863e8e0dbe860ea44"
+  },
+  {
+   "offset": "0x9D66",
+   "text": "暴击・必闪",
+   "payload_hex": "ea4fe7ccdbe860ea44"
+  },
+  {
+   "offset": "0x9D70",
+   "text": "暴击・放水",
+   "payload_hex": "ea4fe7ccdbe86cebd4"
+  },
+  {
+   "offset": "0x9D7A",
+   "text": "破防・暴击",
+   "payload_hex": "ef6de968dbea4fe7cc"
+  },
+  {
+   "offset": "0x9D84",
+   "text": "移动・！D封",
+   "payload_hex": "ec83ef30db0605eb83"
+  },
+  {
+   "offset": "0x9D8E",
+   "text": "队・全回复",
+   "payload_hex": "e7c9dbefb4ef52e9ee"
+  },
+  {
+   "offset": "0x9D98",
+   "text": "队・命中{SLOT:2034}",
+   "payload_hex": "e7c9dbe853ef4ee712"
+  },
+  {
+   "offset": "0x9DA2",
+   "text": "队・命回{SLOT:2034}",
+   "payload_hex": "e7c9dbe853ef52e712"
+  },
+  {
+   "offset": "0x9DAC",
+   "text": "队・命应{SLOT:2034}",
+   "payload_hex": "e7c9dbe853e873e712"
+  },
+  {
+   "offset": "0x9DB6",
+   "text": "队・回甲{SLOT:2034}",
+   "payload_hex": "e7c9dbef52ebdbe712"
+  },
+  {
+   "offset": "0x9DC0",
+   "text": "队・回避{SLOT:2034}",
+   "payload_hex": "e7c9dbef52efd9e712"
+  },
+  {
+   "offset": "0x9DCA",
+   "text": "队・威力{SLOT:2034}",
+   "payload_hex": "e7c9dbe96befb0e712"
+  },
+  {
+   "offset": "0x9DD4",
+   "text": "队・威命{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be853e712"
+  },
+  {
+   "offset": "0x9DDE",
+   "text": "队・威应{SLOT:2034}",
+   "payload_hex": "e7c9dbe96be873e712"
+  },
+  {
+   "offset": "0x9DE8",
+   "text": "人格变化",
+   "payload_hex": "efb2e824e955e9a5"
+  },
+  {
+   "offset": "0x9DF1",
+   "text": "伤害减轻",
+   "payload_hex": "e8f9e988ed24e990"
+  },
+  {
+   "offset": "0x9DFA",
+   "text": "先制攻击",
+   "payload_hex": "ef8be8deef67e7cc"
+  },
+  {
+   "offset": "0x9E03",
+   "text": "卫星展开",
+   "payload_hex": "e9b2ef69e989e7fa"
+  },
+  {
+   "offset": "0x9E0C",
+   "text": "反应上升",
+   "payload_hex": "e87ce873ef4ced2b"
+  },
+  {
+   "offset": "0x9E15",
+   "text": "命中上升",
+   "payload_hex": "e853ef4eef4ced2b"
+  },
+  {
+   "offset": "0x9E1E",
+   "text": "命回应{SLOT:2034}",
+   "payload_hex": "e853ef52e873e712"
+  },
+  {
+   "offset": "0x9E27",
+   "text": "命回甲{SLOT:2034}",
+   "payload_hex": "e853ef52ebdbe712"
+  },
+  {
+   "offset": "0x9E30",
+   "text": "回避上升",
+   "payload_hex": "ef52efd9ef4ced2b"
+  },
+  {
+   "offset": "0x9E39",
+   "text": "威力上升",
+   "payload_hex": "e96befb0ef4ced2b"
+  },
+  {
+   "offset": "0x9E42",
+   "text": "威命回{SLOT:2034}",
+   "payload_hex": "e96be853ef52e712"
+  },
+  {
+   "offset": "0x9E4B",
+   "text": "威命甲{SLOT:2034}",
+   "payload_hex": "e96be853ebdbe712"
+  },
+  {
+   "offset": "0x9E54",
+   "text": "威应甲{SLOT:2034}",
+   "payload_hex": "e96be873ebdbe712"
+  },
+  {
+   "offset": "0x9E5D",
+   "text": "强制散开",
+   "payload_hex": "e8ade8deef68e7fa"
+  },
+  {
+   "offset": "0x9E66",
+   "text": "微波收信",
+   "payload_hex": "eb58e9a8e926e90f"
+  },
+  {
+   "offset": "0x9E6F",
+   "text": "捕获率{SLOT:2034}",
+   "payload_hex": "efcde9d8e9e1e712"
+  },
+  {
+   "offset": "0x9E78",
+   "text": "敌威命减",
+   "payload_hex": "e7e3e96be853ed24"
+  },
+  {
+   "offset": "0x9E81",
+   "text": "敌威回减",
+   "payload_hex": "e7e3e96bef52ed24"
+  },
+  {
+   "offset": "0x9E8A",
+   "text": "散开封印",
+   "payload_hex": "ef68e7faeb83ec4f"
+  },
+  {
+   "offset": "0x9E93",
+   "text": "明镜止水",
+   "payload_hex": "ef39ead7e869ebd4"
+  },
+  {
+   "offset": "0x9E9C",
+   "text": "舍身攻击",
+   "payload_hex": "eb17e88def67e7cc"
+  },
+  {
+   "offset": "0x9EA5",
+   "text": "行动封印",
+   "payload_hex": "efd6ef30eb83ec4f"
+  },
+  {
+   "offset": "0x9EAE",
+   "text": "装甲上升",
+   "payload_hex": "e98febdbef4ced2b"
+  },
+  {
+   "offset": "0x9EB7",
+   "text": "S↓消去",
+   "payload_hex": "08e014e928e7eb"
+  },
+  {
+   "offset": "0x9EBF",
+   "text": "威・破甲",
+   "payload_hex": "e96bdbef6debdb"
+  },
+  {
+   "offset": "0x9EC7",
+   "text": "！D消去",
+   "payload_hex": "0605e928e7eb"
+  },
+  {
+   "offset": "0x9ECE",
+   "text": "无效果",
+   "payload_hex": "e7dcea8fe871"
+  },
+  {
+   "offset": "0x9ED5",
+   "text": "击破",
+   "payload_hex": "e7ccef6d"
+  },
+  {
+   "offset": "0x9EDA",
+   "text": "必闪",
+   "payload_hex": "e860ea44"
+  },
+  {
+   "offset": "0x9EDF",
+   "text": "援护",
+   "payload_hex": "e863e8e0"
+  },
+  {
+   "offset": "0x9EE4",
+   "text": "放水",
+   "payload_hex": "e86cebd4"
+  },
+  {
+   "offset": "0x9EE9",
+   "text": "破防",
+   "payload_hex": "ef6de968"
+  },
+  {
+   "offset": "0xA030",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA04C",
+   "text": "（效果）命中率+40%·攻击+40%",
+   "payload_hex": "ef8eea8fe871ef8fe853ef4ee9e1ef5eea9be998ead9ef4bef67e7ccef5eea9be998ead9"
+  },
+  {
+   "offset": "0xA071",
+   "text": "完全回避·破防",
+   "payload_hex": "e87eefb4ef52efd9ef4bef6de968"
+  },
+  {
+   "offset": "0xA080",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA09C",
+   "text": "（效果）命中率+20%·回避+40%",
+   "payload_hex": "ef8eea8fe871ef8fe853ef4ee9e1ef5eef5fe998ead9ef4bef52efd9ef5eea9be998ead9"
+  },
+  {
+   "offset": "0xA0C1",
+   "text": "攻击+40%",
+   "payload_hex": "ef67e7ccef5eea9be998ead9"
+  },
+  {
+   "offset": "0xA0CE",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA0EA",
+   "text": "（效果）攻击+40%·暴击·完全回避",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eea9be998ead9ef4bea4fe7ccef4be87eefb4ef52efd9"
+  },
+  {
+   "offset": "0xA10F",
+   "text": "破防·破甲",
+   "payload_hex": "ef6de968ef4bef6debdb"
+  },
+  {
+   "offset": "0xA11A",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜全队",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003bbe7c9"
+  },
+  {
+   "offset": "0xA134",
+   "text": "（效果）命中率+20%·反应+40",
+   "payload_hex": "ef8eea8fe871ef8fe853ef4ee9e1ef5eef5fe998ead9ef4be87ce873ef5eea9be998"
+  },
+  {
+   "offset": "0xA157",
+   "text": "攻击+20%",
+   "payload_hex": "ef67e7ccef5eef5fe998ead9"
+  },
+  {
+   "offset": "0xA164",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA180",
+   "text": "（效果）攻击+40%·装甲+4·破甲",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eea9be998ead9ef4be98febdbef5eea9bef4bef6debdb"
+  },
+  {
+   "offset": "0xA1A6",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA1C2",
+   "text": "（效果）攻击+40%·暴击·伤害减轻",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eea9be998ead9ef4bea4fe7ccef4be8f9e988ed24e990"
+  },
+  {
+   "offset": "0xA1E8",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA204",
+   "text": "（效果）攻击+20%·封印解开·破甲",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eef5fe998ead9ef4beb83ec4fe89de7faef4bef6debdb"
+  },
+  {
+   "offset": "0xA22A",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA246",
+   "text": "（效果）攻击+40%·暴击·破甲",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eea9be998ead9ef4bea4fe7ccef4bef6debdb"
+  },
+  {
+   "offset": "0xA268",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA284",
+   "text": "（效果）攻击+40%·破防·破甲",
+   "payload_hex": "ef8eea8fe871ef8fef67e7ccef5eea9be998ead9ef4bef6de968ef4bef6debdb"
+  },
+  {
+   "offset": "0xA2A6",
+   "text": "使？蒸件〜战斗中{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef28e7ffc00101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA2C2",
+   "text": "（效果）完全回避·破防·破甲",
+   "payload_hex": "ef8eea8fe871ef8fe87eefb4ef52efd9ef4bef6de968ef4bef6debdb"
+  },
+  {
+   "offset": "0xA2E0",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA2FB",
+   "text": "（效果）SEED发动",
+   "payload_hex": "ef8eea8fe871ef8fef9eef9fef9fef96e870ef30"
+  },
+  {
+   "offset": "0xA311",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA32C",
+   "text": "（效果）月光蝶发动",
+   "payload_hex": "ef8eea8fe871ef8fe850e83dea03e870ef30"
+  },
+  {
+   "offset": "0xA340",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA35B",
+   "text": "（效果）芙蕾的守护",
+   "payload_hex": "ef8eea8fe871ef8fe9d7e84ce7b4e8a8e8e0"
+  },
+  {
+   "offset": "0xA36F",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA38A",
+   "text": "（效果）卫星展开",
+   "payload_hex": "ef8eea8fe871ef8fe9b2ef69e989e7fa"
+  },
+  {
+   "offset": "0xA39C",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA3B7",
+   "text": "（效果）微波收信",
+   "payload_hex": "ef8eea8fe871ef8feb58e9a8e926e90f"
+  },
+  {
+   "offset": "0xA3C9",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA3E4",
+   "text": "（效果）明镜止水",
+   "payload_hex": "ef8eea8fe871ef8fef39ead7e869ebd4"
+  },
+  {
+   "offset": "0xA3F6",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA411",
+   "text": "（效果）人格变化",
+   "payload_hex": "ef8eea8fe871ef8fefb2e824e955e9a5"
+  },
+  {
+   "offset": "0xA423",
+   "text": "使？蒸件〜地图{01}{01}対城〜仅自身",
+   "payload_hex": "e27cd8e320e1d7e003ef63eb2d0101e3dfe316e003eb7aabe88d"
+  },
+  {
+   "offset": "0xA43E",
+   "text": "（效果）捕获",
+   "payload_hex": "ef8eea8fe871ef8fefcde9d8"
+  }
+ ]
+}
