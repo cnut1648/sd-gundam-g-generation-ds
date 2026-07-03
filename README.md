@@ -45,8 +45,8 @@ so a wrong input or corrupted data fails loudly, never silently.
 ## Verifying a build
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds   # static gates, seconds
-.venv/bin/python test/live/boot_smoke.py sd-gundam-g-generation-zh.nds   # emulator boot test
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds        # static gates, seconds
+.venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot test
 ```
 
 See `test/README.md` for the full test tiers (static → live emulator →

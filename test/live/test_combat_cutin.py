@@ -173,7 +173,13 @@ def main():
 
     try:
         hz.boot_to_title(emu, rom)
-        hz.start_new_game(emu)
+        if not hz.preflight_input(emu, out):
+            print("input preflight failed: the environment is not accepting game input — "
+                  "no ROM verdict (exit 3)", file=sys.stderr)
+            return 3
+        emu.tap(*hz.NEWGAME_BUTTON)
+        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        time.sleep(hz.INTRO_CRAWL_S)
         deploy = hz.grind_to_deploy(emu, out, tag="g")
         if deploy is None:
             print("could not reach the deploy map (navigation flake) — rerun", file=sys.stderr)

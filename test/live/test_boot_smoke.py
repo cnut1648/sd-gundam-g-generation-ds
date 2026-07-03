@@ -139,8 +139,18 @@ def main():
             check("boot_title", False, f"no sane title frame ({ls}) — black/crash screen?")
             failed_early = True
 
-        # 2) new_game_dialogue
-        hz.start_new_game(emu)
+        # input preflight — an environment that cannot drive the game must not
+        # produce a bogus ROM verdict (see harness.preflight_input)
+        if not failed_early and not hz.preflight_input(emu, out):
+            print("  [ENV ] input preflight failed: the emulation environment is not "
+                  "accepting game input — no ROM verdict (exit 3). "
+                  "Run test_boot_render.py for the no-input render gate.", flush=True)
+            return 3
+
+        # 2) new_game_dialogue (the preflight already consumed the title screen)
+        emu.tap(*hz.NEWGAME_BUTTON)
+        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        time.sleep(hz.INTRO_CRAWL_S)
         frames = []
         for i in range(8):
             emu.key("A", pause=0.75)

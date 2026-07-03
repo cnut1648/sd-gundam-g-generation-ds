@@ -26,8 +26,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Then verify:
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds     # static gates
-.venv/bin/python test/live/boot_smoke.py sd-gundam-g-generation-zh.nds  # emulator boot
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates
+.venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot
 ```
 
 ## 2. What the build does, in order
