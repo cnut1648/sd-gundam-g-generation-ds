@@ -1,7 +1,32 @@
-# SD高达G世纪DS — 汉化构建工程
+<div align="center">
 
-**SD Gundam G Generation DS**（任天堂DS，日版）汉化版的完整独立构建系统。
-一条命令即可把日版卡带镜像转换为完整汉化 ROM，且逐字节可复现。
+# SD高达 G世代 DS · 简体中文汉化构建工程
+
+**SD Gundam G Generation DS**（任天堂 DS，日版）完整独立汉化构建系统<br>
+一条命令，把日版卡带镜像转换为完整汉化 ROM。
+
+</div>
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="figs/unit-screen.png" width="250" alt="机体 / 单位界面汉化"><br>
+      <sub><b>机体 / 单位界面</b><br>机体名 · 武器 · 特殊防御 · 特殊能力</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="figs/battle.png" width="250" alt="战斗界面汉化"><br>
+      <sub><b>战斗界面</b><br>武器 · 指令 · 驾驶员信息</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="figs/story-dialogue.png" width="250" alt="剧情关卡对话汉化"><br>
+      <sub><b>剧情关卡</b><br>过场对话 · 剧情旁白</sub>
+    </td>
+  </tr>
+</table>
+
+> 机体、武器、驾驶员、战斗、剧情、图鉴与界面——**全流程汉化**，构建结果按哈希逐项校验、可复现。
+
+## 目录结构
 
 ```
 .
@@ -11,7 +36,9 @@
 ├── data/           # 全部汉化与构建数据（名称、对话、补丁、字库……）
 ├── utils/          # 辅助库（文本编解码、关卡构建、arm9 布局、ROM 读写）
 ├── test/           # 完整测试套件：静态门禁、模拟器实机、截图、VLM 判图
-└── docs/           # 文档：构建指南、数据格式、地址表、经验教训
+├── docs/           # 文档：构建指南、数据格式、地址表、经验教训
+├── figs/           # README 用截图
+└── 攻略.html       # 交互式流程攻略（浏览器打开；隐藏要素/加入条件/开发树）
 ```
 
 ## 快速开始
@@ -28,12 +55,12 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 919eb5026501bdc757bbb304d2b02340e320a5b9  (MATCHES the shipped translation)
+[build] final ROM sha1 a7e49a7be0230d02fcb969a9c5ff30151fa69a3b  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,324,584 bytes)
 ```
 
 追加 `--pad32m 路径` 可同时输出补齐到 32 MiB 的镜像（部分烧录卡要求 2 的幂
-大小；sha1 `f6d0a65c26c43b1a699dc0af2d029faeb097c5ef`）。
+大小；sha1 `05686c7cb8f863e573ba6e0aae77ea0983ab7206`）。
 
 输入必须是 sha1 为 `12443b91297a57bcd2ace8da989c26ae635a79fd`（33,554,432
 字节）的日版卡带镜像——构建会校验它以及 `data/manifest.json` 中记录的每个
@@ -41,18 +68,32 @@ python3 -m venv .venv
 
 ## 与原版游戏的差异（除汉化外）
 
-在完整汉化之外，本版本相比日版原作仅有 **两处游戏性改动**：
+在完整汉化之外，本版本相比日版原作有 **三处游戏性改动**：
 
 1. **SP 关卡解锁条件放宽** —— 通关 24 关（24a/24b）之后进入 SP 系列关卡
    （以及后续各 SP 分支）的条件，由原版的 3～4 次索敌（自由战斗）降低为
    **只需 1 次索敌**（全部 7 处解锁判定统一修改）。
 2. **永恒号搭载数提升** —— 战舰「永恒号」的搭载量由原版的 2 机改为标准的
-   **6 机**。注意该数值为默认规格：已入手永恒号的旧存档沿用存档内既有的
-   编组槽位，新入手的才按 6 机计。
+   **6 机**（见下图「编成 · 配属」界面，每艘战舰满载 6 机）。注意该数值为
+   默认规格：已入手永恒号的旧存档沿用存档内既有的编组槽位，新入手的才按
+   6 机计。
+3. **倒X（ターンX）获得移除等级门槛** —— 第三路线 10SP：先击坠月光蝶形态
+   的金卡拉姆使「倒X」变回普通形态，再由 8 名合资格驾驶员（特列斯／杰克斯／
+   ゼロ／瑟蕾因／捷利特／松永／莱汀／西玛）之一、不组队击坠普通形态即可
+   获得「倒X」。原版额外要求该驾驶员 **等级 30 以上**，本版本移除此门槛——
+   **任意等级** 击坠即可获得（8 人共用同一段获取判定，改动一处即对全部
+   8 人生效）。
 
-两处改动均以数据形式收录并有文档记载：索敌次数见
+<div align="center">
+  <img src="figs/eternal-6units.png" width="360" alt="编成 / 配属界面：战舰满载 6 机"><br>
+  <sub><b>编成 · 配属界面</b> —— 每艘战舰可搭载 <b>6 机</b>（永恒号搭载数已由 2 提升至标准的 6）</sub>
+</div>
+
+三处改动均以数据形式收录并有文档记载：索敌次数见
 `data/patches/code_patches.json`，永恒号搭载数见 `data/names/units.json`
-（`carrier_capacity` 字段）；详情见 `docs/GAME_NOTES.md` 与
+（`carrier_capacity` 字段），倒X等级门槛见
+`data/dialogue/stages/_STG10SP.json`（`kind: "gameplay"` 的字节改动，
+偏移 `0xcecd`：`PUSH #30`→`PUSH #0`）；详情见 `docs/GAME_NOTES.md` 与
 `docs/ROM_STRUCTURE.md`。
 
 ## 校验构建结果
@@ -95,6 +136,34 @@ python3 -m venv .venv
 | `docs/LESSONS_LEARNED.md` | 弯路目录：被推翻的判断、崩溃案例及对应防护 |
 | `data/README.md` | 数据目录布局与格式速览 |
 | `test/README.md` | 各测试层级的运行方法 |
+| `攻略.html` | 交互式流程攻略（浏览器直接打开，详见下节） |
+
+## 交互式攻略
+
+`攻略.html` 是随工程附带的一份交互式流程攻略，用浏览器直接打开即可（纯离线
+单文件、无需联网）。它把三份攻略合并、并依术语库 `term_library` 校订，分为
+**路线图 · 关卡 · 角色 · 隐藏要素 · 觉醒/Hyper Burst · 设计图/改造 · 术语库**
+等页签：三条路线全关卡分支、事件/经验、隐藏机体与角色的加入条件、觉醒能力，
+以及仿游戏内的机体开发/改造系统树（真·像素原图，可交互查看机体名与改造部件
+名）；其中也标注了第三路线 10SP 获得倒X（ターンX）的 8 名合资格驾驶员
+（已按游戏数据核对）。
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="figs/walkthrough-develop.png" alt="攻略：机体开发/改造系统树"><br>
+      <sub><b>机体开发 / 改造系统树</b> · 真·像素原图，可交互</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="figs/walkthrough-stage.png" alt="攻略：关卡详情面板"><br>
+      <sub><b>关卡详情面板</b> · 我方 / 援军 / 敌方 / 攻略要点 / 隐藏加入条件</sub>
+    </td>
+  </tr>
+</table>
+
+攻略内容以 **日版原作机制** 为准；本汉化版的游戏性改动（见上文「与原版游戏的
+差异」）在重合处以本 README 为准——例如获得倒X 在本版本为 **任意等级**，
+攻略中标注的「LV30 以上」是原版条件。
 
 ## 环境要求
 
@@ -103,5 +172,4 @@ python3 -m venv .venv
 
 ## 版权说明
 
-请自行转储持有的日版卡带作为输入。本仓库仅包含汉化数据、工具与文档，
-不分发任何 ROM 镜像（`.nds` 文件已被 `.gitignore` 排除）。
+请自行转储持有的日版卡带作为输入。本仓库仅包含汉化数据、工具与文档。
