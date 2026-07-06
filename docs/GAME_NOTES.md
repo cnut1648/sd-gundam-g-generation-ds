@@ -31,7 +31,12 @@ compressed tile text, session-number chrome).
   battles down to **1**, an owner gameplay tweak). A second owner gameplay tweak lives in
   the unit master table: the Eternal (永恒号) gets the standard **6**-unit carrier capacity
   instead of its original 2 (spec value only — an existing save keeps the slot allocation it
-  was created with).
+  was created with). A third tweak is in the route-C 10SP stage script (`_STG10SP.bin`):
+  obtaining the Turn X (ターンX / 倒X) unit — awarded when one of the eight eligible pilots
+  (Treize / Zechs / Zero / Cerin / Jerid / Matsunaga / Raiden / Cima), un-squadded, downs the
+  normal-form Ghingnham — no longer requires that pilot to be **level 30+**; the shared grant
+  subroutine's `CALL get-level(api[0x2d]) ; PUSH #30 ; GE` becomes `PUSH #0` (level ≥ 0 = any
+  level) — one byte at file offset `0xcecd` — fixing all eight pilots at once.
 * **索敵 (free battle)** both levels the roster and *gates* the SP-arc transitions
   (24a→SP1a, 24b→SP1b, SP2b→SP3b, SP3a→SP4a, SP3b→SP4b, SP2b→SP4b, 11SP→SP4s).
 * **二周目 / New Game+**: clear-count ≥1 unlocks route choices that a first playthrough
