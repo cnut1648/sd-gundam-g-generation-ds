@@ -79,11 +79,23 @@ def _load_table(relpath: str) -> dict:
     return json.loads((FILES_DIR / relpath).read_text(encoding="utf-8"))
 
 
-def _record_bytes(rec: dict) -> bytes:
+# Trampoline (renderB-dispatch) text banks: the in-battle effect/command card
+# readers render one-byte codes and JP-band slots from the 8x16 JP UI font,
+# NOT the CJK atlas (atlas slot 206 = 兵, renderB 206 = 無).  Their zh strings
+# are byte-preserving NOTATION (e.g. '見'/'.' stand for renderB-meaning
+# bytes), so re-encoding them through the charmap is ambiguous by design.
+# These records therefore carry their proven bytes as zh_hex (verbatim build
+# input; zh is documentation) — enforced here.  Edits go through validating
+# appliers that obey the renderB rules (see AGENTS.md).
+BANK_SURFACE_FILES = {"1da.bin", "1db.bin", "1df.bin", "1e0.bin"}
+
+
+def _record_bytes(rec: dict, surface: str = "stage") -> bytes:
     """Encoded payload of one JSON record: zh text via the codec, or zh_hex verbatim."""
     if "zh_hex" in rec:
         return bytes.fromhex(rec["zh_hex"])
-    return text_codec.encode(rec["zh"])
+    # flat text banks tolerate 0x15-low glyph tokens (no stage-script framing)
+    return text_codec.encode(rec["zh"], allow_low15=True, surface=surface)
 
 
 def _write_padded(buf: bytearray, offset: int, payload: bytes, size: int, where: str):
@@ -95,8 +107,13 @@ def _write_padded(buf: bytearray, offset: int, payload: bytes, size: int, where:
 def _build_edits(table: dict, jp: bytes) -> bytes:
     """In-place text-bank rewrite (+ optional appended relocated record)."""
     buf = bytearray(jp)
+    is_bank = table["file"] in BANK_SURFACE_FILES
     for rec in table["edits"]:
         off = int(rec["offset"], 16)
+        if is_bank and "zh_hex" not in rec:
+            raise ValueError(
+                f"{table['file']} edit @{rec['offset']}: trampoline-surface record "
+                "must carry zh_hex (byte-preserving; see BANK_SURFACE_FILES note)")
         _write_padded(buf, off, _record_bytes(rec), rec["size"],
                       f"{table['file']} edit @{rec['offset']}")
     append = table.get("append")
@@ -160,11 +177,13 @@ def _expected_sha1(name: str) -> str | None:
     return manifest.get("components", {}).get(name)
 
 
-def build_data_file(name: str, jp_bytes: bytes) -> bytes:
+def build_data_file(name: str, jp_bytes: bytes, verify: bool = True) -> bytes:
     """Rebuild translated data file ``name`` from its Japanese original bytes.
 
     Deterministic and self-checking: the result is asserted against the
-    component sha1 recorded in data/manifest.json (raises on any mismatch)."""
+    component sha1 recorded in data/manifest.json (raises on any mismatch,
+    unless ``verify`` is False — the development mode used while editing
+    translations, mirroring build.py --skip-verify)."""
     relpath = DATA_FILE_TABLES.get(name)
     if relpath is None:
         raise KeyError(f"no data-file table registered for {name!r}")
@@ -172,11 +191,12 @@ def build_data_file(name: str, jp_bytes: bytes) -> bytes:
     if table["file"] != name:
         raise ValueError(f"{relpath} rebuilds {table['file']!r}, not {name!r}")
     out = _BUILDERS[table["format"]](table, jp_bytes)
-    want = _expected_sha1(name)
-    got = hashlib.sha1(out).hexdigest()
-    if want is not None and got != want:
-        raise AssertionError(
-            f"{name}: rebuilt component sha1 {got} != manifest {want} — the data under "
-            f"data/files/{relpath} (or data/charmap.json) no longer reproduces the "
-            "expected component")
+    if verify:
+        want = _expected_sha1(name)
+        got = hashlib.sha1(out).hexdigest()
+        if want is not None and got != want:
+            raise AssertionError(
+                f"{name}: rebuilt component sha1 {got} != manifest {want} — the data under "
+                f"data/files/{relpath} (or data/charmap.json) no longer reproduces the "
+                "expected component")
     return out

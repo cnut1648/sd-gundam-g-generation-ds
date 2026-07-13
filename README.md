@@ -26,6 +26,37 @@
 
 > 机体、武器、驾驶员、战斗、剧情、图鉴与界面——**全流程汉化**，构建结果按哈希逐项校验、可复现。
 
+## v1.1 更新
+
+* **全文本审校** —— 对话、战斗喊话、ID 技能名与名台词、机体/武器/人物名、
+  图鉴全面复核：名台词恢复社区通行完整台词，清除截断式技能名与残留假名，
+  译名按大陆主流用法统一 40 余项（布莱特、格雷米、杜加奇、克莱因、捷多、
+  亚洲尊者、零式系统、D·特里埃尔 等）。
+* **字库重制与补全** —— 12×12 中文字库由 **zpix（最像素）** 全面更换为
+  **文泉驿点阵宋体（WenQuanYi Bitmap Song，WQY）**（两者均为开源字体），
+  并新增 60+ 简体字形（桥、楼、渣、滓、榴、薙、爵、畅、嫣、飙、β 等），
+  全部文本零改写措辞直译落地；修复名牌/武器页的字形错乱
+  （多佛炮、光束薙刀、加里波第β 等）。
+* **UI 渲染对齐** —— ID/机体/武器页面的中文字形基线与日版逐像素对齐
+  （下移 3px），指挥/NT 等级数字与文字同基线，不再浮字或下沉。
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="figs/v1.1-dialogue.png" width="250" alt="v1.1 新字库：剧情对话"><br>
+      <sub><b>剧情对话</b><br>关卡过场对话（WQY 新字库）</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="figs/v1.1-id-page.png" width="250" alt="v1.1 新字库：ID指令页面"><br>
+      <sub><b>ID指令页面</b><br>指令名 · 使用条件 · 效果</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="figs/v1.1-quote.png" width="250" alt="v1.1 新字库：必杀技名台词"><br>
+      <sub><b>必杀技名台词</b><br>战斗过场 · 驾驶员名台词</sub>
+    </td>
+  </tr>
+</table>
+
 ## 目录结构
 
 ```
@@ -55,12 +86,12 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 a7e49a7be0230d02fcb969a9c5ff30151fa69a3b  (MATCHES the shipped translation)
+[build] final ROM sha1 d3bb7bfe3c7c445ae8edbb1e98991874a4fe660b  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,324,584 bytes)
 ```
 
 追加 `--pad32m 路径` 可同时输出补齐到 32 MiB 的镜像（部分烧录卡要求 2 的幂
-大小；sha1 `05686c7cb8f863e573ba6e0aae77ea0983ab7206`）。
+大小；sha1 `0950ce95b7d1b8058e3afc8cec4dc5a1f7127c0a`）。
 
 输入必须是 sha1 为 `12443b91297a57bcd2ace8da989c26ae635a79fd`（33,554,432
 字节）的日版卡带镜像——构建会校验它以及 `data/manifest.json` 中记录的每个

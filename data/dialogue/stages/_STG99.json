@@ -9,9 +9,9 @@
    "kind": "dialogue",
    "speaker": "(narration)",
    "jp_text": "地球から最も遠いコロニー……{00}サイド3は{00}地球連邦政府に対して{00}独立戦争を挑んだ",
-   "zh_text": "在距离地球最远的那座殖民地……SID{00}E3、向地球联邦政府发动了独立战争",
+   "zh_text": "在距离地球最远的殖民地……{00}SID{SLOT:4223}3向地球联邦政府发动独立战争",
    "jp_hex": "15f0101b46f929e0c517f09b090900f182103800f010f01ef3a334e3df232f00f2c7f0704ce42e4d2b0000",
-   "zh_hex": "15ef29ea0fe901ef63efd3e8c5e94ce7b4e7b7ebc4e8a9ef38ef630909ef9eef62ef9600ef9fef6002efc1ef63efd3ef2eefaaea68ea60e870ef30e7bae8eee86bef28e85200000000"
+   "zh_hex": "15ef29ea0fe901bf95e8c5e94ce7b4e8a9ef38bf090900141211ef9f109dbf95ef2ed1ea68ea60e870ef30e8eee86bef28e85200000000000000000000000000000000000000000000"
   },
   {
    "jp_offset": "0x15f3",
@@ -49,9 +49,9 @@
    "kind": "dialogue",
    "speaker": "扎夫特精英士官",
    "jp_text": "ジェネシスα、集光用ミラー展開",
-   "zh_text": "创世纪、聚光镜面展开",
+   "zh_text": "创世纪{SLOT:344}、聚光镜展开",
    "jp_hex": "15f076e07802e2d5e211d8f3dbf1ce0000",
-   "zh_hex": "15e893e83ceb9902ebe8e83dead7e862e989e7fa0000"
+   "zh_hex": "15e893e83ceb99e07802ebe8e83dead7e989e7fa0000"
   },
   {
    "jp_offset": "0x16f8",
@@ -59,9 +59,9 @@
    "kind": "dialogue",
    "speaker": "扎夫特精英士官",
    "jp_text": "動電圧確勉{00}ミラージュコロイドを放棄",
-   "zh_text": "工作电压确认、解除幻影胶体",
+   "zh_text": "工作电压确认、解除幻影粒子",
    "jp_hex": "15c6e467e085f37c00f3dbf7d35c84506c4cf3600000",
-   "zh_hex": "15eae4ef2fead3e992e88ce8a002e89de974ed53ea8eef1aef4f00000000"
+   "zh_hex": "15eae4ef2fead3e992e88ce8a002e89de974ed53ea8eec84e88600000000"
   },
   {
    "jp_offset": "0x172f",
@@ -69,9 +69,9 @@
    "kind": "dialogue",
    "speaker": "ザフト国我",
    "jp_text": "Nジャマーキャンセラー起動{00}カートリッジに接続",
-   "zh_text": "N干扰消除器启动、能源接续完毕",
+   "zh_text": "N干扰消除器启动、能源连接完毕",
    "jp_hex": "15e025f654f35c00f1a06bf77e6034fcdf0000",
-   "zh_hex": "15eed3e8d3ebc7e928e974e8c3ea3bef3002e7c6ebd6efcee9ade87eea2c000000"
+   "zh_hex": "15eed3e8d3ebc7e928e974e8c3ea3bef3002e7c6ebd6e86eb7e87eea2c00000000"
   },
   {
    "jp_offset": "0x1811",
@@ -99,9 +99,9 @@
    "kind": "dialogue",
    "speaker": "帕特里克·萨拉",
    "jp_text": "この一撃が、我らコーディネイターの{00}創世の光とならんことを！！",
-   "zh_text": "愿这一击、化作我等调整者的创世之光！{00}！",
+   "zh_text": "愿这一击、化作我等调整者的{00}创世之光！！",
    "jp_hex": "15f005f3161c02f0b4f164f2123700e3a6e35a37e2113133464df0024c06060000",
-   "zh_hex": "15e961e7b9efb6e7cc02e9a5ef2fefcce826e95ce9feef6ee7b4e893e83ce7cde83def9700ef9700000000"
+   "zh_hex": "15e961e7b987e7cc02e9a5ef2f8be826e95ce9feade7b400e893e83ce7cde83d0606000000000000000000"
   },
   {
    "jp_offset": "0x18c1",
@@ -149,9 +149,9 @@
    "kind": "dialogue",
    "speaker": "扎夫特精英士官",
    "jp_text": "ジェネシスα、集光用ミラー展開",
-   "zh_text": "创世纪、聚光镜面展开",
+   "zh_text": "创世纪{SLOT:344}、聚光镜展开",
    "jp_hex": "15f076e07802e2d5e211d8f3dbf1ce0000",
-   "zh_hex": "15e893e83ceb9902ebe8e83dead7e862e989e7fa0000"
+   "zh_hex": "15e893e83ceb99e07802ebe8e83dead7e989e7fa0000"
   },
   {
    "jp_offset": "0x344c",
@@ -159,9 +159,9 @@
    "kind": "dialogue",
    "speaker": "扎夫特精英士官",
    "jp_text": "動電圧確勉{00}ミラージュコロイドを放棄",
-   "zh_text": "工作电压确认、解除幻影胶体",
+   "zh_text": "工作电压确认、解除幻影粒子",
    "jp_hex": "15c6e467e085f37c00f3dbf7d35c84506c4cf3600000",
-   "zh_hex": "15eae4ef2fead3e992e88ce8a002e89de974ed53ea8eef1aef4f00000000"
+   "zh_hex": "15eae4ef2fead3e992e88ce8a002e89de974ed53ea8eec84e88600000000"
   },
   {
    "jp_offset": "0x3483",
@@ -169,9 +169,9 @@
    "kind": "dialogue",
    "speaker": "ザフト国我",
    "jp_text": "Nジャマーキャンセラー起動{00}カートリッジに接続",
-   "zh_text": "N干扰消除器启动、能源接续完毕",
+   "zh_text": "N干扰消除器启动、能源连接完毕",
    "jp_hex": "15e025f654f35c00f1a06bf77e6034fcdf0000",
-   "zh_hex": "15eed3e8d3ebc7e928e974e8c3ea3bef3002e7c6ebd6efcee9ade87eea2c000000"
+   "zh_hex": "15eed3e8d3ebc7e928e974e8c3ea3bef3002e7c6ebd6e86eb7e87eea2c00000000"
   },
   {
    "jp_offset": "0x357c",
@@ -199,9 +199,9 @@
    "kind": "dialogue",
    "speaker": "帕特里克·萨拉",
    "jp_text": "この一撃が、我らコーディネイターの{00}創世の光とならんことを！！",
-   "zh_text": "愿这一击、化作我等调整者的创世之光！{00}！",
+   "zh_text": "愿这一击、化作我等调整者的{00}创世之光！！",
    "jp_hex": "15f005f3161c02f0b4f164f2123700e3a6e35a37e2113133464df0024c06060000",
-   "zh_hex": "15e961e7b9efb6e7cc02e9a5ef2fefcce826e95ce9feef6ee7b4e893e83ce7cde83def9700ef9700000000"
+   "zh_hex": "15e961e7b987e7cc02e9a5ef2f8be826e95ce9feade7b400e893e83ce7cde83d0606000000000000000000"
   },
   {
    "jp_offset": "0x362e",
@@ -289,9 +289,9 @@
    "kind": "dialogue",
    "speaker": "布莱特·诺亚",
    "jp_text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
-   "zh_text": "在自由对战中选择『特殊演习』、便能与{00}他们一决高下",
+   "zh_text": "在自由对战中选择『特别演习』、便能与{00}他们一决高下",
    "jp_hex": "15f33071f3cd30e00bf0a3f472e00c4c00e39ae05af00230f0d531b918f0021cf017480000",
-   "zh_hex": "15ef29efb5e8a6e7beef28ef4ee966eaaa0ce7cfed7bea2feab60d02e8fae7c6e83200e80ce7bbefb6e8abe812ef4d00000000"
+   "zh_hex": "15ef29abe8a6e7beef28c0e966eaaa0ce7cfe7e5ea2feab60d02e8fae7c6e83200e80ce7bb87e8abe812890000000000000000"
   },
   {
    "jp_offset": "0x37ad",
@@ -329,9 +329,9 @@
    "kind": "dialogue",
    "speaker": "玛琉",
    "jp_text": "この「聞成ガンダムルート」は{00}ここで終了となります",
-   "zh_text": "这条『平成高达路线』、就到此告一段落{00}了",
+   "zh_text": "这条『平成高达路线』、{00}就到此告一段落了",
    "jp_hex": "15f005e00be52ce361f041f048fb35e00c3800f03e30f3aef395f0250000",
-   "zh_hex": "15e7b9e9d40ce887e837e812ef2be8d2e9160d02e7c5e7d7e7cae8e5efb6ea6be92a00e7ba000000000000"
+   "zh_hex": "15e7b9e9d40ce887e837e812ef2be8d2e9160d0200e7c5e7d7e7cae8e587ea6be92ae7ba00000000000000"
   },
   {
    "jp_offset": "0x3887",
@@ -369,9 +369,9 @@
    "kind": "dialogue",
    "speaker": "玛琉",
    "jp_text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
-   "zh_text": "那是与我们分头、和提坦斯及新吉翁交过{00}手的……",
+   "zh_text": "那是与我们分头作战、和提坦斯及新吉翁{00}交过手的……",
    "jp_hex": "15a8f0063138e53434f0354300f02004f00c31b92d2ff013090000",
-   "zh_hex": "15e7b7e7b6e832efcce7bbefaee92e02e7d3e821e843e7c8e9cfef8ae7d9ee88e861ef3600ef66e7b40909000000"
+   "zh_hex": "15e7b7e7b6e8328be7bbcde92eef2fef2802e7d3e821e843e7c8e9cfef8ae7d9ee8800e861ef36aee7b409090000"
   },
   {
    "jp_offset": "0x3906",
@@ -439,9 +439,9 @@
    "kind": "dialogue",
    "speaker": "娜塔尔·巴吉路",
    "jp_text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
-   "zh_text": "首先、请允许我向你一路以来出色的指挥{00}、致以由衷的敬意",
+   "zh_text": "首先、请允许我向你一路以来出色的指挥{00}致以由衷的敬意",
    "jp_hex": "15f15b3802f03ef02b3794973700f2a333e257e4c034e1c3e0924ce4fe232a170000",
-   "zh_hex": "15ef40ef8b02e83aecade8a7efccefc1e7b8efb6e8d2e7f3efcfefbee89fe7b4e8c0e9490002ea32e7f3e8a6edb3e7b4ee38ef3c000000000000"
+   "zh_hex": "15ef40b802e83aecade8a78b9de7b887e8d2e7f3d9afe89fe7b4e8c0e94900ea32e7f3e8a6edb3e7b4ee38ef3c00000000000000000000000000"
   },
   {
    "jp_offset": "0x3a24",

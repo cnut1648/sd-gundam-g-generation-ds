@@ -23,6 +23,7 @@ in-game failure the gate protects against.
   font_relocation             boot crash / unreadable text from a bad font relocation
   relocated_pointer_sanity    the off-by-N name-relocation pointer → mid-stage data abort
   charmap_font_consistency    encoding text to glyph slots the ROM font does not have
+  glyph_style_uniformity      mixed-weight 'ghost' glyphs (stroke/shadow raster grammar)
   stage_header_alignment      the stage-load black screen from a misaligned header table
   stage_file_structure        stage-file overrun / dangling pointer → load freeze
   stage_script_integrity      the press-A / mid-stage event freezes (dialogue VM desync)
@@ -151,6 +152,9 @@ class Charmap:
         self.jp_slots = {int(k): v for k, v in raw["jp_slot_chars"].items()}
         self.zh_slots = raw["two_byte_zh"]                               # char -> slot
         self.zh_rev = {v: k for k, v in raw["two_byte_zh"].items()}
+        # simplified chars minted into reclaimed JP-band slots (< 2196)
+        self.zh_minted_slots = {int(s) for s in raw["two_byte_zh"].values()
+                                if 224 <= int(s) < 2196}
         self.text_bytes = set(raw["one_byte"].values()) | {0x00}
         kana = lambda c: c is not None and any(
             "\u3040" <= ch <= "\u30ff" or "\uff65" <= ch <= "\uff9f" for ch in c)
@@ -789,6 +793,103 @@ def gate_charmap_font_consistency(rep, ctx):
                 f"{len(cm.zh_slots)} ZH + {len(cm.one_byte)} single-byte charmap codes all < {slots} font slots")
 
 
+def _atlas_bytes(a9: bytes) -> bytes | None:
+    """The 12x12 glyph atlas payload inside the built arm9 (autoload tail)."""
+    fptr = struct.unpack_from("<I", a9, DIALOGUE_FONT_PTR_OFF)[0]
+    if fptr == FONT_RAM_ORIGINAL:
+        return None                                  # unpatched JP image
+    ls = struct.unpack_from("<I", a9, MP_LIST_START_OFF)[0]
+    le = struct.unpack_from("<I", a9, MP_LIST_END_OFF)[0]
+    src = struct.unpack_from("<I", a9, 0xB14)[0] - RAM_BASE   # autoload source block
+    off = src
+    for i in range((le - ls) // 12):
+        ram, size, _bss = struct.unpack_from("<III", a9, (ls - RAM_BASE) + i * 12)
+        if ram == fptr:
+            return a9[off:off + size]
+        off += size
+    return None
+
+
+def gate_glyph_style_uniformity(rep, ctx):
+    """Every non-empty glyph in the atlas must follow the original raster
+    grammar: stroke pixels = value 1, shadow = value 2 EXACTLY equal to the
+    stroke dilated one pixel right/down/down-right (the JP drop-shadow rule,
+    verified on 2194/2194 original glyphs), and no value-3 pixels.  CJK
+    ideograph strokes must stay inside the 11x11 design box (rows/cols 0..10).
+    Violations render as flat/misaligned 'ghost' text next to correct glyphs —
+    the mixed-weight defect class."""
+    a9 = ctx["a9"]
+    atlas = _atlas_bytes(a9)
+    if atlas is None:
+        rep.add("glyph_style_uniformity", False, "no relocated atlas found in arm9")
+        return
+    cm = ctx["cm"]
+    cjk_slots = set()
+    for ch, slot in cm.zh_slots.items():
+        if len(ch) == 1 and 0x4E00 <= ord(ch) <= 0x9FFF:
+            cjk_slots.add(slot)
+    nslot = len(atlas) // GLYPH_CELL
+    bad_shadow, bad_v3, bad_box = [], [], []
+    for slot in range(nslot):
+        cell = atlas[slot * GLYPH_CELL:(slot + 1) * GLYPH_CELL]
+        stroke = [[False] * 12 for _ in range(12)]
+        shadow = [[False] * 12 for _ in range(12)]
+        empty = True
+        v3 = False
+        for i in range(144):
+            v = (cell[i // 4] >> ((i % 4) * 2)) & 3
+            if v == 0:
+                continue
+            empty = False
+            r, c = i // 12, i % 12
+            if v == 1:
+                stroke[r][c] = True
+            elif v == 2:
+                shadow[r][c] = True
+            else:
+                v3 = True
+        if empty:
+            continue
+        if v3:
+            bad_v3.append(slot)
+            continue
+        ok = True
+        for r in range(12):
+            for c in range(12):
+                want = False
+                if not stroke[r][c]:
+                    if r > 0 and stroke[r - 1][c]:
+                        want = True
+                    elif c > 0 and stroke[r][c - 1]:
+                        want = True
+                    elif r > 0 and c > 0 and stroke[r - 1][c - 1]:
+                        want = True
+                if shadow[r][c] != want:
+                    ok = False
+                    break
+            if not ok:
+                break
+        if not ok:
+            bad_shadow.append(slot)
+            continue
+        if slot in cjk_slots:
+            if any(stroke[11][c] for c in range(12)) or any(stroke[r][11] for r in range(12)):
+                bad_box.append(slot)
+    problems = []
+    if bad_shadow:
+        problems.append(f"{len(bad_shadow)} glyph(s) violate the shadow rule (first slot {bad_shadow[0]})")
+    if bad_v3:
+        problems.append(f"{len(bad_v3)} glyph(s) contain value-3 pixels (first slot {bad_v3[0]})")
+    if bad_box:
+        problems.append(f"{len(bad_box)} CJK glyph(s) stroke outside the 11x11 box (first slot {bad_box[0]})")
+    if problems:
+        rep.add("glyph_style_uniformity", False, "; ".join(problems))
+    else:
+        rep.add("glyph_style_uniformity", True,
+                f"{nslot} atlas slots: strokes+shadows all follow the JP raster grammar "
+                f"({len(cjk_slots)} ZH CJK glyphs in the 11x11 box)")
+
+
 def gate_stage_header_alignment(rep, ctx):
     """Stage-file header table slots 0x4/0x8/0x10/0x14/0x18 hold pointers the
     engine reads with 32-bit loads.  The ARM9 ROTATES an unaligned load (no fault,
@@ -1053,7 +1154,8 @@ def _decode_block_text(payload: bytes, cm: Charmap):
                 jp.append(f"<D{cc - 0xF000}>")
             else:
                 slot = cc - SLOT_DEBIAS
-                if slot >= ZH_SLOT_MIN:
+                if slot >= ZH_SLOT_MIN or slot in cm.zh_minted_slots:
+                    # minted simplified glyphs live in reclaimed JP-band slots
                     out.append(cm.zh_rev.get(slot, f"<z{slot}>"))
                 else:
                     c = cm.jp_slots.get(slot)
@@ -1108,7 +1210,12 @@ class _Tally:
         return self.kana + self.kanji
 
 
-def _classify_stream(payload: bytes, cm: Charmap):
+def _classify_stream(payload: bytes, cm: Charmap, minted_as_zh: bool = True):
+    """minted_as_zh: reclaimed JP-band slots re-registered as simplified
+    glyphs count as Chinese — TRUE for candidate-ROM scans (the atlas cell
+    now holds the zh glyph).  FALSE when scanning the JP SOURCE: there the
+    same token is original Japanese text (the mint criterion only proves
+    OUR build replaces those payloads, not that the JP ROM lacks them)."""
     kana = kanji = zh = neutral = ref = 0
     has_zh = False
     p, n = 0, len(payload)
@@ -1136,7 +1243,10 @@ def _classify_stream(payload: bytes, cm: Charmap):
                 ref += 1
             else:
                 slot = cc - SLOT_DEBIAS
-                if slot >= ZH_SLOT_MIN:
+                if slot >= ZH_SLOT_MIN or (minted_as_zh
+                                           and slot in cm.zh_minted_slots):
+                    # minted simplified glyphs live in reclaimed JP-band slots
+                    # (charmap two_byte_zh registrations below ZH_SLOT_MIN)
                     zh += 1
                     has_zh = True
                 else:
@@ -1163,14 +1273,15 @@ def _iter_blocks_bytewise(d: bytes):
             i += 1
 
 
-def _scan_coverage(rom, a9: bytes, cm: Charmap, stg_names, file_get):
+def _scan_coverage(rom, a9: bytes, cm: Charmap, stg_names, file_get,
+                   minted_as_zh: bool = True):
     dlg, alt = _Tally(), _Tally()
     for fn in stg_names:
         d = file_get(fn)
         if d is None:
             continue
         for _o, s, e in _iter_blocks_bytewise(d):
-            ka, kj, z, neu, rf, hz = _classify_stream(d[s:e], cm)
+            ka, kj, z, neu, rf, hz = _classify_stream(d[s:e], cm, minted_as_zh)
             dlg.kana += ka
             dlg.zh += z
             dlg.neutral += neu
@@ -1182,7 +1293,7 @@ def _scan_coverage(rom, a9: bytes, cm: Charmap, stg_names, file_get):
     for o in offs:
         s = UI_DICT_OFF + o
         e = a9.find(b"\x00", s)
-        ka, kj, z, neu, rf, hz = _classify_stream(a9[s:e], cm)
+        ka, kj, z, neu, rf, hz = _classify_stream(a9[s:e], cm, minted_as_zh)
         alt.kana += ka
         alt.zh += z
         alt.neutral += neu
@@ -1203,7 +1314,11 @@ def gate_translation_coverage(rep, ctx, update=False):
     A build can only ever translate MORE, never less."""
     cm = ctx["cm"]
     dlg, alt = _scan_coverage(None, ctx["a9"], cm, ctx["stg_names"], ctx["cand_file"])
-    bdlg, balt = _scan_coverage(None, ctx["jp_a9"], cm, ctx["stg_names"], ctx["jp_file"])
+    # JP source scan: minted tokens there are ORIGINAL JAPANESE (the mints
+    # only replace payloads in OUR build) — count them as kanji, keeping the
+    # residual-JP denominator honest (the 従/償 lesson)
+    bdlg, balt = _scan_coverage(None, ctx["jp_a9"], cm, ctx["stg_names"],
+                                ctx["jp_file"], minted_as_zh=False)
     J0 = bdlg.residual_jp + balt.residual_jp
     Jv = dlg.residual_jp + alt.residual_jp
     K0 = bdlg.kana + balt.kana
@@ -1667,18 +1782,27 @@ def gate_id_command_names(rep, ctx, update=False):
     base = json.loads(base_path.read_text()) if base_path.exists() else {}
     squad = base.get("id_command_squad", [48, 273, 274, 678])
 
+    # verified renderB punctuation bytes (data/renderb_charset.json): a name
+    # consisting ONLY of these is a deliberate silent/punct name (…………, ……？)
+    # — translated content, not residual Japanese
+    RB_PUNCT = {0x7C, 0xD9, 0xDB, 0xD8, 0x7A}
+
     def scan2(foff, depth=0):
         issues, has_zh = [], False
+        all_punct = az[foff] != 0
         i, n = foff, len(az)
         while i < n and az[i] != 0:
             c = az[i]
             if c < 0xE0:
+                if c not in RB_PUNCT:
+                    all_punct = False
                 i += 1
             elif c < 0xF0:
                 if i + 1 >= n:
                     issues.append(("truncated", i))
                     break
                 slot = ((c << 8) | az[i + 1]) - SLOT_DEBIAS
+                all_punct = False
                 if slot >= ZH_SLOT_MIN:
                     has_zh = True
                     if slot >= atlas_n:
@@ -1688,6 +1812,7 @@ def gate_id_command_names(rep, ctx, update=False):
                 if i + 1 >= n:
                     issues.append(("truncated", i))
                     break
+                all_punct = False
                 tok = ((c << 8) | az[i + 1]) - 0xF000
                 if UI_DICT_OFF + tok * 2 + 1 >= n:
                     issues.append(("bad_macro", i, tok))
@@ -1697,7 +1822,7 @@ def gate_id_command_names(rep, ctx, update=False):
                     issues += i2
                     has_zh = has_zh or z2
                 i += 2
-        return issues, has_zh
+        return issues, has_zh or all_punct
 
     offtab = [struct.unpack_from("<I", az, ID_CMD_DETAIL_OFFTAB + k * 4)[0] for k in range(256)]
     distinct = {}
@@ -1764,6 +1889,219 @@ def gate_id_command_names(rep, ctx, update=False):
                 f"0 garbage, squad {squad} ZH" + (" [baseline captured]" if update else ""))
 
 
+def gate_bank_onebyte_regression(rep, ctx, update=False):
+    """Trampoline text banks render one-byte codes from the renderB 8x16 JP UI
+    font whose charset differs from the atlas (atlas 206 = 兵, renderB 206 =
+    無) — the 吉翁海兵→吉翁海無 garble class.  This gate freezes, per record,
+    the set of one-byte text tokens (0x20..0xDF) a record may contain: any NEW
+    one-byte value on these surfaces fails the build.  Baseline:
+    test/golden/bank_onebyte_baseline.json (captured from a repaired state
+    whose one-byte inventory equals the JP/original-patch proven bytes)."""
+    repo = Path(__file__).resolve().parent.parent
+    surfaces = {
+        "data/arenas/battle_name_pool.json": ("entries", "payload_hex", "offset"),
+        "data/arenas/briefing_blobs.json": ("entries", "payload_hex", "offset"),
+        "data/arenas/event_text_blocks.json": ("entries", "payload_hex", "offset"),
+        "data/arenas/idcmd_detail_pool.json": ("entries", "payload_hex", "offset"),
+        "data/arenas/resident_caves.json": ("entries", "payload_hex", "offset"),
+        "data/arenas/ui_names_bank.json": ("entries", "payload_hex", "offset"),
+        "data/files/battle/ability_cards.json": ("edits", "zh_hex", "offset"),
+        "data/files/battle/command_effects.json": ("edits", "zh_hex", "offset"),
+        "data/files/battle/special_abilities.json": ("edits", "zh_hex", "offset"),
+        "data/files/battle/special_defenses.json": ("edits", "zh_hex", "offset"),
+    }
+
+    def one_bytes(hexs: str) -> list[int]:
+        b = bytes.fromhex(hexs)
+        vals, i = set(), 0
+        while i < len(b):
+            if b[i] >= 0xE0 and i + 1 < len(b):
+                i += 2
+                continue
+            if 0x20 <= b[i] <= 0xDF:
+                vals.add(b[i])
+            i += 1
+        return sorted(vals)
+
+    current: dict[str, dict[str, list[int]]] = {}
+    for rel, (list_key, hex_key, id_key) in surfaces.items():
+        doc = json.loads((repo / rel).read_text())
+        recs = {}
+        for r in doc.get(list_key, []):
+            hx = r.get(hex_key)
+            if hx:
+                recs[r[id_key]] = one_bytes(hx)
+        current[rel] = recs
+
+    base_path = GOLDEN / "bank_onebyte_baseline.json"
+    if update or not base_path.exists():
+        base_path.write_text(json.dumps(current, indent=0, sort_keys=True) + "\n")
+        rep.add("bank_onebyte_regression", True,
+                f"{sum(len(v) for v in current.values())} bank records [baseline captured]")
+        return
+    base = json.loads(base_path.read_text())
+    bad = []
+    for rel, recs in current.items():
+        brecs = base.get(rel, {})
+        for off, vals in recs.items():
+            allowed = set(brecs.get(off, []))
+            extra = [v for v in vals if v not in allowed]
+            if extra:
+                bad.append(f"{rel}@{off}: new one-byte token(s) {[hex(v) for v in extra]}")
+    if bad:
+        rep.add("bank_onebyte_regression", False,
+                f"{len(bad)} record(s) grew renderB-unsafe one-byte tokens; first: {bad[0]}")
+    else:
+        rep.add("bank_onebyte_regression", True,
+                f"{sum(len(v) for v in current.values())} bank records, "
+                "one-byte inventory within baseline on every trampoline surface")
+
+
+def gate_cutin_offset_table(rep, ctx):
+    """The 名台词 pairing gate: every arm9 cut-in quote-table entry must point
+    at an actual record start of the rebuilt 1dc.bin quote bank, the sentinel
+    entry and the resource-size word must equal the bank length.  (The table
+    is build-derived now; this gate proves the derivation against the bank
+    the game actually loads — a stale/desynced table shows the WRONG
+    character's famous quote on every cut-in.)"""
+    az = ctx["a9"]
+    bank = ctx["cand_file"]("1dc.bin")
+    spec = json.loads((Path(__file__).resolve().parent.parent /
+                       "data/ui/cutin_quote_offsets.json").read_text())
+    base = int(spec["table"]["file_offset"], 16)
+    count = spec["table"]["count"]
+    szw_off = int(spec["resource_size_word"]["file_offset"], 16)
+    starts, i = [0], 0
+    TERM = b"\x00\x03\x00\x01"
+    while True:
+        j = bank.find(TERM, i)
+        if j < 0:
+            break
+        nxt = j + 4
+        nxt += (-nxt) % 4
+        if nxt >= len(bank):
+            break
+        starts.append(nxt)
+        i = nxt
+    bad = [k for k, s in enumerate(starts)
+           if struct.unpack_from("<I", az, base + k * 4)[0] != s]
+    sentinel = struct.unpack_from("<I", az, base + (count - 1) * 4)[0]
+    szw = struct.unpack_from("<I", az, szw_off)[0]
+    fails = []
+    if bad:
+        fails.append(f"{len(bad)} stale offset(s), first index {bad[0]}")
+    if len(starts) != count - 1:
+        fails.append(f"bank has {len(starts)} records, table expects {count - 1}")
+    if sentinel != len(bank):
+        fails.append(f"sentinel {sentinel} != bank size {len(bank)}")
+    if szw != len(bank):
+        fails.append(f"resource-size word {szw} != bank size {len(bank)}")
+    if fails:
+        rep.add("cutin_offset_table", False, "; ".join(fails))
+    else:
+        rep.add("cutin_offset_table", True,
+                f"{len(starts)}/{count - 1} quote offsets + sentinel + size word all agree")
+
+
+def gate_idcmd_detail_integrity(rep, ctx):
+    """The （效果）-line gate: for EVERY entry of the ID-command detail offset
+    table, walk the record exactly like the in-battle renderer (stop at the
+    first standalone 00 00) and require that the VISIBLE part contains the
+    effect line whenever the JP original's visible part does.  Catches the
+    forged-interior-terminator class (in-place zero padding hid the effect
+    line on 159/256 detail views) — table pointers and strings can all be
+    individually intact while the panel still renders nothing."""
+    az, aj = ctx["a9"], ctx["jp_a9"]
+
+    def visible(a9, foff, limit=0x400):
+        """Bytes the renderer draws: from foff to the first standalone 00 00."""
+        out = bytearray()
+        i = 0
+        while foff + i + 1 < len(a9) and i < limit:
+            b = a9[foff + i]
+            if b >= 0xE0:
+                out += a9[foff + i:foff + i + 2]
+                i += 2
+                continue
+            if b == 0x00 and a9[foff + i + 1] == 0x00:
+                break
+            out.append(b)
+            i += 1
+        return bytes(out)
+
+    def has_effect(vis, a9):
+        """True iff the visible stream contains an intact effect header:
+        the 果 glyph token (效果/効果) — AND no token in the stream carries a
+        forbidden 0x00 low byte (a seam/garble sign: the byte-walking reader
+        would misparse it, e.g. the （官果） seam class)."""
+        found = False
+        i = 0
+        while i < len(vis):
+            if vis[i] >= 0xE0 and i + 1 < len(vis):
+                if vis[i + 1] == 0x00:
+                    return False                      # forbidden low-00 token
+                slot = ((vis[i] << 8) | vis[i + 1]) - SLOT_DEBIAS
+                ch = ctx["cm"].zh_rev.get(slot) or ctx["cm"].jp_slots.get(slot)
+                if ch == "果":
+                    found = True
+                i += 2
+            else:
+                if vis[i] >= 0xF0:
+                    # macro token: expands to the JP effect header
+                    found = True
+                i += 1
+        return found
+
+    n = missing = interior = 0
+    for k in range(256):
+        oz = struct.unpack_from("<I", az, ID_CMD_DETAIL_OFFTAB + k * 4)[0]
+        ojp = struct.unpack_from("<I", aj, ID_CMD_DETAIL_OFFTAB + k * 4)[0]
+        fz = _ram_to_file(az, ID_CMD_DETAIL_OFFTAB_RAM + oz)
+        fj = _ram_to_file(aj, ID_CMD_DETAIL_OFFTAB_RAM + ojp)
+        if fz is None or fj is None or aj[fj] == 0:
+            continue
+        n += 1
+        vj, vz = visible(aj, fj), visible(az, fz)
+        if has_effect(vj, aj) and not has_effect(vz, az):
+            missing += 1
+    if missing:
+        rep.add("idcmd_detail_integrity", False,
+                f"{missing}/{n} detail views lost their （效果） line "
+                "(forged interior 00 00 truncates the record)")
+    else:
+        rep.add("idcmd_detail_integrity", True,
+                f"{n} detail views: every JP effect line has a rendered ZH counterpart")
+
+
+def gate_offline_coverage(rep, ctx):
+    """Render EVERY text line of every surface through the offline pixel
+    oracle (test/render_oracle.py, parity-anchored to live melonDS) and fail
+    on any algorithmic defect: unknown/empty glyphs, stroke-box violations,
+    renderB kana leaking into visible bank text (garble class), style mixing.
+    Allowlist: test/golden/coverage_allowlist.json (documented artifacts)."""
+    import subprocess
+    repo = Path(__file__).resolve().parent.parent
+    out = Path("/tmp/coverage_gate")
+    r = subprocess.run(
+        [sys.executable, str(repo / "test/coverage_render.py"),
+         str(ctx["rom_path"]), "--out", str(out)],
+        capture_output=True, text=True)
+    if r.returncode not in (0,):
+        rep.add("offline_coverage", False, f"coverage runner failed: {r.stderr[-200:]}")
+        return
+    findings = json.loads((out / "findings.json").read_text())
+    allow_p = GOLDEN / "coverage_allowlist.json"
+    allow = set(json.loads(allow_p.read_text())["sources"]) if allow_p.exists() else set()
+    bad = [f for f in findings if f["source"] not in allow and not f.get("dead")]
+    tail = r.stdout.strip().splitlines()[-1] if r.stdout.strip() else ""
+    if bad:
+        rep.add("offline_coverage", False,
+                f"{len(bad)} unlisted finding(s); first: {bad[0]['source']} {bad[0]['issues'][:2]}")
+    else:
+        rep.add("offline_coverage", True,
+                f"{tail}; all findings allowlisted ({len(findings)})")
+
+
 # =============================================================================
 # runner
 # =============================================================================
@@ -1805,12 +2143,75 @@ def build_context(rom_path: Path, jp_path: Path):
     return {
         "raw": raw, "cand": cand, "jp": jp, "a9": a9, "jp_a9": jp_a9,
         "cand_file": cand_file, "jp_file": jp_file,
+        "rom_path": Path(rom_path),
         "stg_names": stage_files(jp),          # the JP file set is the authoritative list
         "cm": Charmap(),
         "atlas_slots": _atlas_slot_count(a9),
         "dialogue_jp_allow": set(allow_spec["allow"].keys()),
         "speaker_cells": {int(k): v for k, v in speaker_spec["cells"].items()},
     }
+
+
+def gate_pool_trampoline_tokens(rep, ctx):
+    """Every REFERENCED name-pool string (weapons/units/pilots/abilities/
+    id-commands via their table ptrs) renders on the TRAMPOLINE path: a
+    2-byte token with slot < 2196 draws the renderB glyph of that slot
+    number — a different character (the 多佛炮→多恩炮 garble class).  ZERO
+    JP-band 2-byte tokens are allowed in any referenced pool string.
+    (One-byte bytes are covered by bank_onebyte_regression.)"""
+    cm = ctx["cm"]
+    refs = []
+    for rel in ("names/weapons.json", "names/units.json", "names/pilots.json",
+                "names/abilities.json", "names/id_commands.json"):
+        p = REPO / "data" / rel
+        if not p.exists():
+            continue
+        doc = json.loads(p.read_text())
+        stack = [doc]
+        while stack:
+            x = stack.pop()
+            if isinstance(x, dict):
+                for k, v in x.items():
+                    if k == "ptr" and isinstance(v, str):
+                        refs.append((rel, int(v, 16)))
+                    elif isinstance(v, (dict, list)):
+                        stack.append(v)
+            elif isinstance(x, list):
+                stack.extend(x)
+    az = ctx["a9"]
+    bad = []
+    for rel, ptr in refs:
+        f = _ram_to_file(az, ptr)
+        if f is None:
+            continue
+        i, n = f, len(az)
+        while i < n - 1 and az[i] != 0:
+            c = az[i]
+            if c < 0xE0:
+                i += 1
+                continue
+            if c >= 0xF0:
+                i += 2
+                continue
+            slot = ((c << 8) | az[i + 1]) - SLOT_DEBIAS
+            # Only ZH-INTENT tokens garble: a slot registered in two_byte_zh
+            # promises the ATLAS glyph, but the trampoline draws the renderB
+            # glyph of the same number.  Original-JP tokens (jp_slot_chars
+            # identity only) draw their intended renderB glyph — correct for
+            # untranslated/intentionally-JP strings.
+            if slot < ZH_SLOT_MIN and slot in cm.zh_minted_slots:
+                ch = cm.zh_rev.get(slot) or "?"
+                bad.append((rel, f"0x{ptr:X}", slot, ch))
+            i += 2
+    if bad:
+        rel0, p0, s0, c0 = bad[0]
+        rep.add("pool_trampoline_tokens", False,
+                f"{len(bad)} referenced pool string(s) carry JP-band 2-byte tokens "
+                f"(renderB garble); e.g. {rel0} @{p0}: slot {s0} ({c0})")
+    else:
+        rep.add("pool_trampoline_tokens", True,
+                f"{len(refs)} referenced name-pool strings: 0 JP-band 2-byte tokens "
+                f"(trampoline-safe)")
 
 
 GATES = [
@@ -1823,6 +2224,7 @@ GATES = [
     gate_font_relocation,
     gate_relocated_pointer_sanity,
     gate_charmap_font_consistency,
+    gate_glyph_style_uniformity,
     gate_stage_header_alignment,
     gate_stage_file_structure,
     gate_stage_script_integrity,
@@ -1837,8 +2239,14 @@ GATES = [
     gate_label_render_consistency,
     gate_unit_weapon_names,
     gate_id_command_names,
+    gate_bank_onebyte_regression,
+    gate_pool_trampoline_tokens,
+    gate_cutin_offset_table,
+    gate_idcmd_detail_integrity,
+    gate_offline_coverage,
 ]
-RATCHET_GATES = {gate_translation_coverage, gate_unit_weapon_names, gate_id_command_names}
+RATCHET_GATES = {gate_translation_coverage, gate_unit_weapon_names, gate_id_command_names,
+                 gate_bank_onebyte_regression}
 
 
 def run_all(rom_path: Path, jp_path: Path, update=False) -> Report:
@@ -1938,6 +2346,33 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
         return bytes(d)
     expect_fail("corrupt a stage file's event control flow",
                 ["stage_script_integrity"], lambda c: mut_stg(c, corrupt_event_call))
+
+    def mut_glyph(ctx):
+        # erase the drop shadow of one ZH glyph (paint value-2 pixels to 0)
+        a = bytearray(ctx["a9"])
+        atlas = _atlas_bytes(bytes(a))
+        # find the atlas source offset again to mutate in place
+        ls = struct.unpack_from("<I", a, MP_LIST_START_OFF)[0]
+        le = struct.unpack_from("<I", a, MP_LIST_END_OFF)[0]
+        src = struct.unpack_from("<I", a, 0xB14)[0] - RAM_BASE
+        off = src
+        for i in range((le - ls) // 12):
+            ram, size, _b = struct.unpack_from("<III", a, (ls - RAM_BASE) + i * 12)
+            fptr = struct.unpack_from("<I", a, DIALOGUE_FONT_PTR_OFF)[0]
+            if ram == fptr:
+                break
+            off += size
+        # slot 2196 (first ZH glyph): strip value-2 bits
+        cell_off = off + 2196 * GLYPH_CELL
+        for k in range(GLYPH_CELL):
+            b = a[cell_off + k]
+            for p in range(4):
+                if (b >> (p * 2)) & 3 == 2:
+                    b &= ~(3 << (p * 2))
+            a[cell_off + k] = b
+        ctx["a9"] = bytes(a)
+    expect_fail("strip the drop shadow from a ZH glyph (mixed-weight ghost text)",
+                ["glyph_style_uniformity"], mut_glyph)
 
     def mut_bark(ctx):
         real = ctx["cand_file"]

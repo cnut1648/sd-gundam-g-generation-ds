@@ -220,13 +220,37 @@ def _apply_labels(img: _Image, data_dir: Path):
 
 
 def _apply_cutin_offsets(img: _Image, data_dir: Path):
+    """Write the cut-in quote offset table DERIVED from the quote bank.
+
+    The 1dc.bin quote bank is a concatenation of (header + payload +
+    terminator + pad4) records; the arm9 table holds each record's start
+    offset (index k = the k-th record, table[count-1] = total size sentinel)
+    plus a separate resource-size word.  Deriving the offsets from
+    data/files/battle/cutin_quotes.json at build time makes it IMPOSSIBLE
+    for quote edits to desynchronize the table (the 名台词-mispairing
+    regression class: the table went stale after quote records changed
+    length, so every cut-in showed the wrong character's quote)."""
+    from . import data_files, text_codec
+
     d = _load(data_dir, "ui/cutin_quote_offsets.json")
+    q = json.loads((data_dir / "files" / "battle" / "cutin_quotes.json").read_text())
+    offs, pos = [], 0
+    for g in q["groups"]:
+        offs.append(pos)
+        payload = (bytes.fromhex(g["zh_hex"]) if g.get("zh_hex")
+                   else text_codec.encode(g["zh"], allow_low15=True))
+        pos += len(bytes.fromhex(g["header"])) + len(payload)
+        pos += len(data_files.CUTIN_TERMINATOR)
+        pos += (-pos) % 4
+    offs.append(pos)                                   # size sentinel entry
     base = _i(d["table"]["file_offset"])
-    for e in d["entries"]:
-        img.put_u32(base + e["index"] * 4, _i(e["offset"]),
-                    f"cut-in quote offset {e['index']}")
+    count = d["table"]["count"]
+    if len(offs) != count:
+        raise ValueError(f"cut-in offsets: derived {len(offs)} entries, table holds {count}")
+    for k, off in enumerate(offs):
+        img.put_u32(base + k * 4, off, f"cut-in quote offset {k}")
     w = d["resource_size_word"]
-    img.put_u32(_i(w["file_offset"]), _i(w["value"]), "cut-in resource size")
+    img.put_u32(_i(w["file_offset"]), pos, "cut-in resource size")
 
 
 def _apply_resource_offsets(img: _Image, data_dir: Path):

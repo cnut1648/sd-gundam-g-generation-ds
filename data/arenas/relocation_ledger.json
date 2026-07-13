@@ -1,0 +1,4190 @@
+{
+ "_about": "Ledger of relocated (grown) name strings: each entry records the new allocation (pool/offset/ram/reserved bytes incl. the NUL) and the span it vacated. apply_idquote_fixes.py --relocate reads it to never double-allocate; the vacated spans are retired byte-exact and may only be reused via this ledger.",
+ "allocations": [
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_00.json:[1227]",
+   "ids": [
+    1225,
+    1227,
+    1230
+   ],
+   "text": "为扎夫特！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x4724",
+   "ram": "0x218A724",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3FB8",
+     "span": 7,
+     "ram": "0x20B8FB8"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_06.json:[667]",
+   "ids": [
+    667
+   ],
+   "text": "我是女人！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x3164",
+   "ram": "0x2189164",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x34BB",
+     "span": 5,
+     "ram": "0x20B84BB"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_99_relocation.json:[352, 355]",
+   "ids": [
+    352,
+    355
+   ],
+   "text": "宇宙不需要",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x316F",
+   "ram": "0x218916F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xAF1",
+     "local": 25,
+     "span": 8,
+     "ram": "0x232922A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_99_relocation.json:[499]",
+   "ids": [
+    484,
+    499
+   ],
+   "text": "光说不练",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x1BE",
+   "ram": "0x23288DE",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2EE1",
+     "span": 6,
+     "ram": "0x20B7EE1",
+     "reused_by": "zhihui_level_digits:指挥2"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[7]",
+   "ids": [
+    7
+   ],
+   "text": "我要开火了",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2728",
+   "ram": "0x2188728",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x1F25",
+     "span": 7,
+     "ram": "0x20B6F25"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[58]",
+   "ids": [
+    58
+   ],
+   "text": "太自我了！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2733",
+   "ram": "0x2188733",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x20BF",
+     "span": 5,
+     "ram": "0x20B70BF"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[86]",
+   "ids": [
+    86
+   ],
+   "text": "吸取我生命",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x273E",
+   "ram": "0x218873E",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xC69",
+     "local": 1,
+     "span": 10,
+     "ram": "0x232938A",
+     "reused_by": "chunk_200.json:[28, 31]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[105]",
+   "ids": [
+    105
+   ],
+   "text": "打仗这种事",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2749",
+   "ram": "0x2188749",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x227F",
+     "span": 9,
+     "ram": "0x20B727F"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[113]",
+   "ids": [
+    113
+   ],
+   "text": "我也感觉到",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2754",
+   "ram": "0x2188754",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x1008",
+     "local": 1,
+     "span": 10,
+     "ram": "0x2329729",
+     "reused_by": "chunk_200.json:[43]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[150]",
+   "ids": [
+    150
+   ],
+   "text": "红心A在手",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x275F",
+   "ram": "0x218875F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2404",
+     "span": 8,
+     "ram": "0x20B7404",
+     "reused_by": "chunk_203.json:[709]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[153]",
+   "ids": [
+    153
+   ],
+   "text": "赐予你力量",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x276A",
+   "ram": "0x218876A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x242A",
+     "span": 9,
+     "ram": "0x20B742A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[182]",
+   "ids": [
+    182
+   ],
+   "text": "绝不迟疑！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2775",
+   "ram": "0x2188775",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x24C2",
+     "span": 8,
+     "ram": "0x20B74C2"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[201, 207]",
+   "ids": [
+    201,
+    207
+   ],
+   "text": "歼灭！！",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x4F",
+   "ram": "0x232876F",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x796",
+     "local": 20,
+     "span": 4,
+     "ram": "0x2328ECA"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[202, 208]",
+   "ids": [
+    202,
+    208
+   ],
+   "text": "必杀！！",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x7F",
+   "ram": "0x232879F",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x84A",
+     "local": 1,
+     "span": 6,
+     "ram": "0x2328F6B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[228]",
+   "ids": [
+    228
+   ],
+   "text": "永别了！！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2780",
+   "ram": "0x2188780",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x896",
+     "local": 20,
+     "span": 8,
+     "ram": "0x2328FCA"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[234]",
+   "ids": [
+    234
+   ],
+   "text": "慌乱起来吧",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x278B",
+   "ram": "0x218878B",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x269B",
+     "span": 9,
+     "ram": "0x20B769B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[239, 245]",
+   "ids": [
+    239,
+    245
+   ],
+   "text": "蜉蝣的傲气",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x2796",
+   "ram": "0x2188796",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x10D0",
+     "local": 0,
+     "span": 10,
+     "ram": "0x23297F0",
+     "reused_by": "chunk_200.json:[108]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[243]",
+   "ids": [
+    243
+   ],
+   "text": "抛开得失！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x27A1",
+   "ram": "0x21887A1",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x26ED",
+     "span": 7,
+     "ram": "0x20B76ED"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[299]",
+   "ids": [
+    299
+   ],
+   "text": "你这家伙！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x27AC",
+   "ram": "0x21887AC",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x28A6",
+     "span": 6,
+     "ram": "0x20B78A6",
+     "reused_by": "zhihui_level_digits:指挥3"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[303]",
+   "ids": [
+    303
+   ],
+   "text": "我会做到！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x27B7",
+   "ram": "0x21887B7",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x941",
+     "local": 9,
+     "span": 7,
+     "ram": "0x232906A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[314]",
+   "ids": [
+    314
+   ],
+   "text": "活像只飞虫",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9EEE",
+   "ram": "0x218FEEE",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2906",
+     "span": 9,
+     "ram": "0x20B7906"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[322, 325]",
+   "ids": [
+    322,
+    325
+   ],
+   "text": "为骄傲而战",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9EF9",
+   "ram": "0x218FEF9",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6161",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C161",
+     "reused_by": "chunk_200.json:[134, 137, 140]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[333]",
+   "ids": [
+    333
+   ],
+   "text": "为同伴而战",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F04",
+   "ram": "0x218FF04",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6182",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C182",
+     "reused_by": "chunk_200.json:[143]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[345]",
+   "ids": [
+    345
+   ],
+   "text": "古老的事物",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F0F",
+   "ram": "0x218FF0F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x61B9",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C1B9",
+     "reused_by": "chunk_200.json:[181]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[347]",
+   "ids": [
+    347
+   ],
+   "text": "野心与妄想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F1A",
+   "ram": "0x218FF1A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2A67",
+     "span": 8,
+     "ram": "0x20B7A67"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[348]",
+   "ids": [
+    348
+   ],
+   "text": "非浪得虚名",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F25",
+   "ram": "0x218FF25",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x61CF",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C1CF",
+     "reused_by": "chunk_200.json:[227]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[367, 373]",
+   "ids": [
+    367,
+    373
+   ],
+   "text": "都不是问题",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F30",
+   "ram": "0x218FF30",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2B0B",
+     "span": 6,
+     "ram": "0x20B7B0B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[371]",
+   "ids": [
+    371
+   ],
+   "text": "为艾因大人",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F3B",
+   "ram": "0x218FF3B",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6206",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C206",
+     "reused_by": "chunk_201.json:[338, 341]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[385]",
+   "ids": [
+    385
+   ],
+   "text": "别那么心急",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F46",
+   "ram": "0x218FF46",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2BCD",
+     "span": 9,
+     "ram": "0x20B7BCD"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[402, 405]",
+   "ids": [
+    402,
+    405
+   ],
+   "text": "一切拜托了",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F51",
+   "ram": "0x218FF51",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2C7D",
+     "span": 6,
+     "ram": "0x20B7C7D"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[414]",
+   "ids": [
+    414
+   ],
+   "text": "珍贵的力量",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F5C",
+   "ram": "0x218FF5C",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2CBE",
+     "span": 6,
+     "ram": "0x20B7CBE"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[416]",
+   "ids": [
+    416
+   ],
+   "text": "赐予你力量",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F67",
+   "ram": "0x218FF67",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2CDB",
+     "span": 7,
+     "ram": "0x20B7CDB"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[421]",
+   "ids": [
+    421
+   ],
+   "text": "航道畅通！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F72",
+   "ram": "0x218FF72",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xAE5",
+     "local": 4,
+     "span": 7,
+     "ram": "0x2329209"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[465, 468]",
+   "ids": [
+    465,
+    468
+   ],
+   "text": "ECM全开",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F7D",
+   "ram": "0x218FF7D",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x62E0",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C2E0",
+     "reused_by": "chunk_201.json:[370]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[475]",
+   "ids": [
+    475
+   ],
+   "text": "但绝不认输",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F88",
+   "ram": "0x218FF88",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2E9B",
+     "span": 8,
+     "ram": "0x20B7E9B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[483, 498]",
+   "ids": [
+    483,
+    498
+   ],
+   "text": "我要上了！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F93",
+   "ram": "0x218FF93",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x630C",
+     "local": 0,
+     "span": 9,
+     "ram": "0x218C30C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[493, 496]",
+   "ids": [
+    493,
+    496
+   ],
+   "text": "因为有肉体",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9F9E",
+   "ram": "0x218FF9E",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6321",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C321",
+     "reused_by": "chunk_201.json:[397, 400]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[508]",
+   "ids": [
+    508
+   ],
+   "text": "还能战斗！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FA9",
+   "ram": "0x218FFA9",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2F9A",
+     "span": 8,
+     "ram": "0x20B7F9A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[510]",
+   "ids": [
+    510
+   ],
+   "text": "我也想赢！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FB4",
+   "ram": "0x218FFB4",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xDC8",
+     "local": 1,
+     "span": 8,
+     "ram": "0x23294E9"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[520]",
+   "ids": [
+    520
+   ],
+   "text": "你可真客气",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FBF",
+   "ram": "0x218FFBF",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2FEF",
+     "span": 8,
+     "ram": "0x20B7FEF"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[522, 525]",
+   "ids": [
+    522,
+    525
+   ],
+   "text": "我要杀了你",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FCA",
+   "ram": "0x218FFCA",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3003",
+     "span": 8,
+     "ram": "0x20B8003"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[555]",
+   "ids": [
+    555
+   ],
+   "text": "还不能坠落",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FD5",
+   "ram": "0x218FFD5",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3104",
+     "span": 9,
+     "ram": "0x20B8104"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[574]",
+   "ids": [
+    574
+   ],
+   "text": "绝不犹豫！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FE0",
+   "ram": "0x218FFE0",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x318F",
+     "span": 7,
+     "ram": "0x20B818F"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[650]",
+   "ids": [
+    650
+   ],
+   "text": "战斗吧！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x27C2",
+   "ram": "0x21887C2",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x340C",
+     "span": 5,
+     "ram": "0x20B840C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[678]",
+   "ids": [
+    678
+   ],
+   "text": "把你击落！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FEB",
+   "ram": "0x218FFEB",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x354F",
+     "span": 8,
+     "ram": "0x20B854F"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[681]",
+   "ids": [
+    681
+   ],
+   "text": "我不照手册",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x9FF6",
+   "ram": "0x218FFF6",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x650D",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C50D",
+     "reused_by": "chunk_203.json:[942]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_202.json:[690]",
+   "ids": [
+    690
+   ],
+   "text": "漂亮话拿手",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA001",
+   "ram": "0x2190001",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6523",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C523",
+     "reused_by": "chunk_204.json:[1043]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[738]",
+   "ids": [
+    738
+   ],
+   "text": "绝不能败！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5B4",
+   "ram": "0x21945B4",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6538",
+     "local": 0,
+     "span": 9,
+     "ram": "0x218C538"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[903]",
+   "ids": [
+    903
+   ],
+   "text": "宇宙归市民",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5BF",
+   "ram": "0x21945BF",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6558",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C558",
+     "reused_by": "chunk_204.json:[1051]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[907]",
+   "ids": [
+    907
+   ],
+   "text": "多活一阵子",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5CA",
+   "ram": "0x21945CA",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3854",
+     "span": 9,
+     "ram": "0x20B8854"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[925]",
+   "ids": [
+    925
+   ],
+   "text": "知死方知生",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5D5",
+   "ram": "0x21945D5",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x658F",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C58F",
+     "reused_by": "chunk_204.json:[1043]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[926]",
+   "ids": [
+    926
+   ],
+   "text": "倒X真厉害",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5E0",
+   "ram": "0x21945E0",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x659A",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C59A",
+     "reused_by": "chunk_204.json:[1043]"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[927]",
+   "ids": [
+    927
+   ],
+   "text": "非乌合之众",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5EB",
+   "ram": "0x21945EB",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x65A5",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C5A5"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[934]",
+   "ids": [
+    934
+   ],
+   "text": "飞越宇宙魂",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE5F6",
+   "ram": "0x21945F6",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x65B0",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C5B0"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[939]",
+   "ids": [
+    939
+   ],
+   "text": "管他是总帅",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE601",
+   "ram": "0x2194601",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x65C6",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C5C6"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[940]",
+   "ids": [
+    940
+   ],
+   "text": "这股压迫感",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE60C",
+   "ram": "0x219460C",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x65D1",
+     "local": 0,
+     "span": 9,
+     "ram": "0x218C5D1"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[952]",
+   "ids": [
+    952
+   ],
+   "text": "不需要地球",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE617",
+   "ram": "0x2194617",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x65F1",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C5F1"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[984]",
+   "ids": [
+    984
+   ],
+   "text": "这就收下了",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE622",
+   "ram": "0x2194622",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3B11",
+     "span": 6,
+     "ram": "0x20B8B11"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1016, 1019]",
+   "ids": [
+    1016,
+    1019
+   ],
+   "text": "小孩子把戏",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE62D",
+   "ram": "0x219462D",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3C35",
+     "span": 7,
+     "ram": "0x20B8C35"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1037]",
+   "ids": [
+    1037
+   ],
+   "text": "好男人素质",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE638",
+   "ram": "0x2194638",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x666B",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C66B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE643",
+   "ram": "0x2194643",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6697",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C697"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1054]",
+   "ids": [
+    1054
+   ],
+   "text": "拿下你了！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE64E",
+   "ram": "0x219464E",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3D79",
+     "span": 6,
+     "ram": "0x20B8D79"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1203]",
+   "ids": [
+    1203
+   ],
+   "text": "解地球重负",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE659",
+   "ram": "0x2194659",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x44",
+     "local": 0,
+     "span": 10,
+     "ram": "0x2328764"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1239]",
+   "ids": [
+    1239
+   ],
+   "text": "跟你拼了！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE664",
+   "ram": "0x2194664",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3FC0",
+     "span": 7,
+     "ram": "0x20B8FC0"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1272]",
+   "ids": [
+    1272
+   ],
+   "text": "这就是力量",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE66F",
+   "ram": "0x219466F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xDC",
+     "local": 0,
+     "span": 10,
+     "ram": "0x23287FC"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1293]",
+   "ids": [
+    1293
+   ],
+   "text": "给我殖民地",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE67A",
+   "ram": "0x219467A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x406C",
+     "span": 8,
+     "ram": "0x20B906C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1303]",
+   "ids": [
+    1303
+   ],
+   "text": "统统肃清！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE685",
+   "ram": "0x2194685",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x4091",
+     "span": 7,
+     "ram": "0x20B9091"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1347]",
+   "ids": [
+    1347
+   ],
+   "text": "认清分量！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE690",
+   "ram": "0x2194690",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x179",
+     "local": 0,
+     "span": 9,
+     "ram": "0x2328899"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1351]",
+   "ids": [
+    1351
+   ],
+   "text": "一举扫清！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE69B",
+   "ram": "0x219469B",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x4154",
+     "span": 7,
+     "ram": "0x20B9154"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1389]",
+   "ids": [
+    1389
+   ],
+   "text": "历史归我等",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6A6",
+   "ram": "0x21946A6",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x186",
+     "local": 0,
+     "span": 10,
+     "ram": "0x23288A6"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_205.json:[1405]",
+   "ids": [
+    1405
+   ],
+   "text": "战斗即意义",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6B1",
+   "ram": "0x21946B1",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x1C7",
+     "local": 0,
+     "span": 10,
+     "ram": "0x23288E7"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6BC",
+   "ram": "0x21946BC",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0xE643",
+     "local": 0,
+     "span": 10,
+     "ram": "0x2194643"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6C7",
+   "ram": "0x21946C7",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0xE6BC",
+     "local": 0,
+     "span": 10,
+     "ram": "0x21946BC"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6D2",
+   "ram": "0x21946D2",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0xE6C7",
+     "local": 0,
+     "span": 10,
+     "ram": "0x21946C7"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "胡索·艾宾",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6DD",
+   "ram": "0x21946DD",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '胡索·艾{SLOT:2764}' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "艾裘·迪拉兹",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6E8",
+   "ram": "0x21946E8",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '艾{SLOT:2915}·迪拉兹' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "捷利特·梅萨",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE6F5",
+   "ram": "0x21946F5",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '{SLOT:2204}利特·梅萨' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "捷多·亚西塔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE702",
+   "ram": "0x2194702",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "捷多·亚西塔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE70F",
+   "ram": "0x219470F",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "捷多（强化）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE71C",
+   "ram": "0x219471C",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '{SLOT:2204}多（强化）' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "多蒙（明镜止水）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE729",
+   "ram": "0x2194729",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '多蒙(明镜止水)' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "凤·村雨",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE73A",
+   "ram": "0x219473A",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '{SLOT:2558}·村雨' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "凤·村雨",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE743",
+   "ram": "0x2194743",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '{SLOT:2558}·村雨' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "蕾柯亚·朗德",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE74C",
+   "ram": "0x219474C",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "蕾柯亚·朗德",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE759",
+   "ram": "0x2194759",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "真(SEED)",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE766",
+   "ram": "0x2194766",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '真（SEED）' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "杜加奇克隆",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE775",
+   "ram": "0x2194775",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '杜卡奇克隆' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "格雷米·普露兹",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE780",
+   "ram": "0x2194780",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '格雷米·普露2' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "巴斯克·欧姆",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE78F",
+   "ram": "0x219478F",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '巴斯克·奥姆' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "贝尔纳黛特",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE79C",
+   "ram": "0x219479C",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '贝纳黛特' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "深村玲",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x3D",
+   "ram": "0x232875D",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '深村ケ' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "军团（增压）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7A7",
+   "ram": "0x21947A7",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '雷吉恩' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "金卡拉姆队大大名",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7B4",
+   "ram": "0x21947B4",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '金卡拉姆队大名' left in place",
+   "rolled_back": "plate width 56px cannot hold 8 glyphs; HEAD ptr restored (pass2 residual)"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "金卡拉姆队大大名",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7C5",
+   "ram": "0x21947C5",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '金卡拉姆队大名' left in place",
+   "rolled_back": "plate width 56px cannot hold 8 glyphs; HEAD ptr restored (pass2 residual)"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "吉翁海兵队士官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7D6",
+   "ram": "0x21947D6",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '吉恩海兵队士官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "吉翁兵",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x107",
+   "ram": "0x2328827",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '吉恩兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "吉翁老兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7E5",
+   "ram": "0x21947E5",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '吉恩老兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "吉翁海兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7EE",
+   "ram": "0x21947EE",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '吉恩海兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "提坦斯强化兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE7F7",
+   "ram": "0x21947F7",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '提坦斯支援兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "新吉翁士官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE804",
+   "ram": "0x2194804",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '新吉恩士官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "新吉翁高级士官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE80F",
+   "ram": "0x219480F",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '新吉恩高级士官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "新吉翁兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE81E",
+   "ram": "0x219481E",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '新吉恩兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "新吉翁骑士",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE827",
+   "ram": "0x2194827",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '新吉恩骑士' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "新吉翁强化兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE832",
+   "ram": "0x2194832",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '新吉恩强化兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "特列斯派士兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xE83F",
+   "ram": "0x219483F",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '特列斯派兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "穿梭机机长",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA44B",
+   "ram": "0x219044B",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '穿梭机部队' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "基地",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x6F",
+   "ram": "0x232878F",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": "master-name '导弹' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "基地",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x995",
+   "ram": "0x23290B5",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": "master-name '导弹' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "相位转移装甲",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA456",
+   "ram": "0x2190456",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '相位装甲' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "NT等级1",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA463",
+   "ram": "0x2190463",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '※5等级1' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "NT等级2",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA46E",
+   "ram": "0x219046E",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '※5等级。' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "NT等级3",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA479",
+   "ram": "0x2190479",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '※5等级·' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "NT等级4",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA484",
+   "ram": "0x2190484",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '※5等级.' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "NT等级5",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA48F",
+   "ram": "0x219048F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '※5等级〜' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "强化人等级2",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA49A",
+   "ram": "0x219049A",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '强化人间。' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "强化人等级3",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4A7",
+   "ram": "0x21904A7",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '强化人间·' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "强化人等级4",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4B4",
+   "ram": "0x21904B4",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '强化人间.' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "强化人等级5",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4C1",
+   "ram": "0x21904C1",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '强化人间〜' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "调整者等级1",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4CE",
+   "ram": "0x21904CE",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '调整者1' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "调整者等级2",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4DB",
+   "ram": "0x21904DB",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '调整者。' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "调整者等级4",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4E8",
+   "ram": "0x21904E8",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '调整者.' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "调整者等级5",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA4F5",
+   "ram": "0x21904F5",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '调整者〜' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "击破SP／全队",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA502",
+   "ram": "0x2190502",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '击破S↓／全队' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "击破SP增加",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA511",
+   "ram": "0x2190511",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '击破S↓增加' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "回合SP增加",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA51E",
+   "ram": "0x219051E",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '回合S↓增加' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "回合SP／全队",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA52B",
+   "ram": "0x219052B",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '回合S↓／全队' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_pilots.json",
+   "ids": [],
+   "text": "移动力UP",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA53A",
+   "ram": "0x219053A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '移动力6↓' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "斯汀",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x9B4",
+   "ram": "0x23290D4",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": "master-name '史汀' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "吉翁士官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA545",
+   "ram": "0x2190545",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '吉恩士官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "吉翁老兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA54E",
+   "ram": "0x219054E",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '吉恩老兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "新吉翁士官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA557",
+   "ram": "0x2190557",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '新吉恩士官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "新吉翁兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA562",
+   "ram": "0x2190562",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '新吉恩兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "新吉翁强化兵",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA56B",
+   "ram": "0x219056B",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '新吉恩强化兵' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "吉翁高官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA578",
+   "ram": "0x2190578",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '吉恩高官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "德基姆·巴顿",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA581",
+   "ram": "0x2190581",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '迪基姆·巴顿' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "夏克蒂·卡琳",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA58E",
+   "ram": "0x219058E",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '莎克蒂·卡琳' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "格雷米军高官",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA59B",
+   "ram": "0x219059B",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '格雷米高官' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "克罗特·布埃尔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5A8",
+   "ram": "0x21905A8",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '克罗特' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "特里埃尔（增压）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5B7",
+   "ram": "0x21905B7",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '特里尔（增压）' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "拟·阿伽玛",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5C8",
+   "ram": "0x21905C8",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '新阿伽玛' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "雅克特·多加",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5D3",
+   "ram": "0x21905D3",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '雅克特多加' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "翔翼型强袭高达",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5E0",
+   "ram": "0x21905E0",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name 'ゲ翼型强袭高达' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "翔翼型强袭／解除",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA5EF",
+   "ram": "0x21905EF",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name 'ゲ翼型强袭／下降' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "圣盾高达／解除",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA600",
+   "ram": "0x2190600",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '{SLOT:2541}盾高达／下降' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "灾厄高达",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA60F",
+   "ram": "0x219060F",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '灾难高达' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "特装型高扎古",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA618",
+   "ram": "0x2190618",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '高扎古改' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "核心推进器",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA625",
+   "ram": "0x2190625",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '核心推进机' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "MC高达（半毁）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA630",
+   "ram": "0x2190630",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name 'MC高达（破坏）' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "赛克艾恩／兵装1",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA641",
+   "ram": "0x2190641",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '赛克艾恩／重装1' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "赛克艾恩／兵装2",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA652",
+   "ram": "0x2190652",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '赛克艾恩／重装2' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "卡碧尼Mk2／普露兹机",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA663",
+   "ram": "0x2190663",
+   "bytes": 22,
+   "reserved": 23,
+   "vacated": "master-name '卡{SLOT:2222}尼／普露兹机' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "卡碧尼Mk2／普露机",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA67A",
+   "ram": "0x219067A",
+   "bytes": 20,
+   "reserved": 21,
+   "vacated": "master-name '卡{SLOT:2222}尼／普露机' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_units.json",
+   "ids": [],
+   "text": "蕾兹专用基拉·多加",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA68F",
+   "ram": "0x219068F",
+   "bytes": 18,
+   "reserved": 19,
+   "vacated": "master-name '蕾兹专用基拉多加' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "折叠式火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6A2",
+   "ram": "0x21906A2",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '可折火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "新·超级火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6AF",
+   "ram": "0x21906AF",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '新·高能火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "导弹舱",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x172",
+   "ram": "0x2328892",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '导弹管' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "光束加农炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6BE",
+   "ram": "0x21906BE",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '光束炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "光束加农炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6C9",
+   "ram": "0x21906C9",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '光束炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "光束加农炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6D4",
+   "ram": "0x21906D4",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '光束炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "光束薙刀",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6DF",
+   "ram": "0x21906DF",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '光束対刀' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "超级火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6E8",
+   "ram": "0x21906E8",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '高能火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "热能鞭",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xB4A",
+   "ram": "0x232926A",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '热能ゴ' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "榴弹发射器",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6F3",
+   "ram": "0x21906F3",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '手雷发射器' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "螺旋钢鞭",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA6FE",
+   "ram": "0x21906FE",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '螺旋钢ゴ' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "对空光束",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA707",
+   "ram": "0x2190707",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '对空光' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "扎古火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA710",
+   "ram": "0x2190710",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "扎古火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA71B",
+   "ram": "0x219071B",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "扎古火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA726",
+   "ram": "0x2190726",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "神之斩",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xB6A",
+   "ram": "0x232928A",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '神斩击' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "超级霸王电影弹",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA731",
+   "ram": "0x2190731",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '超级弾王电影弹' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "扩散米加粒子炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA740",
+   "ram": "0x2190740",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '散射米加粒子炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "热能扇",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xCCA",
+   "ram": "0x23293EA",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '热能ヨ' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "溶断破碎机械手",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA74F",
+   "ram": "0x219074F",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '圧断破碎机械手' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "血之包围网",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA75E",
+   "ram": "0x219075E",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '血之包围' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "多佛枪",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xCEA",
+   "ram": "0x232940A",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": "master-name '多ゾ炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "黏土火箭炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA769",
+   "ram": "0x2190769",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '線土火箭炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "鲸鱼",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xA0B",
+   "ram": "0x232912B",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": "master-name '砲鱼' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "黑暗手指",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA774",
+   "ram": "0x2190774",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '暗黑手指' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "折叠式剃刀",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA77D",
+   "ram": "0x219077D",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '可折ヘ刀' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "安姆福尔塔斯",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA788",
+   "ram": "0x2190788",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '等离子炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "阳电子破城炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA795",
+   "ram": "0x2190795",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '阳电子炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "巴里安特",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7A2",
+   "ram": "0x21907A2",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '实弹炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "扩散光束炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7AB",
+   "ram": "0x21907AB",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": "master-name '散射光束炮' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "艾玛·辛",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7B6",
+   "ram": "0x21907B6",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": "master-name '爱玛·辛' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "奥尔加·萨布纳克",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7BF",
+   "ram": "0x21907BF",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '奥尔加' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "克罗特·布埃尔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7D0",
+   "ram": "0x21907D0",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '克罗特' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "夏亚·阿兹纳布尔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7DF",
+   "ram": "0x21907DF",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '夏亚' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "克瓦特罗·巴吉纳",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA7F0",
+   "ram": "0x21907F0",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '克瓦特罗' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "迪安娜·索雷尔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA801",
+   "ram": "0x2190801",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '迪安娜' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "布莱特·诺亚",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA810",
+   "ram": "0x2190810",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": "master-name '布莱德·诺亚' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "芙蕾·阿尔斯塔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA81D",
+   "ram": "0x219081D",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '芙蕾' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "玛琉·拉米亚斯",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA82C",
+   "ram": "0x219082C",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '玛琉' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "拉克丝·克莱因",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA83B",
+   "ram": "0x219083B",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '拉克丝' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "米哈埃尔·格恩",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA84A",
+   "ram": "0x219084A",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": "master-name '迈克尔·格恩' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "pass2:names_weapons.json",
+   "ids": [],
+   "text": "特里埃尔（增压）",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA859",
+   "ram": "0x2190859",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": "master-name '特里尔（增压）' left in place"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[966, 969]",
+   "ids": [
+    966,
+    969
+   ],
+   "text": "……垃圾！",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x1AB",
+   "ram": "0x23288CB",
+   "bytes": 7,
+   "reserved": 8,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3AA0",
+     "span": 6,
+     "ram": "0x20B8AA0"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[709]",
+   "ids": [
+    709
+   ],
+   "text": "我没死……",
+   "pool": "data/arenas/battle_name_pool.json",
+   "offset": "0x2404",
+   "ram": "0x20B7404",
+   "bytes": 8,
+   "reserved": 9,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x366C",
+     "span": 7,
+     "ram": "0x20B866C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[28, 31]",
+   "ids": [
+    28,
+    31
+   ],
+   "text": "这次介入……",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0xC69",
+   "ram": "0x232938A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x746",
+     "local": 4,
+     "span": 9,
+     "ram": "0x2328E6A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[43]",
+   "ids": [
+    43
+   ],
+   "text": "无需多言……",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x1008",
+   "ram": "0x2329729",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2068",
+     "span": 9,
+     "ram": "0x20B7068"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[108]",
+   "ids": [
+    108
+   ],
+   "text": "……小心为妙",
+   "pool": "data/arenas/ui_names_bank.json",
+   "offset": "0x10D0",
+   "ram": "0x23297F0",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x229C",
+     "span": 9,
+     "ram": "0x20B729C"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[134, 137, 140]",
+   "ids": [
+    134,
+    137,
+    140
+   ],
+   "text": "命即力量……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6161",
+   "ram": "0x218C161",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x239E",
+     "span": 9,
+     "ram": "0x20B739E"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[143]",
+   "ids": [
+    143
+   ],
+   "text": "太心急了……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6182",
+   "ram": "0x218C182",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0x10DC",
+     "local": 4,
+     "span": 10,
+     "ram": "0x2329800"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[181]",
+   "ids": [
+    181
+   ],
+   "text": "机体再好……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x61B9",
+   "ram": "0x218C1B9",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xFC9",
+     "local": 0,
+     "span": 9,
+     "ram": "0x23296E9"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_200.json:[227]",
+   "ids": [
+    227
+   ],
+   "text": "……祝你好运",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x61CF",
+   "ram": "0x218C1CF",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2665",
+     "span": 8,
+     "ram": "0x20B7665"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[338, 341]",
+   "ids": [
+    338,
+    341
+   ],
+   "text": "遇上白狼……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6206",
+   "ram": "0x218C206",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6198",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C198"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[370]",
+   "ids": [
+    370
+   ],
+   "text": "毫无问题……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x62E0",
+   "ram": "0x218C2E0",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2B2F",
+     "span": 9,
+     "ram": "0x20B7B2F"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_201.json:[397, 400]",
+   "ids": [
+    397,
+    400
+   ],
+   "text": "感应框架……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6321",
+   "ram": "0x218C321",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x2C6A",
+     "span": 7,
+     "ram": "0x20B7C6A"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_203.json:[942]",
+   "ids": [
+    942
+   ],
+   "text": "这群废物……",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x650D",
+   "ram": "0x218C50D",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/ui_names_bank.json",
+     "offset": "0xFD3",
+     "local": 0,
+     "span": 8,
+     "ram": "0x23296F3"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6523",
+   "ram": "0x218C523",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0xE6D2",
+     "local": 0,
+     "span": 10,
+     "ram": "0x21946D2"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1051]",
+   "ids": [
+    1051
+   ],
+   "text": "狂妄小子！！",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x6558",
+   "ram": "0x218C558",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x3D55",
+     "span": 9,
+     "ram": "0x20B8D55"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x658F",
+   "ram": "0x218C58F",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6523",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C523"
+    }
+   ],
+   "rolled_back": "double-allocation across reruns; 0x659A is the live home; span zeroed"
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w1:dead-home-reclaim",
+   "ids": [],
+   "text": null,
+   "pool": null,
+   "offset": null,
+   "ram": null,
+   "bytes": 0,
+   "reserved": 0,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3090",
+     "span": 12,
+     "ram": "0x2189090",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w2:福提斯加农炮"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x30E2",
+     "span": 10,
+     "ram": "0x21890E2",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x314E",
+     "span": 10,
+     "ram": "0x218914E",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x38B8",
+     "span": 6,
+     "ram": "0x21898B8",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3A35",
+     "span": 4,
+     "ram": "0x2189A35",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3CED",
+     "span": 6,
+     "ram": "0x2189CED",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3CF4",
+     "span": 6,
+     "ram": "0x2189CF4",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3E0D",
+     "span": 8,
+     "ram": "0x2189E0D",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x40A6",
+     "span": 6,
+     "ram": "0x218A0A6",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x455A",
+     "span": 16,
+     "ram": "0x218A55A",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w2:弗雷斯贝尔诱导炮"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x46AA",
+     "span": 16,
+     "ram": "0x218A6AA",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w2:等离子收束光束炮"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x46E8",
+     "span": 8,
+     "ram": "0x218A6E8",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5C77",
+     "span": 8,
+     "ram": "0x218BC77",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5CB2",
+     "span": 10,
+     "ram": "0x218BCB2",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5CBD",
+     "span": 14,
+     "ram": "0x218BCBD",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w2:艾克札恩铁道炮"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5CE8",
+     "span": 8,
+     "ram": "0x218BCE8",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5D67",
+     "span": 8,
+     "ram": "0x218BD67",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5D84",
+     "span": 12,
+     "ram": "0x218BD84",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w2:尼德霍格重镰"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5FAE",
+     "span": 8,
+     "ram": "0x218BFAE",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x5FE2",
+     "span": 8,
+     "ram": "0x218BFE2",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x60B3",
+     "span": 12,
+     "ram": "0x218C0B3",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "w6:D特里埃尔"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6102",
+     "span": 8,
+     "ram": "0x218C102",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x66EF",
+     "span": 14,
+     "ram": "0x218C6EF",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6794",
+     "span": 8,
+     "ram": "0x218C794",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6850",
+     "span": 14,
+     "ram": "0x218C850",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x685F",
+     "span": 16,
+     "ram": "0x218C85F",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x689E",
+     "span": 10,
+     "ram": "0x218C89E",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x68D0",
+     "span": 16,
+     "ram": "0x218C8D0",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x692D",
+     "span": 10,
+     "ram": "0x218C92D",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6938",
+     "span": 14,
+     "ram": "0x218C938",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6947",
+     "span": 14,
+     "ram": "0x218C947",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6A86",
+     "span": 10,
+     "ram": "0x218CA86",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x6ADD",
+     "span": 10,
+     "ram": "0x218CADD",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x86BD",
+     "span": 8,
+     "ram": "0x218E6BD",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8728",
+     "span": 12,
+     "ram": "0x218E728",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x87B2",
+     "span": 6,
+     "ram": "0x218E7B2",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8849",
+     "span": 6,
+     "ram": "0x218E849",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8AFB",
+     "span": 4,
+     "ram": "0x218EAFB",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8C73",
+     "span": 10,
+     "ram": "0x218EC73",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8CA9",
+     "span": 14,
+     "ram": "0x218ECA9",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8D26",
+     "span": 14,
+     "ram": "0x218ED26",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8D45",
+     "span": 6,
+     "ram": "0x218ED45",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8DA1",
+     "span": 6,
+     "ram": "0x218EDA1",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8E70",
+     "span": 6,
+     "ram": "0x218EE70",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8E98",
+     "span": 8,
+     "ram": "0x218EE98",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8EB3",
+     "span": 8,
+     "ram": "0x218EEB3",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x8FA0",
+     "span": 6,
+     "ram": "0x218EFA0",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9018",
+     "span": 10,
+     "ram": "0x218F018",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x902A",
+     "span": 16,
+     "ram": "0x218F02A",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9046",
+     "span": 10,
+     "ram": "0x218F046",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9092",
+     "span": 8,
+     "ram": "0x218F092",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9103",
+     "span": 6,
+     "ram": "0x218F103",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x91E8",
+     "span": 6,
+     "ram": "0x218F1E8",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x91F6",
+     "span": 6,
+     "ram": "0x218F1F6",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9291",
+     "span": 6,
+     "ram": "0x218F291",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x92EF",
+     "span": 8,
+     "ram": "0x218F2EF",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x93CC",
+     "span": 6,
+     "ram": "0x218F3CC",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x93E9",
+     "span": 16,
+     "ram": "0x218F3E9",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9405",
+     "span": 16,
+     "ram": "0x218F405",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x943F",
+     "span": 14,
+     "ram": "0x218F43F",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9630",
+     "span": 9,
+     "ram": "0x218F630",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x963A",
+     "span": 10,
+     "ram": "0x218F63A",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9645",
+     "span": 9,
+     "ram": "0x218F645",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x967B",
+     "span": 9,
+     "ram": "0x218F67B",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9685",
+     "span": 10,
+     "ram": "0x218F685",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9690",
+     "span": 9,
+     "ram": "0x218F690",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x969A",
+     "span": 9,
+     "ram": "0x218F69A",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x96A4",
+     "span": 10,
+     "ram": "0x218F6A4",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x96AF",
+     "span": 10,
+     "ram": "0x218F6AF",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x96BA",
+     "span": 8,
+     "ram": "0x218F6BA",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x96F4",
+     "span": 13,
+     "ram": "0x218F6F4",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9712",
+     "span": 11,
+     "ram": "0x218F712",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9727",
+     "span": 11,
+     "ram": "0x218F727",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9759",
+     "span": 10,
+     "ram": "0x218F759",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9764",
+     "span": 13,
+     "ram": "0x218F764",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x97A8",
+     "span": 8,
+     "ram": "0x218F7A8",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x97F6",
+     "span": 7,
+     "ram": "0x218F7F6",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    },
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x97FE",
+     "span": 7,
+     "ram": "0x218F7FE",
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w2:福提斯加农炮",
+   "ids": [],
+   "text": "福提斯加农炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x3090",
+   "ram": "0x2189090",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x9384",
+     "span": 6,
+     "ram": "0x218F384"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w2:艾克札恩铁道炮",
+   "ids": [],
+   "text": "艾克札恩铁道炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x5CBD",
+   "ram": "0x218BCBD",
+   "bytes": 14,
+   "reserved": 15,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3A04",
+     "span": 8,
+     "ram": "0x2189A04"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w2:尼德霍格重镰",
+   "ids": [],
+   "text": "尼德霍格重镰",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x5D84",
+   "ram": "0x218BD84",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3A0D",
+     "span": 8,
+     "ram": "0x2189A0D"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w2:弗雷斯贝尔诱导炮",
+   "ids": [],
+   "text": "弗雷斯贝尔诱导炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x455A",
+   "ram": "0x218A55A",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x3A16",
+     "span": 12,
+     "ram": "0x2189A16"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w2:等离子收束光束炮",
+   "ids": [],
+   "text": "等离子收束光束炮",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x46AA",
+   "ram": "0x218A6AA",
+   "bytes": 16,
+   "reserved": 17,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0xA788",
+     "span": 13,
+     "ram": "0x2190788"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "chunk_204.json:[1043]",
+   "ids": [
+    1043
+   ],
+   "text": "人类的梦想",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x659A",
+   "ram": "0x218C59A",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x658F",
+     "local": 0,
+     "span": 10,
+     "ram": "0x218C58F"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "zhihui_level_digits:指挥1",
+   "text": "指挥1",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0xA00C",
+   "ram": "0x219000C",
+   "bytes": 6,
+   "reserved": 7,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x43BC",
+     "span": 5,
+     "ram": "0x20B93BC"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "zhihui_level_digits:指挥2",
+   "text": "指挥2",
+   "pool": "data/arenas/battle_name_pool.json",
+   "offset": "0x2EE1",
+   "ram": "0x20B7EE1",
+   "bytes": 6,
+   "reserved": 6,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x443B",
+     "span": 5,
+     "ram": "0x20B943B"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "zhihui_level_digits:指挥3",
+   "text": "指挥3",
+   "pool": "data/arenas/battle_name_pool.json",
+   "offset": "0x28A6",
+   "ram": "0x20B78A6",
+   "bytes": 6,
+   "reserved": 6,
+   "vacated": [
+    {
+     "pool": "data/arenas/battle_name_pool.json",
+     "offset": "0x4375",
+     "span": 5,
+     "ram": "0x20B9375"
+    }
+   ]
+  },
+  {
+   "date": "2026-07-12",
+   "fix": "w6:D特里埃尔",
+   "ids": [],
+   "text": "D·特里埃尔",
+   "pool": "data/arenas/resident_caves.json",
+   "offset": "0x60B3",
+   "ram": "0x218C0B3",
+   "bytes": 12,
+   "reserved": 13,
+   "vacated": [
+    {
+     "pool": "data/arenas/resident_caves.json",
+     "offset": "0x4759",
+     "span": 12,
+     "ram": "0x218A759"
+    }
+   ]
+  }
+ ]
+}

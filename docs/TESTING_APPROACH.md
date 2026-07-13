@@ -115,14 +115,42 @@ model judging the actual crops**:
 * When two judges disagree about a glyph, decode the ROM bytes — don't vote.
 * Judge fresh captures only (stale crop directories misled multiple investigations).
 
+## 3.5 The offline pixel oracle — full-game coverage without a playthrough
+
+Emulator navigation covers a handful of scenes per hour; the game has ~22k text lines.
+The scalable layer is `test/render_oracle.py`: a reimplementation of BOTH render paths
+(renderA 12×12 atlas; trampoline renderB 8×16 from arm9; one/two-byte tokens; F0-macro
+expansion) that draws any line pixel-faithfully in microseconds.
+
+* **Trust anchor**: `test/test_render_oracle_parity.py` compares the oracle against a
+  LIVE melonDS golden (stroke-mask IoU ≥ 0.80 on the first dialogue line). The oracle is
+  only trusted because a live capture agrees with it; recheck parity whenever the render
+  code or the atlas pipeline changes.
+* **Coverage runner**: `test/coverage_render.py <rom> --out DIR [--sheets]` renders EVERY
+  line from EVERY text surface (~0.5 s total) and emits:
+  - `findings.json` — algorithmic defect classes needing zero judgment:
+    `unknown_slot` (sparkle), `empty_glyph`, `box_violation`, `no_shadow`,
+    `mixed_style` (bank-surface line drawing renderB TEXT glyphs next to atlas CJK —
+    the 吉翁海兵→吉翁海無 garble / NT等级4 sunk-digit class, detected from bytes alone);
+  - `sheets/*.png` — labeled contact sheets of every unique line for judge fleets;
+  - `corpus.jsonl` — machine-readable per-line style reports.
+* **Judgment fan-out**: what algorithms cannot decide (glyph identity, ugliness,
+  semantics) goes to parallel subagent/VLM judges over the sheets, ~40 lines per sheet,
+  with verdicts returned as JSON and fixes applied at the SOURCE (charmap/atlas/data),
+  per AGENTS.md. The renderB 8×16 charset was mapped this way
+  (word-level proof recorded in `data/renderb_charset.json`) — with it, `mixed_style` findings resolve
+  semantically: renderB glyph == intended char ⇒ authentic JP styling; ≠ ⇒ garble.
+* The **freeze class** stays with the live tier (script-CFG gate statically + boot smoke /
+  dialogue grind / combat cut-in dynamically); the oracle proves pixels, not control flow.
+
 ## 4. The escalation ladder (how the layers compose)
 
-For any change: static suite → boot smoke → targeted live scenario (if the change touches
-render/combat/stage data) → VLM judging of the affected surfaces → (for anything
-freeze-adjacent) multi-run freeze grind with control. For any *owner-reported* defect:
-reproduce live first (on their save), root-cause to bytes, fix, then **add the class gate
-with a self-test** and only then ship. The gate count only ever grows; that is by design —
-each gate is a fossilized postmortem.
+For any change: static suite → **offline coverage run (every line, every glyph)** → boot
+smoke → targeted live scenario (if the change touches render/combat/stage data) → VLM
+judging of the affected surfaces → (for anything freeze-adjacent) multi-run freeze grind
+with control. For any *owner-reported* defect: reproduce live first (on their save),
+root-cause to bytes, fix, then **add the class gate with a self-test** and only then ship.
+The gate count only ever grows; that is by design — each gate is a fossilized postmortem.
 
 Two final principles:
 

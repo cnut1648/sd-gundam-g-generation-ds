@@ -30,7 +30,7 @@
    "jp_text": "ついに我らジオンが{00}連邦に裁きの迭墜を下す時が来た！",
    "zh_text": "我等吉翁、终于迎来向联邦降下制裁铁锤{00}的时刻！",
    "jp_hex": "15f0ab34f0b4f00c1c00f01e34e25c1d37ffa14c8925aa1cf0a4060000",
-   "zh_hex": "15efcce826e7d9ee8802e8e2e879e931efcfefc1ef2eefaae943ef4de8deec39eebbedc200e7b4ef2de91fef970000000000000000"
+   "zh_hex": "158be826e7d9ee8802e8e2e879e931d99def2ed1e94389e8deec39eebbedc200e7b4ef2de91f060000000000000000000000000000"
   },
   {
    "jp_offset": "0x17a8",
@@ -80,7 +80,7 @@
    "jp_text": "ジーク·ジオン！！",
    "zh_text": "吉翁万岁！！",
    "jp_hex": "15f7b104f00c06060000",
-   "zh_hex": "15e7d9ee88e9f8ed50ef97ef97000000"
+   "zh_hex": "15e7d9ee88e9f8ed5006060000000000"
   },
   {
    "jp_offset": "0x1842",
@@ -88,9 +88,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "アナベル·ガトー少佐より{00}各部隊に通叩する！",
-   "zh_text": "阿纳贝尔·卡多少佐、向各部队下达通告{00}！",
+   "zh_text": "阿纳贝尔·卡多少佐{00}向各部队下达通告！",
    "jp_hex": "15f30504f0b0f0c3f02d00f52abd34f3d6f004060000",
-   "zh_hex": "15e7d2e882e857e7e1ef4be801e7e9efacefba02efc1e819ef70e7c9ef4def2bef59e8e500ef9700000000000000"
+   "zh_hex": "15e7d2e882e857e7e104e801e7e9b1a3009de819cce7c989ef2bc2e8e50600000000000000000000000000000000"
   },
   {
    "jp_offset": "0x1858",
@@ -100,7 +100,7 @@
    "jp_text": "間もなくコロニーは{00}ジャブローへの覧下軌道に乗る",
    "zh_text": "殖民地即将进入坠向贾布罗的下降轨道。",
    "jp_hex": "159141f043f09b3800f5ef3b37f5e4f1a734e31a480000",
-   "zh_hex": "15e8a9ef38ef63e855e84ae892e891eb53efc1e9e8e831e7ece7b4ef4de943e9cce82a03000000000000"
+   "zh_hex": "15e8a9ef38bfe855e84ae892e891eb539de9e8e831e7ece7b489e943e9cce82a03000000000000000000"
   },
   {
    "jp_offset": "0x1894",
@@ -108,9 +108,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "このラインが{00}コロニーの組止限界点だ！！",
-   "zh_text": "这条线、就是阻止殖民地的极限点！！",
+   "zh_text": "这条线、就是殖民地的阻止极限点！！",
    "jp_hex": "15f005f1ec1c00f09b37f178f52fe4632b06060000",
-   "zh_hex": "15e7b9e9d4e91602e7c5e7b6e8efe869e8a9ef38ef63e7b4eacaeb23e822ef97ef9700000000"
+   "zh_hex": "15e7b9e9d4e91602e7c5e7b6e8a9ef38bfe7b4e8efe869eacaeb23e822060600000000000000"
   },
   {
    "jp_offset": "0x18a9",
@@ -120,7 +120,7 @@
    "jp_text": "各部隊はコロニーを護衛し{00}このラインまで到叩させてほしい！",
    "zh_text": "各部队务必护卫殖民地、让它顺利抵达这{00}条线！",
    "jp_hex": "15f52abd38f09b4cf45d2300f005f1ecf02bf4b0f02e2ff23817060000",
-   "zh_hex": "15e819ef70e7c9e94fe860e8e0e9b2e8a9ef38ef6302e7f9e978eab4e82ee96eef2be7b900e9d4e916ef97000000000000"
+   "zh_hex": "15e819cce7c9e94fe860e8e0e9b2e8a9ef38bf02e7f9e978eab4e82ee96eef2be7b900e9d4e91606000000000000000000"
   },
   {
    "jp_offset": "0x18eb",
@@ -180,7 +180,7 @@
    "jp_text": "血相を変えてどうしたのですかな{00}コーウェン中将？",
    "zh_text": "瞧您这副变了脸色的样子、怎么了、科文{00}中将？",
    "jp_hex": "15e1d5e3b44cf2502ff07f2a373025f06100f164f94af41e050000",
-   "zh_hex": "15ead4e835e7b9ecb6e955e7baeb69e89fe7b4e7dae88602e7f2e7bde7ba02ebe3ea4e00ef4ee84a0500000000000000"
+   "zh_hex": "15ead4e835e7b9ecb6e955e7baeb69e89fe7b4e7dae88602e7f2e7bde7ba02ebe3ea4e00c0e84a050000000000000000"
   },
   {
    "jp_offset": "0x1a2a",
@@ -190,7 +190,7 @@
    "jp_text": "地球軌道艦隊だ！{00}この事態になぜ豊観している！？",
    "zh_text": "地球轨道舰队啊！如此局面、为何还在一{00}旁坐视不管！？",
    "jp_hex": "15f010f1a7f0682b0600f005f30034f0dfe555e134232f174806050000",
-   "zh_hex": "15ef63efd3e9cce82ae7d4e7c9e7c3ef97e7f0e7caea8ce86202e7c1efbce7f7ef29efb600ef04ecc3e9d9e7b5e93bef970500000000000000"
+   "zh_hex": "15bf95e9cce82ae7d4e7c9e7c306e7f0e7caea8ce86202e7c18ae7f7ef298700ef04ecc3e9d9e7b5e93b060500000000000000000000000000"
   },
   {
    "jp_offset": "0x1a62",
@@ -358,9 +358,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "ふっ……{00}もはや止められんのだ！誰にも！！",
-   "zh_text": "哼……如今已无人能阻止了！谁也不行！{00}！",
+   "zh_text": "哼……{00}如今已无人能阻止了！谁也不行！！",
    "jp_hex": "153a2d090900f181f0ca46494d372b06e3fc344106060000",
-   "zh_hex": "15e8b30909e7f0efb9ef3ae7dcefb2e7c6e8efe869e7baef97e923e7c0e7b5efd6ef9700ef97000000000000"
+   "zh_hex": "15e8b3090900e7f0a2ef3ae7dcb4e7c6e8efe869e7ba06e923e7c0e7b59f0606000000000000000000000000"
   },
   {
    "jp_offset": "0x1d2a",
@@ -458,9 +458,9 @@
    "kind": "dialogue",
    "speaker": "浦木·宏",
    "jp_text": "ガトー……{00}とどめをささずに行ったのか……",
-   "zh_text": "卡多……竟没给我补上最后一击就走了吗{00}……",
+   "zh_text": "卡多……{00}竟没给我补上最后一击就走了吗……",
    "jp_hex": "15f0b0090900f4674c222226349f2d2a371b09090000",
-   "zh_hex": "15e801e7e90909ef2ce7d8e839efccea81ef4ce8c5e7feefb6e7cce7c5e890e7bae80200090900000000"
+   "zh_hex": "15e801e7e9090900ef2ce7d8e8398bea81b2e8c5e7fe87e7cce7c5e890e7bae802090900000000000000"
   },
   {
    "jp_offset": "0x1f8c",
@@ -520,7 +520,7 @@
    "jp_text": "渋らかいわき腹をつかれるとは{00}思いませなんだなぁ",
    "zh_text": "没想到吧、连这软肋、也有被人戳中的一{00}天。",
    "jp_hex": "15e2db46f0f54b1de5214c2e1b4948313800a6f02927334d2b33150000",
-   "zh_hex": "15e7d8e7e6e7d7e7d002e86ee7b9eb47ef0502e7c0e7cbe7f1efb2ef06ef4ee7b4efb600e84403000000000000000000000000"
+   "zh_hex": "15e7d8e7e6e7d7e7d002e86ee7b9eb47ef0502e7c0e7cbe7f1efb2e6abef4ee7b4efb600e84403000000000000000000000000"
   },
   {
    "jp_offset": "0x207f",
@@ -530,7 +530,7 @@
    "jp_text": "ガトーはよくやってくれている{00}予想、のことは起こるものだ",
    "zh_text": "卡多干得很出色、意料之外的事、总是难{00}免会发生的。",
    "jp_hex": "15f0b038f0de432d2ff0152f174800f95d37f00238f16a48f0192b0000",
-   "zh_hex": "15e801e7e9e8d3e80ae981efbee89f02ef3ceb8ce7cde8f7e7b4efb802e881e7b6e86600eb7de7e2e870ef8de7b4030000000000"
+   "zh_hex": "15e801e7e9e8d3e80ae981afe89f02ef3ceb8ce7cde8f7e7b4a902e881e7b6e86600eb7de7e2e870b6e7b4030000000000000000"
   },
   {
    "jp_offset": "0x20b7",
@@ -558,9 +558,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "おっと、動くんじゃないよ{00}衝準はブリッジにつけてあるんだ",
-   "zh_text": "哎呀、可别乱动、我的准星、可一直对着{00}舰[呢。",
+   "zh_text": "哎呀、可别乱动、我的准星、可一直对着{00}你的座舰呢。",
    "jp_hex": "15f2593102c61e4d244233174500f47538f90234f0c92ff00f4d2b0000",
-   "zh_hex": "15e9dce9c602e7c4e7e5e976ef3002efcce7b4e87aef6902e7c4efb6e875e7bee86d00e7d4eedbe90703000000000000"
+   "zh_hex": "15e9dce9c602e7c4e7e5e976ef30028be7b4e87ab502e7c487e875e7bee86d00e7b8e7b4ebc4e7d4e907030000000000"
   },
   {
    "jp_offset": "0x2130",
@@ -618,9 +618,9 @@
    "kind": "dialogue",
    "speaker": "埃基尤·迪拉兹",
    "jp_text": "ぬう……！{00}貴様、それでもジオンの将か！？",
-   "zh_text": "唔……！你这样、也配称作吉翁的将领吗{00}！？",
+   "zh_text": "唔……！{00}你这样、也配称作吉翁的将领吗！？",
    "jp_hex": "15351809090600f01102f008f01bf00c37e2fe1b06050000",
-   "zh_hex": "15e81d0909ef97e7b8e7b9e7da02e7c0ea34ea01ef2fe7d9ee88e7b4e84aea20e80200ef970500000000000000"
+   "zh_hex": "15e81d09090600e7b8e7b9e7da02e7c0ea34ea01ef2fe7d9ee88e7b4e84aea20e8020605000000000000000000"
   },
   {
    "jp_offset": "0x2251",
@@ -648,9 +648,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "アタシは戸あれば親返るのさ！！",
-   "zh_text": "只要有缘由、我就会倒戈相向！！",
+   "zh_text": "只要有利可图、我就倒戈相向！！",
    "jp_hex": "15f07b38e1fff03039fa4648372206060000",
-   "zh_hex": "15ef32ef2ae7cbecf9e8a602efcce7c5e7e2e848ea63e8b1efc1ef97ef9700000000"
+   "zh_hex": "15ef32ef2ae7cbe82ee7c4eb2d028be7c5e848ea63e8b19d06060000000000000000"
   },
   {
    "jp_offset": "0x22ba",
@@ -670,7 +670,7 @@
    "jp_text": "志を持たぬ者を動こうとした{00}我が身の不覚であった…！",
    "zh_text": "想去引导一个胸无大志之人、是我自己的{00}失策……！",
    "jp_hex": "15e2884ce29e2a35ad4ce48af087f0e52a00f114e33d37f60f30f04c2a09060000",
-   "zh_hex": "15e7e6e7ebe9d0ea4befb6e828ee8ce7dcefa5ea18e7cdefb202e7b6efccefb5e8c9e7b400e8a5ebe40909ef97000000000000000000"
+   "zh_hex": "15e7e6e7ebe9d0ea4b87e828ee8ce7dcbeea18e7cdb402e7b68babe8c9e7b400e8a5ebe4090906000000000000000000000000000000"
   },
   {
    "jp_offset": "0x22ff",
@@ -748,9 +748,9 @@
    "kind": "dialogue",
    "speaker": "约翰尼·莱汀",
    "jp_text": "とりあえず全速で飛ばしてきたんだが{00}間に合ってなによりだ",
-   "zh_text": "总之我是全速赶来的、能赶得上真是太好{00}了。",
+   "zh_text": "总之我是全速赶来的、{00}能赶得上真是太好了",
    "jp_hex": "15f24df66930ffb9232ff0744df02700f2972d2ff04df02d2b0000",
-   "zh_hex": "15e881e7cdefcce7b6efb4e9daea04efcfe7b402e7c6ea04e80aef4ce820e7b6e86ae7c700e7ba0300000000000000"
+   "zh_hex": "15e881e7cd8be7b6bbe9daea04d9e7b40200e7c6ea04e80ab2e820e7b6e86ae7c7e7ba000000000000000000000000"
   },
   {
    "jp_offset": "0x2466",
@@ -778,9 +778,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "まさかこのような場面で{00}貴官の除けを受けようとはな……",
-   "zh_text": "没想到、竟会在这种场面下、受贵官相助{00}……",
+   "zh_text": "没想到、竟会在这种场面下、{00}受贵官相助……",
    "jp_hex": "15f06bf2bd33e31de5893000f18b37f0db4cf0c2f00731f03a09090000",
-   "zh_hex": "15e7d8e7e6e7d702ef2ce7e2ef29e7b9e7d1e876e862ef4d02e8c8e930ef92e8b1ea2300090900000000000000"
+   "zh_hex": "15e7d8e7e6e7d702ef2ce7e2ef29e7b9e7d1e876e862890200e8c8e9308fe8b1ea230909000000000000000000"
   },
   {
    "jp_offset": "0x24ee",
@@ -800,7 +800,7 @@
    "jp_text": "仇々に損得勧定抜きで{00}戦わせてもらおうじゃないか！",
    "zh_text": "偶尔也抛开那些利害得失、痛痛快快地打{00}一场吧！",
    "jp_hex": "15fe1e34fcf4e11ee449f7a33000b94b272ff0401a18244233171b060000",
-   "zh_hex": "15ea85e7e1e7c0eaa9e7fae7b7e8a4e82ee988e80ae8a502ea0bea0be85fe85fef63e7f500efb6e876e7d0ef970000000000"
+   "zh_hex": "15ea85e7e1e7c0eaa9e7fae7b7e8a4e82ee988e80ae8a502ea0bea0be85fe85fbfe7f50087e876e7d0060000000000000000"
   },
   {
    "jp_offset": "0x2548",
@@ -908,9 +908,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "アタシは3年間ずっと待ってたんだ！{00}この時を……！",
-   "zh_text": "整整三年、我一直在等！等的就是这一刻{00}……！",
+   "zh_text": "整整三年、我一直在等！{00}等的就是这一刻……！",
    "jp_hex": "15f07b3810e4ab91f1d7e3e22d2f2a4d2b0600f005aa4c0909060000",
-   "zh_hex": "15e9fee9feeaa0e90902efccefb6e875ef29e826ef97e826e7b4e7c5e7b6e7b9efb6e91f000909ef970000000000000000"
+   "zh_hex": "15e9fee9feeaa0e909028b87e875ef29e8260600e826e7b4e7c5e7b6e7b987e91f09090600000000000000000000000000"
   },
   {
    "jp_offset": "0x2779",
@@ -920,7 +920,7 @@
    "jp_text": "ジオンの栄光とやらに勝つ日を！",
    "zh_text": "等着战胜什么吉翁荣光的这一天！",
    "jp_hex": "15f00c37f41431434634e2f92ee4a44c060000",
-   "zh_hex": "15e826e86def28e8dbe7dde7bde7d9ee88eb19e83de7b4e7b9efb6e844ef970000"
+   "zh_hex": "15e826e86def28e8dbe7dde7bde7d9ee88eb19e83de7b4e7b987e8440600000000"
   },
   {
    "jp_offset": "0x278c",
@@ -928,9 +928,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "今さらオマエなんかに{00}着々をいれられてたまるか！！",
-   "zh_text": "事到如今、我才不会让你这种人来搅局！{00}！",
+   "zh_text": "事到如今、{00}我才不会让你这种人来搅局！！",
    "jp_hex": "15f19af06c334d1b3400e41c074c174946492ff102481b06060000",
-   "zh_hex": "15efb8e7d7e7f0efb902efcce836e7b5e7e2e7f9e7b8e7b9e7d1efb2efcfed6bea8cef9700ef97000000000000"
+   "zh_hex": "15a9e7d7e7f0a202008be836e7b5e7e2e7f9e7b8e7b9e7d1b4d9ed6bea8c060600000000000000000000000000"
   },
   {
    "jp_offset": "0x27cc",
@@ -980,7 +980,7 @@
    "jp_text": "ついに堕ちるところまで堕ちたか{00}シーマ·ガラハウ……",
    "zh_text": "终究还是堕落到了这般田地吗、西玛·卡{00}拉豪……",
    "jp_hex": "15f0ab34e3db2c48f111f02be3db2cf03d00f08f04f40109090000",
-   "zh_hex": "15e8e2e906e7f7e7b6edffe92ae7d7e7bae7b9ea80efa0ef63e80202e7f8e845ef4be80100e7c2eea2090900000000"
+   "zh_hex": "15e8e2e906e7f7e7b6edffe92ae7d7e7bae7b9ea80efa0bfe80202e7f8e84504e80100e7c2eea20909000000000000"
   },
   {
    "jp_offset": "0x28b4",
@@ -990,7 +990,7 @@
    "jp_text": "アンタみたいに表蓋道ばっかり{00}弁いてきた人間にゃわからないさ！",
    "zh_text": "像你这种、一辈子只走阳关大道的人、是{00}不会懂的！",
    "jp_hex": "15f08c3e2a1734e4fee104e48bf81400e540172ff074f0753442f02446331722060000",
-   "zh_hex": "15e8e9e7b8e7b9e7d102efb6ed0ce886ef32e890eb72e8bbefa5e82ae7b4efb202e7b600e7b5e7e2e8b0e7b4ef9700000000000000"
+   "zh_hex": "15e8e9e7b8e7b9e7d10287ed0ce886ef32e890eb72e8bbbee82ae7b4b402e7b600e7b5e7e2e8b0e7b4060000000000000000000000"
   },
   {
    "jp_offset": "0x28d7",
@@ -1018,9 +1018,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "ちいっ！{00}我雷のためだけに戦うか……承人め！",
-   "zh_text": "啧、只为私利而战……你这小人！",
+   "zh_text": "啧、只为私利而战……你这商人！",
    "jp_hex": "152c172d06008be5be37f03c2b1f34b9f0c80909e2ffb440060000",
-   "zh_hex": "15e9fa02ef32e7c1efd5e82ee89cef280909e7b8e7b9e83eefb2ef97000000"
+   "zh_hex": "15e9fa02ef32e7c1a8e82ee89cef280909e7b8e7b9ed39b406000000000000"
   },
   {
    "jp_offset": "0x2972",
@@ -1030,7 +1030,7 @@
    "jp_text": "貴様のような肺を相手にしている{00}場合ではないというのに！！",
    "zh_text": "明明就没空跟你这种货色纠缠的！！",
    "jp_hex": "15f01137f00733e4bf4cf05f34232f174800f1aff00a3317311718373406060000",
-   "zh_hex": "15ef39ef39e7c5e7d8e93fe973e7b8e7b9e7d1eaf5e89feda2ec34e7b4ef97ef97000000000000"
+   "zh_hex": "15ef39ef39e7c5e7d8e93fe973e7b8e7b9e7d1eaf5e89feda2ec34e7b406060000000000000000"
   },
   {
    "jp_offset": "0x29b8",
@@ -1058,9 +1058,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "この昂揺感……{00}身体が熱くなる……！",
-   "zh_text": "这股兴奋之情……连身体都火热起来了…{00}…！",
+   "zh_text": "这股兴奋之情……{00}连身体都火热起来了……！",
    "jp_hex": "15f005ff4ae126090900f36c1ce4aa1e33480909060000",
-   "zh_hex": "15e7b9edaceabaef46e7cde88b0909e86ee88def4fe840e8daead1e847efcfe7ba090009ef970000000000"
+   "zh_hex": "15e7b9edaceabaef46e7cde88b090900e86ee88dbce840e8daead1e847d9e7ba0909060000000000000000"
   },
   {
    "jp_offset": "0x2a30",
@@ -1070,7 +1070,7 @@
    "jp_text": "アタシは…勝ったんだ……{00}ジオンの…栄光とやらに……",
    "zh_text": "我……赢了……赢了那什么吉翁的……荣{00}光……",
    "jp_hex": "15f07b3809e2f92d2a4d2b090900f00c3709f4143143463409090000",
-   "zh_hex": "15efcc0909e9cbe7ba0909e9cbe7bae7b7e7dde7bde7d9ee88e7b40909eb1900e83d09090000000000000000"
+   "zh_hex": "158b0909e9cbe7ba0909e9cbe7bae7b7e7dde7bde7d9ee88e7b40909eb1900e83d0909000000000000000000"
   },
   {
    "jp_offset": "0x2a56",
@@ -1078,9 +1078,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "アタシ…は……",
-   "zh_text": "我……是……",
+   "zh_text": "我……我……",
    "jp_hex": "15f07b093809090000",
-   "zh_hex": "15efcc0909e7b609090000"
+   "zh_hex": "158b09098b090900000000"
   },
   {
    "jp_offset": "0x2a8e",
@@ -1148,9 +1148,9 @@
    "kind": "dialogue",
    "speaker": "迪拉兹军官",
    "jp_text": "ふふ…ふふふ……{00}もう誰にも止められんのだ……",
-   "zh_text": "呵呵…呵呵呵……如今谁也无法阻止了…{00}…",
+   "zh_text": "呵呵……呵呵……{00}如今谁也无法阻止了……",
    "jp_hex": "153a3a093a3a3a090900f02ae3fc3441f0ca46494d372b09090000",
-   "zh_hex": "15ef3def3d09ef3def3def3d0909e7f0efb9e923e7c0e7dce84ee8efe869e7ba0900090000"
+   "zh_hex": "15ef3def3d0909ef3def3d090900e7f0a2e923e7c0e7dce84ee8efe869e7ba090900000000"
   },
   {
    "jp_offset": "0x2bf1",
@@ -1210,7 +1210,7 @@
    "jp_text": "消滅だと！？バカな！！{00}あれだけの質量をどうやって！！",
    "zh_text": "化为乌有了！？怎么可能！！那么大的质{00}量、究竟是怎么办到的！！",
    "jp_hex": "15f4602b310605f0ce33060600f0302b1f37fba44cf053432d2f06060000",
-   "zh_hex": "15e9a5e7c1e94de7cbe7baef9705e7f2e7bde7c4e7c6ef97ef97e7b7e7bdefa5e7b4eb4500e85102e906ef2ce7b6e7f2e7bde8eae7d7e7b4ef97ef97000000000000"
+   "zh_hex": "15e9a5e7c1e94de7cbe7ba0605e7f2e7bde7c4e7c60606e7b7e7bdbee7b4eb4500e85102e906ef2ce7b6e7f2e7bde8eae7d7e7b40606000000000000000000000000"
   },
   {
    "jp_offset": "0x2d26",
@@ -1260,7 +1260,7 @@
    "jp_text": "私はムーンレィスの女王{00}ディアナ·ソレル",
    "zh_text": "我是月之民的女王、迪安娜·索雷尔。",
    "jp_hex": "15a838f0c437f07900f03104f21f0000",
-   "zh_hex": "15efcce7b6e850e7cdef38e7b4efade88402ea11e7fce7eaef4be93ce8afe7e1030000000000"
+   "zh_hex": "158be7b6e850e7cdef38e7b4b0e88402ea11e7fce7ea04e93ce8afe7e1030000000000000000"
   },
   {
    "jp_offset": "0x2e56",
@@ -1310,7 +1310,7 @@
    "jp_text": "残された時間はあとわずかだ！{00}全員、気合入れていけ！",
    "zh_text": "剩下的时间不多了！全员、都给我打起精{00}神来！",
    "jp_hex": "15e27922492af13ff08431f80b2b0600f3b102fc70f2242ff0b6060000",
-   "zh_hex": "15ea3aef4de7b4ef2de8fce7b5e7e9e7baef97efb4e84902e840e839efcce7f5e847e98d00e9aaefcfef970000000000"
+   "zh_hex": "15ea3a89e7b4ef2de8fce7b5e7e9e7ba06bbe84902e840e8398be7f5e847e98d00e9aad9060000000000000000000000"
   },
   {
    "jp_offset": "0xa6e6",
@@ -1348,9 +1348,9 @@
    "kind": "dialogue",
    "speaker": "埃基尤·迪拉兹",
    "jp_text": "ゆけ…！{00}わしの屍を透み駅えて……！！",
-   "zh_text": "去吧……！踏着我的遗体、向前迈进……{00}！！",
+   "zh_text": "去吧……！{00}踏着我的遗体、向前迈进……！！",
    "jp_hex": "15e0601f0906004bf2ace2854ce4853ef9822f090906060000",
-   "zh_hex": "15e7ebe7d00909ef97ed0be86defcce7b4eba9ef4f02efc1ef51ea59e892090900ef97ef9700000000000000"
+   "zh_hex": "15e7ebe7d009090600ed0be86d8be7b4eba9bc029dbaea59e892090906060000000000000000000000000000"
   },
   {
    "jp_offset": "0xa776",
@@ -1440,7 +1440,7 @@
    "jp_text": "あれは、まさか……！！",
    "zh_text": "那、难道是……！！",
    "jp_hex": "15f0303802f06b090906060000",
-   "zh_hex": "15e7b702e866e82ae7b60909ef97ef97000000"
+   "zh_hex": "15e7b702e866e82ae7b6090906060000000000"
   },
   {
    "jp_offset": "0xa90e",
@@ -1450,7 +1450,7 @@
    "jp_text": "ミラー展開率40%{00}F4からF6、フォーカシング調整中…",
    "zh_text": "镜面展开率40%、F4至F6、对焦调{00}整中……",
    "jp_hex": "15f3dbf1cee5cefad3e01000e01fe0161b46e01fe01802f5230856f2625bf445c0090000",
-   "zh_hex": "15ead7e862e989e7fae9e1ea9be998ead902eca5ea9be897eca5e9cd02e7beedb4e95c00e9feef4e0909000000000000000000"
+   "zh_hex": "15ead7e862e989e7fae9e1ea9be998ead902eca5ea9be897eca5e9cd02e7beedb4e95c00e9fec0090900000000000000000000"
   },
   {
    "jp_offset": "0xa94d",
@@ -1488,9 +1488,9 @@
    "kind": "dialogue",
    "speaker": "埃基尤·迪拉兹",
    "jp_text": "連邦め……{00}あのような韻し玉を用意していたとは！",
-   "zh_text": "可恶的联邦……竟然暗藏了那样一张底牌{00}！",
+   "zh_text": "可恶的联邦……{00}竟然暗藏了那样一张底牌！",
    "jp_hex": "15f01e40090900f81333e0a823e1a04cf216232ff0133138060000",
-   "zh_hex": "15e7c4e7dee7b4ef2eefaa0909ef2ce7efea6aed03e7bae7b7e7daefb6eac5e9b4ec2b00ef970000000000"
+   "zh_hex": "15e7c4e7dee7b4ef2ed1090900ef2ce7efea6aed03e7bae7b7e7da87eac5e9b4ec2b060000000000000000"
   },
   {
    "jp_offset": "0xaa2d",
@@ -1510,7 +1510,7 @@
    "jp_text": "コロニー進路上に出現した{00}ソーラ·システムに攻撃を集中せよ！",
    "zh_text": "集中火力、攻击出现在殖民地航道上的太{00}阳系统！",
    "jp_hex": "15f09bf23eb234f48b232a00f76704f12034f01f4cf32bf0a7060000",
-   "zh_hex": "15ea98ef4ee8daefb002ef67e7ccefbee82fef29e8a9ef38ef63e9c1e82aef4ce7b4e86a00eb72e941e929ef970000000000000000"
+   "zh_hex": "15ea98c0e8dada029ee7ccafe82fef29e8a9ef38bfe9c1e82ab2e7b4e86a00eb72e941e92906000000000000000000000000000000"
   },
   {
    "jp_offset": "0xaa5c",
@@ -1560,7 +1560,7 @@
    "jp_text": "各員！コロニーの進路上に現れた{00}連邦の兵器を撃破するのだ！",
    "zh_text": "全体注意！务必击破出现在殖民地航道上{00}的联邦兵器！",
    "jp_hex": "15f23a06f09b37f23eb234f14d2a00f01e37f14c4cf069f004372b060000",
-   "zh_hex": "15efb4ef4feaccef3cef97e94fe860e7ccef6defbee82fef29e8a9ef38ef63e9c1e82aef4c00e7b4ef2eefaaef93e8c3ef9700000000000000000000000000"
+   "zh_hex": "15bbbceaccef3c06e94fe860e7ccc7afe82fef29e8a9ef38bfe9c1e82ab200e7b4ef2ed1cee8c3060000000000000000000000000000000000000000000000"
   },
   {
    "jp_offset": "0xab28",
@@ -1588,9 +1588,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "ふふ……{00}あはははは……",
-   "zh_text": "呵呵…啊哈哈",
+   "zh_text": "呵呵……哈哈……",
    "jp_hex": "153a3a090900163838383809090000",
-   "zh_hex": "15ef3def3d09e7c3e7e8e7e8000000"
+   "zh_hex": "15ef3def3d0909e7e8e7e809090000"
   },
   {
    "jp_offset": "0xab9d",
@@ -1598,9 +1598,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "ああ……{00}そうかい……",
-   "zh_text": "呵呵……啊哈哈哈哈……",
+   "zh_text": "啊啊……原来如此……",
    "jp_hex": "15f056090900f009f0f509090000",
-   "zh_hex": "15ef3def3d0909e7c3e7e8e7e8e7e8e7e8090900000000"
+   "zh_hex": "15e7c3e7c30909e8e4d9e7f0e7ca090900000000000000"
   },
   {
    "jp_offset": "0xabab",
@@ -1630,7 +1630,7 @@
    "jp_text": "なら！損得は抜きだ！！",
    "zh_text": "那就！抛开利害得失！！",
    "jp_hex": "15334606fcf438f7a32b06060000",
-   "zh_hex": "15e7b7e7c5ef97eaa9e7fae82ee988e80ae8a5ef97ef97000000"
+   "zh_hex": "15e7b7e7c506eaa9e7fae82ee988e80ae8a50606000000000000"
   },
   {
    "jp_offset": "0xac1e",
@@ -1768,9 +1768,9 @@
    "kind": "dialogue",
    "speaker": "亨肯·贝克纳",
    "jp_text": "この警戒ぶりからみて{00}まず、間違いないだろうな",
-   "zh_text": "看这戒备的架势、基本可以断定、错不了{00}了。",
+   "zh_text": "看这戒备的架势、{00}基本可以断定、错不了",
    "jp_hex": "15f005f485f4581b463e2f00f15b02f1271733172b4af0630000",
-   "zh_hex": "15e7f6e7b9eb5ae877e7b4e99de8fd02e829efa6e7c4e7f3e982e86702e885e7b5e7ba00e7ba030000000000000000"
+   "zh_hex": "15e7f6e7b9eb5ae877e7b4e99de8fd0200e829d2e7c4e7f3e982e86702e885e7b5e7ba000000000000000000000000"
   },
   {
    "jp_offset": "0xade0",
@@ -1798,9 +1798,9 @@
    "kind": "dialogue",
    "speaker": "玛利根",
    "jp_text": "どうやらティターンズは本気で{00}ムーンレィスを叩くつもりのようだな",
-   "zh_text": "看来提坦斯、是当真打算对月之民下手了{00}。",
+   "zh_text": "看来提坦斯、是当真{00}打算对月之民下手了。",
    "jp_hex": "15f13cf03538f21a3000f0c44ce3f71ef08b37f0072b330000",
-   "zh_hex": "15e7f6efcfe821e843e7c802e7b6ef53e820e7f5e889e7bee850e7cdef38ef4def66e7ba0003000000000000"
+   "zh_hex": "15e7f6d9e821e843e7c802e7b6c4e82000e7f5e889e7bee850e7cdef3889aee7ba0300000000000000000000"
   },
   {
    "jp_offset": "0xae47",
@@ -1808,9 +1808,9 @@
    "kind": "dialogue",
    "speaker": "亨肯·贝克纳",
    "jp_text": "やつらにしてみれば月の眠も{00}宇宙人というところなのだろうさ",
-   "zh_text": "在他们眼里、月之民大概也算是宇宙人吧{00}。",
+   "zh_text": "在他们眼里、月之民{00}大概也算是宇宙人吧。",
    "jp_hex": "15f1a64634232f3e4939e1d637e57c4100f0a8b4311718f11133372b4a18220000",
-   "zh_hex": "15ef29e80ce7bbe90bef3102e850e7cdef38efa5ec76e7c0e889e7b6e8bee8bfefb2e7d00003000000000000000000"
+   "zh_hex": "15ef29e80ce7bbe90bef3102e850e7cdef3800beec76e7c0e889e7b6e8bee8bfb4e7d0030000000000000000000000"
   },
   {
    "jp_offset": "0xae83",
@@ -1820,7 +1820,7 @@
    "jp_text": "ま……実際はうさんくさい未来人でなく{00}自分たちが実権を握りたい……",
    "zh_text": "嘛……其实、比起那些可疑的未来人、他{00}们更想自己抓住实权……",
    "jp_hex": "153d0909f4a73818f04b1e2217f105b430f04300f07ef0061cfa354ce083472a1709090000",
-   "zh_hex": "15e9360909e8cfe87f02e825e847e7b7e8a4e7c4eb62e7b4e8b4efcfefb202e80c00e7bbe952e7e6efb5e8c9e962e859e87feb39090900000000"
+   "zh_hex": "15e9360909e8cfe87f02e825e847e7b7e8a4e7c4eb62e7b4e8b4d9b402e80c00e7bbe952e7e6abe8c9e962e859e87feb39090900000000000000"
   },
   {
    "jp_offset": "0xaea8",
@@ -1858,9 +1858,9 @@
    "kind": "dialogue",
    "speaker": "多兹尔",
    "jp_text": "あっちはあっちで触々と{00}ごたごたを奉えてるんでしょうな",
-   "zh_text": "想必那边、自己也有不少理不清的麻烦事{00}吧。",
+   "zh_text": "想必那边、自己也有{00}不少理不清的麻烦事吧",
    "jp_hex": "15f5c0f0842d2c30f33d3100e0512ae0512a4cf4d3f01d4d302344f0630000",
-   "zh_hex": "15e7e6e860e7b7e89902efb5e8c9e7c0e7cbe7b5eface872e7b5e995e7b4ea36e95befb800e7d00300000000000000"
+   "zh_hex": "15e7e6e860e7b7e89902abe8c9e7c0e7cb00e7b5b1e872e7b5e995e7b4ea36e95ba9e7d00000000000000000000000"
   },
   {
    "jp_offset": "0xaf71",
@@ -1928,9 +1928,9 @@
    "kind": "dialogue",
    "speaker": "克里斯",
    "jp_text": "……じゃないでしょ、バーニィ{00}クワトロ大尉よ",
-   "zh_text": "不是那样啦、巴尼、是克瓦特罗大尉才对{00}。",
+   "zh_text": "不是那样啦、巴尼、{00}是克瓦特罗大尉才对。",
    "jp_hex": "1509092442331730234402f1a3f1f700f073f05d450000",
-   "zh_hex": "15e7b5e7b6e7b7e7daec0f02e85be89602e7b6e7d5e99fe7cfe7ecefa5efc6e836e7be00030000000000000000"
+   "zh_hex": "15e7b5e7b6e7b7e7daec0f02e85be8960200e7b6e7d5e99fe7cfe7ecbe86e836e7be0300000000000000000000"
   },
   {
    "jp_offset": "0xb07f",
@@ -1968,9 +1968,9 @@
    "kind": "dialogue",
    "speaker": "克里斯",
    "jp_text": "…それって、本当ですか？",
-   "zh_text": "…那是真的吗？",
+   "zh_text": "……是真的吗？",
    "jp_hex": "1509f0082d2f02f0ac30251b050000",
-   "zh_hex": "1509e7b7e7b6e820e7b4e802050000"
+   "zh_hex": "150909e7b6e820e7b4e80205000000"
   },
   {
    "jp_offset": "0xb119",
@@ -1980,7 +1980,7 @@
    "jp_text": "ティターンズが新形MSを開発中という{00}畳包がある以上確かめんわけにはいかん",
    "zh_text": "既然有情报说提坦斯正在开发新型MS、{00}就不能不去查证一番。",
    "jp_hex": "15f0351cf1d0f02c4cf11ec031171800f1531cf00ff0e2f4974df05034f0161b4d0000",
-   "zh_hex": "15e8c4e7efe7cbe88be913e7ede821e843e7c8ef3bef29e7fae870ef8ae977efa7ef9e0200e7c5e7b5e7c6e7b5e7ebeae9eba3efb6ee6d030000000000000000"
+   "zh_hex": "15e8c4e7efe7cbe88be913e7ede821e843e7c8ef3bef29e7fae870ef8ae97713140200e7c5e7b5e7c6e7b5e7ebeae9eba387ee6d030000000000000000000000"
   },
   {
    "jp_offset": "0xb157",
@@ -2000,7 +2000,7 @@
    "jp_text": "……いや。今回の偵桜は私と{00}アボリー、ロベルトの三人で行く",
    "zh_text": "……不。这次的侦察、由我和阿波利、罗{00}伯托三人前去。",
    "jp_hex": "150909f06003f2a537f63638a83100f3a702f3e037f600309f1e0000",
-   "zh_hex": "150909e7b503e7b9e864e7b4eeeaea8b02e8a6efcce7d3e7d2e9a8e82e02e7ec00eaa4e7f4eaa0efb2ef51e7eb030000000000000000"
+   "zh_hex": "150909e7b503e7b9e864e7b4eeeaea8b02e8a68be7d3e7d2e9a8e82e02e7ec00eaa4e7f4eaa0b4bae7eb030000000000000000000000"
   },
   {
    "jp_offset": "0xb19a",
@@ -2048,9 +2048,9 @@
    "kind": "dialogue",
    "speaker": "约翰尼·莱汀",
    "jp_text": "新参者があまり出しゃばっちゃあ{00}いけねえぜ……そうだろう、シャア？",
-   "zh_text": "新来的、可不能太出风头啊……你说是吧{00}、夏亚？",
+   "zh_text": "新来的、可不能太出风头啊……{00}你说是吧、夏亚？",
    "jp_hex": "15e335e272ad1cf256af2342392d2c421600f0b636e04de0530909f0092b4a1802f023050000",
-   "zh_hex": "15ef8aefcfe7b402e7c4e7b5e7c6e86aefbeeb75e92ee7c30909e7b8e7ede7b6e7d00002ef37e7d60500000000000000000000"
+   "zh_hex": "15ef8ad9e7b402e7c4e7b5e7c6e86aafeb75e92ee7c3090900e7b8e7ede7b6e7d002ef37e7d605000000000000000000000000"
   },
   {
    "jp_offset": "0xb293",
@@ -2080,7 +2080,7 @@
    "jp_text": "正直な話、クワトロなんて名乗ってる{00}アンタのやり方は気にいらねえが……",
    "zh_text": "老实说、你顶着克瓦特罗这名号招摇的做{00}派、我可看不顺眼……",
    "jp_hex": "15f79633e60502f073f066f2b22df01d00f08c374347d03893341746f1b11c09090000",
-   "zh_hex": "15e9cae87fe7ed02e7b8eca1e86de7d5e99fe7cfe7ece7b9e8ace833e97aebcce7b4e81c00e98502efcce7c4e7f6e7b5eab4e90b0909000000000000"
+   "zh_hex": "15e9cae87fe7ed02e7b8eca1e86de7d5e99fe7cfe7ece7b9e8ace833e97aebcce7b4e81c00e985028be7c4e7f6e7b5eab4e90b090900000000000000"
   },
   {
    "jp_offset": "0xb304",
@@ -2130,7 +2130,7 @@
    "jp_text": "……よう、赤い彗星",
    "zh_text": "……喂、赤色彗星。",
    "jp_hex": "150909f00702e37f17f1740000",
-   "zh_hex": "150909e8bd02e9e9e89fe9b6ef69030000"
+   "zh_hex": "150909e8bd02e9e9e89fe9b6b503000000"
   },
   {
    "jp_offset": "0xb3cc",
@@ -2150,7 +2150,7 @@
    "jp_text": "私はクワトロ·バジーナだ",
    "zh_text": "我是克瓦特罗·巴吉纳。",
    "jp_hex": "15a838f07304f4022b0000",
-   "zh_hex": "15efcce7b6e7d5e99fe7cfe7ecef4be85be7d9e882030000"
+   "zh_hex": "158be7b6e7d5e99fe7cfe7ec04e85be7d9e8820300000000"
   },
   {
    "jp_offset": "0xb3e8",
@@ -2188,9 +2188,9 @@
    "kind": "dialogue",
    "speaker": "约翰尼·莱汀",
    "jp_text": "ちっ……{00}アンタまでそんなことを言うかね",
-   "zh_text": "啧……连你也要这么说吗。",
+   "zh_text": "啧……连你也要这么说吗？",
    "jp_hex": "152c2d090900f08cf02bf026f0024c9bf0c8360000",
-   "zh_hex": "15e9fa0909e86ee7b8e7c0ef2ae7b9e7bde7ede802030000"
+   "zh_hex": "15e9fa0909e86ee7b8e7c0ef2ae7b9e7bde7ede802050000"
   },
   {
    "jp_offset": "0xb4d1",
@@ -2230,7 +2230,7 @@
    "jp_text": "彼らが新形MSを開発している以上、{00}どこかと戦うつもりなのは事実だろう",
    "zh_text": "既然他们在开发新型MS、那打算与某方{00}开战、想必是事实。",
    "jp_hex": "15f0d51cf1d0f02c4cf11e232f1748f0e20200f28c31b9f3374147333738f2f62b4a180000",
-   "zh_hex": "15e8c4e7efe80ce7bbef29e7fae870ef8ae977efa7ef9e02e7b7e7f5e889e832eae8efb100e7faef2802e7e6e860e7b6efb8e87f03000000000000"
+   "zh_hex": "15e8c4e7efe80ce7bbef29e7fae870ef8ae977131402e7b7e7f5e889e832eae8d000e7faef2802e7e6e860e7b6a9e87f0300000000000000000000"
   },
   {
    "jp_offset": "0xb591",
@@ -2268,9 +2268,9 @@
    "kind": "dialogue",
    "speaker": "约翰尼·莱汀",
    "jp_text": "イザって時は俺たちの力を{00}あてにしてくれていいぜ、赤い彗星",
-   "zh_text": "真到了紧要关头、尽管指望我们出力就是{00}、赤色彗星。",
+   "zh_text": "真到了紧要关头、尽管指望我们出力{00}就是了、赤色彗星。",
    "jp_hex": "15fb5f2d2faa3888f00637da4c00fb5734232ff0152f1717e05302e37f17f1740000",
-   "zh_hex": "15e820e7d7e7baeaedef2ae8bbe92e02e8f2e93be8c0e965efcce7bbefbeefb0e7c5e7b60002e9e9e89fe9b6ef6903000000000000"
+   "zh_hex": "15e820e7d7e7baeaedef2ae8bbe92e02e8f2e93be8c0e9658be7bbafda00e7c5e7b6e7ba02e9e9e89fe9b6b5030000000000000000"
   },
   {
    "jp_offset": "0xb614",
@@ -2318,9 +2318,9 @@
    "kind": "dialogue",
    "speaker": "エゥーイ国我",
    "jp_text": "この施設内で製作されている新形MSの{00}達取、ないしは破塊……いいな",
-   "zh_text": "夺取、或是破坏这座设施内正在制造的新{00}型MS……明白了吗。",
+   "zh_text": "夺取、或是破坏这座设施内正在制造的新{00}型MS……明白了吗？",
    "jp_hex": "15f005f42ee49b30fcdd22492f1748f1d0f02c3700f33f02fdaff12309091717330000",
-   "zh_hex": "15ea17e98702e905e7b6ef6de9ede7b9ebc4eb43eb8de99aef3bef29e8dee93ee7b4ef8a00e977efa7ef9e0909ef39e809e7bae802030000000000"
+   "zh_hex": "15ea17e98702e905e7b6c7e9ede7b9ebc4eb43eb8de99aef3bef29e8dee93ee7b4ef8a00e97713140909ef39e809e7bae802050000000000000000"
   },
   {
    "jp_offset": "0xb6db",
@@ -2548,9 +2548,9 @@
    "kind": "dialogue",
    "speaker": "布莱特·诺亚",
    "jp_text": "シャトル、テンプテーシユン艇長{00}ブライト·ノア中佐です",
-   "zh_text": "我是穿梭机诱惑号的艇长、布莱德·诺亚{00}中佐。",
+   "zh_text": "我是穿梭机诱惑号的艇长、布莱特·诺亚{00}中佐。",
    "jp_hex": "15f10ff3cd02f87ff96cfa5e00f09c04f278f0a030250000",
-   "zh_hex": "15efcce7b6ea7eeb8fe7e4eb44eb87e833e7b4eb6bef3402e831e846e82cef4be972e7d600ef4eefba030000000000"
+   "zh_hex": "158be7b6ea7eeb8fe7e4eb44eb87e833e7b4eb6bef3402e831e846e7cf04e972e7d600c0a303000000000000000000"
   },
   {
    "jp_offset": "0xbb8c",
@@ -2558,9 +2558,9 @@
    "kind": "dialogue",
    "speaker": "联邦士官",
    "jp_text": "グリーン·オアシスへようこそ{00}ブライト中佐",
-   "zh_text": "欢迎来到绿洲、布莱德中佐。",
+   "zh_text": "欢迎来到绿洲、布莱特中佐。",
    "jp_hex": "15f61a04f7c43bf007f06500f09cf0a00000",
-   "zh_hex": "15ea92e931efcfe7d7ec88eacd02e831e846e82cef4eefba030000000000"
+   "zh_hex": "15ea92e931d9e7d7ec88eacd02e831e846e7cfc0a3030000000000000000"
   },
   {
    "jp_offset": "0xbbb9",
@@ -2628,9 +2628,9 @@
    "kind": "dialogue",
    "speaker": "联邦士官",
    "jp_text": "ブライト中佐もどうかお気をつけを",
-   "zh_text": "布莱德中佐、也请您多加小心。",
+   "zh_text": "布莱特中佐、也请您多加小心。",
    "jp_hex": "15f09cf0a041f1291a934cf0c94c0000",
-   "zh_hex": "15e831e846e82cef4eefba02e7c0e83ae835e7e9e854e83ee82d03000000000000"
+   "zh_hex": "15e831e846e7cfc0a302e7c0e83ae835e7e9e854e83ee82d030000000000000000"
   },
   {
    "jp_offset": "0xbcc8",
@@ -2730,7 +2730,7 @@
    "jp_text": "地球連邦政府はムーンレィスの女王、{00}ディアナ·ソレルに地球の騰治を委醸…",
    "zh_text": "地球联邦政府、便将地球的统治、托付给{00}了月之民的女王迪安娜·索雷尔……",
    "jp_hex": "15f010f01ef3a338f0c437f0790200f03104f21f34f01037f5e04ce090e322090000",
-   "zh_hex": "15ef63efd3ef2eefaaea68ea6002e8fae84aef63efd3e7b4e929ea7902e7f4e97ee83900e7bae850e7cdef38e7b4efade884ea11e7fce7eaef4be93ce8afe7e109090000000000000000"
+   "zh_hex": "15bf95ef2ed1ea68ea6002e8fae84abf95e7b4e929ea7902e7f4e97ee83900e7bae850e7cdef38e7b4b0e884ea11e7fce7ea04e93ce8afe7e10909000000000000000000000000000000"
   },
   {
    "jp_offset": "0xbdf2",
@@ -2758,9 +2758,9 @@
    "kind": "dialogue",
    "speaker": "布莱特·诺亚",
    "jp_text": "一見、理想的に思えたその治世も{00}わずか数年で綻びを生じることとなる",
-   "zh_text": "然而、那看似理想的治世、也仅仅数年、{00}便开始露出了破绽。",
+   "zh_text": "那看似理想的治世、也仅仅数年、便开始{00}露出了破绽。",
    "jp_hex": "15fe1002f1dde45534a6192af00de2a0e35a4100f80bfbae30e405e0584cb62448f0023133480000",
-   "zh_hex": "15e7efe89c02e7b7e7f6e944e872e7e6e7b4ea79e83c02e7c0eb7aeb7ae914e9090200e8fae7fae908e858efbee7baef6debe603000000000000000000"
+   "zh_hex": "15e7b7e7f6e944e872e7e6e7b4ea79e83c02e7c0eb7aeb7ae914e90902e8fae7fae90800e858afe7bac7ebe60300000000000000000000000000000000"
   },
   {
    "jp_offset": "0xbe56",
@@ -2768,9 +2768,9 @@
    "kind": "dialogue",
    "speaker": "布莱特·诺亚",
    "jp_text": "プラントに充むコーディネイターたちが{00}ムーンレィスの技怖力を宮収し……",
-   "zh_text": "居住在普兰特的调整者们、吸收了月之民{00}的技术力……",
+   "zh_text": "居住在PLANT的调整者们、吸收了月之民{00}的技术力……",
    "jp_hex": "15f0d034e2d73ff164f8216f5064e004f0061c00f0c437f2feda4ce170e2c62309090000",
-   "zh_hex": "15ea4ce859ef29e838e86fe7cfe7b4e95ce9feef6ee7bb02ed34e926e7bae850e7cdef3800e7b4ea64ebceefb00909000000000000"
+   "zh_hex": "15ea4ce859ef29eed4e024ea9ceed3eed6e7b4e95ce9feade7bb02ed34e926e7bae850e7cdef3800e7b4ea64ebceda090900000000"
   },
   {
    "jp_offset": "0xbe7e",
@@ -2838,9 +2838,9 @@
    "kind": "dialogue",
    "speaker": "(narration)",
    "jp_text": "…よ……",
-   "zh_text": "……哟……",
+   "zh_text": "……啊……",
    "jp_hex": "15094509090000",
-   "zh_hex": "150909eb2c09090000"
+   "zh_hex": "150909e7c309090000"
   },
   {
    "jp_offset": "0xbf8e",
@@ -2998,9 +2998,9 @@
    "kind": "dialogue",
    "speaker": "布莱特·诺亚",
    "jp_text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシユンDS」",
-   "zh_text": "……那么、就请尽情享受『SD高达…G{00}世代DS』、",
+   "zh_text": "……那么、就请尽情享受「SD高达G{00}世代DS」、",
    "jp_hex": "1509f00a02e00b1411f041f048000101010101e020f9786f83085fe073851114e00c0000",
-   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c80cef9eef96e812ef2b09eed100e83ce8e7ef96ef9e0d020000"
+   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c8e9c31411e812ef2beed100e83ce8e71114e9c4020000000000"
   },
   {
    "jp_offset": "0xc24d",
@@ -3028,9 +3028,9 @@
    "kind": "dialogue",
    "speaker": "玛琉",
    "jp_text": "この「聞成ガンダムルート」は{00}ここで終了となります",
-   "zh_text": "这条『平成高达路线』、就到此告一段落{00}了。",
+   "zh_text": "这条「平成高达路线」、{00}就到此告一段落了",
    "jp_hex": "15f005e00be52ce361f041f048fb35e00c3800f03e30f3aef395f0250000",
-   "zh_hex": "15e7b9e9d40ce887e837e812ef2be8d2e9160d02e7c5e7d7e7cae8e5efb6ea6be92a00e7ba03000000000000"
+   "zh_hex": "15e7b9e9d4e9c3e887e837e812ef2be8d2e916e9c40200e7c5e7d7e7cae8e587ea6be92ae7ba000000000000"
   },
   {
    "jp_offset": "0xc303",
@@ -3070,7 +3070,7 @@
    "jp_text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
    "zh_text": "那是与我们各自作战、一直在和提坦斯、{00}新吉翁交手的……",
    "jp_hex": "15a8f0063138e53434f0354300f02004f00c31b92d2ff013090000",
-   "zh_hex": "15e7b7e7b6e832efcce7bbe819efb5ef2fef2802efb6e875ef29e7d3e821e843e7c80200ef8ae7d9ee88e861ef66e7b409090000000000"
+   "zh_hex": "15e7b7e7b6e8328be7bbe819abef2fef280287e875ef29e7d3e821e843e7c80200ef8ae7d9ee88e861aee7b40909000000000000000000"
   },
   {
    "jp_offset": "0xc382",
@@ -3108,9 +3108,9 @@
    "kind": "dialogue",
    "speaker": "玛琉",
    "jp_text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシユンDS」",
-   "zh_text": "……那么、就请尽情享受『SD高达…G{00}世代DS』、",
+   "zh_text": "……那么、就请尽情享受「SD高达G{00}世代DS」、",
    "jp_hex": "1509f00a02e00b1411f041f048000101010101e020f9786f83085fe073851114e00c0000",
-   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c80cef9eef96e812ef2b09eed100e83ce8e7ef96ef9e0d020000"
+   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c8e9c31411e812ef2beed100e83ce8e71114e9c4020000000000"
   },
   {
    "jp_offset": "0xc3ed",
@@ -3118,9 +3118,9 @@
    "kind": "dialogue",
    "speaker": "玛琉",
    "jp_text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
-   "zh_text": "『燃起对战的战火！全速冲锋吧、大天使{00}号！！』",
+   "zh_text": "「自由对战的战火！全速冲锋吧、大天使{00}号！！」",
    "jp_hex": "150cf33071f3cd37f607060001ff38f4314a02f093f09a06060d0000",
-   "zh_hex": "150ceb93e847e7beef28e7b4ef28e8daef97efb4e9dae95ee967e7d002efa5e844e83f00e833ef97ef970d0000000000"
+   "zh_hex": "15e9c3abe8a6e7beef28e7b4ef28e8da06bbe9dae95ee967e7d002bee844e83f00e8330606e9c4000000000000000000"
   },
   {
    "jp_offset": "0xc46e",
@@ -3138,9 +3138,9 @@
    "kind": "dialogue",
    "speaker": "娜塔尔·巴吉路",
    "jp_text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
-   "zh_text": "首先、请允许我向你一路以来出色的指挥{00}、致以敬意。",
+   "zh_text": "首先、请允许我向你一路以来的出色指挥{00}致以敬意。",
    "jp_hex": "15f15b3802f03ef02b3794973700f2a333e257e4c034e1c3e0924ce4fe232a170000",
-   "zh_hex": "15ef40ef8b02e83aecade8a7efccefc1e7b8efb6e8d2e7f3efcfefbee89fe7b4e8c0e9490002ea32e7f3ee38ef3c0300000000000000"
+   "zh_hex": "15ef40b802e83aecade8a78b9de7b887e8d2e7f3d9e7b4afe89fe8c0e94900ea32e7f3ee38ef3c030000000000000000000000000000"
   },
   {
    "jp_offset": "0xc4a0",
@@ -3198,9 +3198,9 @@
    "kind": "dialogue",
    "speaker": "娜塔尔·巴吉路",
    "jp_text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
-   "zh_text": "便能与隆德·贝尔、预防者进行联合演习{00}。",
+   "zh_text": "便能与隆德·贝尔、预防者{00}进行联合演习。",
    "jp_hex": "15f17a04f0f402f2b7f2d1313700a0e489f4724c9f18f00241f017480000",
-   "zh_hex": "15e8fae7c6e832ed16e82cef4be857e7e102ea5ae968ef6ee892efd6ef2eefc0ea2feab600030000000000"
+   "zh_hex": "15e8fae7c6e832ed16e82c04e857e7e102ea5ae968ad00e8929fef2ea0ea2feab603000000000000000000"
   },
   {
    "jp_offset": "0xc55e",
@@ -3210,7 +3210,7 @@
    "jp_text": "貴君ならばきっと、彼らとの戦いにも{00}勝離をおさめられると私は信じている",
    "zh_text": "我相信、以你的本事、与他们一战、也定{00}能取得胜利。",
    "jp_hex": "159497334639f31002f0d53137b917344100f25b4c1a224046494831a838f1032f17480000",
-   "zh_hex": "15efcce8b1e90f02e7f3e7b8e7b4efa6efb802e832e80ce7bbefb6ef2802e7c0e86700e7c6e987e80ae8dbe82e03000000000000000000"
+   "zh_hex": "158be8b1e90f02e7f3e7b8e7b4d2a902e832e80ce7bb87ef2802e7c0e86700e7c6e987e80ae8dbe82e0300000000000000000000000000"
   },
   {
    "jp_offset": "0xc583",
@@ -3218,9 +3218,9 @@
    "kind": "dialogue",
    "speaker": "娜塔尔·巴吉路",
    "jp_text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシユンDS」",
-   "zh_text": "……那么、就请尽情享受『SD高达…G{00}世代DS』、",
+   "zh_text": "……那么、就请尽情享受「SD高达G{00}世代DS」、",
    "jp_hex": "1509f00a02e00b1411f041f048000101010101e020f9786f83085fe073851114e00c0000",
-   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c80cef9eef96e812ef2b09eed100e83ce8e7ef96ef9e0d020000"
+   "zh_hex": "150909e7b7e7bd02e7c5e83ae8f2e88bec06e8c8e9c31411e812ef2beed100e83ce8e71114e9c4020000000000"
   },
   {
    "jp_offset": "0xc5a7",
@@ -3230,7 +3230,7 @@
    "jp_text": "この後も貴君の健闘を祈る",
    "zh_text": "今后、也祝你奋战顺利。",
    "jp_hex": "15f0059c41949737f68a4ce152480000",
-   "zh_hex": "15efb9e7fe02e7c0ed97e7b8ef46ef28eab4e82e03000000"
+   "zh_hex": "15a2e7fe02e7c0ed97e7b8ef46ef28eab4e82e0300000000"
   }
  ]
 }
