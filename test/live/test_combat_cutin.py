@@ -177,8 +177,8 @@ def main():
             print("input preflight failed: the environment is not accepting game input — "
                   "no ROM verdict (exit 3)", file=sys.stderr)
             return 3
-        emu.tap(*hz.NEWGAME_BUTTON)
-        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        emu.key("A", hold_ms=250, pause=2.0)   # confirm はじめから on the menu
+        hz.log(f"New Game confirmed; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
         time.sleep(hz.INTRO_CRAWL_S)
         deploy = hz.grind_to_deploy(emu, out, tag="g")
         if deploy is None:
@@ -202,7 +202,17 @@ def main():
     finally:
         emu.kill()
 
-    frozen = frame_frozen or (pc_res is True)
+    # Oracle combination (TESTING_APPROACH §2): the ARM9 abort-PC signature is
+    # the authoritative freeze oracle when the gdb stub answers; frame-identity
+    # is the fallback for stubless environments. A still screen with a healthy
+    # advancing PC is an idle/navigation stall, not a ROM freeze.
+    if pc_res is not None:
+        frozen = pc_res is True
+        if frame_frozen and not frozen:
+            print("  [note] screen went still but the ARM9 PC is advancing — "
+                  "idle screen / navigation stall, not a freeze", flush=True)
+    else:
+        frozen = frame_frozen
     print(f"\n=== combat cut-in freeze grind :: {rom.name} ===")
     print(f"  frame-identity freeze: {frame_frozen}   gdb freeze: {pc_res is True}")
     print(f"  VERDICT: {'FREEZE (FAIL)' if frozen else 'CLEAN (PASS)'}   frames: {out}")

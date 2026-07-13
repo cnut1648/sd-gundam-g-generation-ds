@@ -571,3 +571,94 @@ the CURRENT ROM (an intermediate corpus carried stale speaker labels from an old
 and "keep as-is" calls (PLANT stays Latin, 穆 for Mu, keeping Japanese rank suffixes 大佐…)
 came from the owner, are recorded, and are excluded from gates via allowlists — so the
 gates stay 100%-green *and* honest.
+
+---
+
+## G. The full-audit campaign (charset wall, pass-2 fleet, release hardening)
+
+This section distills everything the audit campaign learned, so the repo stays
+self-explanatory even without the (optional, removable) `audit/` tree. The durable
+rules live here and in AGENTS.md / TEXT_SYSTEM.md; the terminology rulings are
+transcribed in TRANSLATION_GUIDE §2b.
+
+### G1. "Unencodable" was a demand-side illusion — audit the demand before minting
+* **Believed:** ~31 simplified hanzi could not be encoded (the "charset wall"), so
+  translations had to be reworded around them.
+* **Why it seemed right:** the atlas' ZH band looked full; a raw scan of every zh
+  field genuinely failed to encode those chars.
+* **Broken by:** the coverage ratchet dropping 0.01% after two "promotions", and the
+  demand list containing chars that only appeared in kana-bearing warmup blocks.
+* **Truth:** a third of the "demand" was **notation, not text** — glyph-priming
+  warmup rows, ptr-less never-built master records, stale decode annotations. Real
+  demand was 15 chars, all satisfiable by minting. Rephrase mitigations needed: 0.
+* **Guard:** `charset_wall.py` demand rules (kana-bearing zh = annotation; ptr-less
+  master entries never build); `encode_sweep.py` proves 0 unencodable per surface.
+
+### G2. Dual-use slots poison the coverage denominator
+* **Believed:** if a JP-band slot's bitmap IS the needed hanzi (従/償), registering
+  it as encodable is free.
+* **Truth:** those tokens also appear in real JP dialogue; a shared registration
+  makes the JP-source scan count original Japanese as "translated", silently
+  deflating the ratchet baseline. Same-form chars (九僚厄奏婚屋幅廉昂殴遂) must be
+  MINTED into token-free cells, never dual-registered; the JP-side coverage scan
+  counts minted slots as kanji (`minted_as_zh=False`).
+
+### G3. Every name pool is a trampoline surface (the 多佛炮→多恩炮 class)
+* **Believed:** label arenas (unit/weapon/pilot/ability nameplates, ID names and
+  summaries) were renderA-direct, so JP-band mints and one-byte codes were safe.
+* **Broken by:** shipped garbles — 多佛炮 rendering 多恩炮 (JP-band mint), a
+  nameplate `D` (one-byte 0x11) rendering き, β at JP slot 345 rendering garbage,
+  ・ as one-byte 0x04 rendering renderB '3'.
+* **Truth:** every string reached through a table `ptr` renders on the 8×16
+  trampoline: only ZH-band 2-byte tokens plus the record's ORIGINAL renderB bytes
+  are safe. Minting for name surfaces must target ZH-band cells (reclaim
+  zero-demand or junk kana/latin cells; both scans token-free).
+* **Guard:** `slot_of(surface="bank")` refuses JP-band registrations; gate
+  `pool_trampoline_tokens` = zero JP-band 2-byte tokens in any referenced pool
+  string; `bank_onebyte_regression` ratchets one-byte inventory.
+
+### G4. Trampoline glyph geometry: anchor at penY+3, embed atlas digits
+12×12 atlas cells top-anchored in the 16px renderB line box float 3px above the
+JP ink-bottom (row 14). The cave patch biases penY by +3 around the 12×12 renderer
+call (restoring after — penY is persistent ctx). The reverse case is the sunk-digit
+class: runtime/embedded renderB digits next to atlas glyphs sit low — per-level
+label strings must embed ZH-band digit tokens (NT等级N, 指挥N; there is NO runtime
+digit append — the digits are baked in the five 指揮レベル strings). The offline
+oracle mirrors the +3 anchor so screenshots and oracle renders agree by construction.
+
+### G5. Growing pooled strings: ledger-mediated relocation, three arenas
+Order: ui-bank heap-safe gaps → resident-cave zero runs → ledger-vacated spans
+(old homes of relocated strings; provably dead = no table ptr and no arm9 word
+references them). Everything goes through `data/arenas/relocation_ledger.json`;
+allocation marks must be written ONLY on committed success (a reject after alloc
+must not leak the span), and re-runs must be idempotent — the one double-allocation
+(人类的梦想 twice) came from exactly that leak and scrambled two records.
+Exact-span in-place rewrites are legal when the old string already fills the span
+with no in-record NUL (the terminator is the next record's framing).
+
+### G6. Annotations must be decoded per-surface
+The `zh` fields of `data/names/*.json` mirror pool bytes. Syncing them with the
+STAGE decoder wrote 来 for 0xD9 (！) and メ for 0x7C (…) across ~150 records —
+self-inflicted "garble" that then misled audits. Any annotation sync must use the
+trampoline decoder (renderB for one-byte, ZH-band for 2-byte) for pool surfaces.
+`render-vs-annotation` diffing (trampoline-decode every referenced string, compare
+to its zh) is the cheap detector for the whole class — keep it zero.
+
+### G7. Audit fleets work; reconciliation without evidence does not
+The scaled pattern that held up: chunk manifests with flags (short/leftover/
+changed) + a shared brief with binding style rules + websearch-armed subagents
+producing schema-fixed reports with per-fix evidence + validating appliers with
+stale-old idempotency + adjudication of cross-chunk conflicts by recorded owner
+rules (mainland-wiki form wins; 特殊演習 and 特別演習 are two different menu
+items — direction decided per-line by the JP). What failed: a "reconciler" agent
+compacting names without evidence (光说！/珍贵/灭) — over-compaction is a defect
+(D6); names may only be condensed into natural phrases sharing the quote's terms,
+名台词 and effect text are NEVER truncated.
+
+### G8. Release hygiene
+`README.md`'s expected sha1s (main + pad32m) are part of the deliverable — every
+data/code change re-syncs them (a stale hash makes every user think their build
+failed). Byte-reproducibility is proven by a clean-copy rebuild
+(rsync minus .git/.venv → build → identical sha1), not by rebuilding in place.
+The build path must never depend on `audit/`; one-time migrations rewrite sources
+and retire.

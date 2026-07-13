@@ -50,9 +50,14 @@ Two fixed-cell fonts; **rendered width = glyph count × advance** (no proportion
 Japanese glyphs (the JP in-image atlas had exactly 2,196); slots **2196–4319** are the added
 Chinese glyphs. The charmap (char ↔ slot, in the build data) is the single source of truth
 for encoding; slot bitmaps in the ROM are the single source of truth for decoding (see
-`LESSONS_LEARNED.md` D1). Added glyphs were rasterized from Noto Sans CJK SC at size 13 /
-alpha 110 to match the original raster style; keep that recipe for any new glyph or the
-weight mismatch is visible on screen.
+`LESSONS_LEARNED.md` D1). Added glyphs are rasterized from **WenQuanYi Bitmap Song 12px**
+(`/usr/share/fonts/X11/misc/wenquanyi_9pt.pcf`, monochrome, 11x11 design box at the cell
+origin) and carry the original Japanese raster grammar: stroke pixels = value 1, plus a
+bottom-right L-shadow (value 2) equal to the stroke dilated one pixel right/down/down-right
+(rule verified on 2194/2194 original glyphs). The atlas regeneration procedure (WQY raster + shadow grammar; historically `audit/tools/regen_atlas_v6.py`) regenerates
+the atlas deterministically; the `glyph_style_uniformity` static gate enforces the grammar
+on every slot. Keep that recipe for any new glyph or the weight/baseline mismatch is
+visible on screen.
 
 **Render dispatch**: the drawer (`0x02013220`) picks renderA or renderB per string context
 (ctx+0x64 bit0). The renderB glyph fetch routes through the **trampoline** at `0x0211A2A0`
@@ -77,6 +82,27 @@ consequences:
 **The critical literals** (all catalogued in ROM_STRUCTURE.md): atlas base `0x1315C`
 (→ `0x023027A0`), renderB font base `0x1321C` (must stay `0x02133F14`), decoder branch
 `0x1322C` (must stay `11 d1`).
+
+**The definitive per-surface table** (established empirically — on-screen garble
+reproduction + shipped-byte analysis; enforced by `bank_onebyte_regression` and
+`offline_coverage` gates, modeled by `test/render_oracle.py`):
+
+| surface | path | one-byte codes |
+|---|---|---|
+| stage dialogue (`data/dialogue/stages/*`) | renderA-direct | safe (atlas low slots) |
+| barks (`data/files/barks/*`) | renderA-direct | safe |
+| cut-ins (`1dc.bin`) | renderA-direct | safe |
+| library/hangar banks (`324/c4b/31e/b6e/b6f`) | renderA-direct | safe |
+| briefing blobs (`data/arenas/briefing_blobs.json`) | renderA-direct | safe (0x09 '…' padding is canonical) |
+| idcmd detail pool (`data/arenas/idcmd_detail_pool.json`) | renderA-direct | safe |
+| event text blocks | script/pointer records | n/a (text fields are annotations) |
+| battle effect banks (`1da/1db/1df/1e0`) | **trampoline** | forbidden unless in the record's JP span (zh_hex required by the build) |
+| resident caves / ui names / battle name pool / post dict labels | **trampoline** | forbidden unless in the record's HEAD payload |
+
+The renderB 8×16 charset (all 224 one-byte slots, kana ordering, the +4/+5 敵-skip
+alignment law, punctuation tail) is catalogued in `data/renderb_charset.json` — decode
+trampoline bytes with THAT table, never with the renderA charmap (the JSON `text`
+fields of trampoline banks are renderA NOTATION, not what the player sees).
 
 ## 4. Block/segment grammar (stage dialogue)
 

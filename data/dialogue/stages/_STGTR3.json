@@ -9,9 +9,9 @@
    "kind": "dialogue",
    "speaker": "夏亚",
    "jp_text": "今回の作戦は連邦パトロール艦隊の{00}迎撃が目的である！",
-   "zh_text": "此次作战的目的、是迎击联邦的巡逻舰队{00}！",
+   "zh_text": "此次作战的目的、{00}是迎击联邦的巡逻舰队！",
    "jp_hex": "15f2a537f0e438f01ef6eaf0683700f10d1cf11c30f00f060000",
-   "zh_hex": "15e7cae864ef2fef28e7b4efd4e7b402e7b6e931e7ccef2eefaae7b4ec12ec3fe7d4e7c900ef970000"
+   "zh_hex": "15e7cae864ef2fef28e7b4d5e7b40200e7b6e931e7ccef2ed1e7b4ec12ec3fe7d4e7c9060000000000"
   },
   {
    "jp_offset": "0x10b8",
@@ -51,7 +51,7 @@
    "jp_text": "『勝離蒸件』を選択すると、ステージの{00}勝離蒸件と敗北蒸件が確認できます",
    "zh_text": "选『胜利条件』、可确认本关胜败条件",
    "jp_hex": "150cf25bf4ca0d4cf3b0f0f902f4383700f25bf4ca31f341f4ca1cf1c3f017f0250000",
-   "zh_hex": "15e9660ce8dbe82ee9d4e9910d02e7c4e88ce8a0efa6e8bbe8dbe88fe9d4e9910000"
+   "zh_hex": "15e9660ce8dbe82ee9d4e9910d02e7c4e88ce8a0d2e8bbe8dbe88fe9d4e991000000"
   },
   {
    "jp_offset": "0x1167",
@@ -61,7 +61,7 @@
    "jp_text": "このステージでの勝離蒸件は{00}「敵軍の全滅」",
    "zh_text": "本关的胜利条件是『歼灭全部敌军』",
    "jp_hex": "15f005f4383037f25bf4ca3800e00bf63737f41ce00c0000",
-   "zh_hex": "15efa6e8bbe7b4e8dbe82ee9d4e991e7b60ceaafe8e1efb4ef70e7e3e7e00d0000"
+   "zh_hex": "15d2e8bbe7b4e8dbe82ee9d4e991e7b60ceaafe8e1bbcce7e3e7e00d0000000000"
   },
   {
    "jp_offset": "0x117f",
@@ -81,7 +81,7 @@
    "jp_text": "デトローフのザンジバルが撃破されない{00}よう、敵軍を撃破しましょう",
    "zh_text": "注意别让德托洛夫的桑吉巴尔被击破、把{00}敌军歼灭吧",
    "jp_hex": "15f6b437f7281cf0692249331700f00702f6374cf069f0122344180000",
-   "zh_hex": "15eaccef3ce7e5e7f9e82ce7f4e94ae830e7b4ea2be7d9e85be7e1e7f1e7ccef6d02e81b00e7e3e7e0eaafe8e1e7d00000"
+   "zh_hex": "15eaccef3ce7e5e7f9e82ce7f4e94ae830e7b4ea2be7d9e85be7e1e7f1e7ccc702e81b00e7e3e7e0eaafe8e1e7d0000000"
   },
   {
    "jp_offset": "0x11e8",
@@ -141,7 +141,7 @@
    "jp_text": "戦闘に参加したユニットは命中と回避に{00}能力レベルに応じたボーナスを得ます",
    "zh_text": "参战的单位、命中与回避都会按能力等级{00}获得加成",
    "jp_hex": "15f04f34f3bc232af19b38f5be31f0333400f18df72134e0ca242af9f24ce48df0250000",
-   "zh_hex": "15ed1aef28e7b4e918e83402e853ef4ee832ef52efd9e840e7e2ea76e7c6efb0e826eaee00e9d8e80ae854e8370000"
+   "zh_hex": "15ed1aef28e7b4e918e83402e853c0e8328ccae840e7e2ea76e7c6dae826eaee00e9d8e80ae854e837000000000000"
   },
   {
    "jp_offset": "0x12d6",
@@ -161,7 +161,7 @@
    "jp_text": "艦長の指揮{SLOT:1802}囲内で戦うことで{00}より有離に戦闘を進めることができます",
    "zh_text": "在舰长的指挥范围内作战、便能更有利地{00}推进战斗",
    "jp_hex": "15f03437f0edf638e49b30b918f0023000f02df61134f04f4cf25c48f0021cf017f0250000",
-   "zh_hex": "15ef29e7d4ef34e7b4e8c0e949ec8ee9dee99aef2fef2802e8fae7c6e952e7cbe82eef6300eaabe892ef28e7ff0000"
+   "zh_hex": "15ef29e7d4ef34e7b4e8c0e949ec8ee9dee99aef2fef2802e8fae7c6e952e7cbe82ebf00eaabe892ef28e7ff000000"
   },
   {
    "jp_offset": "0x133e",
@@ -221,7 +221,7 @@
    "jp_text": "そういうシャア大佐こそ、{00}さすがは「赤い彗星」ってもんですよ",
    "zh_text": "您夏亚大佐才是、真不愧是『赤色彗星』{00}啊",
    "jp_hex": "15f0f6f023f05cf0650200f19938e00be37f17f174e00c2d2f414d3025450000",
-   "zh_hex": "15e835ef37e7d6efa5efbae836e7b602e820e7b5ea08e7b60ce9e9e89fe9b6ef690d00e7c30000"
+   "zh_hex": "15e835ef37e7d6bea3e836e7b602e820e7b5ea08e7b60ce9e9e89fe9b6b50d00e7c30000000000"
   },
   {
    "jp_offset": "0x140a",
@@ -241,7 +241,7 @@
    "jp_text": "いや……木馬の戦力は{00}弊の部隊とは疲穫にならない",
    "zh_text": "不……木马的战力、远非寻常部队可比",
    "jp_hex": "15f0600909f24037f07d3800e52f37f0643138ffb634334633170000",
-   "zh_hex": "15e7b50909efa9e84fe7b4ef28efb002e94ce8f0efe2efc7ef70e7c9e7c4e8250000"
+   "zh_hex": "15e7b50909d4e84fe7b4ef28da02e94ce8f0efe2b3cce7c9e7c4e825000000000000"
   },
   {
    "jp_offset": "0x145f",
@@ -249,9 +249,9 @@
    "kind": "dialogue",
    "speaker": "夏亚",
    "jp_text": "やはりここは、{00}入念に準備を整えておくべきだろう",
-   "zh_text": "果然、这里还是该把准备做得周全才行",
+   "zh_text": "看来、还是该把准备做得周全才行",
    "jp_hex": "15f11df03e380200e4a5e4ac34f0ff4cf6682f1af8751d2b4a180000",
-   "zh_hex": "15e871e7ef02e7b9ef31e7f7e7b6e898e81be87ae877e81ce80aea5cefb4e836efd60000"
+   "zh_hex": "15e7f6d902e7f7e7b6e898e81be87ae877e81ce80aea5cbbe8369f000000000000000000"
   },
   {
    "jp_offset": "0x1496",
@@ -309,9 +309,9 @@
    "kind": "dialogue",
    "speaker": "西玛·加拉霍",
    "jp_text": "デトローフ！{00}進路をサイド6へ！",
-   "zh_text": "德托洛夫！航向、转向SIDE6！",
+   "zh_text": "德托洛夫！航向、转往SID{SLOT:4223}6！",
    "jp_hex": "15f6b40600f23e4cf182e0183b060000",
-   "zh_hex": "15e82ce7f4e94ae830ef97e9c1efc102e9c2efc1ef9eef62ef96ef9fe9cdef970000"
+   "zh_hex": "15e82ce7f4e94ae83006e9c19d02e9c2e911141211ef9fe9cd060000000000000000"
   },
   {
    "jp_offset": "0x157f",
@@ -319,9 +319,9 @@
    "kind": "dialogue",
    "speaker": "德托洛夫·科塞尔",
    "jp_text": "へい！……了解でさ！！",
-   "zh_text": "嘿……明白！",
+   "zh_text": "是！……明白！",
    "jp_hex": "153b17060909f086302206060000",
-   "zh_hex": "15e85e0909ef39e809ef970000"
+   "zh_hex": "15e7b6060909ef39e809060000"
   },
   {
    "jp_offset": "0x3a82",
@@ -369,9 +369,9 @@
    "kind": "dialogue",
    "speaker": "康斯康",
    "jp_text": "シャアの見ている前で{00}木馬を討ち取ってくれる！！",
-   "zh_text": "就在夏亚眼皮底下、把木马击沉给他看！{00}！",
+   "zh_text": "就在夏亚眼皮底下、{00}把木马击沉给他看！！",
    "jp_hex": "15f023379a2f1748ba3000f2404ce4842ce2bd2d2ff0154806060000",
-   "zh_hex": "15e7c5ef29ef37e7d6e90bebdde9b4ef4d02e81befa9e84fe7cce983e839e80ce7f6ef9700ef970000"
+   "zh_hex": "15e7c5ef29ef37e7d6e90bebdde9b4890200e81bd4e84fe7cce983e839e80ce7f60606000000000000"
   },
   {
    "jp_offset": "0x3bbe",
@@ -399,9 +399,9 @@
    "kind": "dialogue",
    "speaker": "夏亚",
    "jp_text": "くっ……！{00}旗艦を撃破されてしまっては……",
-   "zh_text": "唔……！旗舰若被击破……",
+   "zh_text": "唔……！旗舰竟被击破……",
    "jp_hex": "151e2d09090600f3a04cf06922492ff0122d2f3809090000",
-   "zh_hex": "15e81d0909ef97eb0be7d4e7e7e7f1e7ccef6d09090000"
+   "zh_hex": "15e81d090906eb0be7d4ef2ce7f1e7ccc7090900000000"
   },
   {
    "jp_offset": "0x425e",
@@ -451,7 +451,7 @@
    "jp_text": "いえ……これは開発部および{00}参暴本部からの援除であります",
    "zh_text": "不……这是来自开发部以及参谋本部的援{00}助",
    "jp_hex": "15f0f30909f00e38f11eccf6a200f418f2ec1b4637f88a30f046f0250000",
-   "zh_hex": "15e7b50909e7b9e7b6efcfefb5e7fae870ef70e7f3e9cfed1aea6eefa6ef70e7b4e86300ea230000"
+   "zh_hex": "15e7b50909e7b9e7b6d9abe7fae870cce7f3e9cfed1aea6ed2cce7b4e86300ea2300000000000000"
   },
   {
    "jp_offset": "0x434c",
@@ -489,9 +489,9 @@
    "kind": "dialogue",
    "speaker": "吉恩士官",
    "jp_text": "はっ！",
-   "zh_text": "哈！",
+   "zh_text": "是！",
    "jp_hex": "15382d060000",
-   "zh_hex": "15e7e8ef970000"
+   "zh_hex": "15e7b606000000"
   },
   {
    "jp_offset": "0x43da",
@@ -501,7 +501,7 @@
    "jp_text": "参暴部からはクリアランスパーツ、2点{00}およびカスタムパーツ、8点",
    "zh_text": "参谋部赠送性能零件2件、以及定制零件{00}8件",
    "jp_hex": "15f418cc1b4638f762f4a261f4b9020fe46300f6a25661647bf4b902e01ae4630000",
-   "zh_hex": "15ed1aea6eef70edbae9bae951e7c6eb74e991ef5fe99102e7f3e9cfe867e8deeb74e99100ec44e9910000"
+   "zh_hex": "15ed1aea6eccedbae9bae951e7c6eb74e9910fe99102e7f3e9cfe867e8deeb74e99100ec44e99100000000"
   },
   {
    "jp_offset": "0x43fc",
@@ -511,7 +511,7 @@
    "jp_text": "高機動スラスター、5点{00}高性能ビーム兵装、5点",
    "zh_text": "高机动推进器5件、高性能光束兵装5件",
    "jp_hex": "15f8f0f72902e017e46300f722f375fa7002e017e4630000",
-   "zh_hex": "15e812e7e4ef30eaabe892e8c3ec03e99102e812e951e7c6e83de895ef93e98fec03e9910000"
+   "zh_hex": "15e812e7e4ef30eaabe892e8c3ec03e99102e812e951e7c6e83de895cee98fec03e991000000"
   },
   {
    "jp_offset": "0x4414",
@@ -529,9 +529,9 @@
    "kind": "dialogue",
    "speaker": "吉恩士官",
    "jp_text": "また、開発部からは全変換パーツを{00}各1点ずつであります",
-   "zh_text": "另外、开发部赠予全部种类的转换零件、{00}各1件",
+   "zh_text": "另外、开发部赠予全部种类的变换零件、{00}各1件",
    "jp_hex": "15f09e02f11ecc1b4638bbe537e129f4b94c00e1060ee463262e30f046f0250000",
-   "zh_hex": "15e99be8f702e7fae870ef70edbaefb7efb4ef70e7d1e841e7b4e9c2ea78eb74e9910200e819eff7e9910000"
+   "zh_hex": "15e99be8f702e7fae870ccedbad6bbcce7d1e841e7b4e955ea78eb74e9910200e8190ee99100000000000000"
   },
   {
    "jp_offset": "0x4444",
@@ -551,7 +551,7 @@
    "jp_text": "いえ……これは参暴本部からの{00}援除であります",
    "zh_text": "不……这是来自参谋本部的援助",
    "jp_hex": "15f0f30909f00e38f418f2ec1b463700f88a30f046f0250000",
-   "zh_hex": "15e7b50909e7b9e7b6efcfefb5ed1aea6eefa6ef70e7b4e863ea230000"
+   "zh_hex": "15e7b50909e7b9e7b6d9abed1aea6ed2cce7b4e863ea23000000000000"
   },
   {
    "jp_offset": "0x448f",
@@ -601,7 +601,7 @@
    "jp_text": "高機動スラスター、5点{00}高性能ビーム兵装、5点",
    "zh_text": "高机动推进器5件、高性能光束兵装5件",
    "jp_hex": "15f8f0f72902e017e46300f722f375fa7002e017e4630000",
-   "zh_hex": "15e812e7e4ef30eaabe892e8c3ec03e99102e812e951e7c6e83de895ef93e98fec03e9910000"
+   "zh_hex": "15e812e7e4ef30eaabe892e8c3ec03e99102e812e951e7c6e83de895cee98fec03e991000000"
   },
   {
    "jp_offset": "0x4543",
@@ -659,9 +659,9 @@
    "kind": "dialogue",
    "speaker": "吉恩士官",
    "jp_text": "では、変換パーツ全種{00}各1点ずつをお受け取りください",
-   "zh_text": "那么、请收下各类转换零件各1件",
+   "zh_text": "那么、请收下各类变换零件各1件",
    "jp_hex": "15f00a02e537e129f4b9bbe2c100e1060ee463262e4cfd4de2bd47f083170000",
-   "zh_hex": "15e7b7e7bd02e83ae926ef4de819e841e9c2ea78eb74e991e819eff7e9910000"
+   "zh_hex": "15e7b7e7bd02e83ae92689e819e841e955ea78eb74e991e8190ee99100000000"
   }
  ]
 }

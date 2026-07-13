@@ -17,8 +17,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 * Input: the Japanese cartridge dump, sha1 `12443b91297a57bcd2ace8da989c26ae635a79fd`.
 * Output: `sd-gundam-g-generation-zh.nds`, 30,324,584 B, sha1
-  `919eb5026501bdc757bbb304d2b02340e320a5b9`; with `--pad32m` also the 32 MiB 0xFF-padded
-  image (sha1 `f6d0a65c26c43b1a699dc0af2d029faeb097c5ef`).
+  `ef8a816fd4970e14c16a19c662929b3b4d292bf2`; with `--pad32m` also the 32 MiB 0xFF-padded
+  image (sha1 `b988e658a96cc20ec7b020c3c1019afc1d4f0106`).
 * The build is a **single deterministic pass** (~5 s). Every component is verified against
   `data/manifest.json`; the final ROM hash is verified last. `--skip-verify` downgrades
   hash mismatches to warnings — the mode you use while editing translations.

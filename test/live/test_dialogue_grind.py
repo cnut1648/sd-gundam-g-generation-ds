@@ -66,8 +66,8 @@ def main():
                   "no ROM verdict (exit 3)", file=sys.stderr)
             emu.kill()
             return 3
-        emu.tap(*hz.NEWGAME_BUTTON)
-        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        emu.key("A", hold_ms=250, pause=2.0)   # confirm はじめから on the menu
+        hz.log(f"New Game confirmed; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
         time.sleep(hz.INTRO_CRAWL_S)
     except Exception as e:
         print(f"harness failure during boot: {e}", file=sys.stderr)

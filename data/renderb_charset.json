@@ -1,0 +1,933 @@
+{
+ "_about": "renderB 8x16 UI font charset (arm9 0x02133F14, 32B/slot). Identified by 4 subagent teams with word-level proof from the JP ROM. On trampoline surfaces one-byte tokens and 2-byte tokens with slot<2196 render THESE glyphs, not the atlas. See docs/TEXT_SYSTEM.md.",
+ "slots": {
+  "0": {
+   "char": null,
+   "kind": "blank/control"
+  },
+  "1": {
+   "char": null,
+   "kind": "blank/control"
+  },
+  "2": {
+   "char": "1",
+   "kind": "digit"
+  },
+  "3": {
+   "char": "2",
+   "kind": "digit"
+  },
+  "4": {
+   "char": "3",
+   "kind": "digit"
+  },
+  "5": {
+   "char": "D",
+   "kind": "latin"
+  },
+  "6": {
+   "char": "I",
+   "kind": "latin"
+  },
+  "7": {
+   "char": "M",
+   "kind": "latin"
+  },
+  "8": {
+   "char": "S",
+   "kind": "latin"
+  },
+  "9": {
+   "char": "ぁ",
+   "kind": "kana"
+  },
+  "10": {
+   "char": "あ",
+   "kind": "kana"
+  },
+  "11": {
+   "char": "い",
+   "kind": "kana"
+  },
+  "12": {
+   "char": "う",
+   "kind": "kana"
+  },
+  "13": {
+   "char": "え",
+   "kind": "kana"
+  },
+  "14": {
+   "char": "お",
+   "kind": "kana"
+  },
+  "15": {
+   "char": "か",
+   "kind": "kana"
+  },
+  "16": {
+   "char": "が",
+   "kind": "kana"
+  },
+  "17": {
+   "char": "き",
+   "kind": "kana"
+  },
+  "18": {
+   "char": "く",
+   "kind": "kana"
+  },
+  "19": {
+   "char": "け",
+   "kind": "kana"
+  },
+  "20": {
+   "char": "げ",
+   "kind": "kana"
+  },
+  "21": {
+   "char": "こ",
+   "kind": "kana"
+  },
+  "22": {
+   "char": "さ",
+   "kind": "kana"
+  },
+  "23": {
+   "char": "し",
+   "kind": "kana"
+  },
+  "24": {
+   "char": "じ",
+   "kind": "kana"
+  },
+  "25": {
+   "char": "す",
+   "kind": "kana"
+  },
+  "26": {
+   "char": "ず",
+   "kind": "kana"
+  },
+  "27": {
+   "char": "せ",
+   "kind": "kana"
+  },
+  "28": {
+   "char": "そ",
+   "kind": "kana"
+  },
+  "29": {
+   "char": "ぞ",
+   "kind": "kana"
+  },
+  "30": {
+   "char": "た",
+   "kind": "kana"
+  },
+  "31": {
+   "char": "だ",
+   "kind": "kana"
+  },
+  "32": {
+   "char": "っ",
+   "kind": "kana"
+  },
+  "33": {
+   "char": "つ",
+   "kind": "kana"
+  },
+  "34": {
+   "char": "て",
+   "kind": "kana"
+  },
+  "35": {
+   "char": "で",
+   "kind": "kana"
+  },
+  "36": {
+   "char": "と",
+   "kind": "kana"
+  },
+  "37": {
+   "char": "ど",
+   "kind": "kana"
+  },
+  "38": {
+   "char": "な",
+   "kind": "kana"
+  },
+  "39": {
+   "char": "に",
+   "kind": "kana"
+  },
+  "40": {
+   "char": "ぬ",
+   "kind": "kana"
+  },
+  "41": {
+   "char": "ね",
+   "kind": "kana"
+  },
+  "42": {
+   "char": "の",
+   "kind": "kana"
+  },
+  "43": {
+   "char": "は",
+   "kind": "kana"
+  },
+  "44": {
+   "char": "ば",
+   "kind": "kana"
+  },
+  "45": {
+   "char": "ふ",
+   "kind": "kana"
+  },
+  "46": {
+   "char": "へ",
+   "kind": "kana"
+  },
+  "47": {
+   "char": "ほ",
+   "kind": "kana"
+  },
+  "48": {
+   "char": "ま",
+   "kind": "kana"
+  },
+  "49": {
+   "char": "み",
+   "kind": "kana"
+  },
+  "50": {
+   "char": "む",
+   "kind": "kana"
+  },
+  "51": {
+   "char": "め",
+   "kind": "kana"
+  },
+  "52": {
+   "char": "も",
+   "kind": "kana"
+  },
+  "53": {
+   "char": "ゃ",
+   "kind": "kana"
+  },
+  "54": {
+   "char": "や",
+   "kind": "kana"
+  },
+  "55": {
+   "char": "ょ",
+   "kind": "kana"
+  },
+  "56": {
+   "char": "よ",
+   "kind": "kana"
+  },
+  "57": {
+   "char": "ら",
+   "kind": "kana"
+  },
+  "58": {
+   "char": "り",
+   "kind": "kana"
+  },
+  "59": {
+   "char": "る",
+   "kind": "kana"
+  },
+  "60": {
+   "char": "れ",
+   "kind": "kana"
+  },
+  "61": {
+   "char": "ろ",
+   "kind": "kana"
+  },
+  "62": {
+   "char": "わ",
+   "kind": "kana"
+  },
+  "63": {
+   "char": "を",
+   "kind": "kana"
+  },
+  "64": {
+   "char": "ん",
+   "kind": "kana"
+  },
+  "65": {
+   "char": "ア",
+   "kind": "kana"
+  },
+  "66": {
+   "char": "ィ",
+   "kind": "kana"
+  },
+  "67": {
+   "char": "イ",
+   "kind": "kana"
+  },
+  "68": {
+   "char": "ゥ",
+   "kind": "kana"
+  },
+  "69": {
+   "char": "ウ",
+   "kind": "kana"
+  },
+  "70": {
+   "char": "ェ",
+   "kind": "kana"
+  },
+  "71": {
+   "char": "エ",
+   "kind": "kana"
+  },
+  "72": {
+   "char": "オ",
+   "kind": "kana"
+  },
+  "73": {
+   "char": "カ",
+   "kind": "kana"
+  },
+  "74": {
+   "char": "ガ",
+   "kind": "kana"
+  },
+  "75": {
+   "char": "キ",
+   "kind": "kana"
+  },
+  "76": {
+   "char": "ギ",
+   "kind": "kana"
+  },
+  "77": {
+   "char": "ク",
+   "kind": "kana"
+  },
+  "78": {
+   "char": "グ",
+   "kind": "kana"
+  },
+  "79": {
+   "char": "コ",
+   "kind": "kana"
+  },
+  "80": {
+   "char": "ゴ",
+   "kind": "kana"
+  },
+  "81": {
+   "char": "サ",
+   "kind": "kana"
+  },
+  "82": {
+   "char": "ザ",
+   "kind": "kana"
+  },
+  "83": {
+   "char": "シ",
+   "kind": "kana"
+  },
+  "84": {
+   "char": "ジ",
+   "kind": "kana"
+  },
+  "85": {
+   "char": "ス",
+   "kind": "kana"
+  },
+  "86": {
+   "char": "ズ",
+   "kind": "kana"
+  },
+  "87": {
+   "char": "セ",
+   "kind": "kana"
+  },
+  "88": {
+   "char": "タ",
+   "kind": "kana"
+  },
+  "89": {
+   "char": "ダ",
+   "kind": "kana"
+  },
+  "90": {
+   "char": "チ",
+   "kind": "kana"
+  },
+  "91": {
+   "char": "ッ",
+   "kind": "kana"
+  },
+  "92": {
+   "char": "ツ",
+   "kind": "kana"
+  },
+  "93": {
+   "char": "テ",
+   "kind": "kana"
+  },
+  "94": {
+   "char": "デ",
+   "kind": "kana"
+  },
+  "95": {
+   "char": "ト",
+   "kind": "kana"
+  },
+  "96": {
+   "char": "ド",
+   "kind": "kana"
+  },
+  "97": {
+   "char": "ナ",
+   "kind": "kana"
+  },
+  "98": {
+   "char": "ニ",
+   "kind": "kana"
+  },
+  "99": {
+   "char": "ネ",
+   "kind": "kana"
+  },
+  "100": {
+   "char": "ハ",
+   "kind": "kana"
+  },
+  "101": {
+   "char": "バ",
+   "kind": "kana"
+  },
+  "102": {
+   "char": "パ",
+   "kind": "kana"
+  },
+  "103": {
+   "char": "ビ",
+   "kind": "kana"
+  },
+  "104": {
+   "char": "フ",
+   "kind": "kana"
+  },
+  "105": {
+   "char": "ブ",
+   "kind": "kana"
+  },
+  "106": {
+   "char": "プ",
+   "kind": "kana"
+  },
+  "107": {
+   "char": "ベ",
+   "kind": "kana"
+  },
+  "108": {
+   "char": "ボ",
+   "kind": "kana"
+  },
+  "109": {
+   "char": "マ",
+   "kind": "kana"
+  },
+  "110": {
+   "char": "ミ",
+   "kind": "kana"
+  },
+  "111": {
+   "char": "ム",
+   "kind": "kana"
+  },
+  "112": {
+   "char": "メ",
+   "kind": "kana"
+  },
+  "113": {
+   "char": "モ",
+   "kind": "kana"
+  },
+  "114": {
+   "char": "ャ",
+   "kind": "kana"
+  },
+  "115": {
+   "char": "ュ",
+   "kind": "kana"
+  },
+  "116": {
+   "char": "ラ",
+   "kind": "kana"
+  },
+  "117": {
+   "char": "リ",
+   "kind": "kana"
+  },
+  "118": {
+   "char": "ル",
+   "kind": "kana"
+  },
+  "119": {
+   "char": "レ",
+   "kind": "kana"
+  },
+  "120": {
+   "char": "ロ",
+   "kind": "kana"
+  },
+  "121": {
+   "char": "ン",
+   "kind": "kana"
+  },
+  "122": {
+   "char": "、",
+   "kind": "punct"
+  },
+  "123": {
+   "char": "。",
+   "kind": "punct"
+  },
+  "124": {
+   "char": "…",
+   "kind": "punct"
+  },
+  "125": {
+   "char": "（",
+   "kind": "punct"
+  },
+  "126": {
+   "char": "）",
+   "kind": "punct"
+  },
+  "127": {
+   "char": "_",
+   "kind": "punct"
+  },
+  "128": {
+   "char": "＜",
+   "kind": "punct"
+  },
+  "129": {
+   "char": "＞",
+   "kind": "punct"
+  },
+  "130": {
+   "char": "尉",
+   "kind": "hanzi"
+  },
+  "131": {
+   "char": "一",
+   "kind": "hanzi"
+  },
+  "132": {
+   "char": "俺",
+   "kind": "hanzi"
+  },
+  "133": {
+   "char": "下",
+   "kind": "hanzi"
+  },
+  "134": {
+   "char": "何",
+   "kind": "hanzi"
+  },
+  "135": {
+   "char": "我",
+   "kind": "hanzi"
+  },
+  "136": {
+   "char": "回",
+   "kind": "hanzi"
+  },
+  "137": {
+   "char": "開",
+   "kind": "hanzi"
+  },
+  "138": {
+   "char": "獲",
+   "kind": "hanzi"
+  },
+  "139": {
+   "char": "官",
+   "kind": "hanzi"
+  },
+  "140": {
+   "char": "艦",
+   "kind": "hanzi"
+  },
+  "141": {
+   "char": "間",
+   "kind": "hanzi"
+  },
+  "142": {
+   "char": "機",
+   "kind": "hanzi"
+  },
+  "143": {
+   "char": "気",
+   "kind": "hanzi"
+  },
+  "144": {
+   "char": "貴",
+   "kind": "hanzi"
+  },
+  "145": {
+   "char": "球",
+   "kind": "hanzi"
+  },
+  "146": {
+   "char": "近",
+   "kind": "hanzi"
+  },
+  "147": {
+   "char": "君",
+   "kind": "hanzi"
+  },
+  "148": {
+   "char": "軍",
+   "kind": "hanzi"
+  },
+  "149": {
+   "char": "撃",
+   "kind": "hanzi"
+  },
+  "150": {
+   "char": "見",
+   "kind": "hanzi"
+  },
+  "151": {
+   "char": "言",
+   "kind": "hanzi"
+  },
+  "152": {
+   "char": "後",
+   "kind": "hanzi"
+  },
+  "153": {
+   "char": "向",
+   "kind": "hanzi"
+  },
+  "154": {
+   "char": "攻",
+   "kind": "hanzi"
+  },
+  "155": {
+   "char": "行",
+   "kind": "hanzi"
+  },
+  "156": {
+   "char": "合",
+   "kind": "hanzi"
+  },
+  "157": {
+   "char": "国",
+   "kind": "hanzi"
+  },
+  "158": {
+   "char": "今",
+   "kind": "hanzi"
+  },
+  "159": {
+   "char": "佐",
+   "kind": "hanzi"
+  },
+  "160": {
+   "char": "散",
+   "kind": "hanzi"
+  },
+  "161": {
+   "char": "士",
+   "kind": "hanzi"
+  },
+  "162": {
+   "char": "思",
+   "kind": "hanzi"
+  },
+  "163": {
+   "char": "死",
+   "kind": "hanzi"
+  },
+  "164": {
+   "char": "私",
+   "kind": "hanzi"
+  },
+  "165": {
+   "char": "事",
+   "kind": "hanzi"
+  },
+  "166": {
+   "char": "時",
+   "kind": "hanzi"
+  },
+  "167": {
+   "char": "自",
+   "kind": "hanzi"
+  },
+  "168": {
+   "char": "射",
+   "kind": "hanzi"
+  },
+  "169": {
+   "char": "者",
+   "kind": "hanzi"
+  },
+  "170": {
+   "char": "手",
+   "kind": "hanzi"
+  },
+  "171": {
+   "char": "出",
+   "kind": "hanzi"
+  },
+  "172": {
+   "char": "女",
+   "kind": "hanzi"
+  },
+  "173": {
+   "char": "少",
+   "kind": "hanzi"
+  },
+  "174": {
+   "char": "上",
+   "kind": "hanzi"
+  },
+  "175": {
+   "char": "常",
+   "kind": "hanzi"
+  },
+  "176": {
+   "char": "人",
+   "kind": "hanzi"
+  },
+  "177": {
+   "char": "星",
+   "kind": "hanzi"
+  },
+  "178": {
+   "char": "生",
+   "kind": "hanzi"
+  },
+  "179": {
+   "char": "接",
+   "kind": "hanzi"
+  },
+  "180": {
+   "char": "先",
+   "kind": "hanzi"
+  },
+  "181": {
+   "char": "戦",
+   "kind": "hanzi"
+  },
+  "182": {
+   "char": "前",
+   "kind": "hanzi"
+  },
+  "183": {
+   "char": "全",
+   "kind": "hanzi"
+  },
+  "184": {
+   "char": "体",
+   "kind": "hanzi"
+  },
+  "185": {
+   "char": "隊",
+   "kind": "hanzi"
+  },
+  "186": {
+   "char": "大",
+   "kind": "hanzi"
+  },
+  "187": {
+   "char": "地",
+   "kind": "hanzi"
+  },
+  "188": {
+   "char": "中",
+   "kind": "hanzi"
+  },
+  "189": {
+   "char": "長",
+   "kind": "hanzi"
+  },
+  "190": {
+   "char": "通",
+   "kind": "hanzi"
+  },
+  "191": {
+   "char": "当",
+   "kind": "hanzi"
+  },
+  "192": {
+   "char": "闘",
+   "kind": "hanzi",
+   "note": "atlas-charset slot 197 (+5); JP dict words: 戦闘(b5c0), 死闘(a3c0), 戦闘機(b5c08e)"
+  },
+  "193": {
+   "char": "動",
+   "kind": "hanzi",
+   "note": "atlas 198; words: 行動, 機動, 動か, 発動"
+  },
+  "194": {
+   "char": "破",
+   "kind": "hanzi",
+   "note": "atlas 199; words: 撃破, 大破"
+  },
+  "195": {
+   "char": "発",
+   "kind": "hanzi",
+   "note": "atlas 200; words: 開発, 発射, 発動"
+  },
+  "196": {
+   "char": "彼",
+   "kind": "hanzi",
+   "note": "atlas 201; words: 彼女, 彼ら"
+  },
+  "197": {
+   "char": "避",
+   "kind": "hanzi",
+   "note": "atlas 202; words: 回避, 避け"
+  },
+  "198": {
+   "char": "備",
+   "kind": "hanzi",
+   "note": "atlas 203; words: 予備(d1c6), 備え"
+  },
+  "199": {
+   "char": "部",
+   "kind": "hanzi",
+   "note": "atlas 204; words: 部隊, 敵部隊(d7c7b9), 本部, 全部, 一部"
+  },
+  "200": {
+   "char": "分",
+   "kind": "hanzi",
+   "note": "atlas 205; words: 自分, 分か, 気分"
+  },
+  "201": {
+   "char": "兵",
+   "kind": "hanzi",
+   "note": "atlas 206 (the '玛莉梅亚無→兵' fix byte); words: 兵士, 一兵"
+  },
+  "202": {
+   "char": "捕",
+   "kind": "hanzi",
+   "note": "atlas 207; words: 捕縛, 捕ま, 捕らえ"
+  },
+  "203": {
+   "char": "方",
+   "kind": "hanzi",
+   "note": "atlas 208; words: 貴方, 後方, 方々(cbda)"
+  },
+  "204": {
+   "char": "邦",
+   "kind": "hanzi",
+   "note": "atlas 209; word: 連邦(d6cc)"
+  },
+  "205": {
+   "char": "本",
+   "kind": "hanzi",
+   "note": "atlas 210; words: 本当(cdbf), 本気, 本隊, 本部, 本来"
+  },
+  "206": {
+   "char": "無",
+   "kind": "hanzi",
+   "note": "VERIFIED ANCHOR (atlas 206=兵, renderB 206=無); atlas 211; words: 無事, 無様, 無用"
+  },
+  "207": {
+   "char": "木",
+   "kind": "hanzi",
+   "note": "atlas 212; word: 木星(cfb1)"
+  },
+  "208": {
+   "char": "目",
+   "kind": "hanzi",
+   "note": "atlas 213; unambiguous tall 目 box bitmap; appears in 目-compound macros"
+  },
+  "209": {
+   "char": "予",
+   "kind": "hanzi",
+   "note": "atlas 214; word: 予備(d1c6)"
+  },
+  "210": {
+   "char": "様",
+   "kind": "hanzi",
+   "note": "atlas 215; words: 貴様(94d2), 様々(d2da), 無様"
+  },
+  "211": {
+   "char": "用",
+   "kind": "hanzi",
+   "note": "atlas 216; words: 無用, 借用, 小用"
+  },
+  "212": {
+   "char": "来",
+   "kind": "hanzi",
+   "note": "atlas 217; words: 来た, 来る, 出来, 本来"
+  },
+  "213": {
+   "char": "力",
+   "kind": "hanzi",
+   "note": "VERIFIED ANCHOR; atlas 218; words: 戦力(b5d5), 敵戦力"
+  },
+  "214": {
+   "char": "連",
+   "kind": "hanzi",
+   "note": "atlas 219; words: 連邦(d6cc), 連れ, 連合, 連中"
+  },
+  "215": {
+   "char": "敵",
+   "kind": "hanzi",
+   "note": "the hanzi SKIPPED at +4/+5 boundary, displaced to end of hanzi run; words: 敵部隊(d7c7b9), 敵艦(d78c), 敵機(d78e), 敵軍(d794), 敵本隊, 敵戦力"
+  },
+  "216": {
+   "char": "？",
+   "kind": "punct",
+   "note": "label-arena strings: ？？？？？ runs (14ACB0), 「…いいですか？」 endings"
+  },
+  "217": {
+   "char": "！",
+   "kind": "punct",
+   "note": "VERIFIED ANCHOR; arena: 「…た！」「…した！」 endings; single tall bar + dot bitmap"
+  },
+  "218": {
+   "char": "々",
+   "kind": "symbol",
+   "note": "ideographic iteration mark U+3005; JP dict words: 我々(87da), 人々(b0da), 方々(cbda), 様々(d2da), 時々(a6da)"
+  },
+  "219": {
+   "char": "・",
+   "kind": "punct",
+   "note": "VERIFIED ANCHOR; nakaguro (small centered square dot); name separators e.g. ロレ…・D (14ADDE)"
+  },
+  "220": {
+   "char": "ー",
+   "kind": "kana",
+   "note": "chōonpu U+30FC (katakana prolonged-sound mark), centered 5px bar; words: アーク(41dc4d), コード(14ADAE), ダー, ネラー; distinct from 0x83=一"
+  },
+  "221": {
+   "char": "『",
+   "kind": "punct",
+   "note": "opening double corner bracket; IoU 0.956 vs JP atlas 『 (slot 12); mirror pair with 222"
+  },
+  "222": {
+   "char": "』",
+   "kind": "punct",
+   "note": "closing double corner bracket; IoU 0.903 vs JP atlas 』 (slot 13)"
+  },
+  "223": {
+   "char": "ち",
+   "kind": "kana",
+   "note": "the hiragana SKIPPED from the renderB hira band (0x09-0x40 has no ち), displaced to last slot; JP dict words: たち(1edf), こちら(15df39), こっち, そちら, うち, ちゃん, ちょっと"
+  }
+ }
+}

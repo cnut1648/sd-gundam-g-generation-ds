@@ -62,6 +62,41 @@ FIXTURES = TEST_DIR / "fixtures"
 BTN = {"A": "x", "B": "z", "X": "s", "Y": "a", "L": "q", "R": "w",
        "START": "Return", "SELECT": "space",
        "UP": "Up", "DOWN": "Down", "LEFT": "Left", "RIGHT": "Right"}
+
+# DS button -> bit in the instrumented-build inject mask (active-high).
+# The local melonDS build carries a file-based input hook (EmuThread.cpp):
+# each frame it reads /tmp/melon_inject ("<pressedmask_hex> <touch01> <dsx> <dsy>")
+# and overrides the pad state — the reliable input path under Xvfb, where
+# synthesized X keyboard events do not reach the emulated ARM7 pad service.
+BTN_BIT = {"A": 0x001, "B": 0x002, "SELECT": 0x004, "START": 0x008,
+           "RIGHT": 0x010, "LEFT": 0x020, "UP": 0x040, "DOWN": 0x080,
+           "R": 0x100, "L": 0x200, "X": 0x400, "Y": 0x800}
+INJECT_PATH = Path("/tmp/melon_inject")
+_INJECT_OK: bool | None = None
+
+
+def inject_available() -> bool:
+    """True when the melonDS binary carries the file-input hook."""
+    global _INJECT_OK
+    if _INJECT_OK is None:
+        try:
+            _INJECT_OK = b"/tmp/melon_inject" in Path(MELONDS_BIN).read_bytes()
+        except Exception:
+            _INJECT_OK = False
+    return _INJECT_OK
+
+
+def _inject_write(pressed_mask: int, touch: int = 0, x: int = 0, y: int = 0) -> None:
+    tmp = INJECT_PATH.with_suffix(".tmp")
+    tmp.write_text(f"{pressed_mask:x} {touch} {x} {y}\n")
+    tmp.replace(INJECT_PATH)
+
+
+def _inject_clear() -> None:
+    try:
+        INJECT_PATH.unlink()
+    except FileNotFoundError:
+        pass
 # DS button -> Qt key code written into melonDS.toml
 MELON_KEYMAP = {"A": 88, "B": 90, "Select": 32, "Start": 16777220,
                 "Right": 16777236, "Left": 16777234, "Up": 16777235, "Down": 16777237,
@@ -250,6 +285,7 @@ class Emulator:
         optionally seeding a cartridge save next to it."""
         ensure_config()
         kill_display(self.display)
+        _inject_clear()          # never leak a previous run's pressed state
         self.workdir.mkdir(parents=True, exist_ok=True)
         run_rom = self.workdir / "run.nds"
         shutil.copy(rom, run_rom)
@@ -298,6 +334,7 @@ class Emulator:
 
     def kill(self):
         kill_display(self.display)
+        _inject_clear()
 
     # -- input -------------------------------------------------------------------
     def focus(self):
@@ -308,7 +345,19 @@ class Emulator:
 
     def key(self, name: str, hold_ms: int = 140, pause: float = 0.5, count: int = 1):
         """Press a DS button.  The key is HELD ~140ms — an instantaneous tap is
-        too short for the game loop to sample reliably (dropped inputs)."""
+        too short for the game loop to sample reliably (dropped inputs).
+
+        Preferred path: the instrumented build's /tmp/melon_inject file hook
+        (X-synthesized keys do not reach the emulated pad in this environment).
+        Falls back to xte when the binary lacks the hook."""
+        bit = BTN_BIT.get(name.upper())
+        if inject_available() and bit is not None:
+            for _ in range(count):
+                _inject_write(bit)
+                time.sleep(max(hold_ms, 60) / 1000.0)
+                _inject_write(0)
+                time.sleep(pause)
+            return
         ks = BTN.get(name.upper(), name)
         for _ in range(count):
             self.focus()
@@ -319,9 +368,14 @@ class Emulator:
     def tap(self, x: int, y: int, hold_ms: int = 250, pause: float = 0.6):
         """Touch a WINDOW-coordinate point (bottom DS screen starts at y=211).
 
-        The pointer is moved window-relative via xdotool (the window manager
-        places the window at a nonzero screen offset, so absolute coordinates
-        would miss), then the button is held with xte."""
+        Preferred path: the /tmp/melon_inject hook (touch coords are native
+        bottom-screen coords: dsx = x, dsy = y - 211). Fallback: xdotool+xte."""
+        if inject_available() and y >= 211:
+            _inject_write(0, 1, max(0, min(255, int(x))), max(0, min(191, int(y) - 211)))
+            time.sleep(max(hold_ms, 80) / 1000.0)
+            _inject_write(0, 0, 0, 0)
+            time.sleep(pause)
+            return
         self.focus()
         wid = str(self.state["wid"])
         subprocess.run(["xdotool", "mousemove", "--window", wid, "--sync", str(x), str(y)],
@@ -435,6 +489,42 @@ def boot_to_title(emu: Emulator, rom: Path, sav: Path | None = None):
     time.sleep(TITLE_WAIT_S)
 
 
+def menu_state(frame) -> str:
+    """Classify the bottom screen: 'menu' (title main menu: three button bars),
+    'title' (press-START prompt bar), or 'other'.
+
+    Measured signatures (row means over x 40..220, window coords):
+      * menu:  button-1 bar y 243..251 bright (~130+), no prompt bar at y 311..319
+      * title: prompt bar y 311..319 very bright (~180+), y 243..251 dark (<110)
+    """
+    np = _np()
+    band = frame[:, 40:220]
+    b1 = float(np.mean(band[243:251]))
+    prompt = float(np.mean(band[311:319]))
+    if prompt > 170:
+        return "title"
+    if b1 > 118:
+        return "menu"
+    return "other"
+
+
+def goto_main_menu(emu: Emulator, out: Path, presses: int = 10) -> bool:
+    """From the title screen, press START (retrying — the first press after
+    boot is often swallowed) until the main menu's button bars appear."""
+    out.mkdir(parents=True, exist_ok=True)
+    for i in range(presses):
+        emu.key("START", hold_ms=250, pause=2.2)
+        p = out / f"menu_try{i}.png"
+        if not emu.shot(p):
+            continue
+        st = menu_state(load_gray(p))
+        if st == "menu":
+            log(f"main menu reached after {i + 1} START press(es)")
+            return True
+    log("main menu NOT reached (input not being accepted?)")
+    return False
+
+
 class InputEnvironmentError(RuntimeError):
     """The EMULATION ENVIRONMENT is not accepting game input (not a ROM bug)."""
 
@@ -452,30 +542,28 @@ def preflight_input(emu: Emulator, out: Path, presses: int = 6) -> bool:
     while the ROM is fine, so interactive tests run this preflight and exit
     with code 3 (environment, not a verdict) instead of failing the build.
     The no-input render checks (test_boot_render.py) still gate the ROM."""
-    refs = []
-    for i in range(2):
-        p = out / f"preflight_ref{i}.png"
-        emu.shot(p)
-        refs.append(load_gray(p))
-        time.sleep(0.8)
     for i in range(presses):
-        emu.key("START", hold_ms=200, pause=1.6)
+        emu.key("START", hold_ms=250, pause=2.2)
         p = out / f"preflight_{i}.png"
         emu.shot(p)
-        g = load_gray(p)
-        changed = all(region_mae(r, g, BOTTOM_SCREEN) > 25.0 for r in refs)
-        if changed or mean_luma(g, BOTTOM_SCREEN) < 55.0:
-            log(f"input preflight OK (menu/screen change after {i + 1} press(es))")
+        if menu_state(load_gray(p)) == "menu":
+            log(f"input preflight OK (main menu after {i + 1} press(es))")
             return True
     log("input preflight FAILED — the game never left the title under START presses")
     return False
 
 
-def start_new_game(emu: Emulator):
-    """From the title screen: START -> tap the New Game button -> intro crawl."""
-    emu.key("START", pause=2.5)
-    emu.tap(*NEWGAME_BUTTON)
-    log(f"New Game tapped; waiting ~{INTRO_CRAWL_S}s intro crawl …")
+def start_new_game(emu: Emulator, out: Path | None = None):
+    """From the title screen: START (retried) -> main menu -> confirm the
+    pre-highlighted はじめから (New Game) with A -> intro crawl."""
+    scratch = out or (emu.workdir / "nav")
+    if not goto_main_menu(emu, scratch):
+        # legacy fallback: blind tap (old environments without the inject hook)
+        emu.key("START", pause=2.5)
+        emu.tap(*NEWGAME_BUTTON)
+    else:
+        emu.key("A", hold_ms=250, pause=2.0)
+    log(f"New Game confirmed; waiting ~{INTRO_CRAWL_S}s intro crawl …")
     time.sleep(INTRO_CRAWL_S)
 
 

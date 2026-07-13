@@ -147,9 +147,10 @@ def main():
                   "Run test_boot_render.py for the no-input render gate.", flush=True)
             return 3
 
-        # 2) new_game_dialogue (the preflight already consumed the title screen)
-        emu.tap(*hz.NEWGAME_BUTTON)
-        hz.log(f"New Game tapped; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
+        # 2) new_game_dialogue — the preflight leaves us ON the main menu with
+        # はじめから highlighted; A confirms it (touch taps are unreliable here)
+        emu.key("A", hold_ms=250, pause=2.0)
+        hz.log(f"New Game confirmed; waiting ~{hz.INTRO_CRAWL_S}s intro crawl …")
         time.sleep(hz.INTRO_CRAWL_S)
         frames = []
         for i in range(8):

@@ -56,6 +56,47 @@ recurring term. Its working rules, distilled:
   words, e.g. 副郷→復興, 搭降→投降) from the era when the decode map was homophone-garbled —
   when source JP looks weird, translate the *intent* and check that appendix.
 
+## 2b. The canonical decision record (transcribed from the audit)
+
+The audit campaign's terminology rulings, so they survive `audit/` removal. When a
+name has drifted, THE ruling below wins; re-litigate only with new mainland-wiki
+evidence AND owner sign-off.
+
+**Global sweeps (applied corpus-wide; keep enforced):**
+莫阿→玛雅(·法拉奥) · 吉恩→吉翁 · 普兰特→PLANT · 多米尼恩→主天使号 · 德拉兹→迪拉兹 ·
+吉姆·吉嘉那姆→基姆·金卡拉姆 / 金加纳姆→金卡拉姆 · 玛丽美亚/玛丽梅亚→玛莉梅亚 ·
+巴斯克·奥姆→巴斯克·欧姆 · 玛修玛·切洛→玛修曼·塞罗 · 莎克蒂/莎克缇→夏克蒂 ·
+史汀→斯汀 · 基灵→基林 · 迪基姆→德基姆(·巴顿) · 贝纳黛特→贝尔纳黛特 ·
+玛丽贝尔→梅丽贝尔 · 迈克尔→米哈埃尔(·格恩) · 杜卡奇/德卡契→杜加奇 ·
+格雷米·普露2/普露二→格雷米·普露兹 · 托鲁基斯→多鲁基斯 · 格瓦典→格瓦丹 ·
+塞蕾茵/塞莱茵→瑟蕾因 · 阿尔斯特→阿尔斯塔 · 西罗科→西罗克 · 加拉霍→卡拉豪 ·
+布莱德→布莱特(·诺亚) · 葛雷米→格雷米 · 克莱茵→克莱因 · 威尔基姆→威尔盖姆 ·
+大师亚洲→亚洲尊者 · 卡洛德→加洛德 · 朱多→捷多 · 萨比尼→扎比涅 ·
+精神感应骨架→精神感应框架 · 先锋女王号→先锋母舰 · 位相变移装甲→相位转移装甲 ·
+此乃/正是月光蝶→这就是月光蝶 · 迪·特里埃尔→D·特里埃尔 · 钱恩→倩恩 ·
+玫红强袭→嫣红强袭 · 杜宾狼→飙狼.
+
+**Not sweeps (context-dependent):** 特殊演習 and 特別演習 are TWO DIFFERENT JP menu
+items (hidden vs-Archangel exercise vs free-battle special exercise) — each line
+follows ITS OWN jp reference. 零/零式: Heero's ZERO(-System) lines are 零式; the
+person 零·村雨 stays 零. Bare surname 特里埃尔 mid-sentence is fine; the full name
+is D·特里埃尔 (boost plate 特里埃尔（增压） — D· doesn't fit the 84px plate).
+
+**Owner rejections (do NOT "fix" these):** 强尼莱汀 has no dot; 劳·鲁·克鲁泽 keeps
+the short mainland form; 希罗·尤尔 (moegirl page title — the 尤伊 forms are
+annotation-only); 零式系统 not MD零式系统 (pool budget); 高达Mk20号机 stays (104px
+budget); 特里尔（增压）-class width compromises are recorded per-record.
+
+**ID skills & 名台词 (binding style):** a cut-in quote is ALWAYS the full famous
+line in mainland-community wording (websearch 萌娘百科/biligame/百度百科); the skill
+NAME may be condensed but only into a natural phrase sharing the quote's key terms,
+≤64px (5 CJK cells; ！…・？ count 8px); stub names (光说！/珍贵/灭) are defects.
+Effect/detail text is never truncated. G-Gundam techniques use community canon
+(石破天惊拳, 爆热神指 for God Gundam's ゴッドフィンガー, 黑暗手指, 十二王方牌大车轮).
+Weapon-name canon follows biligame unit pages (光束薙刀, 榴弹发射器, 超级火箭炮,
+龙骑兵系统, 福提斯加农炮, 等离子收束光束炮, 艾克札恩铁道炮/尼德霍格重镰/
+弗雷斯贝尔诱导炮 for 禁断, 多佛炮, 鲸鱼=バラエーナ, 加里波第β).
+
 ## 3. Style rules (font-imposed + editorial)
 
 Hard constraints (unrenderable if violated — the encoder rejects them):

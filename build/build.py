@@ -78,7 +78,7 @@ def main() -> int:
 
     # ---- 2. ARM9 ------------------------------------------------------------
     log("building ARM9 (names, labels, code patches, string pools, glyph atlas)")
-    arm9 = arm9_layout.build_arm9(bytes(game.arm9))
+    arm9 = arm9_layout.build_arm9(bytes(game.arm9), verify=not args.skip_verify)
     check("arm9", arm9)
     game.arm9 = bytearray(arm9)
 
@@ -96,7 +96,7 @@ def main() -> int:
     log(f"building {len(misc)} data files (barks, cut-ins, effect text, biographies, graphics)")
     for name in misc:
         jp = rom.get_file(game, name)
-        built = data_files.build_data_file(name, jp)
+        built = data_files.build_data_file(name, jp, verify=not args.skip_verify)
         check(name, built)
         rom.set_file(game, name, built)
 

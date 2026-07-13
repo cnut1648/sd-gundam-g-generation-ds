@@ -30,6 +30,8 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 GLYPH_TOKEN_BASE = 0xE000     # first 2-byte glyph token
 MACRO_TOKEN_BASE = 0xF000     # first 2-byte dictionary-macro token
 TWO_BYTE_SLOT_OFFSET = 224    # token 0xE000 -> glyph slot 224
+ZH_BAND_MIN = 2196            # atlas slots >= this: injected ZH glyph band
+                              # (also the renderA/renderB trampoline split)
 GLYPH_CELL_BYTES = 36         # one 12x12 1bpp-padded glyph bitmap in the atlas
 CONTROL_BYTE = 0x01           # inline control/layout code (1 byte)
 TERMINATOR = 0x00
@@ -56,6 +58,12 @@ class Charmap:
         # (and therefore build output) are deliberately unaffected.
         for slot_s, ch in raw.get("slot_chars_extra", {}).items():
             self.slot_to_char[int(slot_s)] = ch
+        # slot_chars_extra stays decode-only: entries whose identity has been
+        # bitmap-verified get PROMOTED into two_byte_zh in data/charmap.json
+        # (verification procedure: docs/LESSONS_LEARNED.md §G / AGENTS.md
+        # "Glyph minting"); unverified/unsure entries must never become
+        # encode targets.
+        self.zh_extra_slots: dict[str, int] = {}   # deliberately empty (see above)
         # char -> JP slot (for chars only present as original Japanese glyphs)
         self.jp_char_to_slot: dict[str, int] = {}
         for slot_s, ch in raw["jp_slot_chars"].items():
@@ -65,16 +73,70 @@ class Charmap:
         self.text_bytes: set[int] = set(self.one_byte.values()) | {TERMINATOR}
 
     # -- helpers -------------------------------------------------------------
-    def slot_of(self, ch: str) -> int | None:
-        """Preferred encodable glyph slot for a character.
+    @staticmethod
+    def _token_hazard(slot: int, allow_low15: bool = False) -> bool:
+        """A 2-byte glyph token whose low byte is 0x00 is misread as a
+        terminator by every byte-walking consumer — never emit one.  A 0x15
+        low byte is only dangerous inside stage-script files (0x15 is the
+        show-dialogue opcode); flat text banks may use such tokens (and the
+        shipped banks do, e.g. 糟 = 0xE915)."""
+        if slot < TWO_BYTE_SLOT_OFFSET:
+            return False
+        lo = (slot - TWO_BYTE_SLOT_OFFSET + GLYPH_TOKEN_BASE) & 0xFF
+        if lo == 0x00:
+            return True
+        return lo == 0x15 and not allow_low15
 
-        Preference order: 1-byte code (cheapest), added-Chinese slot, original
-        Japanese slot. Returns None when the character has no glyph."""
+    def slot_of(self, ch: str, allow_low15: bool = False,
+                surface: str = "stage",
+                allowed_one_bytes: frozenset[int] = frozenset()) -> int | None:
+        """Preferred encodable glyph slot for a character, PER SURFACE.
+
+        surface="stage"  (renderA-direct: stage dialogue, barks, cut-ins,
+            library/hangar banks): every slot renders from the 12x12 atlas,
+            so the cheap one-byte codes (atlas slots 0..223) are preferred,
+            then ZH slots, then JP slots.
+        surface="bank"   (trampoline: data/arenas banks, the four battle
+            effect banks, ID-command/ability panels, battle-info rows): slots
+            < 2196 render from the renderB 8x16 JP UI font whose charset
+            DIFFERS from the atlas (atlas 206 = 兵 but renderB 206 = 無).
+            A one-byte code is only allowed when that byte value already
+            occurs in the record's ORIGINAL JP span (`allowed_one_bytes`) —
+            i.e. it is record structure (00/03-family framing) or a
+            renderB-meaning byte the JP reader is known to accept.  Otherwise
+            only ZH-band slots (>= 2196) are safe; JP-band two-byte slots are
+            forbidden.  Returns None when the char has no safe encoding: the
+            caller must reword, not fall back (that fallback is exactly the
+            吉翁海兵→吉翁海無 garble bug).
+
+        Any slot whose 2-byte token would carry a forbidden low byte is
+        skipped (see _token_hazard)."""
         if ch in self.one_byte:
-            return self.one_byte[ch]
-        if ch in self.two_byte_zh:
-            return self.two_byte_zh[ch]
-        return self.jp_char_to_slot.get(ch)
+            code = self.one_byte[ch]
+            if surface == "stage" or code in allowed_one_bytes:
+                return code
+        slot = self.two_byte_zh.get(ch)
+        if slot is not None and not self._token_hazard(slot, allow_low15):
+            # JP-band registrations (simplified chars minted into reclaimed
+            # slots < 2196) are renderA-atlas cells: legal on stage surfaces
+            # only.  On a trampoline surface that token would render the
+            # renderB glyph of the SAME slot number — a different character.
+            if slot >= ZH_BAND_MIN or surface == "stage":
+                return slot
+        if surface == "bank":
+            # ZH-band only; bitmap-verified extras are the approved fallback
+            slot = self.zh_extra_slots.get(ch)
+            if slot is not None and not self._token_hazard(slot, allow_low15):
+                return slot
+            return None
+        slot = self.jp_char_to_slot.get(ch)
+        if slot is not None and not self._token_hazard(slot, allow_low15):
+            return slot
+        # last resort on stage surfaces too (keeps proven JP bytes stable)
+        slot = self.zh_extra_slots.get(ch)
+        if slot is not None and not self._token_hazard(slot, allow_low15):
+            return slot
+        return None
 
 
 @lru_cache(maxsize=None)
@@ -174,10 +236,13 @@ def decode(data: bytes, charmap: Charmap | None = None, expander=None,
     return "".join(out)
 
 
-def encode_char(ch: str, charmap: Charmap | None = None) -> bytes | None:
+def encode_char(ch: str, charmap: Charmap | None = None,
+                allow_low15: bool = False, surface: str = "stage",
+                allowed_one_bytes: frozenset[int] = frozenset()) -> bytes | None:
     """Encode ONE character to its preferred byte form (None if unencodable)."""
     cm = charmap or load_charmap()
-    slot = cm.slot_of(ch)
+    slot = cm.slot_of(ch, allow_low15, surface=surface,
+                      allowed_one_bytes=allowed_one_bytes)
     if slot is None:
         return None
     return encode_slot(slot)
@@ -191,11 +256,20 @@ def encode_slot(slot: int) -> bytes:
     return bytes([tok >> 8, tok & 0xFF])
 
 
-def encode(text: str, charmap: Charmap | None = None) -> bytes:
+def encode(text: str, charmap: Charmap | None = None,
+           allow_low15: bool = False, surface: str = "stage",
+           allowed_one_bytes: frozenset[int] = frozenset()) -> bytes:
     """Encode readable text (with {..} escapes as produced by decode()).
 
+    surface="stage" for renderA-direct text (dialogue, barks, cut-ins,
+    library/hangar banks); surface="bank" for trampoline surfaces (arena and
+    battle effect banks) where one-byte and JP-band tokens render from the
+    WRONG font — there a one-byte code is only used when its byte value
+    occurs in the record's original JP span (`allowed_one_bytes`).  See
+    Charmap.slot_of and AGENTS.md.
+
     Raises ValueError on unencodable characters — translation data must only
-    use characters that exist in the glyph atlas."""
+    use characters that exist in the glyph atlas (for the given surface)."""
     cm = charmap or load_charmap()
     out = bytearray()
     i = 0
@@ -214,9 +288,11 @@ def encode(text: str, charmap: Charmap | None = None) -> bytes:
             else:
                 out.append(int(body, 16))
             continue
-        b = encode_char(ch, cm)
+        b = encode_char(ch, cm, allow_low15, surface=surface,
+                        allowed_one_bytes=allowed_one_bytes)
         if b is None:
-            raise ValueError(f"unencodable character {ch!r} (U+{ord(ch):04X})")
+            raise ValueError(
+                f"unencodable character {ch!r} (U+{ord(ch):04X}) on surface {surface!r}")
         out += b
         i += 1
     return bytes(out)
