@@ -954,10 +954,15 @@ def extract_bios(jp: GameROM, zh: GameROM) -> list[dict]:
             off = int(e["offset"], 16) if isinstance(e["offset"], str) else e["offset"]
             sz = e["size"]
             jb, zb = bytes(jf[off:off + sz]), bytes(zf[off:off + sz])
+            zt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
+            jt = decode_text(jp, jb, "stage", jp.expand, True) if jb else ""
+            # drop reserve/vacant placeholder slots (予備 / 预备 / 欠番 / trivial)
+            core = zt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a\uff0f/~\u301c\u201c\u201d'\"-<>")
+            _ph = ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a")   # 予備 / 预备 / 欠番
+            if core == "" or len(core) <= 1 or any(core.startswith(p) for p in _ph):
+                continue
             items.append({
-                "ix": len(items) + 1,
-                "zt": decode_text(zh, zb, "stage", zh.expand, True) if zb else "",
-                "jt": decode_text(jp, jb, "stage", jp.expand, True) if jb else "",
+                "ix": len(items) + 1, "zt": zt, "jt": jt,
                 "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
                 "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else "",
             })
@@ -1161,6 +1166,9 @@ GG_STYLE = """<style id="gg-style">
 .gf-bmp:hover .pop{display:block}
 .gf-bmp .pop canvas{filter:brightness(.92) sepia(.25) hue-rotate(60deg) saturate(1.25)}
 canvas.ggc{vertical-align:middle;image-rendering:pixelated;image-rendering:crisp-edges;display:inline-block}
+.gf-lines{display:inline-flex;flex-direction:column;gap:2px;vertical-align:top}
+.gf-lines>canvas{display:block}
+.gf-el{height:8px}
 /* collapsible block (route dialogue / briefing / shared) */
 .gcoll{margin:10px 0;background:#0e1626;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .gcoll-hd{padding:8px 12px;cursor:pointer;user-select:none;font-size:13px;color:var(--ink2)}
@@ -1199,16 +1207,15 @@ var DRAWQ=[],PUMPING=false;
 function pump(){PUMPING=true;var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){var fn=DRAWQ.shift();try{fn();}catch(e){}}if(DRAWQ.length){requestAnimationFrame(pump);}else{PUMPING=false;}}
 function queueDraw(fn){DRAWQ.push(fn);if(!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}
 // surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
-function drawStr(packed,surface,rom,scale){
-  scale=scale||2; var g=b64u16(packed||''),W=0,i,v;
-  for(i=0;i<g.length;i++){v=g[i];W+=(v===0xFFFF)?7:((v>=0x8000)?8:12);}
+function drawSeg(g,surface,rom,scale){   // g = one line's u16 glyphs (no BREAK)
+  scale=scale||2; var W=0,i,v;
+  for(i=0;i<g.length;i++){v=g[i];W+=(v>=0x8000)?8:12;}
   W=Math.max(W,1);
   var cv=document.createElement('canvas');cv.className='ggc';cv.width=W*scale;cv.height=16*scale;
   cv.style.width=(W*scale)+'px';cv.style.height=(16*scale)+'px';
   queueDraw(function(){
     var ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;var x=0,i,v;
     for(i=0;i<g.length;i++){v=g[i];
-      if(v===0xFFFF){ctx.fillStyle='#3b567f';ctx.fillRect((x+2)*scale,6*scale,3*scale,4*scale);x+=7;continue;}
       var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key],img=SHEETS[key];
       var sx=(slot%sh.cols)*sh.cw,sy=((slot/sh.cols)|0)*sh.ch,adv=font?8:12,yoff=font?0:(surface?3:1);
       ctx.drawImage(img,sx,sy,sh.cw,sh.ch,x*scale,yoff*scale,sh.cw*scale,sh.ch*scale);x+=adv;
@@ -1216,11 +1223,20 @@ function drawStr(packed,surface,rom,scale){
   });
   return cv;
 }
+// BREAK(0xFFFF)=in-game line break -> split into separate canvas lines, stacked
+function drawLines(packed,surface,rom,scale){
+  var g=b64u16(packed||''),lines=[[]],i;
+  for(i=0;i<g.length;i++){if(g[i]===0xFFFF)lines.push([]);else lines[lines.length-1].push(g[i]);}
+  var wrap=document.createElement('span');wrap.className='gf-lines';
+  lines.forEach(function(seg){if(seg.length){wrap.appendChild(drawSeg(seg,surface,rom,scale));}else{var e=document.createElement('span');e.className='gf-el';wrap.appendChild(e);}});
+  return wrap;
+}
 // -- field primitive: ZH text(big)+JP text(small) | ZH bitmap (hover reveals JP bitmap) --
+function setLines(el,s){var p=(s||'').split('\u25bc'),i;for(i=0;i<p.length;i++){if(i)el.appendChild(document.createElement('br'));el.appendChild(document.createTextNode(p[i]));}}
 function txtCol(zt,jt){
   var c=document.createElement('span');c.className='gf-txt';
-  var z=document.createElement('span');z.className='zt';z.textContent=zt||'';c.appendChild(z);
-  if(jt){var j=document.createElement('span');j.className='jt';j.textContent=jt;c.appendChild(j);}
+  var z=document.createElement('span');z.className='zt';setLines(z,zt);c.appendChild(z);
+  if(jt){var j=document.createElement('span');j.className='jt';setLines(j,jt);c.appendChild(j);}
   return c;
 }
 function bmpCol(zb,jb,surf,scale){
@@ -1228,10 +1244,10 @@ function bmpCol(zb,jb,surf,scale){
   // scrollable inner holds the (possibly wide) ZH bitmap; the JP popover is a
   // sibling of the scroller so overflow-x:auto never clips it (fixes Route hover)
   var scroll=document.createElement('span');scroll.className='gf-bmp-scroll';
-  if(zb)scroll.appendChild(drawStr(zb,surf,1,scale));
+  if(zb)scroll.appendChild(drawLines(zb,surf,1,scale));
   c.appendChild(scroll);
   if(jb){var pop=document.createElement('span');pop.className='pop';c.appendChild(pop);c.classList.add('hasjp');
-    var built=false;c.addEventListener('mouseenter',function(){if(!built){built=true;pop.appendChild(drawStr(jb,surf,0,scale));}});}
+    var built=false;c.addEventListener('mouseenter',function(){if(!built){built=true;pop.appendChild(drawLines(jb,surf,0,scale));}});}
   return c;
 }
 // f={zt,jt,zb,jb}; surf 0=stage 1=bank; stk=stack text over bitmap (long fields)
