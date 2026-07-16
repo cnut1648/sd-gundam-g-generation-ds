@@ -1,5 +1,5 @@
 {
- "_about": "Resident string caves: the name arena plus verified-free zero runs inside the code image, filled with relocated pilot/unit/weapon/ability names and ID-command summaries (all name readers accept pointers into this window; the runtime heap never touches it).",
+ "_about": "Resident string caves: the name arena plus verified-free zero runs inside the code image, filled with relocated pilot/unit/weapon/ability names and ID-command summaries (the runtime heap never touches this image). READER-BAND RULE (see docs/ROM_STRUCTURE.md 4.3, gate name_pointer_band): unit-name (master +0x00) and pilot-name (charDB +0x04) pointers must resolve BELOW 0x02190000 — the deploy/nameplate readers HARD-FREEZE/blank on >=0x02190000. So entries at offset >=0xA000 (RAM >=0x02190000, e.g. the [0x190030,0x190870)/[0x1945B3,0x194852) runs) may hold ONLY summaries/details/weapon names, never unit/pilot names; put those in a zero run below offset 0xA000.",
  "file_offset": "0x186000",
  "end": "0x1985A4",
  "entries": [
@@ -7304,7 +7304,7 @@
    "payload_hex": "ef8eea8fe871ef8fefcde9d8"
   },
   {
-   "offset": "0xA44B",
+   "offset": "0x58DA",
    "text": "穿梭机机长",
    "payload_hex": "ea7eeb8fe7e4e7e4ef3400"
   },
@@ -7404,127 +7404,127 @@
    "payload_hex": "ec83ef30efb0eed7eed400"
   },
   {
-   "offset": "0xA545",
+   "offset": "0x3737",
    "text": "吉翁士官",
    "payload_hex": "e7d9ee88ef64ef9200"
   },
   {
-   "offset": "0xA54E",
+   "offset": "0x29CA",
    "text": "吉翁老兵",
    "payload_hex": "e7d9ee88e9caef9300"
   },
   {
-   "offset": "0xA557",
+   "offset": "0x58E5",
    "text": "新吉翁士官",
    "payload_hex": "ef8ae7d9ee88ef64ef9200"
   },
   {
-   "offset": "0xA562",
+   "offset": "0x29D3",
    "text": "新吉翁兵",
    "payload_hex": "ef8ae7d9ee88ef9300"
   },
   {
-   "offset": "0xA56B",
+   "offset": "0x56D9",
    "text": "新吉翁强化兵",
    "payload_hex": "ef8ae7d9ee88e8ade9a5ef9300"
   },
   {
-   "offset": "0xA578",
+   "offset": "0x29DC",
    "text": "吉翁高官",
    "payload_hex": "e7d9ee88e812ef9200"
   },
   {
-   "offset": "0xA581",
+   "offset": "0x56E6",
    "text": "德基姆·巴顿",
    "payload_hex": "e82ce829e823ef4be85bedc700"
   },
   {
-   "offset": "0xA58E",
+   "offset": "0x56F3",
    "text": "夏克蒂·卡琳",
    "payload_hex": "ef37e7d5e9f5ef4be801e9a900"
   },
   {
-   "offset": "0xA59B",
+   "offset": "0x5700",
    "text": "格雷米军高官",
    "payload_hex": "e824e8afe878e7e0e812ef9200"
   },
   {
-   "offset": "0xA5A8",
+   "offset": "0x3728",
    "text": "克罗特·布埃尔",
    "payload_hex": "e7d5e7ece7cfef4be831e96ae7e100"
   },
   {
-   "offset": "0xA5B7",
+   "offset": "0x36C2",
    "text": "特里埃尔（增压）",
    "payload_hex": "e7cfef31e96ae7e1ef8eea3de992ef8f00"
   },
   {
-   "offset": "0xA5C8",
+   "offset": "0x58F0",
    "text": "拟·阿伽玛",
    "payload_hex": "ebc9ef4be7d2e8e8e84500"
   },
   {
-   "offset": "0xA5D3",
+   "offset": "0x570D",
    "text": "雅克特·多加",
    "payload_hex": "ebfde7d5e7cfef4be7e9e85400"
   },
   {
-   "offset": "0xA5E0",
+   "offset": "0x567F",
    "text": "翔翼型强袭高达",
    "payload_hex": "eef9ec35e977e8ade9aee812ef2b00"
   },
   {
-   "offset": "0xA5EF",
+   "offset": "0x36D3",
    "text": "翔翼型强袭／解除",
    "payload_hex": "eef9ec35e977e8ade9aeefafe89de97400"
   },
   {
-   "offset": "0xA600",
+   "offset": "0x568E",
    "text": "圣盾高达／解除",
    "payload_hex": "e90deb63e812ef2befafe89de97400"
   },
   {
-   "offset": "0xA60F",
+   "offset": "0x29E5",
    "text": "灾厄高达",
    "payload_hex": "ef78eef6e812ef2b00"
   },
   {
-   "offset": "0xA618",
+   "offset": "0x571A",
    "text": "特装型高扎古",
    "payload_hex": "e7cfe98fe977e812e84be84d00"
   },
   {
-   "offset": "0xA625",
+   "offset": "0x58FB",
    "text": "核心推进器",
    "payload_hex": "e8f3e82deaabe892e8c300"
   },
   {
-   "offset": "0xA630",
+   "offset": "0x36E4",
    "text": "MC高达（半毁）",
    "payload_hex": "efa7eed0e812ef2bef8eeadee97cef8f00"
   },
   {
-   "offset": "0xA641",
+   "offset": "0x36F5",
    "text": "赛克艾恩／兵装1",
    "payload_hex": "ebf3e7d5e8d6e7eeefafef93e98feff700"
   },
   {
-   "offset": "0xA652",
+   "offset": "0x3706",
    "text": "赛克艾恩／兵装2",
    "payload_hex": "ebf3e7d5e8d6e7eeefafef93e98fef5f00"
   },
   {
-   "offset": "0xA663",
+   "offset": "0x3683",
    "text": "卡碧尼Mk2／普露兹机",
    "payload_hex": "e801e7cee896efa7eedeef5fefafe838e858e856e7e400"
   },
   {
-   "offset": "0xA67A",
+   "offset": "0x369A",
    "text": "卡碧尼Mk2／普露机",
    "payload_hex": "e801e7cee896efa7eedeef5fefafe838e858e7e400"
   },
   {
-   "offset": "0xA68F",
+   "offset": "0x36AF",
    "text": "蕾兹专用基拉·多加",
    "payload_hex": "e84ce856eb4befb3e829e7c2ef4be7e9e85400"
   },
@@ -7844,87 +7844,87 @@
    "payload_hex": "efb2e7cdea40d9000000"
   },
   {
-   "offset": "0xE6DD",
+   "offset": "0x2993",
    "text": "胡索·艾宾",
    "payload_hex": "ec8be93cef4be8d6e9ec00"
   },
   {
-   "offset": "0xE6E8",
+   "offset": "0x5727",
    "text": "艾裘·迪拉兹",
    "payload_hex": "e8d6ea83ef4bea11e7c2e85600"
   },
   {
-   "offset": "0xE6F5",
+   "offset": "0x584B",
    "text": "捷利特·梅萨",
    "payload_hex": "e7bce82ee7cfef4be9f2e83b00"
   },
   {
-   "offset": "0xE702",
+   "offset": "0x5858",
    "text": "捷多·亚西塔",
    "payload_hex": "e7bce7e9ef4be7d6e7f8e94500"
   },
   {
-   "offset": "0xE70F",
+   "offset": "0x5865",
    "text": "捷多·亚西塔",
    "payload_hex": "e7bce7e9ef4be7d6e7f8e94500"
   },
   {
-   "offset": "0xE71C",
+   "offset": "0x5872",
    "text": "捷多（强化）",
    "payload_hex": "e7bce7e9ef8ee8ade9a5ef8f00"
   },
   {
-   "offset": "0xE729",
+   "offset": "0x3717",
    "text": "多蒙（明镜止水）",
    "payload_hex": "e7e9e942ef8eef39ead7e869ebd4ef8f00"
   },
   {
-   "offset": "0xE73A",
+   "offset": "0x2EF7",
    "text": "凤·村雨",
    "payload_hex": "e91eef4beb8eebad00"
   },
   {
-   "offset": "0xE743",
+   "offset": "0x2F00",
    "text": "凤·村雨",
    "payload_hex": "e91eef4beb8eebad00"
   },
   {
-   "offset": "0xE74C",
+   "offset": "0x587F",
    "text": "蕾柯亚·朗德",
    "payload_hex": "e84ce80ee7d6ef4bea90e82c00"
   },
   {
-   "offset": "0xE759",
+   "offset": "0x588C",
    "text": "蕾柯亚·朗德",
    "payload_hex": "e84ce80ee7d6ef4bea90e82c00"
   },
   {
-   "offset": "0xE766",
+   "offset": "0x569D",
    "text": "真(SEED)",
    "payload_hex": "e820eb77ef9eef9fef9fef96eb7800"
   },
   {
-   "offset": "0xE775",
+   "offset": "0x299E",
    "text": "杜加奇克隆",
    "payload_hex": "e8cbe854e904e7d5ed1600"
   },
   {
-   "offset": "0xE780",
+   "offset": "0x56AC",
    "text": "格雷米·普露兹",
    "payload_hex": "e824e8afe878ef4be838e858e85600"
   },
   {
-   "offset": "0xE78F",
+   "offset": "0x5899",
    "text": "巴斯克·欧姆",
    "payload_hex": "e85be7c8e7d5ef4beb91e82300"
   },
   {
-   "offset": "0xE79C",
+   "offset": "0x29A9",
    "text": "贝尔纳黛特",
    "payload_hex": "e857e7e1e882ea9ae7cf00"
   },
   {
-   "offset": "0xE7A7",
+   "offset": "0x58A6",
    "text": "军团（增压）",
    "payload_hex": "e7e0ea5eef8eea3de992ef8f00"
   },
@@ -7939,54 +7939,69 @@
    "payload_hex": "e902e801e7c2e823e7c9efa5efa5e8ac00"
   },
   {
-   "offset": "0xE7D6",
+   "offset": "0x56BB",
    "text": "吉翁海兵队士官",
    "payload_hex": "e7d9ee88e91bef93e7c9ef64ef9200"
   },
   {
-   "offset": "0xE7E5",
+   "offset": "0x2F09",
    "text": "吉翁老兵",
    "payload_hex": "e7d9ee88e9caef9300"
   },
   {
-   "offset": "0xE7EE",
+   "offset": "0x2F12",
    "text": "吉翁海兵",
    "payload_hex": "e7d9ee88e91bef9300"
   },
   {
-   "offset": "0xE7F7",
+   "offset": "0x58B3",
    "text": "提坦斯强化兵",
    "payload_hex": "e821e843e7c8e8ade9a5ef9300"
   },
   {
-   "offset": "0xE804",
+   "offset": "0x29B4",
    "text": "新吉翁士官",
    "payload_hex": "ef8ae7d9ee88ef64ef9200"
   },
   {
-   "offset": "0xE80F",
+   "offset": "0x56CA",
    "text": "新吉翁高级士官",
    "payload_hex": "ef8ae7d9ee88e812eaeeef64ef9200"
   },
   {
-   "offset": "0xE81E",
+   "offset": "0x2F1B",
    "text": "新吉翁兵",
    "payload_hex": "ef8ae7d9ee88ef9300"
   },
   {
-   "offset": "0xE827",
+   "offset": "0x29BF",
    "text": "新吉翁骑士",
    "payload_hex": "ef8ae7d9ee88eca3ef6400"
   },
   {
-   "offset": "0xE832",
+   "offset": "0x58C0",
    "text": "新吉翁强化兵",
    "payload_hex": "ef8ae7d9ee88e8ade9a5ef9300"
   },
   {
-   "offset": "0xE83F",
+   "offset": "0x58CD",
    "text": "特列斯派士兵",
    "payload_hex": "e7cfe8b5e7c8e985ef64ef9300"
+  },
+  {
+   "offset": "0x5734",
+   "text": "DC兵",
+   "payload_hex": "ef96eed0ef9300"
+  },
+  {
+   "offset": "0x2F24",
+   "text": "深村玲",
+   "payload_hex": "eb0deb8eeee400"
+  },
+  {
+   "offset": "0x2F2B",
+   "text": "吉翁兵",
+   "payload_hex": "e7d9ee88ef9300"
   }
  ]
 }

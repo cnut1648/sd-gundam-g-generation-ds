@@ -38,6 +38,7 @@ in-game failure the gate protects against.
   label_render_consistency    mixed-size "floating" glyphs in one label list
   unit_weapon_names           unit/weapon name garbage or coverage regression
   id_command_names            ID-command name/summary/detail garbage or coverage loss
+  name_pointer_band           the 出击/deploy HARD-FREEZE from a unit/pilot name ptr >= 0x02190000
 
 Options:
   --jp PATH             the Japanese source ROM (default: the copy in the repo root)
@@ -528,6 +529,19 @@ JP_STRINGS_LO, JP_STRINGS_HI = 0x020B0000, 0x021B6DB8
 RESIDENT_POOL_LO, RESIDENT_POOL_HI = 0x02180000, 0x021A0000
 RELOC_BANK_LO, RELOC_BANK_HI = 0x02300000, 0x02400000
 RELOC_PTR_SCAN_HI = 0x155B14
+
+# Name-pointer reader band (deploy/nameplate freeze class): unit-name
+# (master 0xB94BC +0x00) and pilot/character-name (char-DB 0xDCF18 +0x04)
+# pointers MUST resolve BELOW 0x02190000.  The 出击/deploy unit-name path
+# HARD-FREEZES (data abort) and the affinity/nameplate reader renders BLANK on a
+# name pointer >= 0x02190000 — i.e. the 0x0219 resident sub-band and the autoload
+# pools (0x0232.. pool A, 0x023E.. pool B).  Proven empirically: 816 name
+# pointers < 0x02190000 render fine (52 at the JP pool 0x020B.., 763 relocated to
+# 0x0218..); every pointer at 0x0219.. froze/blanked (v1.1 deploy-freeze bug).
+# Effect summaries/details and weapon names are read by lenient accessors and may
+# live >= 0x02190000, so they are NOT covered here.
+NAME_PTR_SAFE_HI = 0x02190000
+NAME_PTR_DANGER_HI = 0x02400000   # >= this = pre-existing JP-dummy junk ptrs, never dereferenced
 
 
 def _pointer_repoint_ok(aj: bytes, az: bytes, word_off: int) -> bool:
@@ -2214,6 +2228,57 @@ def gate_pool_trampoline_tokens(rep, ctx):
                 f"(trampoline-safe)")
 
 
+def gate_name_pointer_band(rep, ctx):
+    """The 出击/deploy freeze guard.  Every unit-name (master 0xB94BC +0x00) and
+    pilot/character-name (char-DB 0xDCF18 +0x04) pointer in the built ROM must
+    resolve BELOW 0x02190000.  The deploy unit-name path data-aborts (hard freeze)
+    and the affinity/nameplate reader renders blank on a name pointer >=
+    0x02190000 — the 0x0219 resident sub-band and the autoload pools (pool A
+    0x0232.., pool B 0x023E..).  This is the exact v1.1 regression: unit/pilot
+    names were relocated into the 0x0219 caves ([0x190030,0x190870) /
+    [0x1945B3,0x194852)) and pool A, so deploying e.g. 卡碧尼Mk2 froze the game.
+    Effect summaries/details and weapon names use lenient accessors and may live
+    >= 0x02190000 (not checked).  Pre-existing JP dummy (欠番) records carry
+    out-of-RAM junk pointers (>= 0x02400000) the engine never dereferences and
+    that are byte-identical to JP — excluded by the danger-band upper bound."""
+    az = ctx["a9"]
+
+    def band_bad(p):
+        return NAME_PTR_SAFE_HI <= p < NAME_PTR_DANGER_HI
+
+    bad_u = []
+    for utid in range(MASTER_MAX):
+        ro = MASTER_TABLE_OFF + utid * MASTER_STRIDE + MASTER_NAME_OFF
+        if ro + 4 > len(az):
+            break
+        p = struct.unpack_from("<I", az, ro)[0]
+        if band_bad(p):
+            bad_u.append((utid, p))
+    bad_p = []
+    for cid in range(CHAR_DB_FULL_COUNT):
+        ro = CHAR_DB_OFF + cid * CHAR_DB_STRIDE + 4
+        if ro + 4 > len(az):
+            break
+        p = struct.unpack_from("<I", az, ro)[0]
+        if band_bad(p):
+            bad_p.append((cid, p))
+    if bad_u or bad_p:
+        ex = ""
+        if bad_u:
+            u0 = bad_u[0]
+            ex = f" e.g. unit utid {u0[0]} -> {u0[1]:#010x}"
+        elif bad_p:
+            p0 = bad_p[0]
+            ex = f" e.g. char {p0[0]} -> {p0[1]:#010x}"
+        rep.add("name_pointer_band", False,
+                f"{len(bad_u)} unit-name + {len(bad_p)} pilot-name pointer(s) resolve "
+                f">= 0x02190000 -> 出击 deploy HARD-FREEZE / blank nameplate.{ex}")
+    else:
+        rep.add("name_pointer_band", True,
+                f"all unit-name (master+0x00) and pilot-name (charDB+0x04) pointers "
+                f"resolve < 0x02190000 (deploy/nameplate-safe)")
+
+
 GATES = [
     gate_audio_header,
     gate_ui_text_dispatch,
@@ -2239,6 +2304,7 @@ GATES = [
     gate_label_render_consistency,
     gate_unit_weapon_names,
     gate_id_command_names,
+    gate_name_pointer_band,
     gate_bank_onebyte_regression,
     gate_pool_trampoline_tokens,
     gate_cutin_offset_table,
@@ -2329,6 +2395,14 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["field_width_budgets"],
                 lambda c: mut_a9(c, ID_CMD_TABLE_OFF + 273 * ID_CMD_REC,
                                  struct.pack("<I", 0x0232D000)))
+    expect_fail("relocate a unit name into the 0x0219 band (the 出击 deploy freeze)",
+                ["name_pointer_band"],
+                lambda c: mut_a9(c, MASTER_TABLE_OFF + 184 * MASTER_STRIDE + MASTER_NAME_OFF,
+                                 struct.pack("<I", 0x02190663)))
+    expect_fail("relocate a pilot name into pool A (blank nameplate)",
+                ["name_pointer_band"],
+                lambda c: mut_a9(c, CHAR_DB_OFF + 419 * CHAR_DB_STRIDE + 4,
+                                 struct.pack("<I", 0x0232873E)))
 
     def mut_stg(ctx, corrupt):
         real = ctx["cand_file"]
