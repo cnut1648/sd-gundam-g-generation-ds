@@ -689,29 +689,37 @@ def sheet_meta(rom: GameROM, kind: str) -> dict:
 # ---------------------------------------------------------------------------
 @dataclass
 class _Ident:
-    atlas: dict
+    atlas_jp: dict
+    atlas_zh: dict
     renderb: dict
 
 
 def _load_identities() -> _Ident:
     import json as _json
     cm = _json.loads((REPO / "data/charmap.json").read_text())
-    atlas: dict[int, str] = {}
+    # JP-original identities: the glyph each atlas cell drew in the Japanese ROM.
+    # slot_chars_extra are evidence-based identity corrections and must OVERRIDE
+    # the base jp_slot_chars label (a plain setdefault would silently drop them).
+    jpv: dict[int, str] = {}
     for ch, code in cm["one_byte"].items():
-        atlas.setdefault(int(code), ch)
+        jpv.setdefault(int(code), ch)
     for s, ch in cm["jp_slot_chars"].items():
-        atlas.setdefault(int(s), ch)
-    for ch, s in cm["two_byte_zh"].items():
-        atlas.setdefault(int(s), ch)
+        jpv.setdefault(int(s), ch)
     for s, ch in cm.get("slot_chars_extra", {}).items():
-        atlas.setdefault(int(s), ch)
+        jpv[int(s)] = ch
     # VLM-identified atlas cells that carry no charmap identity (decode-only,
     # so every rendered slot has a readable transcription — no □ in the guide)
     aext = REPO / "data/guide/atlas_ident.json"
     if aext.exists():
         for s, ch in _json.loads(aext.read_text()).get("slots", {}).items():
             if ch:
-                atlas.setdefault(int(s), ch)
+                jpv.setdefault(int(s), ch)
+    # ZH-render identities: cells reclaimed for the translation now draw the
+    # minted Chinese glyph, so two_byte_zh WINS over the original JP label on
+    # those slots (JP source keeps its truthful glyph via the jpv map above).
+    zhv = dict(jpv)
+    for ch, s in cm["two_byte_zh"].items():
+        zhv[int(s)] = ch
     rb: dict[int, str] = {}
     rc = _json.loads((REPO / "data/renderb_charset.json").read_text())["slots"]
     for s, info in rc.items():
@@ -722,7 +730,7 @@ def _load_identities() -> _Ident:
         for s, ch in _json.loads(ext.read_text()).get("slots", {}).items():
             if ch:
                 rb[int(s)] = ch
-    return _Ident(atlas, rb)
+    return _Ident(jpv, zhv, rb)
 
 
 _IDENT: _Ident | None = None
@@ -735,6 +743,7 @@ def decode_text(rom: GameROM, data: bytes, surface: str, exp=None,
     if _IDENT is None:
         _IDENT = _load_identities()
     exp = exp or rom.expand
+    amap = _IDENT.atlas_zh if rom.is_zh else _IDENT.atlas_jp
     out: list[str] = []
     i = 1 if (dialogue and data[:1] == b"\x15") else 0
     n = len(data)
@@ -760,7 +769,7 @@ def decode_text(rom: GameROM, data: bytes, surface: str, exp=None,
             if slot == 0x01:
                 continue
             font = "B" if (surface == "bank" and slot < TRAMPOLINE_SPLIT) else "A"
-        ch = (_IDENT.renderb.get(slot) if font == "B" else _IDENT.atlas.get(slot))
+        ch = (_IDENT.renderb.get(slot) if font == "B" else amap.get(slot))
         out.append(ch if ch is not None else "\u25a1")   # □ = unidentified glyph
     return "".join(out).strip("▼")
 
