@@ -84,10 +84,57 @@ JIT off, software renderer, the 12-button keyboard map, optional gdb stub).
 # fresh grind to combat, queue ID commands, battle start; frame-identity + gdb
 # ARM9-PC oracles (BIOS abort spin = freeze)
 .venv/bin/python test/live/test_combat_cutin.py <rom> [--gdb-port 3333]
+
+# per-stage start->battle-map no-freeze grind (~1 min/stage): WARP into each
+# story stage with the descriptor cheat, advance its opening dialogue to the
+# deploy/battle map; FAIL if any stage hard-freezes (see below)
+.venv/bin/python test/live/test_stage_start.py <rom> [--stages smoke|all|_STG01,_STG04A,...]
 ```
 
 Exit codes: `0` pass, `1` fail, `2` harness/navigation flake (rerun), `3`
 **environment cannot drive game input** (interactive tests only — see below).
+
+### The stage-start warp (`test_stage_start.py`)
+
+`test_dialogue_grind.py` only exercises the FIRST stage; `test_stage_start.py`
+proves EVERY story `_STG*.bin` reaches its deploy/battle map without a hard
+freeze — the per-file failure the static `stage_script_integrity` gate models
+(a corrupted inter-block byte / mis-relocated pointer / mis-aligned header table
+data-aborts one stage's opening flow into the BIOS spin at `0xFFFF0104`).
+
+It cannot reach late stages the honest way (clear every prior session), so it
+WARPS with a RAM cheat via the instrumented melonDS build's hooks
+(`/tmp/melon_poke` forces ARM9 RAM every frame; `/tmp/melon_dump` snapshots it —
+the same build that carries `/tmp/melon_inject`).  The cheat is a **stage
+descriptor redirect**:
+
+* Boot `test/fixtures/newgame_plus.sav`, Continue → data-load slot 2 (a
+  BACK STAGE session).  The session's `_STG` is **preloaded into `0x0232C800`
+  at BackStage entry** (not at 進撃), so the redirect must run during the
+  save-load → BackStage transition (a savestate is stamped at the load-confirm
+  popup and reloaded per stage — created *and* consumed inside one run, the only
+  savestate use the harness permits).
+* The stage descriptor table (arm9 `0x0217555C`, 101 records × `0x34`, key byte
+  at record+0) is searched by the save's current-stage id (`0x0227CC48`); the
+  matched record's file is loaded.  Poking the id copies (`0x0227CC48` /
+  `0x0227CE55` / the proximate `0x0227CC64`) does **not** redirect — the loader
+  overwrites `0x0227CC64` in the same frame it reads it, from an event-VM value.
+  What works: overwrite the *matched record* with the target record's bytes
+  (keeping its key byte) while the save loads.  Record `i` previews the `_STG`
+  at FAT pos `i-2` (a session *card*) and 進撃 plays FAT pos `i-1` (the session)
+  — the game's real card→session pairing — so to play session `_STGxx` (FAT pos
+  P) the test redirects to record `P+1` and confirms the played buffer by
+  dump+match.
+
+Per stage the verdict is **PASS** (reached the battle/deploy map — the only
+clean result, never a pass on timeout alone), **FREEZE** (window static under
+continuous A presses AND the map never reached — the hard-freeze signature),
+**UNREACHED** (map not reached but frames kept changing — inconclusive, rerun)
+or **WARP-FAIL** (the redirect flaked — not a ROM verdict).  `--stages` takes a
+`_STG` name list or a preset (`smoke` default, `routes`, `sp`, `x`, `all`); the
+warp/dump hooks are single global `/tmp` files so stages run sequentially in one
+booted session (no parallel displays).  Needs the instrumented melonDS (else
+exit 3, like the input preflight).
 
 ### The input preflight (exit 3)
 
