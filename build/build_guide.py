@@ -339,9 +339,13 @@ def extract_units(rom: GameROM) -> list[dict]:
     """Walk the unit master table (arm9 0xB94BC): unit name + 6 weapon names.
 
     Reads the same pointer words the battle/roster code dereferences.  A record
-    with a NULL/zero name pointer is an unused slot (skipped)."""
+    with a NULL/zero name pointer is an unused slot (skipped).  The table is
+    bounded to the records that PRECEDE the char-DB (0xDCF18): because the master
+    stride 0xD8 == 3x the char-DB stride 0x48, higher master indices alias the
+    char-DB and would read PILOT names as if they were units."""
+    unit_n = (CHARDB - MASTER_TABLE) // MASTER_STRIDE + 1
     out = []
-    for utid in range(MASTER_COUNT):
+    for utid in range(unit_n):
         rec = MASTER_TABLE + utid * MASTER_STRIDE
         nptr = _rec_ptr(rom, rec + UNIT_NAME_FIELD)
         name = rom.cstr(nptr) if nptr else None
@@ -628,6 +632,13 @@ def _load_identities() -> _Ident:
         atlas.setdefault(int(s), ch)
     for s, ch in cm.get("slot_chars_extra", {}).items():
         atlas.setdefault(int(s), ch)
+    # VLM-identified atlas cells that carry no charmap identity (decode-only,
+    # so every rendered slot has a readable transcription — no □ in the guide)
+    aext = REPO / "data/guide/atlas_ident.json"
+    if aext.exists():
+        for s, ch in _json.loads(aext.read_text()).get("slots", {}).items():
+            if ch:
+                atlas.setdefault(int(s), ch)
     rb: dict[int, str] = {}
     rc = _json.loads((REPO / "data/renderb_charset.json").read_text())["slots"]
     for s, info in rc.items():
@@ -684,8 +695,14 @@ def decode_text(rom: GameROM, data: bytes, surface: str, exp=None,
 # ===========================================================================
 # Aggregate: walk every surface, render JP + ZH, into a JSON-able GAMEDATA dict
 # ===========================================================================
+# game placeholder labels for empty roster/char slots — not real units/chars
+_PLACEHOLDER_BYTES = {b"\xf4\xfe",            # 欠番 (system-dict macro; vacant slot)
+                      b"\xea\x5a\xe8\x77"}     # 预备 (reserve slot)
+
+
 def _dummy_name(b: bytes | None) -> bool:
-    return not b or b == b"\x01" or b == b"\x00"
+    return (not b or b == b"\x01" or b == b"\x00"
+            or b in _PLACEHOLDER_BYTES)
 
 
 def _is_priming_row(jb: bytes) -> bool:
@@ -817,29 +834,49 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
     bb = _json.loads((REPO / "data/arenas/briefing_blobs.json").read_text())
     zblobs = [zh.cstr(BRIEF_POOL_RAM + int(e["offset"], 16)) for e in bb["entries"]]
     zblobs = [b for b in zblobs if b and any(True for _ in glyph_stream(zh, b, "stage"))]
-    # greedy: each JP block <- the consecutive ZH blobs covering its glyph count
-    aligned, zi = [], 0
-    for off, jb in jblocks:
-        jn = len(list(glyph_stream(jp, jb, "stage", jp.expand)))
-        acc, zc = [], 0
-        while zi < len(zblobs) and zc < jn * 0.85:
-            acc.append(zblobs[zi])
-            zc += len(list(glyph_stream(zh, zblobs[zi], "stage")))
-            zi += 1
-        aligned.append((off, jb, acc))
-    # group by the descriptor whose +0x14 range contains each block
+    zlen = [len(list(glyph_stream(zh, b, "stage"))) for b in zblobs]
+    jlen = {off: len(list(glyph_stream(jp, jb, "stage", jp.expand))) for off, jb in jblocks}
+    # group JP blocks by the descriptor whose +0x14 <= block offset
     starts = sorted((u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE, k)
                     for k in range(101)
                     if BRIEF_LO <= u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE < BRIEF_HI)
-    groups: dict = collections.OrderedDict()
-    for off, jb, acc in aligned:
+
+    def _desc_of(off):
         k = None
         for so, kk in starts:
             if so <= off:
                 k = kk
             else:
                 break
-        groups.setdefault(k, []).append((jb, acc))
+        return k
+    jgroups: dict = collections.OrderedDict()
+    for off, jb in jblocks:
+        jgroups.setdefault(_desc_of(off), []).append((off, jb))
+    # Distribute ZH blobs across groups by CUMULATIVE JP-glyph proportion.  The old
+    # per-block greedy cascaded: an untranslated JP block still consumed ZH blobs, so
+    # drift starved late stages (SP7 etc.).  Assigning each group its glyph-share of
+    # the ZH pool by absolute cumulative position is drift-free (re-syncs every stage).
+    GJ = sum(jlen.values()) or 1
+    GZ = sum(zlen) or 1
+    groups: dict = collections.OrderedDict()
+    zi = zcum = cumJP = 0
+    glist = list(jgroups.items())
+    for gi, (k, jblist) in enumerate(glist):
+        cumJP += sum(jlen[o] for o, _ in jblist)
+        target = GZ if gi == len(glist) - 1 else round(cumJP / GJ * GZ)
+        gblobs, glens = [], []
+        while zi < len(zblobs) and zcum < target:
+            gblobs.append(zblobs[zi]); glens.append(zlen[zi]); zcum += zlen[zi]; zi += 1
+        # within-group greedy pair (bounded to this group -> no cross-stage drift)
+        items, bj = [], 0
+        for o, jb in jblist:
+            acc, zc = [], 0
+            while bj < len(gblobs) and zc < jlen[o] * 0.85:
+                acc.append(gblobs[bj]); zc += glens[bj]; bj += 1
+            items.append((jb, acc))
+        if bj < len(gblobs) and items:            # leftover ZH -> last block (no loss)
+            items[-1] = (items[-1][0], items[-1][1] + gblobs[bj:])
+        groups[k] = items
     def _dlab(k, off):
         """Decode a descriptor string field (+0x0c label / +0x10 title) for the
         client-side stage matcher (# briefing -> Route stage by title_jp)."""
@@ -887,6 +924,45 @@ def _load_stage_blocks() -> dict:
         import json as _json
         return _json.loads(p.read_text())
     return {}
+
+
+# library / hangar encyclopedia data files (renderA-direct 'stage' surface + dialogue dict)
+LIBRARY_FILES = [
+    ("char_bios",     "library/character_bios.json", "324.bin", "\u89d2\u8272\u56fe\u9274 Character bios", True),
+    ("unit_bios",     "library/unit_bios.json",      "c4b.bin", "\u673a\u4f53\u56fe\u9274 Unit bios",      True),
+    ("part_names",    "hangar/part_names.json",      "b6e.bin", "\u6539\u9020\u90e8\u4ef6\u540d Part names", False),
+    ("part_captions", "hangar/part_captions.json",   "b6f.bin", "\u90e8\u4ef6\u8bf4\u660e Part captions",   True),
+]
+
+
+def extract_bios(jp: GameROM, zh: GameROM) -> list[dict]:
+    """Encyclopedia (資料館 library + hangar): character/unit biographies and
+    改造 part names/captions.  Bytes are read from the ROM data files at each
+    entry's offset/size and rendered on the renderA-direct 'stage' surface with
+    the dialogue dict (verified: a char bio decodes 「誇りや名誉、血筋…」)."""
+    import json as _json
+    out = []
+    for key, rel, fname, title, long in LIBRARY_FILES:
+        p = REPO / "data/files" / rel
+        if not p.exists():
+            continue
+        d = _json.loads(p.read_text())
+        entries = d.get("edits", d.get("entries", []))
+        jf, zf = jp.file(fname), zh.file(fname)
+        items = []
+        for e in entries:
+            off = int(e["offset"], 16) if isinstance(e["offset"], str) else e["offset"]
+            sz = e["size"]
+            jb, zb = bytes(jf[off:off + sz]), bytes(zf[off:off + sz])
+            items.append({
+                "ix": len(items) + 1,
+                "zt": decode_text(zh, zb, "stage", zh.expand, True) if zb else "",
+                "jt": decode_text(jp, jb, "stage", jp.expand, True) if jb else "",
+                "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
+                "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else "",
+            })
+        out.append({"key": key, "title": title, "long": long, "n": len(items), "items": items})
+    return out
 
 
 def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
@@ -1037,6 +1113,8 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
 
     # ---- briefings (作战内容), per stage descriptor, into the Route tab -------
     data["briefings"] = extract_briefings_by_stage(jp, zh)
+    # ---- encyclopedia (資料館 library + hangar bios / part names) ------------
+    data["library"] = extract_bios(jp, zh)
     return data
 
 
@@ -1068,7 +1146,8 @@ GG_STYLE = """<style id="gg-style">
 .gf.name{padding:0;border-bottom:none}
 .gf.stk{flex-direction:column;align-items:stretch;gap:2px}
 .gf.stk .gf-txt{flex:none}
-.gf.stk .gf-bmp{max-width:100%;overflow-x:auto;overflow-y:hidden}
+.gf.stk .gf-bmp,.dlg-col .gf-bmp{max-width:100%}
+.gf.stk .gf-bmp-scroll,.dlg-col .gf-bmp-scroll{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden}
 .gf-lab{font-size:10px;color:var(--ink4);min-width:38px;flex:none;align-self:flex-start;padding-top:3px}
 .gf-txt{display:flex;flex-direction:column;min-width:0;flex:1}
 .gf-txt .zt{font-size:14px;color:var(--ink);line-height:1.3;word-break:break-word}
@@ -1095,11 +1174,14 @@ canvas.ggc{vertical-align:middle;image-rendering:pixelated;image-rendering:crisp
 .dlg-meta{flex:none;width:104px;display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding-top:2px}
 .dlg-meta .spk{font-size:12px;color:var(--gold);font-weight:600;line-height:1.25}
 .dlg-col{display:flex;flex-direction:column;gap:3px;align-items:stretch;flex:1;min-width:0}
-.dlg-col .gf-bmp{max-width:100%;overflow-x:auto;overflow-y:hidden}
 .gbadge{font-size:9.5px;border-radius:5px;padding:0 5px;line-height:1.55;border:1px solid;white-space:nowrap}
 .gbadge.br{color:#ffb27a;border-color:#7a4a2a;background:#2a170c}
 .gbadge.ev{color:#7ad4ff;border-color:#2a5a7a;background:#0c1f2a}
 .gbadge.ch{color:#c79bff;border-color:#4a2a7a;background:#170c2a}
+/* global show/hide in-game bitmaps */
+#gg-bmptoggle{position:fixed;right:18px;bottom:18px;z-index:200;background:var(--panel);border:1px solid var(--line2);color:var(--ink);border-radius:20px;padding:8px 15px;font-size:13px;cursor:pointer;box-shadow:0 5px 18px #0008}
+#gg-bmptoggle:hover{background:#16223a}
+body.gg-nobmp .gf-bmp{display:none!important}
 </style>"""
 
 # the browser-side module (canvas glyph renderer + grid tabs + route weave)
@@ -1108,12 +1190,14 @@ GG_JS = r"""
 var GG;
 var $=function(s,r){return (r||document).querySelector(s);};
 var SHEETS={};
-function loadSheets(cb){var keys=['jp','zh','rb'],left=keys.length;keys.forEach(function(k){var im=new Image();im.onload=function(){if(--left===0)cb();};im.src=GG.sheets[k].png;SHEETS[k]=im;});}
+function loadSheets(cb){var keys=['jp','zh','rb'],left=keys.length,done=false;
+  function fin(){if(done)return;if(--left<=0){done=true;cb();}}
+  keys.forEach(function(k){var im=new Image();im.onload=fin;im.onerror=fin;im.src=GG.sheets[k].png;SHEETS[k]=im;});}
 function b64u16(s){var bin=atob(s),a=new Uint16Array(bin.length>>1);for(var i=0;i<a.length;i++)a[i]=bin.charCodeAt(i*2)|(bin.charCodeAt(i*2+1)<<8);return a;}
 // deferred paint queue: canvases are SIZED up front (stable layout) and PAINTED over frames
-var DRAWQ=[];
-function pump(){var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){(DRAWQ.shift())();}if(DRAWQ.length)requestAnimationFrame(pump);}
-function queueDraw(fn){DRAWQ.push(fn);if(DRAWQ.length===1)requestAnimationFrame(pump);}
+var DRAWQ=[],PUMPING=false;
+function pump(){PUMPING=true;var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){var fn=DRAWQ.shift();try{fn();}catch(e){}}if(DRAWQ.length){requestAnimationFrame(pump);}else{PUMPING=false;}}
+function queueDraw(fn){DRAWQ.push(fn);if(!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}
 // surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
 function drawStr(packed,surface,rom,scale){
   scale=scale||2; var g=b64u16(packed||''),W=0,i,v;
@@ -1141,7 +1225,11 @@ function txtCol(zt,jt){
 }
 function bmpCol(zb,jb,surf,scale){
   var c=document.createElement('span');c.className='gf-bmp';
-  if(zb)c.appendChild(drawStr(zb,surf,1,scale));
+  // scrollable inner holds the (possibly wide) ZH bitmap; the JP popover is a
+  // sibling of the scroller so overflow-x:auto never clips it (fixes Route hover)
+  var scroll=document.createElement('span');scroll.className='gf-bmp-scroll';
+  if(zb)scroll.appendChild(drawStr(zb,surf,1,scale));
+  c.appendChild(scroll);
   if(jb){var pop=document.createElement('span');pop.className='pop';c.appendChild(pop);c.classList.add('hasjp');
     var built=false;c.addEventListener('mouseenter',function(){if(!built){built=true;pop.appendChild(drawStr(jb,surf,0,scale));}});}
   return c;
@@ -1180,10 +1268,12 @@ function buildChar(bd,c){
   });
   if(c.barks&&c.barks.length){var b=collSect(bd,'\u6218\u6597\u558a\u8bdd Barks',c.barks.length);b._fill=function(){c.barks.forEach(function(bk){b.appendChild(field(bk,0,2,null,null,true));});};}
 }
-// -- grid: build all cards lazily on first view-show, chunked; pixels paint deferred --
+// -- grid: build all cards lazily on first view-show, chunked; pixels paint deferred.
+// Robust triggers (tabs sometimes didn't render until refresh): IntersectionObserver
+// + owning-tab-button click + immediate-if-visible, all idempotent. --
 function grid(hostSel,items,idOf,build){
-  var host=$(hostSel);
-  var once=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;once.disconnect();
+  var host=$(hostSel);if(!host)return;var built=false;
+  function go(){if(built)return;built=true;
     var i=0;
     (function chunk(){var end=Math.min(i+40,items.length),frag=document.createDocumentFragment();
       for(;i<end;i++){var it=items[i],idx=idOf(it);
@@ -1192,8 +1282,11 @@ function grid(hostSel,items,idOf,build){
         var bd=document.createElement('div');bd.className='gcard-bd';build(bd,it);w.appendChild(bd);frag.appendChild(w);}
       host.appendChild(frag);
       if(i<items.length)requestAnimationFrame(chunk);})();
-  });});
-  once.observe(host);
+  }
+  try{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){io.disconnect();go();}});});io.observe(host);}catch(e){go();}
+  var view=host.closest?host.closest('.view'):null,v=(view&&view.id)?view.id.replace('view-',''):null;
+  if(v){var btn=$('#tabs button[data-v="'+v+'"]');if(btn)btn.addEventListener('click',function(){setTimeout(go,0);});}
+  if(host.offsetParent!==null)go();
 }
 function wireFilter(inp,gridsel){var el=$(inp);if(!el)return;el.addEventListener('input',function(e){var q=e.target.value.trim();Array.prototype.forEach.call($(gridsel).children,function(cd){cd.style.display=(!q||(cd._idx||'').indexOf(q)>=0)?'':'none';});});}
 // -- tabs --
@@ -1213,6 +1306,17 @@ function initTabs(){
     '<div class="gg-search"><input id="ggunitq" placeholder="\u6309\u5e8f\u53f7\u7b5b\u9009\u2026"></div>'+
     '<div id="ggunitgrid" class="ggrid"></div>';
   grid('#ggunitgrid',GG.units,function(u){return '#'+u.utid;},buildUnit);
+  var lib=GG.library||[];
+  if(lib.length){
+    addTab('ggenc','\u8d44\u6599\u5e93','Library');
+    var vl=addView('ggenc');
+    var tot=lib.reduce(function(a,s){return a+s.n;},0);
+    var lh='<h2 class="sec">\u8d44\u6599\u9986 \u00b7 \u56fe\u9274 <span class="muted" style="font-size:13px">'+tot+' \u6761</span></h2>'+
+      '<p class="gg-intro">\u6e38\u620f\u8d44\u6599\u9986\uff08library / hangar\uff09\uff1a\u89d2\u8272\u4e0e\u673a\u4f53\u56fe\u9274\u4f20\u8bb0\u3001\u6539\u9020\u90e8\u4ef6\u540d\u4e0e\u8bf4\u660e\u3002\u6bcf\u6761<b>\u4e2d\u6587\u6587\u672c\uff0b\u65e5\u6587\u6587\u672c\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff0c\u60ac\u505c\u4f4d\u56fe\u770b\u65e5\u6587\u4f4d\u56fe\u3002</p>';
+    lib.forEach(function(sec,si){lh+='<h3 class="sec" style="font-size:15px;margin-top:18px">'+sec.title+' <span class="muted" style="font-size:12px">'+sec.n+'</span></h3><div id="ggenc'+si+'" class="ggrid"></div>';});
+    vl.innerHTML=lh;
+    lib.forEach(function(sec,si){grid('#ggenc'+si,sec.items,function(it){return '#'+it.ix;},function(bd,it){bd.appendChild(field(it,0,2,null,null,sec.long));});});
+  }
   wireFilter('#ggidq','#ggidgrid');wireFilter('#ggunitq','#ggunitgrid');
 }
 // -- Route tab: weave dialogue (speakers + badges) + briefing per stage --
@@ -1276,7 +1380,12 @@ function addExtras(){
   extraStages.forEach(function(s){g.appendChild((function(){var w=document.createElement('div');w.className='gcard';w._idx=s.file;var ix=document.createElement('div');ix.className='gcard-ix';ix.textContent=s.file;w.appendChild(ix);var bd=document.createElement('div');bd.className='gcard-bd';var c=collBlock('\u5267\u60c5\u6587\u672c',s.n+' \u6bb5');c.body._fill=function(){s.lines.forEach(function(ln){c.body.appendChild(dlgLine(ln));});};bd.appendChild(c.wrap);w.appendChild(bd);return w;})());});
   sec.appendChild(g);host.appendChild(sec);
 }
-function start(){window.GG=GG;indexStages();loadSheets(function(){initTabs();weaveStage();addShared();addExtras();});}
+function addToggle(){
+  var b=document.createElement('button');b.id='gg-bmptoggle';b.textContent='\u9690\u85cf\u4f4d\u56fe';
+  b.addEventListener('click',function(){var off=document.body.classList.toggle('gg-nobmp');b.textContent=off?'\u663e\u793a\u4f4d\u56fe':'\u9690\u85cf\u4f4d\u56fe';});
+  document.body.appendChild(b);
+}
+function start(){window.GG=GG;indexStages();loadSheets(function(){initTabs();weaveStage();addShared();addExtras();addToggle();});}
 function boot(){
   var raw=document.getElementById('gg-data').textContent.trim();
   var bytes=Uint8Array.from(atob(raw),function(c){return c.charCodeAt(0);});
