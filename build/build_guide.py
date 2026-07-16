@@ -456,6 +456,26 @@ def _clip_at_00(data: bytes, start: int = 0) -> int:
     return n
 
 
+def _bark_body_end(data: bytes, start: int) -> int:
+    """Token-aware end of a bark BODY: the ``00 03 00 01`` record terminator (a
+    bark's sub-lines are ``00 03``-separated and the whole record ends with
+    ``00 03 00 01`` — the same page grammar as cut-ins).  Falls back to the next
+    ``00 05`` sub-header, else EOF.  The old ``_clip_at_00`` stopped at the first
+    sub-line break, so multi-line barks lost everything after line 1
+    (アイナ「全ては……」dropped 「お兄様の夢のためなのです！」)."""
+    j, n = start, len(data)
+    while j < n - 1:
+        if data[j] >= 0xE0:
+            j += 2
+            continue
+        if data[j] == 0x00 and j + 3 < n and data[j + 1] == 0x03 and data[j + 2] == 0x00 and data[j + 3] == 0x01:
+            return j
+        if data[j] == 0x00 and data[j + 1] == 0x05:
+            return j
+        j += 1
+    return n
+
+
 def cutin_line(rom: GameROM, idn: int) -> bytes | None:
     """Cut-in famous line (名台詞) bytes for an ID (via the parallel link table).
 
@@ -581,15 +601,17 @@ def build_bark_index(rom: GameROM) -> tuple[dict[int, list[bytes]], dict[int, li
                 voiceset = u16(data, i + 2)
                 char_id = u16(data, i + 6)
                 text_start = i + 8
-                # one sub-line's text ends at the first standalone 0x00
-                # (token-aware); the sub-line framing 00 03 00 0X / next
-                # sub-header follows.  Only keep non-empty text runs.
-                end = _clip_at_00(data, text_start)
-                run = data[text_start:end]
-                if run:
+                # FULL bark = every sub-line up to the 00 03 00 01 terminator;
+                # strip the line-start page controls (00 03 / 00 04) so multi-line
+                # barks read as one line ("全ては……お兄様の夢のためなのです！").
+                end = _bark_body_end(data, text_start)
+                run = _strip_line_bullets(data[text_start:end])
+                # drop single-glyph placeholders (the lone あ shared by non-combatant
+                # NPC voicesets) and empties.
+                if run and sum(1 for _ in glyph_stream(rom, run, "stage")) >= 2:
                     by_cid.setdefault(char_id, []).append(run)
                     by_vs.setdefault(voiceset, []).append(run)
-                i = end + 1
+                i = end + 4
             else:
                 i += 1
     return by_cid, by_vs
