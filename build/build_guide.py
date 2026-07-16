@@ -489,6 +489,7 @@ def cutin_line(rom: GameROM, idn: int) -> bytes | None:
     if k >= 0:
         rec = rec[:k]
     rec = rec.rstrip(b"\x00")          # drop trailing padding
+    rec = _strip_line_bullets(rec)     # drop line-start page controls (the ！。 / leading 。)
     return rec or None
 
 
@@ -805,7 +806,10 @@ def _file_to_guide_id(f: str, guide_ids: set[str]) -> str | None:
     return None
 
 
-BRIEF_LO, BRIEF_HI = 0x1985A4, 0x1A626B      # briefing (作戦内容) record region
+BRIEF_LO, BRIEF_HI = 0x198555, 0x1A626B      # briefing (作戦内容) record region
+                                             # (0x198555 = the stage-00/00SP/01 shared
+                                             #  briefing start; earlier BRIEF_LO=0x1985A4
+                                             #  orphaned it, mis-matching stage 01)
 BRIEF_POOL_RAM = 0x023E7000                  # pool B: ZH briefing blobs
 
 
@@ -916,10 +920,31 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
                 continue
         i += 1
 
+    def _dlab(k, off):
+        if k is None:
+            return ""
+        p = u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + off)
+        o = p - RAM_BASE
+        if not (0 <= o < len(jp.arm9)):
+            return ""
+        s = jp.cstr(p)
+        return decode_text(jp, s, "bank", jp.expand_sys) if s else ""
+
     # group JP blocks by the descriptor whose +0x14 is the greatest start <= offset
     starts = sorted((u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE, k)
                     for k in range(101)
                     if BRIEF_LO <= u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE < BRIEF_HI)
+    # SEVERAL stages can share ONE briefing start (00/00SP/01 all point at 0x198555),
+    # so a group carries EVERY owning stage's label — the Route tab matches any of them.
+    start_labs: dict = collections.OrderedDict()
+    for so, kk in starts:
+        lab = _dlab(kk, STAGE_DESC_LABEL)
+        start_labs.setdefault(so, [])
+        if lab and lab not in start_labs[so]:
+            start_labs[so].append(lab)
+    desc_start = {}
+    for so, kk in starts:
+        desc_start.setdefault(kk, so)
 
     def _desc_of(off):
         k = None
@@ -933,16 +958,6 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
     groups: dict = collections.OrderedDict()
     for off, jb in jblocks:
         groups.setdefault(_desc_of(off), []).append((off, jb))
-
-    def _dlab(k, off):
-        if k is None:
-            return ""
-        p = u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + off)
-        o = p - RAM_BASE
-        if not (0 <= o < len(jp.arm9)):
-            return ""
-        s = jp.cstr(p)
-        return decode_text(jp, s, "bank", jp.expand_sys) if s else ""
 
     out = []
     for k, blist in groups.items():
@@ -958,8 +973,9 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
                 "zb": pack_glyphs(zh, zjoin, "stage", zh.expand, True) if zjoin else "",
             })
         if lines:
-            out.append({"desc": k, "n": len(lines), "lines": lines,
-                        "lab": _dlab(k, STAGE_DESC_LABEL), "title": _dlab(k, STAGE_DESC_TITLE)})
+            labs = start_labs.get(desc_start.get(k), []) if k is not None else []
+            out.append({"desc": k, "n": len(lines), "lines": lines, "labs": labs,
+                        "lab": labs[0] if labs else "", "title": _dlab(k, STAGE_DESC_TITLE)})
     return out
 
 
@@ -1113,9 +1129,11 @@ def _strip_line_bullets(data: bytes) -> bytes:
     ``07`` is the tell they are controls, not an intentional ·/々 bullet — a real
     bullet would be one consistent glyph).  The text VM consumes them BEFORE the
     glyph blitter, so the game draws nothing there; only a naive rasterizer
-    (render_oracle) would emit the stray ·/々.  A ``04``/``07`` MID-line (real
-    ·/々) is never at a line head, so it is kept.  Token-aware (0xE0.. opaque)."""
-    LINE_CTRL = (0x04, 0x07)
+    (render_oracle) would emit the stray ·/々/。.  The same grammar governs cut-in
+    banners: a line-start ``03`` is a page COMMIT (not a rendered 。 — that is the
+    ``！。`` artifact), ``04`` a continue.  A ``03``/``04``/``07`` MID-line (real
+    。/·/々) is never at a line head, so it is kept.  Token-aware (0xE0.. opaque)."""
+    LINE_CTRL = (0x03, 0x04, 0x07)
     out = bytearray()
     i, n = 0, len(data)
     at_line_start = True
@@ -1287,72 +1305,77 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                           "jt": decode_text(jp, jn, "bank", jp.expand_sys) if jn else ""}
     data["names"] = names
 
-    # ---- 1a. stage dialogue (index from data/dialogue; bytes read from ROMs) --
+    # ---- 1a. stage dialogue: EVERY block the event VM can reach, JP+ZH --------
+    # We walk BOTH the JP and the (CFG-isomorphic) ZH stage file with the event VM
+    # and pair blocks by play-order index.  This is what surfaces the combat /
+    # conditional SPECIAL dialogue (pilot-vs-pilot demos, 撃墜/death lines, 交信) —
+    # those blocks live INSIDE `script`-kind edit ranges, so the old "iterate
+    # dialogue edits" pass silently dropped them even though the ROM ships them
+    # translated.  Pairing by CFG index needs no edit bookkeeping and keeps the
+    # console play order + speakers.
     from utils import stage_text
     guide_ids = _extract_guide_stage_ids()
-    sblocks = _load_stage_blocks()
-    # first pass: count block frequency across stages (for shared-template dedup)
+    smeta = _load_stage_blocks()
     import collections
     freq = collections.Counter()
     per_stage = []
     for f, sd in stage_text.iter_stage_data():
         jf, zf = jp.file(f), zh.file(f)
-        edits = [(int(e["jp_offset"], 16), e["jp_len"], bytes.fromhex(e["zh_hex"]),
-                  e.get("kind")) for e in sd.get("edits", [])]
-        edits += [(int(x["jp_offset"], 16), 0, bytes.fromhex(x["hex"]), None)
-                  for x in sd.get("inserts", [])]
-        edits.sort()
-        delta, blk_by_off = 0, {}          # jp_offset -> (jp_bytes, zh_bytes)
+        cj, cz = stage_block_order(jf), stage_block_order(zf)
+        iso = len(cj) == len(cz)
+        blocks, cfg_offs = [], set()          # (scene, jp_offset, jb, zb)
+        for (scene, jo, _b), (_sc, zo, _b2) in (zip(cj, cz) if iso else zip(cj, cj)):
+            jt = text_codec.find_terminator(jf, jo + 1)
+            zt = text_codec.find_terminator(zf, zo + 1)
+            if jt < 0 or zt < 0:
+                continue
+            jb = jf[jo:jt + 2]
+            zb = zf[zo:zt + 2] if iso else b""
+            if _is_priming_row(jb):
+                continue
+            blocks.append((scene, jo, jb, zb))
+            cfg_offs.add(jo)
+            freq[jb] += 1
+        # UNION with translated dialogue blocks the static VM walk can't reach:
+        # route-completion / thanks-for-playing / 特殊演習 text is driven by the
+        # separate ending VM, so keep every translated block too (nothing lost).
+        edits = sorted([(int(e["jp_offset"], 16), e["jp_len"], bytes.fromhex(e["zh_hex"]), e.get("kind"))
+                        for e in sd.get("edits", [])]
+                       + [(int(x["jp_offset"], 16), 0, bytes.fromhex(x["hex"]), None)
+                          for x in sd.get("inserts", [])])
+        delta = 0
         for off, old, new, kind in edits:
-            zoff = off + delta
-            if kind == "dialogue":
+            if kind == "dialogue" and off not in cfg_offs:
                 jb = jf[off:off + old]
                 if not _is_priming_row(jb):
-                    blk_by_off[off] = (jb, zf[zoff:zoff + len(new)])
+                    blocks.append((-1, off, jb, zf[off + delta:off + delta + len(new)]))
                     freq[jb] += 1
             delta += len(new) - old
-        per_stage.append((f, blk_by_off, stage_block_order(jf)))
+        per_stage.append((f, blocks))
 
-    smeta = sblocks
     shared = []               # dedup'd shared template blocks (shown once)
     shared_seen = set()
     stages = []
-    for f, blk_by_off, cfg in per_stage:
+    for f, blocks in per_stage:
         meta = smeta.get(f[:-4]) or smeta.get(f) or {}
-        lines, emitted = [], set()
-
-        def emit(off, scene):
-            jb, zb = blk_by_off[off]
+        lines, seen_off = [], set()
+        for scene, off, jb, zb in blocks:
+            if off in seen_off:
+                continue
+            seen_off.add(off)
             if freq[jb] >= SHARED_MIN:                       # shared template: show once
                 if jb not in shared_seen:
                     shared_seen.add(jb)
                     shared.append(fld(jb, zb, "stage", jp.expand, True))
-                return
+                continue
             m = meta.get(hex(off)) or meta.get(str(off)) or {}
             ln = fld(jb, zb, "stage", jp.expand, True)
             ln["sc"] = scene                                 # scene/event index
             if m.get("sp", -1) >= 0:
                 ln["sp"] = m["sp"]
-            # Only the 8 game-wide player CHOICE blocks are real forks; the audited
-            # VM walk finds 0 conditional branches and 0 tagged events, so we do NOT
-            # invent 分支/事件 badges (the old per-line noise) — order + scene
-            # grouping already convey the structure.
-            if m.get("choice"):
+            if m.get("choice"):                              # only real player forks
                 ln["c"] = 1
             lines.append(ln)
-
-        # 1) blocks in console play order (CFG walk from scene entries)
-        for scene, off, _is_branch in cfg:
-            if off in blk_by_off and off not in emitted:
-                emitted.add(off)
-                emit(off, scene)
-        # 2) translated blocks the JP CFG walk never reached (data-indirect /
-        #    phantom) -> appended in file order under scene -1 so nothing is lost
-        for off in sorted(blk_by_off):
-            if off not in emitted:
-                emitted.add(off)
-                emit(off, -1)
-        # number of distinct scenes actually shown (for the UI scene headers)
         nsc = len({ln["sc"] for ln in lines if ln.get("sc", -1) >= 0})
         stages.append({"file": f[:-4], "gid": _file_to_guide_id(f, guide_ids),
                        "n": len(lines), "nsc": nsc, "lines": lines})
@@ -1402,8 +1425,17 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
             zb_list = zbark_vs.get(vs, [])
             jb_list = jbark_vs.get(vs, [])
         zb_list = zb_list or []
-        barks = [fld(jb_list[k] if k < len(jb_list) else b"", zb, "stage", jp.expand)
-                 for k, zb in enumerate(zb_list)]
+        # skip single-glyph placeholder barks: non-combatant NPCs (士官/操作员/市民…)
+        # share a voiceset whose only "bark" is a lone あ warm-up glyph — not a real
+        # combat line, so the voiceset fallback must not surface it as a bark card.
+        def _bark_glyphs(rom, b):
+            return sum(1 for _ in glyph_stream(rom, b, "stage")) if b else 0
+        barks = []
+        for k, zb in enumerate(zb_list):
+            jb = jb_list[k] if k < len(jb_list) else b""
+            if _bark_glyphs(zh, zb) <= 1 and _bark_glyphs(jp, jb) <= 1:
+                continue
+            barks.append(fld(jb, zb, "stage", jp.expand))
         if not ids and not barks:
             continue
         chars.append({"cid": cid, "nm": name_fld(jn, zn),
@@ -1736,7 +1768,14 @@ var stagesByGid={},extraStages=[];
 function indexStages(){stagesByGid={};extraStages=[];GG.stages.forEach(function(s){if(s.gid){(stagesByGid[s.gid]=stagesByGid[s.gid]||[]).push(s);}else{extraStages.push(s);}});}
 function normT(s){if(!s)return '';return s.replace(/[\u25a1\s\u3000\uff08\uff09()\uff3b\uff3d\[\]\uff0c\u3001\u3002.!\uff01?\uff1f\-\u30fc\uff0d\u30fb:\uff1a]/g,'').replace(/\u7bc7/g,'\u7de8');}
 function lcsLen(a,b){var m=a.length,n=b.length,i,j,best=0,prev=new Array(n+1),cur=new Array(n+1);for(j=0;j<=n;j++)prev[j]=0;for(i=1;i<=m;i++){cur[0]=0;for(j=1;j<=n;j++){cur[j]=(a.charAt(i-1)===b.charAt(j-1))?prev[j-1]+1:0;if(cur[j]>best)best=cur[j];}var t=prev;prev=cur;cur=t;}return best;}
-function bestBrief(s){var key=normT(s&&s.title_jp);if(key.length<2)return null;var best=null,bs=0;GG.briefings.forEach(function(b){var bt=normT(b.title);if(!bt)return;var sc=lcsLen(key,bt);if(sc>bs){bs=sc;best=b;}});return (bs>=2)?best:null;}
+// match a Route stage to its briefing by the descriptor LABEL (stage number),
+// not by fuzzy title text — the title-LCS heuristic mis-attached stage 01
+// (宿命の出会い) to X6b (宿命の戦い).  labs carry every owning stage's number
+// (00/00SP/01 share one briefing).  Normalize dash/case and 後→后 / 篇.
+function normLab(s){return (s||'').toString().toLowerCase().replace(/[-\s\u30fb]/g,'').replace(/\u5f8c/g,'\u540e').replace(/\u7bc7/g,'');}
+function bestBrief(s){var id=normLab(s&&s.id);if(!id)return null;var found=null;
+  GG.briefings.forEach(function(b){(b.labs||[]).forEach(function(l){if(normLab(l)===id)found=b;});});
+  return found;}
 function sceneName(sc){return sc<0?'\u5176\u5b83/\u672a\u89e6\u8fbe':'\u573a\u666f';}
 function appendScenedLines(host,s){
   // renumber the distinct scene ids to sequential 1..N for display
