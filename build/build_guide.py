@@ -1164,10 +1164,9 @@ GG_STYLE = """<style id="gg-style">
 .gf-bmp .pop{display:none;position:absolute;right:0;top:100%;z-index:30;background:#0b1220;border:1px solid var(--line2);border-radius:7px;padding:7px 6px 4px;margin-top:3px;box-shadow:0 8px 24px #000a;white-space:nowrap}
 .gf-bmp .pop::before{content:'\u65e5 JP';position:absolute;top:2px;left:6px;font-size:8px;color:var(--ink4)}
 .gf-bmp:hover .pop{display:block}
-.gf-bmp .pop canvas{filter:brightness(.92) sepia(.25) hue-rotate(60deg) saturate(1.25)}
-canvas.ggc{vertical-align:middle;image-rendering:pixelated;image-rendering:crisp-edges;display:inline-block}
+.gf-bmp .pop .gseg{filter:brightness(.92) sepia(.25) hue-rotate(60deg) saturate(1.25)}
 .gf-lines{display:inline-flex;flex-direction:column;gap:2px;vertical-align:top}
-.gf-lines>canvas{display:block}
+.gf-lines>.gseg{display:flex}
 .gf-el{height:8px}
 /* collapsible block (route dialogue / briefing / shared) */
 .gcoll{margin:10px 0;background:#0e1626;border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -1197,34 +1196,39 @@ GG_JS = r"""
 (function(){
 var GG;
 var $=function(s,r){return (r||document).querySelector(s);};
-var SHEETS={},SHEETS_OK=false,GRIDS={};
-// Load the 3 sprite sheets in the background.  The UI is built immediately (not
-// gated on images); glyph paints are QUEUED and only run once sheets are ready
-// (see queueDraw), so no canvas can paint blank on a cold cache.
-function loadSheets(){var keys=['jp','zh','rb'],left=keys.length;
-  function fin(){if(--left<=0){SHEETS_OK=true;if(DRAWQ.length&&!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}}
-  keys.forEach(function(k){var im=new Image();im.onload=fin;im.onerror=fin;im.src=GG.sheets[k].png;SHEETS[k]=im;});}
+var GRIDS={};
+// Glyphs render as CSS background-image SPRITES, not <canvas>.  The 3 sprite
+// sheets are decoded ONCE by the browser and shared by every glyph, so the page
+// scales to tens of thousands of glyphs with no per-element backing store.  (The
+// old canvas-per-line approach allocated ~17k canvases across the ID+Units tabs
+// and exhausted the browser's canvas limit on lower-memory machines, so glyphs
+// showed as broken-image boxes.)  injectSpriteCSS() defines one class per sheet;
+// each glyph is a clipped <i> positioned onto the shared sheet.
+function injectSpriteCSS(){
+  if(document.getElementById('gg-sprite'))return;
+  var st=document.createElement('style');st.id='gg-sprite';
+  st.textContent=".ggs{display:inline-block;vertical-align:top;background-repeat:no-repeat;image-rendering:pixelated;image-rendering:crisp-edges}"
+    +".gg-jp{background-image:url("+GG.sheets.jp.png+")}"
+    +".gg-zh{background-image:url("+GG.sheets.zh.png+")}"
+    +".gg-rb{background-image:url("+GG.sheets.rb.png+")}"
+    +".gseg{display:inline-flex;align-items:flex-start;line-height:0;white-space:nowrap}";
+  document.head.appendChild(st);
+}
 function b64u16(s){var bin=atob(s),a=new Uint16Array(bin.length>>1);for(var i=0;i<a.length;i++)a[i]=bin.charCodeAt(i*2)|(bin.charCodeAt(i*2+1)<<8);return a;}
-// deferred paint queue: canvases are SIZED up front (stable layout) and PAINTED over frames
-var DRAWQ=[],PUMPING=false;
-function pump(){PUMPING=true;var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){var fn=DRAWQ.shift();try{fn();}catch(e){}}if(DRAWQ.length){requestAnimationFrame(pump);}else{PUMPING=false;}}
-function queueDraw(fn){DRAWQ.push(fn);if(SHEETS_OK&&!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}
 // surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
 function drawSeg(g,surface,rom,scale){   // g = one line's u16 glyphs (no BREAK)
-  scale=scale||2; var W=0,i,v;
-  for(i=0;i<g.length;i++){v=g[i];W+=(v>=0x8000)?8:12;}
-  W=Math.max(W,1);
-  var cv=document.createElement('canvas');cv.className='ggc';cv.width=W*scale;cv.height=16*scale;
-  cv.style.width=(W*scale)+'px';cv.style.height=(16*scale)+'px';
-  queueDraw(function(){
-    var ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;var x=0,i,v;
-    for(i=0;i<g.length;i++){v=g[i];
-      var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key],img=SHEETS[key];
-      var sx=(slot%sh.cols)*sh.cw,sy=((slot/sh.cols)|0)*sh.ch,adv=font?8:12,yoff=font?0:(surface?3:1);
-      ctx.drawImage(img,sx,sy,sh.cw,sh.ch,x*scale,yoff*scale,sh.cw*scale,sh.ch*scale);x+=adv;
-    }
-  });
-  return cv;
+  scale=scale||2;
+  var seg=document.createElement('span');seg.className='gseg';seg.style.height=(16*scale)+'px';
+  for(var i=0;i<g.length;i++){var v=g[i];
+    var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key];
+    var cw=sh.cw,ch=sh.ch,cols=sh.cols,sx=(slot%cols)*cw,sy=((slot/cols)|0)*ch,yoff=font?0:(surface?3:1);
+    var gi=document.createElement('i');gi.className='ggs '+(font?'gg-rb':(rom?'gg-zh':'gg-jp'));
+    gi.style.width=(cw*scale)+'px';gi.style.height=(ch*scale)+'px';gi.style.marginTop=(yoff*scale)+'px';
+    gi.style.backgroundPosition='-'+(sx*scale)+'px -'+(sy*scale)+'px';
+    gi.style.backgroundSize=(cols*cw*scale)+'px auto';
+    seg.appendChild(gi);
+  }
+  return seg;
 }
 // BREAK(0xFFFF)=in-game line break -> split into separate canvas lines, stacked
 function drawLines(packed,surface,rom,scale){
@@ -1408,15 +1412,14 @@ function addToggle(){
   b.addEventListener('click',function(){var off=document.body.classList.toggle('gg-nobmp');b.textContent=off?'\u663e\u793a\u4f4d\u56fe':'\u9690\u85cf\u4f4d\u56fe';});
   document.body.appendChild(b);
 }
-function start(){window.GG=GG;indexStages();
-  // Build the whole UI up front (tabs appear instantly; do NOT wait on images).
+function start(){window.GG=GG;indexStages();injectSpriteCSS();
+  // Build the whole UI up front (tabs appear instantly).
   initTabs();weaveStage();addShared();addExtras();addToggle();
   // Hook the base page's showView so each tab switch deterministically builds its
   // grids (fixes "tabs sometimes don't load until refresh").
   var _sv=window.showView;
   if(typeof _sv==='function'){window.showView=function(v){var r=_sv.apply(this,arguments);try{buildView(v);}catch(e){}return r;};}
   var cur=$('#tabs button.on');if(cur&&cur.dataset)try{buildView(cur.dataset.v);}catch(e){}
-  loadSheets();   // paints flush once sheets finish decoding (see queueDraw)
 }
 function boot(){
   var raw=document.getElementById('gg-data').textContent.trim();
