@@ -662,3 +662,23 @@ failed). Byte-reproducibility is proven by a clean-copy rebuild
 (rsync minus .git/.venv → build → identical sha1), not by rebuilding in place.
 The build path must never depend on `audit/`; one-time migrations rewrite sources
 and retire.
+
+### G9. Narrowing ASCII/parens in ZH names via JP-token reuse (never mint)
+Chinese names re-typed ASCII/parenthesis/dash runs as WIDE ZH-band atlas tokens
+(`基拉（SEED）`, `EX-S高达`), 12px per glyph — visibly bigger than the JP UI font's
+8px-advance renderB forms. Fix at source: reuse the **same record's JP/HEAD original
+bytes** for the identical character run (`（SEED）` = one-byte `0x7d` + the system-dict
+macro `f2c7` "SEED" + `0x7e`). Reusing the JP original's own tokens can NEVER garble
+(renders exactly the glyph the JP game drew) and stays gate-legal:
+`pool_trampoline_tokens` already exempts non-`zh_minted` (pristine-JP) slots, and
+one-byte parens are proven bytes so they only need a `bank_onebyte_regression`
+baseline refresh (recording the JP-proven `0x7d`/`0x7e`, never removing anything).
+Rules that keep it safe: (1) match whole target-runs of consecutive whole tokens
+(a `SEED` dict macro is one token) between ZH and JP by decoded char, normalising
+fullwidth↔halfwidth (the ZH atlas paren decodes `(`, the reused JP paren `（` — same
+glyph class); (2) NEVER narrow digits/`+`/`%` (G4 sunk-digit class — keep them
+ZH-band atlas); (3) never let a name fully revert to its JP bytes (that reclassifies
+a translated name as JP and trips `unit_weapon_names`/`id_command_names`); (4) build
+the JP↔ZH bytemap from an all-WIDE ZH ROM, else a partially-narrowed build pollutes
+the keys. Verify with 30/30 gates + coverage (0) + a live before/after oracle sheet
+(the E-band letter identities lean on the VLM `renderb_ident` map — eyeball them).
