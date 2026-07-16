@@ -372,6 +372,8 @@ IDCMD_TARGET = 0x0E          # u8 enum: 01=self 03=enemy-squad 09=all
 IDCMD_DIDX = 0x22           # u8 detail index
 IDCMD_COND = 0x23          # u8 condition bits (bit 0x02 -> map, else battle)
 DETAIL_OFFTAB = 0xF9048     # u32[]; string = DETAIL_OFFTAB + u32[DETAIL_OFFTAB + didx*4]
+DETAIL_OFFTAB_N = 256       # 256-entry (didx u8) monotonic offset table; the
+                            # string pool starts right after it (offsets[0]=0x400)
 # cut-in famous line: parallel link table, indexed by the same id
 CUTIN_LINK = 0x16FD64       # stride 0xC; +0x00 u16 = (cut-in record #)+1
 CUTIN_OFFTAB = 0x16EEA8     # u32[]; record = 1dc.bin[offtab[R] : offtab[R+1]]
@@ -400,13 +402,43 @@ def id_command(rom: GameROM, idn: int) -> dict:
     didx = rom.arm9[rec + IDCMD_DIDX]
     cond = rom.arm9[rec + IDCMD_COND]
     target = rom.arm9[rec + IDCMD_TARGET]
-    detail = None
-    doff = DETAIL_OFFTAB + u32(rom.arm9, DETAIL_OFFTAB + didx * 4)
-    end = rom.arm9.find(b"\x00\x00", doff)
-    if 0 <= end < doff + 200:
-        detail = rom.arm9[doff:end]
+    detail = detail_string(rom, didx)
     return {"id": idn, "name": rom.cstr(nptr), "summary": rom.cstr(sptr),
             "detail": detail, "target": target, "cond": cond, "didx": didx}
+
+
+def detail_string(rom: GameROM, didx: int) -> bytes | None:
+    """ID-command effect-detail bytes for a detail index.
+
+    Each detail is ONE record in a string pool addressed by the 256-entry
+    monotonic offset table at DETAIL_OFFTAB (offset relative to the table base).
+    A record runs [offsets[didx], offsets[didx+1]) — the ONLY correct boundary:
+    the old ``find(00 00)`` scan (a) missed records whose text has no clean
+    ``00 00`` (JP details never rendered), and (b) over-ran empty records into
+    the next non-empty one (the ``なし``/无 skill showing a foreign effect, and
+    the tripled ``使用条件…使用条件…使用条件…`` concatenation).  Empty records
+    (offsets[didx]==offsets[didx+1], the vacant/``なし`` slots) return None."""
+    if not (0 <= didx < DETAIL_OFFTAB_N - 1):
+        return None
+    start = u32(rom.arm9, DETAIL_OFFTAB + didx * 4)
+    nxt = u32(rom.arm9, DETAIL_OFFTAB + (didx + 1) * 4)
+    if nxt <= start:                   # empty slot (なし/无 skill) — the (f) case
+        return None
+    base = DETAIL_OFFTAB + start
+    bound = DETAIL_OFFTAB + nxt         # next-record boundary
+    # The game stops rendering a detail at the first standalone 00 00 (token-aware).
+    #   JP pool: records are packed tight, no interior 00 00 -> terminator over-runs
+    #            past `bound`, so `bound` (the next didx's start) is the true end.
+    #   ZH pool: segments inside one didx blob are 00 00-separated and the didx table
+    #            is sparse (one entry per multi-view blob) -> the 00 00 terminator is
+    #            the true end (the sub-segment the command actually shows).
+    # min(bound, terminator) is correct for BOTH and matches the console.
+    term = text_codec.find_terminator(rom.arm9, base)
+    end = term if 0 <= term < bound else bound
+    if end <= base:
+        return None
+    rec = rom.arm9[base:end].rstrip(b"\x00")   # trailing pad off; interior 00s kept
+    return rec or None
 
 
 def _clip_at_00(data: bytes, start: int = 0) -> int:
@@ -425,11 +457,20 @@ def _clip_at_00(data: bytes, start: int = 0) -> int:
 
 
 def cutin_line(rom: GameROM, idn: int) -> bytes | None:
-    """Cut-in famous line bytes for an ID (via the parallel link table).
+    """Cut-in famous line (名台詞) bytes for an ID (via the parallel link table).
 
-    Record grammar: `00 05 <voiceset> 00 <line1> [00 03 <line2>] 00 03 00 01`.
-    Strip the header and the trailing terminator so only the quote text renders.
-    """
+    Record grammar (docs/DATA_FORMATS / cutin_quotes framing):
+        header  = ``00 05 <quote-set id u16le>``  (4 bytes), OR the re-authored
+                  headerless ``00 04`` continuation form  (2 bytes);
+        body    = text lines separated by ``00``; a leading ``03``/``04`` is a
+                  page control while the SAME bytes mid-line render 。/·;
+        trailer = ``00 03 00 01`` + zero padding to a 4-byte boundary.
+
+    The old code scanned the ``00 05`` header to "the next 0x00", which (a) had
+    no clean 0x00 after the u16 id so it swallowed the WHOLE JP quote (leaving
+    only the trailer -> hover showed just ``。``), and (b) never stripped the
+    ``00 04`` header (leaving a spurious leading ``·`` on the ZH side).  Strip a
+    FIXED-length header, then cut at the ``00 03 00 01`` trailer."""
     v = u16(rom.arm9, CUTIN_LINK + 0xC * idn)
     if v == 0:
         return None
@@ -440,16 +481,14 @@ def cutin_line(rom: GameROM, idn: int) -> bytes | None:
     if not (0 <= s0 < s1 <= len(dc)):
         return None
     rec = dc[s0:s1]
-    if rec[:2] == b"\x00\x05":                 # strip `00 05 <voiceset..> 00`
-        j = 2
-        while j < len(rec) and rec[j] != 0:
-            j += 1
-        rec = rec[j + 1:]
-    for term in (b"\x00\x03\x00\x01", b"\x00\x00"):   # strip trailing framing
-        k = rec.find(term)
-        if k >= 0:
-            rec = rec[:k]
-            break
+    if rec[:2] == b"\x00\x05":         # 00 05 + u16 quote-set id
+        rec = rec[4:]
+    elif rec[:2] == b"\x00\x04":       # headerless continuation form
+        rec = rec[2:]
+    k = rec.find(b"\x00\x03\x00\x01")  # trailer (unique: mid-line page commits are 00 03 <text>)
+    if k >= 0:
+        rec = rec[:k]
+    rec = rec.rstrip(b"\x00")          # drop trailing padding
     return rec or None
 
 
@@ -519,16 +558,26 @@ def unit_specials(jp: GameROM, zh: GameROM, utid: int) -> list[dict]:
     return out
 
 
-def build_bark_index(rom: GameROM) -> dict[int, list[bytes]]:
+def build_bark_index(rom: GameROM) -> tuple[dict[int, list[bytes]], dict[int, list[bytes]]]:
     """Scan the 5 bark files for records `00 05 <voiceset> 00 06 <char_id> ...`
-    and group the text runs by char_id (rec+6)."""
-    idx: dict[int, list[bytes]] = {}
+    and group the text runs BOTH by char_id (rec+6) and by voiceset (rec+2).
+
+    char_id keying is the primary link (the +6 field is the char-DB index the
+    engine plays for that combatant).  But a character can occupy SEVERAL DB
+    records (alternate/HYPER/real-name forms — e.g. cid 91/92 both シャア,
+    cid 97 キャスバル); only the record that owns bark rows is keyed by cid, so
+    the alternate cards came up bark-less.  The voiceset (== char-DB +0x0A) is
+    the shared voice identity, so a bark-less alternate can fall back to its
+    voiceset's rows.  Returns (by_char_id, by_voiceset)."""
+    by_cid: dict[int, list[bytes]] = {}
+    by_vs: dict[int, list[bytes]] = {}
     for fn in BARK_FILES:
         data = rom.file(fn)
         i, n = 0, len(data)
         while i < n - 7:
             if (data[i] == 0x00 and data[i + 1] == 0x05 and
                     data[i + 4] == 0x00 and data[i + 5] == 0x06):
+                voiceset = u16(data, i + 2)
                 char_id = u16(data, i + 6)
                 text_start = i + 8
                 # one sub-line's text ends at the first standalone 0x00
@@ -537,11 +586,12 @@ def build_bark_index(rom: GameROM) -> dict[int, list[bytes]]:
                 end = _clip_at_00(data, text_start)
                 run = data[text_start:end]
                 if run:
-                    idx.setdefault(char_id, []).append(run)
+                    by_cid.setdefault(char_id, []).append(run)
+                    by_vs.setdefault(voiceset, []).append(run)
                 i = end + 1
             else:
                 i += 1
-    return idx
+    return by_cid, by_vs
 
 
 # ===========================================================================
@@ -697,7 +747,8 @@ def decode_text(rom: GameROM, data: bytes, surface: str, exp=None,
 # ===========================================================================
 # game placeholder labels for empty roster/char slots — not real units/chars
 _PLACEHOLDER_BYTES = {b"\xf4\xfe",            # 欠番 (system-dict macro; vacant slot)
-                      b"\xea\x5a\xe8\x77"}     # 预备 (reserve slot)
+                      b"\xea\x5a\xe8\x77",     # 预备 (reserve slot)
+                      b"\xe8\x77\xef\xb3"}     # 备用 (reserve ID-command name, 435×)
 
 
 def _dummy_name(b: bytes | None) -> bool:
@@ -809,15 +860,49 @@ def extract_briefings(jp: GameROM, zh: GameROM) -> list[dict]:
     return out
 
 
+def _pool_b_bounds() -> tuple[int, int]:
+    import json as _json
+    bb = _json.loads((REPO / "data/arenas/briefing_blobs.json").read_text())
+    base = int(str(bb["ram_base"]), 16)
+    size = bb["size"]
+    size = int(str(size), 16) if isinstance(size, str) else size
+    return base, base + size
+
+
+def _brief_zh_blobs(zh: GameROM, zblk: bytes, lo: int, hi: int) -> list[bytes]:
+    """The ZH translation of one briefing block, EXACT: the block's payload is
+    a run of u32 pointers into pool B (each one rendered ZH line) padded with
+    0x01 and 0x00-separated.  Follow every pool-B pointer in order and decode the
+    NUL-terminated blob it targets.  This is the ground-truth JP<->ZH pairing —
+    no glyph-proportion guessing (which drifted, misaligning X6b and starving
+    11SP)."""
+    out, i = [], 0
+    n = len(zblk)
+    while i + 4 <= n:
+        v = struct.unpack_from("<I", zblk, i)[0]
+        if lo <= v < hi:
+            b = zh.cstr(v)
+            if b:
+                out.append(b)
+            i += 4
+        else:
+            i += 1
+    return out
+
+
 def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
     """作战内容 briefings grouped by the stage descriptor that owns them.
 
-    Each stage descriptor's +0x14 points at the start of that stage's briefing
-    in the inline region; JP briefing blocks there are greedily paired with the
-    consecutive ZH pool-B blobs that cover them (they segment differently)."""
+    Each stage descriptor's +0x14 points at the start of that stage's briefing in
+    the inline JP region [BRIEF_LO, BRIEF_HI).  For every JP briefing block we
+    read the SAME-offset block from the ZH ROM: the build replaced the JP text
+    with pool-B pointers, so following those pointers yields that block's EXACT
+    ZH lines (1:1 with the JP block) — the correct fix for the misaligned/dropped
+    briefings (X6b interleaving, 11SP missing, SP4 garbage)."""
     import collections
-    import json as _json
-    # JP inline briefing text blocks (address order)
+    lo, hi = _pool_b_bounds()
+
+    # JP inline briefing blocks (address order) with their file offsets.
     jblocks = []
     i = BRIEF_LO
     while i < BRIEF_HI - 1:
@@ -826,17 +911,12 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
             if 0 < t <= BRIEF_HI:
                 p = jp.arm9[i + 1:t]
                 if len(list(glyph_stream(jp, p, "stage", jp.expand))) >= 3 and not _brief_has_ptr(p):
-                    jblocks.append((i, p))
+                    jblocks.append((i, jp.arm9[i:t + 2]))
                 i = t + 2
                 continue
         i += 1
-    # ZH pool-B blobs (offset index from data; bytes read from the ROM)
-    bb = _json.loads((REPO / "data/arenas/briefing_blobs.json").read_text())
-    zblobs = [zh.cstr(BRIEF_POOL_RAM + int(e["offset"], 16)) for e in bb["entries"]]
-    zblobs = [b for b in zblobs if b and any(True for _ in glyph_stream(zh, b, "stage"))]
-    zlen = [len(list(glyph_stream(zh, b, "stage"))) for b in zblobs]
-    jlen = {off: len(list(glyph_stream(jp, jb, "stage", jp.expand))) for off, jb in jblocks}
-    # group JP blocks by the descriptor whose +0x14 <= block offset
+
+    # group JP blocks by the descriptor whose +0x14 is the greatest start <= offset
     starts = sorted((u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE, k)
                     for k in range(101)
                     if BRIEF_LO <= u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE < BRIEF_HI)
@@ -849,37 +929,12 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
             else:
                 break
         return k
-    jgroups: dict = collections.OrderedDict()
-    for off, jb in jblocks:
-        jgroups.setdefault(_desc_of(off), []).append((off, jb))
-    # Distribute ZH blobs across groups by CUMULATIVE JP-glyph proportion.  The old
-    # per-block greedy cascaded: an untranslated JP block still consumed ZH blobs, so
-    # drift starved late stages (SP7 etc.).  Assigning each group its glyph-share of
-    # the ZH pool by absolute cumulative position is drift-free (re-syncs every stage).
-    GJ = sum(jlen.values()) or 1
-    GZ = sum(zlen) or 1
+
     groups: dict = collections.OrderedDict()
-    zi = zcum = cumJP = 0
-    glist = list(jgroups.items())
-    for gi, (k, jblist) in enumerate(glist):
-        cumJP += sum(jlen[o] for o, _ in jblist)
-        target = GZ if gi == len(glist) - 1 else round(cumJP / GJ * GZ)
-        gblobs, glens = [], []
-        while zi < len(zblobs) and zcum < target:
-            gblobs.append(zblobs[zi]); glens.append(zlen[zi]); zcum += zlen[zi]; zi += 1
-        # within-group greedy pair (bounded to this group -> no cross-stage drift)
-        items, bj = [], 0
-        for o, jb in jblist:
-            acc, zc = [], 0
-            while bj < len(gblobs) and zc < jlen[o] * 0.85:
-                acc.append(gblobs[bj]); zc += glens[bj]; bj += 1
-            items.append((jb, acc))
-        if bj < len(gblobs) and items:            # leftover ZH -> last block (no loss)
-            items[-1] = (items[-1][0], items[-1][1] + gblobs[bj:])
-        groups[k] = items
+    for off, jb in jblocks:
+        groups.setdefault(_desc_of(off), []).append((off, jb))
+
     def _dlab(k, off):
-        """Decode a descriptor string field (+0x0c label / +0x10 title) for the
-        client-side stage matcher (# briefing -> Route stage by title_jp)."""
         if k is None:
             return ""
         p = u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + off)
@@ -890,10 +945,12 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
         return decode_text(jp, s, "bank", jp.expand_sys) if s else ""
 
     out = []
-    for k, items in groups.items():
+    for k, blist in groups.items():
         lines = []
-        for jb, acc in items:
-            zjoin = b"\x00".join(acc)
+        for off, jb in blist:
+            zblk = zh.arm9[off:off + len(jb)]
+            blobs = _brief_zh_blobs(zh, zblk, lo, hi)
+            zjoin = b"\x00".join(blobs)          # 00 -> page break between rendered lines
             lines.append({
                 "jt": decode_text(jp, jb, "stage", jp.expand, True),
                 "jb": pack_glyphs(jp, jb, "stage", jp.expand, True),
@@ -926,48 +983,265 @@ def _load_stage_blocks() -> dict:
     return {}
 
 
+# --- stage event-VM model (disassembly-audited; mirrors test/run_static.py) ---
+# The player experiences dialogue in the order the event bytecode VM REACHES the
+# display blocks (a CFG walk from the scene-entry pointers), NOT in file-offset
+# order.  file-offset order is wrong: a stage's intro event often sits at a HIGHER
+# file offset than a later rescue scene (SP5 opens with 木星軍士官, whose block is
+# after ブライト's rescue block in the file).  We walk the JP file's CFG here to
+# order the translated blocks the way the console plays them, grouped by scene.
+STG_BASE = 0x0232C800
+STG_OPSZ = {0x00: 0, 0x01: 0, 0x02: 4, 0x03: 2, 0x04: 1, 0x05: 2, 0x06: 2, 0x07: 0,
+            0x08: 0, 0x09: 0, 0x0A: 0, 0x0B: 0, 0x0C: 0, 0x0D: 0, 0x0E: 0, 0x0F: 0,
+            0x10: 0, 0x11: 0, 0x12: 0, 0x13: 6, 0x14: 1, 0x16: 4, 0x17: 1, 0x18: 2,
+            0x19: 1}
+STG_JUMP_OPS = (0x02, 0x13, 0x16)   # GOTO(0x02) / CALL(0x13) / CGOTO(0x16), u32 abs target
+STG_DISPLAY, STG_RET, STG_GOTO, STG_CGOTO = 0x15, 0x01, 0x02, 0x16
+STG_HEADER_MAX = 128
+
+
+def _stage_scene_entries(d: bytes) -> list[int]:
+    """Scene-entry offsets: the contiguous run of in-buffer u32 pointers at the
+    file head (from 0x04), stopping at the first out-of-buffer word."""
+    n = len(d)
+    ents, i = [], 4
+    while i + 4 <= n and len(ents) < STG_HEADER_MAX:
+        p = u32(d, i)
+        if STG_BASE <= p < STG_BASE + n:
+            ents.append(p - STG_BASE)
+            i += 4
+        else:
+            break
+    return ents
+
+
+def stage_block_order(d: bytes):
+    """Reachable DISPLAY blocks of a stage file in CONSOLE PLAY ORDER.
+
+    Returns a list of (scene_index, block_offset, is_branch).  Walk each
+    scene-entry pointer (in header/slot order) with an ordered DFS that follows
+    the VM's control flow — GOTO reroutes, CALL/CGOTO recurse then fall through —
+    recording each display block the first time it is reached.  Global dedup
+    keeps a block on the scene that reaches it first (the earliest event that
+    shows it).  ``is_branch`` marks a block reached only across a CGOTO (0x16)
+    conditional edge — the real forks (e.g. a secret-pilot-kill demo), not the
+    per-line noise the old heuristic emitted."""
+    n = len(d)
+    end = STG_BASE + n
+    order: list[tuple[int, int, bool]] = []
+    seen: set[int] = set()
+    sys.setrecursionlimit(max(sys.getrecursionlimit(), 20000))
+
+    def run(pc: int, scene: int, viacond: bool):
+        while 0 <= pc < n and pc not in seen:
+            seen.add(pc)
+            op = d[pc]
+            if op == STG_DISPLAY:
+                t = text_codec.find_terminator(d, pc + 1)
+                if t < 0:
+                    return
+                if t > pc + 1:
+                    order.append((scene, pc, viacond))
+                pc = t + 2
+                continue
+            if op == STG_RET:
+                return
+            if op > 0x19:
+                pc += 1
+                continue
+            if op in STG_JUMP_OPS and pc + 5 <= n:
+                tgt = u32(d, pc + 1)
+                if STG_BASE <= tgt < end:
+                    if op == STG_GOTO:
+                        pc = tgt - STG_BASE
+                        continue
+                    run(tgt - STG_BASE, scene, viacond or op == STG_CGOTO)
+                pc += 1 + STG_OPSZ.get(op, 0)
+                continue
+            pc += 1 + STG_OPSZ.get(op, 0)
+
+    for scene, entry in enumerate(_stage_scene_entries(d)):
+        run(entry, scene, False)
+    return order
+
+
 # library / hangar encyclopedia data files (renderA-direct 'stage' surface + dialogue dict)
-LIBRARY_FILES = [
-    ("char_bios",     "library/character_bios.json", "324.bin", "\u89d2\u8272\u56fe\u9274 Character bios", True),
-    ("unit_bios",     "library/unit_bios.json",      "c4b.bin", "\u673a\u4f53\u56fe\u9274 Unit bios",      True),
-    ("part_names",    "hangar/part_names.json",      "b6e.bin", "\u6539\u9020\u90e8\u4ef6\u540d Part names", False),
-    ("part_captions", "hangar/part_captions.json",   "b6f.bin", "\u90e8\u4ef6\u8bf4\u660e Part captions",   True),
-]
+# encyclopedia bio offset tables (arm9); loaders take a bare linear file index and
+# never touch the char-DB, so the name association is EXTERNAL: the bio order tracks
+# the master tables in id order over a curated subset (data/guide/library_bio_map.json,
+# reverse-engineered + content-verified — there is no in-ROM index table).
+CHAR_BIO_OFFTAB = 0x191FA0     # RAM 0x02191FA0, 274 records + sentinel (324.bin)
+UNIT_BIO_OFFTAB = 0x191BDC     # RAM 0x02191BDC, 239 records + sentinel (c4b.bin)
+CHAR_BIO_N, UNIT_BIO_N = 274, 239
+# hangar改造 part banks: name (b6e) + caption (b6f), 1:1 by part index
+PART_NAME_OFFTAB = 0x16B474
+PART_CAP_OFFTAB = 0x16B518
+
+
+def _bio_name_map(jp: GameROM, zh: GameROM):
+    """{bio_index: {zt,jt}} name labels for char and unit bios, from the frozen
+    library_bio_map.json (bio slot -> char-DB cid / unit-master utid)."""
+    import json as _json
+    p = REPO / "data/guide/library_bio_map.json"
+    if not p.exists():
+        return {}, {}
+
+    def nm(rom, ptr):
+        s = rom.cstr(ptr) if 0x02000000 <= ptr < 0x02400000 else None
+        return decode_text(rom, s, "bank", rom.expand_sys) if s else ""
+    m = _json.loads(p.read_text())
+    cn, un = {}, {}
+    for i, cid in enumerate(m.get("char", [])):
+        if isinstance(cid, int) and cid >= 0:
+            base = CHARDB + cid * CHARDB_STRIDE + PILOT_NAME_FIELD
+            cn[i] = {"zt": nm(zh, u32(zh.arm9, base)), "jt": nm(jp, u32(jp.arm9, base))}
+    for i, utid in enumerate(m.get("unit", [])):
+        if isinstance(utid, int) and utid >= 0:
+            base = MASTER_TABLE + utid * MASTER_STRIDE
+            un[i] = {"zt": nm(zh, u32(zh.arm9, base)), "jt": nm(jp, u32(jp.arm9, base))}
+    return cn, un
+
+
+def _strip_line_bullets(data: bytes) -> bytes:
+    """Drop the per-line page-control that opens each wrapped bio line.
+
+    Encyclopedia bios frame every wrapped line as ``00 <ctrl> 01`` — a page
+    break (``00``), a line-start page-CONTROL byte, then an ``01`` filler.  The
+    control byte is ``04`` or ``07`` (two page-advance variants — proven by a
+    census of every bio: the ONLY bytes ever seen right after a ``00`` are
+    ``01`` filler, ``04`` and ``07``, never real punctuation; the MIXED ``04``/
+    ``07`` is the tell they are controls, not an intentional ·/々 bullet — a real
+    bullet would be one consistent glyph).  The text VM consumes them BEFORE the
+    glyph blitter, so the game draws nothing there; only a naive rasterizer
+    (render_oracle) would emit the stray ·/々.  A ``04``/``07`` MID-line (real
+    ·/々) is never at a line head, so it is kept.  Token-aware (0xE0.. opaque)."""
+    LINE_CTRL = (0x04, 0x07)
+    out = bytearray()
+    i, n = 0, len(data)
+    at_line_start = True
+    while i < n:
+        b = data[i]
+        if b >= 0xE0 and i + 1 < n:
+            out += data[i:i + 2]
+            i += 2
+            at_line_start = False
+            continue
+        if b == 0x00:
+            out.append(b)
+            i += 1
+            at_line_start = True
+            continue
+        if at_line_start and b in LINE_CTRL:
+            i += 1                     # drop the line-start page control (stray ·/々)
+            continue
+        out.append(b)
+        i += 1
+        if b != 0x01:                  # 0x01 filler doesn't end the line-start window
+            at_line_start = False
+    return bytes(out)
+
+
+def _bios_section(jp, zh, rel, fname, offtab, count, names):
+    """One bio section (char or unit): translated records from the data file,
+    each mapped to its bio index (via the arm9 offset table) and its
+    character/unit name (via `names`)."""
+    import json as _json
+    p = REPO / "data/files" / rel
+    if not p.exists():
+        return []
+    d = _json.loads(p.read_text())
+    idx_of = {u32(jp.arm9, offtab + i * 4): i for i in range(count)}
+    jf, zf = jp.file(fname), zh.file(fname)
+    items = []
+    for e in d.get("edits", d.get("entries", [])):
+        off = int(e["offset"], 16) if isinstance(e["offset"], str) else e["offset"]
+        sz = e["size"]
+        jb = _strip_line_bullets(bytes(jf[off:off + sz]))
+        zb = _strip_line_bullets(bytes(zf[off:off + sz]))
+        zt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
+        core = zt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a\uff0f/~\u301c\u201c\u201d'\"-<>")
+        for _ph in ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a"):   # 予備/预备/欠番
+            if core == "" or len(core) <= 1 or core.startswith(_ph):
+                core = ""
+                break
+        if not core:
+            continue
+        bidx = idx_of.get(off)
+        nm = names.get(bidx) if bidx is not None else None
+        items.append({
+            "ix": bidx + 1 if bidx is not None else len(items) + 1,
+            "name": nm,                                   # {zt,jt} owner name (may be None)
+            "zt": zt, "jt": decode_text(jp, jb, "stage", jp.expand, True) if jb else "",
+            "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
+            "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else "",
+        })
+    return items
+
+
+def _parts_section(jp, zh):
+    """改造部件: part NAME (b6e) paired 1:1 with its CAPTION (b6f) by part index —
+    the two banks are parallel, so they merge into one list (a name with no caption
+    is a reserve/予備 spare).  The caption bank's JP macros resolve through a
+    parts-LOCAL runtime dict we don't carry, so JP captions decode to noise and
+    are omitted; the ZH caption (re-encoded with the global glyphs) renders true."""
+    import json as _json
+    pn = _json.loads((REPO / "data/files/hangar/part_names.json").read_text())
+    pc = _json.loads((REPO / "data/files/hangar/part_captions.json").read_text())
+    ncap = pc.get("edits", [])
+    jfe, zfe = jp.file("b6e.bin"), zh.file("b6e.bin")
+    jfc, zfc = jp.file("b6f.bin"), zh.file("b6f.bin")
+
+    def _rd(f, off, sz):
+        return bytes(f[off:off + sz])
+    items = []
+    entries = pn.get("entries", [])
+    for i, e in enumerate(entries):
+        off = int(e["offset"], 16) if isinstance(e["offset"], str) else e["offset"]
+        sz = e["size"]
+        jb, zb = _rd(jfe, off, sz), _rd(zfe, off, sz)
+        nzt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
+        core = nzt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a")
+        for _ph in ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a"):
+            if core == "" or core.startswith(_ph):
+                core = ""
+                break
+        if not core:
+            continue
+        it = {"ix": i + 1,
+              "zt": nzt, "jt": decode_text(jp, jb, "stage", jp.expand, True) if jb else "",
+              "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
+              "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else ""}
+        if i < len(ncap):                                 # 1:1 caption (ZH only)
+            ce = ncap[i]
+            coff = int(ce["offset"], 16) if isinstance(ce["offset"], str) else ce["offset"]
+            czb = _rd(zfc, coff, ce["size"])
+            it["cap"] = {"zt": decode_text(zh, czb, "stage", zh.expand, True) if czb else "",
+                         "jt": "",
+                         "zb": pack_glyphs(zh, czb, "stage", zh.expand, True) if czb else "",
+                         "jb": ""}
+        items.append(it)
+    return items
 
 
 def extract_bios(jp: GameROM, zh: GameROM) -> list[dict]:
-    """Encyclopedia (資料館 library + hangar): character/unit biographies and
-    改造 part names/captions.  Bytes are read from the ROM data files at each
-    entry's offset/size and rendered on the renderA-direct 'stage' surface with
-    the dialogue dict (verified: a char bio decodes 「誇りや名誉、血筋…」)."""
-    import json as _json
-    out = []
-    for key, rel, fname, title, long in LIBRARY_FILES:
-        p = REPO / "data/files" / rel
-        if not p.exists():
-            continue
-        d = _json.loads(p.read_text())
-        entries = d.get("edits", d.get("entries", []))
-        jf, zf = jp.file(fname), zh.file(fname)
-        items = []
-        for e in entries:
-            off = int(e["offset"], 16) if isinstance(e["offset"], str) else e["offset"]
-            sz = e["size"]
-            jb, zb = bytes(jf[off:off + sz]), bytes(zf[off:off + sz])
-            zt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
-            jt = decode_text(jp, jb, "stage", jp.expand, True) if jb else ""
-            # drop reserve/vacant placeholder slots (予備 / 预备 / 欠番 / trivial)
-            core = zt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a\uff0f/~\u301c\u201c\u201d'\"-<>")
-            _ph = ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a")   # 予備 / 预备 / 欠番
-            if core == "" or len(core) <= 1 or any(core.startswith(p) for p in _ph):
-                continue
-            items.append({
-                "ix": len(items) + 1, "zt": zt, "jt": jt,
-                "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
-                "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else "",
-            })
-        out.append({"key": key, "title": title, "long": long, "n": len(items), "items": items})
-    return out
+    """Encyclopedia (資料館 library + hangar): character/unit biographies (each
+    tagged with its owner's name) and 改造 part names paired with their captions.
+    Bytes are read from the ROM and rendered on the renderA-direct 'stage'
+    surface with the dialogue dict (verified: a char bio decodes 「誇りや…」)."""
+    cn, un = _bio_name_map(jp, zh)
+    cbios = _bios_section(jp, zh, "library/character_bios.json", "324.bin",
+                          CHAR_BIO_OFFTAB, CHAR_BIO_N, cn)
+    ubios = _bios_section(jp, zh, "library/unit_bios.json", "c4b.bin",
+                          UNIT_BIO_OFFTAB, UNIT_BIO_N, un)
+    parts = _parts_section(jp, zh)
+    return [
+        {"key": "char_bios", "title": "\u89d2\u8272\u56fe\u9274 Character bios",
+         "long": True, "kind": "bio", "n": len(cbios), "items": cbios},
+        {"key": "unit_bios", "title": "\u673a\u4f53\u56fe\u9274 Unit bios",
+         "long": True, "kind": "bio", "n": len(ubios), "items": ubios},
+        {"key": "parts", "title": "\u6539\u9020\u90e8\u4ef6 Parts (\u540d\u79f0+\u8bf4\u660e)",
+         "long": False, "kind": "part", "n": len(parts), "items": parts},
+    ]
 
 
 def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
@@ -1028,45 +1302,75 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         edits += [(int(x["jp_offset"], 16), 0, bytes.fromhex(x["hex"]), None)
                   for x in sd.get("inserts", [])]
         edits.sort()
-        delta, blocks = 0, []
+        delta, blk_by_off = 0, {}          # jp_offset -> (jp_bytes, zh_bytes)
         for off, old, new, kind in edits:
             zoff = off + delta
             if kind == "dialogue":
                 jb = jf[off:off + old]
                 if not _is_priming_row(jb):
-                    blocks.append((off, jb, zf[zoff:zoff + len(new)]))
+                    blk_by_off[off] = (jb, zf[zoff:zoff + len(new)])
                     freq[jb] += 1
             delta += len(new) - old
-        per_stage.append((f, blocks))
+        per_stage.append((f, blk_by_off, stage_block_order(jf)))
 
     smeta = sblocks
     shared = []               # dedup'd shared template blocks (shown once)
     shared_seen = set()
     stages = []
-    for f, blocks in per_stage:
+    for f, blk_by_off, cfg in per_stage:
         meta = smeta.get(f[:-4]) or smeta.get(f) or {}
-        lines = []
-        for off, jb, zb in blocks:
-            if freq[jb] >= SHARED_MIN:
+        lines, emitted = [], set()
+
+        def emit(off, scene):
+            jb, zb = blk_by_off[off]
+            if freq[jb] >= SHARED_MIN:                       # shared template: show once
                 if jb not in shared_seen:
                     shared_seen.add(jb)
                     shared.append(fld(jb, zb, "stage", jp.expand, True))
-                continue
+                return
             m = meta.get(hex(off)) or meta.get(str(off)) or {}
             ln = fld(jb, zb, "stage", jp.expand, True)
+            ln["sc"] = scene                                 # scene/event index
             if m.get("sp", -1) >= 0:
                 ln["sp"] = m["sp"]
-            for k in ("branch", "choice", "event"):
-                if m.get(k):
-                    ln[k[0] if k != "event" else "ev"] = 1
+            # Only the 8 game-wide player CHOICE blocks are real forks; the audited
+            # VM walk finds 0 conditional branches and 0 tagged events, so we do NOT
+            # invent 分支/事件 badges (the old per-line noise) — order + scene
+            # grouping already convey the structure.
+            if m.get("choice"):
+                ln["c"] = 1
             lines.append(ln)
+
+        # 1) blocks in console play order (CFG walk from scene entries)
+        for scene, off, _is_branch in cfg:
+            if off in blk_by_off and off not in emitted:
+                emitted.add(off)
+                emit(off, scene)
+        # 2) translated blocks the JP CFG walk never reached (data-indirect /
+        #    phantom) -> appended in file order under scene -1 so nothing is lost
+        for off in sorted(blk_by_off):
+            if off not in emitted:
+                emitted.add(off)
+                emit(off, -1)
+        # number of distinct scenes actually shown (for the UI scene headers)
+        nsc = len({ln["sc"] for ln in lines if ln.get("sc", -1) >= 0})
         stages.append({"file": f[:-4], "gid": _file_to_guide_id(f, guide_ids),
-                       "n": len(lines), "lines": lines})
+                       "n": len(lines), "nsc": nsc, "lines": lines})
     data["stages"] = stages
     data["shared"] = shared
 
-    # ---- 1b. characters: name, 3 ID cmds, cut-ins, barks ---------------------
-    jbark, zbark = build_bark_index(jp), build_bark_index(zh)
+    # ---- 1b. characters: name (roster + battle render), 3 ID cmds, cut-ins, barks
+    jbark_cid, jbark_vs = build_bark_index(jp)
+    zbark_cid, zbark_vs = build_bark_index(zh)
+
+    def name_fld_battle(jb, zb):
+        # the SAME name bytes as name_fld, but rendered on the renderA-direct
+        # 'stage' surface (the in-battle nameplate path) instead of the 'bank'
+        # trampoline (the back-stage roster path).  For names that reuse a
+        # JP-band slot (<2196) the two paths draw DIFFERENT glyphs (renderB kanji
+        # vs 12x12 atlas), so showing both exposes cross-path garble.
+        return fld(jb, zb, "stage", jp.expand_sys, zexp=zh.expand_sys)
+
     chars = []
     for cid in range(CHARDB_COUNT):
         rec = CHARDB + cid * CHARDB_STRIDE
@@ -1082,18 +1386,28 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                 continue
             cj, cz = cutin_line(jp, idn), cutin_line(zh, idn)
             ids.append({
+                "slot": slot,
                 "nm": name_fld(ji["name"], zi["name"]),
                 "sm": name_fld(ji["summary"], zi["summary"]),
                 "dt": fld(ji["detail"], zi["detail"], "stage", jp.expand),
                 "cut": fld(cj, cz, "stage", jp.expand),
                 "tgt": TARGET_NAMES.get(zi["target"], ""),
                 "map": bool(zi["cond"] & 0x02)})
-        jb_list, zb_list = jbark.get(cid, []), zbark.get(cid, [])
+        # barks: primary link is the char-DB index (rec+6); a bark-less alternate
+        # form falls back to its shared voiceset (char-DB +0x0A == bark rec+2).
+        zb_list = zbark_cid.get(cid)
+        jb_list = jbark_cid.get(cid, [])
+        if not zb_list:
+            vs = u16(jp.arm9, rec + CHARDB_VOICESET)
+            zb_list = zbark_vs.get(vs, [])
+            jb_list = jbark_vs.get(vs, [])
+        zb_list = zb_list or []
         barks = [fld(jb_list[k] if k < len(jb_list) else b"", zb, "stage", jp.expand)
                  for k, zb in enumerate(zb_list)]
         if not ids and not barks:
             continue
-        chars.append({"cid": cid, "nm": name_fld(jn, zn), "ids": ids, "barks": barks})
+        chars.append({"cid": cid, "nm": name_fld(jn, zn),
+                      "nmA": name_fld_battle(jn, zn), "ids": ids, "barks": barks})
     data["chars"] = chars
 
     # ---- 1c. units: name, weapons, specials ----------------------------------
@@ -1113,6 +1427,7 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                              **fld(sp.get("_jb", b""), sp.get("_zb", b""), "bank",
                                    jp.expand_sys, zexp=zh.expand_sys)})
         units.append({"utid": utid, "nm": name_fld(j.get("name"), z["name"]),
+                      "nmA": name_fld_battle(j.get("name"), z["name"]),
                       "weapons": weapons, "specials": specials})
     data["units"] = units
 
@@ -1189,6 +1504,17 @@ GG_STYLE = """<style id="gg-style">
 #gg-bmptoggle{position:fixed;right:18px;bottom:18px;z-index:200;background:var(--panel);border:1px solid var(--line2);color:var(--ink);border-radius:20px;padding:8px 15px;font-size:13px;cursor:pointer;box-shadow:0 5px 18px #0008}
 #gg-bmptoggle:hover{background:#16223a}
 body.gg-nobmp .gf-bmp{display:none!important}
+/* dual name render (roster renderB vs battle renderA) */
+.gname-row{display:flex;gap:8px;align-items:center;padding:2px 0}
+.gname-tag{font-size:9px;color:var(--ink4);min-width:30px;flex:none}
+.gname-tag b{color:var(--cyan2);font-weight:600}
+/* per-ID-skill card block (skill 1/2/3 clearly separated) */
+.gskill{margin:9px 0 3px;border:1px solid var(--line2);border-radius:9px;background:#0c1526;padding:7px 9px 4px}
+.gskill-hd{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--gold);font-weight:700;margin-bottom:3px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.gskill-hd .gsk-n{background:#2a2140;color:#e7d9ff;border:1px solid #4a2a7a;border-radius:5px;font-size:10px;padding:0 6px;line-height:1.6}
+.gskill-hd .gsk-meta{font-size:10px;color:var(--ink3);font-weight:400;margin-left:auto}
+/* story scene / event header inside the dialogue block */
+.dlg-scene{font-size:11px;color:#7ad4ff;font-weight:600;margin:10px 0 4px;padding:2px 8px;background:#0c1f2a;border-left:3px solid #2a5a7a;border-radius:3px}
 </style>"""
 
 # the browser-side module (canvas glyph renderer + grid tabs + route weave)
@@ -1273,23 +1599,61 @@ function collSect(host,title,n){ // in-card collapsible (barks): body filled on 
   t.addEventListener('click',function(){open=!open;b.style.display=open?'block':'none';t.querySelector('.tw').textContent=open?'\u25be':'\u25b8';if(open&&b._fill){b._fill();b._fill=null;}});
   s.appendChild(t);s.appendChild(b);host.appendChild(s);return b;
 }
+// -- name header: ZH/JP text once, then TWO in-game renders (后台 renderB roster
+//    trampoline + 战斗 renderA battle atlas) so cross-path garble is visible --
+function nameHeader(nm,nmA){
+  var h=document.createElement('div');h.className='gcard-hd';
+  var t=document.createElement('div');t.className='gf name';t.appendChild(txtCol(nm.zt,nm.jt));h.appendChild(t);
+  function row(tag,f,surf){
+    if(!f||(!f.zb&&!f.jb))return;
+    var r=document.createElement('div');r.className='gname-row';
+    var l=document.createElement('span');l.className='gname-tag';l.innerHTML='<b>'+tag+'</b>';r.appendChild(l);
+    r.appendChild(bmpCol(f.zb,f.jb,surf,2));h.appendChild(r);
+  }
+  row('\u540e\u53f0',nm,1);          // roster / renderB trampoline
+  row('\u6218\u6597',nmA,0);         // in-battle / renderA atlas
+  return h;
+}
 // -- Units tab card --
 function buildUnit(bd,u){
-  var h=document.createElement('div');h.className='gcard-hd';h.appendChild(field(u.nm,1,2,null,'name'));bd.appendChild(h);
+  bd.appendChild(nameHeader(u.nm,u.nmA));
   if(u.weapons&&u.weapons.length){var s=sect(bd,'\u6b66\u5668 Weapons');u.weapons.forEach(function(w){s.appendChild(field(w,1,2));});}
   if(u.specials&&u.specials.length){var s2=sect(bd,'\u7279\u6b8a\u80fd\u529b / \u9632\u5fa1');u.specials.forEach(function(sp){s2.appendChild(field(sp,1,2,sp.kind==='defense'?'\u9632\u5fa1':'\u80fd\u529b'));});}
 }
-// -- IDs/Quotes tab card --
+// a cut-in / effect field is "empty" if its ZH is blank or just 无/なし (no real quote)
+function isNone(f){if(!f)return true;var z=(f.zt||'').replace(/[\u25bc\u3002\u00b7\s\u3000]/g,'');return z===''||z==='\u65e0'||z==='\u306a\u3057';}
+// -- IDs/Quotes tab card: each ID skill (1/2/3) in its own clearly-boxed block --
 function buildChar(bd,c){
-  var h=document.createElement('div');h.className='gcard-hd';h.appendChild(field(c.nm,1,2,null,'name'));bd.appendChild(h);
-  c.ids.forEach(function(id){
-    var s=sect(bd,'ID\u6307\u4ee4'+(id.tgt?' \u00b7 '+id.tgt:'')+(id.map?' \u00b7 \u5730\u56fe':' \u00b7 \u6218\u6597\u4e2d'));
-    s.appendChild(field(id.nm,1,2,'\u6307\u4ee4'));
-    if(id.sm&&(id.sm.zt||id.sm.jt||id.sm.zb))s.appendChild(field(id.sm,1,2,'\u6548\u679c\u540d'));
-    if(id.dt&&(id.dt.zt||id.dt.zb))s.appendChild(field(id.dt,0,2,'\u6548\u679c',null,true));
-    if(id.cut&&(id.cut.zt||id.cut.zb))s.appendChild(field(id.cut,0,2,'\u540d\u53f0\u8bcd',null,true));
+  bd.appendChild(nameHeader(c.nm,c.nmA));
+  c.ids.forEach(function(id,i){
+    var box=document.createElement('div');box.className='gskill';
+    var hd=document.createElement('div');hd.className='gskill-hd';
+    var n=(id.slot!=null?id.slot:i)+1;
+    hd.innerHTML='<span class="gsk-n">ID\u6280\u80fd '+n+'</span>';
+    var meta=document.createElement('span');meta.className='gsk-meta';
+    meta.textContent=(id.map?'\u5730\u56fe':'\u6218\u6597\u4e2d')+(id.tgt?' \u00b7 '+id.tgt:'');
+    hd.appendChild(meta);box.appendChild(hd);
+    box.appendChild(field(id.nm,1,2,'\u6307\u4ee4'));
+    if(id.sm&&(id.sm.zt||id.sm.jt||id.sm.zb))box.appendChild(field(id.sm,1,2,'\u6548\u679c\u540d'));
+    if(id.dt&&(id.dt.zt||id.dt.zb))box.appendChild(field(id.dt,0,2,'\u6548\u679c',null,true));
+    if(id.cut&&!isNone(id.cut))box.appendChild(field(id.cut,0,2,'\u540d\u53f0\u8bcd',null,true));
+    bd.appendChild(box);
   });
   if(c.barks&&c.barks.length){var b=collSect(bd,'\u6218\u6597\u558a\u8bdd Barks',c.barks.length);b._fill=function(){c.barks.forEach(function(bk){b.appendChild(field(bk,0,2,null,null,true));});};}
+}
+// -- Library tab item: bio (with owner name header) or part (name + caption) --
+function buildLibItem(bd,it,sec){
+  if(sec.kind==='part'){
+    var h=document.createElement('div');h.className='gcard-hd';h.appendChild(field(it,0,2,null,'name'));bd.appendChild(h);
+    if(it.cap&&(it.cap.zt||it.cap.zb)){var s=sect(bd,'\u8bf4\u660e Caption');s.appendChild(field(it.cap,0,2,null,null,true));}
+    return;
+  }
+  // bio: show the owner (character/unit) name if known, then the bio text
+  if(it.name&&(it.name.zt||it.name.jt)){
+    var nh=document.createElement('div');nh.className='gcard-hd';
+    var t=document.createElement('div');t.className='gf name';t.appendChild(txtCol(it.name.zt,it.name.jt));nh.appendChild(t);bd.appendChild(nh);
+  }
+  bd.appendChild(field(it,0,2,null,null,sec.long));
 }
 // -- grid: build all cards lazily on first view-show, chunked; pixels paint deferred.
 // Robust triggers (tabs sometimes didn't render until refresh): IntersectionObserver
@@ -1342,7 +1706,7 @@ function initTabs(){
       '<p class="gg-intro">\u6e38\u620f\u8d44\u6599\u9986\uff08library / hangar\uff09\uff1a\u89d2\u8272\u4e0e\u673a\u4f53\u56fe\u9274\u4f20\u8bb0\u3001\u6539\u9020\u90e8\u4ef6\u540d\u4e0e\u8bf4\u660e\u3002\u6bcf\u6761<b>\u4e2d\u6587\u6587\u672c\uff0b\u65e5\u6587\u6587\u672c\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff0c\u60ac\u505c\u4f4d\u56fe\u770b\u65e5\u6587\u4f4d\u56fe\u3002</p>';
     lib.forEach(function(sec,si){lh+='<h3 class="sec" style="font-size:15px;margin-top:18px">'+sec.title+' <span class="muted" style="font-size:12px">'+sec.n+'</span></h3><div id="ggenc'+si+'" class="ggrid"></div>';});
     vl.innerHTML=lh;
-    lib.forEach(function(sec,si){grid('#ggenc'+si,sec.items,function(it){return '#'+it.ix;},function(bd,it){bd.appendChild(field(it,0,2,null,null,sec.long));});});
+    lib.forEach(function(sec,si){grid('#ggenc'+si,sec.items,function(it){return '#'+it.ix;},function(bd,it){buildLibItem(bd,it,sec);});});
   }
   wireFilter('#ggidq','#ggidgrid');wireFilter('#ggunitq','#ggunitgrid');
 }
@@ -1373,12 +1737,28 @@ function indexStages(){stagesByGid={};extraStages=[];GG.stages.forEach(function(
 function normT(s){if(!s)return '';return s.replace(/[\u25a1\s\u3000\uff08\uff09()\uff3b\uff3d\[\]\uff0c\u3001\u3002.!\uff01?\uff1f\-\u30fc\uff0d\u30fb:\uff1a]/g,'').replace(/\u7bc7/g,'\u7de8');}
 function lcsLen(a,b){var m=a.length,n=b.length,i,j,best=0,prev=new Array(n+1),cur=new Array(n+1);for(j=0;j<=n;j++)prev[j]=0;for(i=1;i<=m;i++){cur[0]=0;for(j=1;j<=n;j++){cur[j]=(a.charAt(i-1)===b.charAt(j-1))?prev[j-1]+1:0;if(cur[j]>best)best=cur[j];}var t=prev;prev=cur;cur=t;}return best;}
 function bestBrief(s){var key=normT(s&&s.title_jp);if(key.length<2)return null;var best=null,bs=0;GG.briefings.forEach(function(b){var bt=normT(b.title);if(!bt)return;var sc=lcsLen(key,bt);if(sc>bs){bs=sc;best=b;}});return (bs>=2)?best:null;}
+function sceneName(sc){return sc<0?'\u5176\u5b83/\u672a\u89e6\u8fbe':'\u573a\u666f';}
+function appendScenedLines(host,s){
+  // renumber the distinct scene ids to sequential 1..N for display
+  var scMap={},scN=0;
+  s.lines.forEach(function(ln){if(ln.sc!=null&&ln.sc>=0&&!(ln.sc in scMap))scMap[ln.sc]=++scN;});
+  var lastSc=undefined;
+  s.lines.forEach(function(ln){
+    if(s.nsc>1&&ln.sc!=null&&ln.sc!==lastSc){
+      lastSc=ln.sc;
+      var sh=document.createElement('div');sh.className='dlg-scene';
+      sh.textContent=(ln.sc<0?'\u5176\u5b83 / \u672a\u89e6\u8fbe\u5bf9\u8bdd':'\u573a\u666f '+(scMap[ln.sc]||'?'));
+      host.appendChild(sh);
+    }
+    host.appendChild(dlgLine(ln));
+  });
+}
 function dialogueBlock(stageList){
   var tot=0;stageList.forEach(function(s){tot+=s.n;});
-  var c=collBlock('\u5267\u60c5\u5bf9\u8bdd\uff08\u542b\u8bf4\u8bdd\u4eba \u00b7 \u5206\u652f/\u4e8b\u4ef6\u6807\u8bb0\uff09',tot+' \u6bb5');
+  var c=collBlock('\u5267\u60c5\u5bf9\u8bdd\uff08\u6309\u6e38\u620f\u5185\u6f14\u51fa\u987a\u5e8f \u00b7 \u542b\u8bf4\u8bdd\u4eba\uff09',tot+' \u6bb5');
   c.body._fill=function(){stageList.forEach(function(s){
     if(stageList.length>1){var h=document.createElement('div');h.className='dlg-file';h.textContent=s.file;c.body.appendChild(h);}
-    s.lines.forEach(function(ln){c.body.appendChild(dlgLine(ln));});});};
+    appendScenedLines(c.body,s);});};
   return c.wrap;
 }
 function briefingBlock(s){
@@ -1404,7 +1784,7 @@ function addExtras(){
   var sec=document.createElement('div');sec.className='ggwrap';
   sec.innerHTML='<h2 class="sec" style="margin-top:26px">\u6e38\u620f\u5185\u989d\u5916\u5173\u5361 <span class="muted" style="font-size:13px">\uff08\u65e0\u653b\u7565\u5361 \u00b7 '+extraStages.length+'\uff09</span></h2>';
   var g=document.createElement('div');g.className='ggrid';
-  extraStages.forEach(function(s){g.appendChild((function(){var w=document.createElement('div');w.className='gcard';w._idx=s.file;var ix=document.createElement('div');ix.className='gcard-ix';ix.textContent=s.file;w.appendChild(ix);var bd=document.createElement('div');bd.className='gcard-bd';var c=collBlock('\u5267\u60c5\u6587\u672c',s.n+' \u6bb5');c.body._fill=function(){s.lines.forEach(function(ln){c.body.appendChild(dlgLine(ln));});};bd.appendChild(c.wrap);w.appendChild(bd);return w;})());});
+  extraStages.forEach(function(s){g.appendChild((function(){var w=document.createElement('div');w.className='gcard';w._idx=s.file;var ix=document.createElement('div');ix.className='gcard-ix';ix.textContent=s.file;w.appendChild(ix);var bd=document.createElement('div');bd.className='gcard-bd';var c=collBlock('\u5267\u60c5\u6587\u672c',s.n+' \u6bb5');c.body._fill=function(){appendScenedLines(c.body,s);};bd.appendChild(c.wrap);w.appendChild(bd);return w;})());});
   sec.appendChild(g);host.appendChild(sec);
 }
 function addToggle(){

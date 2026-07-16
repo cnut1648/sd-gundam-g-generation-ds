@@ -46,6 +46,7 @@ import json
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
 import time
@@ -194,6 +195,12 @@ def ensure_config(gdb_ports: tuple[int, int] | None = None) -> None:
         env = dict(os.environ, DISPLAY=f":{disp}")
         mel = subprocess.Popen([MELONDS_BIN], env=env,
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # melonDS only writes melonDS.toml on a GRACEFUL quit (closeEvent /
+        # end of exec()), which SIGTERM/SIGKILL skip.  It installs a SIGINT
+        # handler that runs the clean-shutdown path, so give it a moment to come
+        # up, then SIGINT it and wait for the config to land.
+        time.sleep(6.0)
+        mel.send_signal(signal.SIGINT)
         for _ in range(40):
             if MELON_CFG.exists():
                 break
