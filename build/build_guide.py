@@ -477,14 +477,12 @@ def _record_segments(buf: bytes, o0: int, o1: int, limit: int = 2) -> list[bytes
 
 def unit_specials(jp: GameROM, zh: GameROM, utid: int) -> list[dict]:
     """Special abilities (1df) + special defense type/description (1e0) a unit
-    carries, JP + ZH, each rendered on the renderB trampoline (bank) surface."""
+    carries.  Returns raw JP/ZH bytes (_jb/_zb) per record; the caller renders
+    them on the renderB trampoline (bank) surface with the system dict."""
     out = []
 
     def pack_pair(jb, zb):
-        # 1df/1e0 records reuse the system-dict (0x1444B4) macros for shared
-        # numeric/percent content on BOTH the JP and ZH sides, so expand with it.
-        return {"jp": pack_glyphs(jp, jb, "bank", jp.expand_sys) if jb else "",
-                "zh": pack_glyphs(zh, zb, "bank", zh.expand_sys) if zb else ""}
+        return {"_jb": jb or b"", "_zb": zb or b""}
 
     # -- special ability (shared per 3-utid family) --
     fam = (utid - 1) // 3 if utid <= ABILITY_SPLIT else utid - ABILITY_SUB
@@ -603,6 +601,86 @@ def sheet_meta(rom: GameROM, kind: str) -> dict:
     return meta
 
 
+# ---------------------------------------------------------------------------
+# Text decode (readability aid).  The BITMAP is the pure-game render; the text
+# below is the DECODE OF THE SAME RENDERED SLOTS via the glyph-identity tables
+# (atlas identity = data/charmap.json; renderB identity = data/renderb_charset
+# .json for slots <224 plus the VLM-built data/guide/renderb_ident.json for the
+# kanji band).  Because it maps the exact slots the game draws, the text agrees
+# with the bitmap glyph-for-glyph (a garble shows the wrong char AND the wrong
+# glyph); it is never our source translation.
+# ---------------------------------------------------------------------------
+@dataclass
+class _Ident:
+    atlas: dict
+    renderb: dict
+
+
+def _load_identities() -> _Ident:
+    import json as _json
+    cm = _json.loads((REPO / "data/charmap.json").read_text())
+    atlas: dict[int, str] = {}
+    for ch, code in cm["one_byte"].items():
+        atlas.setdefault(int(code), ch)
+    for s, ch in cm["jp_slot_chars"].items():
+        atlas.setdefault(int(s), ch)
+    for ch, s in cm["two_byte_zh"].items():
+        atlas.setdefault(int(s), ch)
+    for s, ch in cm.get("slot_chars_extra", {}).items():
+        atlas.setdefault(int(s), ch)
+    rb: dict[int, str] = {}
+    rc = _json.loads((REPO / "data/renderb_charset.json").read_text())["slots"]
+    for s, info in rc.items():
+        if info.get("char"):
+            rb[int(s)] = info["char"]
+    ext = REPO / "data/guide/renderb_ident.json"
+    if ext.exists():
+        for s, ch in _json.loads(ext.read_text()).get("slots", {}).items():
+            if ch:
+                rb[int(s)] = ch
+    return _Ident(atlas, rb)
+
+
+_IDENT: _Ident | None = None
+
+
+def decode_text(rom: GameROM, data: bytes, surface: str, exp=None,
+                dialogue: bool = False, _depth: int = 0) -> str:
+    """Unicode transcription of the rendered slots (see note above)."""
+    global _IDENT
+    if _IDENT is None:
+        _IDENT = _load_identities()
+    exp = exp or rom.expand
+    out: list[str] = []
+    i = 1 if (dialogue and data[:1] == b"\x15") else 0
+    n = len(data)
+    while i < n:
+        b = data[i]
+        if b >= 0xF0 and i + 1 < n:
+            sub = exp(((b << 8) | data[i + 1]) - 0xF000)
+            if sub is not None and _depth < 6:
+                out.append(decode_text(rom, sub, surface, exp, False, _depth + 1))
+            i += 2
+            continue
+        if b >= 0xE0 and i + 1 < n:
+            slot = ((b << 8) | data[i + 1]) - 0xE000 + 224
+            font = "B" if (surface == "bank" and slot < TRAMPOLINE_SPLIT) else "A"
+            i += 2
+        else:
+            slot = b
+            i += 1
+            if slot == 0x00:
+                if dialogue and out and out[-1] != "▼":
+                    out.append("▼")
+                continue
+            if slot == 0x01:
+                continue
+            font = "B" if (surface == "bank" and slot < TRAMPOLINE_SPLIT) else "A"
+        ch = (_IDENT.renderb.get(slot) if font == "B" else _IDENT.atlas.get(slot))
+        out.append(ch if ch is not None else "\u25a1")   # □ = unidentified glyph
+    return "".join(out).strip("▼")
+
+
 # ===========================================================================
 # Aggregate: walk every surface, render JP + ZH, into a JSON-able GAMEDATA dict
 # ===========================================================================
@@ -714,14 +792,111 @@ def extract_briefings(jp: GameROM, zh: GameROM) -> list[dict]:
     return out
 
 
+def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
+    """作战内容 briefings grouped by the stage descriptor that owns them.
+
+    Each stage descriptor's +0x14 points at the start of that stage's briefing
+    in the inline region; JP briefing blocks there are greedily paired with the
+    consecutive ZH pool-B blobs that cover them (they segment differently)."""
+    import collections
+    import json as _json
+    # JP inline briefing text blocks (address order)
+    jblocks = []
+    i = BRIEF_LO
+    while i < BRIEF_HI - 1:
+        if jp.arm9[i] == 0x15:
+            t = text_codec.find_terminator(jp.arm9, i + 1)
+            if 0 < t <= BRIEF_HI:
+                p = jp.arm9[i + 1:t]
+                if len(list(glyph_stream(jp, p, "stage", jp.expand))) >= 3 and not _brief_has_ptr(p):
+                    jblocks.append((i, p))
+                i = t + 2
+                continue
+        i += 1
+    # ZH pool-B blobs (offset index from data; bytes read from the ROM)
+    bb = _json.loads((REPO / "data/arenas/briefing_blobs.json").read_text())
+    zblobs = [zh.cstr(BRIEF_POOL_RAM + int(e["offset"], 16)) for e in bb["entries"]]
+    zblobs = [b for b in zblobs if b and any(True for _ in glyph_stream(zh, b, "stage"))]
+    # greedy: each JP block <- the consecutive ZH blobs covering its glyph count
+    aligned, zi = [], 0
+    for off, jb in jblocks:
+        jn = len(list(glyph_stream(jp, jb, "stage", jp.expand)))
+        acc, zc = [], 0
+        while zi < len(zblobs) and zc < jn * 0.85:
+            acc.append(zblobs[zi])
+            zc += len(list(glyph_stream(zh, zblobs[zi], "stage")))
+            zi += 1
+        aligned.append((off, jb, acc))
+    # group by the descriptor whose +0x14 range contains each block
+    starts = sorted((u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE, k)
+                    for k in range(101)
+                    if BRIEF_LO <= u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + STAGE_DESC_BRIEF) - RAM_BASE < BRIEF_HI)
+    groups: dict = collections.OrderedDict()
+    for off, jb, acc in aligned:
+        k = None
+        for so, kk in starts:
+            if so <= off:
+                k = kk
+            else:
+                break
+        groups.setdefault(k, []).append((jb, acc))
+    def _dlab(k, off):
+        """Decode a descriptor string field (+0x0c label / +0x10 title) for the
+        client-side stage matcher (# briefing -> Route stage by title_jp)."""
+        if k is None:
+            return ""
+        p = u32(jp.arm9, STAGE_DESC + k * STAGE_DESC_STRIDE + off)
+        o = p - RAM_BASE
+        if not (0 <= o < len(jp.arm9)):
+            return ""
+        s = jp.cstr(p)
+        return decode_text(jp, s, "bank", jp.expand_sys) if s else ""
+
+    out = []
+    for k, items in groups.items():
+        lines = []
+        for jb, acc in items:
+            zjoin = b"\x00".join(acc)
+            lines.append({
+                "jt": decode_text(jp, jb, "stage", jp.expand, True),
+                "jb": pack_glyphs(jp, jb, "stage", jp.expand, True),
+                "zt": decode_text(zh, zjoin, "stage", zh.expand, True) if zjoin else "",
+                "zb": pack_glyphs(zh, zjoin, "stage", zh.expand, True) if zjoin else "",
+            })
+        if lines:
+            out.append({"desc": k, "n": len(lines), "lines": lines,
+                        "lab": _dlab(k, STAGE_DESC_LABEL), "title": _dlab(k, STAGE_DESC_TITLE)})
+    return out
+
+
+STAGE_DESC = 0x175560          # stage descriptor table (101 × 0x34)
+STAGE_DESC_STRIDE = 0x34
+STAGE_DESC_BRIEF = 0x14        # +0x14 -> briefing region start for that stage
+STAGE_DESC_LABEL = 0x0c        # +0x0c -> stage-number label ("第3前" …)
+STAGE_DESC_TITLE = 0x10        # +0x10 -> stage title ("ソロモンの攻略（前編）" …)
+SHARED_MIN = 8                 # a dialogue block in >= this many stages is a
+                               # shared template (thanks-for-playing / 特别演习
+                               # extra-mode text appended to many files) — shown
+                               # once, not repeated per stage (#5)
+
+
+def _load_stage_blocks() -> dict:
+    """Optional per-block speaker/branch metadata from the VM-walk subagent."""
+    p = REPO / "data/guide/stage_blocks.json"
+    if p.exists():
+        import json as _json
+        return _json.loads(p.read_text())
+    return {}
+
+
 def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
     """Extract every reviewed surface from BOTH ROMs and pack for the browser.
 
-    JP decode dicts/fonts (empirically verified against the ZH translation):
-      * dialogue / cut-ins / ID-detail : atlas ('stage'), DICT_TEXT (jp.expand)
-      * names / weapons / ID name+summary : renderB ('bank'), DICT_SYS (expand_sys)
-      * ZH has no F-refs, so its dict is irrelevant; ZH names render on BOTH
-        the roster (trampoline 'bank') and battle (renderA 'stage') paths.
+    Each text field is emitted as {zt,jt,zb,jb}: ZH text, JP text (readability;
+    decode of the rendered slots), ZH bitmap, JP bitmap (pure-game render).
+    JP decode dicts/fonts (verified against the ZH translation): dialogue/
+    cut-ins/detail = atlas 'stage' + DICT_TEXT; names/weapons/ID/specials =
+    renderB 'bank' + DICT_SYS.
     """
     data: dict = {
         "sheets": {"jp": sheet_meta(jp, "atlas"),
@@ -729,17 +904,39 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                    "rb": sheet_meta(jp, "renderb")},
     }
 
-    def name_entry(jb, zb):
-        """A name/weapon: JP (roster renderB), ZH roster (bank) + battle (atlas)."""
-        e = {"jp": pack_glyphs(jp, jb, "bank", jp.expand_sys) if jb else "",
-             "zr": pack_glyphs(zh, zb, "bank") if zb else "",
-             "zb": pack_glyphs(zh, zb, "stage") if zb else ""}
-        return e
+    def fld(jb, zb, surface, jexp, dlg=False, zexp=None):
+        """One reviewed text field: ZH/JP text + ZH/JP bitmap.  zexp defaults to
+        the ZH dialogue dict; 1df/1e0 specials pass zh.expand_sys (they reuse the
+        system dict's numeric/percent macros on BOTH sides)."""
+        ze = zexp or zh.expand
+        return {
+            "zt": decode_text(zh, zb, surface, ze, dlg) if zb else "",
+            "jt": decode_text(jp, jb, surface, jexp, dlg) if jb else "",
+            "zb": pack_glyphs(zh, zb, surface, ze, dlg) if zb else "",
+            "jb": pack_glyphs(jp, jb, surface, jexp, dlg) if jb else "",
+        }
+
+    def name_fld(jb, zb):
+        return fld(jb, zb, "bank", jp.expand_sys)
+
+    # cid -> name (for dialogue speaker labels; all named char-DB records)
+    names = {}
+    for cid in range(CHARDB_COUNT):
+        zn = zh.cstr(u32(zh.arm9, CHARDB + cid * CHARDB_STRIDE + PILOT_NAME_FIELD))
+        jn = jp.cstr(u32(jp.arm9, CHARDB + cid * CHARDB_STRIDE + PILOT_NAME_FIELD))
+        if not _dummy_name(zn):
+            names[cid] = {"zt": decode_text(zh, zn, "bank"),
+                          "jt": decode_text(jp, jn, "bank", jp.expand_sys) if jn else ""}
+    data["names"] = names
 
     # ---- 1a. stage dialogue (index from data/dialogue; bytes read from ROMs) --
     from utils import stage_text
     guide_ids = _extract_guide_stage_ids()
-    stages = []
+    sblocks = _load_stage_blocks()
+    # first pass: count block frequency across stages (for shared-template dedup)
+    import collections
+    freq = collections.Counter()
+    per_stage = []
     for f, sd in stage_text.iter_stage_data():
         jf, zf = jp.file(f), zh.file(f)
         edits = [(int(e["jp_offset"], 16), e["jp_len"], bytes.fromhex(e["zh_hex"]),
@@ -747,21 +944,44 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         edits += [(int(x["jp_offset"], 16), 0, bytes.fromhex(x["hex"]), None)
                   for x in sd.get("inserts", [])]
         edits.sort()
-        delta, lines = 0, []
+        delta, blocks = 0, []
         for off, old, new, kind in edits:
             zoff = off + delta
             if kind == "dialogue":
                 jb = jf[off:off + old]
-                zb = zf[zoff:zoff + len(new)]
-                if not _is_priming_row(jb):     # skip あいうえお glyph-warmup rows
-                    lines.append([pack_glyphs(jp, jb, "stage", jp.expand, True),
-                                  pack_glyphs(zh, zb, "stage", zh.expand, True)])
+                if not _is_priming_row(jb):
+                    blocks.append((off, jb, zf[zoff:zoff + len(new)]))
+                    freq[jb] += 1
             delta += len(new) - old
+        per_stage.append((f, blocks))
+
+    smeta = sblocks
+    shared = []               # dedup'd shared template blocks (shown once)
+    shared_seen = set()
+    stages = []
+    for f, blocks in per_stage:
+        meta = smeta.get(f[:-4]) or smeta.get(f) or {}
+        lines = []
+        for off, jb, zb in blocks:
+            if freq[jb] >= SHARED_MIN:
+                if jb not in shared_seen:
+                    shared_seen.add(jb)
+                    shared.append(fld(jb, zb, "stage", jp.expand, True))
+                continue
+            m = meta.get(hex(off)) or meta.get(str(off)) or {}
+            ln = fld(jb, zb, "stage", jp.expand, True)
+            if m.get("sp", -1) >= 0:
+                ln["sp"] = m["sp"]
+            for k in ("branch", "choice", "event"):
+                if m.get(k):
+                    ln[k[0] if k != "event" else "ev"] = 1
+            lines.append(ln)
         stages.append({"file": f[:-4], "gid": _file_to_guide_id(f, guide_ids),
                        "n": len(lines), "lines": lines})
     data["stages"] = stages
+    data["shared"] = shared
 
-    # ---- 1b. characters: name (2 plates), 3 ID cmds, cut-ins, barks ----------
+    # ---- 1b. characters: name, 3 ID cmds, cut-ins, barks ---------------------
     jbark, zbark = build_bark_index(jp), build_bark_index(zh)
     chars = []
     for cid in range(CHARDB_COUNT):
@@ -778,26 +998,21 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                 continue
             cj, cz = cutin_line(jp, idn), cutin_line(zh, idn)
             ids.append({
-                "nm": name_entry(ji["name"], zi["name"]),
-                "sm": name_entry(ji["summary"], zi["summary"]),
-                "dt": {"jp": pack_glyphs(jp, ji["detail"], "stage", jp.expand) if ji["detail"] else "",
-                       "zh": pack_glyphs(zh, zi["detail"], "stage") if zi["detail"] else ""},
-                "cut": {"jp": pack_glyphs(jp, cj, "stage", jp.expand) if cj else "",
-                        "zh": pack_glyphs(zh, cz, "stage") if cz else ""},
+                "nm": name_fld(ji["name"], zi["name"]),
+                "sm": name_fld(ji["summary"], zi["summary"]),
+                "dt": fld(ji["detail"], zi["detail"], "stage", jp.expand),
+                "cut": fld(cj, cz, "stage", jp.expand),
                 "tgt": TARGET_NAMES.get(zi["target"], ""),
                 "map": bool(zi["cond"] & 0x02)})
         jb_list, zb_list = jbark.get(cid, []), zbark.get(cid, [])
-        barks = [[pack_glyphs(jp, jb_list[k], "stage", jp.expand) if k < len(jb_list) else "",
-                  pack_glyphs(zh, zb, "stage")]
+        barks = [fld(jb_list[k] if k < len(jb_list) else b"", zb, "stage", jp.expand)
                  for k, zb in enumerate(zb_list)]
         if not ids and not barks:
             continue
-        chars.append({"cid": cid, "nm": name_entry(jn, zn), "ids": ids, "barks": barks})
+        chars.append({"cid": cid, "nm": name_fld(jn, zn), "ids": ids, "barks": barks})
     data["chars"] = chars
 
-    # ---- 1c. units: name (2 plates), weapons, specials -----------------------
-    data["briefings"] = extract_briefings(jp, zh)
-
+    # ---- 1c. units: name, weapons, specials ----------------------------------
     ju = {u["utid"]: u for u in extract_units(jp)}
     zu = {u["utid"]: u for u in extract_units(zh)}
     units = []
@@ -807,44 +1022,84 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         if _dummy_name(z["name"]):
             continue
         jw = {s: b for s, _p, b in j.get("weapons", [])}
-        weapons = [name_entry(jw.get(s), wb) for s, _p, wb in z["weapons"]]
-        units.append({"utid": utid, "nm": name_entry(j.get("name"), z["name"]),
-                      "weapons": weapons, "specials": unit_specials(jp, zh, utid)})
+        weapons = [name_fld(jw.get(s), wb) for s, _p, wb in z["weapons"]]
+        specials = []
+        for sp in unit_specials(jp, zh, utid):
+            specials.append({"kind": sp["kind"],
+                             **fld(sp.get("_jb", b""), sp.get("_zb", b""), "bank",
+                                   jp.expand_sys, zexp=zh.expand_sys)})
+        units.append({"utid": utid, "nm": name_fld(j.get("name"), z["name"]),
+                      "weapons": weapons, "specials": specials})
     data["units"] = units
+
+    # ---- briefings (作战内容), per stage descriptor, into the Route tab -------
+    data["briefings"] = extract_briefings_by_stage(jp, zh)
     return data
 
 
 # ===========================================================================
 # HTML generation: inject sprite sheets + canvas renderer + tabs into 攻略.html
 # ===========================================================================
+# HTML generation: inject sprite sheets + canvas renderer + tabs into 攻略.html
+# ===========================================================================
 GG_STYLE = """<style id="gg-style">
 .ggwrap{margin-top:14px}
-.gg-intro{color:var(--ink2);font-size:13px;margin:-4px 0 14px;max-width:900px}
-.gg-src{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;margin:0 0 12px;overflow:hidden}
-.gg-hd{display:flex;align-items:center;gap:10px;padding:9px 13px;cursor:pointer;user-select:none}
-.gg-hd:hover{background:#16223a}
-.gg-hd .idx{font-size:11px;color:var(--ink4);font-family:ui-monospace,monospace}
-.gg-hd .nm{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.gg-bd{display:none;padding:4px 13px 12px;border-top:1px solid var(--line)}
-.gg-src.open .gg-bd{display:block}
-.gg-row{display:flex;gap:10px;align-items:flex-start;padding:4px 0;border-bottom:1px solid #ffffff08;flex-wrap:wrap}
-.gg-lab{font-size:11px;color:var(--ink4);min-width:52px;padding-top:5px;flex:none}
-.gg-pair{display:flex;flex-direction:column;gap:2px}
-.gg-jp canvas{image-rendering:pixelated;filter:brightness(.82) sepia(.3) hue-rotate(60deg) saturate(1.3)}
-.gg-zh canvas{image-rendering:pixelated}
-.gg-sub{font-size:10px;color:var(--ink4);margin-right:5px}
-.gg-tag{font-size:10.5px;color:var(--cyan2);border:1px solid var(--line2);border-radius:5px;padding:0 5px;margin-left:6px}
-.gg-warn{color:var(--bad);font-weight:700}
-.gg-eff{color:var(--gold);font-size:11px}
-canvas.ggc{vertical-align:middle;image-rendering:pixelated;image-rendering:crisp-edges}
-.gg-blk{margin:6px 0;padding:6px 9px;background:#0e1626;border:1px solid var(--line);border-radius:8px}
-.gg-blk .bt{font-size:11px;color:var(--ink3);margin-bottom:3px;letter-spacing:.3px}
-.gg-search{margin:0 0 12px}
-.gg-dlg .gg-row{border:none;padding:2px 0}
+.gg-intro{color:var(--ink2);font-size:13px;margin:-4px 0 14px;max-width:1000px;line-height:1.6}
 .gg-note{font-size:12px;color:var(--ink3);background:#0e1626;border:1px solid var(--line);border-radius:8px;padding:8px 11px;margin-bottom:12px}
+.gg-search{margin:0 0 12px}
+.gg-search input{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:7px 11px;color:var(--ink);width:240px}
+/* grid of always-expanded cards (units / ids) */
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:12px;align-items:start}
+.gcard{position:relative;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:12px;padding:24px 13px 12px;overflow:visible;min-height:52px}
+.gcard-ix{position:absolute;top:7px;left:12px;font-size:11px;color:var(--ink4);font-family:ui-monospace,monospace}
+.gcard-hd{border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:4px}
+.gsect{margin:7px 0 1px}
+.gstitle{font-size:10px;color:var(--ink3);letter-spacing:.7px;text-transform:uppercase;margin:6px 0 2px;opacity:.85}
+.gstitle.click{cursor:pointer;user-select:none}
+.gstitle.click:hover{color:var(--ink2)}
+.gstitle .cnt,.gcoll-hd .cnt{color:var(--ink4);font-size:10px;margin-left:4px}
+.gstitle .tw{color:var(--cyan2);margin-right:3px}
+/* one reviewed field: ZH text (big) + JP text (small) | ZH bitmap (hover -> JP bitmap) */
+.gf{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:3px 0;border-bottom:1px solid #ffffff07}
+.gf:last-child{border-bottom:none}
+.gf.name{padding:0;border-bottom:none}
+.gf.stk{flex-direction:column;align-items:stretch;gap:2px}
+.gf.stk .gf-txt{flex:none}
+.gf.stk .gf-bmp{max-width:100%;overflow-x:auto;overflow-y:hidden}
+.gf-lab{font-size:10px;color:var(--ink4);min-width:38px;flex:none;align-self:flex-start;padding-top:3px}
+.gf-txt{display:flex;flex-direction:column;min-width:0;flex:1}
+.gf-txt .zt{font-size:14px;color:var(--ink);line-height:1.3;word-break:break-word}
+.gf.name .zt{font-size:18px;font-weight:700;letter-spacing:.5px}
+.gf-txt .jt{font-size:11px;color:var(--ink4);line-height:1.3;word-break:break-word}
+.gf-txt .zt:empty,.gf-txt .jt:empty{display:none}
+.gf-bmp{position:relative;flex:none;line-height:0;padding:1px 0}
+.gf-bmp.hasjp{cursor:help}
+.gf-bmp .pop{display:none;position:absolute;right:0;top:100%;z-index:30;background:#0b1220;border:1px solid var(--line2);border-radius:7px;padding:7px 6px 4px;margin-top:3px;box-shadow:0 8px 24px #000a;white-space:nowrap}
+.gf-bmp .pop::before{content:'\u65e5 JP';position:absolute;top:2px;left:6px;font-size:8px;color:var(--ink4)}
+.gf-bmp:hover .pop{display:block}
+.gf-bmp .pop canvas{filter:brightness(.92) sepia(.25) hue-rotate(60deg) saturate(1.25)}
+canvas.ggc{vertical-align:middle;image-rendering:pixelated;image-rendering:crisp-edges;display:inline-block}
+/* collapsible block (route dialogue / briefing / shared) */
+.gcoll{margin:10px 0;background:#0e1626;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gcoll-hd{padding:8px 12px;cursor:pointer;user-select:none;font-size:13px;color:var(--ink2)}
+.gcoll-hd:hover{background:#16223a}
+.gcoll-hd .tw{color:var(--cyan2);margin-right:5px}
+.gcoll-bd{padding:6px 12px 10px;border-top:1px solid var(--line)}
+.collbody{padding-top:2px}
+/* dialogue line: [speaker + badges] [ZH/JP text | ZH bitmap] */
+.dlg{align-items:flex-start}
+.dlg-file{font-size:11px;color:var(--cyan2);margin:9px 0 3px;font-family:ui-monospace,monospace}
+.dlg-meta{flex:none;width:104px;display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding-top:2px}
+.dlg-meta .spk{font-size:12px;color:var(--gold);font-weight:600;line-height:1.25}
+.dlg-col{display:flex;flex-direction:column;gap:3px;align-items:stretch;flex:1;min-width:0}
+.dlg-col .gf-bmp{max-width:100%;overflow-x:auto;overflow-y:hidden}
+.gbadge{font-size:9.5px;border-radius:5px;padding:0 5px;line-height:1.55;border:1px solid;white-space:nowrap}
+.gbadge.br{color:#ffb27a;border-color:#7a4a2a;background:#2a170c}
+.gbadge.ev{color:#7ad4ff;border-color:#2a5a7a;background:#0c1f2a}
+.gbadge.ch{color:#c79bff;border-color:#4a2a7a;background:#170c2a}
 </style>"""
 
-# the browser-side module (canvas glyph renderer + two new tabs + dialogue weave)
+# the browser-side module (canvas glyph renderer + grid tabs + route weave)
 GG_JS = r"""
 (function(){
 var GG;
@@ -852,161 +1107,173 @@ var $=function(s,r){return (r||document).querySelector(s);};
 var SHEETS={};
 function loadSheets(cb){var keys=['jp','zh','rb'],left=keys.length;keys.forEach(function(k){var im=new Image();im.onload=function(){if(--left===0)cb();};im.src=GG.sheets[k].png;SHEETS[k]=im;});}
 function b64u16(s){var bin=atob(s),a=new Uint16Array(bin.length>>1);for(var i=0;i<a.length;i++)a[i]=bin.charCodeAt(i*2)|(bin.charCodeAt(i*2+1)<<8);return a;}
-// surface: 0=stage(renderA-direct) 1=bank(trampoline); rom: 0=jp 1=zh
+// deferred paint queue: canvases are SIZED up front (stable layout) and PAINTED over frames
+var DRAWQ=[];
+function pump(){var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){(DRAWQ.shift())();}if(DRAWQ.length)requestAnimationFrame(pump);}
+function queueDraw(fn){DRAWQ.push(fn);if(DRAWQ.length===1)requestAnimationFrame(pump);}
+// surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
 function drawStr(packed,surface,rom,scale){
   scale=scale||2; var g=b64u16(packed||''),W=0,i,v;
   for(i=0;i<g.length;i++){v=g[i];W+=(v===0xFFFF)?7:((v>=0x8000)?8:12);}
   W=Math.max(W,1);
   var cv=document.createElement('canvas');cv.className='ggc';cv.width=W*scale;cv.height=16*scale;
   cv.style.width=(W*scale)+'px';cv.style.height=(16*scale)+'px';
-  var ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;var x=0;
-  for(i=0;i<g.length;i++){v=g[i];
-    if(v===0xFFFF){ctx.fillStyle='#3b567f';ctx.fillRect((x+2)*scale,6*scale,3*scale,4*scale);x+=7;continue;}
-    var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key],img=SHEETS[key];
-    var sx=(slot%sh.cols)*sh.cw,sy=((slot/sh.cols)|0)*sh.ch,adv=font?8:12,yoff=font?0:(surface?3:1);
-    ctx.drawImage(img,sx,sy,sh.cw,sh.ch,x*scale,yoff*scale,sh.cw*scale,sh.ch*scale);x+=adv;
-  }
+  queueDraw(function(){
+    var ctx=cv.getContext('2d');ctx.imageSmoothingEnabled=false;var x=0,i,v;
+    for(i=0;i<g.length;i++){v=g[i];
+      if(v===0xFFFF){ctx.fillStyle='#3b567f';ctx.fillRect((x+2)*scale,6*scale,3*scale,4*scale);x+=7;continue;}
+      var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key],img=SHEETS[key];
+      var sx=(slot%sh.cols)*sh.cw,sy=((slot/sh.cols)|0)*sh.ch,adv=font?8:12,yoff=font?0:(surface?3:1);
+      ctx.drawImage(img,sx,sy,sh.cw,sh.ch,x*scale,yoff*scale,sh.cw*scale,sh.ch*scale);x+=adv;
+    }
+  });
   return cv;
 }
-function jpLine(packed,surface,scale){var d=document.createElement('span');d.className='gg-jp';if(packed)d.appendChild(drawStr(packed,surface,0,scale));return d;}
-function zhLine(packed,surface,scale){var d=document.createElement('span');d.className='gg-zh';if(packed)d.appendChild(drawStr(packed,surface,1,scale));return d;}
-function row(label,children){var r=document.createElement('div');r.className='gg-row';var l=document.createElement('div');l.className='gg-lab';l.textContent=label;r.appendChild(l);var p=document.createElement('div');p.className='gg-pair';children.forEach(function(c){p.appendChild(c);});r.appendChild(p);return r;}
-// a NAME entry {jp, zr(roster), zb(battle)} -> JP ref + ZH on both nameplates
-function nameRows(container,label,e){
-  if(!e)return;
-  container.appendChild(row(label+' 日',[jpLine(e.jp,1,3)]));
-  if(e.zr===e.zb){ container.appendChild(row(label+' 中',[zhLine(e.zr,1,3)])); }
-  else{
-    var jr=jpLine('',1,3); // placeholder
-    container.appendChild(row(label+' 名牌',[zhLine(e.zr,1,3)]));
-    var w=document.createElement('span');w.className='gg-warn gg-sub';w.textContent='⚠ 两处名牌不一致';
-    var br=row(label+' 战斗',[zhLine(e.zb,0,3)]);br.appendChild(w);container.appendChild(br);
-  }
+// -- field primitive: ZH text(big)+JP text(small) | ZH bitmap (hover reveals JP bitmap) --
+function txtCol(zt,jt){
+  var c=document.createElement('span');c.className='gf-txt';
+  var z=document.createElement('span');z.className='zt';z.textContent=zt||'';c.appendChild(z);
+  if(jt){var j=document.createElement('span');j.className='jt';j.textContent=jt;c.appendChild(j);}
+  return c;
 }
-function idBlock(id){
-  var b=document.createElement('div');b.className='gg-blk';
-  var t=document.createElement('div');t.className='bt';
-  t.textContent='ID指令'+(id.tgt?(' · 对象:'+id.tgt):'')+(id.map?' · 地图':' · 战斗中');b.appendChild(t);
-  b.appendChild(row('指令名',[jpLine(id.nm.jp,1,3),zhLine(id.nm.zr,1,3)]));
-  if(id.sm.jp||id.sm.zr)b.appendChild(row('效果名',[jpLine(id.sm.jp,1,3),zhLine(id.sm.zr,1,3)]));
-  if(id.dt.jp||id.dt.zh)b.appendChild(row('效果',[jpLine(id.dt.jp,0,2),zhLine(id.dt.zh,0,2)]));
-  if(id.cut.jp||id.cut.zh)b.appendChild(row('名台词',[jpLine(id.cut.jp,0,2),zhLine(id.cut.zh,0,2)]));
-  return b;
+function bmpCol(zb,jb,surf,scale){
+  var c=document.createElement('span');c.className='gf-bmp';
+  if(zb)c.appendChild(drawStr(zb,surf,1,scale));
+  if(jb){var pop=document.createElement('span');pop.className='pop';c.appendChild(pop);c.classList.add('hasjp');
+    var built=false;c.addEventListener('mouseenter',function(){if(!built){built=true;pop.appendChild(drawStr(jb,surf,0,scale));}});}
+  return c;
 }
-function renderCharInto(el,c){
-  el.innerHTML='';
-  nameRows(el,'姓名',c.nm);
-  c.ids.forEach(function(id){el.appendChild(idBlock(id));});
-  if(c.barks.length){
-    var b=document.createElement('div');b.className='gg-blk';var t=document.createElement('div');t.className='bt';t.textContent='战斗喊话 ('+c.barks.length+')';b.appendChild(t);
-    c.barks.forEach(function(bk){b.appendChild(row('',[jpLine(bk[0],0,2),zhLine(bk[1],0,2)]));});
-    el.appendChild(b);
-  }
+// f={zt,jt,zb,jb}; surf 0=stage 1=bank; stk=stack text over bitmap (long fields)
+function field(f,surf,scale,label,cls,stk){
+  var r=document.createElement('div');r.className='gf'+(stk?' stk':'')+(cls?' '+cls:'');
+  if(label){var l=document.createElement('span');l.className='gf-lab';l.textContent=label;r.appendChild(l);}
+  r.appendChild(txtCol(f.zt,f.jt));
+  r.appendChild(bmpCol(f.zb,f.jb,surf,scale));
+  return r;
 }
-function renderUnitInto(el,u){
-  el.innerHTML='';
-  nameRows(el,'机体',u.nm);
-  if(u.weapons.length){var b=document.createElement('div');b.className='gg-blk';var t=document.createElement('div');t.className='bt';t.textContent='武器';b.appendChild(t);
-    u.weapons.forEach(function(w){b.appendChild(row('',[jpLine(w.jp,1,3),zhLine(w.zr,1,3)]));});el.appendChild(b);}
-  if(u.specials&&u.specials.length){var b2=document.createElement('div');b2.className='gg-blk';var t2=document.createElement('div');t2.className='bt';t2.textContent='特殊能力 / 防御';b2.appendChild(t2);
-    u.specials.forEach(function(s){b2.appendChild(row(s.kind==='defense'?'防御':'能力',[jpLine(s.jp,1,3),zhLine(s.zh,1,3)]));});el.appendChild(b2);}
+function sect(host,title){var s=document.createElement('div');s.className='gsect';var t=document.createElement('div');t.className='gstitle';t.textContent=title;s.appendChild(t);host.appendChild(s);return s;}
+function collSect(host,title,n){ // in-card collapsible (barks): body filled on first open
+  var s=document.createElement('div');s.className='gsect';
+  var t=document.createElement('div');t.className='gstitle click';t.innerHTML='<span class="tw">\u25b8</span>'+title+'<span class="cnt">'+n+'</span>';
+  var b=document.createElement('div');b.className='collbody';b.style.display='none';var open=false;
+  t.addEventListener('click',function(){open=!open;b.style.display=open?'block':'none';t.querySelector('.tw').textContent=open?'\u25be':'\u25b8';if(open&&b._fill){b._fill();b._fill=null;}});
+  s.appendChild(t);s.appendChild(b);host.appendChild(s);return b;
 }
-// lazy: render an entry's body when its header scrolls into view / is opened
-var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var el=en.target;if(!el._done){el._done=1;el._render();}io.unobserve(el);}});},{rootMargin:'400px'});
-function srcCard(idx,titleChildren,renderFn){
-  var w=document.createElement('div');w.className='gg-src';
-  var hd=document.createElement('div');hd.className='gg-hd';
-  var ix=document.createElement('span');ix.className='idx';ix.textContent=idx;hd.appendChild(ix);
-  var nm=document.createElement('div');nm.className='nm';titleChildren.forEach(function(c){nm.appendChild(c);});hd.appendChild(nm);
-  var bd=document.createElement('div');bd.className='gg-bd';w.appendChild(hd);w.appendChild(bd);
-  var built=false;function build(){if(built)return;built=true;renderFn(bd);}
-  hd.addEventListener('click',function(){build();w.classList.toggle('open');});
-  bd._render=build;io.observe(bd);   // pre-render title glyphs even before open
-  return w;
+// -- Units tab card --
+function buildUnit(bd,u){
+  var h=document.createElement('div');h.className='gcard-hd';h.appendChild(field(u.nm,1,2,null,'name'));bd.appendChild(h);
+  if(u.weapons&&u.weapons.length){var s=sect(bd,'\u6b66\u5668 Weapons');u.weapons.forEach(function(w){s.appendChild(field(w,1,2));});}
+  if(u.specials&&u.specials.length){var s2=sect(bd,'\u7279\u6b8a\u80fd\u529b / \u9632\u5fa1');u.specials.forEach(function(sp){s2.appendChild(field(sp,1,2,sp.kind==='defense'?'\u9632\u5fa1':'\u80fd\u529b'));});}
 }
-function buildList(host,items,mk){var frag=document.createDocumentFragment();items.forEach(function(it,i){frag.appendChild(mk(it,i));});host.appendChild(frag);}
-// -- tab views ----------------------------------------------------------------
+// -- IDs/Quotes tab card --
+function buildChar(bd,c){
+  var h=document.createElement('div');h.className='gcard-hd';h.appendChild(field(c.nm,1,2,null,'name'));bd.appendChild(h);
+  c.ids.forEach(function(id){
+    var s=sect(bd,'ID\u6307\u4ee4'+(id.tgt?' \u00b7 '+id.tgt:'')+(id.map?' \u00b7 \u5730\u56fe':' \u00b7 \u6218\u6597\u4e2d'));
+    s.appendChild(field(id.nm,1,2,'\u6307\u4ee4'));
+    if(id.sm&&(id.sm.zt||id.sm.jt||id.sm.zb))s.appendChild(field(id.sm,1,2,'\u6548\u679c\u540d'));
+    if(id.dt&&(id.dt.zt||id.dt.zb))s.appendChild(field(id.dt,0,2,'\u6548\u679c',null,true));
+    if(id.cut&&(id.cut.zt||id.cut.zb))s.appendChild(field(id.cut,0,2,'\u540d\u53f0\u8bcd',null,true));
+  });
+  if(c.barks&&c.barks.length){var b=collSect(bd,'\u6218\u6597\u558a\u8bdd Barks',c.barks.length);b._fill=function(){c.barks.forEach(function(bk){b.appendChild(field(bk,0,2,null,null,true));});};}
+}
+// -- grid: build all cards lazily on first view-show, chunked; pixels paint deferred --
+function grid(hostSel,items,idOf,build){
+  var host=$(hostSel);
+  var once=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;once.disconnect();
+    var i=0;
+    (function chunk(){var end=Math.min(i+40,items.length),frag=document.createDocumentFragment();
+      for(;i<end;i++){var it=items[i],idx=idOf(it);
+        var w=document.createElement('div');w.className='gcard';w._idx=idx;
+        var ix=document.createElement('div');ix.className='gcard-ix';ix.textContent=idx;w.appendChild(ix);
+        var bd=document.createElement('div');bd.className='gcard-bd';build(bd,it);w.appendChild(bd);frag.appendChild(w);}
+      host.appendChild(frag);
+      if(i<items.length)requestAnimationFrame(chunk);})();
+  });});
+  once.observe(host);
+}
+function wireFilter(inp,gridsel){var el=$(inp);if(!el)return;el.addEventListener('input',function(e){var q=e.target.value.trim();Array.prototype.forEach.call($(gridsel).children,function(cd){cd.style.display=(!q||(cd._idx||'').indexOf(q)>=0)?'':'none';});});}
+// -- tabs --
 function addTab(v,label,em){var b=document.createElement('button');b.dataset.v=v;b.innerHTML=label+'<span class="em">'+em+'</span>';$('#tabs').appendChild(b);}
 function addView(v){var s=document.createElement('section');s.className='view';s.id='view-'+v;$('main').appendChild(s);return s;}
-function titleName(e,fallback){var s=document.createElement('span');var jc=jpLine(e&&e.jp,1,3),zc=zhLine(e&&(e.zr||e.zb),1,3);s.appendChild(zc);var jd=document.createElement('span');jd.className='gg-sub';jd.style.marginLeft='10px';jd.appendChild(jc);s.appendChild(jd);return s;}
-function renderBriefings(host){
-  GG.briefings.forEach(function(b){
-    var r=document.createElement('div');r.className='gg-row';var p=document.createElement('div');p.className='gg-pair';
-    p.appendChild(jpLine(b.jp,0,2));
-    (b.zh?b.zh.split('\u001f'):[]).forEach(function(z){p.appendChild(zhLine(z,0,2));});
-    r.appendChild(p);host.appendChild(r);
-  });
-}
 function initTabs(){
-  addTab('ggids','ID/名台词','Quotes');addTab('ggunits','机体/武器','Units');addTab('ggbrief','作战简报','Briefing');
-  var vb=addView('ggbrief');
-  vb.innerHTML='<h2 class="sec">作战简报 <span class="muted" style="font-size:13px">（作戦内容 · '+GG.briefings.length+' 段 · 游戏内简报数组）</span></h2>'+
-    '<p class="gg-intro">游戏「作战内容」简报文本，日文原文（inline @0x1985A4）与中文实机渲染（重定位至 pool B @0x023E7000）逐段并列。日中分段不同（中文换行更细），已按叙事顺序就近对齐，供核对译文。</p>'+
-    '<div id="ggbrieflist" class="ggwrap"></div>';
-  var bl=$('#ggbrieflist');var lazy=document.createElement('div');lazy.className='gg-note';lazy.style.cursor='pointer';lazy.textContent='点击展开全部简报 ('+GG.briefings.length+' 段)…';
-  lazy.addEventListener('click',function(){if(bl.childElementCount<=1){renderBriefings(bl);}lazy.style.display='none';});
-  bl.appendChild(lazy);
+  addTab('ggids','ID/\u540d\u53f0\u8bcd','Quotes');addTab('ggunits','\u673a\u4f53/\u6b66\u5668','Units');
   var vi=addView('ggids');
-  vi.innerHTML='<h2 class="sec">角色 · ID指令 · 名台词 · 战斗喊话 <span class="muted" style="font-size:13px">'+GG.chars.length+' 名（游戏内数组）</span></h2>'+
-    '<p class="gg-intro">全部内容由脚本从游戏 ROM 的角色数组（char-DB 0xDCF18）直接反解、按游戏渲染管线还原。每个名字有<b>两处名牌</b>：后台一览（renderB 8×16 界面字体）与战斗中（renderA 12×12 图集）——同一字符串经两条渲染路径，此处均以真实像素还原（若两者不一致会标红）。日文＝原文参照，中文＝汉化实机渲染。</p>'+
-    '<div class="gg-note">提示：点击任意角色展开其 3 条 ID 指令（指令名 · 使用条件 · 效果 · 名台词）与全部战斗喊话。</div>'+
-    '<div class="gg-search"><input id="ggidq" placeholder="按序号筛选…" style="background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:7px 11px;color:var(--ink);width:220px"></div>'+
-    '<div id="ggidlist" class="ggwrap"></div>';
-  buildList($('#ggidlist'),GG.chars,function(c){return srcCard('#'+c.cid,[titleName(c.nm)],function(bd){renderCharInto(bd,c);});});
+  vi.innerHTML='<h2 class="sec">\u89d2\u8272 \u00b7 ID\u6307\u4ee4 \u00b7 \u540d\u53f0\u8bcd \u00b7 \u6218\u6597\u558a\u8bdd <span class="muted" style="font-size:13px">'+GG.chars.length+' \u540d</span></h2>'+
+    '<p class="gg-intro">\u7531\u811a\u672c\u4ece\u6e38\u620f\u89d2\u8272\u6570\u7ec4\uff08char-DB 0xDCF18\uff09\u53cd\u89e3\u3001\u6309\u6e38\u620f\u6e32\u67d3\u7ba1\u7ebf\u8fd8\u539f\u3002\u6bcf\u683c\u663e\u793a<b>\u4e2d\u6587\u6587\u672c\uff08\u5927\uff09\uff0b\u65e5\u6587\u6587\u672c\uff08\u5c0f\uff09\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff1b\u9f20\u6807\u60ac\u505c\u4f4d\u56fe\u53ef\u770b<b>\u65e5\u6587\u4f4d\u56fe</b>\u5bf9\u7167\u3002\u6bcf\u5f20\u5361\u7247\u5168\u5c55\u5f00\uff0c\u6218\u6597\u558a\u8bdd\u9ed8\u8ba4\u6298\u53e0\u3002</p>'+
+    '<div class="gg-search"><input id="ggidq" placeholder="\u6309\u5e8f\u53f7\u7b5b\u9009\u2026"></div>'+
+    '<div id="ggidgrid" class="ggrid"></div>';
+  grid('#ggidgrid',GG.chars,function(c){return '#'+c.cid;},buildChar);
   var vu=addView('ggunits');
-  vu.innerHTML='<h2 class="sec">机体 · 武器 · 特殊能力 <span class="muted" style="font-size:13px">'+GG.units.length+' 台（unit-master 0xB94BC）</span></h2>'+
-    '<p class="gg-intro">由脚本从游戏机体主表（0xB94BC）直接反解：机体名、6 个武器槽名、特殊能力/防御。日文原文＋中文实机渲染并列，便于核对译名与术语。机体名同样并列<b>两处名牌</b>。</p>'+
-    '<div class="gg-search"><input id="ggunitq" placeholder="按序号筛选…" style="background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:7px 11px;color:var(--ink);width:220px"></div>'+
-    '<div id="ggunitlist" class="ggwrap"></div>';
-  buildList($('#ggunitlist'),GG.units,function(u){return srcCard('#'+u.utid,[titleName(u.nm)],function(bd){renderUnitInto(bd,u);});});
-  function wireFilter(inp,list){$(inp).addEventListener('input',function(e){var q=e.target.value.trim();Array.prototype.forEach.call($(list).children,function(card){var idx=card.querySelector('.idx').textContent;card.style.display=(!q||idx.indexOf(q)>=0)?'':'none';});});}
-  wireFilter('#ggidq','#ggidlist');wireFilter('#ggunitq','#ggunitlist');
+  vu.innerHTML='<h2 class="sec">\u673a\u4f53 \u00b7 \u6b66\u5668 \u00b7 \u7279\u6b8a\u80fd\u529b <span class="muted" style="font-size:13px">'+GG.units.length+' \u53f0</span></h2>'+
+    '<p class="gg-intro">\u7531\u811a\u672c\u4ece\u673a\u4f53\u4e3b\u8868\uff080xB94BC\uff09\u53cd\u89e3\u3002\u6bcf\u5f20\u5361\u7247\u5168\u5c55\u5f00\uff1a\u673a\u4f53\u540d\u3001\u5404\u6b66\u5668\u3001\u5404\u7279\u6b8a\u80fd\u529b/\u9632\u5fa1\uff0c\u5747<b>\u4e2d\u6587\u6587\u672c\uff0b\u65e5\u6587\u6587\u672c\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff0c\u60ac\u505c\u4f4d\u56fe\u770b\u65e5\u6587\u4f4d\u56fe\u3002</p>'+
+    '<div class="gg-search"><input id="ggunitq" placeholder="\u6309\u5e8f\u53f7\u7b5b\u9009\u2026"></div>'+
+    '<div id="ggunitgrid" class="ggrid"></div>';
+  grid('#ggunitgrid',GG.units,function(u){return '#'+u.utid;},buildUnit);
+  wireFilter('#ggidq','#ggidgrid');wireFilter('#ggunitq','#ggunitgrid');
 }
-function linesInto(host,lines){
-  lines.forEach(function(ln){
-    var r=document.createElement('div');r.className='gg-row';
-    var p=document.createElement('div');p.className='gg-pair';
-    p.appendChild(jpLine(ln[0],0,2));p.appendChild(zhLine(ln[1],0,2));
-    r.appendChild(p);host.appendChild(r);
-  });
+// -- Route tab: weave dialogue (speakers + badges) + briefing per stage --
+function badge(txt,cls){var b=document.createElement('span');b.className='gbadge '+cls;b.textContent=txt;return b;}
+function dlgLine(ln){
+  var r=document.createElement('div');r.className='gf dlg';
+  var meta=document.createElement('span');meta.className='dlg-meta';
+  var nm=(ln.sp!=null&&GG.names[ln.sp])?GG.names[ln.sp]:null;
+  if(nm){var sp=document.createElement('span');sp.className='spk';sp.textContent=nm.zt+'\uff1a';if(nm.jt)sp.title=nm.jt;meta.appendChild(sp);}
+  if(ln.b)meta.appendChild(badge('\u5206\u652f','br'));
+  if(ln.c)meta.appendChild(badge('\u9009\u62e9','ch'));
+  if(ln.ev)meta.appendChild(badge('\u4e8b\u4ef6','ev'));
+  r.appendChild(meta);
+  var col=document.createElement('span');col.className='dlg-col';
+  col.appendChild(txtCol(ln.zt,ln.jt));col.appendChild(bmpCol(ln.zb,ln.jb,0,2));
+  r.appendChild(col);return r;
 }
-// -- weave dialogue into the existing stage panel ------------------------------
+function collBlock(title,cnt){
+  var wrap=document.createElement('div');wrap.className='gcoll';
+  var hd=document.createElement('div');hd.className='gcoll-hd';hd.innerHTML='<span class="tw">\u25b8</span><b>'+title+'</b><span class="cnt">'+cnt+'</span>';
+  var body=document.createElement('div');body.className='gcoll-bd';body.style.display='none';var open=false;
+  hd.addEventListener('click',function(){open=!open;body.style.display=open?'block':'none';hd.querySelector('.tw').textContent=open?'\u25be':'\u25b8';if(open&&body._fill){body._fill();body._fill=null;}});
+  wrap.appendChild(hd);wrap.appendChild(body);return {wrap:wrap,body:body};
+}
 var stagesByGid={},extraStages=[];
-function indexStages(){stagesByGid={};extraStages=[];GG.stages.forEach(function(s){if(s.gid){stagesByGid[s.gid]=(stagesByGid[s.gid]||[]).concat([s]);}else{extraStages.push(s);}});}
-function dialogueSection(stageList){
-  var wrap=document.createElement('div');wrap.className='block gg-dlg';
-  var bt=document.createElement('div');bt.className='bt';var tot=0;stageList.forEach(function(s){tot+=s.n;});
-  bt.textContent='剧情对话（游戏文本 · 日/中实机渲染 · '+tot+' 段）';wrap.appendChild(bt);
-  var lazy=document.createElement('div');lazy.className='gg-note';lazy.textContent='点击展开 '+tot+' 段对话…';lazy.style.cursor='pointer';
-  var box=document.createElement('div');box.style.display='none';
-  lazy.addEventListener('click',function(){
-    if(box.childElementCount===0){
-      stageList.forEach(function(s){
-        if(stageList.length>1){var h=document.createElement('div');h.className='gg-sub';h.textContent=s.file;box.appendChild(h);}
-        linesInto(box,s.lines);
-      });
-    }
-    box.style.display=(box.style.display==='none')?'block':'none';
-  });
-  wrap.appendChild(lazy);wrap.appendChild(box);return wrap;
+function indexStages(){stagesByGid={};extraStages=[];GG.stages.forEach(function(s){if(s.gid){(stagesByGid[s.gid]=stagesByGid[s.gid]||[]).push(s);}else{extraStages.push(s);}});}
+function normT(s){if(!s)return '';return s.replace(/[\u25a1\s\u3000\uff08\uff09()\uff3b\uff3d\[\]\uff0c\u3001\u3002.!\uff01?\uff1f\-\u30fc\uff0d\u30fb:\uff1a]/g,'').replace(/\u7bc7/g,'\u7de8');}
+function lcsLen(a,b){var m=a.length,n=b.length,i,j,best=0,prev=new Array(n+1),cur=new Array(n+1);for(j=0;j<=n;j++)prev[j]=0;for(i=1;i<=m;i++){cur[0]=0;for(j=1;j<=n;j++){cur[j]=(a.charAt(i-1)===b.charAt(j-1))?prev[j-1]+1:0;if(cur[j]>best)best=cur[j];}var t=prev;prev=cur;cur=t;}return best;}
+function bestBrief(s){var key=normT(s&&s.title_jp);if(key.length<2)return null;var best=null,bs=0;GG.briefings.forEach(function(b){var bt=normT(b.title);if(!bt)return;var sc=lcsLen(key,bt);if(sc>bs){bs=sc;best=b;}});return (bs>=2)?best:null;}
+function dialogueBlock(stageList){
+  var tot=0;stageList.forEach(function(s){tot+=s.n;});
+  var c=collBlock('\u5267\u60c5\u5bf9\u8bdd\uff08\u542b\u8bf4\u8bdd\u4eba \u00b7 \u5206\u652f/\u4e8b\u4ef6\u6807\u8bb0\uff09',tot+' \u6bb5');
+  c.body._fill=function(){stageList.forEach(function(s){
+    if(stageList.length>1){var h=document.createElement('div');h.className='dlg-file';h.textContent=s.file;c.body.appendChild(h);}
+    s.lines.forEach(function(ln){c.body.appendChild(dlgLine(ln));});});};
+  return c.wrap;
+}
+function briefingBlock(s){
+  var b=bestBrief(s);if(!b)return null;
+  var c=collBlock('\u4f5c\u6218\u7b80\u62a5\uff08\u4f5c\u6226\u5185\u5bb9\uff09',b.n+' \u6bb5');
+  c.body._fill=function(){b.lines.forEach(function(ln){c.body.appendChild(field(ln,0,2,null,null,true));});};
+  return c.wrap;
 }
 function weaveStage(){
   var orig=window.stageDetail;if(!orig)return;
-  window.stageDetail=function(s){orig(s);var list=stagesByGid[s.id];if(list){var pb=$('#pbody');if(pb){pb.appendChild(dialogueSection(list));}}};
+  window.stageDetail=function(s){orig(s);var pb=$('#pbody');if(!pb)return;
+    var bb=briefingBlock(s);if(bb)pb.appendChild(bb);
+    var list=stagesByGid[s.id];if(list)pb.appendChild(dialogueBlock(list));};
+}
+function addShared(){
+  if(!GG.shared||!GG.shared.length)return;var host=$('#view-stages');if(!host)return;
+  var c=collBlock('\u5404\u5173\u5361\u901a\u7528\u6a21\u677f\u6587\u672c\uff08\u5982\u201c\u7279\u522b\u6f14\u4e60\u201d\u7b49 \u00b7 \u4ec5\u5217\u4e00\u6b21\uff09',GG.shared.length+' \u6bb5');
+  c.body._fill=function(){GG.shared.forEach(function(ln){c.body.appendChild(field(ln,0,2,null,null,true));});};
+  var wrap=document.createElement('div');wrap.className='ggwrap';wrap.appendChild(c.wrap);host.appendChild(wrap);
 }
 function addExtras(){
-  if(!extraStages.length){return;}
-  var host=$('#view-stages');if(!host){return;}
+  if(!extraStages.length)return;var host=$('#view-stages');if(!host)return;
   var sec=document.createElement('div');sec.className='ggwrap';
-  sec.innerHTML='<h2 class="sec" style="margin-top:26px">游戏内额外关卡 <span class="muted" style="font-size:13px">（教程/自由战/终章等 · 无攻略卡 · '+extraStages.length+'）</span></h2><p class="gg-intro">以下关卡文件存在于游戏数组但攻略未单列，此处附其剧情文本（日/中实机渲染）。</p>';
-  var grid=document.createElement('div');
-  extraStages.forEach(function(s){
-    var card=srcCard(s.file,[document.createTextNode('剧情文本 · '+s.n+' 段')],function(bd){linesInto(bd,s.lines);});
-    grid.appendChild(card);
-  });
-  sec.appendChild(grid);host.appendChild(sec);
+  sec.innerHTML='<h2 class="sec" style="margin-top:26px">\u6e38\u620f\u5185\u989d\u5916\u5173\u5361 <span class="muted" style="font-size:13px">\uff08\u65e0\u653b\u7565\u5361 \u00b7 '+extraStages.length+'\uff09</span></h2>';
+  var g=document.createElement('div');g.className='ggrid';
+  extraStages.forEach(function(s){g.appendChild((function(){var w=document.createElement('div');w.className='gcard';w._idx=s.file;var ix=document.createElement('div');ix.className='gcard-ix';ix.textContent=s.file;w.appendChild(ix);var bd=document.createElement('div');bd.className='gcard-bd';var c=collBlock('\u5267\u60c5\u6587\u672c',s.n+' \u6bb5');c.body._fill=function(){s.lines.forEach(function(ln){c.body.appendChild(dlgLine(ln));});};bd.appendChild(c.wrap);w.appendChild(bd);return w;})());});
+  sec.appendChild(g);host.appendChild(sec);
 }
-function start(){window.GG=GG;indexStages();loadSheets(function(){initTabs();weaveStage();addExtras();});}
+function start(){window.GG=GG;indexStages();loadSheets(function(){initTabs();weaveStage();addShared();addExtras();});}
 function boot(){
   var raw=document.getElementById('gg-data').textContent.trim();
   var bytes=Uint8Array.from(atob(raw),function(c){return c.charCodeAt(0);});
@@ -1015,7 +1282,7 @@ function boot(){
       .then(function(t){GG=JSON.parse(t);start();})
       .catch(function(err){console.error('gg-data decompress failed',err);});
   }else{
-    alert('此攻略的游戏数据需要支持 DecompressionStream 的浏览器（Chrome/Edge/Firefox/Safari 新版）。');
+    alert('\u6b64\u653b\u7565\u7684\u6e38\u620f\u6570\u636e\u9700\u8981\u652f\u6301 DecompressionStream \u7684\u6d4f\u89c8\u5668\uff08Chrome/Edge/Firefox/Safari \u65b0\u7248\uff09\u3002');
   }
 }
 boot();
