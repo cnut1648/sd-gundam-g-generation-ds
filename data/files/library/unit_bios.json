@@ -1,6 +1,6 @@
 {
  "file": "c4b.bin",
- "what": "Unit/mobile-suit encyclopedia (図鑑) description text bank. 239 records at the arm9 offset table (RAM 0x02195bdc); every edit is one record-aligned in-place rewrite. Same byte grammar as character_bios.json: {00} lines, {00}· continuations, {00}々 pages, {00}{01} record terminator; no mid-record {00}{00} (line-drop).",
+ "what": "Unit/mobile-suit encyclopedia (図鑑) description text bank. 239 records at the arm9 offset table (RAM 0x02191bdc); every edit is one record-aligned in-place rewrite. Same byte grammar as character_bios.json: {00} lines, {00}{04} continuation + {00}{07} page = line-start page CONTROLS (the game does not draw ·/々 there; the offset table is the parallel one right before the char-bio table at 0x02191fa0), {00}{01} record terminator; no mid-record {00}{00} (line-drop).",
  "format": "edits",
  "edits": [
   {
