@@ -917,7 +917,10 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         }
 
     def name_fld(jb, zb):
-        return fld(jb, zb, "bank", jp.expand_sys)
+        # names render on the system-dict trampoline; ZH names may now reuse the
+        # JP original's system-dict macros (narrowed ASCII), so decode/pack ZH
+        # with expand_sys too (not the dialogue dict).
+        return fld(jb, zb, "bank", jp.expand_sys, zexp=zh.expand_sys)
 
     # cid -> name (for dialogue speaker labels; all named char-DB records)
     names = {}
@@ -925,7 +928,7 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         zn = zh.cstr(u32(zh.arm9, CHARDB + cid * CHARDB_STRIDE + PILOT_NAME_FIELD))
         jn = jp.cstr(u32(jp.arm9, CHARDB + cid * CHARDB_STRIDE + PILOT_NAME_FIELD))
         if not _dummy_name(zn):
-            names[cid] = {"zt": decode_text(zh, zn, "bank"),
+            names[cid] = {"zt": decode_text(zh, zn, "bank", zh.expand_sys),
                           "jt": decode_text(jp, jn, "bank", jp.expand_sys) if jn else ""}
     data["names"] = names
 
