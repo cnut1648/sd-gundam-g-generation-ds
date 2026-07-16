@@ -1197,15 +1197,18 @@ GG_JS = r"""
 (function(){
 var GG;
 var $=function(s,r){return (r||document).querySelector(s);};
-var SHEETS={};
-function loadSheets(cb){var keys=['jp','zh','rb'],left=keys.length,done=false;
-  function fin(){if(done)return;if(--left<=0){done=true;cb();}}
+var SHEETS={},SHEETS_OK=false,GRIDS={};
+// Load the 3 sprite sheets in the background.  The UI is built immediately (not
+// gated on images); glyph paints are QUEUED and only run once sheets are ready
+// (see queueDraw), so no canvas can paint blank on a cold cache.
+function loadSheets(){var keys=['jp','zh','rb'],left=keys.length;
+  function fin(){if(--left<=0){SHEETS_OK=true;if(DRAWQ.length&&!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}}
   keys.forEach(function(k){var im=new Image();im.onload=fin;im.onerror=fin;im.src=GG.sheets[k].png;SHEETS[k]=im;});}
 function b64u16(s){var bin=atob(s),a=new Uint16Array(bin.length>>1);for(var i=0;i<a.length;i++)a[i]=bin.charCodeAt(i*2)|(bin.charCodeAt(i*2+1)<<8);return a;}
 // deferred paint queue: canvases are SIZED up front (stable layout) and PAINTED over frames
 var DRAWQ=[],PUMPING=false;
 function pump(){PUMPING=true;var t=performance.now();while(DRAWQ.length&&performance.now()-t<10){var fn=DRAWQ.shift();try{fn();}catch(e){}}if(DRAWQ.length){requestAnimationFrame(pump);}else{PUMPING=false;}}
-function queueDraw(fn){DRAWQ.push(fn);if(!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}
+function queueDraw(fn){DRAWQ.push(fn);if(SHEETS_OK&&!PUMPING){PUMPING=true;requestAnimationFrame(pump);}}
 // surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
 function drawSeg(g,surface,rom,scale){   // g = one line's u16 glyphs (no BREAK)
   scale=scale||2; var W=0,i,v;
@@ -1299,11 +1302,15 @@ function grid(hostSel,items,idOf,build){
       host.appendChild(frag);
       if(i<items.length)requestAnimationFrame(chunk);})();
   }
-  try{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){io.disconnect();go();}});});io.observe(host);}catch(e){go();}
+  // Deterministic trigger: register go() under its owning view; start() wraps the
+  // base page's showView() so EVERY tab switch builds that view's grids.
+  // IntersectionObserver + offsetParent are kept as backups (hash-nav / already-visible).
   var view=host.closest?host.closest('.view'):null,v=(view&&view.id)?view.id.replace('view-',''):null;
-  if(v){var btn=$('#tabs button[data-v="'+v+'"]');if(btn)btn.addEventListener('click',function(){setTimeout(go,0);});}
+  if(v){(GRIDS[v]=GRIDS[v]||[]).push(go);}
+  try{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){io.disconnect();go();}});});io.observe(host);}catch(e){go();}
   if(host.offsetParent!==null)go();
 }
+function buildView(v){var gs=GRIDS[v];if(gs)for(var i=0;i<gs.length;i++)gs[i]();}
 function wireFilter(inp,gridsel){var el=$(inp);if(!el)return;el.addEventListener('input',function(e){var q=e.target.value.trim();Array.prototype.forEach.call($(gridsel).children,function(cd){cd.style.display=(!q||(cd._idx||'').indexOf(q)>=0)?'':'none';});});}
 // -- tabs --
 function addTab(v,label,em){var b=document.createElement('button');b.dataset.v=v;b.innerHTML=label+'<span class="em">'+em+'</span>';$('#tabs').appendChild(b);}
@@ -1401,7 +1408,16 @@ function addToggle(){
   b.addEventListener('click',function(){var off=document.body.classList.toggle('gg-nobmp');b.textContent=off?'\u663e\u793a\u4f4d\u56fe':'\u9690\u85cf\u4f4d\u56fe';});
   document.body.appendChild(b);
 }
-function start(){window.GG=GG;indexStages();loadSheets(function(){initTabs();weaveStage();addShared();addExtras();addToggle();});}
+function start(){window.GG=GG;indexStages();
+  // Build the whole UI up front (tabs appear instantly; do NOT wait on images).
+  initTabs();weaveStage();addShared();addExtras();addToggle();
+  // Hook the base page's showView so each tab switch deterministically builds its
+  // grids (fixes "tabs sometimes don't load until refresh").
+  var _sv=window.showView;
+  if(typeof _sv==='function'){window.showView=function(v){var r=_sv.apply(this,arguments);try{buildView(v);}catch(e){}return r;};}
+  var cur=$('#tabs button.on');if(cur&&cur.dataset)try{buildView(cur.dataset.v);}catch(e){}
+  loadSheets();   // paints flush once sheets finish decoding (see queueDraw)
+}
 function boot(){
   var raw=document.getElementById('gg-data').textContent.trim();
   var bytes=Uint8Array.from(atob(raw),function(c){return c.charCodeAt(0);});
