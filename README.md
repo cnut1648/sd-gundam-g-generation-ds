@@ -196,6 +196,30 @@ python3 -m venv .venv
 差异」）在重合处以本 README 为准——例如获得倒X 在本版本为 **任意等级**，
 攻略中标注的「LV30 以上」是原版条件。
 
+### 译文审校页签（由游戏本体反解生成）
+
+`攻略.html` 另含 **ID/名台词 · 机体/武器 · 作战简报** 三个页签，以及在「关卡」
+页签每关追加的**剧情对话**——这些内容并非人工撰写，而是由
+`build/build_guide.py` 从 **游戏 ROM 本体** 直接反解、并按游戏的两套字体渲染管线
+（12×12 图集 renderA / 8×16 界面字体 renderB）**逐字素还原**，日文原文与中文实机
+渲染并列，用于**离线核对翻译质量**（能直接暴露编码/串字问题，而非复述我们的源
+文本）。数据取自游戏内数组：角色表 `0xDCF18`、机体主表 `0xB94BC`、ID 指令表
+`0xEC994`、名台词链表 `0x16FD64→1dc.bin`、喊话 `0/1/1dd/1de/c4f.bin`、特殊能力/
+防御 `1df/1e0.bin`、简报 `0x1985A4→pool B`——不读取 `charmap`/译名标注，纯游戏。
+每个人物名并列**两处名牌**（后台一览 renderB 与战斗中 renderA）以便发现两条渲染
+路径不一致的串字。
+
+```bash
+# 重新生成（读取日版 ROM 与已构建的汉化 ROM，就地增强 攻略.html）
+.venv/bin/python build/build_guide.py \
+    --jp "0098 - SD Gundam G Generation DS (Japan).nds" \
+    --zh sd-gundam-g-generation-zh.nds
+```
+
+脚本为确定性纯逻辑（无 VLM / 无联网 / 无外部字体）；文本以浏览器 canvas 按图集
+像素绘制，故需支持 `DecompressionStream` 的现代浏览器（Chrome/Edge/Firefox/Safari
+新版）。
+
 ## 环境要求
 
 * Python ≥ 3.12，构建仅需 `ndspy`；测试另需 `Pillow`/`numpy`。
