@@ -81,10 +81,25 @@ def text_runs(data: bytes, lo: int = 0, hi: int | None = None) -> list[tuple[int
 # units / pilots / ID commands
 # ---------------------------------------------------------------------------
 def units(rom: GameROM) -> list[dict]:
-    """All master-table unit records (name + 6 weapon names + carrier cap)."""
+    """All master-table unit records (name + 6 weapon names + carrier cap).
+
+    The master table ENDS exactly where the char-DB begins (`L.CHARDB` =
+    0xDCF18): its last record is utid 675 (脱出ポッド).  Slots at utid >= 676 are
+    NOT units — the table's byte range would run straight into the char-DB
+    (stride 0xD8 == 3 x char-DB stride 0x48), so a "unit name" read there is
+    really a char-DB PILOT-name pointer (utid 682 -> アムロ・レイ) and the six
+    "weapon" pointers are further pilot-name fields (キラ・ヤマト shows up as a
+    weapon); past the char-DB (utid >= 864) the reads are pure garbage or bleed
+    the special-defense type-name pool (分身 / Iフィールド — owned by the
+    ability/defense walkers, not units).  The unit encyclopedia confirms the
+    bound: the highest unit with a 図鑑 bio is utid 669.  (An earlier revision
+    walked all 945 raw slots believing 268 extra units were being dropped; those
+    "units" are exactly the char-DB aliases + garbage described above.)"""
     out = []
     for utid in range(L.MASTER_COUNT):
         rec = L.MASTER_TABLE + utid * L.MASTER_STRIDE
+        if rec >= L.CHARDB:          # the master table ends where the char-DB begins
+            break
         name = _str_record(rom, rec + L.UNIT_NAME_FIELD, "bank", rom.expand_sys)
         weapons = []
         for slot in range(L.WEAPONS_PER_UNIT):
@@ -301,9 +316,10 @@ def barks(rom: GameROM) -> list[dict]:
 
     Record grammar (docs/DATA_FORMATS): header ``00 05 <voiceset u16> 00 06
     <char_id u16>``, then text sub-lines separated by ``00 03`` / ``00 04``
-    page controls, record terminated ``00 03 00 01`` — or implicitly by the
-    NEXT ``00 05 .. .. 00 06`` header (a terminator-less chain member; the old
-    end+4 advance skipped such a follower's header and lost whole records).
+    page controls, record terminated ``00 03 00 01`` (or the ``00 03 00 02``
+    variant, 216 records) — or implicitly by the NEXT ``00 05 .. .. 00 06``
+    header (a terminator-less chain member; the old end+4 advance skipped such a
+    follower's header and lost whole records).
     Each sub-line text run is emitted with its own offset; `body`/`end` bound
     the record's translatable span (some shipped translations start their edit
     inside the header tail, so mapping is by containment in [body-2, end))."""
@@ -331,7 +347,11 @@ def barks(rom: GameROM) -> list[dict]:
                     j += 2
                     continue
                 if data[j] == 0x00 and j + 3 < n and data[j + 1] == 0x03 \
-                        and data[j + 2] == 0x00 and data[j + 3] == 0x01:
+                        and data[j + 2] == 0x00 and data[j + 3] in (0x01, 0x02):
+                    # record trailer is 00 03 00 01 (8534 records) OR 00 03 00 02
+                    # (216 records); matching only 01 ran `end` to the NEXT header
+                    # and swept the 00 03 00 02 trailer into the body, where the
+                    # 02 decoded as a spurious 、 (the "！発射用意だ！！、" class)
                     end, terminated = j, True
                     break
                 if is_header(j):
