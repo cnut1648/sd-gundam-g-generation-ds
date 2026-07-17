@@ -63,9 +63,10 @@
 .
 ├── 0098 - SD Gundam G Generation DS (Japan).nds   # 日版原始 ROM（输入）
 ├── sd-gundam-g-generation-zh.nds                  # 汉化 ROM（构建输出）
-├── build/          # 构建入口（build.py）—— 一条命令、单次流程
-├── data/           # 全部汉化与构建数据（名称、对话、补丁、字库……）
-├── utils/          # 辅助库（文本编解码、关卡构建、arm9 布局、ROM 读写）
+├── build/          # 构建入口（build.py）、游戏数据提取器（extract_data_from_game.py）
+├── data/           # data/jp = 提取的日文原文（机器生成）；data/zh = 汉化映射（人工维护）
+│                   # 另含字库（charmap/font）、代码补丁、manifest
+├── utils/          # 辅助库（extract/ 提取包、文本编解码、关卡构建、arm9 布局、ROM 读写）
 ├── test/           # 完整测试套件：静态门禁、模拟器实机、截图、VLM 判图
 ├── docs/           # 文档：构建指南、数据格式、地址表、经验教训
 ├── figs/           # README 用截图
@@ -121,9 +122,9 @@ python3 -m venv .venv
 </div>
 
 三处改动均以数据形式收录并有文档记载：索敌次数见
-`data/patches/code_patches.json`，永恒号搭载数见 `data/names/units.json`
+`data/patches/code_patches.json`，永恒号搭载数见 `data/zh/units.json`
 （`carrier_capacity` 字段），倒X等级门槛见
-`data/dialogue/stages/_STG10SP.json`（`kind: "gameplay"` 的字节改动，
+`data/zh/stages/_STG10SP.json`（`kind: "gameplay"` 的字节改动，
 偏移 `0xcecd`：`PUSH #30`→`PUSH #0`）；详情见 `docs/GAME_NOTES.md` 与
 `docs/ROM_STRUCTURE.md`。
 

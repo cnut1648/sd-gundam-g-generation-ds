@@ -123,11 +123,12 @@ Additional rules:
 
 ## 6. What "translated" means for a stage file
 
-Per stage, the translation data (see `data/dialogue/stages/*.json`) carries each reachable
-display block keyed by its JP identity (offset in the JP file + JP text), the authored ZH,
-and the encoded payload. The builder re-encodes, grows, relocates, aligns, and verifies per
-§4. Blocks intentionally left JP (credits, tutorial headers, onomatopoeia, non-reachable
-template text) are explicit entries in an allowlist, not silent gaps.
+Per stage, the translation data (see `data/zh/stages/*.json`) carries each reachable
+display block keyed by its JP identity (its `jp_offset` in the JP file — the JP block text,
+play order and speaker live in `data/jp/stages/<stage>.json` at the same offset), the
+authored ZH, and the encoded payload. The builder re-encodes, grows, relocates, aligns, and
+verifies per §4. Blocks intentionally left JP (credits, tutorial headers, onomatopoeia,
+non-reachable template text) are explicit entries in an allowlist, not silent gaps.
 
 A note on non-reachable text: the stage files contain a large shared "thanks-for-playing /
 extra mode" template block appended to many files plus dictionary-compressed blocks that the

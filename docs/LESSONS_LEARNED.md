@@ -629,7 +629,7 @@ oracle mirrors the +3 anchor so screenshots and oracle renders agree by construc
 ### G5. Growing pooled strings: ledger-mediated relocation, three arenas
 Order: ui-bank heap-safe gaps → resident-cave zero runs → ledger-vacated spans
 (old homes of relocated strings; provably dead = no table ptr and no arm9 word
-references them). Everything goes through `data/arenas/relocation_ledger.json`;
+references them). Everything goes through `data/zh/placements/relocation_ledger.json`;
 allocation marks must be written ONLY on committed success (a reject after alloc
 must not leak the span), and re-runs must be idempotent — the one double-allocation
 (人类的梦想 twice) came from exactly that leak and scrambled two records.
@@ -637,10 +637,11 @@ Exact-span in-place rewrites are legal when the old string already fills the spa
 with no in-record NUL (the terminator is the next record's framing).
 
 ### G6. Annotations must be decoded per-surface
-The `zh` fields of `data/names/*.json` mirror pool bytes. Syncing them with the
-STAGE decoder wrote 来 for 0xD9 (！) and メ for 0x7C (…) across ~150 records —
-self-inflicted "garble" that then misled audits. Any annotation sync must use the
-trampoline decoder (renderB for one-byte, ZH-band for 2-byte) for pool surfaces.
+The `zh` fields of `data/zh/units.json` / `characters.json` mirror pool bytes.
+Syncing them with the STAGE decoder wrote 来 for 0xD9 (！) and メ for 0x7C (…)
+across ~150 records — self-inflicted "garble" that then misled audits. Any
+annotation sync must use the trampoline decoder (renderB for one-byte, ZH-band
+for 2-byte) for pool surfaces.
 `render-vs-annotation` diffing (trampoline-decode every referenced string, compare
 to its zh) is the cheap detector for the whole class — keep it zero.
 
@@ -680,5 +681,6 @@ glyph class); (2) NEVER narrow digits/`+`/`%` (G4 sunk-digit class — keep them
 ZH-band atlas); (3) never let a name fully revert to its JP bytes (that reclassifies
 a translated name as JP and trips `unit_weapon_names`/`id_command_names`); (4) build
 the JP↔ZH bytemap from an all-WIDE ZH ROM, else a partially-narrowed build pollutes
-the keys. Verify with 30/30 gates + coverage (0) + a live before/after oracle sheet
-(the E-band letter identities lean on the VLM `renderb_ident` map — eyeball them).
+the keys. Verify with 32/32 gates + coverage (0) + a live before/after oracle sheet
+(the E-band letter identities lean on the VLM-identified `kind: "ident"` entries in
+`data/renderb_charset.json` — eyeball them).

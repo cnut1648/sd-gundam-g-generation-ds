@@ -2114,6 +2114,57 @@ def gate_offline_coverage(rep, ctx):
                 f"{tail}; all findings allowlisted ({len(findings)})")
 
 
+def gate_extraction_fresh(rep, ctx):
+    """The committed JP ground-truth dump (data/jp/) must equal a FRESH run of
+    the canonical extractor over the pinned JP source ROM — a stale dump would
+    silently desynchronize every consumer (translation keys, the review guide,
+    the reconciliation contract).  Regenerate + commit after extractor changes:
+    `python build/extract_data_from_game.py`."""
+    import subprocess
+    repo = Path(__file__).resolve().parent.parent
+    jp_rom = ctx.get("jp_rom_path")
+    if not jp_rom or not Path(jp_rom).exists():
+        rep.add("extraction_fresh", False, "JP source ROM not available")
+        return
+    r = subprocess.run(
+        [sys.executable, str(repo / "build/extract_data_from_game.py"),
+         "--rom", str(jp_rom), "--check"],
+        capture_output=True, text=True)
+    if r.returncode == 0:
+        rep.add("extraction_fresh", True,
+                "data/jp equals a fresh extraction of the JP ROM")
+    else:
+        tail = [ln for ln in r.stdout.splitlines() if ln.strip()][-1:]
+        rep.add("extraction_fresh", False,
+                f"data/jp is stale vs the extractor: {tail[0] if tail else r.stderr[-160:]}")
+
+
+def gate_zh_reconciliation(rep, ctx):
+    """The two-way completeness contract: every committed translation key in
+    data/zh must map onto an extracted JP record (nothing lost), and the
+    extractor's stage-block universe must cover this suite's own independent
+    JP-ROM scan (nothing missed).  A failure means the extraction algorithm
+    has a gap — fix the extractor, never drop the record."""
+    import subprocess
+    repo = Path(__file__).resolve().parent.parent
+    jp_rom = ctx.get("jp_rom_path")
+    if not jp_rom or not Path(jp_rom).exists():
+        rep.add("zh_reconciliation", False, "JP source ROM not available")
+        return
+    r = subprocess.run(
+        [sys.executable, str(repo / "build/reconcile_extraction.py"),
+         "--rom", str(jp_rom)],
+        capture_output=True, text=True)
+    if r.returncode == 0:
+        cats = sum(1 for ln in r.stdout.splitlines() if ln.lstrip().startswith("OK"))
+        rep.add("zh_reconciliation", True,
+                f"all {cats} categories reconcile (zh keys ⊆ extracted universe ⊇ gate scan)")
+    else:
+        fails = [ln.strip() for ln in r.stdout.splitlines() if ln.lstrip().startswith("FAIL")]
+        rep.add("zh_reconciliation", False,
+                fails[0] if fails else r.stderr[-160:])
+
+
 # =============================================================================
 # runner
 # =============================================================================
@@ -2156,6 +2207,7 @@ def build_context(rom_path: Path, jp_path: Path):
         "raw": raw, "cand": cand, "jp": jp, "a9": a9, "jp_a9": jp_a9,
         "cand_file": cand_file, "jp_file": jp_file,
         "rom_path": Path(rom_path),
+        "jp_rom_path": Path(jp_path),
         "stg_names": stage_files(jp),          # the JP file set is the authoritative list
         "cm": Charmap(),
         "atlas_slots": _atlas_slot_count(a9),
@@ -2307,6 +2359,8 @@ GATES = [
     gate_cutin_offset_table,
     gate_idcmd_detail_integrity,
     gate_offline_coverage,
+    gate_extraction_fresh,
+    gate_zh_reconciliation,
 ]
 RATCHET_GATES = {gate_translation_coverage, gate_unit_weapon_names, gate_id_command_names,
                  gate_bank_onebyte_regression}

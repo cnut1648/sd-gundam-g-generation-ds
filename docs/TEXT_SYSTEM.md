@@ -89,12 +89,12 @@ reproduction + shipped-byte analysis; enforced by `bank_onebyte_regression` and
 
 | surface | path | one-byte codes |
 |---|---|---|
-| stage dialogue (`data/dialogue/stages/*`) | renderA-direct | safe (atlas low slots) |
-| barks (`data/files/barks/*`) | renderA-direct | safe |
+| stage dialogue (`data/zh/stages/*`) | renderA-direct | safe (atlas low slots) |
+| barks (`data/zh/files/barks/*`) | renderA-direct | safe |
 | cut-ins (`1dc.bin`) | renderA-direct | safe |
 | library/hangar banks (`324/c4b/31e/b6e/b6f`) | renderA-direct | safe |
-| briefing blobs (`data/arenas/briefing_blobs.json`) | renderA-direct | safe (0x09 '…' padding is canonical) |
-| idcmd detail pool (`data/arenas/idcmd_detail_pool.json`) | renderA-direct | safe |
+| briefing blobs (`data/zh/placements/briefing_blobs.json`) | renderA-direct | safe (0x09 '…' padding is canonical) |
+| idcmd detail pool (`data/zh/placements/idcmd_detail_pool.json`) | renderA-direct | safe |
 | event text blocks | script/pointer records | n/a (text fields are annotations) |
 | battle effect banks (`1da/1db/1df/1e0`) | **trampoline** | forbidden unless in the record's JP span (zh_hex required by the build) |
 | resident caves / ui names / battle name pool / post dict labels | **trampoline** | forbidden unless in the record's HEAD payload |
