@@ -198,25 +198,27 @@ def _offtab_records(rom: GameROM, offtab: int, fname: str, count_hint: int = 512
     ending at/before the file size).
 
     Several tables carry a non-offset word at index 0 (1df/1e0/b6f: the
-    monotonic offset run starts at index 1 — the same +1 the game's own record
-    readers use, cf. the ability drawer's offA[fam+1]/offA[fam+2]); the part
-    NAME table starts at index 0.  Auto-detect: an index-0 word larger than
-    index 1 is not the first record offset."""
+    offset run starts at index 1 — the same +1 the game's own record readers
+    use, cf. the ability drawer's offA[fam+1]/offA[fam+2]); the part NAME
+    table starts at index 0.  Auto-detect: an index-0 word larger than index 1
+    is not the first record offset.  The run is MOSTLY ascending but individual
+    entries may be re-aimed anywhere in the file (a grown record relocated to
+    an appended copy), so the walk stops only at the first out-of-file value;
+    a record whose successor offset is not greater is bounded by EOF (the
+    reader splits on 00 03 segments, mirroring the game's drawer)."""
     data = rom.file(fname)
     first = 1 if u32(rom.arm9, offtab) > u32(rom.arm9, offtab + 4) else 0
     vals = []
-    prev = -1
     for k in range(first, count_hint):
         v = u32(rom.arm9, offtab + 4 * k)
-        if v < prev or v > len(data):
+        if v > len(data):
             break
         vals.append(v)
-        prev = v
     recs = []
     for k in range(len(vals) - 1):
         o0, o1 = vals[k], vals[k + 1]
         if o1 <= o0:
-            continue
+            o1 = len(data)
         recs.append((k, o0, o1))
     return data, recs
 
