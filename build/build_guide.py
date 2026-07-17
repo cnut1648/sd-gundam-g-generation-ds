@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import json
 import struct
 import sys
 from pathlib import Path
@@ -785,14 +786,31 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                                        zexp=zh.expand_sys)})
         uentry = {"utid": utid, "nm": name_fld(j_name, z_name),
                   "weapons": weapons, "specials": specials}
-        # weapon-bearing unit names render on the TRAMPOLINE everywhere
-        # (roster AND battle HUD — the JP originals are renderB-coded, so no
-        # renderA-direct path can exist for them); only the weaponless
-        # identity records (pilots/factions/roles, utids ~610-944) are drawn
-        # renderA-direct (LESSONS A12) and get the battle-render review row.
-        if not z.get("weapons"):
-            uentry["nmA"] = name_fld_battle(j_name, z_name)
+        # ALL master-table unit names (weapon-bearing units AND the weaponless
+        # warships/objects, utids <= 675) render on the TRAMPOLINE: their JP
+        # originals are renderB-coded (a stage-surface decode yields kana
+        # gibberish — マザー・バンガード -> ナウ<連ダマろ<ジ), proving no
+        # renderA path exists.  The renderA-direct identity records of
+        # LESSONS A12 (pilots/factions, utids ~676-944) alias the char-DB and
+        # are outside the units walker, so NO unit card gets a battle row.
         units.append(uentry)
+    # group the master table's development triples: consecutive utids with
+    # identical name/weapons/specials are ONE unit shown three times in-game
+    # (fam = (utid-1)//3) — collapse them into a single card "#a-b"
+    grouped = []
+    for u in units:
+        key = (json.dumps(u["nm"], sort_keys=True),
+               json.dumps(u["weapons"], sort_keys=True),
+               json.dumps(u["specials"], sort_keys=True))
+        if grouped and grouped[-1][1] == key and u["utid"] == grouped[-1][2] + 1:
+            grouped[-1][2] = u["utid"]
+        else:
+            grouped.append([u, key, u["utid"]])
+    units = []
+    for u, _k, last in grouped:
+        if last != u["utid"]:
+            u["utid"] = f"{u['utid']}-{last}"
+        units.append(u)
     data["units"] = units
 
     # ---- briefings (作战内容), per stage descriptor, into the Route tab -------
@@ -1103,7 +1121,9 @@ function buildNpc(bd,c){bd.appendChild(nameHeader(c.nm));}
 function buildUnit(bd,u){
   bd.appendChild(nameHeader(u.nm,u.nmA));
   if(u.weapons&&u.weapons.length){var s=sect(bd,'\u6b66\u5668 Weapons');u.weapons.forEach(function(w){s.appendChild(field(w,1,2));});}
-  if(u.specials&&u.specials.length){var s2=sect(bd,'\u7279\u6b8a\u80fd\u529b / \u9632\u5fa1');u.specials.forEach(function(sp){s2.appendChild(field(sp,1,2,sp.kind==='defense'?'\u9632\u5fa1':'\u80fd\u529b'));});}
+  // long special/defense strings stack (text above, scrollable bitmap below):
+  // side-by-side layout starved the text column into one-char-per-line wraps
+  if(u.specials&&u.specials.length){var s2=sect(bd,'\u7279\u6b8a\u80fd\u529b / \u9632\u5fa1');u.specials.forEach(function(sp){s2.appendChild(field(sp,1,2,sp.kind==='defense'?'\u9632\u5fa1':'\u80fd\u529b',null,(sp.zt||'').length>8||(sp.jt||'').length>10));});}
 }
 // a cut-in / effect field is "empty" if its ZH is blank or just 无/なし (no real quote)
 function isNone(f){if(!f)return true;var z=(f.zt||'').replace(/[\u25bc\u3002\u00b7\s\u3000]/g,'');return z===''||z==='\u65e0'||z==='\u306a\u3057';}
