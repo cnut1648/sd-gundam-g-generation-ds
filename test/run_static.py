@@ -1913,16 +1913,16 @@ def gate_bank_onebyte_regression(rep, ctx, update=False):
     whose one-byte inventory equals the JP/original-patch proven bytes)."""
     repo = Path(__file__).resolve().parent.parent
     surfaces = {
-        "data/arenas/battle_name_pool.json": ("entries", "payload_hex", "offset"),
-        "data/arenas/briefing_blobs.json": ("entries", "payload_hex", "offset"),
-        "data/arenas/event_text_blocks.json": ("entries", "payload_hex", "offset"),
-        "data/arenas/idcmd_detail_pool.json": ("entries", "payload_hex", "offset"),
-        "data/arenas/resident_caves.json": ("entries", "payload_hex", "offset"),
-        "data/arenas/ui_names_bank.json": ("entries", "payload_hex", "offset"),
-        "data/files/battle/ability_cards.json": ("edits", "zh_hex", "offset"),
-        "data/files/battle/command_effects.json": ("edits", "zh_hex", "offset"),
-        "data/files/battle/special_abilities.json": ("edits", "zh_hex", "offset"),
-        "data/files/battle/special_defenses.json": ("edits", "zh_hex", "offset"),
+        "data/zh/placements/battle_name_pool.json": ("entries", "payload_hex", "offset"),
+        "data/zh/placements/briefing_blobs.json": ("entries", "payload_hex", "offset"),
+        "data/zh/event_text.json": ("entries", "payload_hex", "offset"),
+        "data/zh/placements/idcmd_detail_pool.json": ("entries", "payload_hex", "offset"),
+        "data/zh/placements/resident_caves.json": ("entries", "payload_hex", "offset"),
+        "data/zh/placements/ui_names_bank.json": ("entries", "payload_hex", "offset"),
+        "data/zh/files/battle/ability_cards.json": ("edits", "zh_hex", "offset"),
+        "data/zh/files/battle/command_effects.json": ("edits", "zh_hex", "offset"),
+        "data/zh/files/battle/special_abilities.json": ("edits", "zh_hex", "offset"),
+        "data/zh/files/battle/special_defenses.json": ("edits", "zh_hex", "offset"),
     }
 
     def one_bytes(hexs: str) -> list[int]:
@@ -1980,11 +1980,9 @@ def gate_cutin_offset_table(rep, ctx):
     character's famous quote on every cut-in.)"""
     az = ctx["a9"]
     bank = ctx["cand_file"]("1dc.bin")
-    spec = json.loads((Path(__file__).resolve().parent.parent /
-                       "data/ui/cutin_quote_offsets.json").read_text())
-    base = int(spec["table"]["file_offset"], 16)
-    count = spec["table"]["count"]
-    szw_off = int(spec["resource_size_word"]["file_offset"], 16)
+    # independent copies of the cut-in table geometry (gates never trust
+    # build inputs): u32[943] record-offset table + resource-size word
+    base, count, szw_off = 0x16EEA8, 943, 0x16C444
     starts, i = [0], 0
     TERM = b"\x00\x03\x00\x01"
     while True:
@@ -2175,8 +2173,7 @@ def gate_pool_trampoline_tokens(rep, ctx):
     (One-byte bytes are covered by bank_onebyte_regression.)"""
     cm = ctx["cm"]
     refs = []
-    for rel in ("names/weapons.json", "names/units.json", "names/pilots.json",
-                "names/abilities.json", "names/id_commands.json"):
+    for rel in ("zh/units.json", "zh/characters.json", "zh/ui.json"):
         p = REPO / "data" / rel
         if not p.exists():
             continue

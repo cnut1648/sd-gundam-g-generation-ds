@@ -1,0 +1,2937 @@
+{
+ "_about": "UI translation mapping. labels/abilities: every literal pointer word in `sites` is re-aimed from old_ptr (asserted against the JP image) to ptr; keys pair with data/jp/ui.json pointer_strings. dictionary: the 0x12D770 text-macro store — offset_entries re-aim table slots, string_edits rewrite entry strings in place (payload_hex canonical). resource_offsets: offset words tied to rebuilt NitroFS banks.",
+ "labels": [
+  {
+   "zh": "射击",
+   "old_ptr": "0x214B1C8",
+   "ptr": "0x218F66D",
+   "sites": [
+    "0x33C38",
+    "0x3FC30",
+    "0x54D1C"
+   ]
+  },
+  {
+   "zh": "回避",
+   "old_ptr": "0x214B1CB",
+   "ptr": "0x218A469",
+   "sites": [
+    "0x33C48",
+    "0x3FC38",
+    "0x54D24"
+   ]
+  },
+  {
+   "zh": "等级{01}{01}习得",
+   "old_ptr": "0x214AE2C",
+   "ptr": "0x218F80F",
+   "sites": [
+    "0x37A20",
+    "0x3EC40",
+    "0x3FC50",
+    "0x3FF38",
+    "0x489FC",
+    "0x54240",
+    "0x544C0",
+    "0x55888",
+    "0x56940",
+    "0x56B74"
+   ]
+  },
+  {
+   "zh": "移动",
+   "old_ptr": "0x214B1EC",
+   "ptr": "0x214BD91",
+   "sites": [
+    "0x38E24",
+    "0x1B50FC",
+    "0x1B5144"
+   ]
+  },
+  {
+   "zh": "运动",
+   "old_ptr": "0x214B1E6",
+   "ptr": "0x214BD8C",
+   "sites": [
+    "0x38E2C",
+    "0x1B50F4",
+    "0x1B513C"
+   ]
+  },
+  {
+   "zh": "近接",
+   "old_ptr": "0x214B1C5",
+   "ptr": "0x218A464",
+   "sites": [
+    "0x3FC34",
+    "0x54D20"
+   ]
+  },
+  {
+   "zh": "反应",
+   "old_ptr": "0x214B1CE",
+   "ptr": "0x232B33B",
+   "sites": [
+    "0x3FC3C"
+   ]
+  },
+  {
+   "zh": "指挥",
+   "old_ptr": "0x214B1DC",
+   "ptr": "0x232B340",
+   "sites": [
+    "0x3FC40"
+   ]
+  },
+  {
+   "zh": "无ID指令",
+   "old_ptr": "0x214AE40",
+   "ptr": "0x218F672",
+   "sites": [
+    "0x3FF30"
+   ]
+  },
+  {
+   "zh": "飞行",
+   "old_ptr": "0x214B202",
+   "ptr": "0x218A46E",
+   "sites": [
+    "0x1B3C58",
+    "0x1B4F9C",
+    "0x1B50B8",
+    "0x1B5118",
+    "0x1B516C"
+   ]
+  },
+  {
+   "zh": "女性儿童",
+   "old_ptr": "0x214AED8",
+   "ptr": "0x214BD82",
+   "sites": [
+    "0x1B50DC"
+   ]
+  },
+  {
+   "zh": "普通{01}",
+   "old_ptr": "0x214ACE6",
+   "ptr": "0x218C129",
+   "sites": [
+    "0x1B511C",
+    "0x1B5188"
+   ]
+  },
+  {
+   "zh": "光束S",
+   "old_ptr": "0x214ACEB",
+   "ptr": "0x218EFF0",
+   "sites": [
+    "0x1B5120",
+    "0x1B518C"
+   ]
+  },
+  {
+   "zh": "光束[",
+   "old_ptr": "0x214ACEF",
+   "ptr": "0x218A52B",
+   "sites": [
+    "0x1B5124",
+    "0x1B5190"
+   ]
+  }
+ ],
+ "abilities": [
+  {
+   "zh": "阿·巴瓦·库",
+   "old_ptr": "0x20B91F9",
+   "ptr": "0x218A3EF",
+   "sites": [
+    "0xE6D80"
+   ]
+  },
+  {
+   "zh": "基地",
+   "old_ptr": "0x20B9225",
+   "ptr": "0x232878F",
+   "sites": [
+    "0xE6E20"
+   ]
+  },
+  {
+   "zh": "全得",
+   "old_ptr": "0x20B9254",
+   "ptr": "0x218A766",
+   "sites": [
+    "0xE6EC0"
+   ]
+  },
+  {
+   "zh": "基地",
+   "old_ptr": "0x20B929A",
+   "ptr": "0x23290B5",
+   "sites": [
+    "0xE6FD0"
+   ]
+  },
+  {
+   "zh": "绿洲",
+   "old_ptr": "0x20B92CC",
+   "ptr": "0x218A3FC",
+   "sites": [
+    "0xE7070"
+   ]
+  },
+  {
+   "zh": "大炮",
+   "old_ptr": "0x20B92E8",
+   "ptr": "0x218A401",
+   "sites": [
+    "0xE70E0"
+   ]
+  },
+  {
+   "zh": "天秤座",
+   "old_ptr": "0x20B931B",
+   "ptr": "0x218A406",
+   "sites": [
+    "0xE7180"
+   ]
+  },
+  {
+   "zh": "I力场",
+   "old_ptr": "0x20B6E6A",
+   "ptr": "0x218A40D",
+   "sites": [
+    "0xE7220",
+    "0xE723C",
+    "0xE7258",
+    "0xE72C8",
+    "0xE72E4",
+    "0xE7300",
+    "0xE746C",
+    "0xE7488",
+    "0xE74A4",
+    "0xE7568",
+    "0xE7584",
+    "0xE75A0",
+    "0xE7808",
+    "0xE7824",
+    "0xE7840",
+    "0xE8720",
+    "0xE873C",
+    "0xE8758",
+    "0xE896C",
+    "0xE8988",
+    "0xE89A4",
+    "0xE8F00",
+    "0xE8F1C",
+    "0xE8F38",
+    "0xE8F54",
+    "0xE8F70",
+    "0xE8F8C",
+    "0xE9344",
+    "0xE9360",
+    "0xE937C",
+    "0xE9398",
+    "0xE93B4",
+    "0xE93D0",
+    "0xE93EC",
+    "0xE9408",
+    "0xE9424",
+    "0xE9788",
+    "0xE97A4",
+    "0xE97C0",
+    "0xE97DC",
+    "0xE97F8",
+    "0xE9814",
+    "0xE992C",
+    "0xE9948",
+    "0xE9964",
+    "0xE99D4",
+    "0xE99F0",
+    "0xE9A0C",
+    "0xE9A7C",
+    "0xE9A98",
+    "0xE9AB4",
+    "0xE9F68",
+    "0xE9F84",
+    "0xE9FA0",
+    "0xEA358",
+    "0xEA374",
+    "0xEA390",
+    "0xEB900",
+    "0x1B60DC"
+   ]
+  },
+  {
+   "zh": "月光蝶",
+   "old_ptr": "0x20B6E6E",
+   "ptr": "0x218A438",
+   "sites": [
+    "0xE7274",
+    "0xE7290",
+    "0xE72AC",
+    "0xE999C"
+   ]
+  },
+  {
+   "zh": "光之翼",
+   "old_ptr": "0x20B6E7B",
+   "ptr": "0x218EC12",
+   "sites": [
+    "0xE75BC",
+    "0xE75D8",
+    "0xE75F4",
+    "0xE91A0",
+    "0xE91BC",
+    "0xE91D8",
+    "0x1B60E8"
+   ]
+  },
+  {
+   "zh": "生体力场",
+   "old_ptr": "0x20B6E81",
+   "ptr": "0x218C0F0",
+   "sites": [
+    "0xE7664",
+    "0xE7680",
+    "0xE769C",
+    "0xE770C",
+    "0xE7728",
+    "0xE7744",
+    "0xE77B4",
+    "0xE77D0",
+    "0xE77EC",
+    "0xE857C",
+    "0xE8598",
+    "0xE85B4",
+    "0xEA6A0",
+    "0xEA6BC",
+    "0xEA6D8",
+    "0xEB3C0",
+    "0xEB3DC",
+    "0xEB3F8",
+    "0x1B60EC"
+   ]
+  },
+  {
+   "zh": "光束涂层",
+   "old_ptr": "0x20B6E86",
+   "ptr": "0x218C0F9",
+   "sites": [
+    "0xE76B8",
+    "0xE76D4",
+    "0xE76F0",
+    "0xE7AFC",
+    "0xE7B18",
+    "0xE7B34",
+    "0xEB794",
+    "0x1B60F0"
+   ]
+  },
+  {
+   "zh": "FF屏障",
+   "old_ptr": "0x20B6E8C",
+   "ptr": "0x218A419",
+   "sites": [
+    "0xE785C",
+    "0xE7878",
+    "0xE7894",
+    "0xE78B0",
+    "0xE78CC",
+    "0xE78E8",
+    "0x1B60F4"
+   ]
+  },
+  {
+   "zh": "相位转移装甲",
+   "old_ptr": "0x20B6E94",
+   "ptr": "0x2190456",
+   "sites": [
+    "0xE7A54",
+    "0xE7A70",
+    "0xE7A8C",
+    "0xE7C4C",
+    "0xE7C68",
+    "0xE7C84",
+    "0xE968C",
+    "0xE96A8",
+    "0xE96C4",
+    "0xEA5A4",
+    "0xEA5C0",
+    "0xEA5DC",
+    "0xEA5F8",
+    "0xEA614",
+    "0xEA630",
+    "0xEA64C",
+    "0xEA668",
+    "0xEA684",
+    "0xEA6F4",
+    "0xEA710",
+    "0xEA72C",
+    "0xEACDC",
+    "0xEACF8",
+    "0xEAD14",
+    "0x1B60F8"
+   ]
+  },
+  {
+   "zh": "TP装甲",
+   "old_ptr": "0x20B6E9B",
+   "ptr": "0x218C10B",
+   "sites": [
+    "0xE7FE8",
+    "0xE8004",
+    "0xE8020",
+    "0x1B60FC"
+   ]
+  },
+  {
+   "zh": "ABC披风",
+   "old_ptr": "0x20B6EA4",
+   "ptr": "0x218C9B8",
+   "sites": [
+    "0xE8774",
+    "0xE8790",
+    "0xE87AC",
+    "0xE881C",
+    "0xE8838",
+    "0xE8854",
+    "0xE88C4",
+    "0xE88E0",
+    "0xE88FC",
+    "0xE8918",
+    "0xE8934",
+    "0xE8950",
+    "0x1B6100"
+   ]
+  },
+  {
+   "zh": "分身",
+   "old_ptr": "0x20B6EAE",
+   "ptr": "0x218A422",
+   "sites": [
+    "0xE87E4",
+    "0xEA748",
+    "0xEA764",
+    "0xEA780"
+   ]
+  },
+  {
+   "zh": "分身·神之影",
+   "old_ptr": "0x20B6EB2",
+   "ptr": "0x218A427",
+   "sites": [
+    "0xE8DB0",
+    "0xE8DCC",
+    "0xE8DE8",
+    "0xE8E58",
+    "0xE8E74",
+    "0xE8E90",
+    "0x1B6108"
+   ]
+  },
+  {
+   "zh": "DG细胞",
+   "old_ptr": "0x20B6EC0",
+   "ptr": "0x218A232",
+   "sites": [
+    "0xE9BCC",
+    "0xE9BE8",
+    "0xE9C04",
+    "0x1B610C"
+   ]
+  },
+  {
+   "zh": "行星防御器",
+   "old_ptr": "0x20B6EC5",
+   "ptr": "0x218C9C3",
+   "sites": [
+    "0xEA4FC",
+    "0xEA518",
+    "0xEA534",
+    "0x1B6110"
+   ]
+  },
+  {
+   "zh": "TP装甲／G装甲",
+   "old_ptr": "0x20B6ECF",
+   "ptr": "0x218A43F",
+   "sites": [
+    "0xEA550",
+    "0xEA56C",
+    "0xEA588",
+    "0x1B6114"
+   ]
+  },
+  {
+   "zh": "TP装甲",
+   "old_ptr": "0x20B6E9B",
+   "ptr": "0x218C6C0",
+   "sites": [
+    "0xEAD84",
+    "0xEADA0",
+    "0xEADBC"
+   ]
+  },
+  {
+   "zh": "雷尔姆·D",
+   "old_ptr": "0x20B6EE7",
+   "ptr": "0x218A459",
+   "sites": [
+    "0xEB078",
+    "0xEB094",
+    "0xEB0B0",
+    "0xEB0CC",
+    "0xEB0E8",
+    "0xEB104",
+    "0xEB120",
+    "0xEB13C",
+    "0xEB158",
+    "0xEB174",
+    "0xEB190",
+    "0xEB1AC",
+    "0xEB1C8",
+    "0xEB1E4",
+    "0xEB200",
+    "0xEB21C",
+    "0xEB238",
+    "0xEB254",
+    "0xEB270",
+    "0xEB28C",
+    "0xEB2A8",
+    "0xEB2C4",
+    "0xEB2E0",
+    "0xEB2FC",
+    "0x1B611C"
+   ]
+  },
+  {
+   "zh": "层压装甲",
+   "old_ptr": "0x20B6EED",
+   "ptr": "0x218C116",
+   "sites": [
+    "0xEB6D0",
+    "0xEB6EC",
+    "0xEB938",
+    "0x1B6120"
+   ]
+  },
+  {
+   "zh": "间接命中加成",
+   "old_ptr": "0x20B9326",
+   "ptr": "0x218F660",
+   "sites": [
+    "0xFC6A8",
+    "0xFC708",
+    "0xFD368",
+    "0xFD3C8",
+    "0xFD448",
+    "0xFD4A8",
+    "0xFD9A8",
+    "0xFF768"
+   ]
+  },
+  {
+   "zh": "NT等级3",
+   "old_ptr": "0x20B932D",
+   "ptr": "0x2190479",
+   "sites": [
+    "0xFC7C8",
+    "0xFC828",
+    "0xFE888",
+    "0x100E48",
+    "0x1013A8",
+    "0x101748",
+    "0x104828"
+   ]
+  },
+  {
+   "zh": "NT等级5",
+   "old_ptr": "0x20B9333",
+   "ptr": "0x219048F",
+   "sites": [
+    "0xFC888",
+    "0xFCD88",
+    "0xFCF48",
+    "0xFD428",
+    "0xFD488",
+    "0xFD788",
+    "0xFD7E8",
+    "0xFEE08",
+    "0xFFA08",
+    "0x100508",
+    "0x100568",
+    "0x1005C8",
+    "0x101628",
+    "0x103CC8",
+    "0x103D28",
+    "0x1043E8"
+   ]
+  },
+  {
+   "zh": "调整者等级5",
+   "old_ptr": "0x20B933A",
+   "ptr": "0x21904F5",
+   "sites": [
+    "0xFC9A8",
+    "0xFCA08",
+    "0xFD9C8",
+    "0xFDA28",
+    "0xFDAE8",
+    "0xFDB48",
+    "0x101C88",
+    "0x101CE8"
+   ]
+  },
+  {
+   "zh": "S{SLOT:235}{SLOT:235}D觉醒",
+   "old_ptr": "0x20B933F",
+   "ptr": "0x218F6C3",
+   "sites": [
+    "0xFC9C8",
+    "0xFD4E8",
+    "0xFD9E8",
+    "0xFDA48",
+    "0x101488",
+    "0x101CC8"
+   ]
+  },
+  {
+   "zh": "领导力",
+   "old_ptr": "0x20B9347",
+   "ptr": "0x218F81A",
+   "sites": [
+    "0xFCB28",
+    "0xFCB88",
+    "0xFCD68",
+    "0xFCEA8",
+    "0xFE208",
+    "0xFE388",
+    "0xFE3E8",
+    "0xFE448",
+    "0xFE4A8",
+    "0xFE5C8",
+    "0xFE628",
+    "0xFE868",
+    "0xFE8C8",
+    "0xFE928",
+    "0xFE988",
+    "0xFE9E8",
+    "0xFEA48",
+    "0xFECE8",
+    "0xFEE68",
+    "0xFEEC8",
+    "0xFEF28",
+    "0xFEF88",
+    "0xFEFE8",
+    "0xFFB88",
+    "0xFFFA8",
+    "0x100008",
+    "0x100308",
+    "0x1003C8",
+    "0x100488",
+    "0x1004E8",
+    "0x100548",
+    "0x1005A8",
+    "0x100968",
+    "0x101388",
+    "0x1017A8",
+    "0x103D88",
+    "0x103E48",
+    "0x104328",
+    "0x104688",
+    "0x1047A8",
+    "0x104808",
+    "0x104B08"
+   ]
+  },
+  {
+   "zh": "近接加成",
+   "old_ptr": "0x20B9355",
+   "ptr": "0x218F6CE",
+   "sites": [
+    "0xFCC48",
+    "0xFCCA8",
+    "0xFD7A8",
+    "0xFD808",
+    "0xFE688",
+    "0xFE6E8",
+    "0xFE748",
+    "0xFF048",
+    "0xFF0A8",
+    "0xFFBA8",
+    "0x1001E8",
+    "0x100608",
+    "0x100688",
+    "0x1044A8",
+    "0x104528",
+    "0x104588",
+    "0x1061E8"
+   ]
+  },
+  {
+   "zh": "NT等级4",
+   "old_ptr": "0x20B935A",
+   "ptr": "0x2190484",
+   "sites": [
+    "0xFCD08",
+    "0xFD128",
+    "0xFD668",
+    "0xFD6C8",
+    "0xFD728",
+    "0xFDCC8",
+    "0xFDD28",
+    "0xFE8E8",
+    "0xFE948",
+    "0xFE9A8",
+    "0xFEA08",
+    "0xFEA68",
+    "0xFED48",
+    "0xFEDA8",
+    "0xFF168",
+    "0xFF408",
+    "0xFFBE8",
+    "0x1002A8",
+    "0x100328",
+    "0x100368",
+    "0x1003E8",
+    "0x100428",
+    "0x1004A8",
+    "0x1016E8",
+    "0x103C68",
+    "0x104348",
+    "0x104868"
+   ]
+  },
+  {
+   "zh": "精神感应共振",
+   "old_ptr": "0x20B9361",
+   "ptr": "0x218F6D7",
+   "sites": [
+    "0xFCDA8",
+    "0xFD4C8",
+    "0xFF7C8",
+    "0xFF828"
+   ]
+  },
+  {
+   "zh": "伤害耐性",
+   "old_ptr": "0x20B9368",
+   "ptr": "0x218F615",
+   "sites": [
+    "0xFCE88",
+    "0xFD0C8",
+    "0xFE0E8",
+    "0xFE168",
+    "0xFE508",
+    "0xFE568",
+    "0xFE608",
+    "0xFE668",
+    "0xFE6A8",
+    "0xFE708",
+    "0xFED08",
+    "0xFEF48",
+    "0xFEFA8",
+    "0xFF008",
+    "0xFF068",
+    "0xFF0C8",
+    "0xFF548",
+    "0xFF5A8",
+    "0xFFCC8",
+    "0xFFD28",
+    "0xFFD88",
+    "0xFFDE8",
+    "0xFFE48",
+    "0xFFEA8",
+    "0x1001A8",
+    "0x100BC8",
+    "0x101328",
+    "0x101928",
+    "0x1019A8",
+    "0x1046C8",
+    "0x104988",
+    "0x1066C8"
+   ]
+  },
+  {
+   "zh": "光之翼",
+   "old_ptr": "0x20B936F",
+   "ptr": "0x218F6E4",
+   "sites": [
+    "0xFCF68"
+   ]
+  },
+  {
+   "zh": "增强人类",
+   "old_ptr": "0x20B9382",
+   "ptr": "0x218F6EB",
+   "sites": [
+    "0xFD1E8",
+    "0xFD248",
+    "0xFD2A8",
+    "0xFD308",
+    "0xFDF68",
+    "0xFDFC8",
+    "0xFE028",
+    "0xFE088",
+    "0xFEB68",
+    "0xFEBC8",
+    "0xFEC28",
+    "0xFEC88"
+   ]
+  },
+  {
+   "zh": "击破SP全队",
+   "old_ptr": "0x20B938B",
+   "ptr": "0x2190502",
+   "sites": [
+    "0xFD548",
+    "0x101228"
+   ]
+  },
+  {
+   "zh": "超级化",
+   "old_ptr": "0x20B9394",
+   "ptr": "0x218F702",
+   "sites": [
+    "0xFD6E8",
+    "0xFD748",
+    "0xFEDC8",
+    "0x100348",
+    "0x100408",
+    "0x1004C8"
+   ]
+  },
+  {
+   "zh": "生体力场",
+   "old_ptr": "0x20B9399",
+   "ptr": "0x218F709",
+   "sites": [
+    "0xFD7C8",
+    "0xFD828",
+    "0xFEE48",
+    "0x100528",
+    "0x100588",
+    "0x1005E8"
+   ]
+  },
+  {
+   "zh": "击破SP增加",
+   "old_ptr": "0x20B939E",
+   "ptr": "0x2190511",
+   "sites": [
+    "0xFD908",
+    "0xFD968",
+    "0xFE148",
+    "0xFFCE8",
+    "0xFFD48",
+    "0xFFDA8",
+    "0xFFE08",
+    "0xFFE68",
+    "0xFFEC8",
+    "0x100188",
+    "0x100EA8",
+    "0x100FE8",
+    "0x103828",
+    "0x1039E8"
+   ]
+  },
+  {
+   "zh": "伤害耐性（强）",
+   "old_ptr": "0x20B93A5",
+   "ptr": "0x218F61E",
+   "sites": [
+    "0xFD928",
+    "0xFD988",
+    "0xFE768",
+    "0xFF328",
+    "0xFF388",
+    "0xFF3E8",
+    "0xFFBC8",
+    "0x100788",
+    "0x1007E8",
+    "0x100848",
+    "0x101AA8",
+    "0x104A88"
+   ]
+  },
+  {
+   "zh": "海盗",
+   "old_ptr": "0x20B93B0",
+   "ptr": "0x218F62B",
+   "sites": [
+    "0xFDCE8",
+    "0xFDD48",
+    "0xFE3A8",
+    "0xFE408",
+    "0xFE4C8",
+    "0xFFC08",
+    "0x100E88"
+   ]
+  },
+  {
+   "zh": "面罩展开",
+   "old_ptr": "0x20B93B3",
+   "ptr": "0x218F71E",
+   "sites": [
+    "0xFDD08",
+    "0xFDD68"
+   ]
+  },
+  {
+   "zh": "回合SP增加",
+   "old_ptr": "0x20B93C2",
+   "ptr": "0x219051E",
+   "sites": [
+    "0xFDEA8",
+    "0xFE2C8",
+    "0xFFB48",
+    "0x100728",
+    "0x100FC8",
+    "0x101CA8",
+    "0x101D08",
+    "0x103808",
+    "0x103908",
+    "0x103968",
+    "0x1039C8",
+    "0x103A48",
+    "0x103AE8",
+    "0x103B68",
+    "0x103C88",
+    "0x103CE8",
+    "0x103D48",
+    "0x104088",
+    "0x104408",
+    "0x1046A8",
+    "0x104888",
+    "0x104BE8",
+    "0x104C48"
+   ]
+  },
+  {
+   "zh": "射击加成",
+   "old_ptr": "0x20B93C9",
+   "ptr": "0x218F733",
+   "sites": [
+    "0xFDF08",
+    "0xFE288",
+    "0xFE308",
+    "0xFEE28",
+    "0x100088",
+    "0x1000E8",
+    "0x101028",
+    "0x101B08",
+    "0x101B68",
+    "0x1040E8",
+    "0x104148",
+    "0x1049E8"
+   ]
+  },
+  {
+   "zh": "强化人等级3",
+   "old_ptr": "0x20B93D2",
+   "ptr": "0x21904A7",
+   "sites": [
+    "0xFE588",
+    "0xFF648",
+    "0x1065A8"
+   ]
+  },
+  {
+   "zh": "NT等级1",
+   "old_ptr": "0x20B93D8",
+   "ptr": "0x2190463",
+   "sites": [
+    "0xFE5E8",
+    "0xFE648",
+    "0x106D88",
+    "0x106DE8"
+   ]
+  },
+  {
+   "zh": "攻击模式",
+   "old_ptr": "0x20B93DE",
+   "ptr": "0x218F73C",
+   "sites": [
+    "0xFE788"
+   ]
+  },
+  {
+   "zh": "移动力UP",
+   "old_ptr": "0x20B93E3",
+   "ptr": "0x219053A",
+   "sites": [
+    "0xFE8A8",
+    "0xFE908",
+    "0xFE968",
+    "0xFE9C8",
+    "0xFEA28",
+    "0xFEA88",
+    "0xFEE88",
+    "0xFEEE8",
+    "0xFF1C8",
+    "0xFF228",
+    "0xFF288",
+    "0xFF2E8",
+    "0xFF348",
+    "0xFF3A8"
+   ]
+  },
+  {
+   "zh": "爱之力",
+   "old_ptr": "0x20B93EB",
+   "ptr": "0x218F745",
+   "sites": [
+    "0xFEFC8",
+    "0xFF028"
+   ]
+  },
+  {
+   "zh": "NT等级2",
+   "old_ptr": "0x20B93F0",
+   "ptr": "0x219046E",
+   "sites": [
+    "0xFF108",
+    "0x101048",
+    "0x101948",
+    "0x101988",
+    "0x103DA8",
+    "0x103DE8",
+    "0x103E68"
+   ]
+  },
+  {
+   "zh": "零式系统启动",
+   "old_ptr": "0x20B93F6",
+   "ptr": "0x218F74C",
+   "sites": [
+    "0xFF268",
+    "0x100808"
+   ]
+  },
+  {
+   "zh": "强化人等级5",
+   "old_ptr": "0x20B93FD",
+   "ptr": "0x21904C1",
+   "sites": [
+    "0xFF468",
+    "0xFF4C8",
+    "0xFF528",
+    "0xFF588",
+    "0x100C68",
+    "0x100CC8",
+    "0x1037E8",
+    "0x103E88",
+    "0x104E68",
+    "0x106C08"
+   ]
+  },
+  {
+   "zh": "指挥3",
+   "old_ptr": "0x20B9375",
+   "ptr": "0x20B78A6",
+   "sites": [
+    "0xFD008",
+    "0xFF888",
+    "0xFFA68",
+    "0x100668",
+    "0x1009C8",
+    "0x100AE8",
+    "0x100B48",
+    "0x100E68",
+    "0x100F08",
+    "0x101148",
+    "0x1011A8",
+    "0x103A28",
+    "0x1042C8",
+    "0x104B68"
+   ]
+  },
+  {
+   "zh": "指挥1",
+   "old_ptr": "0x20B93BC",
+   "ptr": "0x219000C",
+   "sites": [
+    "0xFDE48",
+    "0xFFAC8",
+    "0x104C28",
+    "0x105D68",
+    "0x105F08",
+    "0x106068",
+    "0x1062A8",
+    "0x106428",
+    "0x106608",
+    "0x106728",
+    "0x1067E8",
+    "0x1068A8",
+    "0x106CC8",
+    "0x106E48",
+    "0x106EA8",
+    "0x107388",
+    "0x1073E8",
+    "0x107568"
+   ]
+  },
+  {
+   "zh": "指挥2",
+   "old_ptr": "0x20B943B",
+   "ptr": "0x20B7EE1",
+   "sites": [
+    "0x100DE8",
+    "0x101088",
+    "0x1010E8",
+    "0x101468",
+    "0x1022E8",
+    "0x103728",
+    "0x103C08",
+    "0x103E08",
+    "0x103F08",
+    "0x103F68",
+    "0x104268",
+    "0x105CA8",
+    "0x105DC8",
+    "0x105F68",
+    "0x1060C8",
+    "0x106308",
+    "0x106488",
+    "0x106668",
+    "0x106788",
+    "0x106848",
+    "0x106908",
+    "0x106D28",
+    "0x106F08",
+    "0x107448",
+    "0x1075C8"
+   ]
+  },
+  {
+   "zh": "强化人等级4",
+   "old_ptr": "0x20B9404",
+   "ptr": "0x21904B4",
+   "sites": [
+    "0xFF5E8",
+    "0xFF6A8",
+    "0x100A28",
+    "0x100A88",
+    "0x101868",
+    "0x1018C8",
+    "0x103B48",
+    "0x103BA8",
+    "0x104508",
+    "0x104568",
+    "0x106BA8",
+    "0x106C68"
+   ]
+  },
+  {
+   "zh": "回合SP全队",
+   "old_ptr": "0x20B940B",
+   "ptr": "0x219052B",
+   "sites": [
+    "0xFFA28"
+   ]
+  },
+  {
+   "zh": "东方不败",
+   "old_ptr": "0x20B9414",
+   "ptr": "0x218F772",
+   "sites": [
+    "0xFFB28"
+   ]
+  },
+  {
+   "zh": "红心之王",
+   "old_ptr": "0x20B941A",
+   "ptr": "0x218F77B",
+   "sites": [
+    "0xFFCA8",
+    "0xFFD08",
+    "0xFFD68"
+   ]
+  },
+  {
+   "zh": "明镜止水",
+   "old_ptr": "0x20B9423",
+   "ptr": "0x218F784",
+   "sites": [
+    "0xFFDC8",
+    "0xFFE28",
+    "0xFFE88"
+   ]
+  },
+  {
+   "zh": "全队回避加成",
+   "old_ptr": "0x20B9434",
+   "ptr": "0x218F78D",
+   "sites": [
+    "0x100D88",
+    "0x101208",
+    "0x101A48"
+   ]
+  },
+  {
+   "zh": "爱哭{TRUNC}",
+   "old_ptr": "0x20B9441",
+   "ptr": "0x218F79A",
+   "sites": [
+    "0x100F68"
+   ]
+  },
+  {
+   "zh": "爱哭{TRUNC}",
+   "old_ptr": "0x20B9447",
+   "ptr": "0x218F7A1",
+   "sites": [
+    "0x101008"
+   ]
+  },
+  {
+   "zh": "调整者等级4",
+   "old_ptr": "0x20B944B",
+   "ptr": "0x21904E8",
+   "sites": [
+    "0x101448",
+    "0x1014A8"
+   ]
+  },
+  {
+   "zh": "全队命中加成",
+   "old_ptr": "0x20B9450",
+   "ptr": "0x218F7B1",
+   "sites": [
+    "0x1019E8",
+    "0x103788",
+    "0x104628"
+   ]
+  },
+  {
+   "zh": "战斗力增强",
+   "old_ptr": "0x20B9457",
+   "ptr": "0x218F7BE",
+   "sites": [
+    "0x101D48",
+    "0x101E08",
+    "0x101EC8"
+   ]
+  },
+  {
+   "zh": "强化人等级2",
+   "old_ptr": "0x20B945F",
+   "ptr": "0x219049A",
+   "sites": [
+    "0x102348"
+   ]
+  },
+  {
+   "zh": "机械之子",
+   "old_ptr": "0x20B9465",
+   "ptr": "0x218F7C9",
+   "sites": [
+    "0x1023A8",
+    "0x102408",
+    "0x102468",
+    "0x1024C8",
+    "0x102528",
+    "0x102648",
+    "0x104EC8",
+    "0x104F28",
+    "0x104F88"
+   ]
+  },
+  {
+   "zh": "过载推进",
+   "old_ptr": "0x20B946D",
+   "ptr": "0x218F7D2",
+   "sites": [
+    "0x1023C8",
+    "0x102488",
+    "0x104F08"
+   ]
+  },
+  {
+   "zh": "运动预测",
+   "old_ptr": "0x20B9476",
+   "ptr": "0x218F7DB",
+   "sites": [
+    "0x102428",
+    "0x1024E8",
+    "0x102668"
+   ]
+  },
+  {
+   "zh": "共享自我",
+   "old_ptr": "0x20B947B",
+   "ptr": "0x218F7E4",
+   "sites": [
+    "0x102548",
+    "0x104EE8",
+    "0x104F48",
+    "0x104FA8"
+   ]
+  },
+  {
+   "zh": "并列预测",
+   "old_ptr": "0x20B9480",
+   "ptr": "0x218F64F",
+   "sites": [
+    "0x102568",
+    "0x104F68",
+    "0x104FC8"
+   ]
+  },
+  {
+   "zh": "绝对恶运",
+   "old_ptr": "0x20B9487",
+   "ptr": "0x218F7ED",
+   "sites": [
+    "0x104548",
+    "0x1045A8"
+   ]
+  },
+  {
+   "zh": "D{SLOT:237}细胞",
+   "old_ptr": "0x20B948C",
+   "ptr": "0x218F658",
+   "sites": [
+    "0x104A48",
+    "0x104BC8",
+    "0x106248",
+    "0x1071A8",
+    "0x107208"
+   ]
+  },
+  {
+   "zh": "调整者等级1",
+   "old_ptr": "0x20B9491",
+   "ptr": "0x21904CE",
+   "sites": [
+    "0x105EE8",
+    "0x105FA8"
+   ]
+  },
+  {
+   "zh": "调整者等级2",
+   "old_ptr": "0x20B9495",
+   "ptr": "0x21904DB",
+   "sites": [
+    "0x105F48",
+    "0x106008"
+   ]
+  },
+  {
+   "zh": "生体单元",
+   "old_ptr": "0x20B9499",
+   "ptr": "0x218F806",
+   "sites": [
+    "0x107148"
+   ]
+  }
+ ],
+ "dictionary": {
+  "offset_entries": [
+   {
+    "index": 12,
+    "offset": "0x678C",
+    "zh": "吉恩"
+   },
+   {
+    "index": 30,
+    "offset": "0x6792",
+    "zh": "联邦"
+   }
+  ],
+  "string_edits": [
+   {
+    "offset": "0x2002",
+    "zh": "伤害",
+    "payload_hex": "e8f9e988"
+   },
+   {
+    "offset": "0x2088",
+    "zh": "提坦斯",
+    "payload_hex": "e821e843e7c8"
+   },
+   {
+    "offset": "0x20E7",
+    "zh": "哈曼",
+    "payload_hex": "e7e8e874"
+   },
+   {
+    "offset": "0x214C",
+    "zh": "回合{00}",
+    "payload_hex": "8ca000"
+   },
+   {
+    "offset": "0x21B7",
+    "zh": "型{00}",
+    "payload_hex": "e97700"
+   },
+   {
+    "offset": "0x21CB",
+    "zh": "失败",
+    "payload_hex": "e2aae88f"
+   },
+   {
+    "offset": "0x222E",
+    "zh": "实行",
+    "payload_hex": "e87f9f"
+   },
+   {
+    "offset": "0x227E",
+    "zh": "机师{00}",
+    "payload_hex": "e7e4e96c00"
+   },
+   {
+    "offset": "0x22D8",
+    "zh": "确{00}",
+    "payload_hex": "e88c00"
+   },
+   {
+    "offset": "0x22F6",
+    "zh": "{SLOT:2204}多",
+    "payload_hex": "e7bce7e9"
+   },
+   {
+    "offset": "0x233A",
+    "zh": "妨碍",
+    "payload_hex": "e559e8c6"
+   },
+   {
+    "offset": "0x234B",
+    "zh": "指挥",
+    "payload_hex": "e8c0e949"
+   },
+   {
+    "offset": "0x235D",
+    "zh": "对话",
+    "payload_hex": "e7bee81f"
+   },
+   {
+    "offset": "0x2362",
+    "zh": "反击",
+    "payload_hex": "e87ce7cc"
+   },
+   {
+    "offset": "0x237F",
+    "zh": "黑历史",
+    "payload_hex": "ef3ee8fbe27f"
+   },
+   {
+    "offset": "0x23E0",
+    "zh": "危险",
+    "payload_hex": "e141e932"
+   },
+   {
+    "offset": "0x240F",
+    "zh": "系统",
+    "payload_hex": "e941e929"
+   },
+   {
+    "offset": "0x2486",
+    "zh": "强化",
+    "payload_hex": "e8ade0d9"
+   },
+   {
+    "offset": "0x24A3",
+    "zh": "现在",
+    "payload_hex": "e82fef29"
+   },
+   {
+    "offset": "0x24B0",
+    "zh": "不败",
+    "payload_hex": "e505e88f"
+   },
+   {
+    "offset": "0x24C2",
+    "zh": "状况",
+    "payload_hex": "e31ee8d0"
+   },
+   {
+    "offset": "0x24F0",
+    "zh": "情报",
+    "payload_hex": "e88be913"
+   },
+   {
+    "offset": "0x2561",
+    "zh": "反应",
+    "payload_hex": "e87ce873"
+   },
+   {
+    "offset": "0x2584",
+    "zh": "觉悟",
+    "payload_hex": "e8aee20a"
+   },
+   {
+    "offset": "0x25BF",
+    "zh": "愚{00}",
+    "payload_hex": "e1ad00"
+   },
+   {
+    "offset": "0x25E9",
+    "zh": "自然人{00}",
+    "payload_hex": "abe7efb400"
+   },
+   {
+    "offset": "0x2607",
+    "zh": "决断",
+    "payload_hex": "e8abe982"
+   },
+   {
+    "offset": "0x260C",
+    "zh": "程度",
+    "payload_hex": "e44fe46e"
+   },
+   {
+    "offset": "0x26C4",
+    "zh": "确认",
+    "payload_hex": "e88ce8a0"
+   },
+   {
+    "offset": "0x277B",
+    "zh": "忍务",
+    "payload_hex": "e4a7e94f"
+   },
+   {
+    "offset": "0x2780",
+    "zh": "问题",
+    "payload_hex": "e997ea12"
+   },
+   {
+    "offset": "0x27BF",
+    "zh": "指令",
+    "payload_hex": "e8c0e94e"
+   },
+   {
+    "offset": "0x282D",
+    "zh": "母先锋{00}{00}{00}",
+    "payload_hex": "e9d5b8e967000000"
+   },
+   {
+    "offset": "0x2872",
+    "zh": "过居",
+    "payload_hex": "ef36e17a"
+   },
+   {
+    "offset": "0x2892",
+    "zh": "目标",
+    "payload_hex": "d5e96f"
+   },
+   {
+    "offset": "0x28A3",
+    "zh": "量产",
+    "payload_hex": "e5dcec05"
+   },
+   {
+    "offset": "0x28CA",
+    "zh": "升知",
+    "payload_hex": "ed2be411"
+   },
+   {
+    "offset": "0x28CF",
+    "zh": "进路",
+    "payload_hex": "e892e8d2"
+   },
+   {
+    "offset": "0x28EE",
+    "zh": "场所{00}状态",
+    "payload_hex": "e876e2eb00e31ee994"
+   },
+   {
+    "offset": "0x2923",
+    "zh": "防卫",
+    "payload_hex": "e560e9b2"
+   },
+   {
+    "offset": "0x2997",
+    "zh": "细法",
+    "payload_hex": "eb9ae54e"
+   },
+   {
+    "offset": "0x29C3",
+    "zh": "导弹",
+    "payload_hex": "ea4be946"
+   },
+   {
+    "offset": "0x29DE",
+    "zh": "归还",
+    "payload_hex": "e947e7f7"
+   },
+   {
+    "offset": "0x29FD",
+    "zh": "离脱",
+    "payload_hex": "e901e9e5"
+   },
+   {
+    "offset": "0x2A84",
+    "zh": "试作",
+    "payload_hex": "e91de266"
+   },
+   {
+    "offset": "0x2B10",
+    "zh": "结果",
+    "payload_hex": "e868e0e2"
+   },
+   {
+    "offset": "0x2B30",
+    "zh": "立场",
+    "payload_hex": "e5cfe876"
+   },
+   {
+    "offset": "0x2B5C",
+    "zh": "记亿",
+    "payload_hex": "e996edd4"
+   },
+   {
+    "offset": "0x2BC2",
+    "zh": "要请",
+    "payload_hex": "e5b9e83a"
+   },
+   {
+    "offset": "0x2BDC",
+    "zh": "应援",
+    "payload_hex": "e873e0c1"
+   },
+   {
+    "offset": "0x2C0F",
+    "zh": "现状",
+    "payload_hex": "e82fe98b"
+   },
+   {
+    "offset": "0x2D2A",
+    "zh": "败北",
+    "payload_hex": "e88febb7"
+   },
+   {
+    "offset": "0x2D59",
+    "zh": "研级所{00}仕掛け",
+    "payload_hex": "e1e7eaeee2eb00e27ae1141f"
+   },
+   {
+    "offset": "0x2DAC",
+    "zh": "第气",
+    "payload_hex": "e3ede8ed"
+   },
+   {
+    "offset": "0x2DB8",
+    "zh": "放弃",
+    "payload_hex": "e54ce938"
+   },
+   {
+    "offset": "0x2E19",
+    "zh": "光{00}",
+    "payload_hex": "e83d00"
+   },
+   {
+    "offset": "0x2E2D",
+    "zh": "屏障{00}",
+    "payload_hex": "ed4eebfc00"
+   },
+   {
+    "offset": "0x2E3B",
+    "zh": "确勉",
+    "payload_hex": "e88ce53f"
+   },
+   {
+    "offset": "0x2E86",
+    "zh": "搭载",
+    "payload_hex": "e479eb1d"
+   },
+   {
+    "offset": "0x2E8B",
+    "zh": "背负",
+    "payload_hex": "e4bee92c"
+   },
+   {
+    "offset": "0x2F17",
+    "zh": "频了",
+    "payload_hex": "eec6e5d7"
+   },
+   {
+    "offset": "0x2F20",
+    "zh": "选择",
+    "payload_hex": "e966eaaa"
+   },
+   {
+    "offset": "0x2F25",
+    "zh": "全员",
+    "payload_hex": "bbe849"
+   },
+   {
+    "offset": "0x2F47",
+    "zh": "超级",
+    "payload_hex": "eaf6eaee"
+   },
+   {
+    "offset": "0x2F62",
+    "zh": "进攻",
+    "payload_hex": "e8929e"
+   },
+   {
+    "offset": "0x2F66",
+    "zh": "正规",
+    "payload_hex": "e365ea42"
+   },
+   {
+    "offset": "0x2F73",
+    "zh": "撤收",
+    "payload_hex": "e90ae926"
+   },
+   {
+    "offset": "0x2FD0",
+    "zh": "历史",
+    "payload_hex": "e8fbe27f"
+   },
+   {
+    "offset": "0x3003",
+    "zh": "回收",
+    "payload_hex": "8ce926"
+   },
+   {
+    "offset": "0x3018",
+    "zh": "气土",
+    "payload_hex": "e8ede46f"
+   },
+   {
+    "offset": "0x30A5",
+    "zh": "实验",
+    "payload_hex": "e87fea99"
+   },
+   {
+    "offset": "0x30DB",
+    "zh": "荣光",
+    "payload_hex": "eb19e211"
+   },
+   {
+    "offset": "0x3137",
+    "zh": "援护",
+    "payload_hex": "e0c1e8e0"
+   },
+   {
+    "offset": "0x313F",
+    "zh": "经验",
+    "payload_hex": "e8b7ea99"
+   },
+   {
+    "offset": "0x3144",
+    "zh": "计画",
+    "payload_hex": "ea55e0ed"
+   },
+   {
+    "offset": "0x31AA",
+    "zh": "态势",
+    "payload_hex": "e994e8fd"
+   },
+   {
+    "offset": "0x31AF",
+    "zh": "调整",
+    "payload_hex": "e95ce363"
+   },
+   {
+    "offset": "0x31BD",
+    "zh": "变更",
+    "payload_hex": "e955e222"
+   },
+   {
+    "offset": "0x31C2",
+    "zh": "编成",
+    "payload_hex": "ec89e361"
+   },
+   {
+    "offset": "0x3217",
+    "zh": "护卫",
+    "payload_hex": "e8e0e9b2"
+   },
+   {
+    "offset": "0x3276",
+    "zh": "演习",
+    "payload_hex": "e0c3eab6"
+   },
+   {
+    "offset": "0x3284",
+    "zh": "冲准{00}上が",
+    "payload_hex": "e95ee2e500b21c"
+   },
+   {
+    "offset": "0x32E5",
+    "zh": "出现",
+    "payload_hex": "afe82f"
+   },
+   {
+    "offset": "0x32EE",
+    "zh": "性扩",
+    "payload_hex": "e360ec1a"
+   },
+   {
+    "offset": "0x332A",
+    "zh": "能量{00}",
+    "payload_hex": "e7c6e85100"
+   },
+   {
+    "offset": "0x3364",
+    "zh": "作业",
+    "payload_hex": "e266eada"
+   },
+   {
+    "offset": "0x3369",
+    "zh": "实际",
+    "payload_hex": "e87fedc3"
+   },
+   {
+    "offset": "0x337A",
+    "zh": "生产",
+    "payload_hex": "b6ec05"
+   },
+   {
+    "offset": "0x33EF",
+    "zh": "运命",
+    "payload_hex": "e986e584"
+   },
+   {
+    "offset": "0x340D",
+    "zh": "前进",
+    "payload_hex": "bae892"
+   },
+   {
+    "offset": "0x3461",
+    "zh": "指{00}{00}{00}",
+    "payload_hex": "e8c0000000"
+   },
+   {
+    "offset": "0x347E",
+    "zh": "效果",
+    "payload_hex": "ea8fe871"
+   },
+   {
+    "offset": "0x34AB",
+    "zh": "白录",
+    "payload_hex": "e4c8ec16"
+   },
+   {
+    "offset": "0x3598",
+    "zh": "假面",
+    "payload_hex": "eb28e589"
+   },
+   {
+    "offset": "0x359D",
+    "zh": "价值",
+    "payload_hex": "eb25ec48"
+   },
+   {
+    "offset": "0x35AB",
+    "zh": "关系",
+    "payload_hex": "e8bbe1c5"
+   },
+   {
+    "offset": "0x35B0",
+    "zh": "启弟",
+    "payload_hex": "ea3be44c"
+   },
+   {
+    "offset": "0x35B5",
+    "zh": "结构",
+    "payload_hex": "e868ece3"
+   },
+   {
+    "offset": "0x35D6",
+    "zh": "增援",
+    "payload_hex": "ea3de863"
+   },
+   {
+    "offset": "0x35DB",
+    "zh": "知识",
+    "payload_hex": "e411e92f"
+   },
+   {
+    "offset": "0x35E0",
+    "zh": "登场",
+    "payload_hex": "e46ae876"
+   },
+   {
+    "offset": "0x35E9",
+    "zh": "补充",
+    "payload_hex": "ea81ea86"
+   },
+   {
+    "offset": "0x35FB",
+    "zh": "激光",
+    "payload_hex": "e9b9e83d"
+   },
+   {
+    "offset": "0x3644",
+    "zh": "决起",
+    "payload_hex": "e8abe156"
+   },
+   {
+    "offset": "0x3649",
+    "zh": "研级",
+    "payload_hex": "e1e7eaee"
+   },
+   {
+    "offset": "0x3663",
+    "zh": "沉默",
+    "payload_hex": "e983ec02"
+   },
+   {
+    "offset": "0x3679",
+    "zh": "优良",
+    "payload_hex": "e9afe5db"
+   },
+   {
+    "offset": "0x367E",
+    "zh": "话聞",
+    "payload_hex": "e81fe3b6"
+   },
+   {
+    "offset": "0x36A1",
+    "zh": "机{00}",
+    "payload_hex": "e7e400"
+   },
+   {
+    "offset": "0x36E7",
+    "zh": "确信",
+    "payload_hex": "e88ce32e"
+   },
+   {
+    "offset": "0x36FE",
+    "zh": "决定",
+    "payload_hex": "e8abe449"
+   },
+   {
+    "offset": "0x371B",
+    "zh": "进卫",
+    "payload_hex": "e892e9b2"
+   },
+   {
+    "offset": "0x37C3",
+    "zh": "影响",
+    "payload_hex": "e0b3ecbf"
+   },
+   {
+    "offset": "0x37D0",
+    "zh": "活跃",
+    "payload_hex": "e116eeab"
+   },
+   {
+    "offset": "0x37EB",
+    "zh": "乘举",
+    "payload_hex": "ebb1ea21"
+   },
+   {
+    "offset": "0x3830",
+    "zh": "复数",
+    "payload_hex": "e9eee353"
+   },
+   {
+    "offset": "0x389E",
+    "zh": "永远",
+    "payload_hex": "e0b6e94c"
+   },
+   {
+    "offset": "0x38CE",
+    "zh": "调子",
+    "payload_hex": "e95ce284"
+   },
+   {
+    "offset": "0x38D8",
+    "zh": "特吊",
+    "payload_hex": "e490e444"
+   },
+   {
+    "offset": "0x395D",
+    "zh": "再乡",
+    "payload_hex": "e24feb4c"
+   },
+   {
+    "offset": "0x39A1",
+    "zh": "不觉",
+    "payload_hex": "e505e8ae"
+   },
+   {
+    "offset": "0x39C1",
+    "zh": "巨场所{00}好都合",
+    "payload_hex": "e17be876e2eb00e218e46da0"
+   },
+   {
+    "offset": "0x3A08",
+    "zh": "卫星",
+    "payload_hex": "e9b2b5"
+   },
+   {
+    "offset": "0x3A0C",
+    "zh": "觉醒",
+    "payload_hex": "e8aee371"
+   },
+   {
+    "offset": "0x3A18",
+    "zh": "归搭",
+    "payload_hex": "e947e479"
+   },
+   {
+    "offset": "0x3B23",
+    "zh": "举点",
+    "payload_hex": "ea21e463"
+   },
+   {
+    "offset": "0x3B4A",
+    "zh": "进化",
+    "payload_hex": "e892e0d9"
+   },
+   {
+    "offset": "0x3BD5",
+    "zh": "扩纳",
+    "payload_hex": "ec1ae882"
+   },
+   {
+    "offset": "0x3BF6",
+    "zh": "资扩",
+    "payload_hex": "eba7ec1a"
+   },
+   {
+    "offset": "0x3C16",
+    "zh": "世纪",
+    "payload_hex": "e35aeb99"
+   },
+   {
+    "offset": "0x3C41",
+    "zh": "优秀",
+    "payload_hex": "e9afe2cc"
+   },
+   {
+    "offset": "0x3C4A",
+    "zh": "预{00}",
+    "payload_hex": "ea5a00"
+   },
+   {
+    "offset": "0x3CD4",
+    "zh": "紧急",
+    "payload_hex": "eaede171"
+   },
+   {
+    "offset": "0x3D2B",
+    "zh": "同调",
+    "payload_hex": "e487e95c"
+   },
+   {
+    "offset": "0x3D88",
+    "zh": "未确认",
+    "payload_hex": "e577e88ce8a0"
+   },
+   {
+    "offset": "0x3DF7",
+    "zh": "结局",
+    "payload_hex": "e868e19d"
+   },
+   {
+    "offset": "0x3E03",
+    "zh": "姿势",
+    "payload_hex": "e283e8fd"
+   },
+   {
+    "offset": "0x3E38",
+    "zh": "态土",
+    "payload_hex": "e994e46f"
+   },
+   {
+    "offset": "0x3E46",
+    "zh": "弹数",
+    "payload_hex": "e946e914"
+   },
+   {
+    "offset": "0x3E61",
+    "zh": "勉护",
+    "payload_hex": "e53fe8e0"
+   },
+   {
+    "offset": "0x3E97",
+    "zh": "级{00}",
+    "payload_hex": "eaee00"
+   },
+   {
+    "offset": "0x3EB2",
+    "zh": "盾牌",
+    "payload_hex": "eb63ec2b"
+   },
+   {
+    "offset": "0x3EE7",
+    "zh": "无",
+    "payload_hex": "e7dc"
+   },
+   {
+    "offset": "0x3F17",
+    "zh": "可变",
+    "payload_hex": "e0dee955"
+   },
+   {
+    "offset": "0x3F2F",
+    "zh": "权离",
+    "payload_hex": "eb39e901"
+   },
+   {
+    "offset": "0x3F97",
+    "zh": "有效",
+    "payload_hex": "e7cbea8f"
+   },
+   {
+    "offset": "0x4072",
+    "zh": "决弾",
+    "payload_hex": "e8abe40a"
+   },
+   {
+    "offset": "0x407A",
+    "zh": "光荣",
+    "payload_hex": "e211eb19"
+   },
+   {
+    "offset": "0x40C8",
+    "zh": "转进",
+    "payload_hex": "e9c2e892"
+   },
+   {
+    "offset": "0x40E7",
+    "zh": "勉虏",
+    "payload_hex": "e53febee"
+   },
+   {
+    "offset": "0x4126",
+    "zh": "主{00}",
+    "payload_hex": "e95400"
+   },
+   {
+    "offset": "0x417F",
+    "zh": "火箭",
+    "payload_hex": "e8daec32"
+   },
+   {
+    "offset": "0x41ED",
+    "zh": "协审",
+    "payload_hex": "e8f6ecca"
+   },
+   {
+    "offset": "0x4232",
+    "zh": "处粹",
+    "payload_hex": "e903ec85"
+   },
+   {
+    "offset": "0x4273",
+    "zh": "不离",
+    "payload_hex": "e505e901"
+   },
+   {
+    "offset": "0x42E0",
+    "zh": "炮{00}{00}{00}",
+    "payload_hex": "e95a000000"
+   },
+   {
+    "offset": "0x4351",
+    "zh": "观念",
+    "payload_hex": "eaf2e4ac"
+   },
+   {
+    "offset": "0x4374",
+    "zh": "构成",
+    "payload_hex": "ece3e361"
+   },
+   {
+    "offset": "0x439A",
+    "zh": "乘明",
+    "payload_hex": "ebb1e585"
+   },
+   {
+    "offset": "0x43A7",
+    "zh": "推进",
+    "payload_hex": "e34ae892"
+   },
+   {
+    "offset": "0x4406",
+    "zh": "边离",
+    "payload_hex": "e899e901"
+   },
+   {
+    "offset": "0x4419",
+    "zh": "眠众",
+    "payload_hex": "e57ceafb"
+   },
+   {
+    "offset": "0x4422",
+    "zh": "明响",
+    "payload_hex": "e585ecbf"
+   },
+   {
+    "offset": "0x451F",
+    "zh": "圈内",
+    "payload_hex": "e9fbe49b"
+   },
+   {
+    "offset": "0x4560",
+    "zh": "消费",
+    "payload_hex": "e928e95d"
+   },
+   {
+    "offset": "0x4575",
+    "zh": "信强",
+    "payload_hex": "e32ee8ad"
+   },
+   {
+    "offset": "0x45B8",
+    "zh": "断{00}",
+    "payload_hex": "e98200"
+   },
+   {
+    "offset": "0x45C4",
+    "zh": "调查",
+    "payload_hex": "e95ceae9"
+   },
+   {
+    "offset": "0x45CE",
+    "zh": "土胁",
+    "payload_hex": "e46fedad"
+   },
+   {
+    "offset": "0x45D8",
+    "zh": "讨伐",
+    "payload_hex": "e9f7e4d1"
+   },
+   {
+    "offset": "0x45F4",
+    "zh": "飞行",
+    "payload_hex": "ea459f"
+   },
+   {
+    "offset": "0x4605",
+    "zh": "武门",
+    "payload_hex": "e517e90c"
+   },
+   {
+    "offset": "0x4611",
+    "zh": "副归",
+    "payload_hex": "e51de947"
+   },
+   {
+    "offset": "0x4616",
+    "zh": "变化",
+    "payload_hex": "e955e0d9"
+   },
+   {
+    "offset": "0x4628",
+    "zh": "问闘{00}",
+    "payload_hex": "e997c500"
+   },
+   {
+    "offset": "0x4774",
+    "zh": "应闘{00}",
+    "payload_hex": "e873c500"
+   },
+   {
+    "offset": "0x477E",
+    "zh": "协同",
+    "payload_hex": "e8f6e487"
+   },
+   {
+    "offset": "0x47AC",
+    "zh": "再编",
+    "payload_hex": "e24fec89"
+   },
+   {
+    "offset": "0x47B5",
+    "zh": "最强",
+    "payload_hex": "e250e8ad"
+   },
+   {
+    "offset": "0x47BA",
+    "zh": "赞成",
+    "payload_hex": "ec3ee361"
+   },
+   {
+    "offset": "0x47BF",
+    "zh": "残虏",
+    "payload_hex": "e279ebee"
+   },
+   {
+    "offset": "0x47ED",
+    "zh": "正确",
+    "payload_hex": "e365e88c"
+   },
+   {
+    "offset": "0x4806",
+    "zh": "同脑",
+    "payload_hex": "e487eb67"
+   },
+   {
+    "offset": "0x4810",
+    "zh": "纳得",
+    "payload_hex": "e882e48d"
+   },
+   {
+    "offset": "0x482B",
+    "zh": "余计",
+    "payload_hex": "e5b0ea55"
+   },
+   {
+    "offset": "0x4951",
+    "zh": "远两",
+    "payload_hex": "e94ce97d"
+   },
+   {
+    "offset": "0x495E",
+    "zh": "扩好",
+    "payload_hex": "ec1ae218"
+   },
+   {
+    "offset": "0x497A",
+    "zh": "乡味",
+    "payload_hex": "eb4ce576"
+   },
+   {
+    "offset": "0x49AC",
+    "zh": "实态",
+    "payload_hex": "e87fe994"
+   },
+   {
+    "offset": "0x49CD",
+    "zh": "信变",
+    "payload_hex": "e32ee955"
+   },
+   {
+    "offset": "0x49DF",
+    "zh": "成败",
+    "payload_hex": "e361e88f"
+   },
+   {
+    "offset": "0x4A03",
+    "zh": "馈行",
+    "payload_hex": "eeca9f"
+   },
+   {
+    "offset": "0x4A47",
+    "zh": "通用",
+    "payload_hex": "ef59d8"
+   },
+   {
+    "offset": "0x4A66",
+    "zh": "勉乘",
+    "payload_hex": "e53febb1"
+   },
+   {
+    "offset": "0x4A8D",
+    "zh": "药物",
+    "payload_hex": "ebede525"
+   },
+   {
+    "offset": "0x4A9B",
+    "zh": "诱動{00}",
+    "payload_hex": "eb44c600"
+   },
+   {
+    "offset": "0x4BCD",
+    "zh": "气{00}",
+    "payload_hex": "e8ed00"
+   },
+   {
+    "offset": "0x4BF4",
+    "zh": "确实",
+    "payload_hex": "e88ce87f"
+   },
+   {
+    "offset": "0x4C1C",
+    "zh": "欠陷",
+    "payload_hex": "e1d0eaf9"
+   },
+   {
+    "offset": "0x4C3B",
+    "zh": "口实",
+    "payload_hex": "e216e87f"
+   },
+   {
+    "offset": "0x4C52",
+    "zh": "细{00}",
+    "payload_hex": "eb9a00"
+   },
+   {
+    "offset": "0x4C64",
+    "zh": "姐埋",
+    "payload_hex": "e921e56b"
+   },
+   {
+    "offset": "0x4C76",
+    "zh": "实权",
+    "payload_hex": "e87feb39"
+   },
+   {
+    "offset": "0x4CBE",
+    "zh": "亲编",
+    "payload_hex": "e894ec89"
+   },
+   {
+    "offset": "0x4CCC",
+    "zh": "性张",
+    "payload_hex": "e360eac5"
+   },
+   {
+    "offset": "0x4D25",
+    "zh": "调话",
+    "payload_hex": "e95ce81f"
+   },
+   {
+    "offset": "0x4D33",
+    "zh": "彻底",
+    "payload_hex": "ebc5e44a"
+   },
+   {
+    "offset": "0x4D64",
+    "zh": "评价",
+    "payload_hex": "ee9eeb25"
+   },
+   {
+    "offset": "0x4D69",
+    "zh": "不调",
+    "payload_hex": "e505e95c"
+   },
+   {
+    "offset": "0x4FD2",
+    "zh": "规模",
+    "payload_hex": "ea42e58a"
+   },
+   {
+    "offset": "0x4FDB",
+    "zh": "强周",
+    "payload_hex": "e8ade2c7"
+   },
+   {
+    "offset": "0x4FE5",
+    "zh": "极彼{00}",
+    "payload_hex": "eacac900"
+   },
+   {
+    "offset": "0x4FFD",
+    "zh": "决信",
+    "payload_hex": "e8abe32e"
+   },
+   {
+    "offset": "0x5002",
+    "zh": "结末",
+    "payload_hex": "e868e572"
+   },
+   {
+    "offset": "0x502C",
+    "zh": "失态",
+    "payload_hex": "e2aae994"
+   },
+   {
+    "offset": "0x5063",
+    "zh": "精锐",
+    "payload_hex": "e369ed14"
+   },
+   {
+    "offset": "0x507A",
+    "zh": "刷加",
+    "payload_hex": "ede9e0dd"
+   },
+   {
+    "offset": "0x50C9",
+    "zh": "变角",
+    "payload_hex": "e955e110"
+   },
+   {
+    "offset": "0x50CE",
+    "zh": "补旧",
+    "payload_hex": "ea81e178"
+   },
+   {
+    "offset": "0x50D3",
+    "zh": "补修",
+    "payload_hex": "ea81e2ca"
+   },
+   {
+    "offset": "0x5191",
+    "zh": "剑{00}{00}",
+    "payload_hex": "ecb30000"
+   },
+   {
+    "offset": "0x526D",
+    "zh": "过酷",
+    "payload_hex": "ef36e238"
+   },
+   {
+    "offset": "0x5288",
+    "zh": "完败",
+    "payload_hex": "e122e88f"
+   },
+   {
+    "offset": "0x529E",
+    "zh": "議务",
+    "payload_hex": "e163e94f"
+   },
+   {
+    "offset": "0x52B2",
+    "zh": "强{00}",
+    "payload_hex": "e8ad00"
+   },
+   {
+    "offset": "0x5314",
+    "zh": "执务",
+    "payload_hex": "e9fce94f"
+   },
+   {
+    "offset": "0x534F",
+    "zh": "静{00}",
+    "payload_hex": "e37300"
+   },
+   {
+    "offset": "0x537D",
+    "zh": "退场",
+    "payload_hex": "e3e9e876"
+   },
+   {
+    "offset": "0x538C",
+    "zh": "知庆",
+    "payload_hex": "e411ee18"
+   },
+   {
+    "offset": "0x5402",
+    "zh": "必杀",
+    "payload_hex": "e860e89b"
+   },
+   {
+    "offset": "0x5419",
+    "zh": "负荷",
+    "payload_hex": "e92ce0e8"
+   },
+   {
+    "offset": "0x5426",
+    "zh": "分离",
+    "payload_hex": "cde901"
+   },
+   {
+    "offset": "0x54AE",
+    "zh": "正念场",
+    "payload_hex": "e365e4ace876"
+   },
+   {
+    "offset": "0x563D",
+    "zh": "应急",
+    "payload_hex": "e873e171"
+   },
+   {
+    "offset": "0x568A",
+    "zh": "确乘",
+    "payload_hex": "e88cebb1"
+   },
+   {
+    "offset": "0x56A2",
+    "zh": "完{00}",
+    "payload_hex": "e12200"
+   },
+   {
+    "offset": "0x56A6",
+    "zh": "感觉",
+    "payload_hex": "e126e8ae"
+   },
+   {
+    "offset": "0x56CA",
+    "zh": "伪名",
+    "payload_hex": "eca7e583"
+   },
+   {
+    "offset": "0x56E7",
+    "zh": "许势",
+    "payload_hex": "e8a7e8fd"
+   },
+   {
+    "offset": "0x5729",
+    "zh": "经过",
+    "payload_hex": "e8b7ef36"
+   },
+   {
+    "offset": "0x572E",
+    "zh": "经由",
+    "payload_hex": "e8b7e5ab"
+   },
+   {
+    "offset": "0x573C",
+    "zh": "决吉",
+    "payload_hex": "e8abe164"
+   },
+   {
+    "offset": "0x5741",
+    "zh": "决别",
+    "payload_hex": "e8abe7e5"
+   },
+   {
+    "offset": "0x574B",
+    "zh": "血涂",
+    "payload_hex": "e1d5ee53"
+   },
+   {
+    "offset": "0x5755",
+    "zh": "权限",
+    "payload_hex": "eb39eb23"
+   },
+   {
+    "offset": "0x575A",
+    "zh": "牵制",
+    "payload_hex": "eb94e35e"
+   },
+   {
+    "offset": "0x5787",
+    "zh": "互获",
+    "payload_hex": "e206e9d8"
+   },
+   {
+    "offset": "0x57A2",
+    "zh": "误解",
+    "payload_hex": "ea33e89d"
+   },
+   {
+    "offset": "0x57A7",
+    "zh": "候补",
+    "payload_hex": "e210ea81"
+   },
+   {
+    "offset": "0x57F4",
+    "zh": "赞同",
+    "payload_hex": "ec3ee487"
+   },
+   {
+    "offset": "0x5819",
+    "zh": "资源",
+    "payload_hex": "eba7ebd6"
+   },
+   {
+    "offset": "0x5832",
+    "zh": "识别",
+    "payload_hex": "e92fe7e5"
+   },
+   {
+    "offset": "0x586E",
+    "zh": "所调",
+    "payload_hex": "e2ebe95c"
+   },
+   {
+    "offset": "0x587D",
+    "zh": "障愿",
+    "payload_hex": "e312e961"
+   },
+   {
+    "offset": "0x5895",
+    "zh": "真请",
+    "payload_hex": "e339e83a"
+   },
+   {
+    "offset": "0x58B3",
+    "zh": "制作",
+    "payload_hex": "e35ee266"
+   },
+   {
+    "offset": "0x58E4",
+    "zh": "全弹",
+    "payload_hex": "bbe946"
+   },
+   {
+    "offset": "0x595A",
+    "zh": "顶命",
+    "payload_hex": "eca1e584"
+   },
+   {
+    "offset": "0x5992",
+    "zh": "气从",
+    "payload_hex": "e8ede88a"
+   },
+   {
+    "offset": "0x5997",
+    "zh": "气流",
+    "payload_hex": "e8ede5cd"
+   },
+   {
+    "offset": "0x599C",
+    "zh": "骂弃",
+    "payload_hex": "eecce938"
+   },
+   {
+    "offset": "0x59B6",
+    "zh": "元{00}",
+    "payload_hex": "e1ef00"
+   },
+   {
+    "offset": "0x59BA",
+    "zh": "表现",
+    "payload_hex": "e9e7e82f"
+   },
+   {
+    "offset": "0x59BF",
+    "zh": "不{00}",
+    "payload_hex": "e50500"
+   },
+   {
+    "offset": "0x59C7",
+    "zh": "武运",
+    "payload_hex": "e517e986"
+   },
+   {
+    "offset": "0x59CC",
+    "zh": "部锁{00}",
+    "payload_hex": "ccebfa00"
+   },
+   {
+    "offset": "0x59D1",
+    "zh": "副乡",
+    "payload_hex": "e51deb4c"
+   },
+   {
+    "offset": "0x59F5",
+    "zh": "编还",
+    "payload_hex": "ec89e7f7"
+   },
+   {
+    "offset": "0x59FA",
+    "zh": "编闘{00}",
+    "payload_hex": "ec89c500"
+   },
+   {
+    "offset": "0x59FF",
+    "zh": "便护",
+    "payload_hex": "e53ee8e0"
+   },
+   {
+    "offset": "0x5A3C",
+    "zh": "忧两",
+    "payload_hex": "ee1de97d"
+   },
+   {
+    "offset": "0x5A45",
+    "zh": "有线",
+    "payload_hex": "e7cbe916"
+   },
+   {
+    "offset": "0x5A57",
+    "zh": "容认",
+    "payload_hex": "e5b4e8a0"
+   },
+   {
+    "offset": "0x5A65",
+    "zh": "了升",
+    "payload_hex": "e5d7ed2b"
+   },
+   {
+    "offset": "0x5DDE",
+    "zh": "闪光{00}",
+    "payload_hex": "ea44e83d00"
+   },
+   {
+    "offset": "0x5F02",
+    "zh": "义问",
+    "payload_hex": "e8cee997"
+   },
+   {
+    "offset": "0x5F0F",
+    "zh": "急进",
+    "payload_hex": "e171e892"
+   },
+   {
+    "offset": "0x5F2E",
+    "zh": "兴{00}",
+    "payload_hex": "eaba00"
+   },
+   {
+    "offset": "0x5F3B",
+    "zh": "苦难",
+    "payload_hex": "e1a9e866"
+   },
+   {
+    "offset": "0x5F70",
+    "zh": "考两",
+    "payload_hex": "e22de97d"
+   },
+   {
+    "offset": "0x5F8E",
+    "zh": "采掘",
+    "payload_hex": "e257e1b2"
+   },
+   {
+    "offset": "0x5FB9",
+    "zh": "实感",
+    "payload_hex": "e87fe126"
+   },
+   {
+    "offset": "0x5FEA",
+    "zh": "城吊",
+    "payload_hex": "e316e444"
+   },
+   {
+    "offset": "0x5FF4",
+    "zh": "审舞",
+    "payload_hex": "eccae518"
+   },
+   {
+    "offset": "0x6074",
+    "zh": "电子",
+    "payload_hex": "ead3e284"
+   },
+   {
+    "offset": "0x608B",
+    "zh": "难弱",
+    "payload_hex": "e866e2bb"
+   },
+   {
+    "offset": "0x6094",
+    "zh": "日进",
+    "payload_hex": "e4a3e892"
+   },
+   {
+    "offset": "0x60B4",
+    "zh": "反转",
+    "payload_hex": "e4d8e9c2"
+   },
+   {
+    "offset": "0x60D1",
+    "zh": "普{00}",
+    "payload_hex": "e50f00"
+   },
+   {
+    "offset": "0x60FC",
+    "zh": "旁害",
+    "payload_hex": "ef04e101"
+   },
+   {
+    "offset": "0x6308",
+    "zh": "月{00}",
+    "payload_hex": "e1d600"
+   },
+   {
+    "offset": "0x63FC",
+    "zh": "奇周",
+    "payload_hex": "e145e2c7"
+   },
+   {
+    "offset": "0x640A",
+    "zh": "久转",
+    "payload_hex": "e16be9c2"
+   },
+   {
+    "offset": "0x643C",
+    "zh": "欠{00}",
+    "payload_hex": "e1d000"
+   },
+   {
+    "offset": "0x6445",
+    "zh": "嫌义",
+    "payload_hex": "e1dde8ce"
+   },
+   {
+    "offset": "0x64B1",
+    "zh": "试验",
+    "payload_hex": "e91dea99"
+   },
+   {
+    "offset": "0x6501",
+    "zh": "沼进",
+    "payload_hex": "e305e892"
+   },
+   {
+    "offset": "0x651B",
+    "zh": "新锐",
+    "payload_hex": "e335ed14"
+   },
+   {
+    "offset": "0x65C1",
+    "zh": "中实{00}",
+    "payload_hex": "c0e87f00"
+   },
+   {
+    "offset": "0x65ED",
+    "zh": "迭坠",
+    "payload_hex": "e45ceb53"
+   },
+   {
+    "offset": "0x65F2",
+    "zh": "转换",
+    "payload_hex": "e9c2ea78"
+   },
+   {
+    "offset": "0x6624",
+    "zh": "软西",
+    "payload_hex": "eb47e36c"
+   },
+   {
+    "offset": "0x6629",
+    "zh": "难航",
+    "payload_hex": "e866e22e"
+   },
+   {
+    "offset": "0x662E",
+    "zh": "气入",
+    "payload_hex": "e8ede4a4"
+   },
+   {
+    "offset": "0x664F",
+    "zh": "疲获",
+    "payload_hex": "e4ebe9d8"
+   },
+   {
+    "offset": "0x6654",
+    "zh": "皮并",
+    "payload_hex": "e4ece957"
+   },
+   {
+    "offset": "0x6667",
+    "zh": "不话",
+    "payload_hex": "e505e81f"
+   },
+   {
+    "offset": "0x667D",
+    "zh": "聞稳",
+    "payload_hex": "e3b6eb3e"
+   },
+   {
+    "offset": "0x6686",
+    "zh": "补进",
+    "payload_hex": "ea81e892"
+   },
+   {
+    "offset": "0x66AA",
+    "zh": "密{00}",
+    "payload_hex": "e57900"
+   },
+   {
+    "offset": "0x66C9",
+    "zh": "明{00}",
+    "payload_hex": "e58500"
+   },
+   {
+    "offset": "0x66F0",
+    "zh": "虏守",
+    "payload_hex": "ebeee2be"
+   },
+   {
+    "offset": "0x670C",
+    "zh": "腕试",
+    "payload_hex": "e609e91d"
+   },
+   {
+    "offset": "0x678C",
+    "zh": "吉恩",
+    "payload_hex": "e7d9e7ee"
+   },
+   {
+    "offset": "0x6792",
+    "zh": "联邦",
+    "payload_hex": "ef2eefaa"
+   }
+  ]
+ },
+ "resource_offsets": [
+  {
+   "file_offset": "0x1775CC",
+   "value": "0xFCC",
+   "old_value": "0x0",
+   "what": "battle-text bank (file 1da) 129-entry u32 offset table, entry 1",
+   "why": "the bank grew: entry 1 re-aimed at the appended grown block (offset = the original bank size)"
+  },
+  {
+   "file_offset": "0x178278",
+   "value": "0x2F1",
+   "old_value": "0x430",
+   "what": "ability-record bank (file 1df) record-offset word",
+   "why": "one record's text is read straight from this u32 offset into the decompressed bank; re-aimed at a re-encoded record"
+  }
+ ]
+}

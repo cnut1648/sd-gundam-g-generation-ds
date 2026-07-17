@@ -1263,11 +1263,11 @@ def _selftest(jp_path: str, zh_path: str):
     from render_oracle import Oracle
     orc = Oracle(Path(zh_path))
     tests = []
-    doc = _json.loads((REPO / "data/dialogue/stages/_STG01.json").read_text())
+    doc = _json.loads((REPO / "data/zh/stages/_STG01.json").read_text())
     for blk in doc.get("edits", [])[:3]:
         if isinstance(blk, dict) and blk.get("zh_hex"):
             tests.append(("stage", bytes.fromhex(blk["zh_hex"])))
-    nb = _json.loads((REPO / "data/arenas/battle_name_pool.json").read_text())
+    nb = _json.loads((REPO / "data/zh/placements/battle_name_pool.json").read_text())
     for e in nb.get("entries", [])[:3]:
         if e.get("payload_hex"):
             tests.append(("bank", bytes.fromhex(e["payload_hex"])))

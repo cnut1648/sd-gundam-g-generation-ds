@@ -105,7 +105,7 @@ def main() -> int:
             s.add(int(r["off"], 16))
     for rel in ("barks/0.json", "barks/1.json", "barks/1dd.json",
                 "barks/1de.json", "barks/c4f.json"):
-        d = _j("files/" + rel)
+        d = _j("zh/files/" + rel)
         fn = d["file"]
         runs = bark_runs.get(fn, set())
         recs = sorted(bark_recs.get(fn, []))
@@ -150,7 +150,7 @@ def main() -> int:
     card_runs = {int(r["off"], 16) for c in cards for r in c["runs"]}
     card_recs = sorted((int(c["start"], 16), int(c["end"], 16)) for c in cards)
     f1da = rom.file("1da.bin")
-    d = _j("files/battle/ability_cards.json")
+    d = _j("zh/files/battle/ability_cards.json")
     total = matched = 0
     notes = []
     for e in d["edits"]:
@@ -163,7 +163,7 @@ def main() -> int:
 
     eff_runs = {int(r["off"], 16) for r in W.command_effects(rom)}
     f1db = rom.file("1db.bin")
-    d = _j("files/battle/command_effects.json")
+    d = _j("zh/files/battle/command_effects.json")
     total = matched = 0
     notes = []
     for e in d["edits"]:
@@ -175,8 +175,8 @@ def main() -> int:
     rep.add("command_effects (1db)", total, matched, notes)
 
     specials = W.special_records(rom)
-    for key, rel in (("ability", "files/battle/special_abilities.json"),
-                     ("defense", "files/battle/special_defenses.json")):
+    for key, rel in (("ability", "zh/files/battle/special_abilities.json"),
+                     ("defense", "zh/files/battle/special_defenses.json")):
         recs = {(int(r["start"], 16), int(r["end"], 16)) for r in specials[key]}
         starts = {s for s, _ in recs}
         d = _j(rel)
@@ -194,7 +194,7 @@ def main() -> int:
     # ---- 4. cut-in quotes -----------------------------------------------------
     cut = W.cutin_records(rom)[0]
     recs = {r["record"] for r in cut["records"]}
-    d = _j("files/battle/cutin_quotes.json")
+    d = _j("zh/files/battle/cutin_quotes.json")
     total = matched = 0
     notes = []
     for g in d["groups"]:
@@ -206,8 +206,8 @@ def main() -> int:
     rep.add("cutin_quotes (1dc)", total, matched, notes)
 
     # ---- 5. library / hangar banks --------------------------------------------
-    for kind, rel in (("char", "files/library/character_bios.json"),
-                      ("unit", "files/library/unit_bios.json")):
+    for kind, rel in (("char", "zh/files/library/character_bios.json"),
+                      ("unit", "zh/files/library/unit_bios.json")):
         recs = {int(b["off"], 16): b["size"] for b in W.bios(rom, kind)}
         d = _j(rel)
         total = matched = 0
@@ -226,7 +226,7 @@ def main() -> int:
         rep.add(f"{kind} bios ({d['file']})", total, matched, notes)
 
     wl = {int(r["off"], 16) for r in W.weapon_list(rom)}
-    d = _j("files/library/weapon_names.json")
+    d = _j("zh/files/library/weapon_names.json")
     total = matched = 0
     notes = []
     for e in d["edits"]:
@@ -240,7 +240,7 @@ def main() -> int:
     pt = W.parts(rom)
     part_idx = {p["index"] for p in pt}
     cap_offs = {int(p["caption"]["off"], 16) for p in pt if "caption" in p}
-    d = _j("files/hangar/part_names.json")
+    d = _j("zh/files/hangar/part_names.json")
     total = matched = 0
     notes = []
     # b6e is REBUILT whole (entries repacked at new offsets) — the stable key
@@ -252,7 +252,7 @@ def main() -> int:
         else:
             notes.append(f"b6e entry {e['index']}: no extracted part")
     rep.add("part_names (b6e)", total, matched, notes)
-    d = _j("files/hangar/part_captions.json")
+    d = _j("zh/files/hangar/part_captions.json")
     f_b6f = rom.file("b6f.bin")
     total = matched = 0
     notes = []
@@ -270,68 +270,58 @@ def main() -> int:
 
     # ---- 6. name tables --------------------------------------------------------
     units = {u["utid"]: u for u in W.units(rom)}
-    d = _j("names/units.json")
+    d = _j("zh/units.json")
     total = matched = 0
     notes = []
-    for e in d["entries"]:
-        total += 1
+    for e in d["units"]:
         u = units.get(e["utid"])
-        if u and u["name"]:
-            matched += 1
-        else:
-            notes.append(f"utid {e['utid']}: no extracted unit name")
-    rep.add("names/units", total, matched, notes)
-
-    d = _j("names/weapons.json")
-    total = matched = 0
-    notes = []
-    for e in d["entries"]:
-        total += 1
-        u = units.get(e["utid"])
+        if "zh" in e:
+            total += 1
+            if u and u["name"]:
+                matched += 1
+            else:
+                notes.append(f"utid {e['utid']}: no extracted unit name")
         slots = {w["slot"] for w in u["weapons"]} if u else set()
-        if e["slot"] in slots:
-            matched += 1
-        else:
-            notes.append(f"utid {e['utid']} slot {e['slot']}: no extracted weapon")
-    rep.add("names/weapons", total, matched, notes)
+        for wpn in e.get("weapons", []):
+            total += 1
+            if wpn["slot"] in slots:
+                matched += 1
+            else:
+                notes.append(f"utid {e['utid']} slot {wpn['slot']}: no extracted weapon")
+    rep.add("zh/units (names+weapons)", total, matched, notes)
 
     pil = {p["cid"] for p in W.pilots(rom)}
-    d = _j("names/pilots.json")
+    d = _j("zh/characters.json")
     total = matched = 0
     notes = []
-    for e in d["entries"]:
-        total += 1
-        if e["char_id"] in pil:
-            matched += 1
-        else:
-            notes.append(f"cid {e['char_id']}: no extracted pilot")
-    rep.add("names/pilots", total, matched, notes)
+    for e in d["characters"]:
+        if "zh" in e:
+            total += 1
+            if e["cid"] in pil:
+                matched += 1
+            else:
+                notes.append(f"cid {e['cid']}: no extracted pilot")
+        for idc_e in e.get("ids", []):
+            total += 1
+            idc = W.id_command(rom, idc_e["idn"])
+            ok = True
+            if "name" in idc_e and not idc["name"]:
+                ok = False
+            if "summary" in idc_e and not idc["summary"]:
+                ok = False
+            if ok:
+                matched += 1
+            else:
+                notes.append(f"idn {idc_e['idn']}: extracted record lacks name/summary")
+    rep.add("zh/characters (names+ids)", total, matched, notes)
 
-    d = _j("names/id_commands.json")
-    total = matched = 0
-    notes = []
-    for e in d["entries"]:
-        total += 1
-        idc = W.id_command(rom, e["id"])
-        ok = True
-        if "name" in e and not idc["name"]:
-            ok = False
-        if "summary" in e and not idc["summary"]:
-            ok = False
-        if ok:
-            matched += 1
-        else:
-            notes.append(f"idn {e['id']}: extracted record lacks name/summary")
-    rep.add("names/id_commands entries", total, matched, notes)
     details = {x["didx"] for x in W.id_details(rom)}
     total = matched = 0
     notes = []
     import struct as _st
-    for e in d.get("details", []):
-        if "offset" not in e:
-            continue        # annotation-only slot (keeps the JP default pointer)
+    for e in d.get("detail_offsets", []):
         total += 1
-        didx = e["index"]
+        didx = e["didx"]
         jp_word = _st.unpack_from("<I", rom.arm9, L.DETAIL_OFFTAB + didx * 4)[0]
         if didx in details:
             matched += 1
@@ -340,29 +330,29 @@ def main() -> int:
             #                 pool for a JP-empty slot — placement, not JP data
         else:
             notes.append(f"didx {didx}: no extracted detail record")
-    rep.add("names/id_commands details", total, matched, notes)
+    rep.add("zh/characters detail_offsets", total, matched, notes)
 
-    d = _j("names/parts.json")
+    d = _j("zh/files/hangar/part_names.json")
     idx = {p["index"] for p in pt}
     total = matched = 0
     notes = []
-    for e in d["entries"]:
+    for e in d["name_offset_words"]:
         total += 1
         if e["index"] in idx:
             matched += 1
         else:
             notes.append(f"part index {e['index']}: not extracted")
-    rep.add("names/parts", total, matched, notes)
+    rep.add("zh part name_offset_words", total, matched, notes)
 
     # ---- 7. pointer-site tables (abilities / ui labels) -------------------------
     pstr = W.pointer_strings(rom)
     site_set = {int(s, 16) for p in pstr for s in p["sites"]}
     tgt_set = {int(p["ptr"], 16) for p in pstr}
-    for rel in ("names/abilities.json", "ui/labels.json"):
-        d = _j(rel)
+    ui = _j("zh/ui.json")
+    for section in ("abilities", "labels"):
         total = matched = 0
         notes = []
-        for e in d["entries"]:
+        for e in ui[section]:
             for s in e["sites"]:
                 total += 1
                 site = int(s, 16)
@@ -370,14 +360,14 @@ def main() -> int:
                 if site in site_set and old in tgt_set:
                     matched += 1
                 elif site not in site_set:
-                    notes.append(f"{rel} site {s} (jp={e.get('jp', '')[:12]}): site not in pointer graph")
+                    notes.append(f"ui.{section} site {s}: site not in pointer graph")
                 else:
-                    notes.append(f"{rel} old_ptr {e['old_ptr']}: target not in pointer graph")
-        rep.add(rel, total, matched, notes)
+                    notes.append(f"ui.{section} old_ptr {e['old_ptr']}: target not in pointer graph")
+        rep.add(f"zh/ui {section}", total, matched, notes)
 
     # ---- 8. dictionary ----------------------------------------------------------
     dt = {x["index"]: x for x in W.dictionary_entries(rom, "text")}
-    d = _j("ui/dictionary.json")
+    d = ui["dictionary"]
     total = matched = 0
     notes = []
     for e in d["offset_entries"]:
@@ -388,7 +378,7 @@ def main() -> int:
             notes.append(f"dict index {e['index']}: not extracted")
     entry_offs = {int(x["off"], 16) for x in dt.values()}
     reloc_targets = {int(x["offset"], 16) for x in d["offset_entries"]}
-    base = int(d["base"]["file_offset"], 16)
+    base = L.DICT_TEXT
     for e in d["string_edits"]:
         total += 1
         off = int(e["offset"], 16)
@@ -398,11 +388,11 @@ def main() -> int:
             matched += 1        # relocated-entry placement, not a JP record
         else:
             notes.append(f"dict string @base+{e['offset']}: no extracted entry at {hex(base + off)}")
-    rep.add("ui/dictionary", total, matched, notes)
+    rep.add("zh/ui dictionary", total, matched, notes)
 
     # ---- 9. event text blocks -----------------------------------------------------
     ev = {int(b["off"], 16): b["len"] for b in W.event_text_blocks(rom)}
-    d = _j("arenas/event_text_blocks.json")
+    d = _j("zh/event_text.json")
     total = matched = 0
     notes = []
     for e in d["entries"]:

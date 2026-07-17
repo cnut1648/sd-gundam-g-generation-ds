@@ -65,7 +65,7 @@ def main() -> int:
     # The golden shows the typewriter-partial first line 木马似乎还没有察觉到我
     # (12 glyphs) of _STG00's 玛利根 line.  Encode exactly those 12 glyphs from
     # the source bytes so oracle output matches the visible capture.
-    stg = json.loads((REPO / "data/dialogue/stages/_STG00.json").read_text())
+    stg = json.loads((REPO / "data/zh/stages/_STG00.json").read_text())
     target = None
     for r in stg.get("edits", []):
         if "木马似乎还没有察觉到我" in (r.get("zh_text") or ""):
