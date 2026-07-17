@@ -431,20 +431,36 @@ class Pools:
                     break
         vac_span = None
         if not cand:
-            # ledger-vacated spans
+            # ledger-vacated spans — but NEVER one that is already occupied
+            # (an earlier allocation this run may have consumed it and written
+            # an entry; the raw vacated list has no occupancy awareness — the
+            # 新吉翁老兵/新吉翁NT same-span collision class)
             for arena, rel in ((self.ui, "ui_names_bank.json"),
                                (self.caves, "resident_caves.json"),
                                (self.bnp, "battle_name_pool.json")):
                 if name_band and arena is not self.caves:
                     continue
                 _u, vac = self._ledger_spans(rel)
+                reserved = []
+                for a in self._alloc_marks + self.ledger["allocations"]:
+                    if a.get("pool") and str(a["pool"]).endswith(rel) \
+                            and a.get("offset"):
+                        o0 = int(a["offset"], 16)
+                        reserved.append((o0, o0 + int(a.get("reserved")
+                                                      or a.get("bytes") or 0)))
                 for s, e in vac:
                     if name_band and not any(lo <= s and e <= hi for lo, hi in rngs):
                         continue
-                    if e - s >= need:
-                        cand.append((arena, s, rel))
-                        vac_span = (arena, s, e)
-                        break
+                    if e - s < need:
+                        continue
+                    # the span may still hold its STALE pre-vacate entry
+                    # (overwritten on reuse); what must never overlap is a
+                    # pending/committed ALLOCATION (the double-alloc class)
+                    if any(a0 < e and a1 > s for a0, a1 in reserved):
+                        continue
+                    cand.append((arena, s, rel))
+                    vac_span = (arena, s, e)
+                    break
                 if cand:
                     break
         if not cand:
