@@ -417,9 +417,9 @@
    ]
   },
   {
-   "zh": "分身·神之影",
+   "zh": "分身杀法·神影",
    "old_ptr": "0x20B6EB2",
-   "ptr": "0x218A427",
+   "ptr": "0x218C85F",
    "sites": [
     "0xE8DB0",
     "0xE8DCC",
@@ -2925,13 +2925,6 @@
    "old_value": "0x0",
    "what": "battle-text bank (file 1da) 129-entry u32 offset table, entry 1",
    "why": "the bank grew: entry 1 re-aimed at the appended grown block (offset = the original bank size)"
-  },
-  {
-   "file_offset": "0x178278",
-   "value": "0x2F1",
-   "old_value": "0x430",
-   "what": "ability-record bank (file 1df) record-offset word",
-   "why": "one record's text is read straight from this u32 offset into the decompressed bank; re-aimed at a re-encoded record"
   }
  ]
 }

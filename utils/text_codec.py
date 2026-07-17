@@ -42,6 +42,18 @@ class Charmap:
 
     def __init__(self, path: Path | None = None):
         raw = json.loads((path or DATA_DIR / "charmap.json").read_text())
+        # renderB one-byte identities (trampoline font): a one-byte code may
+        # be REUSED on a bank surface only when it draws the same character
+        # there.  charmap.one_byte is the STAGE (renderA atlas) table; the two
+        # fonts disagree on most codes (atlas 0xD9=来 but renderB 0xD9=！ —
+        # the 为何而来！→为何而！！ garble class).
+        self._renderb_char: dict[int, str] = {}
+        rb_path = (path or DATA_DIR / "charmap.json").parent / "renderb_charset.json"
+        if rb_path.exists():
+            rb = json.loads(rb_path.read_text())
+            for code_s, e in rb.get("slots", {}).items():
+                if isinstance(e, dict) and e.get("char"):
+                    self._renderb_char[int(code_s)] = e["char"]
         # encode tables
         self.one_byte: dict[str, int] = raw["one_byte"]              # char -> 1-byte code
         self.two_byte_zh: dict[str, int] = raw["two_byte_zh"]        # char -> slot (2196+)
@@ -113,7 +125,13 @@ class Charmap:
         skipped (see _token_hazard)."""
         if ch in self.one_byte:
             code = self.one_byte[ch]
-            if surface == "stage" or code in allowed_one_bytes:
+            if surface == "stage":
+                return code
+            # bank surface: the byte must be JP-record-proven AND render the
+            # SAME character in the renderB font (the two fonts share almost
+            # no one-byte identities; e.g. 0xD9 is 来 on renderA but ！ on
+            # renderB — emitting it for 来 garbles the nameplate)
+            if code in allowed_one_bytes and self._renderb_char.get(code) == ch:
                 return code
         slot = self.two_byte_zh.get(ch)
         if slot is not None and not self._token_hazard(slot, allow_low15):
