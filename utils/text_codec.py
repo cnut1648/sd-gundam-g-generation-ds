@@ -96,7 +96,7 @@ class Charmap:
             library/hangar banks): every slot renders from the 12x12 atlas,
             so the cheap one-byte codes (atlas slots 0..223) are preferred,
             then ZH slots, then JP slots.
-        surface="bank"   (trampoline: data/arenas banks, the four battle
+        surface="bank"   (trampoline: data/zh/placements banks, the four battle
             effect banks, ID-command/ability panels, battle-info rows): slots
             < 2196 render from the renderB 8x16 JP UI font whose charset
             DIFFERS from the atlas (atlas 206 = 兵 but renderB 206 = 無).

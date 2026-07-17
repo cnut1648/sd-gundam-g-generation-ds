@@ -1,0 +1,524 @@
+{
+ "file": "1da.bin",
+ "what": "ID-ABILITY effect-card label bank (the compact effect box on the in-battle info screen: scope lines like 团队内/自身以外 plus stat lines like 命中率/暴击 ↑). 129 records addressed by a count+offsets u32 table inside the code binary. Record 0 outgrew its slot and was relocated: a full re-encoded copy is appended at the old end of file (the code binary's offset table points there), which is the only reason this file grew.",
+ "format": "edits",
+ "note": "jp reference strings in this bank are approximate: it mixes bank-local single-byte token conventions with dictionary macros the generic decoder cannot fully resolve. zh strings are byte-exact.",
+ "edits": [
+  {
+   "offset": "0x0",
+   "size": 68,
+   "zh": "团队内{00}。自身以外{00}。命中率ャ〜{SLOT:2022}{00}。回避率ャ〜{SLOT:2022}{00}。攻击ャ〜{SLOT:2022}{00}。减伤〜{SLOT:2022}{00}。",
+   "zh_hex": "ea5ee7c9e99a0003efb5e88de7f3e8f70003e853ef4ee9e1e071e003e7060003ef52efd9e9e1e071e003e7060003ef67e7cce071e003e7060003ed24e8f9e003e7060003"
+  },
+  {
+   "offset": "0x59",
+   "size": 7,
+   "zh": "。{F0:368}ャ.",
+   "zh_hex": "03f170e071e002"
+  },
+  {
+   "offset": "0x61",
+   "size": 10,
+   "zh": "。暴击ャ、{01}{01}",
+   "zh_hex": "03ea4fe7cce071020101"
+  },
+  {
+   "offset": "0x90",
+   "size": 27,
+   "zh": "可用{F0:94}武器{00}。{F0:368}ャ〜{00}。暴击ャ。",
+   "zh_hex": "e7c4efb3f05ee8ece8c30003f170e071e0060003ea4fe7cce07103"
+  },
+  {
+   "offset": "0xcf",
+   "size": 28,
+   "zh": "。可用{F0:94}武器{00}。{F0:368}ャ{F0:3584}{00}。暴击ャ·",
+   "zh_hex": "03e7c4efb3f05ee8ece8c30003f170e071fe000003ea4fe7cce07104"
+  },
+  {
+   "offset": "0x10f",
+   "size": 30,
+   "zh": "。可用{F0:94}武器{00}。{F0:368}ャ、ー{00}。暴击ャ.",
+   "zh_hex": "03e7c4efb3f05ee8ece8c30003f170e07102e0040003ea4fe7cce071e002"
+  },
+  {
+   "offset": "0x15d",
+   "size": 7,
+   "zh": "。{F0:368}ャ{F0:2909}",
+   "zh_hex": "03f170e071fb5d"
+  },
+  {
+   "offset": "0x165",
+   "size": 35,
+   "zh": "。暴击ャ〜{00}。{F0:375}{F0:50}ャ〜{SLOT:2022}{00}。命中率ャ{F0:2773}{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071e0030003f177f032e071e003e7060003e853ef4ee9e1e071fad5e706"
+  },
+  {
+   "offset": "0x189",
+   "size": 15,
+   "zh": "。回避率ャ{F0:2773}{SLOT:2022}{00}。",
+   "zh_hex": "03ef52efd9e9e1e071fad5e7060003"
+  },
+  {
+   "offset": "0x1ad",
+   "size": 35,
+   "zh": "。射連近連回ャ。{00}。{F0:368}ャ·{00}。{00}。{00}。{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "03ef65dbefd8dbef52e071030003f170e071040003000300030003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0x1dc",
+   "size": 7,
+   "zh": "。{F0:368}ャー",
+   "zh_hex": "03f170e071e004"
+  },
+  {
+   "offset": "0x1ec",
+   "size": 120,
+   "zh": "可用{F0:94}武器{00}。射連近連回ャー{00}。{F0:368}ャ～{00}。暴击ャ、{00}。{F0:375}{F0:50}ャ、{SLOT:2022}{00}。{00}。可用{F0:94}武器{00}。射連近連回ャ〜{00}。{F0:368}ャ{F0:3584}{00}。暴击ャ。{00}。{F0:375}{F0:50}ャ。{SLOT:2022}{00}。{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "e7c4efb3f05ee8ece8c30003ef65dbefd8dbef52e071e0040003f170e071e0070003ea4fe7cce071020003f177f032e07102e70600030003e7c4efb3f05ee8ece8c30003ef65dbefd8dbef52e071e0060003f170e071fe000003ea4fe7cce071030003f177f032e07103e70600030003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0x265",
+   "size": 46,
+   "zh": "。射近回+10{00}。{F0:368}ャ、〜{00}。暴击ャ·{00}。{F0:375}{F0:50}ャ·{SLOT:2022}{00}。{00}。",
+   "zh_hex": "03ef65efd8ef52ef5eeff7e9980003f170e07102e0030003ea4fe7cce071040003f177f032e07104e70600030003"
+  },
+  {
+   "offset": "0x29f",
+   "size": 38,
+   "zh": "。射連近連回ャ·{00}。{F0:368}ャ。{00}。{00}。{00}。{00}。{00}。私連機連俺ャー",
+   "zh_hex": "03ef65dbefd8dbef52e071040003f170e0710300030003000300030003a8db92db88e071e004"
+  },
+  {
+   "offset": "0x2c6",
+   "size": 7,
+   "zh": "。{F0:368}ャ.",
+   "zh_hex": "03f170e071e002"
+  },
+  {
+   "offset": "0x2e2",
+   "size": 7,
+   "zh": "。{F0:368}ャー",
+   "zh_hex": "03f170e071e004"
+  },
+  {
+   "offset": "0x2fe",
+   "size": 7,
+   "zh": "。{F0:368}ャ〜",
+   "zh_hex": "03f170e071e006"
+  },
+  {
+   "offset": "0x31b",
+   "size": 7,
+   "zh": "。{F0:368}ャ{F0:2773}",
+   "zh_hex": "03f170e071fad5"
+  },
+  {
+   "offset": "0x337",
+   "size": 8,
+   "zh": "。范围{SLOT:2008}。",
+   "zh_hex": "03ec8ee9dee6f803"
+  },
+  {
+   "offset": "0x340",
+   "size": 9,
+   "zh": "。指挥{SLOT:2008}〜",
+   "zh_hex": "03e8c0e949e6f8e003"
+  },
+  {
+   "offset": "0x34a",
+   "size": 37,
+   "zh": "。范围内{00}。命中回避{SLOT:2034}{00}。{00}。{00}。{00}{00}{00}{00}{00}范围{SLOT:2008}。",
+   "zh_hex": "03ec8ee9dee99a0003e853ef4eef52efd9e7120003000300030000000000ec8ee9dee6f803"
+  },
+  {
+   "offset": "0x370",
+   "size": 9,
+   "zh": "。指挥{SLOT:2008}{F0:2773}",
+   "zh_hex": "03e8c0e949e6f8fad5"
+  },
+  {
+   "offset": "0x37a",
+   "size": 37,
+   "zh": "。范围内{00}。命中回避{SLOT:2034}{00}。{00}。{00}。{00}{00}{00}{00}{00}范围{SLOT:2008}·",
+   "zh_hex": "03ec8ee9dee99a0003e853ef4eef52efd9e7120003000300030000000000ec8ee9dee6f804"
+  },
+  {
+   "offset": "0x3a0",
+   "size": 9,
+   "zh": "。指挥{SLOT:2008}{F0:2773}",
+   "zh_hex": "03e8c0e949e6f8fad5"
+  },
+  {
+   "offset": "0x3aa",
+   "size": 37,
+   "zh": "。范围内{00}。命中回避{SLOT:2034}{00}。{00}。{00}。{00}{00}{00}{00}{00}范围{SLOT:2008}·",
+   "zh_hex": "03ec8ee9dee99a0003e853ef4eef52efd9e7120003000300030000000000ec8ee9dee6f804"
+  },
+  {
+   "offset": "0x3d0",
+   "size": 10,
+   "zh": "。指挥{SLOT:2008}、〜",
+   "zh_hex": "03e8c0e949e6f802e003"
+  },
+  {
+   "offset": "0x3db",
+   "size": 37,
+   "zh": "。范围内{00}。命中回避{SLOT:2034}{00}。{00}。{00}。{00}{00}{00}{00}范围{SLOT:2008}.",
+   "zh_hex": "03ec8ee9dee99a0003e853ef4eef52efd9e71200030003000300000000ec8ee9dee6f8e002"
+  },
+  {
+   "offset": "0x401",
+   "size": 10,
+   "zh": "。指挥{SLOT:2008}、〜",
+   "zh_hex": "03e8c0e949e6f802e003"
+  },
+  {
+   "offset": "0x40c",
+   "size": 27,
+   "zh": "。范围内{00}。命中回避{SLOT:2034}{00}。{00}。{00}。",
+   "zh_hex": "03ec8ee9dee99a0003e853ef4eef52efd9e712000300030003"
+  },
+  {
+   "offset": "0x433",
+   "size": 7,
+   "zh": "。每回合",
+   "zh_hex": "03ec25ef52efc0"
+  },
+  {
+   "offset": "0x43b",
+   "size": 9,
+   "zh": "。{F0:1011}ャー{01}{01}",
+   "zh_hex": "03f3f3e071e0040101"
+  },
+  {
+   "offset": "0x45b",
+   "size": 15,
+   "zh": "。团队内{00}。每回合",
+   "zh_hex": "03ea5ee7c9e99a0003ec25ef52efc0"
+  },
+  {
+   "offset": "0x46b",
+   "size": 9,
+   "zh": "。{F0:1011}ャ.{01}{01}",
+   "zh_hex": "03f3f3e071e0020101"
+  },
+  {
+   "offset": "0x487",
+   "size": 7,
+   "zh": "。击破时",
+   "zh_hex": "03e7ccef6def2d"
+  },
+  {
+   "offset": "0x48f",
+   "size": 8,
+   "zh": "。{F0:1011}ャ·{01}{01}",
+   "zh_hex": "03f3f3e071040101"
+  },
+  {
+   "offset": "0x4af",
+   "size": 15,
+   "zh": "。团队内{00}。击破时",
+   "zh_hex": "03ea5ee7c9e99a0003e7ccef6def2d"
+  },
+  {
+   "offset": "0x4bf",
+   "size": 8,
+   "zh": "。{F0:1011}ャ。{01}{01}",
+   "zh_hex": "03f3f3e071030101"
+  },
+  {
+   "offset": "0x4db",
+   "size": 14,
+   "zh": "。团队{00}。移动ャ、",
+   "zh_hex": "03ea5ee7c90003ec83ef30e07102"
+  },
+  {
+   "offset": "0x4ff",
+   "size": 23,
+   "zh": "。先制率上升{00}。{00}。{00}。{00}。{00}。{00}。",
+   "zh_hex": "03ef8be8dee9e1ef4ced2b000300030003000300030003"
+  },
+  {
+   "offset": "0x523",
+   "size": 6,
+   "zh": "。间接{01}",
+   "zh_hex": "03e8fcefce01"
+  },
+  {
+   "offset": "0x54b",
+   "size": 7,
+   "zh": "。团队内",
+   "zh_hex": "03ea5ee7c9e99a"
+  },
+  {
+   "offset": "0x573",
+   "size": 7,
+   "zh": "。团队内",
+   "zh_hex": "03ea5ee7c9e99a"
+  },
+  {
+   "offset": "0x59b",
+   "size": 11,
+   "zh": "。暴击ャ〜{01}{01}",
+   "zh_hex": "03ea4fe7cce071e0030101"
+  },
+  {
+   "offset": "0x5e3",
+   "size": 25,
+   "zh": "。射击力ャ{F0:2773}{SLOT:2022}{00}。{00}。{00}。{00}。{00}。{00}。",
+   "zh_hex": "03ef65e7ccefb0e071fad5e706000300030003000300030003"
+  },
+  {
+   "offset": "0x607",
+   "size": 25,
+   "zh": "。近接力ャ{F0:2773}{SLOT:2022}{00}。{00}。{00}。{00}。{00}。{00}。",
+   "zh_hex": "03efd8efceefb0e071fad5e706000300030003000300030003"
+  },
+  {
+   "offset": "0x62b",
+   "size": 11,
+   "zh": "。减伤{F0:2773}{SLOT:2022}{01}{01}",
+   "zh_hex": "03ed24e8f9fad5e7060101"
+  },
+  {
+   "offset": "0x644",
+   "size": 11,
+   "zh": "减伤、〜{SLOT:2022}{01}{01}",
+   "zh_hex": "ed24e8f902e003e7060101"
+  },
+  {
+   "offset": "0x65c",
+   "size": 12,
+   "zh": "捕获率ャ{F0:2909}{SLOT:2022}",
+   "zh_hex": "efcde9d8e9e1e071fb5de706"
+  },
+  {
+   "offset": "0x673",
+   "size": 1,
+   "zh": "。",
+   "zh_hex": "03"
+  },
+  {
+   "offset": "0x67f",
+   "size": 23,
+   "zh": "。暴击ャ·{00}。完全回避ャ·{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071040003e87eefb4ef52efd9e07104e706"
+  },
+  {
+   "offset": "0x69f",
+   "size": 11,
+   "zh": "。暴击ャー{01}{01}",
+   "zh_hex": "03ea4fe7cce071e0040101"
+  },
+  {
+   "offset": "0x6d7",
+   "size": 36,
+   "zh": "。先制率上升{00}。暴击ャ〜{00}。近接力ャ、〜{SLOT:2022}",
+   "zh_hex": "03ef8be8dee9e1ef4ced2b0003ea4fe7cce071e0030003efd8efceefb0e07102e003e706"
+  },
+  {
+   "offset": "0x704",
+   "size": 176,
+   "zh": "暴击ャ〜{00}。近接力ャ、〜{SLOT:2022}{00}。{00}。{00}。{00}。{00}。{00}{00}{00}先制率上升{00}。暴击ャ〜{00}。{F0:375}{F0:50}ャ〜{SLOT:2022}{00}。命中率ャ{F0:2773}{SLOT:2022}{00}。回避率ャ{F0:2773}{SLOT:2022}{00}。機常目ャ、〜{SLOT:2022}{00}。{00}{00}可用{F0:94}武器{00}。射連近連回ャ〜{00}。{F0:368}ャ{F0:3584}{00}。暴击ャ。{00}。{F0:375}{F0:50}ャ。{SLOT:2022}{00}。{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "ea4fe7cce071e0030003efd8efceefb0e07102e003e70600030003000300030003000000ef8be8dee9e1ef4ced2b0003ea4fe7cce071e0030003f177f032e071e003e7060003e853ef4ee9e1e071fad5e7060003ef52efd9e9e1e071fad5e706000392b3d5e07102e003e70600030000e7c4efb3f05ee8ece8c30003ef65dbefd8dbef52e071e0060003f170e071fe000003ea4fe7cce071030003f177f032e07103e70600030003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0x7b5",
+   "size": 93,
+   "zh": "。射連近連回ャ。{00}。{F0:368}ャ·{00}。暴击ャ、{00}。{F0:375}{F0:50}ャ、{SLOT:2022}{00}。{F0:1471}{F0:50}爆ャ、{SLOT:2022}{00}。{00}可用{F0:94}武器{00}。私連機連俺ャー{00}。{F0:368}ャ～{00}。暴击ャ·",
+   "zh_hex": "03ef65dbefd8dbef52e071030003f170e071040003ea4fe7cce071020003f177f032e07102e7060003f5bff032e4cce07102e706000300e7c4efb3f05ee8ece8c30003a8db92db88e071e0040003f170e071e0070003ea4fe7cce07104"
+  },
+  {
+   "offset": "0x835",
+   "size": 67,
+   "zh": "。射連近連回ャ〜{00}。{F0:368}ャ{F0:3584}{00}。暴击ャ.{00}。{F0:375}{F0:50}ャ.{SLOT:2022}{00}。{F0:1471}{F0:50}爆ャ.{SLOT:2022}{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "03ef65dbefd8dbef52e071e0060003f170e071fe000003ea4fe7cce071e0020003f177f032e071e002e7060003f5bff032e4cce071e002e7060003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0x879",
+   "size": 99,
+   "zh": "。射連近連回ャ〜{00}。{F0:368}ャ{F0:3584}{00}。暴击ャ.{00}。{F0:375}{F0:50}ャ.{SLOT:2022}{00}。{F0:1471}{F0:50}爆ャ.{SLOT:2022}{00}。可用{F0:94}武器{00}。私連機連俺ャ{F0:2773}{00}。{F0:368}ャ、〜{00}。暴击ャ〜",
+   "zh_hex": "03ef65dbefd8dbef52e071e0060003f170e071fe000003ea4fe7cce071e0020003f177f032e071e002e7060003f5bff032e4cce071e002e7060003e7c4efb3f05ee8ece8c30003a8db92db88e071fad50003f170e07102e0030003ea4fe7cce071e003"
+  },
+  {
+   "offset": "0x8f7",
+   "size": 31,
+   "zh": "。射近回+20{00}。{00}。{00}。{00}。{00}。{00}。凭意志",
+   "zh_hex": "03ef65efd8ef52ef5eef5fe998000300030003000300030003ea49ef3cea18"
+  },
+  {
+   "offset": "0x917",
+   "size": 7,
+   "zh": "。{F0:711}觉醒",
+   "zh_hex": "03f2c7e8aeeb20"
+  },
+  {
+   "offset": "0x927",
+   "size": 35,
+   "zh": "。暴击ャ〜{00}。{F0:375}{F0:50}ャ〜{SLOT:2022}{00}。命中率ャ〜{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071e0030003f177f032e071e003e7060003e853ef4ee9e1e071e003e706"
+  },
+  {
+   "offset": "0x95b",
+   "size": 23,
+   "zh": "。暴击ャ〜{00}。命中率ャ〜{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071e0030003e853ef4ee9e1e071e003e706"
+  },
+  {
+   "offset": "0x973",
+   "size": 23,
+   "zh": "。回避率ャ〜{SLOT:2022}{00}。减伤{F0:2773}{SLOT:2022}",
+   "zh_hex": "03ef52efd9e9e1e071e003e7060003ed24e8f9fad5e706"
+  },
+  {
+   "offset": "0x98f",
+   "size": 53,
+   "zh": "。命中率ャ{F0:2909}{SLOT:2022}{00}。射击力ャ{F0:2909}{SLOT:2022}{00}。减伤{F0:1625}{SLOT:2022}{00}。{00}。{00}。{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "03e853ef4ee9e1e071fb5de7060003ef65e7ccefb0e071fb5de7060003ed24e8f9f659e7060003000300030003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0x9c5",
+   "size": 7,
+   "zh": "。{F0:368}ャ{F0:2909}",
+   "zh_hex": "03f170e071fb5d"
+  },
+  {
+   "offset": "0x9cd",
+   "size": 35,
+   "zh": "。暴击ャ〜{00}。{F0:375}{F0:50}ャ〜{SLOT:2022}{00}。命中率ャ{F0:2773}{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071e0030003f177f032e071e003e7060003e853ef4ee9e1e071fad5e706"
+  },
+  {
+   "offset": "0x9f1",
+   "size": 25,
+   "zh": "。回避率ャ{F0:2773}{SLOT:2022}{00}。私連機連俺ャ、〜",
+   "zh_hex": "03ef52efd9e9e1e071fad5e7060003a8db92db88e07102e003"
+  },
+  {
+   "offset": "0xa0b",
+   "size": 8,
+   "zh": "。{F0:368}ャ、〜",
+   "zh_hex": "03f170e07102e003"
+  },
+  {
+   "offset": "0xa14",
+   "size": 12,
+   "zh": "。减伤、〜{SLOT:2022}{01}{01}",
+   "zh_hex": "03ed24e8f902e003e7060101"
+  },
+  {
+   "offset": "0xa27",
+   "size": 37,
+   "zh": "。暴击ャ〜{00}。射击力ャ{F0:2773}{SLOT:2022}{00}。近接力ャ{F0:2773}{SLOT:2022}",
+   "zh_hex": "03ea4fe7cce071e0030003ef65e7ccefb0e071fad5e7060003efd8efceefb0e071fad5e706"
+  },
+  {
+   "offset": "0xa53",
+   "size": 35,
+   "zh": "。射近回+10{00}。{00}。{00}。{00}。{00}。{00}。私連機連俺ャ、〜",
+   "zh_hex": "03ef65efd8ef52ef5eeff7e998000300030003000300030003a8db92db88e07102e003"
+  },
+  {
+   "offset": "0xa84",
+   "size": 10,
+   "zh": "减伤〜{SLOT:2022}{01}{01}",
+   "zh_hex": "ed24e8f9e003e7060101"
+  },
+  {
+   "offset": "0xa9c",
+   "size": 40,
+   "zh": "射近回+10{00}。减伤{F0:2909}{SLOT:2022}{00}。{00}。{00}。{00}。{00}。{F0:94}{F0:139}{F0:658}{F0:365}",
+   "zh_hex": "ef65efd8ef52ef5eeff7e9980003ed24e8f9fb5de70600030003000300030003f05ef08bf292f16d"
+  },
+  {
+   "offset": "0xb9b",
+   "size": 52,
+   "zh": "。全军团{F0:1011}{00}。共享{01}{00}。每回合{00}。随军团人数{00}。{F0:1011}相应变动{00}。{00}。",
+   "zh_hex": "03efb4e7e0ea5ef3f30003ea48ec06010003ec25ef52efc00003e9a1e7e0ea5eefb2e9140003f3f3e8b1e873e955ef3000030003"
+  },
+  {
+   "offset": "0xbda",
+   "size": 50,
+   "zh": "。·回合后{00}。失效{00}。{00}。{00}。{00}。射連近連回ユ.{00}。{F0:368}ユ〜{00}。俺舰俺复",
+   "zh_hex": "0304ef52efc0e7fe0003e8a5ea8f0003000300030003ef65dbefd8dbef52e072e0020003f170e072e006000388e7d488e9ee"
+  },
+  {
+   "offset": "0xc13",
+   "size": 104,
+   "zh": "。当前{F0:1011}{00}。达{F0:2909}以上时{00}。觉醒{00}。{00}。{00}。{00}。友方·机{00}。被击破或{00}。总伤害{01}{00}。超ー千时{01}{00}。觉醒{00}。{00}。{00}总伤害{01}{00}。超、万时{01}{00}。觉醒",
+   "zh_hex": "03ef53ef51f3f30003ef2bfb5de7f3ef4cef2d0003e8aeeb200003000300030003e960efb104e7e40003e7f1e7ccef6de9050003e881e8f9e988010003eaf6e005eafdef2d010003e8aeeb200003000300e881e8f9e988010003eaf602e9f8ef2d010003e8aeeb20"
+  },
+  {
+   "offset": "0xc84",
+   "size": 24,
+   "zh": "自身{F0:2910}{00}。低于ー成时{00}。觉醒",
+   "zh_hex": "efb5e88dfb5e0003ec08e879e005e837ef2d0003e8aeeb20"
+  },
+  {
+   "offset": "0xca3",
+   "size": 39,
+   "zh": "。当前{F0:1011}{00}。达{F0:2909}以上时{00}。{SLOT:2012}高达{00}。解放真之力",
+   "zh_hex": "03ef53ef51f3f30003ef2bfb5de7f3ef4cef2d0003e6fce812ef2b0003e89de86ce820e7cdefb0"
+  },
+  {
+   "offset": "0xccf",
+   "size": 103,
+   "zh": "。自身{F0:2910}{00}。半数以下或{00}。阿姆罗{00}。半数以下时{00}。{SLOT:2012}高达{00}。解放真之力{00}。当前{F0:1011}{01}{00}。达{F0:2909}以上时{00}。{F0:1184}モ{F0:1184}改ャ{01}{00}。解放真之力",
+   "zh_hex": "03efb5e88dfb5e0003eadee914e7f3ef4de9050003e7d2e823e7ec0003eadee914e7f3ef4def2d0003e6fce812ef2b0003e89de86ce820e7cdefb00003ef53ef51f3f3010003ef2bfb5de7f3ef4cef2d0003f4a07df4a0e9f07e010003e89de86ce820e7cdefb0"
+  },
+  {
+   "offset": "0xd3b",
+   "size": 31,
+   "zh": "。当前{F0:1011}{00}。达{F0:2909}以上时{00}。自机{00}。解锁",
+   "zh_hex": "03ef53ef51f3f30003ef2bfb5de7f3ef4cef2d0003efb5e7e40003e89debfa"
+  },
+  {
+   "offset": "0xd5f",
+   "size": 26,
+   "zh": "。爱娜{F0:2910}{00}。低于{F0:3586}{SLOT:2022}时{00}。奋战{01}",
+   "zh_hex": "03e8d5e7eafb5e0003ec08e879fe02e706ef2d0003ef46ef2801"
+  },
+  {
+   "offset": "0xd84",
+   "size": 114,
+   "zh": "当前{F0:1011}{01}{00}。达{F0:2909}以上时{00}。零式{01}{00}。解放真之力{00}。{00}。{00}。当前{F0:1011}{01}{00}。达{F0:2909}以上时{00}。零式{01}{00}。解放真之力{00}。{00}。{00}。自身{F0:2910}{00}。低于ー成时{00}。哭メメ用{01}",
+   "zh_hex": "ef53ef51f3f3010003ef2bfb5de7f3ef4cef2d0003eb74ea26010003e89de86ce820e7cdefb0000300030003ef53ef51f3f3010003ef2bfb5de7f3ef4cef2d0003eb74ea26010003e89de86ce820e7cdefb0000300030003efb5e88dfb5e0003ec08e879e005e837ef2d0003ed387c7cd801"
+  },
+  {
+   "offset": "0xe00",
+   "size": 34,
+   "zh": "自身{F0:2910}{00}。低于ー成时{00}。强化{00}。能力暴走",
+   "zh_hex": "efb5e88dfb5e0003ec08e879e005e837ef2d0003e8ade9a50003e7c6efb0ea4fe890"
+  },
+  {
+   "offset": "0xe27",
+   "size": 43,
+   "zh": "。总伤害{01}{00}。超〜千时{01}{00}。突击破坏{01}{00}。解放真之力{01}",
+   "zh_hex": "03e881e8f9e988010003eaf6e003eafdef2d010003e8b6e7ccef6de9ed010003e89de86ce820e7cdefb001"
+  },
+  {
+   "offset": "0xe57",
+   "size": 48,
+   "zh": "。友方。机{00}。被击破或{00}。总伤害{00}。超〜千时{00}。命之力暴走",
+   "zh_hex": "03e960efb103e7e40003e7f1e7ccef6de9050003e881e8f9e9880003eaf6e003eafdef2d0003e853e7cdefb0ea4fe890"
+  },
+  {
+   "offset": "0xe8c",
+   "size": 254,
+   "zh": "友方、机{00}。被击破或{00}。总伤害{01}{00}。超。千时{01}{00}。命之力暴走{00}。{00}。总伤害{01}{00}。超〜千或{01}{00}。自身{F0:2910}{00}。低于ー成时{00}。众人命之力{00}。集于{F0:1628}{00}。当前{F0:1011}{00}。达{F0:2909}以上时{00}。全体{00}。能力{00}。增大{00}。{00}。{00}{00}{00}{00}总伤害{00}。超ー千或{00}。自身{F0:2910}{00}。低于ー成时{00}。全身活性化{00}。能力增大{00}。自身{F0:2910}{00}。半数以下时{00}。接身{00}。能力增大{01}{01}{01}{01}{01}",
+   "zh_hex": "e960efb102e7e40003e7f1e7ccef6de9050003e881e8f9e988010003eaf603eafdef2d010003e853e7cdefb0ea4fe89000030003e881e8f9e988010003eaf6e003eafde905010003efb5e88dfb5e0003ec08e879e005e837ef2d0003eafbefb2e853e7cdefb00003ea98e879f65c0003ef53ef51f3f30003ef2bfb5de7f3ef4cef2d0003efb4ef4f0003e7c6efb00003ea3defa50003000300000000e881e8f9e9880003eaf6e005eafde9050003efb5e88dfb5e0003ec08e879e005e837ef2d0003efb4e88de8d4e951e9a50003e7c6efb0ea3defa50003efb5e88dfb5e0003eadee914e7f3ef4def2d0003b7e88d0003e7c6efb0ea3defa50101010101"
+  },
+  {
+   "offset": "0xf8f",
+   "size": 1,
+   "zh": "。",
+   "zh_hex": "03"
+  }
+ ],
+ "append": {
+  "size": 68,
+  "why": "record 0 (the effect-scope label record) re-encoded at full length; appended because it no longer fits its original slot — the code binary's record-offset table entry 0 points at this copy",
+  "zh": "团队内{00}。自身以外{00}。命中率ャ〜{SLOT:2022}{00}。回避率ャ〜{SLOT:2022}{00}。攻击ャ〜{SLOT:2022}{00}。减伤〜{SLOT:2022}{00}。",
+  "zh_hex": "ea5ee7c9e99a0003efb5e88de7f3e8f70003e853ef4ee9e1e071e003e7060003ef52efd9e9e1e071e003e7060003ef67e7cce071e003e7060003ed24e8f9e003e7060003"
+ }
+}

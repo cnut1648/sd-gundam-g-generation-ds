@@ -1,0 +1,272 @@
+{
+ "file": "c4f.bin",
+ "what": "Battle-voice bark bank: the short spoken lines rendered during combat. Records are framed 05 VV WW 00 06 SS TT <text run> 00 03 00 01; every rewrite here is in place, 0x00-padded to the original run budget, with the framing bytes preserved (a stray non-zero byte in the 00-pad gap before a sub-header makes the renderer mis-parse the next sub-line as garbage).",
+ "format": "edits",
+ "edits": [
+  {
+   "offset": "0x8",
+   "size": 23,
+   "zh": "我上了！以东方不败之名！！"
+  },
+  {
+   "offset": "0x2c",
+   "size": 34,
+   "zh": "我这只手赤红燃烧！怒吼着抓住胜利！"
+  },
+  {
+   "offset": "0x5a",
+   "size": 23,
+   "zh": "{SLOT:4196}热！神之手指——！！"
+  },
+  {
+   "offset": "0x80",
+   "size": 27,
+   "zh": "石破！！天惊拳！！！！"
+  },
+  {
+   "offset": "0xa8",
+   "size": 23,
+   "zh": "我上了！以东方不败之名！！"
+  },
+  {
+   "offset": "0xcc",
+   "size": 34,
+   "zh": "我这只手赤红燃烧！怒吼着抓住胜利！"
+  },
+  {
+   "offset": "0xfa",
+   "size": 9,
+   "zh": "{SLOT:4196}热！！！"
+  },
+  {
+   "offset": "0x110",
+   "size": 32,
+   "zh": "石破天惊！！神之手指——！！"
+  },
+  {
+   "offset": "0x13c",
+   "size": 5,
+   "zh": "那就！"
+  },
+  {
+   "offset": "0x150",
+   "size": 13,
+   "zh": "超级！霸王！！"
+  },
+  {
+   "offset": "0x16c",
+   "size": 14,
+   "zh": "电影弹！！"
+  },
+  {
+   "offset": "0x188",
+   "size": 5,
+   "zh": "{SLOT:4196}炸！"
+  },
+  {
+   "offset": "0x19c",
+   "size": 10,
+   "zh": "就此了结！！"
+  },
+  {
+   "offset": "0x1b4",
+   "size": 6,
+   "zh": "了结！！"
+  },
+  {
+   "offset": "0x1c8",
+   "size": 17,
+   "zh": "我这只手赤红燃烧！"
+  },
+  {
+   "offset": "0x1e8",
+   "size": 15,
+   "zh": "怒吼着抓住胜利！"
+  },
+  {
+   "offset": "0x204",
+   "size": 9,
+   "zh": "{SLOT:4196}热——！"
+  },
+  {
+   "offset": "0x21c",
+   "size": 3,
+   "zh": "神！"
+  },
+  {
+   "offset": "0x22c",
+   "size": 10,
+   "zh": "之手指——"
+  },
+  {
+   "offset": "0x244",
+   "size": 7,
+   "zh": "热——！"
+  },
+  {
+   "offset": "0x258",
+   "size": 8,
+   "zh": "终结！！"
+  },
+  {
+   "offset": "0x26c",
+   "size": 17,
+   "zh": "我这只手赤红燃烧！"
+  },
+  {
+   "offset": "0x28c",
+   "size": 15,
+   "zh": "怒吼着抓住胜利！"
+  },
+  {
+   "offset": "0x2a8",
+   "size": 9,
+   "zh": "{SLOT:4196}热！！！"
+  },
+  {
+   "offset": "0x2c0",
+   "size": 3,
+   "zh": "神！"
+  },
+  {
+   "offset": "0x2d0",
+   "size": 10,
+   "zh": "之手指——"
+  },
+  {
+   "offset": "0x2e8",
+   "size": 7,
+   "zh": "热！！！"
+  },
+  {
+   "offset": "0x2fc",
+   "size": 8,
+   "zh": "终结！！"
+  },
+  {
+   "offset": "0x324",
+   "size": 10,
+   "zh": "上！{SLOT:2291}游炮！"
+  },
+  {
+   "offset": "0x33c",
+   "size": 13,
+   "zh": "若要违抗我……"
+  },
+  {
+   "offset": "0x358",
+   "size": 19,
+   "zh": "……只有歼灭！{SLOT:2291}游炮！"
+  },
+  {
+   "offset": "0x378",
+   "size": 13,
+   "zh": "{SLOT:2291}游炮还能用……"
+  },
+  {
+   "offset": "0x394",
+   "size": 10,
+   "zh": "那就能战！！"
+  },
+  {
+   "offset": "0x3a9",
+   "size": 6,
+   "zh": "！ク{01}哼"
+  },
+  {
+   "offset": "0x3b9",
+   "size": 38,
+   "zh": "！グ{01}已无人能阻止了！笼罩宇宙的憎恨！"
+  },
+  {
+   "offset": "0x3ec",
+   "size": 11,
+   "zh": "东方不败奥义"
+  },
+  {
+   "offset": "0x404",
+   "size": 11,
+   "zh": "十二王方牌！！"
+  },
+  {
+   "offset": "0x41c",
+   "size": 16,
+   "zh": "大{SLOT:4232}轮！！！"
+  },
+  {
+   "offset": "0x438",
+   "size": 7,
+   "zh": "黑暗……"
+  },
+  {
+   "offset": "0x44c",
+   "size": 5,
+   "zh": "之指！"
+  },
+  {
+   "offset": "0x460",
+   "size": 21,
+   "zh": "哼……！逐个理会没个完！"
+  },
+  {
+   "offset": "0x484",
+   "size": 5,
+   "zh": "那就！"
+  },
+  {
+   "offset": "0x495",
+   "size": 10,
+   "zh": "超级霸王！！"
+  },
+  {
+   "offset": "0x4ac",
+   "size": 14,
+   "zh": "电影弹！！"
+  },
+  {
+   "offset": "0x4c8",
+   "size": 5,
+   "zh": "{SLOT:4196}炸！"
+  },
+  {
+   "offset": "0x4dc",
+   "size": 14,
+   "zh": "此刻让你瞧瞧！！"
+  },
+  {
+   "offset": "0x4f8",
+   "size": 16,
+   "zh": "东方不败最终奥义"
+  },
+  {
+   "offset": "0x514",
+   "size": 20,
+   "zh": "石破！天惊拳！！"
+  },
+  {
+   "offset": "0x534",
+   "size": 7,
+   "zh": "给你力量"
+  },
+  {
+   "offset": "0x548",
+   "size": 12,
+   "zh": "微波、来了！！"
+  },
+  {
+   "offset": "0x560",
+   "size": 14,
+   "zh": "上啊啊啊！！！"
+  },
+  {
+   "offset": "0x579",
+   "size": 12,
+   "zh": "！な{01}月光蝶！！！"
+  },
+  {
+   "offset": "0x594",
+   "size": 14,
+   "zh": "V2的光之翼！！！"
+  }
+ ]
+}

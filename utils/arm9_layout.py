@@ -4,16 +4,20 @@ The translated game rebuilds its code binary from the ORIGINAL Japanese image in
 two moves:
 
 1. HEAD EDITS  [0x0 .. 0x1B6DA0)
-   The original image is kept and selectively overwritten from the data files:
-     * name tables      data/names/*.json    pointer words re-aimed at translated
-                                             strings (units, weapons, pilots,
-                                             ID commands, abilities, parts)
-     * UI tables        data/ui/*.json       label literal sites, the text-macro
-                                             dictionary, cut-in quote offsets,
-                                             resource offset words
-     * string arenas    data/arenas/*.json   translated strings written in place
-                                             (pools) or into verified-free caves,
-                                             plus the embedded event/briefing text
+   The original image is kept and selectively overwritten from the translation
+   mapping (keys = extractor addresses/ids; table geometry lives in
+   utils/extract/layout.py, the single home):
+     * unit/char maps   data/zh/units.json        name/weapon pointer words
+                        data/zh/characters.json   pilot/ID-command pointer words
+                                                  + detail offset-table slots
+     * UI map           data/zh/ui.json           label/ability literal sites, the
+                                                  text-macro dictionary, resource
+                                                  offset words (+ derived cut-in
+                                                  quote offsets, parts offsets)
+     * placements       data/zh/placements/*.json translated string bytes written
+                                                  in place (pools) or into
+                                                  verified-free caves
+     * event text       data/zh/event_text.json   embedded story/briefing blocks
      * code patches     data/patches/code_patches.json   documented render/decoder
                                              detours, cave bodies, gameplay tweaks
      * raw regions      data/patches/raw_regions.json    annotated residual bytes
@@ -24,8 +28,8 @@ two moves:
    a 5-entry list, so the boot code itself copies our data into RAM:
 
        [12x12 glyph atlas]   -> RAM 0x023027A0   data/font/atlas12.bin
-       [UI/name string bank] -> RAM 0x02328720   data/arenas/ui_names_bank.json
-       [briefing blob bank]  -> RAM 0x023E7000   data/arenas/briefing_blobs.json
+       [UI/name string bank] -> RAM 0x02328720   data/zh/placements/ui_names_bank.json
+       [briefing blob bank]  -> RAM 0x023E7000   data/zh/placements/briefing_blobs.json
        [5-entry autoload list]
 
    The autoload loader walks the list forward while its SOURCE pointer advances
@@ -77,12 +81,10 @@ FONT_RAM = 0x023027A0         # == BSS-clear end == original heap floor
 ITCM_ENTRY = (0x01FF8000, 0x520, 0)
 DTCM_ENTRY = (0x027C0000, 0x020, 0)
 
-# name-table geometry (documented in the data files; fixed by the game binary)
-UNIT_NAME_FIELD = 0x00
-WEAPON_BLOCK_OFF = 0x2C
-PILOT_NAME_FIELD = 0x04
-IDCMD_NAME_FIELD = 0x00
-IDCMD_SUMMARY_FIELD = 0x08
+# table geometry: single home = utils/extract/layout.py (the canonical
+# extraction package); the write side uses the SAME constants the extractor
+# reads with, so a location can never be extracted and patched differently.
+from .extract import layout as L  # noqa: E402
 
 
 def _i(v) -> int:
@@ -135,105 +137,74 @@ def _load(data_dir: Path, rel: str) -> dict:
 # ---------------------------------------------------------------------------
 
 def _apply_units(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/units.json")
-    t = d["table"]
-    base, stride = _i(t["file_offset"]), _i(t["stride"])
-    capacity_field = _i(t["carrier_capacity"].lstrip("+")) if "carrier_capacity" in t else None
-    for e in d["entries"]:
+    d = _load(data_dir, "zh/units.json")
+    for e in d["units"]:
+        rec = L.MASTER_TABLE + e["utid"] * L.MASTER_STRIDE
         if "ptr" in e:
-            img.put_u32(base + e["utid"] * stride + UNIT_NAME_FIELD,
-                        _i(e["ptr"]), f"unit name {e['utid']}")
-        if capacity_field is not None and "carrier_capacity" in e:
+            img.put_u32(rec + L.UNIT_NAME_FIELD, _i(e["ptr"]),
+                        f"unit name {e['utid']}")
+        if "carrier_capacity" in e:
             # warship carrier-capacity stat (u16). Spec/default value: applies to
             # newly acquired units; existing saves bake their own slot allocation.
-            img.put_u16(base + e["utid"] * stride + capacity_field,
-                        int(e["carrier_capacity"]),
+            img.put_u16(rec + L.UNIT_CARRIER_CAP, int(e["carrier_capacity"]),
                         f"unit {e['utid']} carrier capacity")
+        for wpn in e.get("weapons", []):
+            if "ptr" in wpn:
+                off = rec + L.WEAPON_BLOCK + wpn["slot"] * L.WEAPON_STRIDE
+                img.put_u32(off, _i(wpn["ptr"]),
+                            f"weapon name {e['utid']}/{wpn['slot']}")
 
 
-def _apply_weapons(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/weapons.json")
-    t = d["table"]
-    base, stride = _i(t["file_offset"]), _i(t["stride"])
-    woff, wstride = _i(t["weapons_offset"]), _i(t["weapon_stride"])
-    for e in d["entries"]:
+def _apply_characters(img: _Image, data_dir: Path):
+    d = _load(data_dir, "zh/characters.json")
+    for e in d["characters"]:
         if "ptr" in e:
-            off = base + e["utid"] * stride + woff + e["slot"] * wstride
-            img.put_u32(off, _i(e["ptr"]), f"weapon name {e['utid']}/{e['slot']}")
+            img.put_u32(L.CHARDB + e["cid"] * L.CHARDB_STRIDE + L.PILOT_NAME_FIELD,
+                        _i(e["ptr"]), f"pilot name {e['cid']}")
+        for idc in e.get("ids", []):
+            rec = L.IDCMD_TABLE + idc["idn"] * L.IDCMD_STRIDE
+            name = idc.get("name") or {}
+            summ = idc.get("summary") or {}
+            if "ptr" in name:
+                img.put_u32(rec + L.IDCMD_NAME, _i(name["ptr"]),
+                            f"ID command {idc['idn']} name")
+            if "ptr" in summ:
+                img.put_u32(rec + L.IDCMD_SUMMARY, _i(summ["ptr"]),
+                            f"ID command {idc['idn']} summary")
+    for e in d["detail_offsets"]:
+        img.put_u32(L.DETAIL_OFFTAB + e["didx"] * 4, _i(e["offset"]),
+                    f"ID command detail offset {e['didx']}")
 
 
-def _apply_pilots(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/pilots.json")
-    t = d["table"]
-    base, stride = _i(t["file_offset"]), _i(t["stride"])
-    for e in d["entries"]:
-        if "ptr" in e:
-            img.put_u32(base + e["char_id"] * stride + PILOT_NAME_FIELD,
-                        _i(e["ptr"]), f"pilot name {e['char_id']}")
-
-
-def _apply_id_commands(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/id_commands.json")
-    t = d["table"]
-    base, stride = _i(t["file_offset"]), _i(t["stride"])
-    for e in d["entries"]:
-        rec = base + e["id"] * stride
-        name = e.get("name") or {}
-        summ = e.get("summary") or {}
-        if "ptr" in name:
-            img.put_u32(rec + IDCMD_NAME_FIELD, _i(name["ptr"]),
-                        f"ID command {e['id']} name")
-        if "ptr" in summ:
-            img.put_u32(rec + IDCMD_SUMMARY_FIELD, _i(summ["ptr"]),
-                        f"ID command {e['id']} summary")
-    ot = d["detail_offset_table"]
-    obase = _i(ot["file_offset"])
-    for e in d["details"]:
-        if "offset" in e:
-            img.put_u32(obase + e["index"] * 4, _i(e["offset"]),
-                        f"ID command detail offset {e['index']}")
-
-
-def _apply_abilities(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/abilities.json")
-    for e in d["entries"]:
+def _apply_sites(img: _Image, entries: list, what: str):
+    """Re-aim every literal pointer word in `sites` (asserting the JP word)."""
+    for e in entries:
         new, old = _i(e["ptr"]), _i(e["old_ptr"])
         for site in e["sites"]:
-            img.put_u32(_i(site), new, f"ability name site {site}",
-                        expect_old=old)
+            img.put_u32(_i(site), new, f"{what} site {site}", expect_old=old)
 
 
 def _apply_parts(img: _Image, data_dir: Path):
-    d = _load(data_dir, "names/parts.json")
-    base = _i(d["table"]["file_offset"])
-    for e in d["entries"]:
-        img.put_u32(base + e["index"] * 4, _i(e["offset"]),
+    d = _load(data_dir, "zh/files/hangar/part_names.json")
+    for e in d["name_offset_words"]:
+        img.put_u32(L.PART_NAME_OFFTAB + e["index"] * 4, _i(e["offset"]),
                     f"parts name offset {e['index']}")
-
-
-def _apply_labels(img: _Image, data_dir: Path):
-    d = _load(data_dir, "ui/labels.json")
-    for e in d["entries"]:
-        new, old = _i(e["ptr"]), _i(e["old_ptr"])
-        for site in e["sites"]:
-            img.put_u32(_i(site), new, f"label site {site}", expect_old=old)
 
 
 def _apply_cutin_offsets(img: _Image, data_dir: Path):
     """Write the cut-in quote offset table DERIVED from the quote bank.
 
     The 1dc.bin quote bank is a concatenation of (header + payload +
-    terminator + pad4) records; the arm9 table holds each record's start
-    offset (index k = the k-th record, table[count-1] = total size sentinel)
+    terminator + pad4) records; the arm9 table (u32[943] at layout.CUTIN_OFFTAB)
+    holds each record's start offset (table[count-1] = total size sentinel)
     plus a separate resource-size word.  Deriving the offsets from
-    data/files/battle/cutin_quotes.json at build time makes it IMPOSSIBLE
+    data/zh/files/battle/cutin_quotes.json at build time makes it IMPOSSIBLE
     for quote edits to desynchronize the table (the 名台词-mispairing
     regression class: the table went stale after quote records changed
     length, so every cut-in showed the wrong character's quote)."""
     from . import data_files, text_codec
 
-    d = _load(data_dir, "ui/cutin_quote_offsets.json")
-    q = json.loads((data_dir / "files" / "battle" / "cutin_quotes.json").read_text())
+    q = json.loads((data_dir / "zh" / "files" / "battle" / "cutin_quotes.json").read_text())
     offs, pos = [], 0
     for g in q["groups"]:
         offs.append(pos)
@@ -243,44 +214,40 @@ def _apply_cutin_offsets(img: _Image, data_dir: Path):
         pos += len(data_files.CUTIN_TERMINATOR)
         pos += (-pos) % 4
     offs.append(pos)                                   # size sentinel entry
-    base = _i(d["table"]["file_offset"])
-    count = d["table"]["count"]
-    if len(offs) != count:
-        raise ValueError(f"cut-in offsets: derived {len(offs)} entries, table holds {count}")
+    if len(offs) != L.CUTIN_OFFTAB_N:
+        raise ValueError(f"cut-in offsets: derived {len(offs)} entries, "
+                         f"table holds {L.CUTIN_OFFTAB_N}")
     for k, off in enumerate(offs):
-        img.put_u32(base + k * 4, off, f"cut-in quote offset {k}")
-    w = d["resource_size_word"]
-    img.put_u32(_i(w["file_offset"]), pos, "cut-in resource size")
+        img.put_u32(L.CUTIN_OFFTAB + k * 4, off, f"cut-in quote offset {k}")
+    img.put_u32(L.CUTIN_RESOURCE_SIZE_WORD, pos, "cut-in resource size")
 
 
-def _apply_resource_offsets(img: _Image, data_dir: Path):
-    d = _load(data_dir, "ui/resource_offsets.json")
-    for e in d["entries"]:
+def _apply_ui(img: _Image, data_dir: Path):
+    d = _load(data_dir, "zh/ui.json")
+    _apply_sites(img, d["labels"], "label")
+    _apply_sites(img, d["abilities"], "ability name")
+    dic = d["dictionary"]
+    for e in dic["offset_entries"]:
+        img.put_u16(L.DICT_TEXT + 2 * e["index"], _i(e["offset"]),
+                    f"dictionary offset {e['index']}")
+    for e in dic["string_edits"]:
+        img.put_hex(L.DICT_TEXT + _i(e["offset"]), e["payload_hex"],
+                    f"dictionary string @+{e['offset']}")
+    for e in d["resource_offsets"]:
         img.put_u32(_i(e["file_offset"]), _i(e["value"]), e["what"],
                     expect_old=_i(e["old_value"]))
 
 
-def _apply_dictionary(img: _Image, data_dir: Path):
-    d = _load(data_dir, "ui/dictionary.json")
-    base = _i(d["base"]["file_offset"])
-    for e in d["offset_entries"]:
-        img.put_u16(base + 2 * e["index"], _i(e["offset"]),
-                    f"dictionary offset {e['index']}")
-    for e in d["string_edits"]:
-        img.put_hex(base + _i(e["offset"]), e["payload_hex"],
-                    f"dictionary string @+{e['offset']}")
-
-
-_ARENA_FILES = (
-    "arenas/battle_name_pool.json",
-    "arenas/idcmd_detail_pool.json",
-    "arenas/post_dict_labels.json",
-    "arenas/resident_caves.json",
+_PLACEMENT_FILES = (
+    "zh/placements/battle_name_pool.json",
+    "zh/placements/idcmd_detail_pool.json",
+    "zh/placements/post_dict_labels.json",
+    "zh/placements/resident_caves.json",
 )
 
 
-def _apply_arenas(img: _Image, data_dir: Path):
-    for rel in _ARENA_FILES:
+def _apply_placements(img: _Image, data_dir: Path):
+    for rel in _PLACEMENT_FILES:
         d = _load(data_dir, rel)
         base = _i(d["file_offset"])
         for e in d["entries"]:
@@ -289,7 +256,7 @@ def _apply_arenas(img: _Image, data_dir: Path):
 
 
 def _apply_event_blocks(img: _Image, data_dir: Path):
-    d = _load(data_dir, "arenas/event_text_blocks.json")
+    d = _load(data_dir, "zh/event_text.json")
     for e in d["entries"]:
         payload = bytes.fromhex(e["payload_hex"])
         if len(payload) != e["length"]:
@@ -370,24 +337,19 @@ def build_arm9(jp_arm9: bytes, data_dir: Path | str | None = None,
 
     # 1. translated tables / strings / patches over the head
     _apply_units(img, data_dir)
-    _apply_weapons(img, data_dir)
-    _apply_pilots(img, data_dir)
-    _apply_id_commands(img, data_dir)
-    _apply_abilities(img, data_dir)
+    _apply_characters(img, data_dir)
     _apply_parts(img, data_dir)
-    _apply_labels(img, data_dir)
     _apply_cutin_offsets(img, data_dir)
-    _apply_resource_offsets(img, data_dir)
-    _apply_dictionary(img, data_dir)
-    _apply_arenas(img, data_dir)
+    _apply_ui(img, data_dir)
+    _apply_placements(img, data_dir)
     _apply_event_blocks(img, data_dir)
     _apply_patches(img, data_dir, "patches/code_patches.json")
     _apply_patches(img, data_dir, "patches/raw_regions.json")
 
     # 2. appended autoload banks + relocation plumbing
     font = (data_dir / "font" / "atlas12.bin").read_bytes()
-    ui_ram, ui_bank = _bank_bytes(data_dir, "arenas/ui_names_bank.json")
-    brief_ram, brief_bank = _bank_bytes(data_dir, "arenas/briefing_blobs.json")
+    ui_ram, ui_bank = _bank_bytes(data_dir, "zh/placements/ui_names_bank.json")
+    brief_ram, brief_bank = _bank_bytes(data_dir, "zh/placements/briefing_blobs.json")
     for name, blob in (("font", font), ("UI bank", ui_bank),
                        ("briefing bank", brief_bank)):
         if len(blob) % 4:

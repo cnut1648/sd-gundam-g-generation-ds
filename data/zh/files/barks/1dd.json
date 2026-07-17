@@ -1,0 +1,122 @@
+{
+ "file": "1dd.bin",
+ "what": "Battle-voice bark bank: the short spoken lines rendered during combat. Records are framed 05 VV WW 00 06 SS TT <text run> 00 03 00 01; every rewrite here is in place, 0x00-padded to the original run budget, with the framing bytes preserved (a stray non-zero byte in the 00-pad gap before a sub-header makes the renderer mis-parse the next sub-line as garbage).",
+ "format": "edits",
+ "edits": [
+  {
+   "offset": "0x44",
+   "size": 21,
+   "zh": "就这点事我岂能倒下！！"
+  },
+  {
+   "offset": "0x68",
+   "size": 16,
+   "zh": "{SLOT:2526}高达不是摆设！！"
+  },
+  {
+   "offset": "0x84",
+   "size": 15,
+   "zh": "{SLOT:2526}高达不是摆设！"
+  },
+  {
+   "offset": "0xa0",
+   "size": 18,
+   "zh": "这……感应框架共振！？"
+  },
+  {
+   "offset": "0xc0",
+   "size": 8,
+   "zh": "什么！！"
+  },
+  {
+   "offset": "0xd4",
+   "size": 8,
+   "zh": "什么！！"
+  },
+  {
+   "offset": "0xe8",
+   "size": 19,
+   "zh": "解除限制！模式1启动！"
+  },
+  {
+   "offset": "0x108",
+   "size": 24,
+   "zh": "爱娜！！你我生死都在一起！！"
+  },
+  {
+   "offset": "0x12c",
+   "size": 20,
+   "zh": "零式什么都不告诉我……"
+  },
+  {
+   "offset": "0x14c",
+   "size": 12,
+   "zh": "我很清醒……！"
+  },
+  {
+   "offset": "0x164",
+   "size": 15,
+   "zh": "你这家伙别碍事！！"
+  },
+  {
+   "offset": "0x17d",
+   "size": 26,
+   "zh": "！ェ{01}我玛修曼·塞罗绝不会败！！"
+  },
+  {
+   "offset": "0x1a4",
+   "size": 9,
+   "zh": "……高达！！！"
+  },
+  {
+   "offset": "0x1bc",
+   "size": 27,
+   "zh": "这可不是在闹着玩啊！！"
+  },
+  {
+   "offset": "0x1e4",
+   "size": 15,
+   "zh": "身体……借给大家！！"
+  },
+  {
+   "offset": "0x200",
+   "size": 26,
+   "zh": "ZZ汇聚大家的力量……！！"
+  },
+  {
+   "offset": "0x228",
+   "size": 35,
+   "zh": "若无对话余地、这里就是你的死地！！"
+  },
+  {
+   "offset": "0x258",
+   "size": 33,
+   "zh": "人活着就是孤独！人类岂能都成NT！"
+  },
+  {
+   "offset": "0x288",
+   "size": 10,
+   "zh": "我……能战斗！"
+  },
+  {
+   "offset": "0x2b1",
+   "size": 13,
+   "zh": "！ド{01}过载推进……"
+  },
+  {
+   "offset": "0x2cc",
+   "size": 13,
+   "zh": "可恶……时间到！"
+  },
+  {
+   "offset": "0x2e8",
+   "size": 26,
+   "zh": "嘿嘿、啊哈哈……我、我可是……！"
+  },
+  {
+   "offset": "0x310",
+   "size": 13,
+   "zh": "啊……啊啊……啊！"
+  }
+ ]
+}

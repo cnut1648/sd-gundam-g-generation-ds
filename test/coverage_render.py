@@ -52,30 +52,30 @@ def _has_cjk(s: str) -> bool:
 #   0x09 '…' padding; idcmd 使用条件 with one-byte 用/、), and shipped verified.
 #   event_text_blocks -> script/pointer records; text fields are annotations.
 BANK_JSONS = [
-    ("data/arenas/battle_name_pool.json", "bank"),
-    ("data/arenas/briefing_blobs.json", "stage"),
-    ("data/arenas/event_text_blocks.json", "stage"),
-    ("data/arenas/idcmd_detail_pool.json", "stage"),
-    ("data/arenas/resident_caves.json", "bank"),
-    ("data/arenas/ui_names_bank.json", "bank"),
-    ("data/arenas/post_dict_labels.json", "bank"),
+    ("data/zh/placements/battle_name_pool.json", "bank"),
+    ("data/zh/placements/briefing_blobs.json", "stage"),
+    ("data/zh/event_text.json", "stage"),
+    ("data/zh/placements/idcmd_detail_pool.json", "stage"),
+    ("data/zh/placements/resident_caves.json", "bank"),
+    ("data/zh/placements/ui_names_bank.json", "bank"),
+    ("data/zh/placements/post_dict_labels.json", "bank"),
 ]
 FILE_JSONS = [
-    ("data/files/barks/0.json", "stage"),
-    ("data/files/barks/1.json", "stage"),
-    ("data/files/barks/1dd.json", "stage"),
-    ("data/files/barks/1de.json", "stage"),
-    ("data/files/barks/c4f.json", "stage"),
-    ("data/files/battle/ability_cards.json", "bank"),
-    ("data/files/battle/command_effects.json", "bank"),
-    ("data/files/battle/special_abilities.json", "bank"),
-    ("data/files/battle/special_defenses.json", "bank"),
-    ("data/files/battle/cutin_quotes.json", "stage"),
-    ("data/files/library/character_bios.json", "stage"),
-    ("data/files/library/unit_bios.json", "stage"),
-    ("data/files/library/weapon_names.json", "stage"),
-    ("data/files/hangar/part_captions.json", "stage"),
-    ("data/files/hangar/part_names.json", "stage"),
+    ("data/zh/files/barks/0.json", "stage"),
+    ("data/zh/files/barks/1.json", "stage"),
+    ("data/zh/files/barks/1dd.json", "stage"),
+    ("data/zh/files/barks/1de.json", "stage"),
+    ("data/zh/files/barks/c4f.json", "stage"),
+    ("data/zh/files/battle/ability_cards.json", "bank"),
+    ("data/zh/files/battle/command_effects.json", "bank"),
+    ("data/zh/files/battle/special_abilities.json", "bank"),
+    ("data/zh/files/battle/special_defenses.json", "bank"),
+    ("data/zh/files/battle/cutin_quotes.json", "stage"),
+    ("data/zh/files/library/character_bios.json", "stage"),
+    ("data/zh/files/library/unit_bios.json", "stage"),
+    ("data/zh/files/library/weapon_names.json", "stage"),
+    ("data/zh/files/hangar/part_captions.json", "stage"),
+    ("data/zh/files/hangar/part_names.json", "stage"),
 ]
 
 
@@ -91,8 +91,8 @@ def live_offsets(rom_path: Path) -> dict[str, set[int]]:
     arm9_off, _, arm9_ram, arm9_size = struct.unpack_from("<IIII", rom, 0x20)
     arm9 = rom[arm9_off:arm9_off + arm9_size]
     windows = {
-        "data/arenas/resident_caves.json": (0x186000, 0x1985A4),
-        "data/arenas/ui_names_bank.json": (0x328720 - 0x2000000 + arm9_ram, None),
+        "data/zh/placements/resident_caves.json": (0x186000, 0x1985A4),
+        "data/zh/placements/ui_names_bank.json": (0x328720 - 0x2000000 + arm9_ram, None),
     }
     # resident cave: file offsets inside arm9 image; RAM = arm9_ram + file_off
     out: dict[str, set[int]] = {}
@@ -103,7 +103,7 @@ def live_offsets(rom_path: Path) -> dict[str, set[int]]:
         v = struct.unpack_from("<I", arm9, i)[0]
         if lo <= v < hi:
             refs.add(v - lo)
-    out["data/arenas/resident_caves.json"] = refs
+    out["data/zh/placements/resident_caves.json"] = refs
     return out
 
 
@@ -139,7 +139,7 @@ def iter_corpus():
                 continue
             yield f"{rel}@{r.get('offset', r.get('id'))}", surface, data, r.get("zh", "")
     # stage dialogue: zh_hex per block
-    for p in sorted((REPO / "data/dialogue/stages").glob("*.json")):
+    for p in sorted((REPO / "data/zh/stages").glob("*.json")):
         doc = json.loads(p.read_text())
         blocks = doc if isinstance(doc, list) else doc.get("blocks") or doc.get("entries") or []
         for r in blocks:

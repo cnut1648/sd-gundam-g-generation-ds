@@ -1,0 +1,2470 @@
+{
+ "file": "_STG10SP.bin",
+ "source_size": 62912,
+ "built_size": 67475,
+ "edits": [
+  {
+   "jp_offset": "0xcecd",
+   "jp_len": 1,
+   "kind": "gameplay",
+   "what": "倒X（ターンX / Turn X）获得条件：移除 LV30 门槛",
+   "why": "第三路线 10SP：先击坠月光蝶形态的金卡拉姆使倒X变回普通形态，再由 8 名合资格驾驶员（特列斯/杰克斯/ゼロ/瑟蕾因/捷利特/松永/莱汀/西玛）之一（不组队）击坠普通形态即可获得倒X。授予倒X的判定子程序中，`CALL 取驾驶员等级(api[0x2d]) ; PUSH #30 ; GE`（等级≥30）是唯一的等级门槛，且 8 人共用此子程序。把该 PUSH 的立即数由 0x1e(30) 改为 0x00 后判定变为『等级≥0』＝任意等级，一处改动即对全部 8 人生效。仅改 1 字节、不改变任何操作码/长度/跳转目标，事件脚本控制流与日版保持同构。",
+   "zh_hex": "00"
+  },
+  {
+   "jp_offset": "0x191e",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "唔……难道、光是毁掉尤尼乌斯7、{00}还远远不够吗！",
+   "zh_hex": "15e81d0909e866e82a02e83de7b6e97ce9d3ea5fe896e94de7c8eb790200e7f7e94ce94ce7b5e920e80206000000"
+  },
+  {
+   "jp_offset": "0x1940",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "可恶的自然人……！！",
+   "zh_hex": "15e7c4e7dee7b4efb5e7efefb20909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x196f",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "哈哈哈、和平者队、还真够卖力的、不是{00}吗！",
+   "zh_hex": "15e7e8e7e8e7e802e7d3e887ef6ee7c902e7f7e820e920ec4cefb0e7b402e7b5e7b600e802ef970000"
+  },
+  {
+   "jp_offset": "0x19ba",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "好！让MD和死亡军团、全军向前推进！",
+   "zh_hex": "15e7c706e7f91311e7d3a7ebb2e7e0ea5e02bbe7e09dbaeaabe8920600000000000000000000"
+  },
+  {
+   "jp_offset": "0x19cd",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "等封锁住敌人的行动、就发动第二轮齐射{00}！",
+   "zh_hex": "15e826eb83ebfae859e7e3efb2e7b4efd6ef3002e7c5e870ef30e940ea13ebf4e924ef6500ef970000"
+  },
+  {
+   "jp_offset": "0x1a09",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "可恶！再这样下去……！！",
+   "zh_hex": "15e7c4e7deef97e80be7b9e7daef4de7eb0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1a3e",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "什么……！？",
+   "zh_hex": "15e7dde7bd0909ef97050000"
+  },
+  {
+   "jp_offset": "0x1a6c",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "到此为止了！穆尔塔·阿兹拉埃尔！！",
+   "zh_hex": "15e7d7e7cae7c1e869e7baef97eb10e7e1e945ef4be7d2e856e7c2e96ae7e1ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1a98",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "你、你这家伙！？",
+   "zh_hex": "15e7b802e7b8e7b9e7dfe7fdef97050000"
+  },
+  {
+   "jp_offset": "0x1aa1",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "你、你们这些人、竟然要帮那帮调整者吗{00}！？",
+   "zh_hex": "15e7b802e7b8e7bbe7b9e8a4efb202ef2ce7efef2ae910e7b7e910e95ce9feef6ee80200ef97050000"
+  },
+  {
+   "jp_offset": "0x1ad8",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "我们不偏帮交战双方中的任何一方、是来{00}阻止这场战斗的！",
+   "zh_hex": "15efcce7bbe7b5eb4de910e861ef28eabcefb1ef4ee7b4e89aefbcefb6efb102e7b6efcf00e8efe869e7b9e876ef28e7ffe7b4ef970000"
+  },
+  {
+   "jp_offset": "0x1b24",
+   "jp_len": 20,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7c2e878e7d6e7c8e7d4ef3402e831e846e82ce7d4ef34ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1b4c",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "这里是阿伽玛！全舰、战斗配置就绪！！",
+   "zh_hex": "15e7b9ef31e7b6e7d2e8e8e845ef97efb4e7d402ef28e7ffea34ea0ee7c5efeeef97ef970000"
+  },
+  {
+   "jp_offset": "0x1b7b",
+   "jp_len": 27,
+   "kind": "script",
+   "zh_hex": "8e803302000215efa5e844e83fe83302e9a1ef2de840e7c6e948e891ef28e7ff02e7eae945e7e1ef970000"
+  },
+  {
+   "jp_offset": "0x1bbb",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "永恒号这边、准备已经就绪！！",
+   "zh_hex": "15e9bfeb85e833e7b9e89902e87ae877ef3ae8b7e7c5efeeef97ef970000"
+  },
+  {
+   "jp_offset": "0x1bed",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "这里是莉莉·玛……不对！{00}是叫里恩霍斯Jr.来着……",
+   "zh_hex": "15e7b9ef31e7b6e81ee81e04e8450909e7b5e7be0600e7b6e8c1ef31e7eeebfee7c8e022eedfe002d9e86d0909000000"
+  },
+  {
+   "jp_offset": "0x1c0f",
+   "jp_len": 12,
+   "kind": "dialogue",
+   "zh_text": "战斗准备、一切就绪！",
+   "zh_hex": "15ef28e7ffe87ae87702efb6ef3fe7c5efeeef970000"
+  },
+  {
+   "jp_offset": "0x1c36",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "抱歉、给的是艘缴获来的舰、不过战力、{00}应该比之前那艘要强",
+   "zh_hex": "15e922e92702e839e7b4e7b6eb18eff9e9d8d9e7b4e7d402e7b5ef36ef28da0200e873e898e825e7cdbae7b7eb18ef2ae8ad0000000000"
+  },
+  {
+   "jp_offset": "0x1c71",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "好不容易白捡来的一艘战舰、可别给我弄{00}坏了、科塞尔！",
+   "zh_hex": "15e7c7e7b5ed2fe964e809ecdbd9e7b487eb18ef28e7d402e7c4e7e5e8398beac400e9ede7ba02ebe3e950e7e106000000000000"
+  },
+  {
+   "jp_offset": "0x1ca9",
+   "jp_len": 17,
+   "kind": "script",
+   "zh_hex": "8e803302000215e85e02ef39e809e7baef970000"
+  },
+  {
+   "jp_offset": "0x1cdf",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "好！从现在起、全舰、开始突击！",
+   "zh_hex": "15e7c7ef97e88ae82fef29e84702efb4e7d402e7fae908e8b6e7ccef970000"
+  },
+  {
+   "jp_offset": "0x1cf5",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "作战目标、扫清扎夫特与联邦军的所有战{00}力！",
+   "zh_hex": "15ef2fef28efd4e96f02eb88e995e84be830e7cfe832ef2eefaae7e0e7b4e7fbe7cbef2800efb0ef970000"
+  },
+  {
+   "jp_offset": "0x1d0b",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "之后转向创世纪、设法令它失去作用！",
+   "zh_hex": "15e7cde7fee9c2efc1e893e83ceb9902eb43e84ee94ee978e8a5e7ebef2fefb3ef970000"
+  },
+  {
+   "jp_offset": "0x1d2d",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "全舰、开始行动！！",
+   "zh_hex": "15efb4e7d402e7fae908efd6ef30ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1d60",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "可恶……！这帮自然人！",
+   "zh_hex": "15e7c4e7de0909ef97e7b9e910efb5e7efefb2ef970000"
+  },
+  {
+   "jp_offset": "0x1d6f",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "竟敢在我们眼皮子底下、如此为所欲为！{00}！",
+   "zh_hex": "15ef2ce8cdef29efcce7bbe90bebdde886e9b4ef4d02e7f0e7cae7c1e7fbeacbe7c1ef9700ef970000"
+  },
+  {
+   "jp_offset": "0x1d83",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "喂！创世纪的发射准备、还没好吗！？",
+   "zh_hex": "15e8bdef97e893e83ceb99e7b4e870ef65e87ae87702e7f7e7d8e7c7e802ef97050000"
+  },
+  {
+   "jp_offset": "0x1db2",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "反射镜组的换装、马上就要完成了！",
+   "zh_hex": "15e87cacead7ea0de7b4ea78e98f02e84fb2e7c5ef2ae87ee837e7ba060000000000"
+  },
+  {
+   "jp_offset": "0x1de2",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "好！那就等作业一结束、立刻发射创世纪{00}！",
+   "zh_hex": "15e7c7ef97e7b7e7c5e826ef2feadaefb6e868e89502e86be91fe870ef65e893e83ceb9900ef970000"
+  },
+  {
+   "jp_offset": "0x1e12",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "可是、在这么近的距离、恐怕很难对敌方{00}部队造成有效打击……",
+   "zh_hex": "15e7c4e7b602ef29e7b9e7bdefd8e7b4ea0fe90102eb33e958e981e866e7bee7e3efb100ef70e7c9e93ee837e7cbea8fe7f5e7cc09090000"
+  },
+  {
+   "jp_offset": "0x1e49",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "我们要打的、并不是敌方部队……",
+   "zh_hex": "15efcce7bbef2ae7f5e7b402e957e7b5e7b6e7e3efb1ef70e7c909090000"
+  },
+  {
+   "jp_offset": "0x1e58",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "创世纪、校正瞄准！目标……地球！",
+   "zh_hex": "15e893e83ceb9902e817ef3bea30e87aef97efd4e96f0909ef63efd3ef970000"
+  },
+  {
+   "jp_offset": "0x1e85",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "什么！地球！？",
+   "zh_hex": "15e7dde7bdef97ef63efd3ef97050000"
+  },
+  {
+   "jp_offset": "0x1eab",
+   "jp_len": 18,
+   "kind": "script",
+   "zh_hex": "8e803302000215e8e302e8e3ef340909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1ed4",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "在那叫创世纪的东西面前、核弹漫天飞舞{00}、MS们殊死搏杀……",
+   "zh_hex": "15ef29e7b7e8c1e893e83ceb99e7b4e8bae7f8e862ef5102e8f3e946ee59e844ea45eb9e0002efa7ef9ee7bbed7bef6aed6ce89b09090000"
+  },
+  {
+   "jp_offset": "0x1ef7",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "这简直可谓黑历史的重演！正配得上倒X{00}的登场！！",
+   "zh_hex": "15e7b9e9abe875e7c4e92bef3ee8fbe925e7b4e8a1ea2fef97ef3bea34e80aef4ce848eed900e7b4e9a0e876ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1f3c",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "是基姆·金卡拉姆吗！！",
+   "zh_hex": "15e7b6e829e823ef4be902e801e7c2e823e802ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1f62",
+   "jp_len": 23,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7e8e7e8e7e8ef97e7b8e7c5e7b6e7b7e828e8c1e85be829e858e858e7b4e7d0ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1f79",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "正如先前约定的那样、我可是亲自来跟你{00}们交手了！",
+   "zh_hex": "15ef3be7f0ef8bef51e9ace867e7b4e7b7e7da02efcce7c4e7b6e894efb5efcfe973e7b800e7bbe861ef66e7baef970000"
+  },
+  {
+   "jp_offset": "0x1f98",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "毕竟、配得上这场末日决战的舞台、已经{00}备齐了嘛！！",
+   "zh_hex": "15ea2cef2c02ea34e80aef4ce7b9e876ec22e98ae8abef28e7b4eb9eea1602ef3ae8b700e877e924e7bae936ef97ef970000"
+  },
+  {
+   "jp_offset": "0x1fd8",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "唔……！",
+   "zh_hex": "15e81d0909ef970000"
+  },
+  {
+   "jp_offset": "0x2006",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "可恶、这月光蝶……！！",
+   "zh_hex": "15e7c4e7de02e7b9e850e83dea030909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2031",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "好、机不可失！全机、把火力集中到倒X{00}身上！！",
+   "zh_hex": "15e7c702e7e4e7b5e7c4e8a506bbe7e402e81be8dadaea98c0e7d7e848eed900e88db20606000000000000000000"
+  },
+  {
+   "jp_offset": "0x2075",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "你、你说什么……！？",
+   "zh_hex": "15e7b802e7b8e7ede7dde7bd0909ef97050000"
+  },
+  {
+   "jp_offset": "0x2083",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "倒X竟然……我、我居然会……怎么可能{00}……！！",
+   "zh_hex": "15e848eed9ef2ce7ef0909efcc02efccea4ce7efe7e20909e7f2e7bde7c4e7c6000909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x20c1",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "正是那份傲慢、才是你的败因、基姆·金{00}卡拉姆……",
+   "zh_hex": "15ef3be7b6e7b7ea22ecace97902e836e7b6e7b8e7b4e88fef3302e829e823ef4be90200e801e7c2e82309090000"
+  },
+  {
+   "jp_offset": "0x20f3",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "什么……！？",
+   "zh_hex": "15e7dde7bd0909ef97050000"
+  },
+  {
+   "jp_offset": "0x2118",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "那种、即便豁出性命也要奋战的意志……",
+   "zh_hex": "15e7b7e7d102e855e8faeba5efbee951e853e7c0ef2aef46ef28e7b4ef3cea1809090000"
+  },
+  {
+   "jp_offset": "0x212d",
+   "jp_len": 41,
+   "kind": "dialogue",
+   "zh_text": "只知一味炫耀力量的你、根本想象不出那{00}种拼死之战……",
+   "zh_hex": "15ef32e85a87ed36ee5beda6dae851e7b4e7b802e9b8d2e7e6ebf2e7b5afe7b700e7d1ea66a7e7cdef28090900000000000000"
+  },
+  {
+   "jp_offset": "0x2156",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "但那、才是身为士兵应有的正确姿态……{00}才是真正的战斗之姿！！",
+   "zh_hex": "15e7dbe7b702e836e7b6e88de7c1ef64ef93e873e7cbe7b4ef3be88cebbee994090900e836e7b6e820ef3be7b4ef28e7ffe7cdebbeef97ef970000"
+  },
+  {
+   "jp_offset": "0x2177",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "连这一点都无法理解的你、打从一开始、{00}就根本没有半点胜算！",
+   "zh_hex": "15e86ee7b9efb6e822e840e7dce84ee872e89de7b4e7b802e7f5e88aefb6e7fae9080200e7c5e9b8efa6e7d8e7cbeadee822e8dbe889ef970000"
+  },
+  {
+   "jp_offset": "0x21b4",
+   "jp_len": 24,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7c4e7deef97ef2ce8cde90feabdec8befd7ef97ef970000"
+  },
+  {
+   "jp_offset": "0x21f1",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "可、可恶啊啊……！！",
+   "zh_hex": "15e7c402e7c4e7dee7c3e7c30909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2227",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "怎、怎么会……这究竟是为什么！？",
+   "zh_hex": "15e7f202e7f2e7bde7e20909e7b9e906ef2ce7b6e7c1e7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0x2264",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "你输了、穆尔塔·阿兹拉埃尔",
+   "zh_hex": "15e7b8e8b9e7ba02eb10e7e1e945ef4be7d2e856e7c2e96ae7e10000"
+  },
+  {
+   "jp_offset": "0x2299",
+   "jp_len": 6,
+   "kind": "dialogue",
+   "zh_text": "……！！",
+   "zh_hex": "150909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x22a9",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "你、你这家伙！别给我在这儿开玩笑了！{00}！",
+   "zh_hex": "15e7b802e7b8e7b9e7dfe7fdef97e7e5e839efccef29e7b9eb7ce7fae970ea1ce7baef9700ef970000"
+  },
+  {
+   "jp_offset": "0x22f6",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "我一定会赢的……！没错、无论何时、我{00}都会赢……！！",
+   "zh_hex": "15efccefb6e867e7e2e9cbe7b40909ef97e7d8e88502e7dce8dcefbcef2d02efcc00e840e7e2e9cb0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2340",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "敌、敌舰、朝我们冲过来了！",
+   "zh_hex": "15e7e302e7e3e7d402eaadefcce7bbe95eef36efcfe7baef970000"
+  },
+  {
+   "jp_offset": "0x2375",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "这、就是……",
+   "zh_hex": "15e7b902e7c5e7b609090000"
+  },
+  {
+   "jp_offset": "0x2387",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "这、就是身为指挥官、所该采取的行动吗{00}！？",
+   "zh_hex": "15e7b902e7c5e7b6e88de7c1e8c0e949ef9202e7fbe898ec9ee987e7b4efd6ef30e80200ef97050000"
+  },
+  {
+   "jp_offset": "0x23aa",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "身为发号施令之人、本该还有别的选择才{00}对……！！",
+   "zh_hex": "15e88de7c1e870e833eb8de94ee7cdefb202efa6e898e7f7e7cbe7e5e7b4e966eaaae83600e7be0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x23cf",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "果然、你就是该死在这里的人！穆尔塔·{00}阿兹拉埃尔！！",
+   "zh_hex": "15e871e7ef02e7b8e7c5e7b6e898ef6aef29e7b9ef31e7b4efb2ef97eb10e7e1e945ef4b00e7d2e856e7c2e96ae7e1ef97ef970000"
+  },
+  {
+   "jp_offset": "0x23fe",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "罗恩格林炮！发射！！",
+   "zh_hex": "15e7ece7eee824e9b7e95aef97e870ef65ef97ef970000"
+  },
+  {
+   "jp_offset": "0x243d",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "唔、唔哇啊啊啊啊！！",
+   "zh_hex": "15e81d02e81dea88e7c3e7c3e7c3e7c3ef97ef970000"
+  },
+  {
+   "jp_offset": "0x24a9",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "你、本就是该死在那里的人、穆尔塔·阿{00}兹拉埃尔……",
+   "zh_hex": "15e7b802efa6e7c5e7b6e898ef6aef29e7b7ef31e7b4efb202eb10e7e1e945ef4be7d200e856e7c2e96ae7e109090000"
+  },
+  {
+   "jp_offset": "0x24f3",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "……我来迟了、实在抱歉！",
+   "zh_hex": "150909efccefcfea10e7ba02e87fef29e922e927ef970000"
+  },
+  {
+   "jp_offset": "0x251e",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "伊克斯贝利少尉！？你竟然平安无事！",
+   "zh_hex": "15e969e7d5e7c8e857e82eb1860605e7b8ef2ce7efe887e7fce7dca90600000000000000"
+  },
+  {
+   "jp_offset": "0x254b",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "嘛、这一路上、虽也有过些波折",
+   "zh_hex": "15e93602e7b9efb6e8d2ef4c02e8b8e7c0e7cbef36e8a4e9a8ed640000"
+  },
+  {
+   "jp_offset": "0x255b",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "总之、迟到的部分、就当我带了帮手来、{00}两清了吧",
+   "zh_hex": "15e881e7cd02ea10e7d7e7b4ef70efae02e7c5ef53efcce937e7bae910ef66efcf0200e97de995e7bae7d00000"
+  },
+  {
+   "jp_offset": "0x25a2",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……你们、是？",
+   "zh_hex": "150909e7b8e7bb02e7b6050000"
+  },
+  {
+   "jp_offset": "0x25c7",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "擅自脱离队列冲了出去、实在抱歉、克瓦{00}特罗大尉",
+   "zh_hex": "15eb5defb5e9e5e901e7c9e8b5e95ee7baefbee7eb02e87fef29e922e92702e7d5e99f00e7cfe7ecefa5efc60000"
+  },
+  {
+   "jp_offset": "0x25de",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "来、西格、你也快道歉呀！！",
+   "zh_hex": "15d902e7f8e82402e7b8e7c0e85fe82ae927e9c606060000000000"
+  },
+  {
+   "jp_offset": "0x260e",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "克瓦特罗大尉……",
+   "zh_hex": "15e7d5e99fe7cfe7ecefa5efc609090000"
+  },
+  {
+   "jp_offset": "0x2632",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "看来、你已经找到自己的答案了呢",
+   "zh_hex": "15e7f6efcf02e7b8ef3ae8b7e9d2e7d7efb5e8c9e7b4ea96ee3fe7bae9070000"
+  },
+  {
+   "jp_offset": "0x265e",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "……是的",
+   "zh_hex": "150909e7b6e7b40000"
+  },
+  {
+   "jp_offset": "0x268a",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "好了……重逢的招呼也打过了、走吧、西{00}格、蜜安！",
+   "zh_hex": "15e7c7e7ba0909e8a1ed11e7b4e97aea3ce7c0e7f5ef36e7ba02e890e7d002e7f800e82402e98ee7fc06000000"
+  },
+  {
+   "jp_offset": "0x26cc",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "恶魔高达……竟沦落成了阿兹拉埃尔的{00}爪牙",
+   "zh_hex": "15e7dee8d8e812ef2b0909ef2cece5e92ae837e7bae7d2e856e7c2e96ae7e1e7b400e814ebd70000"
+  },
+  {
+   "jp_offset": "0x26e4",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "为了不让你再继续作恶、我就在此、将你{00}彻底讨灭！",
+   "zh_hex": "15e7c1e7bae7b5e7f9e7b8e80be9d6e9adef2fe7de02efcce7c5ef29e7ca02e84ae7b800ebc5e9b4e9f7e8e1ef970000"
+  },
+  {
+   "jp_offset": "0x2704",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "以我红心之王之名起誓！",
+   "zh_hex": "15e7f38be9e3e82de7cde884e7cde8ace847eff00600000000"
+  },
+  {
+   "jp_offset": "0x273c",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "在战斗之中、人会重新唤醒{00}自身的斗争本能……",
+   "zh_hex": "15ef29ef28e7ffe7cdc002b4e7e2e8a1ef8aec0eeb2000abe88de7b4e7ffe852d2e7c60909000000000000"
+  },
+  {
+   "jp_offset": "0x2757",
+   "jp_len": 37,
+   "kind": "dialogue",
+   "zh_text": "这末日般的景象、才正是人类该当迎来的{00}正确样态、你不这么认为吗！？",
+   "zh_hex": "15e7b9ec22e98aea80e7b4ec21ebf202e836ef3be7b6efb2e841e898ef53e931efcfe7b400ef3be88ce7dae99402e7b8e7b5e7b9e7bde8a0e7c1e802ef97050000"
+  },
+  {
+   "jp_offset": "0x277c",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "特列斯·克休里那达！",
+   "zh_hex": "15e7cfe8b5e7c8ef4be7d5e90eef31e7b7ef2bef970000"
+  },
+  {
+   "jp_offset": "0x27a1",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "你这种想法、我可无法苟同、基姆·金卡{00}拉姆……",
+   "zh_hex": "15e7b8e7b9e7d1e7e6e84e02efcce7c4e7dce84eee94e85d02e829e823ef4be902e80100e7c2e82309090000"
+  },
+  {
+   "jp_offset": "0x27ba",
+   "jp_len": 38,
+   "kind": "dialogue",
+   "zh_text": "若人类当真是只剩战斗这般无趣本质的存{00}在、那早就该灭亡了",
+   "zh_hex": "15e7e7b4e841c4e820e7b6ef32ea3aef28e7ffe7b9ea80e7dcea82d2eb45e7b4e99300ef2902e7b7e963e7c5e898e8e1ebb2e7ba0000000000"
+  },
+  {
+   "jp_offset": "0x27fb",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "可是、我们月之民、曾经亲眼{00}目睹过黑历史那场毁灭！",
+   "zh_hex": "15e7c4e7b6028be7bbe850e7cdef3802ea2ae8b7e894e90b00d5ee74ef36ef3ee8fbe925e7b7e876e97ce8e1060000000000"
+  },
+  {
+   "jp_offset": "0x2835",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "而跨越了那场毁灭的、同样也是人类",
+   "zh_hex": "15e89ceeacea57e7bae7b7e876e97ce8e1e7b402e85de7dae7c0e7b6efb2e8410000"
+  },
+  {
+   "jp_offset": "0x2844",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "……尽管放马过来吧、金卡拉姆",
+   "zh_hex": "150909e8f2e93be86ce84fef36efcfe7d002e902e801e7c2e8230000"
+  },
+  {
+   "jp_offset": "0x2855",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "我便以我手中之刃、让你好好领教、何谓{00}人之坚强",
+   "zh_hex": "158be8fae7f38baec0e7cdede702e7f9e7b8e7c7e7c7ea20eaac028ae92b00b4e7cdeb80e8ad0000000000000000"
+  },
+  {
+   "jp_offset": "0x2890",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "哈哈哈！口气倒不小嘛！！那我就奉陪到{00}底！",
+   "zh_hex": "15e7e8e7e8e7e8ef97eabde8ede848e7b5e83ee936ef97ef97e7b7efcce7c5eac1ef42e7d700e9b4ef970000"
+  },
+  {
+   "jp_offset": "0x28b0",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "就用我这架倒X、来会会你！！",
+   "zh_hex": "15e7c5efb3efcce7b9e99de848eed902efcfe7e2e7e2e7b8ef97ef970000"
+  },
+  {
+   "jp_offset": "0x28e2",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "什么故作风雅的审美、虚有其表的体面、{00}都不需要……",
+   "zh_hex": "15e7dde7bdea09ef2feb75ebfde7b4eccae9f402ebefe7cbe8cfe9e7e7b4ef4fe8620200e840e7b5e92def2a09090000"
+  },
+  {
+   "jp_offset": "0x28f8",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "这是一场、赌上彼此谁能存活下来的、纯{00}粹之战！",
+   "zh_hex": "15e7b9e7b6efb6e87602ed0aef4cefc9e7cae923e7c6e993e8d4ef4defcfe7b402eb6600ec85e7cdef28ef970000"
+  },
+  {
+   "jp_offset": "0x2914",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "上吧、基姆·金卡拉姆！！",
+   "zh_hex": "15ef4ce7d002e829e823ef4be902e801e7c2e823ef97ef970000"
+  },
+  {
+   "jp_offset": "0x293d",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "不管你在那儿叫嚣些什么、你赢不了、这{00}都是早已注定的！",
+   "zh_hex": "15e7b5e93be7b8ef29e7b7eb7ce8c1edfbe8a4e7dde7bd02e7b8e9cbe7b5e7ba02e7b900e840e7b6e963ef3aeacce867e7b4ef970000"
+  },
+  {
+   "jp_offset": "0x295f",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "只要有这架、从黑历史中存活下来的倒X{00}在！！",
+   "zh_hex": "15ef32ef2ae7cbe7b9e99d02e88aef3ee8fbe925ef4ee993e8d4ef4defcfe7b4e848eed900ef29ef97ef970000"
+  },
+  {
+   "jp_offset": "0x299f",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "那么、就让他们见识见识、重获新生后我{00}们的力量吧！",
+   "zh_hex": "15e7b7e7bd02e7c5e7f9e80ce7bbe85ce92fe85ce92f02e8a1e9d8ef8ab6e7fe8b00e7bbe7b4dae851e7d006000000000000"
+  },
+  {
+   "jp_offset": "0x29d8",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "喂、别一个人在那儿擅自做主啊！",
+   "zh_hex": "15e8bd02e7e5efb6e828efb2ef29e7b7eb7ceb5defb5e81ce954e7c3ef970000"
+  },
+  {
+   "jp_offset": "0x29e9",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "不过嘛、我心里、其实也是这么想的",
+   "zh_hex": "15e7b5ef36e93602efcce82def3102e8cfe87fe7c0e7b6e7b9e7bde7e6e7b40000"
+  },
+  {
+   "jp_offset": "0x2a12",
+   "jp_len": 20,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7b7e7b5e7c5eb5ce7c7e7b4e936ef970000"
+  },
+  {
+   "jp_offset": "0x2a26",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……上吧！！",
+   "zh_hex": "150909ef4ce7d0ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2a5a",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "……和别人这样协力作战、说不定还是头{00}一回",
+   "zh_hex": "150909e7d3e7e5efb2e7b9e7dae8f6efb0ef2fef2802e7ede7b5e867e7f7e7b6e92e00efb6ef520000"
+  },
+  {
+   "jp_offset": "0x2a95",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "拉米亚斯舰长……",
+   "zh_hex": "15e7c2e878e7d6e7c8e7d4ef3409090000"
+  },
+  {
+   "jp_offset": "0x2ab9",
+   "jp_len": 14,
+   "kind": "script",
+   "zh_hex": "8e8033020002150909e7eae945e7e1050000"
+  },
+  {
+   "jp_offset": "0x2af3",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "以前、我曾对您说过的那些话……请容我{00}趁现在、更正一下",
+   "zh_hex": "15e7f3ba028bea2ae7bee835e7edef36e7b4e7b7e8a4e81f0909e83aed2f8b00e9eae82fef2902e952ef3b878900000000000000"
+  },
+  {
+   "jp_offset": "0x2b2f",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "……诶？",
+   "zh_hex": "150909eaf3050000"
+  },
+  {
+   "jp_offset": "0x2b51",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "我以前曾说过、军规高于一切、",
+   "zh_hex": "15efcce7f3ef51ea2ae7edef3602e7e0ea42e812e879efb6ef3f020000"
+  },
+  {
+   "jp_offset": "0x2b69",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "可看来、是我当时想错了",
+   "zh_hex": "15e7c4e7f6efcf02e7b6efccef53ef2de7e6e885e7ba0000"
+  },
+  {
+   "jp_offset": "0x2b7a",
+   "jp_len": 36,
+   "kind": "dialogue",
+   "zh_text": "真正需要的、原来是您那样灵活变通的思{00}维、玛琉·拉米亚斯",
+   "zh_hex": "15e820ef3be92def2ae7b402e8e4efcfe7b6e835e7b7e7daeaebe8d4e955ef59e7b4efca00ea5402e845ead2ef4be7c2e878e7d6e7c80000"
+  },
+  {
+   "jp_offset": "0x2bb9",
+   "jp_len": 12,
+   "kind": "dialogue",
+   "zh_text": "你还真是一本正经呢……娜塔尔",
+   "zh_hex": "15e7b8e7f7e820e7b6efb6efa6ef3be8b7e9070909e7eae945e7e10000"
+  },
+  {
+   "jp_offset": "0x2bc5",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "不过、我觉得、这并不是谁对谁错那么简{00}单的事",
+   "zh_hex": "15e7b5ef3602efcce8aee80a02e7b9e957e7b5e7b6e923e7bee923e885e7b7e7bde9ab00e918e7b4efb80000"
+  },
+  {
+   "jp_offset": "0x2c03",
+   "jp_len": 16,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7c2e878e7d6e7c8e7d4ef340909050000"
+  },
+  {
+   "jp_offset": "0x2c42",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "你也好、我也好、都是各自率领着部队、{00}一路走到了今天",
+   "zh_hex": "15e7b8e7c0e7c702efcce7c0e7c702e840e7b6e819efb5e9e1ea20e86def70e7c90200efb6e8d2e890e7d7e7baefb9e8440000"
+  },
+  {
+   "jp_offset": "0x2c62",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "有些难关、想必正因为是你、才得以渡过{00}、",
+   "zh_hex": "15e7cbe8a4e866e8bb02e7e6e860ef3bef33e7c1e7b6e7b802e836e80ae7f3ec27ef3600020000"
+  },
+  {
+   "jp_offset": "0x2c7b",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "反过来、也会有些事、正因为是我、才办{00}得成、不是吗？",
+   "zh_hex": "15e87cef36efcf02e7c0e7e2e7cbe8a4efb802ef3bef33e7c1e7b6efcc02e836e8ea00e80ae83702e7b5e7b6e802050000"
+  },
+  {
+   "jp_offset": "0x2cb7",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "您是说、做法因人而异吗？",
+   "zh_hex": "15e835e7b6e7ed02e81ce84eef33efb2e89ceb32e802050000"
+  },
+  {
+   "jp_offset": "0x2cdf",
+   "jp_len": 35,
+   "kind": "script",
+   "zh_hex": "8e803302000215efcce81cefccefb0e7fbe7c6e9cfe7b402e7b8e81ce7b8efb0e7fbe7c6e9cfe7b40900090000"
+  },
+  {
+   "jp_offset": "0x2d02",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "彼此不足的地方、只要相互弥补、不就好{00}了吗？",
+   "zh_hex": "15efc9e7cae7b5ea1ee7b4ef63efb102ef32ef2ae8b1e9f9ed57ea8102e7b5e7c5e7c700e7bae802050000"
+  },
+  {
+   "jp_offset": "0x2d1d",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "所谓的人、不正是这样的吗、娜塔尔？",
+   "zh_hex": "15e7fbe92be7b4efb202e7b5ef3be7b6e7b9e7dae7b4e80202e7eae945e7e1050000"
+  },
+  {
+   "jp_offset": "0x2d62",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "是啊……您说得对",
+   "zh_hex": "15e7b6e7c30909e835e7ede80ae7be0000"
+  },
+  {
+   "jp_offset": "0x2d6c",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "我还是觉得、能担任您的副官、是件值得{00}骄傲的事、玛琉·拉米亚斯",
+   "zh_hex": "158be7f7e7b6e8aee80a02e7c6e9fde89ae835e7b4ecb68f02e7b6e991ec48e80a00edcbecace7b4a902e845ead204e7c2e878e7d6e7c8000000000000"
+  },
+  {
+   "jp_offset": "0x2daa",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "我也一样、有你来当我的副长、真是太好{00}了……",
+   "zh_hex": "158be7c087e7da02e7cbe7b8d9c48be7b4ecb6ef3402e820e7b6e86ae7c700e7ba090900000000000000"
+  },
+  {
+   "jp_offset": "0x2dcb",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "希望今后、我们之间也能一直保持这份好{00}关系、娜塔尔",
+   "zh_hex": "15e87be965efb9e7fe02efcce7bbe7cde8fce7c0e7c6efb6e875ea47e9efe7b9ea22e7c700e8bbe94102e7eae945e7e10000"
+  },
+  {
+   "jp_offset": "0x2e04",
+   "jp_len": 16,
+   "kind": "script",
+   "zh_hex": "8e8033020002150909e86502e7b6e7b402e7d4ef340000"
+  },
+  {
+   "jp_offset": "0x2e39",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "你们在磨蹭什么！？快发射！！这一下、{00}一切就都结束了！",
+   "zh_hex": "15e7b8e7bbef29ec81ec98e7dde7bdef9705e85fe870ef65ef97ef97e7b9efb6ef4d0200efb6ef3fe7c5e840e868e895e7baef970000"
+  },
+  {
+   "jp_offset": "0x2e62",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "、M彼リな、{00}{01}！士{00}Mバラな、{00}{01}ぁ可是、射线上、还有我们的友军啊！",
+   "zh_hex": "150213c9813302000106a5001371803302000115e7c4e7b602ef65e916ef4c02e7f7e7cbefcce7bbe7b4e960e7e0e7c3ef970000"
+  },
+  {
+   "jp_offset": "0x2ea0",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "我们正是为了胜利而战的！各位！都做好{00}觉悟了吧！！",
+   "zh_hex": "158be7bbef3be7b6e7c1e7bae8dbe82ee89cef28e7b406e819e83406e840e81ce7c700e8aeea19e7bae7d0060600000000000000"
+  },
+  {
+   "jp_offset": "0x2ec6",
+   "jp_len": 37,
+   "kind": "dialogue",
+   "zh_text": "、M彼リな、{00}{01}！士{00}Mバラな、{00}{01}ぁ议长！难道您是疯了不成！！",
+   "zh_hex": "150213c9813302000106a5001371803302000115e8e3ef34ef97e866e82ae835e7b6ee70e7bae7b5e837ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2eeb",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "纵然您是议长阁下、可这样的命令、我们{00}也实在……",
+   "zh_hex": "15e8e6e7efe835e7b6e8e3ef34e8d7ef4d02e7c4e7b9e7dae7b4e853e94e02efcce7bb00e7c0e87fef2909090000"
+  },
+  {
+   "jp_offset": "0x2f2e",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……！！",
+   "zh_hex": "150909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2f51",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "议长！？",
+   "zh_hex": "15e8e3ef34ef97050000"
+  },
+  {
+   "jp_offset": "0x2f73",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "必须开火！趁还没被击中！",
+   "zh_hex": "15e860e9a2e7fae8daef97e9eae7f7e7d8e7f1e7ccef4eef970000"
+  },
+  {
+   "jp_offset": "0x2f88",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "快、快点！！发射呀！把创世纪发射出去{00}！！",
+   "zh_hex": "15e85f02e85fe822ef97ef97e870ef65e9c6ef97e81be893e83ceb99e870ef65efbee7eb00ef97ef970000"
+  },
+  {
+   "jp_offset": "0x2fa7",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "、M彼リな、{00}{01}！士{00}Mバラな、{00}{01}ぁ唔……",
+   "zh_hex": "150213c9813302000106a5001371803302000115e81d09090000"
+  },
+  {
+   "jp_offset": "0x2fc1",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "议长……您、您怎能如此……！",
+   "zh_hex": "15e8e3ef340909e83502e835e7f2e7c6e7f0e7ca0909ef970000"
+  },
+  {
+   "jp_offset": "0x3074",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "咳……！",
+   "zh_hex": "15ed370909ef970000"
+  },
+  {
+   "jp_offset": "0x309f",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "敌、敌方战力的反应、已经全部消失了！{00}！",
+   "zh_hex": "15e7e302e7e3efb1ef28efb0e7b4e87ce87302ef3ae8b7efb4ef70e928e8a5e7baef9700ef970000"
+  },
+  {
+   "jp_offset": "0x30cf",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "好！全机、向创世纪进军！！",
+   "zh_hex": "15e7c7ef97efb4e7e402efc1e893e83ceb99e892e7e0ef97ef970000"
+  },
+  {
+   "jp_offset": "0x30e0",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "趁此良机、一口气将创世纪彻底摧毁！！",
+   "zh_hex": "15e9eae7caeaf0e7e402efb6eabde8ede84ae893e83ceb99ebc5e9b4efe5e97cef97ef970000"
+  },
+  {
+   "jp_offset": "0x3122",
+   "jp_len": 31,
+   "kind": "script",
+   "zh_hex": "8e8033020002061900069600134a8133020002150909e7b702e7c4e7c5e7f9efcce7c1e866e7ba0000"
+  },
+  {
+   "jp_offset": "0x3166",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "毕竟、这创世纪、可还残留着不少利用价{00}值呢",
+   "zh_hex": "15ea2cef2c02e7b9e893e83ceb9902e7c4e7f7e97be98ce86de7b5b1e82ed8eb2500ec48e90700000000"
+  },
+  {
+   "jp_offset": "0x319a",
+   "jp_len": 12,
+   "kind": "dialogue",
+   "zh_text": "你这家伙、是克鲁泽！？",
+   "zh_hex": "15e7b8e7b9e7dfe7fd02e7b6e7d5e8a2e984ef97050000"
+  },
+  {
+   "jp_offset": "0x31c1",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "好不容易才盼来的绝佳良机！我绝不会让{00}你们来碍事！！",
+   "zh_hex": "15e7c7e7b5ed2fe964e836ecf3d9e7b4e91cebb3eaf0e7e4068be91ce7b5e7e2e7f900e7b8e7bbd9e8c6a90606000000000000000000"
+  },
+  {
+   "jp_offset": "0x31fb",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "你说、碍事！？",
+   "zh_hex": "15e7b8e7ed02e8c6efb8ef97050000"
+  },
+  {
+   "jp_offset": "0x3204",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "劳·鲁·克鲁泽！你这家伙、究竟在图谋{00}着什么！？",
+   "zh_hex": "15ec4aef4be8a2ef4be7d5e8a2e984ef97e7b8e7b9e7dfe7fd02e906ef2cef29eb2dea6e00e86de7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0x323e",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "人类所怀有的、那无数的预言……",
+   "zh_hex": "15efb2e841e7fbeb03e7cbe7b402e7b7e7dce914e7b4ea5aefd709090000"
+  },
+  {
+   "jp_offset": "0x3250",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "让它们尽数应验、这才是我的心愿！！",
+   "zh_hex": "15e7f9e978e7bbe8f2e914e873ea9902e7b9e836e7b6efcce7b4e82de961ef97ef970000"
+  },
+  {
+   "jp_offset": "0x327c",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "什么！？",
+   "zh_hex": "15e7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0x329e",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "我要将其彻底毁灭！就用我这双手、将整{00}个人类！！",
+   "zh_hex": "15efccef2ae84ae8cfebc5e9b4e97ce8e1ef97e7c5efb3efcce7b9eabcef6602e84ae9fe00e828efb2e841ef97ef970000"
+  },
+  {
+   "jp_offset": "0x32d2",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "唔！！你说、要毁灭整个人类！？",
+   "zh_hex": "15e81def97ef97e7b8e7ed02ef2ae97ce8e1e9fee828efb2e841ef97050000"
+  },
+  {
+   "jp_offset": "0x3300",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "原来如此！你这家伙、正是为此、才要夺{00}取创世纪……！",
+   "zh_hex": "15e8e4efcfe7f0e7caef97e7b8e7b9e7dfe7fd02ef3be7b6e7c1e7ca02e836ef2aea1700e987e893e83ceb990909ef970000"
+  },
+  {
+   "jp_offset": "0x332f",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "我绝不会让你得逞！劳·鲁·克鲁泽！！",
+   "zh_hex": "15efcce91ce7b5e7e2e7f9e7b8e80ae9ebef97ec4aef4be8a2ef4be7d5e8a2e984ef97ef970000"
+  },
+  {
+   "jp_offset": "0x3363",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "哼……！",
+   "zh_hex": "15e8b30909ef970000"
+  },
+  {
+   "jp_offset": "0x336a",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "我先把话说在前头！你们的一切努力、终{00}将化作徒劳！",
+   "zh_hex": "15efccef8be81be81fe7edef29ef51e92eef97e7b8e7bbe7b4efb6ef3fec49efb002e8e200e84ae9a5ef2feb02ec4aef970000"
+  },
+  {
+   "jp_offset": "0x33a5",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "什么！？",
+   "zh_hex": "15e7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0x33c8",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "来吧、天使们啊！现在、正是你们登场的{00}时候了！！",
+   "zh_hex": "15efcfe7d002e844e83fe7bbe7c3ef97e82fef2902ef3be7b6e7b8e7bbe9a0e876e7b400ef2dea39e7baef97ef970000"
+  },
+  {
+   "jp_offset": "0x3435",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "哈哈哈哈！你们都看到了吧！！",
+   "zh_hex": "15e7e8e7e8e7e8e7e8ef97e7b8e7bbe840e7f6e7d7e7bae7d0ef97ef970000"
+  },
+  {
+   "jp_offset": "0x3445",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "她们、正是那带来末日的天使！！",
+   "zh_hex": "15e88ee7bb02ef3be7b6e7b7e937efcfec22e98ae7b4e844e83fef97ef970000"
+  },
+  {
+   "jp_offset": "0x3457",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "她们和我一样、皆是诞生于人心黑暗、已{00}非人类的少女！！",
+   "zh_hex": "15e88ee7bbe7d3efccefb6e7da02ec7de7b6ed06ef8de879efb2e82def3eea6a02ef3a00e8f0efb2e841e7b4efacefadef97ef970000"
+  },
+  {
+   "jp_offset": "0x3477",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "作为给人类带来毁灭的存在、再没有比她{00}们更合适的了！",
+   "zh_hex": "15ef2fe7c1e839b4e841e937d9e97ce8e1e7b4e993ef2902e80be7d8e7cbe825e88e00e7bbe952a0ef41e7b4e7ba06000000000000"
+  },
+  {
+   "jp_offset": "0x34b9",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "巴基露露中佐……！那些家伙、可不是一{00}般的难缠啊！",
+   "zh_hex": "15e85be829e858e858ef4eefba0909ef97e7b7e8a4e7dfe7fd02e7c4e7b5e7b6efb600ea80e7b4e866ec34e7c3ef970000"
+  },
+  {
+   "jp_offset": "0x3512",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "竟专挑我们打得筋疲力尽的时候、来钻这{00}空子……",
+   "zh_hex": "15ef2ceb4beae78be7bbe7f5e80aef56ed8adae8f2e7b4ef2dea3902d9edc1e7b900e93fe88609090000000000"
+  },
+  {
+   "jp_offset": "0x3549",
+   "jp_len": 16,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7b9ef4de7b5ecc7e7ba02e7eae945e7e10000"
+  },
+  {
+   "jp_offset": "0x3559",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "凭我们现在的战力、根本应付不了那么多{00}敌人……",
+   "zh_hex": "15ea498be7bbe82fef29e7b4ef28da02e9b8d2e873e97ee7b5e7bae7b7e7bde7e900e7e3b409090000000000000000"
+  },
+  {
+   "jp_offset": "0x359d",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "唔……！",
+   "zh_hex": "15e81d0909ef970000"
+  },
+  {
+   "jp_offset": "0x35a5",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "难道、我们就只剩撤退这一条路了吗……{00}！！",
+   "zh_hex": "15e866e82a028be7bbe7c5ef32ea3ae90ae880e7b987e9d4e8d2e7bae8020909000606000000000000"
+  },
+  {
+   "jp_offset": "0x35de",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "呵呵……呵哈哈哈哈！啊哈哈哈哈哈！！",
+   "zh_hex": "15ef3def3d0909ef3de7e8e7e8e7e8e7e8ef97e7c3e7e8e7e8e7e8e7e8e7e8ef97ef970000"
+  },
+  {
+   "jp_offset": "0x35f7",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "事到如今、已经再没有任何人能阻止了！",
+   "zh_hex": "15efb8e7d7e7f0efb902ef3ae8b7e80be7d8e7cbe89aefbcefb2e7c6e8efe869e7baef970000"
+  },
+  {
+   "jp_offset": "0x3620",
+   "jp_len": 37,
+   "kind": "dialogue",
+   "zh_text": "出现在创世纪旁的那些不明MS、目前似{00}乎正在周边宙域、来回游荡",
+   "zh_hex": "15efbee82fef29e893e83ceb99ef04e7b4e7b7e8a4e7b5ef39efa7ef9e02efd4ef51e94400e933ef3bef29ea5ce899e8bfeaa702efcfef52ea94ee950000"
+  },
+  {
+   "jp_offset": "0x3660",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "这数量、简直……！恐怕、早就超过一个{00}师团了！",
+   "zh_hex": "15e7b9e914e85102e9abe875090906eb33e95802e963e7c5eaf6ef3687e82800e96cea5ee7ba060000000000"
+  },
+  {
+   "jp_offset": "0x369c",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "那些少女、到底是些什么人……",
+   "zh_hex": "15e7b7e8a4efacefad02e7d7e9b4e7b6e8a4e7dde7bdefb209090000"
+  },
+  {
+   "jp_offset": "0x36c7",
+   "jp_len": 32,
+   "kind": "script",
+   "zh_hex": "8e803302000215e866e82ae7ed02e88ee7bb02e7b6ef29e8a8e8e0e86de7b7ebc4e893e83ceb99e80200050000"
+  },
+  {
+   "jp_offset": "0x370c",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "那家伙、当真打算把创世纪、发射出去吗{00}？",
+   "zh_hex": "15e7b7e7dfe7fd02ef53e820e7f5e889e81be893e83ceb9902e870ef65efbee7ebe80200050000"
+  },
+  {
+   "jp_offset": "0x373d",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "……他、会毫不犹豫地开火的",
+   "zh_hex": "150909e80c02e7e2ea0ae7b5ea7bea97ef63e7fae8dae7b40000"
+  },
+  {
+   "jp_offset": "0x374f",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "而且、还会用那种、把大批无辜之人都卷{00}进去的方式",
+   "zh_hex": "15e89ce99902e7f7e7e2efb3e7b7e7d102e81befa5ed63e7dced0de7cdefb2e840ecba00e892e7ebe7b4efb1ea260000"
+  },
+  {
+   "jp_offset": "0x378a",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "穆少佐……？",
+   "zh_hex": "15eb10efacefba0909050000"
+  },
+  {
+   "jp_offset": "0x37af",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "那家伙、是作为我父亲的克隆体、来到这{00}世上的",
+   "zh_hex": "15e7b7e7dfe7fd02e7b6ef2fe7c1efcce888e894e7b4e7d5ed16ef4f02efcfe7d7e7b900e83cef4ce7b40000"
+  },
+  {
+   "jp_offset": "0x37c7",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "正因如此、他憎恨着人类……不、是憎恨{00}着这整个世界",
+   "zh_hex": "15ef3bef33e7f0e7ca02e80ceb34e9bee86defb2e8410909e7b502e7b6eb34e9be00e86de7b9e9fee828e83ce8f50000"
+  },
+  {
+   "jp_offset": "0x3820",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "既然如此、那夺回创世纪、{00}便是当务之急了",
+   "zh_hex": "15e8c4e7efe7f0e7ca02e7b7ea178ce893e83ceb990200e8fae7b6c4e94fe7cdea62e7ba00000000"
+  },
+  {
+   "jp_offset": "0x3835",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "必须趁它发射之前、争分夺秒、从那家伙{00}手里夺回来",
+   "zh_hex": "15e860e9a2e9eae978e870ef65e7cdef5102e852efaeea17ee7902e88ae7b7e7dfe7fd00ef66ef31ea17ef52efcf0000"
+  },
+  {
+   "jp_offset": "0x386d",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "这么一来、用什么方法、可就成了个难题{00}了……",
+   "zh_hex": "15e7b9e7bdefb6efcf02efb3e7dde7bdefb1e84e02e7c4e7c5e837e7bae828e866ea1200e7ba09090000"
+  },
+  {
+   "jp_offset": "0x38a4",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "想要突破那一整支MS大军、那才真是难{00}如登天",
+   "zh_hex": "15e7e6ef2ae8b6ef6de7b7efb6e9fee883efa7ef9eefa5e7e002e7b7e836e820e7b6e86600e7f0e9a0e8440000"
+  },
+  {
+   "jp_offset": "0x38c1",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "况且、创世纪、也有可能反过来对准我们{00}使用",
+   "zh_hex": "15e8d0e99902e893e83ceb9902e7c0e7cbe7c4e7c6e87cef36efcfe7bee87aefcce7bb00e83fefb30000"
+  },
+  {
+   "jp_offset": "0x38f8",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "这状况……还真是棘手啊",
+   "zh_hex": "15e7b9e98be8d00909e7f7e820e7b6ed79ef66e7c30000"
+  },
+  {
+   "jp_offset": "0x3935",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "那些MS暂且不论、不过、要对付创世纪{00}、我倒是有个办法",
+   "zh_hex": "15e7b7e8a4efa7ef9ee9ffe999e7b5e8dc02e7b5ef3602ef2ae7bee97ee893e83ceb990002efcce848e7b6e7cbe828e8eae84e0000"
+  },
+  {
+   "jp_offset": "0x396c",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "对了！漩涡作战……！",
+   "zh_hex": "15e7bee7baef97eef5eef4ef2fef280909ef970000"
+  },
+  {
+   "jp_offset": "0x399d",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……没错",
+   "zh_hex": "150909e7d8e8850000"
+  },
+  {
+   "jp_offset": "0x39a5",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "从前、为了使提坦斯的殖民地激光炮失效{00}、",
+   "zh_hex": "15e88aef5102e7c1e7bae83fe821e843e7c8e7b4e8a9ef38ef63e9b9e83de95ae8a5ea8f00020000"
+  },
+  {
+   "jp_offset": "0x39bf",
+   "jp_len": 36,
+   "kind": "dialogue",
+   "zh_text": "当时、我们采取了让部队从四个方向同时{00}突入、借此分散其瞄准的战术",
+   "zh_hex": "15ef53ef2d02efcce7bbec9ee987e7bae7f9ef70e7c9e88aeb52e828efb1efc1e85def2d00e8b6e89102eadce7caefaeef68e8cfea30e87ae7b4ef28ebce0000"
+  },
+  {
+   "jp_offset": "0x39e3",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "这一次、面对眼前的状况、应该也能用同{00}样的法子、分散它的瞄准",
+   "zh_hex": "15e7b9efb6e86402e862e7bee90bef51e7b4e98be8d002e873e898e7c0e7c6efb3e85d00e7dae7b4e84ee88602efaeef68e978e7b4ea30e87a0000"
+  },
+  {
+   "jp_offset": "0x3a21",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "原来如此……虽然风险不小、但看来、也{00}只有这一个办法了",
+   "zh_hex": "15e8e4efcfe7f0e7ca0909e8b8e7efeb75e932e7b5e83e02e7dbe7f6efcf02e7c000ef32e7cbe7b9efb6e828e8eae84ee7ba0000"
+  },
+  {
+   "jp_offset": "0x3a3e",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "这么一来、剩下的、就是该如何分配部队{00}了……",
+   "zh_hex": "15e7b9e7bdefb6efcf02ea3aef4de7b402e7c5e7b6e898e7f0efbcefaeea34ef70e7c900e7ba09090000"
+  },
+  {
+   "jp_offset": "0x3a72",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "这个嘛、直接沿用原本的部队编组、就行{00}了",
+   "zh_hex": "15e7b9e828e93602e875b7ed80d8e8e4d2e7b4cce7c9ec89ea0d02e7c59f00e7ba00000000000000"
+  },
+  {
+   "jp_offset": "0x3a8c",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "我们奥古、还有大天使号……",
+   "zh_hex": "15efcce7bbe82be84d02e7f7e7cbefa5e844e83fe83309090000"
+  },
+  {
+   "jp_offset": "0x3a9b",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "再加上巴基露露中佐的部队、从三个方向{00}发动突击、应该最为妥当",
+   "zh_hex": "15e80be854ef4ce85be829e858e858ef4eefbae7b4ef70e7c902e88aeaa0e828efb1efc100e870ef30e8b6e7cc02e873e898e8c5e7c1ee05ef530000"
+  },
+  {
+   "jp_offset": "0x3ad8",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "……说得也是",
+   "zh_hex": "150909e7ede80ae7c0e7b60000"
+  },
+  {
+   "jp_offset": "0x3ae1",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "那么、剩下的细节定下来后、一旦准备就{00}绪、立即执行作战！",
+   "zh_hex": "15e7b7e7bd02ea3aef4de7b4eb9aebece867ef4defcfe7fe02efb6ebcde87ae877e7c500efee02e86be855e9fcefd6ef2fef28ef970000"
+  },
+  {
+   "jp_offset": "0x3b1a",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "……基拉！！",
+   "zh_hex": "150909e829e7c2ef97ef970000"
+  },
+  {
+   "jp_offset": "0x3b3e",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "芙蕾……！",
+   "zh_hex": "15e9d7e84c0909ef970000"
+  },
+  {
+   "jp_offset": "0x3b46",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "芙蕾……你……你能平安、能平安无事…{00}…",
+   "zh_hex": "15e9d7e84c0909e7b80909e7b8e7c6e887e7fc02e7c6e887e7fce7dcefb80900090000"
+  },
+  {
+   "jp_offset": "0x3b7a",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "基拉……",
+   "zh_hex": "15e829e7c209090000"
+  },
+  {
+   "jp_offset": "0x3b81",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "我、我一直想着、一定要向你道歉……",
+   "zh_hex": "158b028b87e875e7e6e86d0287e867ef2a9de7b8e82ae927090900000000000000"
+  },
+  {
+   "jp_offset": "0x3bb4",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "芙蕾……？",
+   "zh_hex": "15e9d7e84c0909050000"
+  },
+  {
+   "jp_offset": "0x3bd7",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "我、一直以来、都对一切一无所知……",
+   "zh_hex": "15efcc02efb6e875e7f3efcf02e840e7beefb6ef3fefb6e7dce7fbe85a09090000"
+  },
+  {
+   "jp_offset": "0x3be8",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "竟一直没能察觉、基拉你承受着那样的痛{00}苦……",
+   "zh_hex": "15ef2cefb6e875e7d8e7c6ea8be8ae02e829e7c2e7b8ea75e8c8e86de7b7e7dae7b4ea0b00e9e609090000"
+  },
+  {
+   "jp_offset": "0x3c03",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "……真的对不起、基拉",
+   "zh_hex": "150909e820e7b4e7bee7b5e84702e829e7c20000"
+  },
+  {
+   "jp_offset": "0x3c2b",
+   "jp_len": 12,
+   "kind": "dialogue",
+   "zh_text": "没关系的、芙蕾……",
+   "zh_hex": "15e7d8e8bbe941e7b402e9d7e84c09090000"
+  },
+  {
+   "jp_offset": "0x3c37",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "光是你能像这样平安无事、我就已经很高{00}兴了",
+   "zh_hex": "15e83de7b6e7b8e7c6e8e9e7b9e7dae887e7fce7dcefb802efcce7c5ef3ae8b7e981e81200eabae7ba0000"
+  },
+  {
+   "jp_offset": "0x3c6e",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "谢谢你、基拉",
+   "zh_hex": "15e8b2e8b2e7b802e829e7c20000"
+  },
+  {
+   "jp_offset": "0x3c76",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "这次是真的、我的这份思念……{00}会守护你的……基拉",
+   "zh_hex": "15e7b9e864e7b6e820e7b4028be7b4e7b9ea22a6ea27090900e7e2e8a8e8e0e7b8e7b40909e829e7c200000000000000"
+  },
+  {
+   "jp_offset": "0x3cae",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "芙蕾·阿尔斯塔……你、也要参战吗？",
+   "zh_hex": "15e9d7e84c04e7d2e7e1e7c8e9450909e7b802e7c0ef2aed1aef28e80205000000"
+  },
+  {
+   "jp_offset": "0x3cda",
+   "jp_len": 34,
+   "kind": "dialogue",
+   "zh_text": "是的。大家都在拼命战斗、唯独我在一旁{00}干看着、我已经受不了了……",
+   "zh_hex": "15e7b6e7b403efa5e7dfe840ef29ea66e853ef28e7ff02ea89e8eeefccef29efb6ef0400e8d3e7f6e86d02efccef3ae8b7e8c8e7b5e7bae7ba09090000"
+  },
+  {
+   "jp_offset": "0x3cfc",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "求您了、巴基露露女士、也请让我、为大{00}家做点什么吧！",
+   "zh_hex": "15e93ae835e7ba02e85be829e858e858efadef6402e7c0e83ae7f9efcc02e7c1efa500e7dfe81ce822e7dde7bde7d0ef970000"
+  },
+  {
+   "jp_offset": "0x3d30",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "一旦上了战场、你的性命、也会随时暴露{00}在危险之中",
+   "zh_hex": "15efb6ebcdef4ce7baef28e87602e7b8e7b4e951e85302e7c0e7e2e9a1ef2dea4fe85800ef29e935e932e7cdef4e0000"
+  },
+  {
+   "jp_offset": "0x3d4d",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "即便如此、你也依然无所谓吗？",
+   "zh_hex": "15e855e8fae7f0e7ca02e7b8e7c0eafce7efe7dce7fbe92be802050000"
+  },
+  {
+   "jp_offset": "0x3d7c",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "模拟训练我可是做过的！至少、帮上点忙{00}我还是做得到的！",
+   "zh_hex": "15ea91ebc9ec3ceb13efcce7c4e7b6e81cef36e7b4ef97e897efac02e910ef4ce822ea0600efcce7f7e7b6e81ce80ae7d7e7b4ef970000"
+  },
+  {
+   "jp_offset": "0x3db3",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "可是……",
+   "zh_hex": "15e7c4e7b609090000"
+  },
+  {
+   "jp_offset": "0x3dd5",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "我、一直以来、不是依赖着别人、就是被{00}人保护着",
+   "zh_hex": "15efcc02efb6e875e7f3efcf02e7b5e7b6eafceb46e86de7e5efb202e7c5e7b6e7f100efb2ea47e8e0e86d0000"
+  },
+  {
+   "jp_offset": "0x3df3",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "可是、我觉得、再那样下去是不行的",
+   "zh_hex": "15e7c4e7b602efcce8aee80a02e80be7b7e7daef4de7ebe7b6e7b5efd6e7b40000"
+  },
+  {
+   "jp_offset": "0x3e21",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……是吗",
+   "zh_hex": "150909e7b6e8020000"
+  },
+  {
+   "jp_offset": "0x3e33",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "那好吧、我准许你、以战斗员的身份随队{00}同行",
+   "zh_hex": "15e7b7e7c7e7d002efcce87ae8a7e7b802e7f3ef28e7ffe849e7b4e88dea22e9a1e7c900e85defd60000"
+  },
+  {
+   "jp_offset": "0x3e4d",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "不过、是否真的让你上场作战、得视当时{00}的情况而定",
+   "zh_hex": "15e7b5ef3602e7b6e9bbe820e7b4e7f9e7b8ef4ce876ef2fef2802e80ae9d9ef53ef2d00e7b4e88be8d0e89ce8670000"
+  },
+  {
+   "jp_offset": "0x3e69",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "这样可以吧、芙蕾·阿尔斯塔？",
+   "zh_hex": "15e7b9e7dae7c4e7f3e7d002e9d7e84cef4be7d2e7e1e7c8e945050000"
+  },
+  {
+   "jp_offset": "0x3e94",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "好的、非常感谢您！巴基露露女士！",
+   "zh_hex": "15e7c7e7b402e8f0efc7e87de8b2e835ef97e85be829e858e858efadef64ef970000"
+  },
+  {
+   "jp_offset": "0x3ebf",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "什么！它、竟然还能再生吗！？",
+   "zh_hex": "15e7dde7bdef97e97802ef2ce7efe7f7e7c6e80bef8de802ef97050000"
+  },
+  {
+   "jp_offset": "0x3ef7",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "不、不好！？",
+   "zh_hex": "15e7b502e7b5e7c7ef97050000"
+  },
+  {
+   "jp_offset": "0x3f1b",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "多蒙！！",
+   "zh_hex": "15e7e9e942ef97ef970000"
+  },
+  {
+   "jp_offset": "0x3f68",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "你、你这个大蠢货啊啊！！",
+   "zh_hex": "15e7b802e7b8e7b9e828efa5e94beaf5e7c3e7c3ef97ef970000"
+  },
+  {
+   "jp_offset": "0x3fb4",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "东方不败！？",
+   "zh_hex": "15e8baefb1e7b5e88fef97050000"
+  },
+  {
+   "jp_offset": "0x3fd8",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "亚洲尊者、竟然还活着……？",
+   "zh_hex": "15e7d6eacdeccdad02ef2ce7efe7f7e8d4e86d090905000000"
+  },
+  {
+   "jp_offset": "0x4002",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "哼……！",
+   "zh_hex": "15e8b30909ef970000"
+  },
+  {
+   "jp_offset": "0x402f",
+   "jp_len": 22,
+   "kind": "dialogue",
+   "zh_text": "什么！？难道说、他……竟驾驭着恶魔高{00}达！？",
+   "zh_hex": "15e7dde7bd0605e866e82ae7ed02e80c0909ef2ce953edcae86de7dee8d8e81200ef2b060500000000"
+  },
+  {
+   "jp_offset": "0x4098",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "什么……！？",
+   "zh_hex": "15e7dde7bd0909ef97050000"
+  },
+  {
+   "jp_offset": "0x40a1",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "东方不败他……竟然操纵着……{00}恶魔高达！？",
+   "zh_hex": "15e8bad0e7b5e88fe80c0909ef2ce7efeac7e8e6e86d090900e7dee8d8e812ef2b06050000"
+  },
+  {
+   "jp_offset": "0x40d6",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "你这个、不成器的蠢徒弟啊！！",
+   "zh_hex": "15e7b8e7b9e82802e7b5e837e8c3e7b4e94beb02eb84e7c3ef97ef970000"
+  },
+  {
+   "jp_offset": "0x4110",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "你当老夫、是那种连你的话都听不进去的{00}糊涂虫吗！！",
+   "zh_hex": "15e7b8ef53e9cae83002e7b6e7b7e7d1e86ee7b8e7b4e81fe840e8d1e7b5e892e7ebe7b400eda0ee53eb6de802ef97ef970000"
+  },
+  {
+   "jp_offset": "0x414b",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "……师、师父！？",
+   "zh_hex": "150909e96c02e96ce888ef97050000"
+  },
+  {
+   "jp_offset": "0x4171",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "活在这地球上的人类、同样也是这天然自{00}然所生的生灵……",
+   "zh_hex": "15e8d4ef29e7b9ef63efd3ef4ce7b4efb2e84102e85de7dae7c0e7b6e7b9e844e7efefb500e7efe7fbef8de7b4ef8deaeb09090000"
+  },
+  {
+   "jp_offset": "0x418f",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "你那一番话……重重地、撞进了老夫的心{00}坎里",
+   "zh_hex": "15e7b8e7b7efb6ee6de81f0909e8a1e8a1ef6302ecdfe892e7bae9cae830e7b4e82d00ebbaef310000"
+  },
+  {
+   "jp_offset": "0x41c5",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "那、那么……",
+   "zh_hex": "15e7b702e7b7e7bd09090000"
+  },
+  {
+   "jp_offset": "0x41ea",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "那个企图用恶魔高达毁灭人类的东方不败{00}、已经死了……",
+   "zh_hex": "15e7b7e828ebdaeb2dd8e7dee8d8e812ef2be97ce8e1b4e841e7b4e8bad0e7b5e88f0002ef3ae8b7a7e7ba0909000000000000"
+  },
+  {
+   "jp_offset": "0x420a",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "如今站在这里的老夫、是受了你那份信念{00}、重获新生之人……",
+   "zh_hex": "15e7f0efb9ec31ef29e7b9ef31e7b4e9cae83002e7b6e8c8e7bae7b8e7b7ea22e90fea270002e8a1e9d8ef8aef8de7cdefb209090000"
+  },
+  {
+   "jp_offset": "0x4228",
+   "jp_len": 35,
+   "kind": "dialogue",
+   "zh_text": "换言之、便是东西南北中央不败！你大可{00}称老夫为超级亚洲！！",
+   "zh_hex": "15ea78efd7e7cd02e8fae7b6e8bae7f8ebb8ebb7ef4eec5ae7b5e88fef97e7b8efa5e7c400ea01e9cae830e7c1eaf6eaeee7d6eacdef97ef970000"
+  },
+  {
+   "jp_offset": "0x4266",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "师……师父啊啊！！",
+   "zh_hex": "15e96c0909e96ce888e7c3e7c3ef97ef970000"
+  },
+  {
+   "jp_offset": "0x428f",
+   "jp_len": 12,
+   "kind": "dialogue",
+   "zh_text": "走吧、多蒙！！",
+   "zh_hex": "15e890e7d002e7e9e942ef97ef970000"
+  },
+  {
+   "jp_offset": "0x429b",
+   "jp_len": 40,
+   "kind": "dialogue",
+   "zh_text": "那些妄图搅乱这地球圈的家伙……就用我{00}们的铁拳、将其一一制裁！！",
+   "zh_hex": "15e7b7e8a4ecc6eb2ded6be976e7b9ef63efd3e9fbe7b4e7dfe7fd0909e7c5efb3efcc00e7bbe7b4eebbea6502e84ae8cfefb6efb6e8deec39ef97ef970000"
+  },
+  {
+   "jp_offset": "0x42de",
+   "jp_len": 17,
+   "kind": "script",
+   "zh_hex": "8e803302000215e7b6ef97e96ce888ef97ef970000"
+  },
+  {
+   "jp_offset": "0x4314",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "看来、你是把战斗、错当成了什么游戏一{00}类的东西了",
+   "zh_hex": "15e7f6efcf02e7b8e7b6e81bef28e7ff02e885ef53e837e7bae7dde7bdea94ea3eefb600e841e7b4e8bae7f8e7ba0000"
+  },
+  {
+   "jp_offset": "0x4333",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "基姆·金卡拉姆……真是个蠢货……",
+   "zh_hex": "15e829e823ef4be902e801e7c2e8230909e820e7b6e828e94beaf509090000"
+  },
+  {
+   "jp_offset": "0x436b",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "我已经发过誓了、绝不会再让任何人陷入{00}不幸……",
+   "zh_hex": "158bef3ae8b7e870ef36eff0e7ba02e91ce7b5e7e2e80be7f9e89a8ab4eaf9e89100e7b5ea8d09090000000000"
+  },
+  {
+   "jp_offset": "0x4387",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "妄图把战火不断扩大的你、我绝不能就这{00}么放任不管",
+   "zh_hex": "15ecc6eb2de81bef28e8dae7b5e982ec1aefa5e7b4e7b802efcce91ce7b5e7c6e7c5e7b900e7bde86ce89ae7b5e93b0000"
+  },
+  {
+   "jp_offset": "0x43cc",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……基姆·金卡拉姆",
+   "zh_hex": "150909e829e823ef4be902e801e7c2e8230000"
+  },
+  {
+   "jp_offset": "0x43d6",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "说到底、你那种战斗里、打从根上就缺了{00}觉悟",
+   "zh_hex": "15e7ede7d7e9b402e7b8e7b7e7d1ef28e7ffef3102e7f5e88ae9b8ef4ce7c5ee81e7ba00e8aeea190000"
+  },
+  {
+   "jp_offset": "0x43f0",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "那么、接下来、就轮到我了……",
+   "zh_hex": "15e7b7e7bd02efceef4defcf02e7c5ebf4e7d7efcce7ba09090000"
+  },
+  {
+   "jp_offset": "0x4423",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "哼！还说什么战斗之世呢！",
+   "zh_hex": "15e8b3ef97e7f7e7ede7dde7bdef28e7ffe7cde83ce907ef970000"
+  },
+  {
+   "jp_offset": "0x4436",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "你要是那么想打、那就到阴曹地府去、打{00}个痛快好了",
+   "zh_hex": "15e7b8ef2ae7b6e7b7e7bde7e6e7f502e7b7e7c5e7d7eb22ed74ef63ea60e7eb02e7f500e828ea0be85fe7c7e7ba0000"
+  },
+  {
+   "jp_offset": "0x4452",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "你就别再迷茫、安心上路吧、什么基姆·{00}金卡拉姆！",
+   "zh_hex": "15e7b8e7c5e7e5e80beaf7ec3702e7fce82def4ce8d2e7d002e7dde7bde829e823ef4b00e902e801e7c2e823ef970000"
+  },
+  {
+   "jp_offset": "0x4491",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "为了战斗而进行的战斗、绝不会带来任何{00}东西……",
+   "zh_hex": "15e7c1e7baef28e7ffe89ce892efd6e7b4ef28e7ff02e91ce7b5e7e2e937efcfe89aefbc00e8bae7f809090000"
+  },
+  {
+   "jp_offset": "0x44ad",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "始终未能察觉这一点的、基姆·金卡拉姆{00}……",
+   "zh_hex": "15e908e8e2e8b4e7c6ea8be8aee7b9efb6e822e7b402e829e823ef4be902e801e7c2e8230009090000"
+  },
+  {
+   "jp_offset": "0x44c6",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……这就是你的失败",
+   "zh_hex": "150909e7b9e7c5e7b6e7b8e7b4e8a5e88f0000"
+  },
+  {
+   "jp_offset": "0x44f5",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "成功了……！",
+   "zh_hex": "15e837e9b1e7ba0909ef970000"
+  },
+  {
+   "jp_offset": "0x44fe",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "我、我竟然把那个金卡拉姆、连同倒X、{00}给打败了……！！",
+   "zh_hex": "15efcc02efccef2ce7efe81be7b7e828e902e801e7c2e82302e86ee85de848eed90200e839e7f5e88fe7ba0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0x4543",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "把战斗当成游戏来看待的你、是绝对不会{00}明白的",
+   "zh_hex": "15e81bef28e7ffef53e837ea94ea3eefcfe7f6eaa8e7b4e7b802e7b6e91ce7bee7b5e7e200ef39e809e7b40000"
+  },
+  {
+   "jp_offset": "0x4562",
+   "jp_len": 38,
+   "kind": "dialogue",
+   "zh_text": "所谓真正的武人、是守护他人、开创出无{00}战之世的人……",
+   "zh_hex": "15e7fbe92be820ef3be7b4e8ecefb202e7b6e8a8e8e0e80cefb202e7fae893efbee7dc00ef28e7cde83ce7b4efb209090000"
+  },
+  {
+   "jp_offset": "0x45ad",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "您、就是那位东方不败·亚洲尊者……",
+   "zh_hex": "15e83502e7c5e7b6e7b7e834e8bad0e7b5e88f04e7d6eacdeccdad09090000000000"
+  },
+  {
+   "jp_offset": "0x45fd",
+   "jp_len": 28,
+   "kind": "dialogue",
+   "zh_text": "流派东方不败的大名、就连我、也是早有{00}耳闻",
+   "zh_hex": "15ea2ee985e8bad0e7b5e88fe7b4bee8ac02e7c5e86e8b02e7c0e7b6e963e7cb00ee89ebac0000000000"
+  },
+  {
+   "jp_offset": "0x4619",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "方才那一战、当真精彩绝伦、亚洲尊者",
+   "zh_hex": "15d0e836e7b787ef2802c4e820e98ded58e91cea5b02e7d6eacdeccdad000000000000"
+  },
+  {
+   "jp_offset": "0x464b",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "那么……您是说、愿意助我们一臂之力？",
+   "zh_hex": "15e7b7e7bd0909e835e7b6e7ed02e961ef3cea23efcce7bbefb6ee92e7cdefb0050000"
+  },
+  {
+   "jp_offset": "0x467e",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "……嗯",
+   "zh_hex": "150909e8650000"
+  },
+  {
+   "jp_offset": "0x4685",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "老夫、是受了我的徒弟、多蒙·卡修的一{00}番指点",
+   "zh_hex": "15e9cae83002e7b6e8c8e7baefcce7b4eb02eb8402e7e9e942ef4be801e9b0e7b4efb600ee6de8c0e8220000"
+  },
+  {
+   "jp_offset": "0x469c",
+   "jp_len": 33,
+   "kind": "dialogue",
+   "zh_text": "他让老夫明白、我等的力量、本是为开创{00}一个能让人活下去的世界而存在……",
+   "zh_hex": "15e80ce7f9e9cae830ef39e809028be826e7b4dae85102d2e7b6e7c1e7fae8930087e828e7c6e7f9b4e8d489e7ebe7b4e83ce8f5e89ce993ef2909090000000000000000"
+  },
+  {
+   "jp_offset": "0x46bd",
+   "jp_len": 31,
+   "kind": "dialogue",
+   "zh_text": "老夫这东方不败·亚洲尊者、愿为诸位、{00}效犬马之劳",
+   "zh_hex": "15e9cae830e7b9e8bad0e7b5e88f04e7d6eacdeccdad02e961e7c1ea56e8340200ea8fef6be84fe7cdec4a0000000000"
+  },
+  {
+   "jp_offset": "0x46f7",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "接下来的这一战、恐怕会是一场相当激烈{00}的恶战",
+   "zh_hex": "15efceef4defcfe7b4e7b9efb6ef2802eb33e958e7e2e7b6efb6e876e8b1ef53e9b9eaec00e7b4e7deef280000"
+  },
+  {
+   "jp_offset": "0x4711",
+   "jp_len": 32,
+   "kind": "dialogue",
+   "zh_text": "若是如此、东方不败……有您相助、当真{00}是求之不得",
+   "zh_hex": "15e7e7e7b6e7f0e7ca02e8baefb1e7b5e88f0909e7cbe835e8b1ea2302ef53e82000e7b6e93ae7cde7b5e80a0000"
+  },
+  {
+   "jp_offset": "0x474c",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……那么、意思是？",
+   "zh_hex": "150909e7b7e7bd02ef3cefcae7b6050000"
+  },
+  {
+   "jp_offset": "0x476f",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "东方不败·亚洲尊者……主天使号、衷心{00}欢迎您的加入",
+   "zh_hex": "15e8bad0e7b5e88f04e7d6eacdeccdad0909e954e844e83fe83302edb3e82d00ea92e931e835e7b4e854e8910000000000"
+  },
+  {
+   "jp_offset": "0x47a3",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "那么、师父您、是要去主天使号那边……",
+   "zh_hex": "15e7b7e7bd02e96ce888e83502e7b6ef2ae7ebe954e844e83fe833e7b7e89909090000"
+  },
+  {
+   "jp_offset": "0x47cc",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "……嗯",
+   "zh_hex": "150909e8650000"
+  },
+  {
+   "jp_offset": "0x47d3",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "奥古那边、有赤色彗星、还有高达小队坐{00}镇……",
+   "zh_hex": "15e82be84de7b7e89902e7cbe9e9e89fe9b6b502e7f7e7cbe812ef2be83ee7c9ecc300eebd0909000000"
+  },
+  {
+   "jp_offset": "0x47ea",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "大天使号那边、有你、还有众多高达跟随",
+   "zh_hex": "15efa5e844e83fe833e7b7e89902e7cbe7b802e7f7e7cbeafbe7e9e812ef2be973e9a10000"
+  },
+  {
+   "jp_offset": "0x4804",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "如此一来、老夫便去守住主天使号、方为{00}上策",
+   "zh_hex": "15e7f0e7caefb6efcf02e9cae830e8fae7ebe8a8e859e954e844e83fe83302efb1e7c100ef4cebe40000"
+  },
+  {
+   "jp_offset": "0x4839",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "师父……",
+   "zh_hex": "15e96ce88809090000"
+  },
+  {
+   "jp_offset": "0x485b",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "纵然战斗的地方有别、但战斗的时机、所{00}执行的作战、都是一样的",
+   "zh_hex": "15e8e6e7efef28e7ffe7b4ef63efb1e7cbe7e502e7dbef28e7ffe7b4ef2de7e402e7fb00e9fcefd6e7b4ef2fef2802e840e7b6efb6e7dae7b40000"
+  },
+  {
+   "jp_offset": "0x4874",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "流派东方不败这个名号……你可千万、不{00}许给老夫辱没了",
+   "zh_hex": "15ea2ee985e8bad0e7b5e88fe7b9e828e8ace8330909e7b8e7c4eafde9f802e7b500e8a7e839e9cae830ec9be7d8e7ba000000"
+  },
+  {
+   "jp_offset": "0x48aa",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "是、师父！！",
+   "zh_hex": "15e7b602e96ce888ef97ef970000"
+  },
+  {
+   "jp_offset": "0x48b4",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "也愿师父您、武运长久！！",
+   "zh_hex": "15e7c0e961e96ce888e83502e8ece986ef34e9dbef97ef970000"
+  },
+  {
+   "jp_offset": "0x48de",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "唔……！",
+   "zh_hex": "15e81d0909ef970000"
+  },
+  {
+   "jp_offset": "0xd57a",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "唔……！竟然会在这种地方……！！",
+   "zh_hex": "15e81d0909ef97ef2ce7efe7e2ef29e7b9e7d1ef63efb10909ef97ef970000"
+  },
+  {
+   "jp_offset": "0xd6c8",
+   "jp_len": 59,
+   "kind": "script",
+   "zh_hex": "8e82330200020100040006330113c98133020001067a001371803302000115e86eef3ee8fbe925e840e7b5e85ae82ae7b4ef35ef35ef38ef9302e7c0ea34eaf4e8dc00ef28e8520909ef97ef970000"
+  },
+  {
+   "jp_offset": "0xd732",
+   "jp_len": 29,
+   "kind": "dialogue",
+   "zh_text": "是不会改变的！纵然不知黑历史为何物！{00}战斗的本质、也绝不会变！",
+   "zh_hex": "15e7b6e7b5e7e2e9f0e955e7b4ef97e8e6e7efe7b5e85aef3ee8fbe925e7c1efbce99eef9700ef28e7ffe7b4efa6eb4502e7c0e91ce7b5e7e2e955ef970000"
+  },
+  {
+   "jp_offset": "0xd77e",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "到此为止了！基姆·金卡拉姆！！",
+   "zh_hex": "15e7d7e7cae7c1e869e7baef97e829e823ef4be902e801e7c2e823ef97ef970000"
+  },
+  {
+   "jp_offset": "0xd7be",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "唔哦哦哦！？",
+   "zh_hex": "15e81de919e919e919ef97050000"
+  },
+  {
+   "jp_offset": "0xd7fa",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "什么！？",
+   "zh_hex": "15e7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0xd84e",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "这、这是……！",
+   "zh_hex": "15e7b902e7b9e7b60909ef970000"
+  },
+  {
+   "jp_offset": "0xd874",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "MASTER",
+   "zh_hex": "15efa7ea9cef9eeed6ef9feed50000"
+  },
+  {
+   "jp_offset": "0xd89f",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "难道说、倒X、它认可了我这个人吗？",
+   "zh_hex": "15e866e82ae7ed02e848eed902e978e8a0e7c4e7ba8be7b9e828b4e8020500000000"
+  },
+  {
+   "jp_offset": "0xd8b2",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "哼……好吧！",
+   "zh_hex": "15e8b30909e7c7e7d0ef970000"
+  },
+  {
+   "jp_offset": "0xd8bf",
+   "jp_len": 37,
+   "kind": "dialogue",
+   "zh_text": "我可是驾驭过无数MS之人！哪怕你是黑{00}历史产物、我也绝不会畏惧！",
+   "zh_hex": "15efcce7c4e7b6e953edcaef36e7dce914efa7ef9ee7cdefb2ef97e8ffe958e7b8e7b6ef3e00e8fbe925ec05e99e02efcce7c0e91ce7b5e7e2ecf0ec6eef970000"
+  },
+  {
+   "jp_offset": "0xd8e4",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "来吧、尽管放马过来吧、倒X！",
+   "zh_hex": "15efcfe7d002e8f2e93be86ce84fef36efcfe7d002e848eed9ef970000"
+  },
+  {
+   "jp_offset": "0xd8f4",
+   "jp_len": 18,
+   "kind": "dialogue",
+   "zh_text": "然后、让我好好见识一下、何谓胜利！！",
+   "zh_hex": "15e7efe7fe02e7f98be7c7e7c7e85ce92f8789028ae92be8dbe82e06060000000000000000"
+  },
+  {
+   "jp_offset": "0xd92e",
+   "jp_len": 11,
+   "kind": "dialogue",
+   "zh_text": "那、那帮家伙……！！",
+   "zh_hex": "15e7b702e7b7e910e7dfe7fd0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0xd95e",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "那、那到底是什么东西！？",
+   "zh_hex": "15e7b702e7b7e7d7e9b4e7b6e7dde7bde8bae7f8ef97050000"
+  },
+  {
+   "jp_offset": "0xd992",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "嗯……什么？",
+   "zh_hex": "15e8650909e7dde7bd050000"
+  },
+  {
+   "jp_offset": "0xd9e6",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "倒X？",
+   "zh_hex": "15e848eed9050000"
+  },
+  {
+   "jp_offset": "0xda2d",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "你这家伙……",
+   "zh_hex": "15e7b8e7b9e7dfe7fd09090000"
+  },
+  {
+   "jp_offset": "0xda34",
+   "jp_len": 24,
+   "kind": "dialogue",
+   "zh_text": "……原来如此、你是说、你愿跟随于我吗{00}？",
+   "zh_hex": "150909e8e4efcfe7f0e7ca02e7b8e7b6e7ed02e7b8e961e973e9a1e879efcce80200050000"
+  },
+  {
+   "jp_offset": "0xda4c",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "那么……！",
+   "zh_hex": "15e7b7e7bd0909ef970000"
+  },
+  {
+   "jp_offset": "0xda81",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……！？",
+   "zh_hex": "150909ef97050000"
+  },
+  {
+   "jp_offset": "0xdad2",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "倒X！？",
+   "zh_hex": "15e848eed9ef97050000"
+  },
+  {
+   "jp_offset": "0xdadb",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "你……难道、你愿意接受我的想法吗！？",
+   "zh_hex": "15e7b80909e866e82a02e7b8e961ef3cb7e8c88be7b4e7e6e84ee80206050000000000"
+  },
+  {
+   "jp_offset": "0xdaf2",
+   "jp_len": 9,
+   "kind": "dialogue",
+   "zh_text": "那么……！！",
+   "zh_hex": "15e7b7e7bd0909ef97ef970000"
+  },
+  {
+   "jp_offset": "0xdb22",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……啊？",
+   "zh_hex": "150909e7c3050000"
+  },
+  {
+   "jp_offset": "0xdb52",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "这家伙……是倒X？",
+   "zh_hex": "15e7b9e7dfe7fd0909e7b6e848eed9050000"
+  },
+  {
+   "jp_offset": "0xdb9e",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "难不成、你这家伙……是认可我了吗？",
+   "zh_hex": "15e866e7b5e83702e7b8e7b9e7dfe7fd0909e7b6e8a0e7c4efcce7bae802050000"
+  },
+  {
+   "jp_offset": "0xdbf2",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "哈……好吧！",
+   "zh_hex": "15e7e80909e7c7e7d0ef970000"
+  },
+  {
+   "jp_offset": "0xdc00",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "那么、倒X！我可要好好驾驭你一番了！",
+   "zh_hex": "15e7b7e7bd02e848eed9ef97efcce7c4ef2ae7c7e7c7e953edcae7b8efb6ee6de7baef970000"
+  },
+  {
+   "jp_offset": "0xdc1b",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "来吧、上吧！！",
+   "zh_hex": "15efcfe7d002ef4ce7d0ef97ef970000"
+  },
+  {
+   "jp_offset": "0xdc4a",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……！？",
+   "zh_hex": "150909ef97050000"
+  },
+  {
+   "jp_offset": "0xdc7a",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "什、什么！？难道、还想接着打下去吗！{00}！",
+   "zh_hex": "15e7dd02e7dde7bd0605e866e82a02e7f7e7e6b7e86de7f589e7ebe80206000600000000000000"
+  },
+  {
+   "jp_offset": "0xdcd2",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "……啊？",
+   "zh_hex": "150909e7c3050000"
+  },
+  {
+   "jp_offset": "0xdcda",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "那不是金卡拉姆那家伙的机体吗？",
+   "zh_hex": "15e7b7e7b5e7b6e902e801e7c2e823e7b7e7dfe7fde7b4e7e4ef4fe802050000"
+  },
+  {
+   "jp_offset": "0xdd27",
+   "jp_len": 14,
+   "kind": "dialogue",
+   "zh_text": "里面、竟然一个人都没有……",
+   "zh_hex": "15ef31e86202ef2ce7efefb6e828efb2e840e7d8e7cb09090000"
+  },
+  {
+   "jp_offset": "0xdd35",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "难不成、这架MS、是自个儿主动找上门{00}来的？",
+   "zh_hex": "15e866e7b5e83702e7b9e99defa7ef9e02e7b6efb5e828eb7ce954ef30e9d2ef4ce90c00efcfe7b4050000"
+  },
+  {
+   "jp_offset": "0xdd6b",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "MASTER",
+   "zh_hex": "15efa7ea9cef9eeed6ef9feed50000"
+  },
+  {
+   "jp_offset": "0xdd96",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "主人？你是说、要认我这本小姐、当你的{00}主人！？",
+   "zh_hex": "15e954efb205e7b8e7b6e7ed02ef2ae8a0efcce7b9efa6e83ee92102ef53e7b8e7b400e954efb2ef97050000"
+  },
+  {
+   "jp_offset": "0xddab",
+   "jp_len": 17,
+   "kind": "dialogue",
+   "zh_text": "哦、那可真是有意思！！",
+   "zh_hex": "15e91902e7b7e7c4e820e7b6e7cbef3cefcaef97ef970000"
+  },
+  {
+   "jp_offset": "0xddbc",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "那么、我就好好用用你！来吧、倒X！！",
+   "zh_hex": "15e7b7e7bd02efcce7c5e7c7e7c7efb3efb3e7b8ef97efcfe7d002e848eed9ef97ef970000"
+  },
+  {
+   "jp_offset": "0xde02",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……倒X？",
+   "zh_hex": "150909e848eed9050000"
+  },
+  {
+   "jp_offset": "0xde56",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "嚯……",
+   "zh_hex": "15e9dd09090000"
+  },
+  {
+   "jp_offset": "0xde5d",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "一架MS、竟会主动认可我这个人吗",
+   "zh_hex": "15efb6e99defa7ef9e02ef2ce7e2e954ef30e8a0e7c4efcce7b9e828efb2e8020000"
+  },
+  {
+   "jp_offset": "0xdeb1",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "可是、倒X啊……我所走的、是一条败者{00}之道",
+   "zh_hex": "15e7c4e7b602e848eed9e7c309098be7fbe890e7b402e7b687e9d4e88fad00e7cde82a0000000000"
+  },
+  {
+   "jp_offset": "0xdecc",
+   "jp_len": 26,
+   "kind": "dialogue",
+   "zh_text": "若你对此并不介意、那便、随我一同前来{00}吧",
+   "zh_hex": "15e7e7e7b8e7bee7cae957e7b5ea84ef3c02e7b7e8fa02e9a1efccefb6e85def51efcf00e7d00000"
+  },
+  {
+   "jp_offset": "0xdf32",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……什么！？",
+   "zh_hex": "150909e7dde7bdef97050000"
+  },
+  {
+   "jp_offset": "0xdf62",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "这家伙……是倒X？",
+   "zh_hex": "15e7b9e7dfe7fd0909e7b6e848eed9050000"
+  },
+  {
+   "jp_offset": "0xdfae",
+   "jp_len": 23,
+   "kind": "dialogue",
+   "zh_text": "你、你这家伙……是要认可我了吗？",
+   "zh_hex": "15e7b802e7b8e7b9e7dfe7fd0909e7b6ef2ae8a0e7c4efcce7bae802050000"
+  },
+  {
+   "jp_offset": "0xe004",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "原来如此……原来是这么回事啊！！",
+   "zh_hex": "15e8e4efcfe7f0e7ca0909e8e4efcfe7b6e7b9e7bdef52efb8e7c3ef97ef970000"
+  },
+  {
+   "jp_offset": "0xe014",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "好、来吧！倒X！！",
+   "zh_hex": "15e7c702efcfe7d0ef97e848eed9ef97ef970000"
+  },
+  {
+   "jp_offset": "0xe024",
+   "jp_len": 21,
+   "kind": "dialogue",
+   "zh_text": "就由你我二人、一同跨越这道难关吧！！",
+   "zh_hex": "15e7c5e8a6e7b88bea13b40287e85deeacea57e7b9e82ae866e8bbe7d0060600000000000000"
+  },
+  {
+   "jp_offset": "0xe05e",
+   "jp_len": 7,
+   "kind": "dialogue",
+   "zh_text": "……唔？",
+   "zh_hex": "150909e81d050000"
+  },
+  {
+   "jp_offset": "0xe08a",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "这是……倒X？",
+   "zh_hex": "15e7b9e7b60909e848eed9050000"
+  },
+  {
+   "jp_offset": "0xe0bb",
+   "jp_len": 15,
+   "kind": "dialogue",
+   "zh_text": "MASTER",
+   "zh_hex": "15efa7ea9cef9eeed6ef9feed50000"
+  },
+  {
+   "jp_offset": "0xe0e5",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "唔……你是要、认我做你的主人吗？",
+   "zh_hex": "15e81d0909e7b8e7b6ef2a02e8a0efcce81ce7b8e7b4e954efb2e802050000"
+  },
+  {
+   "jp_offset": "0xe0f9",
+   "jp_len": 16,
+   "kind": "dialogue",
+   "zh_text": "你是这个意思吧、倒X？",
+   "zh_hex": "15e7b8e7b6e7b9e828ef3cefcae7d002e848eed9050000"
+  },
+  {
+   "jp_offset": "0xe148",
+   "jp_len": 10,
+   "kind": "dialogue",
+   "zh_text": "……甚好",
+   "zh_hex": "150909eceee7c70000"
+  },
+  {
+   "jp_offset": "0xe152",
+   "jp_len": 30,
+   "kind": "dialogue",
+   "zh_text": "那么、就随我一同前来吧、那真正的武人{00}之道……",
+   "zh_hex": "15e7b7e7bd02e7c5e9a18b87e85dbad9e7d002e7b7e820ef3be7b4e8ecb400e7cde82a090900000000000000"
+  },
+  {
+   "jp_offset": "0xe170",
+   "jp_len": 19,
+   "kind": "dialogue",
+   "zh_text": "我便与你一同走下去、给世人看看！！",
+   "zh_hex": "158be8fae832e7b887e85de89089e7eb02e839e83cb4e7f6e7f606060000000000000000"
+  },
+  {
+   "jp_offset": "0xe2f6",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "怎、怎么会！？",
+   "zh_hex": "15e7f202e7f2e7bde7e2ef97050000"
+  },
+  {
+   "jp_offset": "0xe308",
+   "jp_len": 27,
+   "kind": "dialogue",
+   "zh_text": "明明这场仗、都还没打到尽兴呢、为什么{00}会这样！？",
+   "zh_hex": "15ef39ef39e7b9e876ea3702e840e7f7e7d8e7f5e7d7e8f2eabae90702e7c1e7dde7bd00e7e2e7b9e7daef97050000"
+  },
+  {
+   "jp_offset": "0xe352",
+   "jp_len": 25,
+   "kind": "dialogue",
+   "zh_text": "呜哦哦哦！？御、御大将啊啊——！",
+   "zh_hex": "15e8d9e919e919e9190605ec6802ec68bee84ae7c3e7c3ebafebaf06000000"
+  },
+  {
+   "jp_offset": "0xf3d6",
+   "jp_len": 8,
+   "kind": "dialogue",
+   "zh_text": "梅丽贝尔小姐！",
+   "zh_hex": "15e9f2e9c5e857e7e1e83ee92106000000"
+  },
+  {
+   "jp_offset": "0xf406",
+   "jp_len": 13,
+   "kind": "dialogue",
+   "zh_text": "啧！梅丽贝尔那家伙！！",
+   "zh_hex": "15e9faef97e9f2e9c5e857e7e1e7b7e7dfe7fdef97ef970000"
+  },
+  {
+   "jp_offset": "0xf413",
+   "jp_len": 39,
+   "kind": "dialogue",
+   "zh_text": "想当年、我可是把你从运河人那儿捡回来{00}的、这份恩情、你都还没报答我呢！",
+   "zh_hex": "15e7e6ef53e90902efcce7c4e7b6e81be7b8e88ae986ee4cefb2e7b7eb7cecdbef52efcf00e7b402e7b9ea22e7eee88b02e7b8e840e7f7e7d8e913ea96efcce907ef970000"
+  },
+  {
+   "jp_offset": "0xf462",
+   "jp_len": 20,
+   "kind": "dialogue",
+   "zh_text": "啧、斯特罗那家伙！真是个不中用的废物{00}！",
+   "zh_hex": "15e9fa02e7c8e7cfe7ece7b7e7dfe7fd06e820e7b6e828e7b5c0d8e7b4eae5e99e0006000000000000"
+  }
+ ]
+}

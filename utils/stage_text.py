@@ -25,7 +25,7 @@ Format (reverse-engineered, verified against the shipped game):
     bumped by the accumulated growth, and the header tables re-padded to
     4-byte alignment where growth broke it.
 
-Data model (data/dialogue/stages/<name>.json, one per stage file):
+Data model (data/zh/stages/<name>.json, one per stage file):
 
   ``edits``   — byte-range replacements in ORIGINAL-file coordinates:
                 {jp_offset, jp_len, zh_hex} (+ human-readable jp/zh text).
@@ -49,7 +49,7 @@ from pathlib import Path
 from . import text_codec
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-STAGES_DIR = DATA_DIR / "dialogue" / "stages"
+STAGES_DIR = DATA_DIR / "zh" / "stages"
 
 STAGE_RAM_BASE = 0x0232C800     # fixed RAM buffer every stage file loads to
 STAGE_BUFFER_SIZE = 0x13800     # RAM buffer size (79,872 B); files must fit
@@ -226,7 +226,7 @@ def check_table_alignment(data: bytes) -> None:
 def build_stage_file(jp_bytes: bytes, stage_data: dict) -> bytes:
     """Rebuild one translated stage file from its original bytes + edit data.
 
-    ``stage_data`` is one parsed data/dialogue/stages/*.json. Returns the
+    ``stage_data`` is one parsed data/zh/stages/*.json. Returns the
     built file; asserts size, header-table alignment and pointer sanity."""
     if ("source_size" in stage_data
             and len(jp_bytes) != stage_data["source_size"]):

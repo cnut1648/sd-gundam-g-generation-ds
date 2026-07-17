@@ -4,7 +4,7 @@ Twenty flat data files outside the stage-dialogue (_STG*) system carry
 translated content: battle-voice barks, battle cut-in quotes, ID command /
 ability effect labels, special ability & defense descriptions, encyclopedia
 biographies, weapon and part names, and a handful of raw-tile UI graphics.
-Their translation data lives under ``data/files/`` in four JSON layouts:
+Their translation data lives under ``data/zh/files/`` in four JSON layouts:
 
   * ``edits``         — in-place rewrites of a fixed-layout text bank: each edit
                         re-encodes ``zh`` (utils.text_codec) at ``offset`` and
@@ -45,7 +45,7 @@ from pathlib import Path
 from . import text_codec
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-FILES_DIR = DATA_DIR / "files"
+FILES_DIR = DATA_DIR / "zh" / "files"
 
 #: data file name -> JSON table (relative to data/files/) that rebuilds it.
 DATA_FILE_TABLES = {
@@ -197,6 +197,6 @@ def build_data_file(name: str, jp_bytes: bytes, verify: bool = True) -> bytes:
         if want is not None and got != want:
             raise AssertionError(
                 f"{name}: rebuilt component sha1 {got} != manifest {want} — the data under "
-                f"data/files/{relpath} (or data/charmap.json) no longer reproduces the "
+                f"data/zh/files/{relpath} (or data/charmap.json) no longer reproduces the "
                 "expected component")
     return out
