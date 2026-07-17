@@ -85,6 +85,10 @@ CUTIN_FILE = "1dc.bin"
 # ---------------------------------------------------------------------------
 OFFTAB_A = 0x1781A4              # special-ability record-offset table (u32[]) -> 1df.bin
 OFFTAB_D = 0x178134              # special-defense record-offset table (u32[]) -> 1e0.bin
+OFFTAB_D_WORDS = (OFFTAB_A - OFFTAB_D) // 4   # 28: the D table physically ends
+                                 # where the A table begins; walking further
+                                 # re-reads A words as fictional D records
+                                 # (token-dangling aliases, decoder-audit find)
 E71_TABLE = 0xE71B0              # per-utid special-profile table
 E71_STRIDE = 0x1C
 E71_DEFENSE_NAME = 0x00          # u32 -> defense type-name string
