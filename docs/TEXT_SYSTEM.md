@@ -98,6 +98,7 @@ reproduction + shipped-byte analysis; enforced by `bank_onebyte_regression` and
 | event text blocks | script/pointer records | n/a (text fields are annotations) |
 | battle effect banks (`1da/1db/1df/1e0`) | **trampoline** | forbidden unless in the record's JP span (zh_hex required by the build) |
 | resident caves / ui names / battle name pool / post dict labels | **trampoline** | forbidden unless in the record's HEAD payload |
+| **char-DB pilot names** (any store) | trampoline **and** renderA-direct (the `0x2BCA6` speaker-plate patch) | forbidden entirely: translated pilot names must be pure ZH-band (≥2196, no one-bytes/F-refs/JP-band) or the plate draws different glyphs than the roster (LESSONS A12; gate `pool_trampoline_tokens`) |
 
 The renderB 8×16 charset (all 224 one-byte slots, kana ordering, the +4/+5 敵-skip
 alignment law, punctuation tail) is catalogued in `data/renderb_charset.json` — decode

@@ -87,12 +87,12 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 b5746ddab4c70588817fd46e6086728d1751fab6  (MATCHES the shipped translation)
+[build] final ROM sha1 7f035a74e37582c45883cfce9ba251392c4cdf8d  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,324,584 bytes)
 ```
 
 追加 `--pad32m 路径` 可同时输出补齐到 32 MiB 的镜像（部分烧录卡要求 2 的幂
-大小；sha1 `b455da580161bb80c153484c66a653b2894c4db4`）。
+大小；sha1 `ff332e627451b7e06a1bad89350f1a51f451c210`）。
 
 输入必须是 sha1 为 `12443b91297a57bcd2ace8da989c26ae635a79fd`（33,554,432
 字节）的日版卡带镜像——构建会校验它以及 `data/manifest.json` 中记录的每个

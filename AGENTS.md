@@ -91,6 +91,11 @@ Two fonts, one byte grammar (see `docs/TEXT_SYSTEM.md`):
   renderB-meaning, e.g. 0xD9=！ 0x7C=… 0xDB=・ 0xD8=？ 0x7A=、 0x92=近).  A new
   one-byte CJK/ASCII token there = garble (wrong JP glyph) or a sunk/thin
   misaligned glyph.
+  **Exception — translated char-DB pilot names**: they ALSO render renderA-direct
+  on the 0x2BCA6-patched dialogue speaker plate, and the two fonts share no slot
+  identity, so the original-payload one-byte allowance does NOT apply — pilot
+  names must be pure ZH-band (no one-bytes, no F-refs, no JP-band; enforced by
+  `pool_trampoline_tokens`).
   `text_codec.encode()` takes `surface=` + `allowed_one_bytes=`; `slot_of(surface=
   "bank")` refuses JP-band registrations; the `bank_onebyte_regression`,
   `pool_trampoline_tokens` and `offline_coverage` gates enforce all of this.
