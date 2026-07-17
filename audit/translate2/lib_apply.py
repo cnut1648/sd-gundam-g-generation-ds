@@ -32,7 +32,17 @@ CM = text_codec.load_charmap()
 IDENT = load_identities()
 
 JP_ROM_PATH = REPO / "0098 - SD Gundam G Generation DS (Japan).nds"
-ZH_ROM_PATH = REPO / "sd-gundam-g-generation-zh.nds"
+# The campaign BASELINE ZH ROM: the state all briefs/zh_current/arena images
+# were captured from (v1.1 data, pre-fleet-apply).  Pinned to a fixed path so
+# rebuilding the working ROM after an apply can never shift the baseline the
+# appliers diff against (a moved baseline makes replays skip/misplace).
+# Regenerate when the campaign REBASES: build from the pre-apply commit's
+# data/ (audit/translate2/make_baseline_rom.sh).
+import os
+ZH_ROM_PATH = Path(os.environ.get("ZH_ROM", REPO / "sd-gundam-g-generation-zh.nds"))
+ZH_BASELINE_ROM = REPO / "audit/translate2/staging/baseline_v11.nds"
+if ZH_BASELINE_ROM.exists() and "ZH_ROM" not in os.environ:
+    ZH_ROM_PATH = ZH_BASELINE_ROM
 
 RAM_BASE = 0x02000000
 UI_BANK_RAM = 0x02328720

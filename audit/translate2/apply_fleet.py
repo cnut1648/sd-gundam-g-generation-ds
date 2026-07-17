@@ -467,6 +467,7 @@ def apply_details(props, pools, chars_json, report):
         total -= len(p) + 2
     starts = {}
     cave_starts = {}
+    spill_homes = set()          # arena offsets that are CURRENT spill homes
     for p in spill:
         didxs = uniq.pop(p)
         arena, off, ram = pools.allocate(
@@ -474,6 +475,7 @@ def apply_details(props, pools, chars_json, report):
             decode_text(zh, p, "stage", zh.expand, False)[:20])
         _surgical_write(arena, off, p + b"\x00\x00", len(p) + 2, surface="stage")
         cave_starts[p] = (ram - RAM_BASE) - DETAIL_BASE
+        spill_homes.add(off)
     seq = POOL_LO
     placed = {}
     blob = bytearray()
@@ -519,11 +521,15 @@ def apply_details(props, pools, chars_json, report):
         {"didx": k, "offset": f"0x{starts[k]:X}"} for k in range(255)
         if final.get(k) or k in jdetails]
     # ---- retire the old cave homes через the ledger ----------------------
+    # (idempotence: a replay's dofs already point at OUR OWN spill homes —
+    # never retire a span that is a current spill home this run)
     vacated = []
     for didx, off in sorted(dofs.items()):
         if off >= POOL_END:                    # old cave home
             foff = DETAIL_BASE + off
             aoff = foff - 0x186000
+            if aoff in spill_homes:
+                continue
             e = pools.caves.entry_at(aoff)
             if e is not None:
                 span = len(bytes.fromhex(e["payload_hex"]))
