@@ -1,0 +1,23 @@
+{
+ "entity": "unit_547",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/GAT-X370%E5%BC%BA%E5%A4%BA%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/%E5%BC%BA%E5%A4%BA%E9%AB%98%E8%BE%BE/2840168",
+  "https://gundam.fandom.com/wiki/GAT-X370_Raider_Gundam"
+ ],
+ "name_zh": "强夺高达",
+ "weapons": [
+  {
+   "slot": 0,
+   "zh": "双联超高初速防盾炮"
+  },
+  {
+   "slot": 1,
+   "zh": "米约尔尼尔"
+  }
+ ],
+ "ability_segments_zh": [
+  "可变形"
+ ],
+ "notes": "机体名强夺高达=biligame页面标题GAT-X370强夺高达、canon正确保留、与char_67/68（克罗特·布埃尔）输出引用同页对齐。武器slot0修正术语缺陷：JP2連装超高初速防盾砲、biligame全称二联装52mm超高初速防盾炮、旧译双联高速防盾炮把专有术语超高初速（Hyper Velocity=超高初速炮口初速）错压成泛义高速、按canon恢复为双联超高初速防盾炮（2連装→双联沿本库既有体例：双联光束爪/双联加特林机枪/双联光束枪）、9字18B恰好等长于JP原串footprint（0xB64DB len=18）可原位回填；该串shared_by_3=本entity自有的utid547/548/549三形态、改动不外溢。slot1按协调员钦定canon修正：ミョルニル=米约尔尼尔（Mjolnir破坏球、biligame：米约尔尼尔（Mjolnir）破坏球/雷神之锤撞钉破碎球）、旧译雷神锤是描述性意译且该武器实为缆绳破坏球并非锤、大陆通行为音译；5字10B比JP原串（len=6）长4B、需经ledger分配池空间。slot2ツォーン=佐恩炮保留：佐恩即biligame音译（佐恩（Zorn/怒火）100mm能量炮）、炮字后缀是本库SEED裸名炮类既有体例（同斯库拉加农炮/unit_79笔记）、非canon错误。slot3クロー=利爪为9机跨系列共享泛用串、非canon错误、保留。特殊能力owner=true、修复截断缺陷：JP可変機構旧译只剩可变、补全为可变机构、4字=8B恰满budget_bytes=8、与同JP同预算的unit_79/unit_82修法逐字一致。防御名TP装甲与防御段归unit_130所有、按规则不输出。"
+}

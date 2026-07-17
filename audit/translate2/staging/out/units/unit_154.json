@@ -1,0 +1,18 @@
+{
+ "entity": "unit_154",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-178%2BFXA-05D%E8%B6%85%E7%BA%A7%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/FXA-05DG-%E9%98%B2%E5%8D%AB%E8%80%85",
+  "https://wiki.biligame.com/gundam/LRX-077%E8%A5%BF%E6%96%AF%E5%A5%8E%E5%BE%B7",
+  "https://gundam.huijiwiki.com/wiki/FXA-05D_G-%E9%98%B2%E5%8D%AB%E8%80%85"
+ ],
+ "name_zh": "超级高达",
+ "weapons": [
+  {"slot": 0, "zh": "长射程步枪"}
+ ],
+ "ability_segments_zh": [
+  "G防卫机",
+  "（全装甲可解除）"
+ ],
+ "notes": "机体名超级高达=biligame词条RX-178+FXA-05D超级高达通行译名、48px≤144px、保留。能力段（family51、record0x414）修复双重缺陷：段0旧译防御单元把ディフェンサー（=FXA-05D G-Defenser机体名之Defenser）误当防御、段1旧译全装甲系统丢掉（解除可能）触发信息（解除后分离G防卫机变回高达Mk2的关键机制）。新译段0=G防卫机与unit_151已交付的可装备G防卫机同词干同步（该agent已明确flag本记录需同步、biligame页中文名G-防卫者、连字符不可编码故作G防卫机）；段1=（全装甲可解除）与unit_25/40/46/76家族措辞全装甲可解除统一、（）复用本记录JP原payload的0x7D/0x7E一字节括号。字节实测（encode_bank+compose_segments规则、room=28-4尾框=24B）：G防卫机8B+段间2B+（全装甲可解除）14B=24B恰满；理想全文（全装甲系统可解除）为28B放不下。注意本记录jmap把数字2映到分隔字节0x03、段内严禁出现数字、现译无数字。武器slot0ロング・ライフル由长步枪改为长射程步枪：biligame超级高达/G-防卫者页及中文G世代社区对ロングライフル的通行译名、该串12机共享（超级高达utid154-156+西斯库德系utid307-315、西斯奎德的I力场发射器狙击形态同名武装亦译长射程步枪）、对两家均正确、10B/60px编码通过。其余武器不改：光束军刀（315机共享）与超级火箭炮（21机共享）为brief钦定canon；slot3ミサイル・ポッド导弹舱忠实（G防卫机十四联装导弹舱）、12机共享（瓦尔·瓦罗/强盗/梅萨拉等）、非canon错误。防御记录（貫通防御なし）owner=unit_1、按规则整体省略defense_*键。"
+}

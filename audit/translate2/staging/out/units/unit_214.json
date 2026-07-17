@@ -1,0 +1,19 @@
+{
+ "entity": "unit_214",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/XM-X2ex%E6%B5%B7%E7%9B%97%E9%AB%98%E8%BE%BEX2%E6%94%B9",
+  "https://wiki.biligame.com/gundam/XM-X2%E6%B5%B7%E7%9B%97%E9%AB%98%E8%BE%BEX2",
+  "https://gundam.huijiwiki.com/wiki/%E5%AE%87%E5%AE%99%E4%B8%96%E7%BA%AA%E5%85%B5%E5%99%A8%E5%88%97%E8%A1%A8"
+ ],
+ "name_zh": "海盗高达X2改",
+ "weapons": [
+  {
+   "slot": 2,
+   "zh": "射击长枪"
+  }
+ ],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "名称与biligame页面XM-X2ex海盗高达X2改一致、保留。slot2射击长枪改为射击长矛：Shot Lancer为电磁投射长矛类实弹武器、灰机wiki宇宙世纪兵器列表与biligame条目均作射击长矛、长枪易误读为枪械；同字节数(8)、该字符串仅与unit_211(海盗高达X2)共享(ptr 0x218BC1D)、整合时应用一次即可。slot0斩刀破坏枪/slot1光束斩刀为全海盗系7机共享的通行描述性译名、slot3破坏发射器符合本作ランチャー=发射器惯例、均保留。特殊能力ニュータイプ対応機补全为NT对应机(10/12字节)、与fleet其他机体(unit_31/43/46/73等)统一。ABC披风防御名及防御说明归unit_199所有、此处不输出。"
+}

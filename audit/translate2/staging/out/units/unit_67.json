@@ -1,0 +1,14 @@
+{
+ "entity": "unit_67",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E9%98%BF%E6%99%AE%E6%92%92%E6%8B%89%E6%96%AF%E2%85%A2",
+  "https://gundam.fandom.com/wiki/Apsaras_III"
+ ],
+ "name_zh": "阿普萨拉斯3",
+ "weapons": [],
+ "ability_segments_zh": [
+  "地面适应",
+  "大型机"
+ ],
+ "notes": "机体名保留阿普萨拉斯3：biligame页题作阿普撒拉斯Ⅲ、但撒/萨为音译变体而非事实错误、且本库全线（data/zh/stages/_STG02/_STG03/_STG06剧本台词与units.json三条同名记录utid67/68/69）均用阿普萨拉斯、与char_1爱娜·萨哈林/char_306基尼亚斯的萨哈林家族译名同字对齐、Ⅲ以数字3呈现属字表限制下的既定写法。武器不改：大型メガ粒子砲=大型米加粒子炮（biligame阿普撒拉斯Ⅲ页固定武装即中央大口径MEGA/米加粒子炮）、メガ粒子砲=米加粒子炮、均为canon且分别19/77机共享串。能力段（owner）：段0地形適正・地上→地面适应、与本bank全族既定词干宇宙适应/水域适应/地面适应一致、语义完整无截断（・为label禁用符号故不逐字保留）；段1大型ユニット由巨大改为大型单位、对齐教学关_STG01已建立的游戏内分类术语（JP大型ユニット↔zh大型单位、三处台词：会被归类为大型单位等）、修复旧译丢失ユニット类别义的电报体缺陷。预算：8+2+8=18B≤20B、两段均经text_codec.encode(surface=bank)验证为纯ZH-band编码（各8字节）。防御记录归unit_1所有、按brief省略defense键。"
+}

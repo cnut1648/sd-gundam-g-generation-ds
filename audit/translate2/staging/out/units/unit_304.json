@@ -1,0 +1,13 @@
+{
+ "entity": "unit_304",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSN-02%E5%90%89%E7%BF%81%E5%8F%B7"
+ ],
+ "name_zh": "吉翁号头部",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机",
+  "宇宙适应"
+ ],
+ "notes": "机体名保持吉翁号头部：ジオング=吉翁号为biligame canon（MSN-02吉翁号、页内明记头部驾驶舱可独立分离航行、即本机体的出典——阿·巴瓦·库决战被高达打掉双臂躯干后仅存头部续战的初代最终战形态）、与data/zh全库既定用词（units.json吉翁号／吉翁号头部、_STG04A/_STG04B/_STG05剧情台词、resident_caves名池、unit_bios.json与吉翁号战斗中失去头部与左臂的高达）逐字一致、60px远在144px预算内。武器唯一一条メガ粒子砲=米加粒子炮为77机共享串、米加为全库既定MEGA转写（米加粒子炮136处）、与biligame该页头部（口部）MEGA粒子炮相符、非canon错误、不改（weapons为空）。特殊能力（family101@0x668、owner）修复截断缺陷：JP两段ニュータイプ対応機／地形適正・宇宙、旧译新人类／宇宙适应把対応機词干整个丢掉、能力名退化成裸的新人类。新译NT对应机／宇宙适应：经validate_fleet.compose_segments对JP真实记录实测、room=20B（24B跨度减00030000尾框）、NT对应机10B+段间0003计2B+宇宙适应8B=20B恰好用满、零缺陷、纯ZH-band；理想全译新人类对应机／宇宙适应为22B超room、被validator弹回、不可用。措辞与全舰队统一裁定逐字一致：NT对应机沿unit_13/31/73/175/187/199/205/211/214既定（NT为brief钦定Latin码）、宇宙适应为地形適正・宇宙的全bank通行译（unit_22/85/109等23记录同式、・按名label禁则不移植、unit_109notes亦点名unit_301吉翁号同JP词组同译）。同文同款记录提醒：unit_301（吉翁号、family100@0x650）的JP记录字节与本记录完全相同且同为24B跨度20B room、校对时两处务必统一采用NT对应机／宇宙适应。防御记录（貫通防御なし）owner=unit_1、按规则省略defense_*键。"
+}

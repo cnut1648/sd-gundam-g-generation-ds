@@ -1,0 +1,34 @@
+{
+ "entity": "char_455",
+ "web_sources": [
+  "https://tennojiinfo02.seesaa.net/article/441406054.html",
+  "https://www.hypplcs.com/2018/09/dsgds-1679.html"
+ ],
+ "name_flag": "JP名 強化型AI（=强化型AI、增强型AI控制驾驶员）与现行ZH标签 炮台 语义不符、疑为错译。证据：(1) 本作敌方编成中该名作为通用AI驾驶员类别出现（如 ザク・ウォーリア（強化型AI））、见 tennojiinfo02.seesaa.net/article/441406054.html 与 www.hypplcs.com/2018/09/dsgds-1679.html；(2) 同族voiceset 180邻位为 cid454 AI→AI、cid456 バイオ・ユニット→生体单元、均直译、唯独cid455落成炮台；(3) 炮台一词另见于关卡对话（_STGSP4A 当个炮台）、与本条无关、疑混入。建议改为 强化型AI（Latin AI保留、5格内）。按指示未擅改、仅在此标记。",
+ "ids": [],
+ "barks": [
+  {"file": "0.bin", "record": "0x33698", "zh": "………………"},
+  {"file": "0.bin", "record": "0x336AC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x336C0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x336D4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x336E8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x336FC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33710", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33724", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33738", "zh": "！！………………"},
+  {"file": "0.bin", "record": "0x3374C", "zh": "！………………"},
+  {"file": "0.bin", "record": "0x33760", "zh": "！！………………"},
+  {"file": "0.bin", "record": "0x33774", "zh": "！？………………"},
+  {"file": "0.bin", "record": "0x33788", "zh": "！………………"},
+  {"file": "0.bin", "record": "0x3379C", "zh": "！………………"},
+  {"file": "0.bin", "record": "0x337B0", "zh": "！！………………！？"},
+  {"file": "0.bin", "record": "0x337C8", "zh": "！！！………………"},
+  {"file": "0.bin", "record": "0x337E0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x337F4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33808", "zh": "………………"},
+  {"file": "0.bin", "record": "0x3381C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33830", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33844", "zh": "………………"}
+ ],
+ "notes": "全部22条bark原文即纯标点（机体AI无语音、以沉默……与警报！？表现）、与同族char_454（AI）完全同构、保持逐字对应即为正确译法。每条省略号均为6个…（偶数对）、字节数恰好等于budget_bytes、无任何压缩或增删空间。无idn字段归属本实体（三张卡均为无/无效果、他人持有的共享指针）。"
+}

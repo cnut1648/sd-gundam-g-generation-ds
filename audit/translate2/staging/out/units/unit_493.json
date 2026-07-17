@@ -1,0 +1,14 @@
+{
+ "entity": "unit_493",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MS-14B%E9%AB%98%E6%9C%BA%E5%8A%A8%E5%9E%8B%E5%8B%87%E5%A3%AB",
+  "https://wiki.biligame.com/gundam/%E6%9D%BE%E6%B0%B8%E7%9C%9F"
+ ],
+ "name_zh": "松永专用勇士",
+ "weapons": [],
+ "ability_segments_zh": [
+  "松永专用机",
+  "宇宙适应"
+ ],
+ "notes": "机体名保持松永专用勇士：repo canon ゲルググ=勇士、biligame的MS-14B高机动型勇士页与松永真人物页均记有松永真机／松永专用（本机即白狼白色涂装的MS-14B系专用机）、松永与char_112产出的人名松永真（所罗门的白狼）对齐、且与勇士家族命名（夏亚专用勇士unit_334／卡多专用勇士unit_124／莱汀专用勇士unit_511）一体、72px在144px预算内。武器三条均为跨机共享canon串、不输出改动：光束步枪（195机共享、简报钦定）、光束薙刀（18机共享、简报钦定）、ロケット・ランチャー=火箭发射器（仅高机动型勇士unit_247／莱汀专用勇士unit_511／本机共9个utid共享、unit_247产出已裁定直译无讹、biligame对应360mm巨型火箭筒属型号注记而非游戏内武器名、不构成canon错误）。特殊能力（family164 @0xA0C、owner）修复截断缺陷：段0シン・マツナガ専用機旧译松永专用把専用機的機字整个丢掉、改为松永专用机、与unit_124卡多专用机／unit_334夏亚专用机／unit_193蕾兹专用机的fleet先例逐字同构；全译松永真专用机12B在00030000尾框口径下会超room、且家族先例均取双字短名、故弃用。段1地形適正・宇宙沿用全bank通行译宇宙适应（unit_247/250等23记录同式、地形（宇宙）与適正（适应）两成分俱全、JP的・按名label禁则不移植；unit_250产出注记中已点名本记录0xA0C建议同译）。字节实测：松永专用机10B＋段间00 03计2B＋宇宙适应8B=20B、经validate_fleet.validate_unit对真实JP记录compose_segments实测零defects零warns、两段均为纯ZH-band两字节token。防御段（貫通防御なし）owner=unit_1、按简报整体省略defense_*键。"
+}

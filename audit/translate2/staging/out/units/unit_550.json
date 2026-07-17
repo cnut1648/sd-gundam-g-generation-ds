@@ -1,0 +1,19 @@
+{
+ "entity": "unit_550",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/ZGMF-X56S%EF%BC%8F%CE%B1%E5%BC%BA%E6%94%BB%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/ZGMF-X56S%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/RG_%E5%BC%BA%E6%94%BB%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE"
+ ],
+ "name_zh": "威力型脉冲高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "剪影系统（换装）"
+ ],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "（可变相位转移装甲）",
+  "{F0:876}900以下的实弹属性攻击无效"
+ ],
+ "notes": "机体名沿用威力型脉冲高达（biligame以强攻型脉冲高达为主名、明确列威力型脉冲高达为通行别名、与本任务canon一致）。武器三条均保持：光束步枪·光束军刀为定译；フォールディングレイザー现译折叠式剃刀与biligame的M71-AAK折叠剃刀破甲刀仅差一个式字、非明显错译、为免波及6机共享字符串不改动（与unit_553裁定一致）。特殊能力シルエットシステム（装備変更可能）原译只剩剪影系统、丢失换装说明、为本次修复目标：记录可写空间仅14字节、取剪影系统（换装）恰好14B（（）复用JP原负载单字节7D/7E）、与unit_553（family184）·unit_556（family185）同文记录措辞完全统一；理想全文为剪影系统（可更换装备）。防御VPS装甲名保持；说明段严格1:1对齐JP两段（原zh为3段、不匹配已修正）：段0全称注（可变相位转移装甲）与库内ui.json·unit_bios既有译名相位转移装甲统一（biligame亦作可变相转移装甲）；段1保持威力900开头版式、威力用本bank记录JP及现行zh通用的字典宏{F0:876}拼写——实测plain文本的力字会被encode_bank落到单字节0xDA、在renderB下渲为々（威々900垃圾字、encoder的allowed_one_bytes按裸字节而非token取会漏放2字节token e2da的低字节；unit_130/79/199/4/46/61等已完成输出同踩此坑、建议fleet校对统一改用{F0:876}或{SLOT:4240}）；宏拼写省出的字节把実弾属性の攻撃完整译回威力900以下的实弹属性攻击无效（与unit_130/79同JP句措辞一致、48B上限恰好用满）。驾驶员真·飞鸟术语与char_230/231定稿一致。"
+}

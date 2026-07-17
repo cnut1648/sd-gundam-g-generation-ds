@@ -1,0 +1,16 @@
+{
+ "entity": "unit_343",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSA-0011S%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E9%AB%98%E8%BE%BE%E5%89%8D%E5%93%A8%E6%88%98%EF%BC%9A%E7%88%B1%E4%B8%BD%E4%B8%9D%E7%9A%84%E5%BF%8F%E6%82%94",
+  "https://gundam.huijiwiki.com/wiki/%E7%88%B1%E4%B8%BD%E4%B8%9D",
+  "https://baike.baidu.com/item/ALICE/17561228"
+ ],
+ "name_zh": "S高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "ALICE：HP70%以下增强机师能力",
+  "非{F0:94}效果更大"
+ ],
+ "notes": "本条即ALICE缺陷案：现行ALICE系统/非NT效果高把触发条件与效果全部砍掉、且0x6d3处旧字节以单字节ASCII写ALICE、在renderB下呈现为乱码（■！等错误字形＋系统）。新译两段齐全：段0保触发（HP70%以下）＋效果（パイロットの能力増強→增强机师能力）、段1保条件（非NT）＋梯度（能力が低いほど効果が高い→越弱越有效）、数值70%与JP逐字一致。经fleet编码器对family114@0x6D4实测恰好48/48字节（复用JP负载自带令牌：ALICE九字节、：/HP/70/%/NT各二字节、尾部00030000保留）、更长的直译如非NT能力越低效果越高（20B）无论如何压缩段0都放不下。措辞与同文双胞记录unit_10（ExーS高达、family3@0x80、其notes明确要求两处统一）逐字一致、游戏内同一能力只呈现一种说法。库内他处多用驾驶员一词：等价方案ALICE：HP70%以下增强驾驶员能力＋非NT越弱越强同为48/48B、若校对统一改为驾驶员风格须与unit_10同步改。ALICE出典：高达前哨战（Gundam Sentinel）S高达搭载的女性人格AI爱丽丝、全称Advanced Logistic & In-consequence Cognizing Equipment、Latin码保留。武器五条均合biligame佳能（光束加农炮、光束军刀、可动光束加农炮、线控炮＝インコム、光束智能枪即brief钦定译名）、不提改动。防御段（貫通防御なし）归unit_1所有、未输出。机体名S高达合biligame佳能（MSA-0011 S高达/Superior Gundam）、保留。"
+}

@@ -1,0 +1,42 @@
+{
+ "entity": "char_469",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%8E%9B%E8%8E%89%E7%BE%8E%E4%BA%9A%E5%86%9B",
+  "https://wiki.biligame.com/gundam/%E7%8E%9B%E8%8E%89%E7%BE%8E%E4%BA%9A%C2%B7%E5%B7%B4%E9%A1%BF",
+  "https://gundam.fandom.com/wiki/Mariemaia_Army"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1407,
+   "name_zh": "我们必胜！",
+   "cutin_zh": "我们必将成为胜者！！",
+   "notes": "detail owned by char_402; name shares 我们/胜 with cut-in and fits 5 cells"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x35540", "zh": "冲过来？是吗……那么想死吗！"},
+  {"file": "0.bin", "record": "0x35568", "zh": "我们才是人类希望！！"},
+  {"file": "0.bin", "record": "0x35588", "zh": "敢抵抗……一律排除！"},
+  {"file": "0.bin", "record": "0x355A8", "zh": "违抗巴顿财团的蠢货！死吧！"},
+  {"file": "0.bin", "record": "0x355CC", "zh": "地球圈支配者是我们！"},
+  {"file": "0.bin", "record": "0x355EC", "zh": "把你碾碎！！"},
+  {"file": "0.bin", "record": "0x35604", "zh": "违抗巴顿财团的蠢货、必须处置！"},
+  {"file": "0.bin", "record": "0x3562C", "zh": "胜者……是我们！！"},
+  {"file": "0.bin", "record": "0x35648", "zh": "难、难道！？我们竟会败北！！"},
+  {"file": "0.bin", "record": "0x3566C", "zh": "白费力气！"},
+  {"file": "0.bin", "record": "0x35680", "zh": "岂能死在这！"},
+  {"file": "0.bin", "record": "0x35698", "zh": "啧！敢违抗我们！"},
+  {"file": "0.bin", "record": "0x356B4", "zh": "别为这点得意！！"},
+  {"file": "0.bin", "record": "0x356D0", "zh": "敢违抗我们、让你后悔！！"},
+  {"file": "0.bin", "record": "0x356F4", "zh": "什么！？地球还有这种兵器！？"},
+  {"file": "0.bin", "record": "0x35718", "zh": "可恶！怎会这样……！！"},
+  {"file": "0.bin", "record": "0x35738", "zh": "挣扎到几时！？"},
+  {"file": "0.bin", "record": "0x35754", "zh": "这种攻击避开就行！"},
+  {"file": "0.bin", "record": "0x35770", "zh": "注意！！攻击来了！！"},
+  {"file": "0.bin", "record": "0x35790", "zh": "那机体、我们玛莉梅亚收下了！！"},
+  {"file": "0.bin", "record": "0x357B8", "zh": "可恶！真丢脸！"},
+  {"file": "0.bin", "record": "0x357D0", "zh": "谁会输给你！死！！"}
+ ],
+ "notes": "Generic Mariemaia Army grunt (EW): arrogant loyalist tone, 巴顿财团/玛莉梅亚 per biligame; 0x355CC kept identical to char_467's shared JP line for cross-entity consistency. Records 0x355CC/0x3562C/0x3566C/0x35754/0x35790 keep current strings (proven stored byte counts fit budgets; 0x3562C thus preserves JP's ！！). Budget-forced trims: 0x35568 drops 象徴 (ideal: 我们才是人类希望的象征！！); 0x35648 keeps only the first stutter (ideal: 难、难道！？我、我们竟会败北……！！); 0x357D0 ideal: 谁会输给你这种人！去死！！"
+}

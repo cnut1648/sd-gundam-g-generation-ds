@@ -1,0 +1,15 @@
+{
+ "entity": "unit_88",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/XXXG-00W0%E9%A3%9E%E7%BF%BC%E9%9B%B6%E5%BC%8F%E9%AB%98%E8%BE%BEEW",
+  "https://wiki.biligame.com/gundam/%E9%9B%B6%E5%BC%8F%E7%B3%BB%E7%BB%9F",
+  "https://wiki.biligame.com/gundam/%E5%8F%8C%E7%AE%A1%E7%A0%B4%E5%9D%8F%E6%AD%A5%E6%9E%AA"
+ ],
+ "name_zh": "W高达零式",
+ "weapons": [],
+ "ability_segments_zh": [
+  "零式系统：SP20起",
+  "命中回避+5%先制升"
+ ],
+ "notes": "能力段修复截断缺陷（旧译只剩零式系统/命中回避提升、触发条件与全部数字丢失）。JP为ゼロ・システム：SP20点以上で発動｜命中回避＋5%、先制率上昇。记录实测room=38B（span 0x2C0-0x2E8共40B减00 03尾）、全译零式系统：SP20点以上发动/命中、回避+5%、先制率上升需52B放不下、故压缩为零式系统：SP20起（16B、起=点以上で発動的阈值义、大陆游戏惯用如60级起）+命中回避+5%先制升（20B）、16+2+20=38B恰满。：/SP/20/+/5/%均按G9规则复用JP原payload字节形（e6f8/f3f3/fb5d/e071/e003/e706）、已用lib_apply.encode_bank+compose_segments逐字节验证可编码且数字组JP=ZH={20,5}。段0冒号镜像JP原文且循brief的ALICE：例句与unit_1既收产出的先例。理想全文（若日后扩池）：零式系统：SP20点以上发动｜命中、回避+5%、先制率上升。零式系统为repo钦定译名（TRANSLATION_GUIDE owner rejection条目）、biligame同名词条印证。同文姊妹记录归属他人：unit_169（艾比安、family56同JP同40B）与unit_91（/H、family30）、建议统一措辞。机体名保持W高达零式：biligame词条为飞翼零式高达EW、但本作JP即Wガンダムゼロ（EW）、W高达直译JP用字非事实错误、且库内无TV版飞翼零式无碰撞；v1.1曾提案补（EW）后缀未落地（名串0x218A520为88/89/90共享、加后缀需经ledger扩池）、resident_caves 0x8D55/0x8D66/0x8D8D存有无引用的遗留串W高达零式(EW)/双重破坏步枪/旋转TB步枪、仅记录不处置。武器零改动：双管破坏步枪=biligame同名词条页canon（6机共享）、光束军刀为brief钦定（315机共享）、机炮（マシンキャノン、18机共享）对应biligame页胸部机关加农炮、机炮为通行简称非canon错误。防御段（貫通防御なし）owner为unit_1、按规则整体省略defense键。"
+}

@@ -1,0 +1,42 @@
+{
+ "entity": "char_443",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/NewType",
+  "https://wiki.biligame.com/gundam/%E6%96%B0%E4%BA%BA%E7%B1%BB",
+  "https://note.com/masashi3122/n/nb9820ac87e26"
+ ],
+ "name_flag": "JP名为ネオ・ジオンNT（新吉翁新人类兵）、而ZH固定名新吉翁兵与char_435（ネオ・ジオン兵→新吉翁兵）完全撞名、丢失了NT属性区分。建议改为新吉翁NT或新吉翁NT兵（NT为既定拉丁缩写、见https://wiki.biligame.com/gundam/NewType）。按指示未在任何字段擅自改名、仅在此标记。",
+ "ids": [
+  {
+   "idn": 1329,
+   "name_zh": "我们新人类",
+   "cutin_zh": "我们可是新人类！",
+   "notes": "名台词我々はニュータイプなのだ！为通用杂兵语音、非出典名言（note.com考证）。指令名5格取名台词关键词我们/新人类。效果detail归char_425所有、未输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x31970", "zh": "休想！就在那！！"},
+  {"file": "0.bin", "record": "0x3198C", "zh": "……去吧！！！"},
+  {"file": "0.bin", "record": "0x319A4", "zh": "我要超越大佐！"},
+  {"file": "0.bin", "record": "0x319C0", "zh": "……那里！"},
+  {"file": "0.bin", "record": "0x319D4", "zh": "……别想逃！"},
+  {"file": "0.bin", "record": "0x319EC", "zh": "就此了结！！"},
+  {"file": "0.bin", "record": "0x31A04", "zh": "休想抵抗！！"},
+  {"file": "0.bin", "record": "0x31A1C", "zh": "抓住了！！"},
+  {"file": "0.bin", "record": "0x31A30", "zh": "为什么！？"},
+  {"file": "0.bin", "record": "0x31A44", "zh": "……看得见！"},
+  {"file": "0.bin", "record": "0x31A5C", "zh": "怎么能输！"},
+  {"file": "0.bin", "record": "0x31A74", "zh": "擦到而已！"},
+  {"file": "0.bin", "record": "0x31A8C", "zh": "你竟敢抵抗！"},
+  {"file": "0.bin", "record": "0x31AA4", "zh": "别想全身而退！"},
+  {"file": "0.bin", "record": "0x31AC0", "zh": "这压迫感！！"},
+  {"file": "0.bin", "record": "0x31AD8", "zh": "可恶！怎么会这样……！"},
+  {"file": "0.bin", "record": "0x31AF8", "zh": "没用的！！"},
+  {"file": "0.bin", "record": "0x31B0C", "zh": "压迫感！休想！"},
+  {"file": "0.bin", "record": "0x31B24", "zh": "来了！快回避！！"},
+  {"file": "0.bin", "record": "0x31B40", "zh": "那机体归我！！"},
+  {"file": "0.bin", "record": "0x31B58", "zh": "怎会……"},
+  {"file": "0.bin", "record": "0x31B6C", "zh": "别想抓我！！"}
+ ],
+ "notes": "NT系voice-set、按指示保留感应/压迫感风味（プレッシャー→压迫感、見える→看得见）。0x31B40预算12仅容5汉字+！！、も（连那台机体也要抓住）被迫省略、理想句为那机体也要抓来！。0x319A4大佐以上に働いてみせる为新吉翁NT争功台词、译我要超越大佐正好13字节。"
+}

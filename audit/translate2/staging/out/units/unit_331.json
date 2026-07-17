@@ -1,0 +1,12 @@
+{
+ "entity": "unit_331",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RGM-79G%E5%90%89%E5%A7%86%E6%8C%87%E6%8C%A5%E5%AE%98",
+  "https://wiki.biligame.com/gundam/RGM-79%E5%90%89%E5%A7%86"
+ ],
+ "name_zh": "吉姆指挥型",
+ "weapons": [
+  {"slot": 2, "zh": "火箭炮"}
+ ],
+ "notes": "名称保留吉姆指挥型（biligame页面中文名即列作吉姆指挥官（吉姆指挥型）、5字合144px预算）。slot2修正为火箭炮：JP原文是バズーカ、并无ザク字样；该字符串（0x219071B）由吉姆・吉姆2・特装型吉姆・吉姆指挥型・扎古2FZ共15机共用、联邦系吉姆不可能持扎古火箭炮。真正的ザク・バズーカ是另一独立字符串（0x2190710、扎古1・扎古2F・高机动型扎古专用）、其扎古火箭炮译名不受本修正影响。火箭炮3字6字节短于现译10字节、池内安全。slot0光束枪（biligame载BOWA BG-M-79F-3A光束枪）与slot1光束军刀符合canon、保留不输出。防御段（貫通防御なし）归unit_1所有、无ability记录、故不输出specials字段。"
+}

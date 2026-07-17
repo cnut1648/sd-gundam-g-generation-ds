@@ -1,0 +1,15 @@
+{
+ "entity": "unit_577",
+ "web_sources": [
+  "https://gundam.huijiwiki.com/wiki/%E7%99%BE%E5%A4%AB%E9%95%BF",
+  "https://dic.pixiv.net/a/%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%82%AA",
+  "https://gundam.wiki.cre.jp/wiki/%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%82%AA",
+  "https://gundam.fandom.com/wiki/Centurio"
+ ],
+ "name_zh": "百夫长",
+ "weapons": [],
+ "ability_segments_zh": [
+  "自愈600"
+ ],
+ "notes": "第二条百夫长记录（utid 577-579、与unit_574同名同武装的强化型个体、自愈量600为574记录300的两倍、对应pixiv百科所记强化型アウジリス性能接近レガートゥス的设定）。机体名百夫长=灰机wiki条目标题即canon、36px远低于144px预算、保留。武器两条均与灰机wiki百夫长页一致（ランチャー・ジェミナス=双子发射器、ブレード・ルミナリウム=光辉之刃、Geminus拉丁语意为双子、Luminarium源自lumen光）、24机共享串且ptr与unit_574完全相同（0x2189C61/0x2189C6C）、非canon错误、零改动。能力段（owner）：JP自動修復600为单段、理想全译自动修复600按简报成本规则=4字8B+3数字6B=14B超12B预算、故沿用全库既定压缩术语自愈NNN（百夫长家族580/583/586/589/592现行同式、unit_385已交付自愈900同式）、自愈600=10B在12B预算内、数字600与JP完全一致、段数1:1镜像、无信息丢失（自動修復无额外触发从句）。防御名雷尔姆·D与防御段（威力300以下无效/超过减伤10%）owner=unit_574、按规则整体省略defense_*键；两记录共享同一防御串（defense_name ptr 0x20B6EE7、defense record 17）、unit_574的裁定自动适用于本记录。"
+}

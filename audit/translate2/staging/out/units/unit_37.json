@@ -1,0 +1,18 @@
+{
+ "entity": "unit_37",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/LM314V23%EF%BC%8F24V2%E7%AA%81%E5%87%BB%E9%87%8D%E5%87%BB%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/V2%E9%AB%98%E8%BE%BE/6499805",
+  "https://exvsmbon.huijiwiki.com/wiki/V2%E9%AB%98%E8%BE%BEAB%E8%A3%85%E5%A4%87"
+ ],
+ "name_zh": "V2突击破坏／H",
+ "weapons": [
+  {"slot": 2, "zh": "喷射光束荚舱"}
+ ],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "威力450以下攻击无效",
+  "超过则伤害减轻50%"
+ ],
+ "notes": "机体名保留V2突击破坏／H：百度百科V2高达条目主名即V2突击破坏型高达（别名V2突击破坏高达）、非事实错误、且与unit_34现名V2突击破坏保持家族一致（biligame页题为V2突击重击高达、系另一通行译法、记录于此供裁定、不建议单独改本变体致家族分裂）。武器仅提议slot2：ビーム・スプレー・ポッド现译光束喷射器丢失ポッド（荚舱）且语序颠倒、biligame V2突击重击高达页与EXVS灰机wiki均作喷射光束荚舱、该串仅unit_34/unit_37两家族（6机）共享、请与unit_34输出统一取同值。其余武器不改：光束军刀为brief钦定canon（315机共享）、米加=メガ通行音译（米加光束步枪/米加光束加农炮即百度百科MEGA光束步枪/MEGA光束加农炮）、VSBR按brief保持Latin（biligame作V.S.B.R）、光之翼canon正确。防御名光之翼canon正确（百度百科：光之翼Wings of Light）、留空=保留。防御段由旧3段缺陷修正为镜像JP的2段、段0以威力450开头保持代码绘制数字版式、补回被丢弃的无效化触发句与超过时减伤50%完整效果；字节按cost规则段0为11字22B＋段1为10字20B＋段间2B=44B恰满44B预算（450与50%实际编码走{F0}数字宏与{SLOT:2022}%会更省）；措辞与unit_4（威力450以下的光束属性射击无效／超过则伤害减轻30%）及unit_7（威力450以下的攻击无效／超过则伤害减轻50%）家族公式统一、段0理想句威力450以下的攻击无效为46B超预算2B、故省去的字、若实际编码有余量请优先恢复。"
+}

@@ -1,0 +1,14 @@
+{
+ "entity": "unit_40",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSZ-010ZZ%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/FA-010S%E5%85%A8%E8%A3%85%E7%94%B2ZZ%E9%AB%98%E8%BE%BE"
+ ],
+ "name_zh": "ZZ高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "可装备全装甲"
+ ],
+ "notes": "机体名ZZ高达=biligame词条MSZ-010 ZZ高达通行写法、维持。武器四项均不改：双管光束步枪（biligame ZZ页原词、12机共享）、高能光束军刀（biligame ZZ页原词ハイパー・ビームサーベル=高能光束军刀、非超级）、导弹发射器（33机共享通用串）、高能米加加农炮（biligame称头部高能MEGA加农炮、メガ=米加为全库既定转写：米加粒子炮/米加加农炮、unit_bios.json ZZ条目同用高能米加加农炮）。特殊能力段修复截断缺陷：JP段1フルアーマーシステム装着可能旧译只剩全装甲系统、丢了装着可能（本机可加装FA组件变全装甲ZZ、见biligame FA-010S页换装机制）、新译可装备全装甲补回。实测记录室=24B-4B尾框=20B：新人类6B+段间2B+可装备全装甲12B=20B恰满（encode_bank验证）；NT对应机+可装全装甲=22B超室、可装备全装甲系统亦超、故段0保持全库ニュータイプ対応機通行标签新人类（与0x12b/0x278等数十条同款一致）、段1取全装甲ZZ的社区省称全装甲。防御段（貫通防御なし）owner=unit_1、按规则整体省略defense_*键。"
+}

@@ -1,0 +1,17 @@
+{
+ "entity": "unit_412",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/MS-09F/Bn_Dom_Bein_Nichts",
+  "https://gundam.fandom.com/zh/wiki/MS-09%E7%B3%BB%E5%88%97%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB",
+  "https://wiki.biligame.com/gundam/MS-09F%EF%BC%8FTROP%E7%83%AD%E5%B8%A6%E5%9E%8B%E5%A4%A7%E9%AD%94",
+  "https://bo2.ggame.jp/sc/info/?p=70336"
+ ],
+ "name_zh": "大魔·拜恩尼希兹",
+ "weapons": [
+  {"slot": 0, "zh": "拉凯登火箭炮"}
+ ],
+ "ability_segments_zh": [
+  "宇宙适应"
+ ],
+ "notes": "机体名保留大魔·拜恩尼希兹：G世纪原创机MS-09F/Bn Dom Bein Nichts（德语Bein Nichts=无腿、废除腿部换装大推力推进器的宇宙高机动型里克·大魔衍生机、与unit_409大魔·格罗斯拜尔为齐玛德对抗盖尔古格计划的搭档机、bio所述一击离脱战法与之相符）、中文社区通行大魔·拜恩尼希兹／拜恩尼希兹大魔、96px≤144px、与格罗斯拜尔命名式一致。slot0修正为拉凯登火箭炮：JP原文ラケーテン・バズ=Raketen Bazooka（大魔特罗芬同系880mm RB-T27火箭炮、本机主武装）、现译扎古火箭炮把ザク・バズーカ（另一独立字符串、扎古系专用）的专名错套过来、属明显canon错误且与库内ザク・バズーカ／バズーカ两串的现译撞名；该串（ptr 0x2190726）仅由utid 412/413/414（全属本entity）引用、修改自洽；译名取大陆社区通行音译拉凯登火箭炮（gundam.fandom中文站及火线纵横社区攻略通用880mm拉凯登火箭炮；biligame热带型大魔页记作RB-T27型880mm坦克杀手火箭筒、系型号全称不适合武器栏；GBO2官方简中作雷可顿火箭炮、可作同长度12B备选）。slot1热能剑（6机共享）与slot2铁拳火箭（15机共享、unit_190/193/280/358产出一致保留）均合通行译名、不输出改动。特殊能力段镜像JP单段：地形適正・宇宙沿用全库通行译宇宙适应（4字8B≤预算16B、地形（宇宙）与適正（适应）两成分俱全、与unit_22/247/250/301/304等fleet共识一致、姊妹机unit_409同JP家族串建议同译、JP的・按名label禁则不移植）。防御段（貫通防御なし）归unit_1所有、按规则省略defense键。"
+}

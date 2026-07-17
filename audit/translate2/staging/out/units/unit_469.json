@@ -1,0 +1,14 @@
+{
+ "entity": "unit_469",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/WF-02MD%E6%AF%94%E5%B0%94%E6%AD%8C%E2%85%A1",
+  "https://wiki.biligame.com/gundam/OZ-02MD%E6%AF%94%E5%B0%94%E6%AD%8C"
+ ],
+ "name_zh": "比尔歌2",
+ "weapons": [],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "威力500以下射击攻击无效"
+ ],
+ "notes": "机体名保留比尔歌2：biligame canon页标题即WF-02MD比尔歌Ⅱ（白色獠牙接收月面MD工厂后由OZ-02MD比尔歌改修的无人MD机、行星防御器增至6基以上）、JP侧ビルゴ9的9为Ⅱ字形解码记法、ZH以数字2表Ⅱ沿全库惯例（高达Mk2／精神感应高达Mk2同式）、48px≤144px；与char_459（MD系统）／char_460输出所引同一biligame页对齐。武器两条均不改：メガ・ビーム砲=米加光束炮与biligame该页武装栏逐字一致（9机共享串）、ビーム・サーベル=光束军刀为brief钦定译名（315机共享）。防御名Pディフェンサー为プラネイトディフェンサー（Planet Defensor）缩写、现译行星防御器即biligame页canon译名、保留（输出空串=keep）。防御说明按brief要求1:1镜像jp_segments、把旧译两段版式（威力500以下／射击攻击无效）合并为单段并保持威力500数字开头版式、保留触发+类型+效果与数值500；编码器实测24字节=记录可写空间24字节（尾帧00 03 00 00保留、故28字节名义预算实际可写24）、恰好满格；理想全文威力500以下的射击攻击无效为26字节超2字节、故省的字（与现两段版式同为无的措辞、语感一致）。"
+}

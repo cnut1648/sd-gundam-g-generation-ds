@@ -1,0 +1,21 @@
+{
+ "entity": "unit_4",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/WD-M01%E5%80%92A%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/I-field/1840944",
+  "https://baike.baidu.com/item/%E2%88%80%E9%AB%98%E8%BE%BE/16001106",
+  "http://gundam.daihouko.com/sd/ggcd/31.html"
+ ],
+ "name_zh": "∀高达（∀99）",
+ "weapons": [],
+ "ability_segments_zh": [
+  "I力场抵消：对有I力场的敌人",
+  "光束伤害照常"
+ ],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "威力450以下的光束属性射击无效",
+  "超过则伤害减轻30%"
+ ],
+ "notes": "武器四条均与biligame WD-M01倒A高达页一致（光束步枪/光束军刀/多用途发射井/高达流星锤）、不作修改。能力记录0x2c与unit_1记录0x0的日文完全相同、译文与unit_1输出逐字一致（I力场抵消：对有I力场的敌人／光束伤害照常）、并保持∀家族共享词干力场抵消（unit_7段0力场抵消自愈300同源）；补回旧译丢失的名中I与整个触发从句、冒号镜像JP原payload结构（brief §3 ALICE：例）。42/44字节。防御段由现行3段修正为镜像JP的2段、首段以威力450开头保持代码绘制数字版式、补回被丢弃的光束属性射击限定与减伤30%完整句、54/56字节、句式与unit_7防御段（威力450以下的攻击无效／超过则伤害减轻50%）统一。防御名I力场为canon（百度百科I-field条）、留空=保留。"
+}

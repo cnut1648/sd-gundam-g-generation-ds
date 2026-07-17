@@ -1,0 +1,31 @@
+{
+ "entity": "char_519",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/LCAM-01XB%E4%B8%BB%E5%A4%A9%E4%BD%BF%E5%8F%B7",
+  "https://wiki.biligame.com/gundam/LCAM-01XA%E5%A4%A7%E5%A4%A9%E4%BD%BF%E5%8F%B7",
+  "https://baike.baidu.com/item/%E7%B1%B3%E4%B8%BD%E9%9B%85%E8%8E%89%E4%BA%9A%C2%B7%E5%93%88%E4%B9%8C/2087594"
+ ],
+ "name_flag": "",
+ "ids": [],
+ "barks": [
+  {"file": "0.bin", "record": "0x1A9DC", "zh": "！发射！！"},
+  {"file": "0.bin", "record": "0x1AACC", "zh": "回避成功！！"},
+  {"file": "0.bin", "record": "0x1AB00", "zh": "啊！"},
+  {"file": "0.bin", "record": "0x1AB2C", "zh": "一次装甲轻微受损！行动无碍！！"},
+  {"file": "0.bin", "record": "0x1ABC4", "zh": "呀啊啊！！"},
+  {"file": "0.bin", "record": "0x1ACE4", "zh": "！发射！！"},
+  {"file": "0.bin", "record": "0x1ADF0", "zh": "回避、成功！"},
+  {"file": "0.bin", "record": "0x1AFD8", "zh": "捕捉到敌影！"},
+  {"file": "0.bin", "record": "0x1B1ED", "zh": "1至4号、科林托斯装填！反光束爆雷、可发射！！"},
+  {"file": "0.bin", "record": "0x1B238", "zh": "冷静点！船还没有坠落呢！"},
+  {"file": "1.bin", "record": "0x5EC", "zh": "蓝19！主天使号！！"},
+  {"file": "1.bin", "record": "0x6FC", "zh": "敌袭！"},
+  {"file": "1.bin", "record": "0x720", "zh": "回避成功！！"},
+  {"file": "1.bin", "record": "0x750", "zh": "等等！橙色德尔塔、导弹！！"},
+  {"file": "1.bin", "record": "0x7A0", "zh": "敌袭！"},
+  {"file": "1.bin", "record": "0xD24", "zh": "主天使号开炮！舰长！！"},
+  {"file": "1.bin", "record": "0xD53", "zh": "不行！来不及了！！"},
+  {"file": "1.bin", "record": "0xE14", "zh": "仍在接近！！"}
+ ],
+ "notes": "无ID指令、仅战斗语音。ドミニオン按biligame定名为主天使号（大天使级二号舰、非统治号）、维持现译。0x1B1ED：コリントス按biligame译科林托斯（对空防御导弹科林托斯M114）、修正原译笼统的装填导弹、恰用满40字节。0xD24：修正原译主天使号开炮舰长！的连读缺标点、预算19字节放不下罗安格林（ローエングリン、biligame译名）、理想全译为主天使号、罗安格林开炮！舰长！！。0x1AB2C：补回若干の損傷的轻微义、恰27字节。0x1AB00：日文あ……为受创失声、理想译啊……需4字节超预算3、省略号又必须成对出现、只能保留啊！。0x750：オレンジデルタ音译橙色德尔塔、预算23字节容不下待ってください的请字、理想全译为请等一下！橙色德尔塔方向有导弹！！。0x6FC/0x7A0预算5字节、0xE14预算8字节、均放不下主天使号之名、保留敌袭！与仍在接近！！。0x5EC补回日文的双叹号、阿尔法方位因预算舍去。"
+}

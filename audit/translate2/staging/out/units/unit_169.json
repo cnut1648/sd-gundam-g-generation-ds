@@ -1,0 +1,15 @@
+{
+ "entity": "unit_169",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/OZ-13MS%E8%89%BE%E6%AF%94%E5%AE%89%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E9%9B%B6%E5%BC%8F%E7%B3%BB%E7%BB%9F",
+  "https://gundam.fandom.com/wiki/OZ-13MS_Gundam_Epyon"
+ ],
+ "name_zh": "艾比安高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "零式系统：SP20起",
+  "命中回避+5%先制升"
+ ],
+ "notes": "能力段修复截断缺陷（旧译仅剩零式系统/命中回避提升、触发条件SP20点以上与数值+5%及先制率效果全部丢失）。JP为ゼロ・システム：SP20点以上で発動｜命中回避＋5%、先制率上昇。本记录（1df.bin family56、span 0x46C-0x494）实测room=38B（40B减00 03尾）、与unit_88（W高达零式）0x2C0记录同JP同预算；其既收产出note点名建议与本记录统一措辞、故逐字采用零式系统：SP20起（16B、起=点以上で発動的阈值义、大陆游戏惯用）+命中回避+5%先制升（20B）、16+2+20=38B恰满。已用lib_apply.encode_bank对本记录逐字节实测：：/SP/20/+/5/%均按G9规则复用本记录JP原payload字节形（e6f8/f3f3/fb5d/e071/e003/e706）、其余纯ZH-band、可编码且数字组JP=ZH={20,5}；更全变体（SP20以上=40B、补顿号=39B、先制率升=40B）均超room实测放不下。理想全文（若日后扩池）：零式系统：SP20点以上发动｜命中回避+5%、先制率上升。段0冒号系JP原文镜像、循brief ALICE：例句与unit_88/unit_91既收先例。术语：零式系统为repo钦定译名（data/zh全库+biligame零式系统词条）；艾比安实机搭载的エピオンシステム即零式系统同型脑控（biligame机体页：类似零式系统的脑控装置）、本作JP文本亦径写ゼロ・システム、故不另造译名；与其驾驶员char_116/117（杰克斯/米利亚尔特）已收产出的零式称法（零式！让我看到胜利！）一致。机体名艾比安高达保持：biligame词条即OZ-13MS艾比安高达、canon无误、60px远小于144px预算。武器零改动：热能鞭（ヒート・ロッド、6机共享）与光束剑（ビーム・ソード、9机共享）均与biligame该页武装名（热能鞭/大口径光束剑）一致；注意本武器为ソード非サーベル、不适用光束军刀钦定条、且该串9机共享（含多鲁基斯系）不宜妄动。防御段（貫通防御なし）owner为unit_1、按规则整体省略defense键。"
+}

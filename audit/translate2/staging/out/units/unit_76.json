@@ -1,0 +1,14 @@
+{
+ "entity": "unit_76",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-78NT-1%E9%AB%98%E8%BE%BENT-1",
+  "https://wiki.biligame.com/gundam/RX-78NT1-FA%E5%85%A8%E8%A3%85%E7%94%B2%E9%AB%98%E8%BE%BENT-1"
+ ],
+ "name_zh": "阿列克斯FA",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "全装甲（可解除）"
+ ],
+ "notes": "能力段修复截断缺陷：JP段1为フルアーマーシステム（解除可能）、旧译全装甲系统丢掉了（解除可能）触发信息。新译全装甲（可解除）补回可解除、全装甲=biligame对フルアーマー的canon译法（页面名即RX-78NT1-FA全装甲高达NT-1）、（）复用本记录JP原payload的0x7D/0x7E一字节括号（原文即有（解除可能））。字节实测（compose_segments规则、room=24-2=22B）：段0新人类6B+分隔2B+段1全装甲（可解除）14B=22B恰满。理想全句全装甲系统（可解除）为26B、NT对应机+全装甲可解除为24B、均放不下、故段0沿用本bank通行的新人类（0x13f/0x158/0x170/0x278同串同译）并砍掉系统二字保住可解除。建议与unit_73（同段ニュータイプ対応機、fam24 room仅10B）保持段0=新人类一致。机体名阿列克斯FA不改：阿列克斯为biligame canon（RX-78NT-1高达NT-1阿列克斯）、FA按brief保持Latin、与JP名アレックスFA同构。武器三条均不改：光束步枪/光束军刀为brief钦定canon；加特林枪串仅Alex家族6槽共享（utid73-78）、JPガトリングガン直译不算canon错误（biligame该武装为腕部90mm加特林炮/加特林机枪）、如日后扩池可优先改加特林机枪。防御记录归unit_1所有、未输出。"
+}

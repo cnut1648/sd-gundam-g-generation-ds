@@ -1,0 +1,15 @@
+{
+ "entity": "unit_349",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MRC-F20%E8%8B%8F%E6%91%A9",
+  "https://gundam.fandom.com/wiki/MRC-F20_SUMO",
+  "https://hk.gundam-official.com/mecha/ojf45qkc0bcsrf0hra3412o5"
+ ],
+ "name_zh": "斯摩／银色型",
+ "weapons": [],
+ "ability_segments_zh": [
+  "I力场抵消：对有I力场的敌人",
+  "光束伤害照常"
+ ],
+ "notes": "能力段修复截断缺陷：JP为I・フィールドキャンセラー：Ⅰフィールドを持つ相手に対し、ビームで通常通りのダメージを与える、旧译只剩力场抵消／光束伤害照常、丢了名中的I与整个触发对象从句。JP字串与unit_1记录0x0、unit_4记录0x2c逐字相同、故译文与已定稿的unit_1/unit_4输出逐字一致（I力场抵消：对有I力场的敌人／光束伤害照常）、保持∀家族共享词干力场抵消（unit_7力场抵消自愈300同源）；冒号镜像JP原payload且合brief §3 ALICE：例句格式。按brief成本规则28B+2B+12B=42B≤44B（unit_1同串encode_bank实测26+2+12=40B=room、更宽裕）。机体名斯摩／银色型保留：biligame页题作苏摩但斯摩为社区通行写法（银斯摩/金斯摩）、银色=除队长哈利·奥德金色机外亲卫队标准涂装、事实无误、68px远低于144px预算、与unit_346斯摩／金色型对仗。武器三条均不改：光束枪（33机共享、biligame作手部光束枪、非canon错误）、热能扇直译ヒート・ファン（biligame设定栏称军配型热能斧、指同一武器、游戏串为Heat Fan故保留）、I力场剑循库内非光束系サーベル=剑惯例（ヒート・サーベル=热能剑同型、军刀仅ビームサーベル系）。给unit_346的同步提示：三条武器串ptr完全共享（0x218EFBC/0x23293EA/0x218F3D3）、须同样保留；其能力family 115（budget 20、哈利专用机段）为不同记录、不受本译影响。"
+}

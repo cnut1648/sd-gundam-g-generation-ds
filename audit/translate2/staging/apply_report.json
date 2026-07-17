@@ -1,31 +1,91 @@
 {
  "counts": {
-  "barks": 1995,
-  "cutins": 185,
-  "ability": 0,
-  "defense": 0,
+  "barks": 7986,
+  "cutins": 672,
+  "ability_offtab_reverts": 1,
+  "ability": 123,
+  "defense": 22,
   "detail_style": "compact",
-  "details": 88,
-  "detail_pool_bytes": 12735,
-  "detail_unique_records": 225,
-  "detail_cave_spills": 3,
+  "details": 245,
+  "detail_pool_bytes": 12723,
+  "detail_unique_records": 208,
+  "detail_cave_spills": 25,
   "detail_cave_spans_returned": 18,
-  "idnames": 56,
-  "idnames_relocated": 9,
-  "weapons": 0,
-  "weapons_relocated": 0,
-  "unitnames": 0,
-  "defnames": 0
+  "idnames": 276,
+  "idnames_relocated": 44,
+  "weapon_31e_cascade": 0,
+  "weapons": 14,
+  "weapons_relocated": 10,
+  "unitnames": 3,
+  "defnames": 1
  },
- "skipped": [],
+ "skipped": [
+  "bark 1.bin/0x720: 8B > 6B"
+ ],
  "flags": [
   [
    "char_133",
    "人名 倩恩 与 biligame 高达wiki 词条 倩恩·亚奇 一致、无需改。但变体后缀存疑：日文（共戦）＝共同作战/并肩作战、直译应为（共战）；现行（共振）疑为 戦→振 误读。若是有意呼应精神感应框架共振（アクシズショック、见 gundam.wiki.cre.jp 词条）也说得通、请裁定。"
   ],
   [
+   "char_202",
+   "不改动固定译名、仅报告：据pixiv百科与日文维基、ミアン・ファーレン确为ブラード・ファーレン（char_183、布拉德·法伦）之女（父女关系、莫诺眼高达篇原创角色）。同一姓氏ファーレン在库内分别译作「法琳」（蜜安）与「法伦」（布拉德）、存在父女同姓不同译的不一致、建议后续统一（如均作法伦或均作法琳）。"
+  ],
+  [
+   "char_205",
+   "ミーシャ=米哈尔·卡明斯基(Mikhail Kaminsky)的爱称、0080独眼巨人队的肯普法驾驶员。大陆wiki通行昵称写作米沙/米夏(见 https://wiki.biligame.com/gundam/%E7%B1%B3%E5%93%88%E5%B0%94%C2%B7%E5%8D%A1%E6%98%8E%E6%96%AF%E5%9F%BA )、莎字偏女性化、建议改为米沙。"
+  ],
+  [
+   "char_311",
+   "biligame与灰机wiki词条名为凯拉·辛(https://wiki.biligame.com/gundam/%E5%87%AF%E6%8B%89%C2%B7%E8%BE%9B)、但卡拉·苏恩亦为通行音译变体、可保留现名"
+  ],
+  [
+   "char_316",
+   "当前名格拉克斯·德卡与repo姓氏canon杜加奇不一致（sweep已将杜卡奇/德卡契统一为杜加奇）。biligame条目名为格拉克斯·德卡契（ドゥガチ=Dogatie即杜加奇）、char_60/char_143的成品台词均以杜加奇称呼此人。建议改为格拉克斯·杜加奇。证据：https://wiki.biligame.com/gundam/%E6%A0%BC%E6%8B%89%E5%85%8B%E6%96%AF%C2%B7%E5%BE%B7%E5%8D%A1%E5%A5%91"
+  ],
+  [
+   "char_354",
+   "レズン=Rezin、现名蕾兹漏掉词尾ン。百度百科词条为列珍·施耐德(https://baike.baidu.com/item/%E5%88%97%E7%8F%8D%C2%B7%E6%96%BD%E8%80%90%E5%BE%B7/61782806)、社区常用蕾珍——若可改建议蕾珍。"
+  ],
+  [
+   "char_39",
+   "卡嘉莉·尤拉 is a truncation; mainland canon full name is 卡嘉莉·尤拉·阿斯哈 (moegirl/baike). Likely width-limited; if the plate fits 8 cells, prefer the full name."
+  ],
+  [
+   "char_404",
+   "军阶碰撞：本条JP为ギンガナム隊大大名、比char_403（ギンガナム隊大名→金卡拉姆队大名）高一级、但当前ZH与char_403完全同名（金卡拉姆队大名）、大大名/大名的区分丢失。建议改为金卡拉姆队大大名（8格、在12格预算内）。证据：audit/translate2/staging/chars/char_403.json的name_jp=ギンガナム隊大名与本条name_jp=ギンガナム隊大大名对照。"
+  ],
+  [
+   "char_416",
+   "非错误、仅供参考：ゾンビ兵指G高达中被DG细胞完全侵蚀·丧失自我的死亡军团驾驶员、大陆社区多径称僵尸兵（见gundam.wiki.cre.jp/wiki/ゾンビ兵及fandom条目）；现译不死兵亦能成立（DG细胞可令死者复生驱使）、可维持现状。"
+  ],
+  [
+   "char_421",
+   "ZH label 舰队司令 is WRONG for this cid. Evidence: data/jp/characters.json cid 421 name text is ティターンズ士官 (ptr 0x20B8FF3-family, name ptr 0x20B6C00), while cid 551 is the actual 艦隊司令 (ptr 0x20B6E27); data/zh/characters.json points BOTH cid 421 and cid 551 at the same ZH string ptr 0x218A146 (舰队司令), so the Titans officer inherited the fleet-commander label. Should be 提坦斯士官-class. Voice content confirms Titans identity: 我々はティターンズ barks, 宇宙人/反乱分子 contempt, and the cut-in is the Z高达 anti-spacenoid line (https://gundam.huijiwiki.com/wiki/布兰·布尔达克)."
+  ],
+  [
+   "char_434",
+   "JP原名ネオ・ジオン熟練士官、其中熟練意为资深/老练。现ZH名与cid429/433共用同一名称记录0x21889B4（新吉翁士官）、而cid429/433的JP原名是ネオ・ジオン士官、构成撞名。建议为cid434另拨字符串译作新吉翁资深士官、以匹配既有惯例（上級→高级：cid430新吉翁高级士官；エリート→精英：cid408/418/450）。证据：data/jp/characters.json中cid429名称ptr为0x20B6C25而cid434为0x20B6C45（两条不同JP记录）；data/zh/characters.json中429/433/434共用ptr0x21889B4。"
+  ],
+  [
+   "char_440",
+   "ZH名新吉翁兵与char_435（ネオ・ジオン兵→新吉翁兵）完全同名相撞、且丢失熟練兵的老练之意（本组台词明显更沉稳、与435的新兵结巴腔不同）。建议区分为新吉翁老兵或新吉翁精兵。仅按指示标记、本次未改动任何名字。"
+  ],
+  [
+   "char_443",
+   "JP名为ネオ・ジオンNT（新吉翁新人类兵）、而ZH固定名新吉翁兵与char_435（ネオ・ジオン兵→新吉翁兵）完全撞名、丢失了NT属性区分。建议改为新吉翁NT或新吉翁NT兵（NT为既定拉丁缩写、见https://wiki.biligame.com/gundam/NewType）。按指示未在任何字段擅自改名、仅在此标记。"
+  ],
+  [
+   "char_455",
+   "JP名 強化型AI（=强化型AI、增强型AI控制驾驶员）与现行ZH标签 炮台 语义不符、疑为错译。证据：(1) 本作敌方编成中该名作为通用AI驾驶员类别出现（如 ザク・ウォーリア（強化型AI））、见 tennojiinfo02.seesaa.net/article/441406054.html 与 www.hypplcs.com/2018/09/dsgds-1679.html；(2) 同族voiceset 180邻位为 cid454 AI→AI、cid456 バイオ・ユニット→生体单元、均直译、唯独cid455落成炮台；(3) 炮台一词另见于关卡对话（_STGSP4A 当个炮台）、与本条无关、疑混入。建议改为 强化型AI（Latin AI保留、5格内）。按指示未擅改、仅在此标记。"
+  ],
+  [
    "char_46",
    "卡缪（强化）可用、但ハイパー指最终话的NT觉醒暴走状态、而卡缪是天然NT并非强化人、（强化）易与强化人混淆。建议改为卡缪（觉醒）。参考 https://zh.moegirl.org.cn/%E5%8D%A1%E7%BC%AA%C2%B7%E6%AF%94%E4%B8%B9"
+  ],
+  [
+   "char_466",
+   "スペシャルズ大陆通行译名为特务部队（OZ Specials=OZ特务部队、见biligame高达W条目）。OZ特种兵属少数译法、若做统一可考虑OZ特务队员。不强求改动。"
   ],
   [
    "char_54",
@@ -50,6 +110,196 @@
      "entity": "char_46",
      "idn": 140,
      "text": "生命是力量"
+    }
+   ]
+  },
+  "idname 0x20B7C5F": {
+   "chosen": "一定要平安",
+   "proposals": [
+    {
+     "entity": "char_132",
+     "idn": 396,
+     "text": "一定要平安"
+    },
+    {
+     "entity": "char_133",
+     "idn": 399,
+     "text": "愿你平安……"
+    }
+   ]
+  },
+  "idname 0x20B7D1D": {
+   "chosen": "粒子散布！",
+   "proposals": [
+    {
+     "entity": "char_140",
+     "idn": 420,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_170",
+     "idn": 513,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_183",
+     "idn": 549,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_191",
+     "idn": 573,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_192",
+     "idn": 576,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_194",
+     "idn": 582,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_198",
+     "idn": 594,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_411",
+     "idn": 1233,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_412",
+     "idn": 1236,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_422",
+     "idn": 1266,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_429",
+     "idn": 1287,
+     "text": "散布粒子！"
+    },
+    {
+     "entity": "char_432",
+     "idn": 1296,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_434",
+     "idn": 1302,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_444",
+     "idn": 1332,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_445",
+     "idn": 1335,
+     "text": "粒子散布！"
+    },
+    {
+     "entity": "char_450",
+     "idn": 1350,
+     "text": "粒子散布！"
+    }
+   ]
+  },
+  "idname 0x20B7DCD": {
+   "chosen": "战斗到底！",
+   "proposals": [
+    {
+     "entity": "char_145",
+     "idn": 437,
+     "text": "战斗到底！"
+    },
+    {
+     "entity": "char_145",
+     "idn": 440,
+     "text": "战斗到底！"
+    },
+    {
+     "entity": "char_145",
+     "idn": 443,
+     "text": "战斗到底！"
+    },
+    {
+     "entity": "char_148",
+     "idn": 446,
+     "text": "再苦也要战"
+    },
+    {
+     "entity": "char_148",
+     "idn": 449,
+     "text": "再苦也要战"
+    },
+    {
+     "entity": "char_148",
+     "idn": 452,
+     "text": "再苦也要战"
+    }
+   ]
+  },
+  "idname 0x20B872F": {
+   "chosen": "我找到了",
+   "proposals": [
+    {
+     "entity": "char_248",
+     "idn": 753,
+     "text": "我找到了"
+    },
+    {
+     "entity": "char_250",
+     "idn": 756,
+     "text": "我找到了哦"
+    }
+   ]
+  },
+  "idname 0x20B873B": {
+   "chosen": "谁也别消失",
+   "proposals": [
+    {
+     "entity": "char_248",
+     "idn": 754,
+     "text": "谁也别消失"
+    },
+    {
+     "entity": "char_250",
+     "idn": 757,
+     "text": "谁也不消失"
+    }
+   ]
+  },
+  "idname 0x20B8FE8": {
+   "chosen": "为迪安娜！！",
+   "proposals": [
+    {
+     "entity": "char_417",
+     "idn": 1251,
+     "text": "为迪安娜！"
+    },
+    {
+     "entity": "char_418",
+     "idn": 1254,
+     "text": "为迪安娜！！"
+    },
+    {
+     "entity": "char_419",
+     "idn": 1257,
+     "text": "为迪安娜！！"
+    },
+    {
+     "entity": "char_420",
+     "idn": 1260,
+     "text": "为迪安娜！！"
     }
    ]
   }

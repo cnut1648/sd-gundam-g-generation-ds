@@ -1,0 +1,15 @@
+{
+ "entity": "unit_184",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/AMX-004-3%E5%8D%A1%E7%A2%A7%E5%B0%BCMK-%E2%85%A1",
+  "https://wiki.biligame.com/gundam/AMX-004-2%E5%8D%A1%E7%A2%A7%E5%B0%BCMK-%E2%85%A1",
+  "https://gundam.huijiwiki.com/wiki/AMX-004_%E5%8D%A1%E7%A2%A7%E5%B0%BCMk-II"
+ ],
+ "name_zh": "卡碧尼Mk2／普露兹机",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "普露兹机"
+ ],
+ "notes": "机体名保持卡碧尼Mk2／普露兹机：即biligame条目AMX-004-3卡碧尼MK-Ⅱ（普露兹机、红色三号机）、Mk9为游戏内Mk-Ⅱ的槽位decode记法、repo canon卡碧尼Mk2命名家族按指示冻结不改名、132px在144px预算内且与unit_178卡碧尼／哈曼机等系列后缀式统一。武器三条全部保留（weapons为空）：光束枪（ビーム・ガン、33机共享、biligame页腕部光束炮兼光束军刀描述相符）、光束军刀（ビーム・サーベル、315机共享、brief钦定不用光束剑）、浮游炮（ファンネル、48机共享、biligame页本机核心武装即浮游炮12具）、均非canon错误不动共享串。能力段（family61、owner）修复截断缺陷：JP两段ニュータイプ対応機／プルツー専用機、旧译新人类／普露兹把対応機与専用機词干整个丢掉。本记录实测可写空间16B（20B跨度减00 03 00 00尾框）、经fleet编码器encode_bank+compose逐字节验证：NT机(6B)+段间0003(2B)+普露兹机(8B)=16B恰好用满、纯ZH-band两字节token、成帧后与20B跨度完全一致。理想全文NT对应机／普露兹专用机为24B、NT机／普露兹专用机为18B、新人类／普露兹专用为18B均放不下（普露兹三字比哈曼多一字、故无法如unit_178那样保住专用机全词）；NT机沿unit_178（family59同款挤压）与unit_109先例、普露兹机保住専用機的机字并与机体名后缀普露兹机呼应、两段保持JP的〜机／〜机对仗。曾考虑借用JP原payload一字节0x8E（繁体機）省2B以写普露兹专用機、因简体文本混繁体機字视觉不一致而弃用、记录于此供校对参考。防御记录（貫通防御なし）owner=unit_1、按规则不输出defense字段。"
+}

@@ -1,0 +1,15 @@
+{
+ "entity": "unit_10",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSA-0011(Ext)Ex-S%E9%AB%98%E8%BE%BE",
+  "https://gundam.huijiwiki.com/wiki/%E7%88%B1%E4%B8%BD%E4%B8%9D",
+  "https://zh.moegirl.org.cn/Ex-S%E5%A7%AC"
+ ],
+ "name_zh": "ExーS高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "ALICE：HP70%以下增强机师能力",
+  "非{F0:94}效果更大"
+ ],
+ "notes": "ALICE段修复截断缺陷：原ALICE系统/非NT效果高丢失触发与效果。新译经fleet编码器实测恰好48/48字节（JP负载复用ALICE/：/HP/70/%/NT令牌）、保留触发（HP70%以下）＋效果（パイロットの能力増強→增强机师能力、用游戏UI自带术语机师见data/zh/ui.json）＋数值70%。段1为塞进预算将能力が低いほど効果が高い压缩为越弱越有效、理想全文为对非NT机师、能力越低效果越好。名称旗标：biligame佳能拼写为Ex-S高达（连字符）、现行ExーS高达沿用日文全角ー且与JP名ExーSガンダム字节同构、验证器对改名不走JP负载复用（x/-在bank面不可编码）、故保留现名并在此旗标、如需统一须走原字节复用路径。同款ALICE记录另存在于unit_343（S高达、family114@0x6D4、他人所有）、建议校对时两处措辞统一。防御（I力场、威力450记录）归unit_4所有、未输出。武器五条均已符合brief钦定佳能（光束军刀、线控炮、反射线控炮、光束智能枪、可动光束加农炮与biligame可动式光束加农炮一致）、不提出改动。"
+}

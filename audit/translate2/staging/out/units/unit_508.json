@@ -1,0 +1,14 @@
+{
+ "entity": "unit_508",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSN-03%E4%B9%8D%E5%BE%97%C2%B7%E5%A4%9A%E5%8A%A0",
+  "https://wiki.biligame.com/gundam/MSN-03%E4%B9%8D%E5%BE%97%C2%B7%E5%A4%9A%E5%8A%A0%EF%BC%88%E9%AB%98%E7%A9%BA%E6%B5%81%E5%85%89%E7%89%88%EF%BC%89",
+  "https://gundam.fandom.com/wiki/MSN-03_Jagd_Doga"
+ ],
+ "name_zh": "雅克特·多加",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "机体名保留雅克特·多加：biligame词条页题为MSN-03乍得·多加、但雅克特·多加/亚克特·多加为并行通行音译（ヤクト=德语Jagd狩猎、雅克特贴音更常见于社区）、非事实错误、且与库内多加家族既定措辞（基拉·多加、蕾兹专用基拉·多加）逐字同族、72px≤144px、按brief不改。本机即逆袭的夏亚中新吉翁NT专用试验机、两台分别为邱尼·加斯（char_313、蓝绿涂装）与葵丝·帕拉雅（char_315、红色涂装）搭乘、已核对两名驾驶员的已交付产出：其名台词/barks不含机体名交叉引用（char_315注仅提α·阿吉尔换乘）、无需对齐改动。武器四条全部保留（weapons为空）：光束突击步枪与biligame页固定武装光束突击步枪（ビーム・アサルトライフル、带榴弹发射器）逐字一致（3机共享即本机三形态槽）；光束军刀为brief钦定译名（315机共享、不用光束剑）；米加粒子炮为盾内藏メガ粒子砲的全库既定转写（77机共享串、biligame称盾牌内藏Mega粒子炮、非canon错误不动共享串）；浮游炮为brief钦定48机共享约定、biligame页远程武器即浮游炮6具。特殊能力（family169@0xA3C、owner）修复截断缺陷：JPニュータイプ対応機（原payload为f098/f08c字典宏+一字节0x8E機）旧译只剩新人类、対応機词干整个被丢；新译NT对应机、经fleet编码器encode_bank对真实记录实测10B（纯ZH带token eed3eed6e7bee873e7e4）、记录span 0xA3C-0xA48共12B、保留00 03尾框后room=10B恰好占满、零缺陷；与unit_73/175/187/199/208/211/214/217等已交付的全舰队统一措辞NT对应机逐字一致、全译新人类对应机12B超room实测被弹回不可用、NT为brief规定保留的Latin码。集成提示（不影响本产出）：resident_caves 0x3ABC存有一条亚克特·多加（首token e7d6=亚、经codec解码确认）、与实际名串0x570D（RAM 0x218B70D、雅克特·多加、ledger deploy_freeze_fix条目）用字不一、且data/zh全库未见任何指针引用0x2189ABC、疑为早期孤儿cave条目、建议校对时排查回收。防御记录（貫通防御なし）owner=unit_1、按规则整体省略defense_*键。"
+}

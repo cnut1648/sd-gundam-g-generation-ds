@@ -1,0 +1,15 @@
+{
+ "entity": "unit_25",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-78GP03D%E9%AB%98%E8%BE%BE%E8%AF%95%E4%BD%9C3%E5%8F%B7%E6%9C%BA%EF%BC%88%E7%9F%B3%E6%96%9B%E5%85%B0%EF%BC%89",
+  "https://baike.baidu.com/item/GP03D%E7%9F%B3%E6%96%9B%E5%85%B0/6001405",
+  "https://gundam.wiki.cre.jp/wiki/%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E8%A9%A6%E4%BD%9C3%E5%8F%B7%E6%A9%9F"
+ ],
+ "name_zh": "GP03石斛兰",
+ "weapons": [],
+ "ability_segments_zh": [
+  "宇宙适应{01}巨大",
+  "武装基地（全装甲可解除）"
+ ],
+ "notes": "机体名GP03石斛兰=biligame佳能（RX-78GP03D高达试作3号机（石斛兰））、Latin码GP03按brief保留、84px≤144px、不改。能力段修复丢句缺陷：段1旧译武装基地把JP括注（フルアーマーシステム解除可能）整个丢掉（=可解除武装基地变回雄蕊的关键机制）、新译武装基地（全装甲可解除）补回；フルアーマー用社区通行缩略全装甲（全装甲ZZ类）、系统二字因预算放弃（全装甲系统可解除为25B、全record 40B超room 38B）、且16B预算的FA同族记录（unit_463/466等）只容得下可解除级压缩、全fleet措辞可统一为全装甲可解除。段0保留bank共享词干宇宙适应（12+记录）与巨大（大型ユニット、约10记录同译）、并保留{01}单字节子分隔以镜像JP原版式（地形適正・宇宙{01}大型ユニット、现行ROM字节宇宙适应{00}{00}{01}巨大也有该分隔）——validator的NUM_RE会把{01}误读成数字01报一个numbers警告、属转义解析噪声非真数字漂移、JP段本身无数字。字节实测（encode_bank+compose_record规则、（）由JP原payload一字节复用）：13B+2B+21B=36B≤room 38B。防御名I力场与防御段（威力450/减伤30%）owner=unit_4、按brief不输出（unit_4现有输出已含完整触发+效果+数值译文）。武器五条均不改：大型光束军刀/微型导弹/爆导索为brief及biligame佳能；米加光束炮=社区通行メガ・ビーム砲译名（米加粒子炮同系、9机共享）；集装导弹为コンテナ・ミサイル的忠实紧凑译法、社区的集束导弹实对应另一武装大型集束ミサイル（cluster）、非本串、不构成canon错误（3机共享）。"
+}

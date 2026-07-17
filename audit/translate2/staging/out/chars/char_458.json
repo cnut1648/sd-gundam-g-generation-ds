@@ -1,0 +1,33 @@
+{
+ "entity": "char_458",
+ "web_sources": [],
+ "name_flag": "",
+ "ids": [
+  {"idn": 1374, "name_zh": "…………", "cutin_zh": "………………", "notes": "JP cut-in is deliberate silence (6×…); mirrored exactly, even ellipsis count. name shared with idn 30 (not owned here): repeated current value, 4 cells within 5-cell/64px box."}
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x33BD0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33BE4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33BF8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C0C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C20", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C34", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C48", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C5C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C70", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33C84", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33C98", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33CAC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33CC0", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33CD4", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33CE8", "zh": "………………！！"},
+  {"file": "0.bin", "record": "0x33CFC", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33D10", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33D24", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33D38", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33D4C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33D60", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33D74", "zh": "………………"}
+ ],
+ "notes": "コアDG細胞 (Devil Gundam core DG cells) is a mute voice-set: every JP bark and the cut-in are pure ellipses (6×…) with 0-2 trailing ！. The only faithful and budget-legal translation is a 1:1 mirror of the JP silence — no invented speech (budgets 6-8 bytes forbid it anyway; a single CJK pair would displace ellipses and break the silent characterization). Consistent with sibling set char_457 (DG细胞), whose staging shows the identical all-ellipsis pattern. detail (idn 1374) owned by char_43 — omitted. Ellipsis counts are even (6) per charset rule; every record exactly meets its byte budget. No web sources needed: no verbal content to verify; fixed name 核心DG细胞 matches community usage for DG细胞/コア (no flag)."
+}

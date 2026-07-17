@@ -1,0 +1,20 @@
+{
+ "entity": "unit_46",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/FA-010S%E5%85%A8%E8%A3%85%E7%94%B2ZZ%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/MSZ-010ZZ%E9%AB%98%E8%BE%BE",
+  "https://gundam.fandom.com/wiki/FA-010S_Full_Armor_ZZ_Gundam"
+ ],
+ "name_zh": "全装甲ZZ",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "全装甲（可解除）"
+ ],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "威力250以下的光束属性攻击无效",
+  "超过则伤害减轻20%"
+ ],
+ "notes": "能力段修复截断缺陷：旧译新人类／全装甲系统丢掉対応機与（解除可能）触发信息。JP记录（family15）经F0字典宏压缩、实测可写room仅22B（budget_bytes=24含末段分隔）、经encode_bank逐候选实测：NT对应机(10B)+分隔2B+装甲可解除(10B)=22B恰满。段0与unit_31（V2高达）已交付的NT对应机逐字一致（全库共享tag统一）；段1理想全文全装甲系统（可解除）为28B、全装甲可解除为24B均放不下、故取装甲可解除——本机名即全装甲ZZ、所指无歧义、且保留了核心玩法信息（装甲可中途解除、解除后变回强化型ZZ）。字形注意：卸在bank面不可编码（glyph gap）、已避开。防御段由旧3段修正为镜像JP的2段、段0保持威力250开头配合代码绘制数字版式、补回被丢弃的光束属性限定与减伤20%完整句：29B+2B+18B=49B≤room50B（250/20为原payload一字节数字复用）、数字与JP完全一致、句式与unit_4/unit_7已交付的威力450以下的攻击无效／超过则伤害减轻50%家族统一。该防御记录2与防御名ptr0x20B6E86同为unit_85（瓦尔·瓦罗）、unit_639（永恒号）共享（本agent为owner）、译文为通用光束涂层描述、对三机均成立。防御名光束涂层=canon（ビームコート、biligame通行译名、留空=保留）。武器四条均与biligame ZZ系页面核对：双管光束步枪（ダブル・ビーム・ライフル、biligame作双联装/2连装光束步枪、双管非canon错误且12机共享、不改）、高能光束军刀（ハイパー・ビームサーベル、与社区译名一致）、导弹发射器（33机共享通用串）、高能米加加农炮（ハイ・メガ・キャノン、与biligame头部高能MEGA加农炮同义、12机共享、不改）。机体名全装甲ZZ=biligame页FA-010S全装甲ZZ高达之通行简称、JP名フルアーマーZZ亦无ガンダム后缀、保留。"
+}

@@ -1,0 +1,15 @@
+{
+ "entity": "unit_526",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/RMS-099S_Rick_Dias_S",
+  "https://wiki.biligame.com/gundam/RMS-099%E5%8A%9B%E5%85%8B%C2%B7%E8%BF%AA%E4%BA%9A%E6%96%AF",
+  "https://wiki.biligame.com/gundam/RX-098%E8%AF%95%E4%BD%9C%E5%9E%8B%E5%8A%9B%E5%85%8B%C2%B7%E8%BF%AA%E4%BA%9A%E6%96%AF",
+  "https://www.mahq.net/rms-099s-fxa-04/"
+ ],
+ "name_zh": "里克·迪亚斯S",
+ "weapons": [],
+ "ability_segments_zh": [
+  "可装备G防卫机"
+ ],
+ "notes": "机体名保持里克·迪亚斯S（RMS-099S、GGEN原创Z-MSV系机体）、与家族unit_520/523里克·迪亚斯及unit_529超级迪亚斯一致、80px≤144px。特殊能力（family175、0xAA8、20B预算）修复双重缺陷：旧译防御单元既丢掉装着可能（可装备）的机制信息、又把ディフェンサー（=FXA-04 Dディフェンサー、D-Defenser强化型背包的机体名、本机借之合体为超级迪亚斯）误当作防御装备——本机图鉴原文即称「Dディフェンサー」と呼ばれる強化型バックパック（data/jp/units.json:25528/25686）。新译可装备D防卫机=7字14B≤20B、措辞与同一JP字串的Mk2侧记录（unit_151已交付可装备G防卫机、0x400）完全平行、Defenser=防卫机沿该fleet先例（biligame词条形式为G-防卫者、连字符不可编码）。FLAG同步请求：sibling记录0xABC（family176、unit_529已交付段0防御单元、其notes称系为与本记录旧译一致）应同步改为D防卫机+（全装甲可解除）、字节成本不变（8B=8B、总26B≤28B预算）、与超级高达对G防卫机/（全装甲可解除）的处理完全对应。武器4条均不提交改动：光束手枪（biligame RMS-099页专用光束手枪、9机共享）、光束军刀（brief钦定、315机共享）、黏土火箭炮（biligame RX-098页黏土火箭筒设定、15机共享）、远程火箭炮（ロングレンジ・バズーカ=Long Bazooka长射程火箭炮之意、现译准确且unit_529同串已确认保留、6机共享）。防御记录（貫通防御なし）owner=unit_1、按规则整体省略defense_*键。"
+}

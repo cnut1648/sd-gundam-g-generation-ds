@@ -1,0 +1,20 @@
+{
+ "entity": "unit_199",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/XM-X1%E6%B5%B7%E7%9B%97%E9%AB%98%E8%BE%BEX1",
+  "https://gundam.wiki.cre.jp/wiki/ABC%E3%83%9E%E3%83%B3%E3%83%88",
+  "https://zh.wikipedia.org/zh-cn/%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%AB%E6%B5%B7%E7%9B%9CGUNDAM",
+  "https://baike.baidu.com/item/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E6%B5%B7%E7%9B%97%E9%AB%98%E8%BE%BE/60830521"
+ ],
+ "name_zh": "海盗高达X1",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "defense_name_zh": "ABC披风",
+ "defense_segments_zh": [
+  "威力350以下的光束属性攻击无效",
+  "超过则伤害减轻20%"
+ ],
+ "notes": "机体名与biligame页题XM-X1海盗高达X1一致、且与char_60金凯度输出的海盗词系（海盗流！！/海盗高达）一致、72px≤144px、保留。武器三条均不改：斩刀破坏枪（ザンバスター）与光束斩刀（ビーム・ザンバー）为海盗家族21机共享的仓库通行译名、unit_211/214/217输出已裁定保留（biligame作斩坏枪/光束斩马刀、属另一通行写法、非事实错误、改动波及21机故不动）；榴弹发射器为brief钦定译名（24机共享）。特殊能力修复截断缺陷：JPニュータイプ対応機旧译只剩新人类（対応機整词丢失）、改为NT对应机、经fleet编码器compose_segments实测family66记录room=10B（12B跨度减0003尾框）、NT对应机恰10B零缺陷、与同JP字节的family70（unit_211）/71（unit_214）及unit_31/43/73等已交付输出逐字统一（unit_211备注点名要求家族66统一为NT对应机）。防御名依据任务指定canon改为ABC斗篷：biligame X1页特殊装备原文抗光束披风（A.B.C斗篷）、百度百科海盗高达词条亦通行斗篷称法；字节中性（ABC复用JP原payload的e008/e009/e00a三个token+斗篷2字4B共10B、与现行ABC披风的encode_bank实测10B等长、池内cstr无需增长）；注意篷为bank面glyph gap、需经mint_glyphs流程铸字（已随validator进glyph_gap.txt）、若裁定不铸字则回退保留ABC披风（data/zh/ui.json abilities[15]与resident_caves的同串镜像亦需随裁定同步、两案等字数）。防御段由旧3段电报体（威力350以下/光束攻击无效/超过则减20%）修正为镜像JP的2段并补全触发+效果+数值：段0以威力350开头保持代码绘制数字版式并补回被丢弃的属性限定与无效化整句、段1补回超过时减伤20%完整句；措辞与unit_46（威力250以下的光束属性攻击无效/超过则伤害减轻20%）逐字同式、与unit_4/unit_7家族公式统一；经compose_segments实测28B+段间2B+18B=48B≤room50B（52B跨度减00030000尾框）、数字350/20%与JP完全一致。该防御记录14与防御名ptr0x20B6EA4由unit_205/211/214共享（本agent为owner）、译文对X1/X1改/X2/X2改均成立。"
+}

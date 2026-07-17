@@ -1,0 +1,15 @@
+{
+ "entity": "unit_109",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MAN-08%E8%89%BE%E5%B0%94%E7%BE%8E%E6%96%AF",
+  "https://gundam.huijiwiki.com/wiki/MAN-08_%E8%89%BE%E5%B0%94%E7%BE%8E%E6%96%AF",
+  "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9_(%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)"
+ ],
+ "name_zh": "艾尔美斯3号机",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机{01}宇宙适应",
+  "大型机"
+ ],
+ "notes": "能力段修复截断缺陷：JP原文为ニュータイプ対応機{01}地形適正・宇宙／大型ユニット共三行。旧译NT{01}宇宙适应／巨大丢失対応機与ユニット词干。新译NT机{01}宇宙适应／大型机镜像JP三行版式、经fleet编码器compose_segments实测无缺陷、正文23B≤room24B（28B记录减00030000尾框、段间0003计2B）。理想全文NT对应机{01}地形适应宇宙／大型机体为33B放不下、故対応機压缩为机、地形適正・宇宙沿用库内通行简写宇宙适应（unit_301吉翁号同JP词组现行同译）、大型ユニット取大型机。JP的・按名label禁则不移植。同文异记录提醒：unit_103（fam34）、unit_106（fam35）与unit_58 αアジール（fam19）的JP记录字节与本记录完全相同且同为28B跨度、建议校对时四处统一采用本译文。机体名艾尔美斯3号机合biligame/灰机wiki canon（MAN-08艾尔美斯）、本机为モノアイガンダムズ设定中少女时代哈曼·卡恩搭乘的白色3号机、84px≤144px、保留。武器不改：米加粒子炮（MEGA粒子砲、77机共享）与浮游炮（ビット、48机共享）均与biligame艾尔美斯页canon一致。防御记录（貫通防御なし）归unit_1所有、未输出。"
+}

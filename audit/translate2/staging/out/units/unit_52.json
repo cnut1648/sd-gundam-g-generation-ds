@@ -1,0 +1,15 @@
+{
+ "entity": "unit_52",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSZ-006Z%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E7%94%9F%E7%89%A9%E4%BC%A0%E6%84%9F%E5%99%A8",
+  "https://wiki.biligame.com/gundam/%E8%B6%85%E7%BA%A7%E7%B1%B3%E5%8A%A0%E5%8F%91%E5%B0%84%E5%99%A8"
+ ],
+ "name_zh": "Z高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "生体感应器（{F0:94}机）",
+  "可变形"
+ ],
+ "notes": "能力段0修复两处缺陷：旧译生体感应器是日文形词、biligame专页canon为生物传感器（バイオセンサー=Bio-Sensor、AE社准塞可缪装置）；且旧译整个丢掉（ニュータイプ対応機）从句、正是本次要修的名字裸奔缺陷类。理想全译搭载生物传感器（NT对应机）需36B、社区通行ニュータイプ対応機=NT对应机（（NT对应机）版本28B）均超预算：family17记录span=0x1A0-0x1BC共28B、保留00030000尾框后room=24B。取生物传感器（NT机）+可变：经lib_apply.encode_bank实测（（）复用JP原payload单字节7D/7E、N/T走ZH带双字节）seg0=18B+分隔2B+seg1=4B=24B恰满。段1沿用现行可变（可変機構、机构为冗余后缀、可变即G世代通行的可变形标签）、若改可变机构则+4B放不下NT从句。机体名Z高达=biligame页面写法、不改。武器三项均canon：光束步枪/光束军刀为brief钦定译名、超级米加发射器与biligame武器专页页名逐字一致（ハイパー・メガ・ランチャー）、故weapons为空=全部保留。JP段尾{01}版式记号照现行已建ROM记录（0x1BC同文记录）省略、预算内也无处安放（+1B即超）。同文姊妹记录family18（unit_55）/23（unit_70）/98（unit_295）建议采同一措辞。防御段（貫通防御なし）owner=unit_1、按规则不输出。"
+}

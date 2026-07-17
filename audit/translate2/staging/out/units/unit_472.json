@@ -1,0 +1,18 @@
+{
+ "entity": "unit_472",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/GAT-X252%E7%A6%81%E6%96%AD%E9%AB%98%E8%BE%BE",
+  "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A9%E3%83%93%E3%83%89%E3%82%A5%E3%83%B3%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0",
+  "https://gundam.wiki.cre.jp/wiki/%E3%83%95%E3%82%A9%E3%83%93%E3%83%89%E3%82%A5%E3%83%B3%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0",
+  "https://gundam.fandom.com/wiki/Geschmeidig_Panzer"
+ ],
+ "name_zh": "禁断高达",
+ "weapons": [],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "{F0:876}450以下的射击攻击无效、",
+  "超过则伤害减轻30%",
+  "{F0:876}900以下的实弹格斗攻击也无效"
+ ],
+ "notes": "机体名禁断高达=biligame词条GAT-X252禁断高达页面标题、48px≤144px、不改。武器三条全部保留（weapons为空）：艾克札恩铁道炮／尼德霍格重镰／弗雷斯贝尔诱导炮为TRANSLATION_GUIDE§2b点名的禁断钦定canon（3utid共享）；biligame本机页对フレスベルグ另有凶鹫（诱导等离子炮）译、属神话别名表记、不推翻repo钦定形。防御名TP装甲／G装甲保留（输出空串=keep）：Gパンツァー即ゲシュマイディッヒ・パンツァー（Geschmeidig Panzer、能量偏向装甲）的JP官方缩写、G装甲镜像该缩写且Panzer=装甲逐字对应、全称盖修麦迪希装甲塞不进名牌、经encode_bank实测现名16B可编码。防御段（record 6@0xF4..0x144、本entity独占owner、全库无他机共享）修复两类缺陷：旧译4段不镜像JP3段（validator必弹）、且末段近战900以下无效丢失実弾属性限定词（本防御只无效化实弹格斗、光束格斗照常掉血、语义性漏译）。新译镜像JP三段：威力450以下的射击攻击无效、／超过则伤害减轻30%／威力900以下的实弹格斗攻击也无效、450·30%·900三数值与JP逐一对应、また＋も由也承接、まで=以下。字节实测（compose_segments同logic、raw尾框0003保留2B、room=80-2=78B）：25B+0003+18B+0003+30B=body 77B≤78B、成帧恰满80B跨度、decode-back逐字无损。编码要点：威力必须走记录原生字典宏{F0:876}（e088d5、renderB 360=威/213=力双VERIFIED、committed special_defenses.json全部威力记录同宏先例）——若写明文威力、loose payload-byte allowance会把力收敛成孤立一byte 0xDA（renderB=々）、渲染成威々牌garble（0xDA仅以e2da低byte形式在原payload出现、非renderB-meaning byte）；同理近字会收敛成0x96（renderB=見）、故近接攻撃取通行术语格斗攻击（格e824/斗e7ff纯ZH-band、库内格斗13处>近战7处）而非近战攻击。数字450/900/30%复用JP原payload令牌（e002/fe02/ff02/e001/f659/e706）、与JP原版渲染逐byte一致无基线下沉问题；顿号复用原payload 0x7A（renderB=、、JP seg1词尾し、同位结构）。{F0:876}宏字面876会触发validator的numbers警告、系宏非数值的无害误报（unit_157/388同类先例）。本机=夏尼·安德拉斯（char_99/100）搭乘机、其两卡输出无涉及本机名与武器名的台词、术语无冲突。"
+}

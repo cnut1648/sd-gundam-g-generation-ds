@@ -1,0 +1,13 @@
+{
+ "entity": "unit_535",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/F91%E9%87%8F%E4%BA%A7%E5%9E%8BF91%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/F-91%20%E9%87%8F%E4%BA%A7%E5%9E%8B%E9%AB%98%E8%BE%BEF91/19905012"
+ ],
+ "name_zh": "量产型F91",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "机体名量产型F91与biligame词条（F91量产型F91高达）及百度百科一致：机动战士海盗高达中联邦军对F91的极少量量产机、省略了原型机实验性的MEPE与全功能生体电脑；72px≤144px预算、保留。武器三串全部保留（weapons为空）：光束步枪（195机共享）与光束军刀（315机共享、brief钦定不用光束剑）均合biligame武装栏；ヴェスバー=VSBR（slot2/3同一串0x218E6CB、18机共享）按brief规定Latin码保持不译、biligame称V.S.B.R.可变速光束步枪／韦斯巴、与unit_13（F91本体）输出裁定逐字一致。特殊能力修复截断缺陷：JP=ニュータイプ対応機、旧译新人类把対応機词干整个丢掉；新译NT对应机=N2+T2+对2+应2+机2=10B≤预算12B、且按unit_187对同文同预算（12B）记录的实测（跨度减0003尾框后实际room仅10B、全译新人类对应机12B被validator弹回）恰好用满、与unit_31/43/73/175/187/223等全舰队统一措辞NT对应机逐字一致、并与unit_13的生体电脑（NT对应机）同族呼应。MEPE防御名与防御段（25%概率完全回避／NT及强化人限定）owner=unit_13、按规则整体省略defense_*键；lore上量产型F91本无MEPE（哈里逊机残像靠高机动性）、但游戏数据与F91共用同一防御记录、以unit_13的译文为准。"
+}

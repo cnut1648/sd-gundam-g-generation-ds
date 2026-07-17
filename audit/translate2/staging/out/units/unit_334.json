@@ -1,0 +1,11 @@
+{
+ "entity": "unit_334",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MS-14S%E6%8C%87%E6%8C%A5%E5%AE%98%E7%94%A8%E5%9E%8B%E5%8B%87%E5%A3%AB",
+  "https://wiki.biligame.com/gundam/%E5%A4%8F%E4%BA%9A%C2%B7%E9%98%BF%E5%85%B9%E7%BA%B3%E5%B8%83%E5%B0%94"
+ ],
+ "name_zh": "夏亚专用勇士",
+ "weapons": [],
+ "ability_segments_zh": ["夏亚专用机"],
+ "notes": "机体名保持夏亚专用勇士：repo canon ゲルググ=勇士、biligame条目MS-14S指挥官用型勇士页及MG模型均通称夏亚专用勇士、夏亚与char_91夏亚·阿兹纳布尔对齐、72px在144px预算内、与unit_232勇士家族命名统一。武器两条均为跨机共享canon串、不改动：光束步枪（ビーム・ライフル、195机共享、biligame本机页同名）、光束薙刀（ビーム・ナギナタ、18机共享、brief钦定译名、biligame本机页近战主武装即光束薙刀）。特殊能力（family111、owner）修复截断缺陷：JPシャア・アズナブル専用機、旧译夏亚专用把専用機的機字整个丢掉。全译夏亚·阿兹纳布尔专用机经encode_bank实测22B远超预算、压缩为夏亚专用机（人名取姓、機字保留）、与unit_124卡多专用机、unit_193蕾兹专用机同式先例逐字同构。经fleet编码器encode_bank对1df.bin@0x6B4真实JP记录（12B跨度、尾框0003、room10B）实测：夏亚专用机10B恰好用满、纯ZH-band两字节token、compose后与跨度完全一致；夏亚专用仅8B有富余但缺機字、故弃用。同串提醒：unit_289沙扎比（family96、budget28）JP同为シャア・アズナブル専用機、其record可容纳全译夏亚·阿兹纳布尔专用机（22B）、建议校对时该机取全译、词干与本机夏亚专用机保持一致。防御记录（貫通防御なし）owner=unit_1、按规则不输出defense字段。"
+}

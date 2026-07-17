@@ -12,140 +12,686 @@
  ],
  "name_flag": "",
  "ids": [
-  {"idn": 273, "name_zh": "成为同志！", "cutin_zh": "那就……成为同志吧！！", "notes": ""},
-  {"idn": 274, "name_zh": "战斗无情", "cutin_zh": "战斗是无情的……我不会手下留情！", "notes": ""},
-  {"idn": 275, "name_zh": "他是个少爷", "cutin_zh": "……因为他是个少爷啊", "detail_effect_zh": "反应降低30、攻击力减少30%", "notes": "JP原文ボウャ为ボウヤ的手误、按坊やだからさ的通行译法（因为他是个少爷啊）处理"},
-  {"idn": 276, "name_zh": "我也看得见", "cutin_zh": "看得见……我也看得见敌人！", "detail_effect_zh": "攻击必定暴击、必定回避敌方攻击", "notes": ""},
-  {"idn": 277, "name_zh": "顺应潮流", "cutin_zh": "人只要顺应潮流就好……所以我要杀了你！", "notes": ""},
-  {"idn": 278, "name_zh": "拉拉引导我", "cutin_zh": "拉拉……引导我吧！", "detail_effect_zh": "1回合内命中率和回避率各提升20%、反应提升20", "notes": "導いてくれ按社区通行译法用引导而非指引"},
-  {"idn": 279, "name_zh": "试试看吧！", "cutin_zh": "……试试看吧！", "detail_effect_zh": "攻击力增加40%、攻击必定暴击、必定回避敌方攻击", "notes": ""},
-  {"idn": 280, "name_zh": "犹豫害死人", "cutin_zh": "犹豫只会害死自己……这里是战场啊！", "detail_effect_zh": "命中率提升20%、攻击力增加20%", "notes": ""},
-  {"idn": 281, "name_zh": "拉拉引导我", "cutin_zh": "拉拉……引导我吧！", "notes": "与idn278同一共享字符串、译文一致"},
-  {"idn": 288, "name_zh": "由我来肃清", "cutin_zh": "就由我、夏亚·阿兹纳布尔来肃清！", "notes": "社区通行句式为就由我夏亚·阿兹纳布尔来肃清这里、阿姆罗！游戏原句无アムロ与ここ、故取短形"},
-  {"idn": 289, "name_zh": "必须赎罪！", "cutin_zh": "人类必须亲手制裁自己、向地球赎罪才行！", "detail_effect_zh": "命中·回避·攻击力各提升20%、反应增加40、装甲增加4", "notes": ""},
-  {"idn": 290, "name_zh": "太荒谬了！", "cutin_zh": "但是……这太荒谬了！！", "notes": "ナンセンス按逆袭的夏亚社区译法统一为荒谬"}
+  {
+   "idn": 273,
+   "name_zh": "成为同志！",
+   "cutin_zh": "那就……成为同志吧！！",
+   "notes": ""
+  },
+  {
+   "idn": 274,
+   "name_zh": "战斗无情",
+   "cutin_zh": "战斗是无情的……我不会手下留情！",
+   "notes": ""
+  },
+  {
+   "idn": 275,
+   "name_zh": "他是个少爷",
+   "cutin_zh": "……因为他是个少爷啊",
+   "detail_effect_zh": "反应降低30、攻击力减少30%",
+   "notes": "JP原文ボウャ为ボウヤ的手误、按坊やだからさ的通行译法（因为他是个少爷啊）处理"
+  },
+  {
+   "idn": 276,
+   "name_zh": "我也看得见",
+   "cutin_zh": "看得见……我也看得见敌人！",
+   "detail_effect_zh": "攻击必定暴击、必定回避敌方攻击",
+   "notes": ""
+  },
+  {
+   "idn": 277,
+   "name_zh": "顺应潮流",
+   "cutin_zh": "人只要顺应潮流就好……所以我要杀了你！",
+   "notes": ""
+  },
+  {
+   "idn": 278,
+   "name_zh": "拉拉引导我",
+   "cutin_zh": "拉拉……引导我吧！",
+   "detail_effect_zh": "1回合内命中率和回避率各提升20%、反应提升20",
+   "notes": "導いてくれ按社区通行译法用引导而非指引"
+  },
+  {
+   "idn": 279,
+   "name_zh": "试试看吧！",
+   "cutin_zh": "……试试看吧！",
+   "detail_effect_zh": "攻击力增加40%、攻击必定暴击、必定回避敌方攻击",
+   "notes": ""
+  },
+  {
+   "idn": 280,
+   "name_zh": "犹豫害死人",
+   "cutin_zh": "犹豫只会害死自己……这里是战场啊！",
+   "detail_effect_zh": "命中率提升20%、攻击力增加20%",
+   "notes": ""
+  },
+  {
+   "idn": 281,
+   "name_zh": "拉拉引导我",
+   "cutin_zh": "拉拉……引导我吧！",
+   "notes": "与idn278同一共享字符串、译文一致"
+  },
+  {
+   "idn": 288,
+   "name_zh": "由我来肃清",
+   "cutin_zh": "就由我、夏亚·阿兹纳布尔来肃清！",
+   "notes": "社区通行句式为就由我夏亚·阿兹纳布尔来肃清这里、阿姆罗！游戏原句无アムロ与ここ、故取短形"
+  },
+  {
+   "idn": 289,
+   "name_zh": "必须赎罪！",
+   "cutin_zh": "人类必须亲手制裁自己、向地球赎罪才行！",
+   "detail_effect_zh": "命中·回避·攻击力各提升20%、反应增加40、装甲增加4",
+   "notes": ""
+  },
+  {
+   "idn": 290,
+   "name_zh": "太荒谬了！",
+   "cutin_zh": "但是……这太荒谬了！！",
+   "notes": "ナンセンス按逆袭的夏亚社区译法统一为荒谬"
+  }
  ],
  "barks": [
-  {"file": "0.bin", "record": "0xAEAC", "zh": "赤色彗星可不是白叫的！"},
-  {"file": "0.bin", "record": "0xAED4", "zh": "我也看得见敌人……！"},
-  {"file": "0.bin", "record": "0xAEF4", "zh": "哼……"},
-  {"file": "0.bin", "record": "0xAF04", "zh": "诅咒你的命运吧！"},
-  {"file": "0.bin", "record": "0xAF20", "zh": "天真……就凭那本事！"},
-  {"file": "0.bin", "record": "0xAF40", "zh": "机动战士就该这么用！"},
-  {"file": "0.bin", "record": "0xAF60", "zh": "让我见识下那机体的性能！"},
-  {"file": "0.bin", "record": "0xAF84", "zh": "让你见识决定性的实力差距！"},
-  {"file": "0.bin", "record": "0xAFAC", "zh": "真不想承认……因年轻犯下的过错"},
-  {"file": "0.bin", "record": "0xAFD8", "zh": "哼……太嫩！！"},
-  {"file": "0.bin", "record": "0xAFF0", "zh": "竟敢小看我……可不行！"},
-  {"file": "0.bin", "record": "0xB010", "zh": "不是直击就没什么！"},
-  {"file": "0.bin", "record": "0xB030", "zh": "可恶、别说笑！"},
-  {"file": "0.bin", "record": "0xB048", "zh": "啧……！"},
-  {"file": "0.bin", "record": "0xB05C", "zh": "什么！？怪物吗！"},
-  {"file": "0.bin", "record": "0xB078", "zh": "竟敢对我施加压力！"},
-  {"file": "0.bin", "record": "0xB098", "zh": "太嫩……！"},
-  {"file": "0.bin", "record": "0xB0AC", "zh": "打不中！"},
-  {"file": "0.bin", "record": "0xB0C0", "zh": "散开！有远程攻击！"},
-  {"file": "0.bin", "record": "0xB0E0", "zh": "那机体我收下了！"},
-  {"file": "0.bin", "record": "0xB0FC", "zh": "我这人真是不走运……"},
-  {"file": "0.bin", "record": "0xB11C", "zh": "可恶……开什么玩笑！"},
-  {"file": "1de.bin", "record": "0x2FC4", "zh": "一举拿下！跟我来！"},
-  {"file": "1de.bin", "record": "0x2FE0", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x2FFC", "zh": "啊、我知道！只听从拉拉的指示"},
-  {"file": "1de.bin", "record": "0x3024", "zh": "了解！但要当心、哈曼！"},
-  {"file": "1de.bin", "record": "0x3048", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x3064", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x3080", "zh": "明白！我去支援！"},
-  {"file": "0.bin", "record": "0xB13C", "zh": "看穿你的动作！"},
-  {"file": "0.bin", "record": "0xB158", "zh": "这时代、人们只把新人类当战争工具！！"},
-  {"file": "0.bin", "record": "0xB188", "zh": "古老邪恶之物、唯有歼灭一途！！"},
-  {"file": "0.bin", "record": "0xB1B0", "zh": "我也看得见……"},
-  {"file": "0.bin", "record": "0xB1C8", "zh": "我只想开辟NT作为NT立世的道路！"},
-  {"file": "0.bin", "record": "0xB1F8", "zh": "别说笑！"},
-  {"file": "0.bin", "record": "0xB20C", "zh": "机体性能差、并非战力的决定性差距！"},
-  {"file": "0.bin", "record": "0xB238", "zh": "诅咒你的命运吧！"},
-  {"file": "0.bin", "record": "0xB254", "zh": "如今的我赢不了……拉拉、引导我"},
-  {"file": "0.bin", "record": "0xB27C", "zh": "都是战争！让新人类沦为战争工具！"},
-  {"file": "0.bin", "record": "0xB2A8", "zh": "可我也是新人类！"},
-  {"file": "0.bin", "record": "0xB2C4", "zh": "可恶"},
-  {"file": "0.bin", "record": "0xB2D4", "zh": "唔、不赖"},
-  {"file": "0.bin", "record": "0xB2E8", "zh": "你太坦率地展现力量……很危险！"},
-  {"file": "0.bin", "record": "0xB310", "zh": "啧！我竟会失手！"},
-  {"file": "0.bin", "record": "0xB32C", "zh": "拉拉、告诉我！该怎么办"},
-  {"file": "0.bin", "record": "0xB34C", "zh": "太嫩！"},
-  {"file": "0.bin", "record": "0xB360", "zh": "哼……"},
-  {"file": "0.bin", "record": "0xB370", "zh": "来了！都别中弹！"},
-  {"file": "0.bin", "record": "0xB38C", "zh": "做我的同志！！"},
-  {"file": "0.bin", "record": "0xB3A8", "zh": "竟敢伤害我的尊严……"},
-  {"file": "0.bin", "record": "0xB3CC", "zh": "我也有我的骨气……"},
-  {"file": "1.bin", "record": "0x0", "zh": "沉吧！"},
-  {"file": "1.bin", "record": "0x8C", "zh": "对我可不同！"},
-  {"file": "1.bin", "record": "0x120", "zh": "如今人们只把新人类当杀戮工具！"},
-  {"file": "1.bin", "record": "0x14A", "zh": "拉拉注定难逃一死！"},
-  {"file": "1de.bin", "record": "0x309C", "zh": "一举拿下！跟我来！"},
-  {"file": "1de.bin", "record": "0x30B8", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x30D4", "zh": "了解！但要当心、哈曼！"},
-  {"file": "1de.bin", "record": "0x30F8", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x3114", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x3130", "zh": "明白！我去支援！"},
-  {"file": "1de.bin", "record": "0x314C", "zh": "明白！我去支援！"},
-  {"file": "0.bin", "record": "0xB3EC", "zh": "赤色彗星可不是白叫的！"},
-  {"file": "0.bin", "record": "0xB414", "zh": "……在那！"},
-  {"file": "0.bin", "record": "0xB428", "zh": "坠落"},
-  {"file": "0.bin", "record": "0xB438", "zh": "看招"},
-  {"file": "0.bin", "record": "0xB448", "zh": "试试看！"},
-  {"file": "0.bin", "record": "0xB45C", "zh": "慢！！"},
-  {"file": "0.bin", "record": "0xB46C", "zh": "休想再来！"},
-  {"file": "0.bin", "record": "0xB484", "zh": "乖乖当靶子不合我性子！"},
-  {"file": "0.bin", "record": "0xB4A8", "zh": "拉拉……我该如何是好"},
-  {"file": "0.bin", "record": "0xB4C8", "zh": "阿姆罗·雷不在、战场竟如此轻松……"},
-  {"file": "0.bin", "record": "0xB4F4", "zh": "没有头盔的话、早没命了……"},
-  {"file": "0.bin", "record": "0xB518", "zh": "就这程度！！"},
-  {"file": "0.bin", "record": "0xB530", "zh": "啧！开什么玩笑！"},
-  {"file": "0.bin", "record": "0xB54C", "zh": "可恶！！"},
-  {"file": "0.bin", "record": "0xB560", "zh": "竟敢给我施压！"},
-  {"file": "0.bin", "record": "0xB57C", "zh": "啧！但还有办法可想！"},
-  {"file": "0.bin", "record": "0xB59C", "zh": "没用！"},
-  {"file": "0.bin", "record": "0xB5B0", "zh": "哼、这程度"},
-  {"file": "0.bin", "record": "0xB5C8", "zh": "来了！散开！！"},
-  {"file": "0.bin", "record": "0xB5E0", "zh": "那机体、我收下了！！"},
-  {"file": "0.bin", "record": "0xB5FC", "zh": "像个小丑"},
-  {"file": "0.bin", "record": "0xB610", "zh": "别小看我！"},
-  {"file": "1de.bin", "record": "0x3168", "zh": "一举拿下！跟我来！"},
-  {"file": "1de.bin", "record": "0x3184", "zh": "这里是夏亚、了解！我来支援！"},
-  {"file": "1de.bin", "record": "0x31AC", "zh": "放心吧、哈曼！由我来守护你！"},
-  {"file": "1de.bin", "record": "0x31D4", "zh": "这里是夏亚、了解！我来支援！"},
-  {"file": "1de.bin", "record": "0x31FC", "zh": "这里是夏亚、了解！我来支援！"},
-  {"file": "1de.bin", "record": "0x3224", "zh": "这里是夏亚、了解！我来支援！"},
-  {"file": "1de.bin", "record": "0x324C", "zh": "这里是夏亚、了解！我来支援！"},
-  {"file": "0.bin", "record": "0xBABC", "zh": "休想再来！"},
-  {"file": "0.bin", "record": "0xBAD4", "zh": "在那边吗！"},
-  {"file": "0.bin", "record": "0xBAEC", "zh": "既然在附近、就来感受我！！"},
-  {"file": "0.bin", "record": "0xBB0C", "zh": "地球人只想着自己的事……所以我宣告要抹杀！"},
-  {"file": "0.bin", "record": "0xBB3C", "zh": "为何就不懂地上人只是污染地球的寄生虫！？"},
-  {"file": "0.bin", "record": "0xBB6C", "zh": "地球已撑不住了！"},
-  {"file": "0.bin", "record": "0xBB88", "zh": "总得有人背负起人类的业！！"},
-  {"file": "0.bin", "record": "0xBBAC", "zh": "这是必要的！为了人类的革新！"},
-  {"file": "0.bin", "record": "0xBBD4", "zh": "拉拉……引导我吧……"},
-  {"file": "0.bin", "record": "0xBBF0", "zh": "这……太荒谬了！"},
-  {"file": "0.bin", "record": "0xBC0C", "zh": "我可不能只当个驾驶员！"},
-  {"file": "0.bin", "record": "0xBC30", "zh": "打赢可悲的机体有何意义？"},
-  {"file": "0.bin", "record": "0xBC54", "zh": "怎不明白你才是在浪费力量！！"},
-  {"file": "0.bin", "record": "0xBC7C", "zh": "迟早只有这种悲伤会压垮地球……"},
-  {"file": "0.bin", "record": "0xBCA8", "zh": "可恶……发生了什么！？"},
-  {"file": "0.bin", "record": "0xBCC8", "zh": "屏幕失灵！？"},
-  {"file": "0.bin", "record": "0xBCE0", "zh": "那种机体、休想赢得了我！"},
-  {"file": "0.bin", "record": "0xBD04", "zh": "可恶"},
-  {"file": "0.bin", "record": "0xBD14", "zh": "来这招……各机散开、各自迎击！"},
-  {"file": "0.bin", "record": "0xBD3C", "zh": "那就……成为同志！"},
-  {"file": "0.bin", "record": "0xBD58", "zh": "可恶……作战难以完美！"},
-  {"file": "0.bin", "record": "0xBD7C", "zh": "那……太荒谬了！"},
-  {"file": "1de.bin", "record": "0x34B4", "zh": "夏亚·阿兹纳布尔4"},
-  {"file": "1de.bin", "record": "0x34D4", "zh": "夏亚·阿兹纳布尔4"},
-  {"file": "1de.bin", "record": "0x34F4", "zh": "夏亚·阿兹纳布尔4"},
-  {"file": "1de.bin", "record": "0x351C", "zh": "夏亚·阿兹纳布尔4"},
-  {"file": "1de.bin", "record": "0x3544", "zh": "夏亚·阿兹纳布尔4"},
-  {"file": "1de.bin", "record": "0x356C", "zh": "夏亚·阿兹纳布尔4……"},
-  {"file": "1de.bin", "record": "0x3594", "zh": "夏亚·阿兹纳布尔4……"}
+  {
+   "file": "0.bin",
+   "record": "0xAEAC",
+   "zh": "赤色彗星可不是白叫的！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAED4",
+   "zh": "我也看得见敌人……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAEF4",
+   "zh": "哼……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAF04",
+   "zh": "诅咒你的命运吧！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAF20",
+   "zh": "天真……就凭那本事！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAF40",
+   "zh": "机动战士就该这么用！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAF60",
+   "zh": "让我见识下那机体的性能！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAF84",
+   "zh": "让你见识决定性的实力差距！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAFAC",
+   "zh": "真不想承认……因年轻犯下的过错"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAFD8",
+   "zh": "哼……太嫩！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xAFF0",
+   "zh": "竟敢小看我……可不行！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB010",
+   "zh": "不是直击就没什么！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB030",
+   "zh": "可恶、别说笑！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB048",
+   "zh": "啧……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB05C",
+   "zh": "什么！？怪物吗！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB078",
+   "zh": "竟敢对我施加压力！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB098",
+   "zh": "太嫩……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB0AC",
+   "zh": "打不中！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB0C0",
+   "zh": "散开！有远程攻击！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB0E0",
+   "zh": "那机体我收下了！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB0FC",
+   "zh": "我这人真是不走运……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB11C",
+   "zh": "可恶……开什么玩笑！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2FC4",
+   "zh": "一举拿下！跟我来！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2FE0",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2FFC",
+   "zh": "啊、我知道！只听从拉拉的指示"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3024",
+   "zh": "了解！但要当心、哈曼！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3048",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3064",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3080",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB13C",
+   "zh": "看穿你的动作！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB158",
+   "zh": "这时代、人们只把新人类当战争工具！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB188",
+   "zh": "古老邪恶之物、唯有歼灭一途！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB1B0",
+   "zh": "我也看得见……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB1C8",
+   "zh": "我只想开创NT作为NT立世的道路！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB1F8",
+   "zh": "别说笑！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB20C",
+   "zh": "机体性能差、并非战力的决定性差距！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB238",
+   "zh": "诅咒你的命运吧！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB254",
+   "zh": "如今的我赢不了……拉拉、引导我"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB27C",
+   "zh": "都是战争！让新人类沦为战争工具！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB2A8",
+   "zh": "可我也是新人类！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB2C4",
+   "zh": "可恶"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB2D4",
+   "zh": "唔、不赖"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB2E8",
+   "zh": "你太坦率地展现力量……很危险！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB310",
+   "zh": "啧！我竟会失手！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB32C",
+   "zh": "拉拉、告诉我！该怎么办"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB34C",
+   "zh": "太嫩！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB360",
+   "zh": "哼……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB370",
+   "zh": "来了！都别中弹！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB38C",
+   "zh": "做我的同志！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB3A8",
+   "zh": "竟敢伤害我的尊严……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB3CC",
+   "zh": "我也有我的骨气……"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x0",
+   "zh": "沉吧！"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x8C",
+   "zh": "对我可不同！"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x120",
+   "zh": "如今人们只把新人类当杀戮工具！"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x14A",
+   "zh": "拉拉注定难逃一死！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x309C",
+   "zh": "一举拿下！跟我来！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x30B8",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x30D4",
+   "zh": "了解！但要当心、哈曼！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x30F8",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3114",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3130",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x314C",
+   "zh": "明白！我去支援！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB3EC",
+   "zh": "赤色彗星可不是白叫的！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB414",
+   "zh": "……在那！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB428",
+   "zh": "坠落"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB438",
+   "zh": "看招"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB448",
+   "zh": "试试看！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB45C",
+   "zh": "慢！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB46C",
+   "zh": "休想再来！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB484",
+   "zh": "乖乖当靶子不合我性子！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB4A8",
+   "zh": "拉拉……我该如何是好"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB4C8",
+   "zh": "阿姆罗·雷不在、战场竟如此轻松……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB4F4",
+   "zh": "没有头盔的话、早没命了……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB518",
+   "zh": "就这程度！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB530",
+   "zh": "啧！开什么玩笑！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB54C",
+   "zh": "可恶！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB560",
+   "zh": "竟敢给我施压！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB57C",
+   "zh": "啧！但还有办法可想！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB59C",
+   "zh": "没用！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB5B0",
+   "zh": "哼、这程度"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB5C8",
+   "zh": "来了！散开！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB5E0",
+   "zh": "那机体、我收下了！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB5FC",
+   "zh": "像个小丑"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB610",
+   "zh": "别小看我！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3168",
+   "zh": "一举拿下！跟我来！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3184",
+   "zh": "这里是夏亚、了解！我来支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x31AC",
+   "zh": "放心吧、哈曼！由我来守护你！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x31D4",
+   "zh": "这里是夏亚、了解！我来支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x31FC",
+   "zh": "这里是夏亚、了解！我来支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3224",
+   "zh": "这里是夏亚、了解！我来支援！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x324C",
+   "zh": "这里是夏亚、了解！我来支援！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBABC",
+   "zh": "休想再来！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBAD4",
+   "zh": "在那边吗！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBAEC",
+   "zh": "既然在附近、就来感受我！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBB0C",
+   "zh": "地球人只想着自己的事……所以我宣告要抹杀！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBB3C",
+   "zh": "为何就不懂地上人只是污染地球的寄生虫！？"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBB6C",
+   "zh": "地球已撑不住了！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBB88",
+   "zh": "总得有人背负起人类的业！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBBAC",
+   "zh": "这是必要的！为了人类的革新！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBBD4",
+   "zh": "拉拉……引导我吧……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBBF0",
+   "zh": "这……太荒谬了！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBC0C",
+   "zh": "我可不能只当个驾驶员！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBC30",
+   "zh": "打赢可悲的机体有何意义？"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBC54",
+   "zh": "怎不明白你才是在浪费力量！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBC7C",
+   "zh": "迟早只有这种悲伤会压垮地球……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBCA8",
+   "zh": "可恶……发生了什么！？"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBCC8",
+   "zh": "屏幕失灵！？"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBCE0",
+   "zh": "那种机体、休想赢得了我！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBD04",
+   "zh": "可恶"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBD14",
+   "zh": "来这招……各机散开、各自迎击！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBD3C",
+   "zh": "那就……成为同志！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBD58",
+   "zh": "可恶……作战难以完美！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBD7C",
+   "zh": "那……太荒谬了！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x34B4",
+   "zh": "夏亚·阿兹纳布尔4"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x34D4",
+   "zh": "夏亚·阿兹纳布尔4"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x34F4",
+   "zh": "夏亚·阿兹纳布尔4"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x351C",
+   "zh": "夏亚·阿兹纳布尔4"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3544",
+   "zh": "夏亚·阿兹纳布尔4"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x356C",
+   "zh": "夏亚·阿兹纳布尔4……"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3594",
+   "zh": "夏亚·阿兹纳布尔4……"
+  }
  ],
  "notes": "占位记录（1de.bin 0x34B4至0x3594、JP原文即开发用占位标签）沿用现行占位译文不改。0xB010受17字节预算限制放不下社区通行全句（只要打不中就没什么大不了）、压缩为不是直击就没什么！。名句处理：見せてもらおうか系按萌百通行句式、認めたくない与若さ故の過ち按通行译法压入29字节、ナンセンス统一为荒谬、導いてくれ统一为引导、绰号按biligame用赤色彗星。个别现行句按成本规则估算略超预算但实测字节已合格（0xB5E0、0xBAEC、0xBB0C、0xBB3C、0xBD14）、为稳妥保持原译不动。"
 }

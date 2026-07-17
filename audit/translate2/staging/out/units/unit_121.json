@@ -1,0 +1,14 @@
+{
+ "entity": "unit_121",
+ "web_sources": [
+  "https://gundam.huijiwiki.com/wiki/AMX-007_%E5%8A%A0%E6%92%92E",
+  "https://wiki.biligame.com/gundam/%E6%88%98%E6%96%97%E8%A1%8C%E5%8A%A8%E5%8A%A0%E8%90%A8E",
+  "https://gundam.fandom.com/wiki/AMX-007_Gaza-E"
+ ],
+ "name_zh": "加撒E",
+ "weapons": [],
+ "ability_segments_zh": [
+  "可变形"
+ ],
+ "notes": "能力段修复截断缺陷：JP可変機構（该机可在MS/MA形态间变形、见灰机wiki AMX-007加撒E页）旧译只剩可变、丢了机构。新译可变机构4个CJK字=8B恰满budget_bytes=8（family40记录0x3A0..0x3A8共8字节、经text_codec.encode(surface=bank)实测e7c4e955e7e4ece3=8B、四字均为ZH-band注册槽2212/2613/2244/3523）。同串缺陷也存在于加撒C（unit_115/family38@0x390）与加撒D（unit_118/family39@0x398）及其他可変機構记录、建议校对时全库统一为可变机构。机体名加撒E保持：与灰机wiki词条AMX-007加撒E一致、且与本库家族加撒C/加撒D命名统一（biligame GBO2页写作加萨E、非本作canon页、不足以推翻家族一致性）。武器不改：光束加农炮（ビーム・カノン、18机共享、canon通行）、光束军刀（brief钦定）；slot2バインダー武装ポッド现译武装舱虽省略了バインダー（绑定器）、但非事实性canon错误且库内无同名碰撞（导弹舱/机动兵装舱各有其主）、该串仅本entity三个utid共享、若日后池空间允许、理想全名为绑定器武装舱（灰机wiki Binder Weapon Pod）。防御记录归unit_1所有、未输出。"
+}

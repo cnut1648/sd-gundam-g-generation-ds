@@ -1,0 +1,19 @@
+{
+ "entity": "unit_295",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/PMX-003%E9%93%81%E5%A5%A5",
+  "https://wiki.biligame.com/gundam/%E7%94%9F%E7%89%A9%E4%BC%A0%E6%84%9F%E5%99%A8",
+  "https://gundam.fandom.com/wiki/PMX-003_The-O"
+ ],
+ "name_zh": "铁奥",
+ "weapons": [
+  {
+   "slot": 2,
+   "zh": "隐藏臂"
+  }
+ ],
+ "ability_segments_zh": [
+  "生体感应器（{F0:94}对应机）"
+ ],
+ "notes": "机体名铁奥=biligame专页页名（PMX-003铁奥、The·O、西罗克专用机）canon、24px远低于144px预算、不改；与char_333（帕普提马斯·西罗克）同线。武器：slot0光束步枪为brief钦定（195机共享）不改；slot1ビーム・ソード=光束剑不改、biligame铁奥页明确区分光束剑（刃身弯曲、侧裙甲收纳、与隐藏臂配合四刀流）与光束军刀、ソード译剑正确（9机共享）。slot2サブ・マニピュレーター旧译副机械臂为字面直译、biligame铁奥页canon为裙甲内藏的隐藏机械臂／隐藏手臂（近战用暗藏臂）、社区通行短形即隐藏臂、按派单指示改为隐藏臂；该串仅铁奥三形态（utid295/296/297、全在本entity内）共享、改名无外溢；且隐藏臂6B<副机械臂8B、cave@0x92DA与library槽位均原地放得下。特殊能力（owner）：JPバイオセンサー搭載（ニュータイプ対応機）旧译只剩生体感应器、（ニュータイプ対応機）限定从句整个丢失、属本次修复的缺陷类。本记录（family98）单段无可变、24B预算可容全形生体感应器（NT对应机）=22B（生体感应器10B+（）复用JP原payload一字节7D/7E共2B+NT走ZH带4B+对应机6B）、即使（）按2B保守计也恰24B、故取全形（unit_70注明预算许可时优先全形）。术语取生体感应器与同JP文姊妹记录unit_55（NT机）/unit_70（NT对应）及现行bank、生体力场族一致；注意unit_52输出用了生物传感器（biligame主词条名）、四条同文记录集成时建议统一基词、届时本条改生物传感器（NT对应机）同为22B亦可。防御段（貫通防御なし）owner=unit_1、按brief不输出。"
+}

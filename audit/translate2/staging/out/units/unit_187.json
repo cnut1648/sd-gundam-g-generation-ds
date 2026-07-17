@@ -1,0 +1,14 @@
+{
+ "entity": "unit_187",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/AMX-004%E5%8D%A1%E7%A2%A7%E5%B0%BC",
+  "https://wiki.biligame.com/gundam/AMX-004-2%E5%8D%A1%E7%A2%A7%E5%B0%BCMK-%E2%85%A1",
+  "https://wiki.biligame.com/gundam/AMX-004-3%E5%8D%A1%E7%A2%A7%E5%B0%BCMK-%E2%85%A1"
+ ],
+ "name_zh": "卡碧尼Mk2",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "机体名卡碧尼Mk2保留：biligame canon页为AMX-004-2卡碧尼MK-Ⅱ（爱尔比·普露搭乘的二号机、由哈曼座机AMX-004卡碧尼改良）、卡碧尼与全库既定译名一致（unit_175卡碧尼同族）、Mk2数字写法沿全库惯例（高达Mk2、精神感应高达Mk2、卡碧尼Mk2／普露兹机同式、JP侧Mk9为MK-Ⅱ字形的解码记法）、72px≤144px。名串区分说明：本entity（utid187-189、名串0x20B5DDC）为无专属后缀的通常キュベレイMk-Ⅱ记录（普露侧机体）、与utid184-186（卡碧尼Mk2／普露兹机、其fam61含プルツー専用機段、即AMX-004-3红色三号机）及utid598/604（卡碧尼Mk2／普露机）为三条不同名串、现行区分方案合理、不改。武器三条均canon、不改：光束枪（ビーム・ガン、33机共享、biligame称腕部光束军刀兼光束枪/光束炮）、光束军刀（brief钦定译名、315机共享）、浮游炮（ファンネル、brief钦定、48机共享、biligame称浮游圆锥炮亦通）。特殊能力修复截断缺陷：JPニュータイプ対応機旧译只剩新人类、対応機词干整个被丢。新译NT对应机、经lib_apply.encode_bank实测10B、并以validate_fleet.compose_segments对1df.bin@0x4E4真实记录复核：body10B≤room10B（12B跨度减0003尾框）恰满、零缺陷；与unit_31（V2高达）、unit_73（阿列克斯）已交付的全舰队统一措辞NT对应机逐字一致。全译新人类对应机为12B超room、经实测被validator弹回、不可用。防御段（貫通防御なし）owner=unit_1、按规则省略defense_*键。"
+}

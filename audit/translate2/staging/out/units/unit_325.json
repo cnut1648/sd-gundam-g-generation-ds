@@ -1,0 +1,13 @@
+{
+ "entity": "unit_325",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RGM-79N%E7%89%B9%E8%A3%85%E5%9E%8B%E5%90%89%E5%A7%86",
+  "https://wiki.biligame.com/gundam/RGM-79%E5%90%89%E5%A7%86",
+  "https://gundam.huijiwiki.com/wiki/%E4%B8%8D%E6%AD%BB%E8%BA%AB%E7%9A%84%E7%AC%AC4%E5%B0%8F%E9%98%9F"
+ ],
+ "name_zh": "特装型吉姆",
+ "weapons": [
+  {"slot": 2, "zh": "火箭炮"}
+ ],
+ "notes": "机体名特装型吉姆与biligame条目标题RGM-79N特装型吉姆逐字一致（0083不死身的第4小队主力座机、与char_74巴宁/char_22贝特/char_193蒙夏产出的小队语境对齐）、60px远在144px预算内、保留。slot0吉姆步枪=biligame武装栏90mm吉姆步枪（HFW-GR·MR82）、保留；slot1光束军刀为brief钦定canon（315机共享）、保留。slot2修复canon错误：JP原文是泛称バズーカ、现译扎古火箭炮把联邦吉姆系的火箭炮标成扎古武器（特装型吉姆的火箭炮选装是BLASH HB-L-07/N-STD高能火箭炮、见biligame页、与扎古无关）；该串15utid共享（吉姆/吉姆2/特装型吉姆/吉姆指挥型/扎古2FZ、五分之四为联邦机）、且库内另有独立的ザク・バズーカ串已译扎古火箭炮（扎古1/高机动型扎古/扎古2FZ）、两条不同JP串现译相撞无法区分。按本库バズーカ→火箭炮既定惯例（unit_19/250/274产出同裁定）改为泛称火箭炮、对同串的扎古2FZ亦成立、3字6B短于现串10B、池位安全。防御段（貫通防御なし）owner=unit_1、按规则整体省略defense_*键；本机staging无自有特能段、省略ability_segments_zh。"
+}

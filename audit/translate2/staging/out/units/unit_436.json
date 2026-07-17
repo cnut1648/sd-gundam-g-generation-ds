@@ -1,0 +1,14 @@
+{
+ "entity": "unit_436",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/NRX-055%E7%8C%8E%E7%8A%AC",
+  "https://baike.baidu.com/item/NRX-055%20%E7%8C%8E%E7%8A%AC/20277435"
+ ],
+ "name_zh": "猎犬",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "可变形"
+ ],
+ "notes": "机体名猎犬为biligame canon（页名NRX-055猎犬、Baund Doc即Hound Dog谐音的意译、百度百科同名；音译巴恩多克仅作括注非主译名）、24px≤144px、保留。Z高达提坦斯NT专用可变试作机、罗莎米亚·巴达姆／杰利德搭乘机、与本机三utid(436红/437灰/438黄)对应三号机涂装。武器三条全部保留（weapons为空）：扩散米加粒子炮（拡散メガ粒子砲、9机共享、biligame作专用扩散MEGA粒子炮、米加粒子炮为全库既定转写、沿unit_271裁定）；利爪（クロー、9机共享、biligame称右腕机械爪／脚部机械爪、クロー=爪之直译非明确canon错误、不改）；光束步枪（ビーム・ライフル、195机共享、canon）。特殊能力（family145、owner）修复截断缺陷：JP两段ニュータイプ対応機／可変機構、旧译新人类／可变把対応機限定语与機構丢掉。本记录0x904..0x914共16B跨度、raw=f098f08cf5858e0003f74bf62b000300、保留0003尾框后room=14B；新译段0={F0:94}对应机→渲染NT对应机（f05e为字典宏0x5E、JP/ZH两ROM均原生渲染NT、unit_157同宏先例；ニュータイプ対応機→NT对应机为全舰队统一译法、见unit_13/31/145备注的舰队决议）、段1=可变（可変機構的挤压形、与unit_52/55/70squeezed案逐字一致；全形可变机构8B与段0并置放不下）、经validate_fleet.compose_segments实测body=8+2+4=14B恰好用满room、纯ZH带+原生宏、零缺陷。理想全形NT对应机／可变机构（18B）超室4B、明确放不下。{F0:94}宏字面含数字会触发numbers警告、为无害误报（JP无数字、宏非数值、同unit_157）。防御段（貫通防御なし）归unit_1所有、按规则整体省略defense_*键。family145的raw字节全库唯一、无同字节兄弟记录需跨机统一。"
+}

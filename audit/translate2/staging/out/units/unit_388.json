@@ -1,0 +1,15 @@
+{
+ "entity": "unit_388",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%83%86%E3%83%A9%E3%83%BB%E3%82%B9%E3%82%AA%E3%83%BC%E3%83%8E",
+  "https://wiki.biligame.com/gundam/LRX-066%E8%92%82%E6%8B%89%C2%B7%E6%96%AF%E6%AC%A7%E8%AF%BA",
+  "https://gundam.fandom.com/wiki/LRX-066_Tera-S%27ono"
+ ],
+ "name_zh": "泰拉·斯欧诺",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "未完成塞壬系统"
+ ],
+ "notes": "能力段（family129@0x858、span24B、本entity为utid388-390即泰拉·斯欧诺未完成／MS形态、biligame：单独以MS形式出动无法控制塞壬系统）修复截断缺陷：旧译新人类／塞壬系统丢失対応機词干与（未完成）限定。JP侧考证：seg1提取件作システム・セイレーネ（未0）、其中0为sys字典宏#1113的解码赝象——该宏原始负载仅单字节e1、即完字token（e122）的首字节、属JP原版ROM截断的字典条目（完整应为完成）、JP实机该孤立e1会与后续）字节（7e）并合成token e17e＝拠而渲染错字；语义即（未完成）、与unit_bios所载系统未完成设定及391-393完成形态（塞壬系统：攻击时损伤SP）的对照关系吻合。新译经fleet编码器compose_segments逐字节实测：{F0:94}机（4B）＋段间0003（2B）＋未完成塞壬系统（14B）＝20B恰满room（24B跨度减00030000尾框）、零缺陷零glyph gap；{F0:94}为字典宏94、JP／ZH两ROM均原生渲染NT（e012e017、unit_157／unit_58同宏先例）、故seg0渲染为NT机、与unit_391完成形态的seg0（NT机）逐字一致、seg1则以未完成／攻击时损伤SP形成两形态对照。理想全形NT对应机／塞壬系统（未完成）为28B放不下；unit_391曾建议本记录填NT对应机＋塞壬系统（20B）、因其丢失未完成这一区分两记录的实义限定而未采用、塞壬／NT词干已按其要求统一。校验器numbers警告（JP含0而ZH无数字）为截断宏赝象所致的预期无害warn、非真实数值、同unit_157宏字面误报类。机体名泰拉·斯欧诺保留：repo全库canon（stages _STG09SP／_STGX6A／_STGX7、character_bios、resident_caves、units.json）且与unit_391、char_123／125输出一致、72px≤144px；biligame词条名作蒂拉·斯欧诺、属拼写变体、不据此改库内既定名。武器三条均不改动：手部发射器（ハンド・ランチャー、仅本机3utid共享、MS形态手持武装、大陆wiki无既定中文名、现译直译达意）、光束军刀（brief钦定、315机共享）、灵能炮（サイ・ランチャー、サイ＝psy精神系兵装之意、灵能为通行译法、biligame武装栏未载该名、无canon冲突）。防御记录（貫通防御なし）owner为unit_1、按规则整体省略defense_*键。"
+}

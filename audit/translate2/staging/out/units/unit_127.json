@@ -1,0 +1,19 @@
+{
+ "entity": "unit_127",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-110%E5%8D%A1%E6%99%AE%E6%96%AF%E5%88%A9",
+  "https://wiki.biligame.com/gundam/RX-139%E6%B1%89%E5%B8%83%E6%8B%89%E6%AF%94",
+  "https://wiki.biligame.com/gundam/%E9%AB%98%E8%BE%BEOL%E5%8A%A0%E5%B8%83%E6%96%AF%E9%9B%B7"
+ ],
+ "name_zh": "卡普斯利",
+ "weapons": [
+  {
+   "slot": 0,
+   "zh": "菲达因步枪"
+  }
+ ],
+ "ability_segments_zh": [
+  "可变形"
+ ],
+ "notes": "机体名FLAG复核结论：保留卡普斯利、不改名。biligame机体页canon标题即RX-110卡普斯利（正文与全系衍生机卡普斯利β/修金/穆宁均用此名）、加布斯雷仅见于高达OL游戏专页（见web_sources第3条）、故早前campaign的加布斯雷标准化与机体页canon不符、现名并非stale；若fleet层面裁定统一为加布斯雷、请连同衍生条目一并处理。武器slot0：费达因步枪→菲达因步枪、依biligame RX-110页武器设定一节（菲达因步枪：阿尔伯特社制造、出力6.6MW）与RX-139汉布拉比页（与RX-110卡普斯利同型的大型长管光束步枪、特殊武器海蛇同页）、菲达因为社区标准音译；该串6机共享（0x218C888、含unit_448汉布拉比slot1）、同为5字10字节等长替换、需fleet按ptr去重统一。特殊能力段0补全截断缺陷：可変機構→可变机构（旧译可变丢了機構）、4字=8字节恰满budget_bytes=8、镜像jp_segments 1:1；同类可変機構机体（unit_79/82/115/118/121/172等）建议同译可变机构。防御记录owner=false（unit_1所有）、按brief省略defense字段。全部用字已在charmap two_byte_zh注册。"
+}

@@ -1,0 +1,13 @@
+{
+ "entity": "unit_316",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RGM-79%E5%90%89%E5%A7%86",
+  "https://wiki.biligame.com/gundam/%E3%82%B8%E3%83%A0",
+  "https://wiki.biligame.com/gundam/MS-06FZ%E6%89%8E%E5%8F%A4%E2%85%A1%E6%94%B9"
+ ],
+ "name_zh": "吉姆",
+ "weapons": [
+  {"slot": 2, "zh": "火箭炮"}
+ ],
+ "notes": "slot2的JP原文是通用的バズーカ（ptr 0x219071B）、由吉姆、吉姆2、特装型吉姆、吉姆指挥型、扎古2FZ共15条记录共用、现译（扎古火箭炮）把另一条独立字符串ザク・バズーカ（0x2190710、译扎古火箭炮正确）的专名错套在联邦系吉姆机体上、属明显史实错误。改为通用的（火箭炮）、与超级火箭炮、远程火箭炮、折叠式火箭炮等同族译名一致、对共用的扎古2FZ亦成立。slot0光束喷枪、slot1光束军刀均符合biligame与本项目通行译名、保持不变。名称吉姆为大陆通行译名、保持不变。防御特殊段归unit_1所有、本机无ability记录、故不输出。"
+}

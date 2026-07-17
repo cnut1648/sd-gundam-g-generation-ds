@@ -1,0 +1,12 @@
+{
+ "entity": "unit_26",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-78GP03D高达试作3号机（石斛兰）",
+  "http://dsmidi.blog.fc2.com/blog-entry-97.html"
+ ],
+ "name_zh": "GP03石斛兰",
+ "weapons": [
+  {"slot": 2, "zh": "突击"}
+ ],
+ "notes": "slot2修正：JP原文为突撃（DS版石斛兰专属连续突击演出、弹幕后零距离米加光束炮）、现行光束枪属陈旧错配；该字符串ptr 0x20B5A52仅由utid 26/27（均属本entity）引用、修改自洽；译法与库内Z高达／强化的突撃→突击一致。其余武器（集装导弹、大型光束军刀、米加光束炮、微型导弹、爆导索）及机体名GP03石斛兰均符合biligame canon、保持不变。特殊能力归unit_25、防御名与防御说明归unit_4、按规则省略。"
+}

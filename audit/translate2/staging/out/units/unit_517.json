@@ -1,0 +1,15 @@
+{
+ "entity": "unit_517",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RGZ-91%E7%81%B5%E6%A0%BC%E6%96%AF",
+  "https://baike.baidu.com/item/RGZ-91%20%E7%81%B5%E6%A0%BC%E6%96%AF/19229463",
+  "https://zh.moegirl.org.cn/%E7%81%B5%E6%A0%BC%E4%B8%9D"
+ ],
+ "name_zh": "灵格斯／BWS",
+ "weapons": [],
+ "ability_segments_zh": [
+  "背部武器系统（可解除）",
+  "宇宙适应"
+ ],
+ "notes": "能力段修复截断缺陷、JP两段为バックウェポンシステム（フルアーマー解除可能）／地形適正・宇宙、旧译背部武器系统／宇宙适应把（フルアーマー解除可能）整句丢掉。真实room=32B（fam172@0xa74跨度36B减00030000尾框4B）、理想全译背部武器系统（全装甲可解除）经encode_bank实测35B超限、故段0取背部武器系统（可解除）、（）复用JP原payload一字节、实测20B+段间2B+宇宙适应8B=30B≤32B。可解除保留核心机制语义、本作FA解除=卸除BWS变回灵格斯（名池同款后缀如翔翼型强袭／解除）、与unit_25/529家族措辞全装甲可解除同源、此处因room放弃全装甲二字；若协调侧坚持保留FA字样、备选背部武器系统（FA解除）实测32B恰满room。背部武器系统=BWS的canon译名（biligame/百度百科/萌百三源均作背部武器系统Back Weapon System）、与姊妹机unit_514输出的可装备背部武器系统及battle bank现行字节词干逐字一致。段1地形適正・宇宙沿用全bank通行译宇宙适应（unit_22/85/109/301/304等23记录同式、・按名label禁则不移植）。机体名灵格斯／BWS=biligame canon（RGZ-91灵格斯页明记BWS背部武器系统背包）、68px≤144px、不改。武器三条均不改（weapons为空）、光束加农炮（38机共享、=biligame页BWS光束加农炮两门）、榴弹发射器（24机共享、brief钦定译名）、米加光束加农炮（メガ・ビーム・キャノン忠实译、米加为全库既定MEGA转写、9机共享且unit_34/37产出亦未动此串、biligame设定的大型MEGA粒子炮系lore硬件名、游戏内串即メガ・ビーム・キャノン故非canon错误）。防御段（貫通防御なし）owner=unit_1、按brief省略defense键。提醒协调侧、姊妹机unit_514现有输出可装备背部武器系统经encode_bank实测18B超其真实room16B（fam171@0xa60跨度20B减4B尾框）、会被validator弹回、建议其改为可装背部武器系统（8字16B恰满）以维持背部武器系统词干一致。"
+}

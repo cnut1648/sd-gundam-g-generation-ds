@@ -1,0 +1,35 @@
+{
+ "entity": "char_456",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/JDG-00X%E6%81%B6%E9%AD%94%E9%AB%98%E8%BE%BE",
+  "https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%93%E3%83%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0",
+  "https://gundam.fandom.com/wiki/EXAM_System"
+ ],
+ "name_flag": "",
+ "ids": [],
+ "barks": [
+  {"file": "0.bin", "record": "0x33858", "zh": "………………"},
+  {"file": "0.bin", "record": "0x3386C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33880", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33894", "zh": "………………"},
+  {"file": "0.bin", "record": "0x338A8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x338BC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x338D0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x338E4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x338F8", "zh": "？？？………………！！"},
+  {"file": "0.bin", "record": "0x33910", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33924", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33938", "zh": "………………！？"},
+  {"file": "0.bin", "record": "0x3394C", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33960", "zh": "………………！"},
+  {"file": "0.bin", "record": "0x33974", "zh": "………………！！"},
+  {"file": "0.bin", "record": "0x33988", "zh": "………………！！！"},
+  {"file": "0.bin", "record": "0x339A0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x339B4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x339C8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x339DC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x339F0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x33A04", "zh": "………………"}
+ ],
+ "notes": "バイオ・ユニット＝恶魔高达的生体单元（G高达：被DG细胞吞噬的活体核心、biligame恶魔高达页即用'生体单元'一词、固定译名正确）。该语音组的全部22条战斗语音在日文原文中即为纯标点（省略号/！/？）——生体单元没有语言、只有沉默与挣扎、这是刻意的角色塑造而非缺译。且每条budget_bytes与标点成本恰好相等（6字节=6个…、11字节=？？？+6…+！！等）、任何汉字（2字节/字）都无法在保留原有省略号节奏的前提下塞入。故逐条保留与日文完全一致的标点。省略号均为偶数对（6个…=3组……）、符合charset规则。"
+}

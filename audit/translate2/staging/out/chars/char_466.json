@@ -1,0 +1,42 @@
+{
+ "entity": "char_466",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E6%96%B0%E6%9C%BA%E5%8A%A8%E6%88%98%E8%AE%B0%E9%AB%98%E8%BE%BEW",
+  "https://w.atwiki.jp/gundam-vs-gnsk/pages/212.html",
+  "https://mzh.moegirl.org.cn/%E6%96%B0%E6%9C%BA%E5%8A%A8%E6%88%98%E8%AE%B0%E9%AB%98%E8%BE%BEW"
+ ],
+ "name_flag": "スペシャルズ大陆通行译名为特务部队（OZ Specials=OZ特务部队、见biligame高达W条目）。OZ特种兵属少数译法、若做统一可考虑OZ特务队员。不强求改动。",
+ "ids": [
+  {
+   "idn": 1398,
+   "name_zh": "新时代洗礼",
+   "cutin_zh": "你们这些过去的遗物！接受新时代的洗礼吧！",
+   "notes": "高达W穆勒名台词。动画原句多一个形容词惨めな、本作JP文本无此词、故不补译可悲的。dump中愛けろ为受けろ的取字错误。指令名取台词核心词新时代+洗礼、恰5格60px。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x34D0C", "zh": "攻击要迅速！"},
+  {"file": "0.bin", "record": "0x34D24", "zh": "为了新时代！"},
+  {"file": "0.bin", "record": "0x34D3C", "zh": "为了新时代！"},
+  {"file": "0.bin", "record": "0x34D54", "zh": "受死吧！"},
+  {"file": "0.bin", "record": "0x34D68", "zh": "我们开拓未来！！"},
+  {"file": "0.bin", "record": "0x34D84", "zh": "成为革命基石！"},
+  {"file": "0.bin", "record": "0x34DA0", "zh": "挡路就不留情！！"},
+  {"file": "0.bin", "record": "0x34DBC", "zh": "逆OZ者死！"},
+  {"file": "0.bin", "record": "0x34DD4", "zh": "为什么！？竟在这里……！"},
+  {"file": "0.bin", "record": "0x34DF4", "zh": "这点本事！！"},
+  {"file": "0.bin", "record": "0x34E0C", "zh": "为实现理想……我还不能死！！"},
+  {"file": "0.bin", "record": "0x34E34", "zh": "这也算打中了吗！"},
+  {"file": "0.bin", "record": "0x34E54", "zh": "总得让我提起劲吧！"},
+  {"file": "0.bin", "record": "0x34E74", "zh": "回避模式被看穿了！？"},
+  {"file": "0.bin", "record": "0x34E94", "zh": "糟了！这下失算了……！！"},
+  {"file": "0.bin", "record": "0x34EB8", "zh": "再、再挨打、装甲撑不住……！？"},
+  {"file": "0.bin", "record": "0x34EE0", "zh": "都说了没用的！！"},
+  {"file": "0.bin", "record": "0x34EFC", "zh": "我也在动啊！！"},
+  {"file": "0.bin", "record": "0x34F18", "zh": "敌袭！散开规避！"},
+  {"file": "0.bin", "record": "0x34F38", "zh": "不想流无谓的血！放下武器投降！"},
+  {"file": "0.bin", "record": "0x34F60", "zh": "就这样结束……可恶……！！"},
+  {"file": "0.bin", "record": "0x34F84", "zh": "别太得意！！"}
+ ],
+ "notes": "OZ特务部队精英部队口吻、与char_463至465的OZ系保持肃清・新时代话术一致。dump取字错误：愛けろ=受けろ（0x34D54、0x34EB8、cutin）。0x34D84的〜为dump缺字、按惯用句革命の礎となるがいい补全、译为革命基石。0x34DBC原译违抗OZ者死按brief字节规则为13超预算11、压缩为逆OZ者死、理想版为违抗OZ的蠢货！。0x34D54预算仅7字节、理想版为接受肃清吧！。0x34DD4理想版为为什么！？竟在这里……！！（20超1字节故末尾单叹号）。"
+}

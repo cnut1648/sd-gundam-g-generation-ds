@@ -1,0 +1,14 @@
+{
+ "entity": "unit_271",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MRX-010%E7%B2%BE%E7%A5%9E%E6%84%9F%E5%BA%94%E9%AB%98%E8%BE%BEMk-%E2%85%A1",
+  "https://wiki.biligame.com/gundam/MRX-009%E7%B2%BE%E7%A5%9E%E6%84%9F%E5%BA%94%E9%AB%98%E8%BE%BE"
+ ],
+ "name_zh": "精神感应高达Mk2",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "大型机"
+ ],
+ "notes": "机体名保留精神感应高达Mk2：biligame canon页标题即MRX-010精神感应高达Mk-Ⅱ（Z高达罗莎米亚·巴达姆／ZZ普露兹的搭乘机、MRX-009精神感应高达的发展型）、与库内家族命名一致（unit_268精神感应高达同词系、Mk2数字写法沿全库惯例：高达Mk2／卡碧尼Mk2同式、JP侧Mk9为MK-Ⅱ字形的解码记法）、108px≤144px、保留。武器三条全部保留（weapons为空）：扩散米加粒子炮（拡散メガ粒子砲、9机共享、biligame作扩散MEGA粒子炮／扩散式米加粒子炮、米加粒子炮为全库既定转写、与unit_196超级米加粒子炮同族裁定）；光束剑（ビーム・ソード、9机共享、本词源为Sword非Saber、biligame页本机武装即腕部有线制导光束剑、沿unit_163/166裁定以光束剑区别于光束军刀）；反射浮游炮（レフレクター・ビット、3机共享=本机三条utid、biligame称反射浮游炮／反射BIT、可发生I力场反射光束、ビット=浮游炮为全库48机通行译名）。特殊能力（family90、owner）修复截断缺陷：JP两段ニュータイプ対応機／大型ユニット、旧译新人类／巨大把対応機与ユニット词干整个丢掉。本记录0x5E8..0x5F8共16B跨度、raw=f098f08cf5858e0003f42ef18f000300、保留0003尾框后room=14B、经fleet编码器compose_segments实测：NT机(6B)+段间0003(2B)+大型机(6B)=14B恰好用满、纯ZH-band、零缺陷；理想全文NT对应机／大型单位(20B)、新人类／大型单位(16B)、NT机／大型单位(16B)均超room、实测被validator弹回。対応機→NT机沿unit_109（艾尔美斯3号机、同款挤压）与unit_178/181/184先例、大型ユニット→大型机与unit_109产出逐字一致。同字节记录提醒：family65（unit_196昆曼沙）、family89（unit_268精神感应高达）、family124（unit_373迪维尼达德）的JP记录字节与本记录完全相同且同为16B跨度、四处译文务必统一；注意unit_196已交付的新人类／大型单位经实测16B>room14B会被validate_fleet判超限、建议校对时四处统一改采NT机／大型机。防御名I力场与防御段（威力450以下光束属性射击无效化／超过则减伤30%）owner=unit_4、按规则整体省略defense_*键。"
+}

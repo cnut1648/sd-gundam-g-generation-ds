@@ -90,14 +90,32 @@ def census():
                     continue
         for t in _encoded_text_fields(p, d):
             text_chars.update(t)
-    # fleet future demand (all staged text, all phases)
+    # fleet future demand — GAME-TEXT fields only (notes/web_sources are
+    # agent prose, never encoded; protecting their chars starves the mint)
+    GAME_TEXT_KEYS = {"name_zh", "zh", "cutin_zh", "detail_effect_zh",
+                      "defense_name_zh"}
+    GAME_TEXT_LIST_KEYS = {"ability_segments_zh", "defense_segments_zh"}
     for p in sorted((STG / "out").rglob("*.json")):
         try:
             d = json.loads(p.read_text())
         except Exception:
             continue
-        for _k, v in iter_json_values(d):
-            text_chars.update(v)
+
+        def walk_out(obj):
+            if isinstance(obj, dict):
+                for k, v in obj.items():
+                    if k in GAME_TEXT_KEYS and isinstance(v, str):
+                        text_chars.update(v)
+                    elif k in GAME_TEXT_LIST_KEYS and isinstance(v, list):
+                        for s in v:
+                            if isinstance(s, str):
+                                text_chars.update(s)
+                    else:
+                        walk_out(v)
+            elif isinstance(obj, list):
+                for v in obj:
+                    walk_out(v)
+        walk_out(d)
     zh2 = cm["two_byte_zh"]
     zh_band = {ch: s for ch, s in zh2.items() if s >= 2196}
     slots_reg = {s: ch for ch, s in zh_band.items()}
@@ -116,7 +134,67 @@ def census():
         free.append({"slot": s, "identity": extra.get(s), "used": s in used_tokens,
                      "token_lo": f"0x{lo:02X}"})
     return {"free_cells": free, "reclaimable": reclaimable,
-            "n_used_tokens": len(used_tokens), "n_text_chars": len(text_chars)}
+            "n_used_tokens": len(used_tokens), "n_text_chars": len(text_chars),
+            "data_used_tokens": used_tokens}
+
+
+# ---------------------------------------------------------------------------
+# JP-band census (AGENTS.md: JP-band cells only for chars that will NEVER
+# appear on a trampoline surface — dialogue/bark/cutin-only — and their JP
+# tokens must be candidate-ROM token-free).
+#
+# Token-free proof, conservative by construction:
+#   * the candidate ROM == JP ROM + data/zh transform, so its text universe is
+#     (residual JP text) ∪ (data/** payloads).  data/** hex fields are scanned
+#     token-aware by census(); residual JP text is a subset of the JP ROM's
+#     text surfaces, which we over-approximate with a sliding BYTE-PAIR scan
+#     (every 0xE0..0xEF byte + successor marks a token, any alignment) over
+#     every text-bearing file + every arm9 text band + both macro dictionaries.
+#     Over-marking only shrinks the candidate set — it can never garble.
+# ---------------------------------------------------------------------------
+TEXT_FILES = ["0.bin", "1.bin", "1da.bin", "1db.bin", "1dc.bin", "1dd.bin",
+              "1de.bin", "1df.bin", "1e0.bin", "31e.bin", "324.bin", "388.bin",
+              "3d3.bin", "3d5.bin", "478.bin", "48a.bin", "b6e.bin", "b6f.bin",
+              "c4b.bin", "c4f.bin"]
+
+
+def _mark_pairs(buf: bytes, marked: set):
+    for i in range(len(buf) - 1):
+        b = buf[i]
+        if 0xE0 <= b <= 0xEF:
+            marked.add(((b << 8) | buf[i + 1]) - 0xE000 + 224)
+
+
+def jp_band_census(data_used_tokens: set):
+    from lib_apply import open_roms
+    import utils.extract.layout as L
+    jp, _zh = open_roms()
+    cm = json.loads((REPO / "data/charmap.json").read_text())
+    marked: set = set(data_used_tokens)
+    # every text-bearing NitroFS file (incl. all 101 stage scripts)
+    from utils import rom as romlib
+    nds = romlib.load_rom(str(REPO / "0098 - SD Gundam G Generation DS (Japan).nds"))
+    stage_files = [n for n in nds.filenames.files if n.startswith("_STG")]
+    for fn in TEXT_FILES + stage_files:
+        _mark_pairs(jp.file(fn), marked)
+    # arm9 text bands: JP string pools, inline story text, both dictionaries,
+    # the UI dictionary region (0x12D770..renderB font) and post-dict labels
+    a9 = jp.arm9
+    bands = list(L.JP_STRING_BANDS) + [
+        (L.EVENT_TEXT_LO, L.EVENT_TEXT_HI),
+        (L.DICT_TEXT, L.RENDERB_OFF),          # dialogue dict + UI dict region
+        (L.DICT_SYS, 0x14AC34),                # system dict up to label band
+    ]
+    for lo, hi in bands:
+        _mark_pairs(a9[lo:hi], marked)
+    jp_ids = {int(k): v for k, v in cm.get("jp_slot_chars", {}).items()}
+    registered = set(cm["two_byte_zh"].values())
+    cands = []
+    for s in range(224, 2196):
+        if s in marked or s in registered:
+            continue
+        cands.append({"slot": s, "jp_identity": jp_ids.get(s)})
+    return cands
 
 
 def load_demand():
@@ -150,26 +228,51 @@ def mint(dry=False):
         lo = (s - 224 + 0xE000) & 0xFF
         return lo != 0x00 and lo != 0x15
     cands = [s for s in cands if ok_slot(s)]
+    # stage-only overflow tier: token-free JP-band cells (never encodable on
+    # bank surfaces by construction — slot_of(surface="bank") refuses < 2196)
+    jb = [c["slot"] for c in jp_band_census(cen["data_used_tokens"])]
+    jb = [s for s in jb if ok_slot(s)]
+    # promotions: demanded chars whose ZH-band slot_chars_extra identity is
+    # bitmap-verified — register as encodable, no repaint (charmap comment's
+    # sanctioned promotion path).  向@4257 crop-verified this campaign.
+    PROMOTE = {"向": 4257}
+    promoted = []
+    for ch, slot in PROMOTE.items():
+        if any(c == ch for c, _ in demand) and ch not in cm["two_byte_zh"]:
+            if cm.get("slot_chars_extra", {}).get(str(slot)) == ch:
+                promoted.append((ch, slot))
     plan, fails = [], []
     for ch, (n, surf) in demand:
-        if ch in cm["two_byte_zh"]:
+        if ch in cm["two_byte_zh"] or any(ch == pc for pc, _ in promoted):
             continue
         g = raster12(pcf, ch)
         if g is None:
             fails.append((ch, "no WQY glyph"))
             continue
-        if not cands:
+        # stage-only chars go to JP-band cells first, preserving the scarce
+        # ZH-band cells for chars that may ever need a trampoline surface
+        if surf == "stage" and jb:
+            slot = jb.pop(0)
+        elif cands:
+            slot = cands.pop(0)
+        else:
             fails.append((ch, "no free slot"))
             continue
-        slot = cands.pop(0)
         plan.append((ch, slot, n))
     print(f"demand {len(demand)} chars; plan {len(plan)}; fails {fails}")
     if dry:
+        for ch, slot in promoted:
+            print(f"  {ch} -> slot {slot} (PROMOTED, no repaint)")
         for ch, slot, n in plan:
             old = next((r["char"] for r in cen["reclaimable"] if r["slot"] == slot), None)
             print(f"  {ch} (x{n}) -> slot {slot}" + (f" (reclaims {old!r})" if old else " (free cell)"))
         return
     rep_lines = []
+    for ch, slot in promoted:
+        cm["slot_chars_extra"].pop(str(slot), None)
+        cm["two_byte_zh"][ch] = slot
+        rep_lines.append(f"=== {ch} -> slot {slot} (PROMOTED from slot_chars_extra, "
+                         "bitmap already correct)")
     for ch, slot, n in plan:
         grid = apply_shadow(raster12(pcf, ch))
         atlas[slot * 36:slot * 36 + 36] = cell_bytes(grid)

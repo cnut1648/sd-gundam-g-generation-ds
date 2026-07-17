@@ -1,0 +1,16 @@
+{
+ "entity": "unit_49",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/FA-010S%E5%85%A8%E8%A3%85%E7%94%B2ZZ%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/MSZ-010ZZ%E9%AB%98%E8%BE%BE",
+  "https://seesaawiki.jp/if443/d/%A5%CF%A5%A4%A5%D1%A1%BC%B2%BD%A4%CE%BE%F2%B7%EF",
+  "https://xneo.jp/ds_gene/"
+ ],
+ "name_zh": "全装甲ZZ／强化",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "全装甲（可解除）"
+ ],
+ "notes": "name: ／ハイパー是GGENDS的hyper mode变体、沿用全库统一的／强化后缀（与unit_43的ZZ高达／强化保持同族一致）、84px留有余量。weapons: 4条均为12+机体共享串、经biligame核对无史实错误（高能光束军刀・高能MEGA加农炮・双联装光束步枪均与现译等义）、故全部保留不改。ability(family16、24字节定长记录): 修复丢失的（解除可能）→全装甲系统可解除；段1保留新人类是预算与全库一致性双重约束（本bank约20处NT能力均作新人类、且新人类对应机6字将挤掉可解除）；无预算时的理想形为 新人类对应机／全装甲系统（可解除）。字节核算: 3+8=11字×2字节+段间2字节=24=budget、字符均在charmap ZH带。defense各字段归unit_43所有、按规则不输出。"
+}

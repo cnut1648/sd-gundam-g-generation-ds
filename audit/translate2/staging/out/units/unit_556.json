@@ -1,0 +1,18 @@
+{
+ "entity": "unit_556",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/ZGMF-X56S%EF%BC%8F%CE%B3%E8%BD%B0%E5%87%BB%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/%E8%BD%B0%E5%87%BB%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE/10207815",
+  "https://wiki.biligame.com/gundam/ZGMF-X56S%EF%BC%8F%CE%B1%E5%A8%81%E5%8A%9B%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/ZGMF-X56S%EF%BC%8F%CE%B2%E5%B7%A8%E5%89%91%E5%9E%8B%E8%84%89%E5%86%B2%E9%AB%98%E8%BE%BE"
+ ],
+ "name_zh": "轰击型脉冲高达",
+ "weapons": [
+  {"slot": 1, "zh": "洪流"},
+  {"slot": 3, "zh": "反抗"}
+ ],
+ "ability_segments_zh": [
+  "剪影系统（换装）"
+ ],
+ "notes": "Name: biligame canon page title is ZGMF-X56S/γ轰击型脉冲高达 and Baidu Baike agrees (轰击型脉冲高达); in-game family already matches biligame exactly for α威力型脉冲高达/β巨剑型脉冲高达 so γ should be 轰击型 too (current 爆裂型 appears on neither canon page). 84px = fits 144px budget. Weapons per the same biligame page: slot1 デリュージー=MMI-M16XE2型洪流超高速磁轨炮 (current 德流吉 is a non-canon transliteration) — WARNING: 洪 is currently unencodable on the bank surface and needs a ZH-band glyph mint; if not minted keep 德流吉. slot3 デファイアント=MA-M80式反抗伸缩式光束标枪 (Defiant=反抗; current 挑战者 means Challenger — wrong word). slot0 光束步枪 / slot2 萤火虫 / slot4 地狱犬 match canon — kept (omitted). Ability: JP シルエットシステム（装備変更可能） room is 14B (16B record minus 00 03 00 00 tail); 剪影系统（换装） encodes to exactly 14B with （） reusing the record's original JP one-bytes 0x7D/0x7E — verified roundtrip via encode_bank. 剪影系统 kept as the family-wide system name (same JP string on unit_550/553). Ideal fuller wording 剪影系统（可更换装备） does not fit. defense/defense_name omitted (owner unit_550)."
+}

@@ -1,0 +1,15 @@
+{
+ "entity": "unit_604",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/AMX-004-2%E5%8D%A1%E7%A2%A7%E5%B0%BCMK-%E2%85%A1",
+  "https://gundam.huijiwiki.com/wiki/%E8%89%BE%E9%9C%B2%E6%AF%94%C2%B7%E6%99%AE%E9%9C%B2",
+  "https://wiki.biligame.com/gundam/AMX-004%E5%8D%A1%E7%A2%A7%E5%B0%BC"
+ ],
+ "name_zh": "卡碧尼Mk2／普露机",
+ "weapons": [],
+ "ability_segments_zh": [
+  "普露专用机",
+  "{F0:94}机"
+ ],
+ "notes": "机体名保持卡碧尼Mk2／普露机：即biligame条目AMX-004-2卡碧尼MK-Ⅱ（爱尔比·普露专用二号机、深蓝涂装、与普露兹红色三号机AMX-004-3相对）、Mk9为游戏内Mk-Ⅱ字形的槽位decode记法、120px≤144px预算、且unit_187的fleet裁定已确认三条名串区分方案（卡碧尼Mk2／卡碧尼Mk2／普露兹机／卡碧尼Mk2／普露机）合理不改。武器三条全部保留（weapons为空）：光束枪（ビーム・ガン、33机共享、biligame页称腕部光束炮兼三向扇式光束军刀）、光束军刀（315机共享、brief钦定不用光束剑）、浮游炮（ファンネル、48机共享、biligame页本机主武装即浮游圆锥炮12具、fleet已裁定保留）、均非canon错误不动共享串。能力段（family201、0xc3c、owner）修复截断缺陷：JP两段エルピー・プル専用機／ニュータイプ対応機、旧译普露专用／新人类把専用機的机与対応機词干整个丢掉；注意本记录段序与unit_178/184相反（専用機为seg0、NT为seg1）、译文按JP次序1:1镜像。经fleet编码器encode_bank按JP原始payload实测：普露专用机(10B)+段间0003(2B)+NT机(6B)=18B恰好用满room18B（20B跨度减0003尾框）；理想全文普露专用机／NT对应机为22B、普露专用／NT对应机为20B均放不下。専用機保留完整专用机沿unit_178哈曼专用机与unit_25卡多专用机先例（人名取普露二字、biligame/模型界亦通行普露专用机称法）、対応機→NT机压缩沿unit_178/181/184先例。同文提醒：unit_598（family199、0xc24）JP记录字节与本记录完全相同（f64edbf0bbf2b58e0003f098f08cf5858e000300）、room同为18B、其输出尚未产出、建议校对时统一采用普露专用机／NT机。防御名生体力场与防御记录（威力450力场）owner=unit_43、按规则不输出defense_*键。"
+}

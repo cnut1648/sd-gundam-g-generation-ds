@@ -71,6 +71,36 @@ def detail_expect(didx, effect):
     return {strip(full), strip(comp)}
 
 
+def special_expect(kind, index, segs):
+    """Render staged 1df/1e0 segments the way the candidate export will show
+    them: compose through the applier (JP-macro/one-byte reuse, {F0:n}/{01}
+    escapes become bytes), then split/decode exactly like the walker.  This
+    makes the comparison notation-exact ({F0:94} vs NT, {01}, ＋ vs +)."""
+    import apply_fleet as AF
+    from utils.extract import walkers as W
+    from build.build_guide import decode_text
+    if not hasattr(special_expect, "_j"):
+        special_expect._j = W.special_records(AF.jp)
+    recmap = special_expect._j[kind]
+    r = next((r for r in recmap if r["index"] == index), None)
+    if r is None:
+        return segs
+    fname = "1df.bin" if kind == "ability" else "1e0.bin"
+    raw = AF.jp.file(fname)[int(r["start"], 16):int(r["end"], 16)]
+    try:
+        rec = AF.compose_record(segs, raw)
+    except ValueError:
+        return segs
+    out = []
+    for part in rec.split(b"\x00\x03"):
+        part = part.strip(b"\x00")
+        if part:
+            # decode with the ZH rom: ZH-band slots exist only in the
+            # translated build's atlas identities
+            out.append(decode_text(AF.zh, part, "bank", AF.zh.expand_sys))
+    return out
+
+
 def check():
     validation = json.loads((STG / "validation.json").read_text())
     apply_rep = json.loads((STG / "apply_report.json").read_text()) \
@@ -152,15 +182,19 @@ def check():
                 if out.get("ability_segments_zh") and sp.get("ability", {}).get("owner"):
                     checked += 1
                     got = csp.get("ability", {}).get("zh_segments_current", [])
-                    if [norm(s) for s in got] != [norm(s) for s in out["ability_segments_zh"]] \
+                    want = special_expect("ability", sp["ability"]["family"],
+                                          out["ability_segments_zh"])
+                    if [norm(s) for s in got] != [norm(s) for s in want] \
                        and f"ability record {sp['ability']['family']}" not in skipped_keys:
-                        miss(f"{ent} ability", out["ability_segments_zh"], got)
+                        miss(f"{ent} ability", want, got)
                 if out.get("defense_segments_zh") and sp.get("defense", {}).get("owner"):
                     checked += 1
                     got = csp.get("defense", {}).get("zh_segments_current", [])
-                    if [norm(s) for s in got] != [norm(s) for s in out["defense_segments_zh"]] \
+                    want = special_expect("defense", sp["defense"]["record"],
+                                          out["defense_segments_zh"])
+                    if [norm(s) for s in got] != [norm(s) for s in want] \
                        and f"defense record {sp['defense']['record']}" not in skipped_keys:
-                        miss(f"{ent} defense", out["defense_segments_zh"], got)
+                        miss(f"{ent} defense", want, got)
     (STG / "verify_apply.json").write_text(
         json.dumps(mismatches, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"checked {checked} applied fields; mismatches: {len(mismatches)}")

@@ -1,0 +1,15 @@
+{
+ "entity": "unit_418",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/AMX-002%E8%B7%AF%E7%BB%B4%C2%B7%E6%8D%B7%E9%9C%B2",
+  "https://wiki.biligame.com/gundam/I%E5%8A%9B%E5%9C%BA",
+  "https://wiki.biligame.com/gundam/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE0083%EF%BC%9A%E6%98%9F%E5%B0%98%E7%9A%84%E5%9B%9E%E5%BF%86"
+ ],
+ "name_zh": "诺耶·吉尔",
+ "weapons": [],
+ "ability_segments_zh": [
+  "宇宙适应",
+  "大型机"
+ ],
+ "notes": "机体名保留诺耶·吉尔（ノイエ・ジール、AMX-002/AMA-X2、0083卡多搭乘的重MA）：biligame词条题作路维·捷露、但同页明记诺耶·吉尔为通行音译、属音译分歧非事实错误（与unit_85瓦尔·瓦罗裁定同类）、且data/zh中utid418/419/420三记录及char_13阿纳贝尔·卡多线均现行统一、60px≤144px、不改。武器四条均合biligame武装栏、全部保留：米加粒子炮（77机共享、全库统一译法）、有线爪臂（有線クローアーム、3机共享、与unit_85对新吉翁号的同名裁定同构、biligame称腕部有线制御式机械臂）、大型导弹发射器（侧裙2连装大型导弹发射器）、米加加农炮（腹部MEGA加农炮、15机共享、米加系统一）。特殊能力（fam139、owner）修复残缺译：段0地形適正・宇宙→宇宙适应（本bank23记录通行式、・在label面为禁字）、段1大型ユニット由巨大改为大型机、补回ユニット的机体词干。真实room按validator口径为16B（20B跨度减00030000尾框）：大型机体/大型单位方案经encode_bank实测18B超限、宇宙适应＋大型机实测恰16B=room、可编码无缺口、与unit_109同JP词组在room压力下的大型机取法一致；若协调侧决定全bank16条大型ユニット统一维持巨大、则本段回退为巨大亦成立（14B）。防御名I力场与防御段（威力450光束无效化）归unit_4所有、按规则未输出；I力场译名合biligame专页canon。"
+}

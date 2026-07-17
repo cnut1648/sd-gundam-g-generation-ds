@@ -1,0 +1,15 @@
+{
+ "entity": "unit_478",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/ZGMF-X10A%E8%87%AA%E7%94%B1%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E4%B8%AD%E5%AD%90%E5%B9%B2%E6%89%B0%E6%B6%88%E9%99%A4%E5%99%A8",
+  "https://gundam.fandom.com/wiki/Neutron_Jammer_Canceller"
+ ],
+ "name_zh": "自由／SEED",
+ "weapons": [],
+ "ability_segments_zh": [
+  "中子干扰消除器",
+  "全弹发射：3格内敌最多5队"
+ ],
+ "notes": "自由高达SEED觉醒形态第一记录（utid478/479/480、family159@0x990）。机体名自由／SEED保留：镜像JP的フリーダム／SEED、与已交付的unit_484（同名串体例）一致、64px≤144px预算。武器5条全部保留不输出：slot0光束步枪（195机共享）与slot1光束军刀（315机共享）为brief钦定体例；slot2クスィフィアス=旗鱼、slot3バラエーナ=鲸鱼、逐字符合biligame自由高达页武装栏canon（MMI-M15型旗鱼磁轨炮、M100型鲸鱼等离子集束光束炮、12机共享串、JP原文即裸爱称故译名同样只用爱称）；slot4全弾発射→全弹发射为直译且6机共享、与biligame全爆发模式同指Full Burst、非canon错误。能力段（owner）修复截断缺陷：旧译段0中子干扰消除缺器字、段1范围攻击丢掉武器名前缀与全部数值。段0补全为canon装置名中子干扰消除器（biligame中子干扰消除器词条、与unit_337/481/484/487的NJC修复逐字一致）；JP括注（核動力搭載）在本记录预算内无法与段1数值共存、理想全译为中子干扰消除器（搭载核动力）、若日后扩池请与NJC姊妹记录同步恢复。段1采用unit_484（family161、JP文案逐字相同且其notes点名建议本记录同译）已交付的全弹发射：3格内敌最多5队、保留武器名前缀+射程3マス→3格+对象敵→敌+上限最大5チーム→最多5队、数字组JP=ZH={3,5}；周囲由内字承载、理想全句全弹发射：攻击周围3格内的敌人（最多5队）超预算无法容纳。字节实测（lib_apply.encode_bank对本记录原payload、compose_segments框架）：段0=14B+分隔0003=2B+段1=25B合计41B≤room42B（44B跨度减0003尾帧）、其中：复用JP原payload字节形e6f8（brief§3 ALICE：例句先例）、3复用一字节04、5复用e003、（）未用、其余纯ZH-band、可编码零缺陷。防御名相位转移装甲（0x20B6E94）与防御段威力900实弹无效化归unit_79所有、按schema整体省略defense_*键。"
+}

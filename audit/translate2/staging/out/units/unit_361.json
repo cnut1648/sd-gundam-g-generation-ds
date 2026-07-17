@@ -1,0 +1,14 @@
+{
+ "entity": "unit_361",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/Concept-X6-1-2%E5%80%92X",
+  "https://exvsmbon.huijiwiki.com/wiki/TURN_X"
+ ],
+ "name_zh": "倒X",
+ "weapons": [],
+ "ability_segments_zh": [
+  "I力场抵消：对有I力场的敌人",
+  "光束伤害照常"
+ ],
+ "notes": "机体名倒X为repo canon（ターンX=倒X、与char_307金卡拉姆输出及data/zh/event_text全线一致）、保留。武器三条全部保留：溶断破碎机械手与biligame倒X页固定武装栏逐字一致（协调提示中的溶断破碎机械爪与该页不符、以biligame机体页为准、如需改爪请复核）；血之包围网为ブラディーシージ（Bloody Siege）中文圈通行译名（EXVS灰机wiki/G世代玩家惯用）、保留；光束加农炮为38机共享串（沃德姆/加撒D/精神感应高达等）、非canon错误不动。能力段（family120记录0x754、owner）修复截断缺陷：JP为I・フィールドキャンセラー：Ⅰフィールドを持つ相手に対し、ビームで通常通りのダメージを与える、旧译力场抵消／光束伤害照常丢失名中I与整个触发从句；本记录JP与unit_1记录0x0、unit_4记录0x2c完全相同且预算同为44B、故逐字采用同一译文I力场抵消：对有I力场的敌人／光束伤害照常保持全库一致（unit_1已用真实编码器实测同串40B<=44B可编码；按brief成本规则14x2+2+6x2=42B<=44B）。段0冒号镜像JP原payload的：字节、沿用brief§3的ALICE：例句格式（与§2标签禁：条相抵时以§3示例及unit_1/unit_4先例为准）。防御名I力场与防御段（威力450光束减伤30%）owner为unit_4、按规则整体省略不输出。"
+}

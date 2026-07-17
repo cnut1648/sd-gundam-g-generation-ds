@@ -6,45 +6,45 @@
  "edits": [
   {
    "offset": "0x0",
-   "size": 39,
-   "zh": "力场抵消{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。光束伤害照常",
-   "zh_hex": "efb0e876e96ee92800000000000000000000000003e83de895e8f9e988ea1aefc7"
+   "size": 44,
+   "zh": "I力场抵消：对有I力场的敌人{00}光束伤害照常",
+   "zh_hex": "06efb0e876e96ee928e6f8e7bee7cb06efb0e876e7b4e7e3efb20003e83de895e8f9e988ea1aefc700030000"
   },
   {
    "offset": "0x2c",
-   "size": 39,
-   "zh": "力场抵消{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。光束伤害照常",
-   "zh_hex": "efb0e876e96ee92800000000000000000000000003e83de895e8f9e988ea1aefc7"
+   "size": 44,
+   "zh": "I力场抵消：对有I力场的敌人{00}光束伤害照常",
+   "zh_hex": "06efb0e876e96ee928e6f8e7bee7cb06efb0e876e7b4e7e3efb20003e83de895e8f9e988ea1aefc700030000"
   },
   {
    "offset": "0x58",
-   "size": 35,
-   "zh": "力场抵消{01}自愈{F0:1625}、{00}。月光蝶系统",
-   "zh_hex": "efb0e876e96ee92801efb5ed5ff659e0010003e850e83dea03e941e929"
+   "size": 40,
+   "zh": "力场抵消自愈300{00}月光蝶伤周围1格",
+   "zh_hex": "efb0e876e96ee928efb5ed5ff659e0010003e850e83dea03e8f9ea5ce9de02e82400000000030000"
   },
   {
    "offset": "0x80",
-   "size": 48,
-   "zh": "\"■！[「系统{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。非{F0:94}效果高",
-   "zh_hex": "e008e01106e00ae00be941e92900000000000000000000000000000003e8f0f05eea8fe871e812"
+   "size": 52,
+   "zh": "ALICE：HP70%以下增强机师能力{00}非{F0:94}效果更大",
+   "zh_hex": "e008e01106e00ae00be6f8fb5ef918e706e7f3ef4dea3de8ade7e4e96ce7c6efb00003e8f0f05eea8fe871e952efa50000030000"
   },
   {
    "offset": "0xb4",
-   "size": 20,
-   "zh": "生体电脑",
-   "zh_hex": "ef8def4fead3eb67"
+   "size": 24,
+   "zh": "生体电脑（{F0:94}对应机）",
+   "zh_hex": "ef8def4fead3eb677df05ee7bee873e7e47e000000000003"
   },
   {
-   "offset": "0xcb",
-   "size": 11,
-   "zh": "。宇宙适应",
-   "zh_hex": "03e8bee8bfef41e873"
+   "offset": "0xcc",
+   "size": 10,
+   "zh": "(preserved neighbor bytes)",
+   "zh_hex": "e8bee8bfef41e8730000"
   },
   {
    "offset": "0xdc",
-   "size": 14,
-   "zh": "核炮装备{01}封印",
-   "zh_hex": "e8f3e95ae98fe87701eb83ec4f"
+   "size": 20,
+   "zh": "核火箭炮（禁用）",
+   "zh_hex": "e8f3e8daec32e95a7debe2efb37e000000030000"
   },
   {
    "offset": "0xf0",
@@ -54,279 +54,327 @@
   },
   {
    "offset": "0x100",
-   "size": 15,
-   "zh": "宇宙适应{00}{00}{01}巨大",
-   "zh_hex": "e8bee8bfef41e873000001ea25efa5"
+   "size": 40,
+   "zh": "宇宙适应{01}巨大{00}武装基地（全装甲可解除）",
+   "zh_hex": "e8bee8bfef41e87301ea25efa50003e8ece98fe829ef637defb4e98febdbe7c4e89de9747e000003"
   },
   {
-   "offset": "0x110",
-   "size": 21,
-   "zh": "。武装基地",
-   "zh_hex": "03e8ece98fe829ef63"
+   "offset": "0x12c",
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
-   "offset": "0x12b",
-   "size": 8,
-   "zh": "。新人类",
-   "zh_hex": "03ef8aefb2e841"
-  },
-  {
-   "offset": "0x13f",
-   "size": 20,
-   "zh": "。新人类{00}{00}。全装甲系统",
-   "zh_hex": "03ef8aefb2e841000003efb4e98febdbe941e929"
+   "offset": "0x140",
+   "size": 24,
+   "zh": "{F0:94}机{00}可装备全装甲",
+   "zh_hex": "f05ee7e40003e7c4e98fe877efb4e98febdb000000030000"
   },
   {
    "offset": "0x158",
-   "size": 19,
-   "zh": "新人类{00}{00}。全装甲系统",
-   "zh_hex": "ef8aefb2e841000003efb4e98febdbe941e929"
+   "size": 24,
+   "zh": "{F0:94}机{00}可装备全装甲",
+   "zh_hex": "f05ee7e40003e7c4e98fe877efb4e98febdb000000030000"
   },
   {
    "offset": "0x170",
-   "size": 72,
-   "zh": "新人类{00}{00}。全装甲系统{00}{00}{00}。{00}新人类{00}{00}。全装甲系统{00}{00}{00}。{00}生体感应器{00}{00}{00}{00}{00}{00}{00}{00}{00}。可变",
-   "zh_hex": "ef8aefb2e841000003efb4e98febdbe941e9290000000300ef8aefb2e841000003efb4e98febdbe941e9290000000300ef8def4fe87de873e8c300000000000000000003e7c4e955"
+   "size": 24,
+   "zh": "{F0:94}机{00}全装甲（可解除）",
+   "zh_hex": "f05ee7e40003efb4e98febdb7de7c4e89de9747e00000003"
+  },
+  {
+   "offset": "0x188",
+   "size": 24,
+   "zh": "{F0:94}机{00}全装甲（可解除）",
+   "zh_hex": "f05ee7e40003efb4e98febdb7de7c4e89de9747e00000003"
+  },
+  {
+   "offset": "0x1a0",
+   "size": 28,
+   "zh": "生体感应器（{F0:94}机）{00}可变形",
+   "zh_hex": "ef8def4fe87de873e8c37df05ee7e47e0003e7c4e955ec6700030000"
   },
   {
    "offset": "0x1bc",
-   "size": 24,
-   "zh": "生体感应器{00}{00}{00}{00}{00}{00}{00}{00}{00}。可变",
-   "zh_hex": "ef8def4fe87de873e8c300000000000000000003e7c4e955"
+   "size": 28,
+   "zh": "生体感应器（{F0:94}机）{00}可变形",
+   "zh_hex": "ef8def4fe87de873e8c37df05ee7e47e0003e7c4e955ec6700030000"
   },
   {
    "offset": "0x1d8",
-   "size": 24,
-   "zh": "{F0:94}{01}宇宙适应{00}{00}{00}{00}{00}{00}{00}{00}。巨大",
-   "zh_hex": "f05e01e8bee8bfef41e873000000000000000003ea25efa5"
+   "size": 28,
+   "zh": "{F0:94}机{01}宇宙适应{00}大型机",
+   "zh_hex": "f05ee7e401e8bee8bfef41e8730003efa5e977e7e400000000030000"
   },
   {
    "offset": "0x1f4",
-   "size": 15,
-   "zh": "精神感应框架",
-   "zh_hex": "e98de9aae87de873eef3e99d"
+   "size": 20,
+   "zh": "精神感应框架（NT）",
+   "zh_hex": "e98de9aae87de873eef3e99d7deed3eed67e0003"
   },
   {
    "offset": "0x208",
-   "size": 59,
-   "zh": "暴击回避{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。攻击强化减伤",
-   "zh_hex": "ea4fe7ccef52efd90000000000000000000000000000000000000003ef67e7cce8ade9a5ed24e8f9"
+   "size": 64,
+   "zh": "精神感应共振：暴击0回避+10%{00}运动+10、攻击+10%、减伤10%",
+   "zh_hex": "e98de9aae87de873ea48eb5be6f8ea4fe7ccf177ef52efd9e071fad5e7060003e986ef30e071fad57aef67e7cce071fad5e7067aed24e8f9fad5e70600030000"
   },
   {
    "offset": "0x248",
-   "size": 16,
-   "zh": "地面适应{00}{00}{00}。巨大",
-   "zh_hex": "ef63e862ef41e87300000003ea25efa5"
+   "size": 20,
+   "zh": "地面适应{00}大型机",
+   "zh_hex": "ef63e862ef41e8730003efa5e977e7e400030000"
   },
   {
    "offset": "0x25c",
-   "size": 24,
-   "zh": "生体感应器{00}{00}{00}{00}{00}{00}{00}{00}{00}。可变",
-   "zh_hex": "ef8def4fe87de873e8c300000000000000000003e7c4e955"
+   "size": 28,
+   "zh": "生体感应器（{F0:94}机）{00}可变形",
+   "zh_hex": "ef8def4fe87de873e8c37df05ee7e47e0003e7c4e955ec6700030000"
   },
   {
    "offset": "0x278",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x284",
-   "size": 28,
-   "zh": "新人类{00}{00}。全装甲系统{00}{00}{00}。{00}可变",
-   "zh_hex": "ef8aefb2e841000003efb4e98febdbe941e9290000000300e7c4e955"
+   "size": 24,
+   "zh": "{F0:94}机{00}全装甲（可解除）",
+   "zh_hex": "f05ee7e40003efb4e98febdb7de7c4e89de9747e00000003"
   },
   {
-   "offset": "0x2a3",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x29c",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
-   "offset": "0x2ab",
-   "size": 17,
-   "zh": "。宇宙适应{00}{00}{00}。巨大",
-   "zh_hex": "03e8bee8bfef41e87300000003ea25efa5"
+   "offset": "0x2a4",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x2ac",
+   "size": 20,
+   "zh": "宇宙适应{00}大型机",
+   "zh_hex": "e8bee8bfef41e8730003efa5e977e7e400030000"
   },
   {
    "offset": "0x2c0",
-   "size": 108,
-   "zh": "零式系统{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。命中回避提升{00}{00}{00}{00}{00}{00}{00}。零式系统{00}试作机{00}。新人类{00}{00}。{00}{00}{00}。{00}{00}。暴击回避减伤{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。{00}巨大",
-   "zh_hex": "eb74ea26e941e929000000000000000000000003e853ef4eef52efd9e821ed2b0000000000000003eb74ea26e941e92900e91def2fe7e40003ef8aefb2e84100000300000003000003ea4fe7ccef52efd9ed24e8f900000000000000000000000000000000000300ea25efa5"
+   "size": 40,
+   "zh": "零式系统：SP20起{00}命中回避+5%先制升",
+   "zh_hex": "eb74ea26e941e929e6f8f3f3fb5de8470003e853ef4eef52efd9e071e003e706ef8be8deed2b0003"
   },
   {
-   "offset": "0x337",
-   "size": 25,
-   "zh": "。{F0:94}{01}宇宙适应{00}{00}{00}{00}{00}{00}{00}{00}。巨大",
-   "zh_hex": "03f05e01e8bee8bfef41e873000000000000000003ea25efa5"
+   "offset": "0x2e8",
+   "size": 64,
+   "zh": "零式全开：命中回避+10%先制升{00}暴击0回避+5%减伤25%",
+   "zh_hex": "eb74ea26efb4e7fae6f8e853ef4eef52efd9e071fad5e706ef8be8deed2b0003ea4fe7ccf177ef52efd9e071e003e706ed24e8f9ff01e7060000000000000003"
+  },
+  {
+   "offset": "0x328",
+   "size": 8,
+   "zh": "大型机",
+   "zh_hex": "efa5e977e7e40003"
+  },
+  {
+   "offset": "0x338",
+   "size": 28,
+   "zh": "{F0:94}机{01}宇宙适应{00}大型机",
+   "zh_hex": "f05ee7e401e8bee8bfef41e8730003efa5e977e7e400000000030000"
   },
   {
    "offset": "0x354",
-   "size": 24,
-   "zh": "{F0:94}{01}宇宙适应{00}{00}{00}{00}{00}{00}{00}{00}。巨大",
-   "zh_hex": "f05e01e8bee8bfef41e873000000000000000003ea25efa5"
+   "size": 28,
+   "zh": "{F0:94}机{01}宇宙适应{00}大型机",
+   "zh_hex": "f05ee7e401e8bee8bfef41e8730003efa5e977e7e400000000030000"
   },
   {
    "offset": "0x370",
+   "size": 28,
+   "zh": "{F0:94}机{01}宇宙适应{00}大型机",
+   "zh_hex": "f05ee7e401e8bee8bfef41e8730003efa5e977e7e400000000030000"
+  },
+  {
+   "offset": "0x390",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x398",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x3a0",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x3a8",
+   "size": 12,
+   "zh": "卡多专用机",
+   "zh_hex": "e801e7e9eb4befb3e7e40003"
+  },
+  {
+   "offset": "0x3b4",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x3cc",
    "size": 24,
-   "zh": "{F0:94}{01}宇宙适应{00}{00}{00}{00}{00}{00}{00}{00}。巨大",
-   "zh_hex": "f05e01e8bee8bfef41e873000000000000000003ea25efa5"
+   "zh": "磁性涂层（NT对应机）",
+   "zh_hex": "e7bfe951ee53ebc17deed3eed6e7bee873e7e47e00000003"
   },
   {
-   "offset": "0x38f",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x3e4",
+   "size": 24,
+   "zh": "磁性涂层（NT对应机）",
+   "zh_hex": "e7bfe951ee53ebc17deed3eed6e7bee873e7e47e00000003"
   },
   {
-   "offset": "0x397",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
-  },
-  {
-   "offset": "0x39f",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
-  },
-  {
-   "offset": "0x3a7",
-   "size": 9,
-   "zh": "。卡多专用",
-   "zh_hex": "03e801e7e9eb4befb3"
-  },
-  {
-   "offset": "0x3b3",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
-  },
-  {
-   "offset": "0x3cb",
-   "size": 21,
-   "zh": "。磁性涂层",
-   "zh_hex": "03e7bfe951ee53ebc1"
-  },
-  {
-   "offset": "0x3e3",
-   "size": 21,
-   "zh": "。磁性涂层",
-   "zh_hex": "03e7bfe951ee53ebc1"
-  },
-  {
-   "offset": "0x3ff",
-   "size": 14,
-   "zh": "。防御单元",
-   "zh_hex": "03e968ec68e918ecae"
+   "offset": "0x400",
+   "size": 20,
+   "zh": "可装备G防卫机",
+   "zh_hex": "e7c4e98fe877eed1e968e9b2e7e4000000030000"
   },
   {
    "offset": "0x414",
-   "size": 24,
-   "zh": "防御单元{00}{00}。全装甲系统",
-   "zh_hex": "e968ec68e918ecae000003efb4e98febdbe941e929"
+   "size": 28,
+   "zh": "G防卫机{00}（全装甲可解除）",
+   "zh_hex": "eed1e968e9b2e7e400037defb4e98febdbe7c4e89de9747e00030000"
   },
   {
-   "offset": "0x434",
-   "size": 8,
-   "zh": "。新人类",
-   "zh_hex": "03ef8aefb2e841"
+   "offset": "0x430",
+   "size": 16,
+   "zh": "试作机{00}{F0:94}机",
+   "zh_hex": "e91def2fe7e40003f05ee7e400030000"
   },
   {
-   "offset": "0x443",
-   "size": 14,
-   "zh": "。闪光系统",
-   "zh_hex": "03ea44e83de941e929"
+   "offset": "0x444",
+   "size": 20,
+   "zh": "闪光系统（{F0:94}机）",
+   "zh_hex": "ea44e83de941e9297df05ee7e47e000000030000"
   },
   {
    "offset": "0x458",
-   "size": 13,
-   "zh": "闪光系统",
-   "zh_hex": "ea44e83de941e929"
+   "size": 20,
+   "zh": "闪光系统（{F0:94}机）",
+   "zh_hex": "ea44e83de941e9297df05ee7e47e000000030000"
   },
   {
    "offset": "0x46c",
-   "size": 44,
-   "zh": "零式系统{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。命中回避提升{00}{00}{00}{00}{00}{00}{00}。可变",
-   "zh_hex": "eb74ea26e941e929000000000000000000000003e853ef4eef52efd9e821ed2b0000000000000003e7c4e955"
+   "size": 40,
+   "zh": "零式系统：SP20起{00}命中回避+5%先制升",
+   "zh_hex": "eb74ea26e941e929e6f8f3f3fb5de8470003e853ef4eef52efd9e071e003e706ef8be8deed2b0003"
   },
   {
-   "offset": "0x49b",
+   "offset": "0x494",
    "size": 8,
-   "zh": "。新人类",
-   "zh_hex": "03ef8aefb2e841"
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0x49c",
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x4a8",
-   "size": 56,
-   "zh": "新人类{00}{00}。哈曼专用{00}{00}。新人类{00}{00}。哈曼专用{00}{00}。新人类{00}{00}。普露兹",
-   "zh_hex": "ef8aefb2e841000003e7e8e874eb4befb3000003ef8aefb2e841000003e7e8e874eb4befb3000003ef8aefb2e841000003e838e858e856"
+   "size": 20,
+   "zh": "{F0:94}机{00}哈曼专用机",
+   "zh_hex": "f05ee7e40003e7e8e874eb4befb3e7e400000003"
+  },
+  {
+   "offset": "0x4bc",
+   "size": 20,
+   "zh": "{F0:94}机{00}哈曼专用机",
+   "zh_hex": "f05ee7e40003e7e8e874eb4befb3e7e400000003"
+  },
+  {
+   "offset": "0x4d0",
+   "size": 20,
+   "zh": "{F0:94}机{00}普露兹机",
+   "zh_hex": "f05ee7e40003e838e858e856e7e4000000030000"
   },
   {
    "offset": "0x4e4",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
-   "offset": "0x4f3",
-   "size": 13,
-   "zh": "。蕾兹专用",
-   "zh_hex": "03e84ce856eb4befb3"
+   "offset": "0x4f4",
+   "size": 16,
+   "zh": "蕾兹专用机",
+   "zh_hex": "e84ce856eb4befb3e7e4000000000003"
   },
   {
-   "offset": "0x503",
-   "size": 24,
-   "zh": "。新人类{00}{00}。巨大{00}。{00}新人类",
-   "zh_hex": "03ef8aefb2e841000003ea25efa5000300ef8aefb2e841"
+   "offset": "0x504",
+   "size": 16,
+   "zh": "{F0:94}机{00}大型机",
+   "zh_hex": "f05ee7e40003efa5e977e7e400000003"
+  },
+  {
+   "offset": "0x514",
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x520",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x52c",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x538",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x544",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x550",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x55c",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x568",
-   "size": 16,
-   "zh": "宇宙适应{00}{00}{00}。巨大",
-   "zh_hex": "e8bee8bfef41e87300000003ea25efa5"
+   "size": 20,
+   "zh": "宇宙适应{00}大型机",
+   "zh_hex": "e8bee8bfef41e8730003efa5e977e7e400030000"
   },
   {
    "offset": "0x57c",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x5a3",
@@ -341,136 +389,160 @@
    "zh_hex": "e8bee8bfef41e873"
   },
   {
-   "offset": "0x5d7",
-   "size": 30,
-   "zh": "。新人类{00}{00}。巨大{00}。{00}新人类{00}{00}。巨大",
-   "zh_hex": "03ef8aefb2e841000003ea25efa5000300ef8aefb2e841000003ea25efa5"
+   "offset": "0x5d8",
+   "size": 16,
+   "zh": "{F0:94}机{00}大型机",
+   "zh_hex": "f05ee7e40003efa5e977e7e400000003"
   },
   {
-   "offset": "0x60b",
-   "size": 36,
-   "zh": "。精神感应框架{00}{00}{00}{00}。夏亚专用{00}。{00}新人类",
-   "zh_hex": "03e98de9aae87de873eef3e99d0000000003ef37e7d6eb4befb3000300ef8aefb2e841"
+   "offset": "0x5e8",
+   "size": 16,
+   "zh": "{F0:94}机{00}大型机",
+   "zh_hex": "f05ee7e40003efa5e977e7e400000003"
+  },
+  {
+   "offset": "0x60c",
+   "size": 28,
+   "zh": "精神感应框架（NT）{00}夏亚机",
+   "zh_hex": "e98de9aae87de873eef3e99d7deed3eed67e0003ef37e7d6e7e40003"
+  },
+  {
+   "offset": "0x628",
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x634",
-   "size": 17,
-   "zh": "生体感应器",
-   "zh_hex": "ef8def4fe87de873e8c3"
+   "size": 24,
+   "zh": "生体感应器（{F0:94}对应机）",
+   "zh_hex": "ef8def4fe87de873e8c37df05ee7bee873e7e47e00030000"
   },
   {
-   "offset": "0x64f",
-   "size": 20,
-   "zh": "。新人类{00}{00}。宇宙适应",
-   "zh_hex": "03ef8aefb2e841000003e8bee8bfef41e873"
+   "offset": "0x650",
+   "size": 24,
+   "zh": "{F0:94}对应机{00}宇宙适应",
+   "zh_hex": "f05ee7bee873e7e40003e8bee8bfef41e873000000030000"
   },
   {
    "offset": "0x668",
-   "size": 19,
-   "zh": "新人类{00}{00}。宇宙适应",
-   "zh_hex": "ef8aefb2e841000003e8bee8bfef41e873"
+   "size": 24,
+   "zh": "{F0:94}对应机{00}宇宙适应",
+   "zh_hex": "f05ee7bee873e7e40003e8bee8bfef41e873000000030000"
   },
   {
-   "offset": "0x683",
-   "size": 9,
-   "zh": "。西格专用",
-   "zh_hex": "03e7f8e824eb4befb3"
+   "offset": "0x684",
+   "size": 12,
+   "zh": "西格专用机",
+   "zh_hex": "e7f8e824eb4befb3e7e40003"
   },
   {
-   "offset": "0x68f",
-   "size": 9,
-   "zh": "。西格专用",
-   "zh_hex": "03e7f8e824eb4befb3"
+   "offset": "0x690",
+   "size": 12,
+   "zh": "西格专用机",
+   "zh_hex": "e7f8e824eb4befb3e7e40003"
   },
   {
-   "offset": "0x6b3",
-   "size": 9,
-   "zh": "。夏亚专用",
-   "zh_hex": "03ef37e7d6eb4befb3"
+   "offset": "0x6b4",
+   "size": 12,
+   "zh": "夏亚专用机",
+   "zh_hex": "ef37e7d6eb4befb3e7e40003"
   },
   {
-   "offset": "0x6bf",
-   "size": 13,
-   "zh": "。中子干扰消除",
-   "zh_hex": "03ef4ee886e8d3ebc7e928e974"
+   "offset": "0x6c0",
+   "size": 16,
+   "zh": "中子干扰消除器",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003"
   },
   {
-   "offset": "0x6d3",
-   "size": 49,
-   "zh": "。\"■！[「系统{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。非{F0:94}效果高",
-   "zh_hex": "03e008e01106e00ae00be941e92900000000000000000000000000000003e8f0f05eea8fe871e812"
+   "offset": "0x6d4",
+   "size": 52,
+   "zh": "ALICE：HP70%以下增强机师能力{00}非{F0:94}效果更大",
+   "zh_hex": "e008e01106e00ae00be6f8fb5ef918e706e7f3ef4dea3de8ade7e4e96ce7c6efb00003e8f0f05eea8fe871e952efa50000030000"
   },
   {
    "offset": "0x708",
-   "size": 16,
-   "zh": "消力场{00}。哈利专用",
-   "zh_hex": "e928efb0e8760003e7e8e82eeb4befb3"
+   "size": 20,
+   "zh": "力场抵消{00}哈利机",
+   "zh_hex": "efb0e876e96ee9280003e7e8e82ee7e400030000"
   },
   {
    "offset": "0x71c",
-   "size": 39,
-   "zh": "力场抵消{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。光束伤害照常",
-   "zh_hex": "efb0e876e96ee92800000000000000000000000003e83de895e8f9e988ea1aefc7"
+   "size": 44,
+   "zh": "I力场抵消：对有I力场的敌人{00}光束伤害照常",
+   "zh_hex": "06efb0e876e96ee928e6f8e7bee7cb06efb0e876e7b4e7e3efb20003e83de895e8f9e988ea1aefc700030000"
   },
   {
-   "offset": "0x753",
-   "size": 40,
-   "zh": "。力场抵消{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。光束伤害照常",
-   "zh_hex": "03efb0e876e96ee92800000000000000000000000003e83de895e8f9e988ea1aefc7"
+   "offset": "0x754",
+   "size": 44,
+   "zh": "I力场抵消：对有I力场的敌人{00}光束伤害照常",
+   "zh_hex": "06efb0e876e96ee928e6f8e7bee7cb06efb0e876e7b4e7e3efb20003e83de895e8f9e988ea1aefc700030000"
   },
   {
    "offset": "0x780",
-   "size": 35,
-   "zh": "力场抵消{01}自愈{F0:1625}、{00}。月光蝶系统",
-   "zh_hex": "efb0e876e96ee92801efb5ed5ff659e0010003e850e83dea03e941e929"
+   "size": 40,
+   "zh": "力场抵消自愈300{00}月光蝶伤周围1格",
+   "zh_hex": "efb0e876e96ee928efb5ed5ff659e0010003e850e83dea03e8f9ea5ce9de02e82400000000030000"
   },
   {
    "offset": "0x7a8",
-   "size": 39,
-   "zh": "力场抵消{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。光束伤害照常",
-   "zh_hex": "efb0e876e96ee92800000000000000000000000003e83de895e8f9e988ea1aefc7"
+   "size": 44,
+   "zh": "I力场抵消：对有I力场的敌人{00}光束伤害照常",
+   "zh_hex": "06efb0e876e96ee928e6f8e7bee7cb06efb0e876e7b4e7e3efb20003e83de895e8f9e988ea1aefc700030000"
   },
   {
    "offset": "0x7d4",
-   "size": 35,
-   "zh": "力场抵消{01}自愈{F0:3842}、{00}。月光蝶系统",
-   "zh_hex": "efb0e876e96ee92801efb5ed5fff02e0010003e850e83dea03e941e929"
+   "size": 40,
+   "zh": "力场抵消自愈900{00}月光蝶系统伤全图",
+   "zh_hex": "efb0e876e96ee928efb5ed5fff02e0010003e850e83dea03e941e929e8f9efb4eb2d000000030000"
   },
   {
    "offset": "0x7fc",
-   "size": 26,
-   "zh": "新人类{00}{00}。巨大{00}。{00}地面适应",
-   "zh_hex": "ef8aefb2e841000003ea25efa5000300ef63e862ef41e873"
+   "size": 16,
+   "zh": "{F0:94}机{00}大型机",
+   "zh_hex": "f05ee7e40003efa5e977e7e400000003"
+  },
+  {
+   "offset": "0x80c",
+   "size": 10,
+   "zh": "(preserved neighbor bytes)",
+   "zh_hex": "ef63e862ef41e8730000"
   },
   {
    "offset": "0x81c",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0x828",
-   "size": 44,
-   "zh": "新人类{00}{00}。法夫尼尔系统{00}{00}{00}{00}{00}。{00}巨大{00}。自愈{SLOT:2008}{F0:3842}、",
-   "zh_hex": "ef8aefb2e841000003e84ee830e896e7e1e941e92900000000000300ea25efa50003efb5ed5fe6f8ff02e001"
+   "size": 28,
+   "zh": "{F0:94}对应机{00}法夫纳增强NT能力",
+   "zh_hex": "f05ee7bee873e7e40003e84ee830e882ea3de8adf05ee7c6efb00003"
+  },
+  {
+   "offset": "0x844",
+   "size": 20,
+   "zh": "大型机{00}自愈900",
+   "zh_hex": "efa5e977e7e40003efb5ed5fff02e00100030000"
   },
   {
    "offset": "0x858",
-   "size": 20,
-   "zh": "新人类{00}{00}。塞壬系统",
-   "zh_hex": "ef8aefb2e841000003e950ec59e941e929"
+   "size": 24,
+   "zh": "{F0:94}机{00}未完成塞壬系统",
+   "zh_hex": "f05ee7e40003e8b4e87ee837e950ec59e941e92900030000"
   },
   {
    "offset": "0x870",
-   "size": 29,
-   "zh": "新人类{00}{00}。塞壬系统",
-   "zh_hex": "ef8aefb2e841000003e950ec59e941e929"
+   "size": 32,
+   "zh": "{F0:94}机{00}塞壬系统：攻击时损伤SP",
+   "zh_hex": "f05ee7e40003e950ec59e941e929e6f8ef67e7ccef2dea28e8f9f3f300000003"
   },
   {
-   "offset": "0x897",
-   "size": 13,
-   "zh": "。诺茵专用",
-   "zh_hex": "03e972e971eb4befb3"
+   "offset": "0x898",
+   "size": 16,
+   "zh": "诺茵专用机",
+   "zh_hex": "e972e971eb4befb3e7e4000000000003"
   },
   {
    "offset": "0x8af",
@@ -485,136 +557,148 @@
    "zh_hex": "e8bee8bfef41e873"
   },
   {
-   "offset": "0x8d3",
-   "size": 17,
-   "zh": "。宇宙适应{00}{00}{00}。巨大",
-   "zh_hex": "03e8bee8bfef41e87300000003ea25efa5"
+   "offset": "0x8d4",
+   "size": 20,
+   "zh": "宇宙适应{00}大型机",
+   "zh_hex": "e8bee8bfef41e8730003efa5e977e7e400030000"
   },
   {
-   "offset": "0x8f3",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x8f4",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
-   "offset": "0x8fb",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x8fc",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
-   "offset": "0x903",
-   "size": 14,
-   "zh": "。新人类{00}{00}。可变",
-   "zh_hex": "03ef8aefb2e841000003e7c4e955"
+   "offset": "0x904",
+   "size": 16,
+   "zh": "{F0:94}机{00}可变形",
+   "zh_hex": "f05ee7e40003e7c4e955ec6700000003"
   },
   {
-   "offset": "0x91f",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x920",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
-   "offset": "0x92b",
-   "size": 17,
-   "zh": "。宇宙适应{00}{00}{00}。巨大",
-   "zh_hex": "03e8bee8bfef41e87300000003ea25efa5"
+   "offset": "0x92c",
+   "size": 20,
+   "zh": "宇宙适应{00}大型机",
+   "zh_hex": "e8bee8bfef41e8730003efa5e977e7e400030000"
   },
   {
    "offset": "0x940",
-   "size": 16,
-   "zh": "宇宙适应{00}{00}{00}。巨大",
-   "zh_hex": "e8bee8bfef41e87300000003ea25efa5"
+   "size": 20,
+   "zh": "宇宙适应{00}大型机",
+   "zh_hex": "e8bee8bfef41e8730003efa5e977e7e400030000"
   },
   {
-   "offset": "0x957",
-   "size": 11,
-   "zh": "。全装甲系统",
-   "zh_hex": "03efb4e98febdbe941e929"
+   "offset": "0x958",
+   "size": 16,
+   "zh": "可装备全装甲",
+   "zh_hex": "e7c4e98fe877efb4e98febdb00030000"
   },
   {
    "offset": "0x968",
-   "size": 12,
-   "zh": "全装甲系统",
-   "zh_hex": "efb4e98febdbe941e929"
+   "size": 16,
+   "zh": "全装甲（可解除）",
+   "zh_hex": "efb4e98febdb7de7c4e89de9747e0003"
   },
   {
-   "offset": "0x97f",
-   "size": 13,
-   "zh": "。中子干扰消除",
-   "zh_hex": "03ef4ee886e8d3ebc7e928e974"
+   "offset": "0x980",
+   "size": 16,
+   "zh": "中子干扰消除器",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003"
   },
   {
-   "offset": "0x98f",
-   "size": 57,
-   "zh": "。中子干扰消除{00}。范围攻击{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。{00}中子干扰消除",
-   "zh_hex": "03ef4ee886e8d3ebc7e928e9740003ec8ee9deef67e7cc00000000000000000000000000000000000000000300ef4ee886e8d3ebc7e928e974"
+   "offset": "0x990",
+   "size": 44,
+   "zh": "中子干扰消除器{00}全弹发射：3格内敌最多5队",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003efb4e946e870ef65e6f804e824e99ae7e3e8c5e7e9e003e7c9000003"
   },
   {
-   "offset": "0x9cb",
-   "size": 57,
-   "zh": "。中子干扰消除{00}。范围攻击{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。{00}中子干扰消除",
-   "zh_hex": "03ef4ee886e8d3ebc7e928e9740003ec8ee9deef67e7cc00000000000000000000000000000000000000000300ef4ee886e8d3ebc7e928e974"
+   "offset": "0x9bc",
+   "size": 16,
+   "zh": "中子干扰消除器",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003"
   },
   {
-   "offset": "0xa0b",
-   "size": 21,
-   "zh": "。松永专用{00}。宇宙适应",
-   "zh_hex": "03e9e0e9bfeb4befb30003e8bee8bfef41e873"
+   "offset": "0x9cc",
+   "size": 44,
+   "zh": "中子干扰消除器{00}全弹发射：3格内敌最多5队",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003efb4e946e870ef65e6f804e824e99ae7e3e8c5e7e9e003e7c9000003"
   },
   {
-   "offset": "0xa2b",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0x9f8",
+   "size": 16,
+   "zh": "中子干扰消除器",
+   "zh_hex": "ef4ee886e8d3ebc7e928e974e8c30003"
   },
   {
-   "offset": "0xa33",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0xa0c",
+   "size": 24,
+   "zh": "松永专用机{00}宇宙适应",
+   "zh_hex": "e9e0e9bfeb4befb3e7e40003e8bee8bfef41e87300030000"
   },
   {
-   "offset": "0xa3b",
+   "offset": "0xa2c",
    "size": 8,
-   "zh": "。新人类",
-   "zh_hex": "03ef8aefb2e841"
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0xa34",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
+  },
+  {
+   "offset": "0xa3c",
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0xa48",
-   "size": 20,
-   "zh": "强尼专用{00}。宇宙适应",
-   "zh_hex": "e8ade896eb4befb30003e8bee8bfef41e873"
+   "size": 24,
+   "zh": "莱汀专用机{00}宇宙适应",
+   "zh_hex": "e846ed7ceb4befb3e7e40003e8bee8bfef41e87300030000"
   },
   {
    "offset": "0xa60",
-   "size": 13,
-   "zh": "背部武器系统",
-   "zh_hex": "e9e4ef70e8ece8c3e941e929"
+   "size": 20,
+   "zh": "可装背部武器系统",
+   "zh_hex": "e7c4e98fe9e4ef70e8ece8c3e941e92900030000"
   },
   {
    "offset": "0xa74",
-   "size": 32,
-   "zh": "背部武器系统{00}{00}{00}{00}{00}{00}{00}{00}{00}。宇宙适应",
-   "zh_hex": "e9e4ef70e8ece8c3e941e92900000000000000000003e8bee8bfef41e873"
+   "size": 36,
+   "zh": "背部武器系统（可解除）{00}宇宙适应",
+   "zh_hex": "e9e4ef70e8ece8c3e941e9297de7c4e89de9747e0003e8bee8bfef41e873000000030000"
   },
   {
    "offset": "0xa98",
-   "size": 8,
-   "zh": "夸特专用",
-   "zh_hex": "e8dfe7cfeb4befb3"
+   "size": 12,
+   "zh": "克瓦特罗机",
+   "zh_hex": "e7d5e99fe7cfe7ece7e40003"
   },
   {
-   "offset": "0xaa7",
-   "size": 14,
-   "zh": "。防御单元",
-   "zh_hex": "03e968ec68e918ecae"
+   "offset": "0xaa8",
+   "size": 20,
+   "zh": "可装备G防卫机",
+   "zh_hex": "e7c4e98fe877eed1e968e9b2e7e4000000030000"
   },
   {
    "offset": "0xabc",
-   "size": 24,
-   "zh": "防御单元{00}{00}。全装甲系统",
-   "zh_hex": "e968ec68e918ecae000003efb4e98febdbe941e929"
+   "size": 28,
+   "zh": "G防卫机{00}（全装甲可解除）",
+   "zh_hex": "eed1e968e9b2e7e400037defb4e98febdbe7c4e89de9747e00030000"
   },
   {
    "offset": "0xad8",
@@ -624,63 +708,63 @@
   },
   {
    "offset": "0xae8",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
    "offset": "0xaf4",
-   "size": 7,
-   "zh": "新人类",
-   "zh_hex": "ef8aefb2e841"
+   "size": 12,
+   "zh": "{F0:94}对应机",
+   "zh_hex": "f05ee7bee873e7e400000003"
   },
   {
-   "offset": "0xb07",
-   "size": 5,
-   "zh": "。可变",
-   "zh_hex": "03e7c4e955"
+   "offset": "0xb08",
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
-   "offset": "0xb0f",
-   "size": 13,
-   "zh": "。剪影系统",
-   "zh_hex": "03ed28ea8ee941e929"
+   "offset": "0xb10",
+   "size": 16,
+   "zh": "剪影系统（换装）",
+   "zh_hex": "ed28ea8ee941e9297dea78e98f7e0003"
   },
   {
-   "offset": "0xb1f",
-   "size": 13,
-   "zh": "。剪影系统",
-   "zh_hex": "03ed28ea8ee941e929"
+   "offset": "0xb20",
+   "size": 16,
+   "zh": "剪影系统（换装）",
+   "zh_hex": "ed28ea8ee941e9297dea78e98f7e0003"
   },
   {
-   "offset": "0xb2f",
-   "size": 13,
-   "zh": "。剪影系统",
-   "zh_hex": "03ed28ea8ee941e929"
+   "offset": "0xb30",
+   "size": 16,
+   "zh": "剪影系统（换装）",
+   "zh_hex": "ed28ea8ee941e9297dea78e98f7e0003"
   },
   {
-   "offset": "0xb3f",
-   "size": 17,
-   "zh": "。宇宙适应{00}{00}{00}。可变",
-   "zh_hex": "03e8bee8bfef41e87300000003e7c4e955"
+   "offset": "0xb40",
+   "size": 20,
+   "zh": "宇宙适应{00}可变形",
+   "zh_hex": "e8bee8bfef41e8730003e7c4e955ec6700030000"
   },
   {
    "offset": "0xb54",
-   "size": 16,
-   "zh": "地面适应{00}{00}{00}。可变",
-   "zh_hex": "ef63e862ef41e87300000003e7c4e955"
+   "size": 20,
+   "zh": "地面适应{00}可变形",
+   "zh_hex": "ef63e862ef41e8730003e7c4e955ec6700030000"
   },
   {
    "offset": "0xb68",
-   "size": 16,
-   "zh": "水域适应{00}{00}{00}。可变",
-   "zh_hex": "ebd4eaa7ef41e87300000003e7c4e955"
+   "size": 20,
+   "zh": "水域适应{00}可变形",
+   "zh_hex": "ebd4eaa7ef41e8730003e7c4e955ec6700030000"
   },
   {
    "offset": "0xb7c",
-   "size": 4,
-   "zh": "可变",
-   "zh_hex": "e7c4e955"
+   "size": 8,
+   "zh": "可变形",
+   "zh_hex": "e7c4e955ec670003"
   },
   {
    "offset": "0xb87",
@@ -707,22 +791,22 @@
    "zh_hex": "03efb5ed5ffc31e001"
   },
   {
-   "offset": "0xbb7",
-   "size": 44,
-   "zh": "。自愈{F0:3842}、{01}减伤{00}{00}{00}{00}{00}{00}{00}{00}{00}。机械降神",
-   "zh_hex": "03efb5ed5fff02e00101ed24e8f900000000000000000003e7e4eb90e943e9aa"
+   "offset": "0xbb8",
+   "size": 48,
+   "zh": "自愈900减伤40%{00}机械降神：广域破坏攻击",
+   "zh_hex": "efb5ed5fff02e001ed24e8f9fad6e7060003e7e4eb90e943e9aae6f8ee17eaa7ef6de9edef67e7cc0000000000030000"
   },
   {
    "offset": "0xbe8",
-   "size": 8,
-   "zh": "自愈{F0:3842}、",
-   "zh_hex": "efb5ed5fff02e001"
+   "size": 32,
+   "zh": "自愈900{00}机械降神：广域破坏",
+   "zh_hex": "efb5ed5fff02e0010003e7e4eb90e943e9aae6f8ee17eaa7ef6de9ed00000003"
   },
   {
-   "offset": "0xbf1",
-   "size": 35,
-   "zh": "。机械降神{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}{00}。全队自愈{F0:1625}、",
-   "zh_hex": "03e7e4eb90e943e9aa0000000000000000000000000003efb4e7c9efb5ed5ff659e001"
+   "offset": "0xc08",
+   "size": 12,
+   "zh": "(preserved neighbor bytes)",
+   "zh_hex": "efb4e7c9efb5ed5ff659e001"
   },
   {
    "offset": "0xc17",
@@ -731,16 +815,16 @@
    "zh_hex": "03efb5ed5ffc31e001"
   },
   {
-   "offset": "0xc23",
-   "size": 18,
-   "zh": "。普露专用{00}。新人类",
-   "zh_hex": "03e838e858eb4befb30003ef8aefb2e841"
+   "offset": "0xc24",
+   "size": 20,
+   "zh": "普露专用机{00}{F0:94}机",
+   "zh_hex": "e838e858eb4befb3e7e40003f05ee7e400000003"
   },
   {
-   "offset": "0xc3b",
-   "size": 18,
-   "zh": "。普露专用{00}。新人类",
-   "zh_hex": "03e838e858eb4befb30003ef8aefb2e841"
+   "offset": "0xc3c",
+   "size": 20,
+   "zh": "普露专用机{00}{F0:94}机",
+   "zh_hex": "e838e858eb4befb3e7e40003f05ee7e400000003"
   }
  ]
 }

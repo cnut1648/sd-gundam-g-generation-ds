@@ -82,9 +82,14 @@ def check_encode_stage(tag, text, defects, gap):
     try:
         return encode_stage(text)
     except ValueError as e:
-        ch = re.search(r"unencodable character '(.+?)'", str(e))
-        if ch:
-            gap.setdefault(("stage", ch.group(1)), []).append(tag)
+        # census EVERY unencodable char of the string, not just the first
+        # (the encoder raises on the first; a first-only census understates
+        # the mint demand and re-fails after minting)
+        for ch in {c for c in text if c not in "{}"}:
+            try:
+                encode_stage(ch)
+            except ValueError:
+                gap.setdefault(("stage", ch), []).append(tag)
         defects.append(f"{tag}: {e}")
         return None
 
@@ -93,9 +98,11 @@ def check_encode_bank(tag, text, jp_payload, defects, gap):
     try:
         return encode_bank(text, jp_payload, jp.expand_sys)
     except ValueError as e:
-        ch = re.search(r"unencodable char '(.+?)'", str(e))
-        if ch:
-            gap.setdefault(("bank", ch.group(1)), []).append(tag)
+        for ch in {c for c in text if c not in "{}"}:
+            try:
+                encode_bank(ch, jp_payload, jp.expand_sys)
+            except ValueError:
+                gap.setdefault(("bank", ch), []).append(tag)
         defects.append(f"{tag}: {e}")
         return None
 

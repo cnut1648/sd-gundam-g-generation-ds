@@ -1,0 +1,16 @@
+{
+ "entity": "unit_391",
+ "web_sources": [
+  "https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%BB%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%8D",
+  "https://w.atwiki.jp/aniwotawiki/pages/26181.html",
+  "http://bbs.srw00.com/viewthread.php?tid=31753",
+  "https://newkomica-kari.fandom.com/zh-tw/wiki/SD%E9%8B%BC%E5%BD%88G%E4%B8%96%E7%B4%80%E7%B3%BB%E5%88%97/%E5%8E%9F%E5%89%B5%E6%A9%9F%E9%AB%94%E5%88%97%E8%A1%A8"
+ ],
+ "name_zh": "泰拉·斯欧诺",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}机",
+  "塞壬系统：攻击时损伤SP"
+ ],
+ "notes": "能力段（family130、span32B、本entity为泰拉·斯欧诺完成形态utid391-393）修复双重截断缺陷：旧译新人类／塞壬系统把段0的対応機词干与段1的整个效果从句（攻撃時、SPにダメージを与える）全部丢掉。新译经fleet编码器compose_segments逐字节实测：NT机（6B）＋段间0003（2B）＋塞壬系统：攻击时损伤SP（22B）＝30B恰满room（32B跨度减0003尾框、成帧后32B与JP记录逐字节等长）、零缺陷零glyph gap、无数字组。：与SP按G9复用本记录JP原payload字节形（e6f8／f3f3）、其余全为ZH带两字节token；JP效果句中的顿号（攻撃時、）中文行文不需要、省1B。理想全文NT对应机／塞壬系统：攻击时损伤SP为34B放不下、対応機→NT机的压缩沿unit_178／181（NT机／哈曼专用机同款挤压）与unit_109／157先例、优先保住效果段的完整触发（攻击时）＋效果（损伤SP）。术语：塞壬系统为repo既定canon（data/zh全库、如_STGX6A的这是泰拉·斯欧诺的塞壬系统！、unit_bios的心理兵器塞壬系统）、System Seirene=放大NT感应波摧毁敌驾驶员心智的心理兵器（ja.wikipedia塞壬计划页／aniwota）、游戏内表现为攻击附带SP伤害、译文与lore相符。兄弟记录提醒：unit_388（family129、同名未完成形态、输出尚缺）seg0同为ニュータイプ対応機且系统名同为セイレーネ、其room20B恰可容NT对应机（10B）＋塞壬系统（8B）、校对时塞壬／NT词干务必与本记录统一（本机因效果从句更长seg0压为NT机、两机seg0不必强行同形）。机体名泰拉·斯欧诺保留：repo全库canon（stages _STGX6A/_STGX7/_STG09SP、character_bios、resident_caves placement）、72px≤144px；テラ・スオーノ＝意大利语兆之声、GGenDS原创塞壬计划核心MA、无大陆wiki更权威异译。武器三条均不改：米加粒子炮（77机共享通行译）、突击浮游炮（ストライカー・ビット、仅本机三utid共享、ビット＝浮游炮为库内既定、ストライカー＝突击无canon冲突、中文社区称巨型诱导兵器无定名）、超级米加粒子炮（ハイパー・メガ粒子砲、10机共享、库内通行）。防御记录（貫通防御なし）owner＝unit_1、按规则整体省略defense_*键。"
+}

@@ -1,0 +1,15 @@
+{
+ "entity": "unit_157",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/RX-178-X0%E9%AB%98%E8%BE%BEMk-%E2%85%A1%EF%BC%88%E8%AF%95%E4%BD%9C0%E5%8F%B7%E6%9C%BA%EF%BC%89",
+  "https://gundam.wiki.cre.jp/wiki/%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0Mk-II%E8%A9%A6%E4%BD%9C0%E5%8F%B7%E6%A9%9F",
+  "https://wiki.biligame.com/gundam/RX-178%E9%AB%98%E8%BE%BEMk-%E2%85%A1"
+ ],
+ "name_zh": "高达Mk20号机",
+ "weapons": [],
+ "ability_segments_zh": [
+  "试作机",
+  "{F0:94}机"
+ ],
+ "notes": "机体考证：本组utid157-159为RX-178-X0高达Mk-Ⅱ试作0号机（基连的野望原创、提坦斯先行试验机、泽罗·村雨搭乘机）、故独有試作ビーム・ライフル／試作ビーム・サーベル与試作機标签；biligame词条RX-178-X0高达Mk-Ⅱ（试作0号机）。机名高达Mk20号机为owner既定折衷（=高达Mk2+0号机、Mk9为Mk-Ⅱ上标字形的解码记法）、96px≤144px、与unit_148/151的高达Mk2标签族同构、按指示不改。武器两条均不改：试作光束步枪／试作光束军刀与biligame试作0号机页武装（试作光束步枪、试作光束军刀）逐字一致、且仅157/158/159三机共享。特殊能力段修复：JP=試作機／ニュータイプ対応機、旧译段1新人类丢対応機、且因ZH带试作机(6B)+新人类(6B)=14B超室、v1.1曾把记录整体寄生重定位到0x2F1（ui.json@0x178278把1df记录52的偏移字0x430改写为0x2F1、正文塞进0x2c0记录的零填充里）。新译镜像JP两段：段0=试作机（纯ZH带e91def2fe7e4、6B）、段1={F0:94}机→渲染NT机（f05e为字典宏94、JP/ZH两ROM均原生渲染NT、unit_58同宏先例；対応機压缩为机与unit_109对同一JP词组的NT机逐字一致）、经apply_fleet.compose_record实测body=12B恰等于room 12B（16B跨度−00030000尾4B）、可原位写回0x430。集成注意（重要）：apply时0x434旧edit（。新人类）会被整记录edit正常顶替、但必须同时把data/zh/ui.json中0x178278的偏移字patch回退为0x430（恢复JP原值、删除该条relocation patch）、否则游戏仍读0x2F1旧串导致本修复不可见；0x2F1寄生串位于unit_91所有的family30记录跨度（0x2E8..0x328）内、其整记录重写会自然清掉该寄生字节、两者须同批集成。{F0:94}宏字面含数字触发numbers警告为无害误报（JP无数字、宏非数值、同unit_58）。预算许可时的理想全形为试作机／NT对应机（16B超室4B、放不下）。防御段（貫通防御なし）归unit_1所有、按规则整体省略defense_*键。"
+}

@@ -1,0 +1,13 @@
+{
+ "entity": "unit_166",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/GX-9900%E9%AB%98%E8%BE%BEX",
+  "https://zh.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%96%B0%E4%B8%96%E7%B4%80GUNDAM_X%E4%B8%96%E7%95%8C%E8%A7%80"
+ ],
+ "name_zh": "高达X／卫星炮",
+ "weapons": [],
+ "ability_segments_zh": [
+  "闪光系统（{F0:94}机）"
+ ],
+ "notes": "机体名高达X／卫星炮保留：サテライト指卫星炮可用（微波充能完毕）状态、／后缀风格与全库变体命名一致、76px≤144px。武器四条全部保留不改：盾牌破坏步枪（シールドバスターライフル、biligame GX-9900页列为通行译名之一、又称盾型光束步枪、6机共享）、大型光束剑（大型ビーム・ソード、biligame并列大型光束军刀／大型光束剑、本词源为Beam Sword非Saber、现译无误）、胸部火神炮（ブレスト・バルカン、biligame逐字一致）、卫星炮（サテライト・キャノン、biligame通行称卫星炮／卫星微波炮、3机共享即本机三形态）。特殊能力修复截断缺陷：JPフラッシュシステム（ニュータイプ対応機）旧译只剩闪光系统、整个（NT对应机）限定从句被丢。闪光系统=biligame canon（NT精神力操控GX-Bit的系统）。理想全形闪光系统（NT对应机）为20B、family55记录span 0x458-0x46C共20B、保留00030000尾框后room仅16B放不下、故按unit_52/unit_55舰队先例将对应机压缩为机：闪光系统（NT机）、（）复用JP原payload一字节0x7D/0x7E、N/T走ZH带令牌、经fleet编码器compose_segments实测16B恰满room、零缺陷。重要：family54（unit_163高达X）记录字节与本记录完全相同（同JP文同20B跨度）、两处译文务必逐字一致、校对时请对齐unit_163输出采用闪光系统（NT机）。防御段（貫通防御なし）owner=unit_1、按规则整体省略defense_*键。"
+}

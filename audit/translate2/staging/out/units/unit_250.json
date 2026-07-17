@@ -1,0 +1,16 @@
+{
+ "entity": "unit_250",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MS-06R-1A%E9%AB%98%E6%9C%BA%E5%8A%A8%E5%9E%8B%E6%89%8E%E5%8F%A4%E2%85%A1",
+  "https://wiki.biligame.com/gundam/MS-06R-2%E9%AB%98%E6%9C%BA%E5%8A%A8%E5%9E%8B%E6%89%8E%E5%8F%A4%E2%85%A1",
+  "https://wiki.biligame.com/gundam/MS-06F%E6%89%8E%E5%8F%A4%E2%85%A1",
+  "https://wiki.biligame.com/gundam/%E5%BC%BA%E5%B0%BC%C2%B7%E8%8E%B1%E6%B1%80",
+  "https://wiki.biligame.com/gundam/%E6%9D%BE%E6%B0%B8%E7%9C%9F"
+ ],
+ "name_zh": "高机动型扎古",
+ "weapons": [],
+ "ability_segments_zh": [
+  "宇宙适应"
+ ],
+ "notes": "机体名沿用高机动型扎古：JP原名高機動型ザク不带Ⅱ、biligame条目全称为MS-06R系高机动型扎古Ⅱ、游戏内省略Ⅱ属原文形态而非误译；utid250/251/252共用此名串、涵盖强尼莱汀（R-2红机）与松永真（R-1A白机）王牌涂装机、与char_107/112的人名译法（强尼莱汀无点、松永真）无冲突。武装三件（扎古机枪/热能斧/扎古火箭炮）均为共享字符串且与biligame扎古系武装通行译名一致、バズーカ按本库既定译作火箭炮、故全部保留不输出改动。特殊能力段（record 83 @0x5B4）地形適正・宇宙沿用全库既定短名宇宙适应（8/16字节、名称类字段避用・、与相邻强尼专用/松永专用记录0xA48/0xA0C的同段现行译法及fleet多数输出一致、语义完整）。贯通防御段归unit_1所有、按规则不输出。"
+}

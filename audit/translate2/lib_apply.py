@@ -419,6 +419,7 @@ class Pools:
                         break
                 if cand:
                     break
+        vac_span = None
         if not cand:
             # ledger-vacated spans
             for arena, rel in ((self.ui, "ui_names_bank.json"),
@@ -432,12 +433,25 @@ class Pools:
                         continue
                     if e - s >= need:
                         cand.append((arena, s, rel))
+                        vac_span = (arena, s, e)
                         break
                 if cand:
                     break
         if not cand:
             raise RuntimeError(f"no arena space for {need}B ({why})")
         arena, off, rel = cand[0]
+        if vac_span is not None and vac_span[0] is arena:
+            # a vacated span may still carry the OLD string's bytes beyond the
+            # new reservation: zero the WHOLE span so no residue (e.g. a stray
+            # kana tail) survives after the new NUL (offline_coverage class)
+            _a, vs, ve = vac_span
+            for eoff in sorted(arena.entries):
+                e = arena.entries[eoff]
+                p = bytearray(bytes.fromhex(e["payload_hex"]))
+                lo, hi = max(eoff, vs), min(eoff + len(p), ve)
+                if lo < hi:
+                    p[lo - eoff:hi - eoff] = b"\x00" * (hi - lo)
+                    e["payload_hex"] = bytes(p).hex()
         ram = arena.ram_of(off)
         if name_band and ram >= NAME_BAND_LIMIT:
             raise RuntimeError(f"allocation for {why} landed at {ram:#x} >= band limit")

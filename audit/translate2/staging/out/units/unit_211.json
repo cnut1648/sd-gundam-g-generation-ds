@@ -1,0 +1,13 @@
+{
+ "entity": "unit_211",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/XM-X2%E6%B5%B7%E7%9B%97%E9%AB%98%E8%BE%BEX2",
+  "https://zh.wikipedia.org/zh-hans/%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%AB%E6%B5%B7%E7%9B%9CGUNDAM"
+ ],
+ "name_zh": "海盗高达X2",
+ "weapons": [],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "特殊能力修复截断缺陷：JPニュータイプ対応機旧译只剩新人类（丢失対応機、变成能力裸名）、改为全舰队统一标签NT对应机（unit_73已定调、与data/zh/event_text.json的数架NT对应机一致）。经fleet编码器encode_bank实测家族70记录raw=f098f08cf5858e0003000300、room=12B-2B尾框=10B、NT对应机恰10B零缺陷。同文同款记录提醒：家族66（unit_199海盗高达X1）与家族71（unit_214海盗高达X2改）的JP字节与本记录逐字相同、校对时三处务必统一为NT对应机。机体名海盗高达X2与biligame页名XM-X2海盗高达X2逐字一致（char_75扎比涅侧亦沿用海盗高达X2语境）、72px≤144px、保留。武器全部保留：斩刀破坏枪（ザンバスター、21机共享）与光束斩刀（ビーム・ザンバー）为biligame X2页原词；射击长枪（ショット・ランサー、扎比涅习惯追加的特色武装）社区写法分歧（射击长矛/铳击矛/射击骑枪并存）、非明确canon错误且与F91系CV机共用串0x20B5E84现行同译、不另立新词；破坏发射器（バスター・ランチャー）为直译、バスター=破坏与斩刀破坏枪同族转写一致、社区亦无压倒性通行译、维持。防御名ABC披风与防御段归unit_199所有、按规则整体省略defense_*键。"
+}

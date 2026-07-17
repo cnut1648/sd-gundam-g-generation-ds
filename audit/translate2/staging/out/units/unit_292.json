@@ -1,0 +1,21 @@
+{
+ "entity": "unit_292",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/ZMT-S37S%E8%B5%9E%E6%96%AF%E5%B8%95%E5%9B%A0",
+  "https://gundam.fandom.com/wiki/ZMT-S37S_Zanspine",
+  "https://dic.pixiv.net/a/%E3%82%B6%E3%83%B3%E3%82%B9%E3%83%91%E3%82%A4%E3%83%B3",
+  "https://gundam.wiki.cre.jp/wiki/%E3%82%B6%E3%83%B3%E3%82%B9%E3%83%91%E3%82%A4%E3%83%B3",
+  "https://w.atwiki.jp/generation-overworld/pages/304.html"
+ ],
+ "name_zh": "赞斯派恩",
+ "weapons": [
+  {
+   "slot": 2,
+   "zh": "闪光浮游炮"
+  }
+ ],
+ "ability_segments_zh": [
+  "{F0:94}对应机"
+ ],
+ "notes": "机体确认：ZMT-S37S赞斯派恩（ザンスパイン）、G世代原创机（初出GジェネF）、单眼高达篇（モノアイガンダムズ）线的赞斯卡尔系最终机、超精研以窃取的米诺夫斯基驱动技术打造的V2高达对位机、预定驾驶员法拉·格里芬。机名保留仓库单眼篇既定译名赞斯派恩（48px≤144px、fleet内unit_34注记亦沿用该名）；biligame页题作赞斯帕因、仅为音译变体、非事实错误、按keep repo Monoeye terms指示不改、于此FLAG备考。特殊能力修复截断缺陷：JPニュータイプ対応機旧译只剩新人类（丢失対応機词干）、改为全舰队统一译法NT对应机＝10B、预算12B（unit_211/217实测同类记录减尾框后room仅10B、全译新人类对应机12B放不下）、与unit_73/175/205/208/211/214/217逐字一致。武器slot2修正canon错误：ティンクル・ビット官方罗马字为Tinkle Bit（铃声）而非Twinkle（闪光）、本作图鉴原文即幻惑効果を伴うティンクル·ビット、设定为浮游炮共鸣发出铃音状精神波使敌产生幻听幻惑、biligame页作铃铛BIT／叮咚BIT；旧译闪光浮游炮属词义误读、改为铃音浮游炮（铃音直取鈴の音设定、ビット沿用仓库通行浮游炮译法、5字10B与旧译同长、该串ptr0x218A01D仅utid292-294三机共享、改动安全）；备选铃铛浮游炮更贴biligame字面、但铃铛二字均需新铸格、铃音仅需新铸铃一字（音已在册）、整合时若不便铸格可退回保留闪光浮游炮。slot0光束步枪（195机共享、brief钦定）与slot1光之翼（与V2系共享串0x218EC12、canon一致）均保留不输出。防御名光之翼与防御段（威力450无效化／超过减50%）owner为unit_37、按所有权规则整体省略defense_*键。"
+}

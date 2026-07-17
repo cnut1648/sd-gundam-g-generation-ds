@@ -1,0 +1,14 @@
+{
+ "entity": "unit_307",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%82%B7%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%89",
+  "https://wiki.biligame.com/gundam/LRX-077%E8%A5%BF%E6%96%AF%E5%A5%8E%E5%BE%B7",
+  "https://gundam.fandom.com/wiki/LRX-077_Sisquiede",
+  "https://baike.baidu.com/item/LRX-077%20Sisquiede(Mono-eye%20Gundam)/13029119"
+ ],
+ "name_zh": "西斯库德",
+ "weapons": [
+  {"slot": 0, "zh": "长射程步枪"}
+ ],
+ "notes": "机体名保留西斯库德：biligame词条页题作LRX-077西斯奎德、但西斯库德同为中文社区通行转写（百度百科词条及搜索均并列使用）、并非事实性错误；且为repo既定名——stage脚本（_STG13A／_STG15A_2／_STGX4A）、resident_caves、data/zh/units.json的utid307-315九条同名记录、以及char_86已交付输出中·西斯库德／形态1·与形态1解禁台词（1dd.bin 0xE0）均已统一、故不改、与西格（char_86）／瑟拉（char_122）线对齐。本entity的utid307-309为提坦斯配色原机（bio：塞壬计划=プロジェクト・セイレーネ的泰拉·斯欧诺护卫机、迪斯帕达的兄弟机、莱比锡研开发的高速迎击型单眼高达）、白色奥古涂装为utid310族、共用同一名称串。武器slot0 ロング・ライフル：与超级高达共享的12机串（utid154-156+307-315）、unit_154已交付长射程步枪并注明对西斯库德同样正确（即I力场发射器的长射程狙击形态、pixiv百科：遠距離狙撃用の長射程ビームライフル=ロングレンジビーム・ライフル）、本机侧输出同值以保持共享串一致（5字10B、unit_154已核编码通过）。slot1光束军刀为brief钦定canon（315机共享）、slot2米加加农炮沿用全库米加词干（米加粒子炮／高能米加加农炮同源、与托尔吉斯III／诺伊·吉尔15机共享、biligame亦作MEGA加农炮类译）、均保留不改。特殊防御I力场（威力450光束无效段）owner=unit_4、其已交付译文、按规则省略defense_*键；本entity文件无自有ability记录、无ability_segments_zh。"
+}

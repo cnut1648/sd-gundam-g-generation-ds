@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import struct
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -132,7 +133,11 @@ def apply_barks(props, report):
         if not zb:
             report["skipped"].append(f"bark {fname}/{rec}: no ZH record")
             continue
-        enc = encode_stage(text)
+        try:
+            enc = encode_stage(text)
+        except ValueError as err:
+            report["skipped"].append(f"bark {fname}/{rec}: {err}")
+            continue
         if len(enc) > budget:
             report["skipped"].append(f"bark {fname}/{rec}: {len(enc)}B > {budget}B")
             continue
@@ -182,7 +187,11 @@ def apply_cutins(props, report):
         if not text:
             continue                       # empty = keep (无 records stay)
         framed = frame_cutin(text)
-        enc = encode_stage(framed)
+        try:
+            enc = encode_stage(framed)
+        except ValueError as err:
+            report["skipped"].append(f"cutin group {group}: {err}")
+            continue
         if g.get("zh_hex") == enc.hex():
             continue
         g["zh"] = framed
@@ -215,35 +224,84 @@ def compose_record(segs_zh, jp_raw):
 
 def apply_specials(props, report):
     jspec = W.special_records(jp)
-    for key, fname, rel, recmap in (
+    # physical word counts: the D table occupies exactly the gap up to A;
+    # A holds the 249 ability offsets (+ leading non-offset word)
+    OFFTAB_WORDS = {L.OFFTAB_A: 251, L.OFFTAB_D: (L.OFFTAB_A - L.OFFTAB_D) // 4}
+    for key, fname, rel, recmap, offtab in (
             ("ability", L.SPECIAL_ABILITY_FILE,
-             "data/zh/files/battle/special_abilities.json", jspec["ability"]),
+             "data/zh/files/battle/special_abilities.json", jspec["ability"],
+             L.OFFTAB_A),
             ("defense", L.SPECIAL_DEFENSE_FILE,
-             "data/zh/files/battle/special_defenses.json", jspec["defense"])):
+             "data/zh/files/battle/special_defenses.json", jspec["defense"],
+             L.OFFTAB_D)):
         t = load_json(rel)
+        jfile, zfile = jp.file(fname), zh.file(fname)
         changed = 0
+        applied_spans = []
         for index, (ent, segs) in sorted(props[key].items()):
             s, e = _record_span(recmap, index)
             if s is None:
                 report["skipped"].append(f"{key} record {index}: no JP span")
                 continue
-            raw = jp.file(fname)[s:e]
+            raw = jfile[s:e]
             try:
                 rec_bytes = compose_record(segs, raw)
             except ValueError as err:
                 report["skipped"].append(f"{key} record {index}: {err}")
                 continue
-            # drop every old edit overlapping [s, e); add the full record edit
-            t["edits"] = [ed for ed in t["edits"]
-                          if not (int(ed["offset"], 16) < e and
-                                  int(ed["offset"], 16) + ed["size"] > s)]
+            # drop every old edit overlapping [s, e) — but PRESERVE the parts
+            # of those edits that lie outside the applied span (v1.1 edits may
+            # start at the previous record's framing byte and carry a NEIGHBOR
+            # record's translation, e.g. `0xCB '。宇宙适应'` beside fam4):
+            # re-emit the shipped bytes for the residual ranges verbatim.
+            keep, residuals = [], []
+            for ed in t["edits"]:
+                o, sz = int(ed["offset"], 16), ed["size"]
+                if not (o < e and o + sz > s):
+                    keep.append(ed)
+                    continue
+                if o < s:
+                    residuals.append((o, s - o))
+                if o + sz > e:
+                    residuals.append((e, o + sz - e))
+            for ro, rsz in residuals:
+                if zfile[ro:ro + rsz] != jfile[ro:ro + rsz]:
+                    keep.append({"offset": f"0x{ro:x}", "size": rsz,
+                                 "zh": "(preserved neighbor bytes)",
+                                 "zh_hex": zfile[ro:ro + rsz].hex()})
+            t["edits"] = keep
             zh_note = "{00}".join(segs)
             t["edits"].append({"offset": f"0x{s:x}", "size": len(rec_bytes),
                                "zh": zh_note, "zh_hex": rec_bytes.hex()})
+            applied_spans.append((index, s, e))
             changed += 1
         t["edits"].sort(key=lambda ed: int(ed["offset"], 16))
         if changed:
             dump_json(rel, t)
+        # stale offtab re-aims: v1.1 re-aimed record-offset words for records
+        # whose translation outgrew the JP span (ui.json resource_offsets).
+        # Our whole-record edits live at JP geometry, so a surviving re-aim
+        # would make the drawer/walker read the wrong span.  Revert an entry
+        # when every record it bounds has been re-applied at its JP home.
+        first = 1 if struct.unpack_from("<I", bytes(jp.arm9), offtab)[0] > \
+            struct.unpack_from("<I", bytes(jp.arm9), offtab + 4)[0] else 0
+        n_words = OFFTAB_WORDS[offtab]
+        napplied = {i for i, _s, _e in applied_spans}
+        ui_doc = load_json("data/zh/ui.json")
+        kept_ro, dropped = [], 0
+        for e_ in ui_doc.get("resource_offsets", []):
+            fo = int(e_["file_offset"], 16)
+            k = (fo - offtab) // 4
+            if 0 <= fo - offtab < 4 * n_words and (fo - offtab) % 4 == 0:
+                j = k - first          # vals index: start of record j, end of j-1
+                if {j, j - 1} & napplied and {j, j - 1} <= (napplied | {-1}):
+                    dropped += 1
+                    continue
+            kept_ro.append(e_)
+        if dropped:
+            ui_doc["resource_offsets"] = kept_ro
+            dump_json("data/zh/ui.json", ui_doc)
+            report["counts"][f"{key}_offtab_reverts"] = dropped
         report["counts"][key] = changed
 
 
@@ -360,7 +418,12 @@ def apply_details(props, pools, chars_json, report):
             if didx in props["detail"]:
                 ent, effect, _dj = props["detail"][didx]
                 text = compose_detail_text(didx, effect, jdetails, compact=compact)
-                enc = encode_stage(text)
+                try:
+                    enc = encode_stage(text)
+                except ValueError as err:
+                    report["skipped"].append(f"detail didx {didx}: {err}")
+                    f[didx] = normalized_current(didx)
+                    continue
                 f[didx] = enc
                 if enc != current_payload(didx):
                     ch += 1
@@ -580,7 +643,11 @@ def apply_idnames(props, pools, chars_json, report):
         cur_txt = decode_text(zh, cur, "bank", zh.expand_sys, False)
         if cur_txt == text:
             return zptr
-        enc = encode_bank(text, jp_bytes, jp.expand_sys)
+        try:
+            enc = encode_bank(text, jp_bytes, jp.expand_sys)
+        except ValueError as err:
+            report["skipped"].append(f"idname {jptr}: {err}")
+            return None
         if payload_px_bank(enc) > 64:
             report["skipped"].append(f"idname {jptr}: {text!r} > 64px")
             return None
@@ -774,14 +841,39 @@ def apply_defnames(props, pools, report):
         if cur_txt == text:
             continue
         jp_bytes = jp.cstr(int(jptr, 16)) or b""
-        enc = encode_bank(text, jp_bytes, jp.expand_sys)
+        try:
+            enc = encode_bank(text, jp_bytes, jp.expand_sys)
+        except ValueError as err:
+            report["skipped"].append(f"defname {jptr}: {err}")
+            continue
         arena, aoff = pools.arena_of_ram(int(zptr, 16))
-        if arena is None or len(enc) > len(cur):
+        if arena is not None and len(enc) <= len(cur):
+            _surgical_write(arena, aoff, enc + b"\x00", len(cur))
+            if hit:
+                hit["zh"] = text
+            changed += 1
+            continue
+        if hit is None:
+            # no ui.json re-aim entry to update: the E71 sites still point at
+            # the JP home — relocation would need a new sites survey; defer
             report["skipped"].append(f"defname {jptr}: {text!r} grows — deferred")
             continue
-        _surgical_write(arena, aoff, enc + b"\x00", len(cur))
-        if hit:
-            hit["zh"] = text
+        # grow: ledger relocation to a fresh span; the ui.json entry keeps its
+        # sites list (the build re-aims those words to the new ptr), and the
+        # old span is vacated through the ledger (single-owner string)
+        vacate = None
+        if arena is not None:
+            vacate = [{"pool": arena.rel, "offset": f"0x{aoff:X}",
+                       "span": len(cur), "ram": zptr}]
+        # name_band: defense-name strings can double as master-table unit
+        # names (分身殺法ゴッドシャドー == utid 902's name) — the pointer must
+        # stay < 0x02190000 or deploy hard-freezes (name_pointer_band gate)
+        tgt, toff, ram = pools.allocate(
+            len(enc), f"fleet-v12:defname {jptr}", [ent], text,
+            name_band=True, vacate=vacate)
+        _surgical_write(tgt, toff, enc + b"\x00", len(enc) + 1)
+        hit["ptr"] = f"0x{ram:X}"
+        hit["zh"] = text
         changed += 1
     if changed:
         dump_json("data/zh/ui.json", ui)

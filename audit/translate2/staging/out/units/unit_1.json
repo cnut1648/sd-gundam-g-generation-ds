@@ -1,0 +1,19 @@
+{
+ "entity": "unit_1",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/WD-M01%E5%80%92A%E9%AB%98%E8%BE%BE",
+  "http://gundam.daihouko.com/sd/ggcd/31.html",
+  "https://dic.pixiv.net/a/%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%83%8F%E3%83%B3%E3%83%9E%E3%83%BC"
+ ],
+ "name_zh": "∀高达",
+ "weapons": [],
+ "ability_segments_zh": [
+  "I力场抵消：对有I力场的敌人",
+  "光束伤害照常"
+ ],
+ "defense_name_zh": "",
+ "defense_segments_zh": [
+  "无贯通防御"
+ ],
+ "notes": "能力段修复截断缺陷：JP为I・フィールドキャンセラー：Ⅰフィールドを持つ相手に対し、ビームで通常通りのダメージを与える（对持有I力场的敌人、光束照常造成伤害）。旧译只剩名字加光束伤害照常、丢了触发对象从句。新译补回名中的I与整个触发从句、系统名沿用全库共享词干力场抵消（与unit_7段0的力场抵消自愈300保持同名一致、G世代该能力效果=无效化敌方I力场使光束正常结算、见daihouko GGCD页）。段0的：镜像JP原文冒号且按brief的ALICE：例句格式、由记录原payload字节复用编码（已用encode_bank验证可编码）。字节实测（compose_record规则、room=44-4=40B）：26B+2B+12B=40B恰满、更长的光束照常造成伤害为44B放不下、故效果句取光束伤害照常。防御段修复用字缺陷：旧译无貫通防御经F0:158/F0:162字典宏拼出日文字形貫（繁体）、新译改为纯简体无贯通防御、10B=room恰满、镜像JP貫通防御なし单段、无数字无版式约束。武器不改：光束军刀为brief钦定canon、高达流星锤与biligame WD-M01页高达锤/高达流星锤一致（6机共享串、非canon错误）。机体名∀高达=biligame正文通行写法、∀按brief保持Latin符号、不改。"
+}

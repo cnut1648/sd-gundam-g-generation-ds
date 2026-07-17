@@ -1,0 +1,16 @@
+{
+ "entity": "unit_55",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/MSZ-006Z%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E7%94%9F%E7%89%A9%E4%BC%A0%E6%84%9F%E5%99%A8",
+  "https://wiki.biligame.com/gundam/%E8%B6%85%E7%BA%A7%E7%B1%B3%E5%8A%A0%E5%8F%91%E5%B0%84%E5%99%A8",
+  "https://xneo.jp/ds_gene/"
+ ],
+ "name_zh": "Z高达／强化",
+ "weapons": [],
+ "ability_segments_zh": [
+  "生体感应器（{F0:94}机）",
+  "可变形"
+ ],
+ "notes": "能力段修复截断缺陷：JPバイオセンサー搭載（ニュータイプ対応機）旧译只剩生体感应器、整个（NT对应机）限定从句被丢。新译生体感应器（NT机）补回该限定、（）复用JP原payload一字节0x7D/0x7E、N/T走ZH带令牌、经fleet编码器compose_segments实测两段18B+2B分隔+4B=24B恰满room（28B跨度-4B尾框架）、零缺陷。更全的生体感应器（NT对应机）为28B放不下、故对应机压缩为机（unit_13同类限定译作NT对应机、预算许可时优先该全形）。段1可変機構维持全bank通行译可变（11条记录同式）、可变机构超预算4B。术语：biligame主词条名为生物传感器、生体感应器列为通行别称、且与本bank另两处同串记录（unit_70/295）及防御名生体力场（バイオフィールド、unit_43所有）同族一致、故保留生体感应器不另立新词。重要：family18记录字节与family17（unit_52、Z高达无印）完全相同（同span 28B同JP文）、两处译文务必逐字一致、校对时请对齐unit_52输出。机体名Z高达／强化保留：ハイパー指卡缪Hyper化觉醒形态（xneo攻略）、强化达意且64px远低于144px预算。武器四条均canon不改：光束步枪/光束军刀为brief钦定、超级米加发射器与biligame专页词条名一致（9机共享）、突撃→突击直译无误（与GP03石斛兰共享串）。防御名/防御段归unit_43所有、未输出。"
+}
