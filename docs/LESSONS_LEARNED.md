@@ -165,6 +165,14 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
 * **Truth:** weaponless master-table records (utids ~610–944, pilots/factions/roles) and
   char-DB names must be encoded **≥2196-only** so both paths agree.
 * **Guard:** static scan of those pools for any token <2196 that isn't shared-safe.
+* **Recurred 2026-07:** 49 translated pilot names still carried the JP originals'
+  renderB-meaning bytes/F-refs for their ASCII/paren tails (（弹尽）as one-byte 7D/7E,
+  ＳＥＥＤ as F-ref 0x2C7, Ａ/Ｂ as JP-band e008/e009, DC/OZ/MD as one-byte+JP-band
+  letters) — legal on the trampoline, but the `0x2BCA6`-patched speaker plate drew
+  阿斯兰モー「「？ャ for 阿斯兰（SEED）.  There are ZERO shared-identical slots between
+  the two fonts (computed), so "shared-safe" is the empty set: translated pilot names
+  must be **pure ZH-band**.  All 49 re-encoded in place; gate `pool_trampoline_tokens`
+  now enforces pilot names contain no one-byte/F-ref/JP-band glyphs at all.
 
 ---
 

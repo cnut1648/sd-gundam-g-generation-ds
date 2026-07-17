@@ -241,6 +241,11 @@ _PLACEHOLDER_BYTES = {b"\xf4\xfe",            # 欠番 (system-dict macro; vacan
                       b"\xea\x5a\xe8\x77",     # 预备 (reserve slot)
                       b"\xe8\x77\xef\xb3"}     # 备用 (reserve ID-command name, 435×)
 
+# developer bark-template stubs: record body = "<char name>▼<slot label>セリフ@@…"
+# (先制攻撃セリフ@@@, NT武器セリフ@@@ …) — slot labels padded with @, no real lines
+import re as _re
+_STUB_BARK_RE = _re.compile(r"セリフ\d?@+")
+
 
 def _dummy_name(b: bytes | None) -> bool:
     return (not b or b == b"\x01" or b == b"\x00"
@@ -609,6 +614,11 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
     def _bark_glyphs(rom, b):
         return sum(1 for _ in glyph_stream(rom, b, "stage")) if b else 0
 
+    # attested dialogue speakers: the ONLY char names the renderA speaker plate
+    # can draw (script `06 <id>`); the battle-render row is shown just for them
+    speaker_cids = {m["sp"] for per_file in overlay.values()
+                    for m in per_file.values() if m.get("sp", -1) >= 0}
+
     chars = []
     for cid in range(L.CHARDB_COUNT):
         rec = L.CHARDB + cid * L.CHARDB_STRIDE
@@ -626,6 +636,11 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
             if _dummy_name(zi_name):
                 continue
             ji_name = jp.cstr(int(ji["name"]["ptr"], 16)) if ji["name"] else None
+            # the game's explicit "no ID command in this slot" sentinel: name
+            # なし + summary 効果説明なし (a shared record many slots point at).
+            # Not a skill — the guide shows the slot as absent, not as a card.
+            if ji_name and decode_text(jp, ji_name, "bank", jp.expand_sys) == "なし":
+                continue
             ji_sum = jp.cstr(int(ji["summary"]["ptr"], 16)) if ji["summary"] else None
             zi_sum = zh.cstr(int(zi["summary"]["ptr"], 16)) if zi["summary"] else None
             rec_no = jcut["links"].get(str(idn))
@@ -654,11 +669,21 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
             # by non-combatant NPC voicesets)
             if _bark_glyphs(zh, zb) <= 1 and _bark_glyphs(jp, jb) <= 1:
                 continue
+            # skip developer template stubs: 8 voice sets ship record bodies of
+            # "<name> + <slot label>セリフ@@@…" instead of written lines (e.g.
+            # カテジナ・ルース／NT武器セリフ@@@) — placeholders, not quotes
+            if _STUB_BARK_RE.search(decode_text(jp, jb, "stage", jp.expand)):
+                continue
             barks.append(fld(jb, zb, "stage", jp.expand))
         if not ids and not barks:
             continue
-        chars.append({"cid": cid, "nm": name_fld(jn, zn),
-                      "nmA": name_fld_battle(jn, zn), "ids": ids, "barks": barks})
+        entry = {"cid": cid, "nm": name_fld(jn, zn), "ids": ids, "barks": barks}
+        # the renderA-direct battle/plate render is a REAL surface only for
+        # dialogue speakers (the 0x2BCA6-patched speaker plate); everywhere
+        # else char names render on the trampoline exactly like the roster row
+        if cid in speaker_cids:
+            entry["nmA"] = name_fld_battle(jn, zn)
+        chars.append(entry)
     data["chars"] = chars
 
     # ---- 1c. units: name, weapons, specials ----------------------------------
@@ -724,9 +749,16 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
                 specials.append({"kind": "defense",
                                  **fld(jb, zb, "bank", jp.expand_sys,
                                        zexp=zh.expand_sys)})
-        units.append({"utid": utid, "nm": name_fld(j_name, z_name),
-                      "nmA": name_fld_battle(j_name, z_name),
-                      "weapons": weapons, "specials": specials})
+        uentry = {"utid": utid, "nm": name_fld(j_name, z_name),
+                  "weapons": weapons, "specials": specials}
+        # weapon-bearing unit names render on the TRAMPOLINE everywhere
+        # (roster AND battle HUD — the JP originals are renderB-coded, so no
+        # renderA-direct path can exist for them); only the weaponless
+        # identity records (pilots/factions/roles, utids ~610-944) are drawn
+        # renderA-direct (LESSONS A12) and get the battle-render review row.
+        if not z.get("weapons"):
+            uentry["nmA"] = name_fld_battle(j_name, z_name)
+        units.append(uentry)
     data["units"] = units
 
     # ---- briefings (作战内容), per stage descriptor, into the Route tab -------

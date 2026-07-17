@@ -2222,14 +2222,26 @@ def gate_pool_trampoline_tokens(rep, ctx):
     2-byte token with slot < 2196 draws the renderB glyph of that slot
     number — a different character (the 多佛炮→多恩炮 garble class).  ZERO
     JP-band 2-byte tokens are allowed in any referenced pool string.
-    (One-byte bytes are covered by bank_onebyte_regression.)"""
+    (One-byte bytes are covered by bank_onebyte_regression.)
+
+    Translated PILOT names (char-DB top-level ptrs) carry a second, STRICTER
+    tooth: the dialogue speaker plate renders the SAME string renderA-DIRECT
+    (code patch @0x2BCA6 routes plates through the 12x12 path), and the two
+    fonts share no slot identity, so a pilot name must be pure ZH-band
+    (>= 2196) — any one-byte glyph code, JP-band token or F-ref draws a
+    different glyph on the plate than on the roster (LESSONS A12;
+    阿斯兰（SEED） rendered 阿斯兰モー「「？ャ on the plate)."""
     cm = ctx["cm"]
     refs = []
+    pilot_ptrs = set()
     for rel in ("zh/units.json", "zh/characters.json", "zh/ui.json"):
         p = REPO / "data" / rel
         if not p.exists():
             continue
         doc = json.loads(p.read_text())
+        if rel == "zh/characters.json":
+            pilot_ptrs = {int(e["ptr"], 16) for e in doc.get("characters", [])
+                          if "ptr" in e}
         stack = [doc]
         while stack:
             x = stack.pop()
@@ -2243,17 +2255,27 @@ def gate_pool_trampoline_tokens(rep, ctx):
                 stack.extend(x)
     az = ctx["a9"]
     bad = []
+    plate_bad = []
+    n_plate = 0
     for rel, ptr in refs:
         f = _ram_to_file(az, ptr)
         if f is None:
             continue
+        # plate rule applies to TRANSLATED pilot names (a ptr override exists);
+        # untranslated names are byte-identical JP and never re-encoded here.
+        is_pilot = ptr in pilot_ptrs
+        n_plate += is_pilot
         i, n = f, len(az)
         while i < n - 1 and az[i] != 0:
             c = az[i]
             if c < 0xE0:
+                if is_pilot and c >= 0x02:
+                    plate_bad.append((f"0x{ptr:X}", f"one-byte 0x{c:02X}"))
                 i += 1
                 continue
             if c >= 0xF0:
+                if is_pilot:
+                    plate_bad.append((f"0x{ptr:X}", f"F-ref 0x{c:02X}{az[i+1]:02X}"))
                 i += 2
                 continue
             slot = ((c << 8) | az[i + 1]) - SLOT_DEBIAS
@@ -2262,19 +2284,28 @@ def gate_pool_trampoline_tokens(rep, ctx):
             # glyph of the same number.  Original-JP tokens (jp_slot_chars
             # identity only) draw their intended renderB glyph — correct for
             # untranslated/intentionally-JP strings.
-            if slot < ZH_SLOT_MIN and slot in cm.zh_minted_slots:
-                ch = cm.zh_rev.get(slot) or "?"
-                bad.append((rel, f"0x{ptr:X}", slot, ch))
+            if slot < ZH_SLOT_MIN:
+                if slot in cm.zh_minted_slots:
+                    ch = cm.zh_rev.get(slot) or "?"
+                    bad.append((rel, f"0x{ptr:X}", slot, ch))
+                elif is_pilot:
+                    plate_bad.append((f"0x{ptr:X}", f"JP-band slot {slot}"))
             i += 2
-    if bad:
-        rel0, p0, s0, c0 = bad[0]
-        rep.add("pool_trampoline_tokens", False,
-                f"{len(bad)} referenced pool string(s) carry JP-band 2-byte tokens "
-                f"(renderB garble); e.g. {rel0} @{p0}: slot {s0} ({c0})")
+    if bad or plate_bad:
+        msg = []
+        if bad:
+            rel0, p0, s0, c0 = bad[0]
+            msg.append(f"{len(bad)} referenced pool string(s) carry JP-band 2-byte "
+                       f"tokens (renderB garble); e.g. {rel0} @{p0}: slot {s0} ({c0})")
+        if plate_bad:
+            p0, w0 = plate_bad[0]
+            msg.append(f"{len(plate_bad)} pilot-name glyph(s) not ZH-band — the "
+                       f"renderA speaker plate draws a different glyph; e.g. @{p0}: {w0}")
+        rep.add("pool_trampoline_tokens", False, "; ".join(msg))
     else:
         rep.add("pool_trampoline_tokens", True,
-                f"{len(refs)} referenced name-pool strings: 0 JP-band 2-byte tokens "
-                f"(trampoline-safe)")
+                f"{len(refs)} referenced name-pool strings: 0 JP-band 2-byte tokens; "
+                f"{n_plate} translated pilot names pure ZH-band (plate-safe)")
 
 
 def gate_name_pointer_band(rep, ctx):
