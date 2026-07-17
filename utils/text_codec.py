@@ -206,16 +206,30 @@ def make_macro_expander(code_bin: bytes, table_off: int):
     """Expander for 0xF0xx macros: index -> raw entry bytes (this codec again).
 
     The dictionary is a u16[N] offset table at table_off inside the code binary;
-    entry i lives at table_off + u16[i], NUL-terminated. N = u16[0] / 2."""
+    entry i lives at table_off + u16[i], NUL-terminated. N = u16[0] / 2.
+
+    The terminator scan is TOKEN-AWARE: a 2-byte glyph token may carry a 0x00
+    LOW byte inside a dictionary entry (the game's expander streams tokens, so
+    the low byte is data, not a terminator).  A byte-wise find(0x00) truncated
+    such entries mid-token — DICT_SYS 0x459 「完」 is stored E1 00, and the
+    orphaned E1 then mis-decoded as renderB '0': the （未0） class."""
     n = struct.unpack_from("<H", code_bin, table_off)[0] // 2
 
     def expand(idx: int) -> bytes | None:
-        if 0 <= idx < n:
-            off = struct.unpack_from("<H", code_bin, table_off + idx * 2)[0]
-            s = table_off + off
-            e = code_bin.find(b"\x00", s)
-            return code_bin[s:e] if e >= 0 else code_bin[s:]
-        return None
+        if not (0 <= idx < n):
+            return None
+        off = struct.unpack_from("<H", code_bin, table_off + idx * 2)[0]
+        s = table_off + off
+        j = s
+        while j < len(code_bin):
+            b = code_bin[j]
+            if b >= 0xE0 and j + 1 < len(code_bin):
+                j += 2
+                continue
+            if b == 0x00:
+                return code_bin[s:j]
+            j += 1
+        return code_bin[s:]
 
     return expand
 
