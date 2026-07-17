@@ -1,0 +1,15 @@
+{
+ "chunk": 6,
+ "verdicts": [
+  {"slot": 333, "claimed": "ヘ", "ok": true},
+  {"slot": 334, "claimed": "ベ", "ok": false, "correct": "ペ", "evidence": "diacritic is a handakuten ring (single top pixel then splits), unlike the dakuten two-strokes of ヴ(342); スペースノイド needs ペ"},
+  {"slot": 335, "claimed": "ホ", "ok": true},
+  {"slot": 336, "claimed": "ボ", "ok": false, "correct": "ポ", "evidence": "handakuten ring diacritic (not dakuten); アポリー (Apolly) requires ポ"},
+  {"slot": 337, "claimed": "ャ", "ok": false, "correct": "ヤ", "evidence": "glyph is full-size (ink h36 vs neighbor h33); ない/するヤツ demand large ヤ (small ャ can't follow い/る)"},
+  {"slot": 338, "claimed": "ユ", "ok": true},
+  {"slot": 339, "claimed": "ヨ", "ok": true},
+  {"slot": 341, "claimed": "ワ", "ok": true},
+  {"slot": 342, "claimed": "ヴ", "ok": true},
+  {"slot": 347, "claimed": "ν", "ok": true}
+ ]
+}

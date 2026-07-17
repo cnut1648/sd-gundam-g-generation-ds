@@ -1,0 +1,15 @@
+{
+ "chunk": 86,
+ "verdicts": [
+  {"slot": 1595, "claimed": "暴", "ok": true},
+  {"slot": 1596, "claimed": "望", "ok": true},
+  {"slot": 1598, "claimed": "冒", "ok": false, "correct": "棒", "evidence": "glyph draws 棒 (木 radical + 奉), a left-right char; pixel-exact to 棒 (IoU 1.0) not 冒 stacked boxes (0.26); jp_slot_chars=棒. slot_chars_extra mislabel"},
+  {"slot": 1599, "claimed": "謀", "ok": true},
+  {"slot": 1600, "claimed": "防", "ok": true},
+  {"slot": 1601, "claimed": "北", "ok": true},
+  {"slot": 1602, "claimed": "僕", "ok": true},
+  {"slot": 1605, "claimed": "翻", "ok": true},
+  {"slot": 1608, "claimed": "磨", "ok": true},
+  {"slot": 1609, "claimed": "魔", "ok": true}
+ ]
+}

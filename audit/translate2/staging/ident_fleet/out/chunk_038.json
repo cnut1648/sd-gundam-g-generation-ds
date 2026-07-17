@@ -1,0 +1,15 @@
+{
+ "chunk": 38,
+ "verdicts": [
+  {"slot": 828, "claimed": "裁", "ok": true},
+  {"slot": 830, "claimed": "際", "ok": true},
+  {"slot": 832, "claimed": "在", "ok": true},
+  {"slot": 834, "claimed": "罪", "ok": true},
+  {"slot": 838, "claimed": "作", "ok": true},
+  {"slot": 841, "claimed": "索", "ok": false, "correct": "策", "evidence": "得策 (best plan) not 得索; duplicates slot842 索, JIS baf6 fills 昨→察 gap, bitmap differs from 842"},
+  {"slot": 842, "claimed": "索", "ok": true},
+  {"slot": 843, "claimed": "察", "ok": true},
+  {"slot": 844, "claimed": "授", "ok": false, "correct": "拶", "evidence": "挨拶 (greeting) not 挨授; JIS bba2 fills 察→擦 gap, claimed 授=bcf8 breaks monotonic order"},
+  {"slot": 847, "claimed": "殺", "ok": true}
+ ]
+}

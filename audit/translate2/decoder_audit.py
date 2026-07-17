@@ -33,11 +33,10 @@ from render_oracle import Oracle  # noqa: E402
 from utils.extract import walkers as W  # noqa: E402
 import utils.extract.layout as L  # noqa: E402
 
-# The only atlas slots knowingly drawn without a resolved identity.  Both are
-# the two kanji of ONE already-translated bark (0.bin@0x19C14, "□□の呼吸っ
-# てやつをな", shipped ZH 不死队的本事); resisted candidate/corpus/ZH proof,
-# so left unidentified rather than guessed (guessing is the 戦/振 mistake).
-GAP_ALLOWLIST = {1997, 2149}
+# Every in-use atlas slot now has a confirmed identity (the 1068-slot
+# contextual VLM audit resolved 1997=阿 / 2149=吽, 阿吽の呼吸).  Empty = the
+# gate demands a full identity table.
+GAP_ALLOWLIST = set()
 
 jp, zh = open_roms()
 oracle = Oracle(Path(__file__).resolve().parents[2]
