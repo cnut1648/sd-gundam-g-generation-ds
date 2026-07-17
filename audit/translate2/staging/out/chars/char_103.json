@@ -1,0 +1,65 @@
+{
+ "entity": "char_103",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E4%BF%AE%E5%A1%94%E7%BA%B3%C2%B7%E5%93%88%E8%BF%AA",
+  "https://wiki.biligame.com/gundam/%E7%8B%AC%E7%9C%BC%E5%B7%A8%E4%BA%BA%E5%B0%8F%E9%98%9F",
+  "https://w.atwiki.jp/imperatorgirenv/pages/299.html",
+  "https://gundam-official.com/news/i/special-series/gundam-power-word/01_15947",
+  "https://forum.gamer.com.tw/Co.php?bsn=109&sn=616981",
+  "https://dic.pixiv.net/a/%E3%83%9F%E3%83%8F%E3%82%A4%E3%83%AB%E3%83%BB%E3%82%AB%E3%83%9F%E3%83%B3%E3%82%B9%E3%82%AD%E3%83%BC",
+  "https://bbs.nga.cn/read.php?tid=44119897"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 309,
+   "name_zh": "就是要乱来",
+   "cutin_zh": "乱来蛮干才是独眼巨人队！冲过去！！",
+   "notes": "基连的野望系列著名战斗台词、社区通行释义为乱来/蛮干才是独眼巨人队的作风（atwiki基连词条）。名称沿用现行、与名台词共用关键词乱来。"
+  },
+  {
+   "idn": 310,
+   "name_zh": "中弹的蠢货",
+   "cutin_zh": "会被敌人的子弹打中的蠢货、我的部队不需要！",
+   "notes": "0080第2话名台词的游戏变体（原句为味方の弾＝友军的子弹、此处改作敵の弾）。中文圈通行句式为会被XX子弹打中的蠢货、我的部队不需要、据此保留我的部队不需要的经典结尾。"
+  },
+  {
+   "idn": 311,
+   "name_zh": "为毁灭之物",
+   "cutin_zh": "为了即将毁灭之物……吗",
+   "notes": "0080第4话出击前夜施泰纳对米沙祝酒词的回应。米沙原句社区通行译法为为了即将毁灭之物、干杯（而非终将毁灭）、此处按施泰纳的反问口吻收束为……吗。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xC640", "zh": "没那么容易得逞！"},
+  {"file": "0.bin", "record": "0xC65C", "zh": "不能耽搁！……一口气上！"},
+  {"file": "0.bin", "record": "0xC67C", "zh": "绕不开吗……！"},
+  {"file": "0.bin", "record": "0xC694", "zh": "不能耽搁！……一口气上！"},
+  {"file": "0.bin", "record": "0xC6B4", "zh": "我来干掉你！"},
+  {"file": "0.bin", "record": "0xC6CC", "zh": "我们可不是来闹着玩的！！"},
+  {"file": "0.bin", "record": "0xC6F0", "zh": "绝不能让你逃！"},
+  {"file": "0.bin", "record": "0xC70C", "zh": "大意了！"},
+  {"file": "0.bin", "record": "0xC720", "zh": "呵……毁灭之物吗"},
+  {"file": "0.bin", "record": "0xC73C", "zh": "真不知天高地厚！！"},
+  {"file": "0.bin", "record": "0xC75C", "zh": "太嫩了……"},
+  {"file": "0.bin", "record": "0xC774", "zh": "啧……！"},
+  {"file": "0.bin", "record": "0xC788", "zh": "……没办法了、休想白白通过"},
+  {"file": "0.bin", "record": "0xC7AC", "zh": "大意了……！？"},
+  {"file": "0.bin", "record": "0xC7C4", "zh": "好个劲敌！"},
+  {"file": "0.bin", "record": "0xC7DC", "zh": "撑不久了……"},
+  {"file": "0.bin", "record": "0xC7F4", "zh": "竟造出这种东西……"},
+  {"file": "0.bin", "record": "0xC814", "zh": "我没蠢到被那东西打中！"},
+  {"file": "0.bin", "record": "0xC838", "zh": "12点！各机、散开！"},
+  {"file": "0.bin", "record": "0xC858", "zh": "那机体归我！"},
+  {"file": "0.bin", "record": "0xC870", "zh": "太窝囊了……"},
+  {"file": "0.bin", "record": "0xC888", "zh": "劝你别小看我们！"},
+  {"file": "1de.bin", "record": "0x3804", "zh": "全机齐上！准备好了吧！"},
+  {"file": "1de.bin", "record": "0x3824", "zh": "这边由我照应！放心去做！"},
+  {"file": "1de.bin", "record": "0x3848", "zh": "支援由我来！你从正面突击！！"},
+  {"file": "1de.bin", "record": "0x3870", "zh": "少给我添乱啊、巴尼！？"},
+  {"file": "1de.bin", "record": "0x3890", "zh": "这边由我照应！放心去做！"},
+  {"file": "1de.bin", "record": "0x38B4", "zh": "这边由我照应！放心去做！"},
+  {"file": "1de.bin", "record": "0x38D8", "zh": "这边由我照应！放心去做！"}
+ ],
+ "notes": "全部detail均非本entity所有（char_39/char_9）、按规范省略。0xC838的JP方位0時方向按中文军事习惯改记12点（数字1/2各1字节、预算内）、并保留各機、散れ的队长指挥句式。0xC720（ふふ……滅び行くもの……か）在15字节预算内以呵……毁灭之物吗呼应311名台词的祝酒梗。0xC814保留間抜け＝蠢字眼以呼应其名台词。1de.bin 0x3848的サボート为原文对サポート的笔误、按支援翻译。人名固定为施泰纳（德语姓Steiner的大陆标准音译、百科通行）、biligame条目标题作修塔纳·哈迪、仅作记录不建议改动。巴尼为バーニィ通行称呼（伯纳德·瓦兹曼的昵称）。"
+}

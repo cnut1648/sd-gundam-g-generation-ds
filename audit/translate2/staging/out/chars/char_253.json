@@ -1,0 +1,54 @@
+{
+ "entity": "char_253",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%88%E3%83%AA%E3%82%A8%E3%83%AB",
+  "https://gundam.fandom.com/wiki/Dee_Triel",
+  "https://zh.wikipedia.org/wiki/SD%E9%8B%BC%E5%BD%88G%E4%B8%96%E4%BB%A3"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 759,
+   "name_zh": "米吉多之火",
+   "cutin_zh": "……米吉多之火……",
+   "notes": "JP前置ーー为同化状态的空洞回声、以前置……呈现；米吉多之火为库内既定译名（军团姊妹cut-in同用）"
+  },
+  {
+   "idn": 760,
+   "name_zh": "万众归一",
+   "cutin_zh": "……因为万众归一……",
+   "notes": "全てで一つ=军团蜂巢意识格言、沿用库内既定译法（万众归一……此即军团）"
+  },
+  {
+   "idn": 761,
+   "name_zh": "邪恶之徒……",
+   "cutin_zh": "……邪恶之徒……",
+   "notes": "JP名字段本身截断为ーーT（原ROM数据即如此）、名沿用cut-in关键词；名64px恰好过检"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x218D8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x218EC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21900", "zh": "敌、碎……"},
+  {"file": "0.bin", "record": "0x21914", "zh": "恶……烧尽……"},
+  {"file": "0.bin", "record": "0x2192C", "zh": "审判……"},
+  {"file": "0.bin", "record": "0x21940", "zh": "以剑……"},
+  {"file": "0.bin", "record": "0x21954", "zh": "……收割……恶……"},
+  {"file": "0.bin", "record": "0x2196C", "zh": "军团……我……"},
+  {"file": "0.bin", "record": "0x21984", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21998", "zh": "………………"},
+  {"file": "0.bin", "record": "0x219AC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x219C0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x219D4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x219E8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x219FC", "zh": "！？"},
+  {"file": "0.bin", "record": "0x21A0C", "zh": "我……一部分……"},
+  {"file": "0.bin", "record": "0x21A20", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21A34", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21A48", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21A5C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21A70", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21A84", "zh": "敌、排除"}
+ ],
+ "notes": "D・トライアル=特里埃尔(char_248)被军团同化后的『D号试验体』状态（bio: 機械的なサポートによって他のレギオンと自我を共有）：全部台词为断续的机械腔、刻意保持残缺短语、不补全成通顺句。三条cut-in的JP前置ーー统一以前置……呈现空洞回声感。改动的bark：0x21940 用剑……→以剑……（6B=预算、更具肃清仪式感）；0x21954 ……杀……恶……→……收割……恶……（12B=预算、还原刈ル的收割意象、呼应米吉多审判）；0x21A0C 我……一部……→我……一部分……（8B=预算、一部单用不成词）。其余bark与详情持有者外字段保持原字节。レギオン按库内惯例=军团（82处）、与后句我……一部分……相扣。detail_effect均非本entity所有、未输出。"
+}

@@ -1,0 +1,63 @@
+{
+ "entity": "char_213",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E6%8B%89%E6%8B%89%C2%B7%E8%BE%9B",
+  "https://zh.moegirl.org.cn/%E6%8B%89%E6%8B%89%C2%B7%E8%BE%9B",
+  "https://note.com/tobita_kaoru/n/n93a843e9ca89",
+  "https://toukakurahashi.web.fc2.com/words41_Gundam.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 639,
+   "name_zh": "我能看见！",
+   "cutin_zh": "我能看见……！",
+   "notes": "名台词与指令名同源、ID名5格内保留！、省略号因预算舍去"
+  },
+  {
+   "idn": 640,
+   "name_zh": "不自然！",
+   "cutin_zh": "那……才是不自然的！",
+   "notes": "41话名场面·对阿姆罗「没有要守护的东西」的回答、社区通行译法为「那才是不自然的」；原名「那很不自然」平淡、改为保留核心词的感叹"
+  },
+  {
+   "idn": 641,
+   "name_zh": "必须打倒你",
+   "cutin_zh": "不打倒你……夏亚就会死！",
+   "detail_effect_zh": "封印对方队伍的散开与行动、攻击命中的对手ID封印1回合",
+   "notes": "名台词按社区通行译法「不打倒你、夏亚就会死！」补回原译缺失的「就」；原效果文「行动封印·解除封印·ID封印」有误（无解除封印、漏掉散开与1回合）、已按原文重译"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1C78C", "zh": "来了……上吧！"},
+  {"file": "0.bin", "record": "0x1C7A4", "zh": "都去吧……！"},
+  {"file": "0.bin", "record": "0x1C7BC", "zh": "欺负夏亚的坏人！"},
+  {"file": "0.bin", "record": "0x1C7D8", "zh": "对不起……只能这样了！"},
+  {"file": "0.bin", "record": "0x1C7F8", "zh": "为什么……只能这样相遇？"},
+  {"file": "0.bin", "record": "0x1C81C", "zh": "只能打倒……没办法啊！"},
+  {"file": "0.bin", "record": "0x1C83C", "zh": "为什么……只能这样相遇？"},
+  {"file": "0.bin", "record": "0x1C860", "zh": "对不起……只能这样了！"},
+  {"file": "0.bin", "record": "0x1C880", "zh": "啊啊啊！！"},
+  {"file": "0.bin", "record": "0x1C894", "zh": "这是什么！？有什么来了……！"},
+  {"file": "0.bin", "record": "0x1C8B8", "zh": "新人类……不是杀戮工具！"},
+  {"file": "0.bin", "record": "0x1C8DC", "zh": "你是为了什么而战？"},
+  {"file": "0.bin", "record": "0x1C8FC", "zh": "……唔！"},
+  {"file": "0.bin", "record": "0x1C910", "zh": "这个人……！？"},
+  {"file": "0.bin", "record": "0x1C928", "zh": "啊！大、大佐……！！"},
+  {"file": "0.bin", "record": "0x1C944", "zh": "为、为何能这样战斗！？"},
+  {"file": "0.bin", "record": "0x1C964", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1C978", "zh": "来了……"},
+  {"file": "0.bin", "record": "0x1C98C", "zh": "来了……"},
+  {"file": "0.bin", "record": "0x1C9A0", "zh": "请住手吧！不用再战下去了"},
+  {"file": "0.bin", "record": "0x1C9C4", "zh": "啊……！！"},
+  {"file": "0.bin", "record": "0x1C9D8", "zh": "还没！"},
+  {"file": "1de.bin", "record": "0x6C98", "zh": "各位！拜托！！"},
+  {"file": "1de.bin", "record": "0x6CB0", "zh": "要一起进攻对吧？明白了！"},
+  {"file": "1de.bin", "record": "0x6CD4", "zh": "大佐！我也帮忙！"},
+  {"file": "1de.bin", "record": "0x6CF0", "zh": "要一起进攻对吧？明白了！"},
+  {"file": "1de.bin", "record": "0x6D14", "zh": "要一起进攻对吧？明白了！"},
+  {"file": "1de.bin", "record": "0x6D38", "zh": "要一起进攻对吧？明白了！"},
+  {"file": "1de.bin", "record": "0x6D5C", "zh": "要一起进攻对吧？明白了！"}
+ ],
+ "notes": "拉拉·辛（ララァ・スン）、初代41话「光る宇宙」精神交感场面为语料核心、语气取温柔而悲切的敬体。0x1C978/0x1C98C原「来了……！」按简报字节规则为7字节超预算6、改为「来了……」；0x1C928补回原译缺失的「大、大佐」口吃与！！；0x1C910改保留！？的惊觉语气；0x1C8B8「殺し合いの道具」改译杀戮工具；1de支援台词原译按规则计24字节超预算23、改为22字节的「要一起进攻对吧？明白了！」。0x1C964与日文同为6个省略号字符。"
+}

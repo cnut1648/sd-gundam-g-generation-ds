@@ -1,0 +1,83 @@
+{
+ "entity": "unit_364",
+ "kind": "unit",
+ "utids": [
+  364,
+  365,
+  366
+ ],
+ "name_jp": "ターンX／月光蝶",
+ "name_zh_current": "倒X／月光蝶",
+ "name_zh_px": 64,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x21906BE",
+   "jp": "ビーム砲",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 38
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218C9AF",
+   "jp": "シャイニングフィンガー",
+   "zh_current": "闪光手指",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218A438",
+   "jp": "月光蝶",
+   "zh_current": "月光蝶",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 3,
+   "ptr": "0x219075E",
+   "jp": "ブラディーシージ",
+   "zh_current": "血之包围网",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 121,
+   "record_offset": "0x780",
+   "budget_bytes": 40,
+   "jp_segments": [
+    "I・フィールドキャンセラー自動修復：300",
+    "月光蝶システム：周囲1マスにダメージ"
+   ],
+   "zh_segments_current": [
+    "力场抵消自愈300",
+    "月光蝶系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E6E",
+   "jp": "月光蝶",
+   "zh_current": "月光蝶",
+   "owner": false,
+   "owned_by": "unit_7"
+  },
+  "defense": {
+   "record": 16,
+   "record_offset": "0x2d4",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し、",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": false,
+   "owned_by": "unit_7"
+  }
+ }
+}

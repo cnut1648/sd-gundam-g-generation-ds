@@ -1,0 +1,57 @@
+{
+ "entity": "char_140",
+ "web_sources": [
+  "https://ja.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%CE%96%CE%96%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+  "https://gundam-official.com/character/ebco6k1ov8nbfjg15trcpqrw",
+  "https://gundam.fandom.com/wiki/Torres",
+  "https://zh.moegirl.org.cn/%E5%B7%A6%E8%88%B7%E5%BC%B9%E5%B9%95%E5%A4%AA%E8%96%84%E4%BA%86",
+  "https://gundam.fandom.com/zh/wiki/%E7%B1%B3%E8%AB%BE%E5%A4%AB%E6%96%AF%E5%9F%BA%E7%B2%92%E5%AD%90"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 420,
+   "name_zh": "粒子散布！",
+   "cutin_zh": "米诺夫斯基粒子散布！",
+   "detail_effect_zh": "1回合内、除自身外的我方回避率提升10%",
+   "notes": "名台词沿用社区通行的舰桥口令译法（米诺夫斯基粒子散布）；指令名取名台词尾段、5格"
+  },
+  {
+   "idn": 421,
+   "name_zh": "航路畅通！",
+   "cutin_zh": "航路、畅通无阻！",
+   "notes": "统一用词：原译在指令/名台词用航道、战斗语音用航路、现全部统一为航路（与bark 0x1873C 航路通！一致）"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x12418", "zh": "现在！先发制敌！"},
+  {"file": "0.bin", "record": "0x12434", "zh": "主炮、看不见吗！？弹幕！"},
+  {"file": "0.bin", "record": "0x12454", "zh": "主炮、看不见吗！？张弹幕！"},
+  {"file": "0.bin", "record": "0x12478", "zh": "发射准备！瞄准了！"},
+  {"file": "0.bin", "record": "0x12498", "zh": "一齐射击！开火！开火！"},
+  {"file": "0.bin", "record": "0x124B8", "zh": "这可是战争！"},
+  {"file": "0.bin", "record": "0x124D0", "zh": "拦住敌人！"},
+  {"file": "0.bin", "record": "0x124E8", "zh": "别在那发呆！"},
+  {"file": "0.bin", "record": "0x12500", "zh": "可恶！不行了！准备弃舰！"},
+  {"file": "0.bin", "record": "0x12520", "zh": "呼……总算撑住了"},
+  {"file": "0.bin", "record": "0x1253C", "zh": "别开玩笑！岂能被击沉！"},
+  {"file": "0.bin", "record": "0x12560", "zh": "哇啊！弹幕、太薄了吧！？"},
+  {"file": "0.bin", "record": "0x12580", "zh": "竟敢为所欲为！！"},
+  {"file": "0.bin", "record": "0x1259C", "zh": "哇！回避机动、太慢了！"},
+  {"file": "0.bin", "record": "0x125BC", "zh": "等等、直击！？"},
+  {"file": "0.bin", "record": "0x125D4", "zh": "这、这样下去……真想发句牢骚……"},
+  {"file": "0.bin", "record": "0x125FC", "zh": "呼……我们算是走运的吗？"},
+  {"file": "0.bin", "record": "0x12620", "zh": "来了！别中弹！"},
+  {"file": "0.bin", "record": "0x12638", "zh": "攻击来了！全速回避！"},
+  {"file": "0.bin", "record": "0x12658", "zh": "好、捕获那敌机！"},
+  {"file": "0.bin", "record": "0x12674", "zh": "麻烦……这家伙！"},
+  {"file": "0.bin", "record": "0x12690", "zh": "少来这套！谁会投降！"},
+  {"file": "0.bin", "record": "0x186D4", "zh": "敌入射程！！"},
+  {"file": "0.bin", "record": "0x1873C", "zh": "航路通！"},
+  {"file": "0.bin", "record": "0x18822", "zh": "收到！"},
+  {"file": "0.bin", "record": "0x18848", "zh": "船体受损！！"},
+  {"file": "0.bin", "record": "0x188C0", "zh": "引擎出力下降！舰长！！"},
+  {"file": "0.bin", "record": "0x188F0", "zh": "布莱特舰长……！"}
+ ],
+ "notes": "托雷斯=Z/ZZ阿加玛舰桥操作员（布莱特麾下、通讯及索敌担当）、语气按军舰操作员口令风格统一。重点修正：0x12560原译（火力太猛了吧）把弾幕薄い（己方弹幕太薄、呼应布莱特名梗弹幕太薄了）译反、已改正；0x188F0按JP恢复布莱特称呼（13字节预算下このままでは从句放不下、以布莱特舰长……！保留呼喊与不安语气）；idn420效果原译丢失1回合与除自身外限定、已补全。0x1873C（预算6字节）保持原字节安全译文航路通！。"
+}

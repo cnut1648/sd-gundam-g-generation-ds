@@ -1,0 +1,620 @@
+{
+ "entity": "char_320",
+ "kind": "character",
+ "cids": [
+  320
+ ],
+ "name_jp": "グレミー&プルツー",
+ "name_zh_KEEP": "格雷米·普露兹",
+ "cards": [
+  {
+   "cid": 320,
+   "ids": [
+    {
+     "idn": 960,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8A8C",
+     "zh_name_ptr": "0x20B8A8C",
+     "name_jp": "……消えちゃえ！",
+     "name_zh_current": "给我消失",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 60,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+40%",
+     "cutin_group": 643,
+     "cutin_jp": "気持ち悪いの……消えちゃえ！",
+     "cutin_zh_current": "好恶心……消失吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 961,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8A95",
+     "zh_name_ptr": "0x20B8A95",
+     "name_jp": "戦うんだ、プルツー！",
+     "name_zh_current": "战吧普露兹",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 50,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 644,
+     "cutin_jp": "戦え……！戦うんだ、プルツー！",
+     "cutin_zh_current": "战斗吧……！战斗啊、普露兹！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [],
+ "barks_shared_readonly": [
+  {
+   "file": "0.bin",
+   "record": "0x24680",
+   "budget_bytes": 14,
+   "jp": "戦いには機というものがある！",
+   "zh_current": "战斗讲究时机！！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2469C",
+   "budget_bytes": 12,
+   "jp": "いつまでも好きにはさせんぞ！",
+   "zh_current": "别想再得逞！！",
+   "zh_current_bytes": 12,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x246B4",
+   "budget_bytes": 12,
+   "jp": "いつまでも好きにはさせんぞ！",
+   "zh_current": "别想再得逞！！",
+   "zh_current_bytes": 12,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x246CC",
+   "budget_bytes": 25,
+   "jp": "運命の女神は、このグレミーに必ず微笑んでくれる……",
+   "zh_current": "命运女神、必向格雷米微笑……",
+   "zh_current_bytes": 23,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x246F4",
+   "budget_bytes": 20,
+   "jp": "ジオンの血の王国を私は再現するのだ！",
+   "zh_current": "吉翁血统王国、由我重现！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24714",
+   "budget_bytes": 21,
+   "jp": "私には果たさねばならぬ使命があるのだ！",
+   "zh_current": "我身负使命、必须达成！",
+   "zh_current_bytes": 19,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24738",
+   "budget_bytes": 27,
+   "jp": "大義持たぬ俗物どもめ！我が面前から消え失せよ！",
+   "zh_current": "无义的俗物！！从我面前消失！",
+   "zh_current_bytes": 23,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24760",
+   "budget_bytes": 30,
+   "jp": "私自らが選び取った道だ！後悔など微□もない！",
+   "zh_current": "这是我亲自选择的路、绝无后悔！！",
+   "zh_current_bytes": 27,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2478C",
+   "budget_bytes": 21,
+   "jp": "わ、私は今まで……何をやってきたのだ……",
+   "zh_current": "我至今……都做了什么……",
+   "zh_current_bytes": 18,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x247B0",
+   "budget_bytes": 27,
+   "jp": "この機体の機動性があれば貴様らなど敵ではないっ！",
+   "zh_current": "凭这机体的机动性、你们算什么！",
+   "zh_current_bytes": 27,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x247D8",
+   "budget_bytes": 26,
+   "jp": "まっ…負けられぬのだ！我が使命を果たすまでは！！",
+   "zh_current": "决不能输啊！在使命完成之前！",
+   "zh_current_bytes": 25,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24800",
+   "budget_bytes": 13,
+   "jp": "この私を甘く見るなっ！！",
+   "zh_current": "竟敢小看我！！",
+   "zh_current_bytes": 11,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2481C",
+   "budget_bytes": 19,
+   "jp": "なぜ戦う！？正義を持たぬ貴様が！",
+   "zh_current": "为何而战！？无义的你！",
+   "zh_current_bytes": 18,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2483C",
+   "budget_bytes": 17,
+   "jp": "貴様が戦っているのは状況にすぎん！",
+   "zh_current": "你只是顺着形势打！",
+   "zh_current_bytes": 17,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2485C",
+   "budget_bytes": 21,
+   "jp": "うっ！しまった！……私の油断か……！？",
+   "zh_current": "唔！不好！……是流弹吗！？",
+   "zh_current_bytes": 20,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24880",
+   "budget_bytes": 31,
+   "jp": "クッ！……なんだ？この肌にまとわりつく不快感は？",
+   "zh_current": "唔！……什么？这缠身的不快感是？",
+   "zh_current_bytes": 27,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x248AC",
+   "budget_bytes": 31,
+   "jp": "これも天の導き……天は私に勝利せよと言っているのだ！",
+   "zh_current": "这也是天意……上天命我取胜！！",
+   "zh_current_bytes": 24,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x248D8",
+   "budget_bytes": 15,
+   "jp": "ええい！貴様らごときにっ！",
+   "zh_current": "可恶！就凭你们！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x248F4",
+   "budget_bytes": 21,
+   "jp": "ふっ、来たか！！各機、散開してやり過ごせ！",
+   "zh_current": "哼、来了！！各机散开躲避！",
+   "zh_current_bytes": 19,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24918",
+   "budget_bytes": 28,
+   "jp": "その機体はネオ·ジオンの為に有効に利用させてもらう！",
+   "zh_current": "那机体、归新吉翁所用！",
+   "zh_current_bytes": 18,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24940",
+   "budget_bytes": 27,
+   "jp": "くっ！捕まってしまったのか！？これまでとは……っ！",
+   "zh_current": "唔！竟被捕获了！？到此为止……",
+   "zh_current_bytes": 24,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24968",
+   "budget_bytes": 23,
+   "jp": "冗談ではない！そんな簡単に捕まってたまるか！",
+   "zh_current": "笑话！岂会轻易被抓！！",
+   "zh_current_bytes": 19,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2498C",
+   "budget_bytes": 18,
+   "jp": "やれっ！敵の頭を押さえるのだ！！",
+   "zh_current": "上！拿下他们！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x249AC",
+   "budget_bytes": 6,
+   "jp": "そこだっ！！",
+   "zh_current": "在那！！",
+   "zh_current_bytes": 6,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x249C0",
+   "budget_bytes": 13,
+   "jp": "ネオ·ジオンの栄光の為に！",
+   "zh_current": "为新吉翁荣光！",
+   "zh_current_bytes": 13,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x249DC",
+   "budget_bytes": 24,
+   "jp": "兵士諸君よ！今こそジオンの栄光を築く時だ！！",
+   "zh_current": "诸君！建立吉翁荣光、正当时！",
+   "zh_current_bytes": 23,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A18",
+   "budget_bytes": 10,
+   "jp": "よし、やれいっ！！",
+   "zh_current": "好、上吧！！",
+   "zh_current_bytes": 8,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A30",
+   "budget_bytes": 12,
+   "jp": "我々には大義があるのだ！",
+   "zh_current": "我们自有大义！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A48",
+   "budget_bytes": 12,
+   "jp": "我々には大義があるのだ！",
+   "zh_current": "我们自有大义！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A60",
+   "budget_bytes": 12,
+   "jp": "我々には大義があるのだ！",
+   "zh_current": "我们自有大义！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A78",
+   "budget_bytes": 20,
+   "jp": "おのれっ！この借りは必ず返すぞ！！",
+   "zh_current": "该死！！此仇必报！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24A98",
+   "budget_bytes": 24,
+   "jp": "運命の女神は、このグレミーに必ず微笑んでくれる！",
+   "zh_current": "命运女神、必向格雷米微笑！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24ABC",
+   "budget_bytes": 29,
+   "jp": "この私が貴様らのような俗人に討たれるはずがないのだ！",
+   "zh_current": "我岂能输给你们这样的俗人！！",
+   "zh_current_bytes": 24,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24AE8",
+   "budget_bytes": 18,
+   "jp": "ふっ……しょせんはこの程度か！！",
+   "zh_current": "哼……就这点程度！！",
+   "zh_current_bytes": 16,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24B08",
+   "budget_bytes": 21,
+   "jp": "ひるむな！勝機は我らにこそあるのだ！！",
+   "zh_current": "别怕！胜机在我方！！",
+   "zh_current_bytes": 15,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24B2C",
+   "budget_bytes": 28,
+   "jp": "ええっ…い！！調子に乗っていられるのも今のうちだ！",
+   "zh_current": "可恶……！得意不了多久了！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24B54",
+   "budget_bytes": 24,
+   "jp": "おのれっ！我らの偉業を阻むつもりか！？",
+   "zh_current": "该死！想阻挠我们的伟业！？",
+   "zh_current_bytes": 21,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24B78",
+   "budget_bytes": 23,
+   "jp": "い、今は耐えよ！勝機は必ずやってくるはずだ！",
+   "zh_current": "忍、忍耐！胜机必定会到来！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24B9C",
+   "budget_bytes": 24,
+   "jp": "運命の女神は、このグレミーに必ず微笑んでくれる！",
+   "zh_current": "命运女神、必向格雷米微笑！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24BC0",
+   "budget_bytes": 8,
+   "jp": "無駄弾を……！",
+   "zh_current": "浪费弹药",
+   "zh_current_bytes": 8,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24BD4",
+   "budget_bytes": 8,
+   "jp": "無駄弾を……！",
+   "zh_current": "浪费弹药",
+   "zh_current_bytes": 8,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24BE8",
+   "budget_bytes": 28,
+   "jp": "その機体はネオ·ジオンの為に有効に利用させてもらう！",
+   "zh_current": "那机体为新吉翁有效利用！",
+   "zh_current_bytes": 21,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24C10",
+   "budget_bytes": 27,
+   "jp": "これではネオ·ジオンの再興など、夢物語だな……",
+   "zh_current": "这样新吉翁复兴……只是梦话……",
+   "zh_current_bytes": 26,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24C38",
+   "budget_bytes": 24,
+   "jp": "このような無礼な行為を許すわけにはいかないな！",
+   "zh_current": "这等无礼、我决不允许！！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24C5C",
+   "budget_bytes": 22,
+   "jp": "私たちの行く手を阻む者など何もない！！",
+   "zh_current": "谁也挡不住我们的去路！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24C80",
+   "budget_bytes": 22,
+   "jp": "プルツー……お前の力、このグレミーがもらう！",
+   "zh_current": "普露兹……力量归格雷米了！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24CA4",
+   "budget_bytes": 22,
+   "jp": "お前を縛ろうとする敵を倒せプルツー！",
+   "zh_current": "想抓你的敌人、打倒吧！！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24D00",
+   "budget_bytes": 26,
+   "jp": "敵を倒すのだ！そうすればお前の気分も良くなる！",
+   "zh_current": "消灭敌人！心情就会好起来！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24D4C",
+   "budget_bytes": 16,
+   "jp": "私には戦わねばならぬ大義がある！",
+   "zh_current": "我有必战的大义！！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24D83",
+   "budget_bytes": 22,
+   "jp": "敵がいる限り、痛みは止まらんのだぞ！",
+   "zh_current": "有敌人在、疼痛就不会停！！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24DA8",
+   "budget_bytes": 27,
+   "jp": "お前と私の力で敵を宇宙の暗闇に落としてくれる！",
+   "zh_current": "用你我之力、让敌人坠入黑暗！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24DD0",
+   "budget_bytes": 29,
+   "jp": "そ、そんな！？二人の力をもってしても勝てないのか！？",
+   "zh_current": "怎、怎么会！？二人之力也打不赢！？",
+   "zh_current_bytes": 27,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24DFC",
+   "budget_bytes": 28,
+   "jp": "自ら過酷な生き方を選んだ私が負けるわけがないのだ！",
+   "zh_current": "选了残酷路的我不可能输！",
+   "zh_current_bytes": 22,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24E40",
+   "budget_bytes": 11,
+   "jp": "そんなものが効くかっ！",
+   "zh_current": "那玩意没用！！",
+   "zh_current_bytes": 11,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24E88",
+   "budget_bytes": 19,
+   "jp": "おのれっ！あくまで私に逆らうのかっ！！",
+   "zh_current": "该死！！还要违抗我！",
+   "zh_current_bytes": 15,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24EA8",
+   "budget_bytes": 17,
+   "jp": "くっ！使命ある私がこんな……！！",
+   "zh_current": "唔！有使命的我竟……！",
+   "zh_current_bytes": 17,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24EC8",
+   "budget_bytes": 24,
+   "jp": "貴様らに私とプルツーは倒せん！失せよっ！！",
+   "zh_current": "你们打不倒我和普露兹！！",
+   "zh_current_bytes": 21,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24EFF",
+   "budget_bytes": 10,
+   "jp": "よしっ！回避だっ！",
+   "zh_current": "好！回避！",
+   "zh_current_bytes": 6,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24F2C",
+   "budget_bytes": 25,
+   "jp": "我らの崇高なる戦い……貴様らに邪魔はさせんっ！",
+   "zh_current": "我们崇高之战……休想妨碍！！",
+   "zh_current_bytes": 23,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24F54",
+   "budget_bytes": 18,
+   "jp": "私は……後悔などしていない……！",
+   "zh_current": "我……绝不后悔……！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_318"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24F74",
+   "budget_bytes": 20,
+   "jp": "ええいっ！我らの前から消え失せよ！！",
+   "zh_current": "可恶！快从眼前消失！！",
+   "zh_current_bytes": 18,
+   "owned_by": "char_318"
+  }
+ ]
+}

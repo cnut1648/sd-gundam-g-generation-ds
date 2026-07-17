@@ -1,0 +1,66 @@
+{
+ "entity": "unit_391",
+ "kind": "unit",
+ "utids": [
+  391,
+  392,
+  393
+ ],
+ "name_jp": "テラ・スオーノ",
+ "name_zh_current": "泰拉·斯欧诺",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C838",
+   "jp": "メガ粒子砲",
+   "zh_current": "米加粒子炮",
+   "shared_by_n_units": 77
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218A05E",
+   "jp": "ストライカー・ビット",
+   "zh_current": "突击浮游炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C8E1",
+   "jp": "ハイパー・メガ粒子砲",
+   "zh_current": "超级米加粒子炮",
+   "shared_by_n_units": 10
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 130,
+   "record_offset": "0x870",
+   "budget_bytes": 32,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "システム・セイレーネ：攻撃時、SPにダメージを与える"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "塞壬系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

@@ -1,0 +1,272 @@
+{
+ "entity": "char_355",
+ "kind": "character",
+ "cids": [
+  355
+ ],
+ "name_jp": "ワッケイン",
+ "name_zh_KEEP": "瓦肯",
+ "cards": [
+  {
+   "cid": 355,
+   "ids": [
+    {
+     "idn": 1065,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8DC7",
+     "zh_name_ptr": "0x2328725",
+     "name_jp": "戦法は正攻法……",
+     "name_zh_current": "战法即正攻",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命甲↑",
+     "didx": 102,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·装甲+2",
+     "cutin_group": 712,
+     "cutin_jp": "戦法は正攻法……正面より攻撃する！",
+     "cutin_zh_current": "战法乃正攻法……从正面进攻！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1066,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8DD2",
+     "zh_name_ptr": "0x20B8DD2",
+     "name_jp": "寒い時代だとは思わんか？",
+     "name_zh_current": "寒冷的时代",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 713,
+     "cutin_jp": "寒い時代だとは思わんか？",
+     "cutin_zh_current": "不觉得这是个寒冷的时代吗？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1067,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8DE0",
+     "zh_name_ptr": "0x2328733",
+     "name_jp": "考える余地はないな……",
+     "name_zh_current": "没考虑余地",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 714,
+     "cutin_jp": "考える余地はないな……敵を排除する！",
+     "cutin_zh_current": "没有思考的余地……歼灭敌人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x29744",
+   "budget_bytes": 17,
+   "jp": "先制攻撃を仕掛けるぞ！全砲門開け！",
+   "zh_current": "先制攻击！炮门全开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29764",
+   "budget_bytes": 8,
+   "jp": "！発射！",
+   "zh_current": "！放！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2978F",
+   "budget_bytes": 12,
+   "jp": "目標は正面！撃てッ！",
+   "zh_current": "正面！开火！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x297A8",
+   "budget_bytes": 11,
+   "jp": "11時方向に火力を集中！",
+   "zh_current": "火力集中11点！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x297DC",
+   "budget_bytes": 15,
+   "jp": "スタンバイ……撃てッ！",
+   "zh_current": "预备……开火！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x297F8",
+   "budget_bytes": 8,
+   "jp": "！発射！",
+   "zh_current": "！放！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2980C",
+   "budget_bytes": 8,
+   "jp": "最大戦速で前進！",
+   "zh_current": "全速前进！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29820",
+   "budget_bytes": 23,
+   "jp": "同航戦用意！！一斉射撃で敵を討つ！",
+   "zh_current": "同航战准备！齐射歼敌！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29844",
+   "budget_bytes": 14,
+   "jp": "くっ……！ここまでか……",
+   "zh_current": "到此为止了吗……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29860",
+   "budget_bytes": 23,
+   "jp": "第一戦闘速度で前進！！敵砲火にはかまうな！",
+   "zh_current": "一级战速前进！无视敌炮！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29884",
+   "budget_bytes": 17,
+   "jp": "回避運動を継続！気を抜くな！",
+   "zh_current": "继续回避！别松懈！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x298A4",
+   "budget_bytes": 20,
+   "jp": "考えるまでもない！このまま敵を排除する！",
+   "zh_current": "无需多想！击破敌人！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x298C4",
+   "budget_bytes": 16,
+   "jp": "……ッ！！被害報告急げッ！",
+   "zh_current": "……！！快报告损害！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x298E0",
+   "budget_bytes": 14,
+   "jp": "クッ……！手強い……！！",
+   "zh_current": "唔……好难缠……！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x298FC",
+   "budget_bytes": 14,
+   "jp": "しまった……謀られたか！！",
+   "zh_current": "糟糕、被突破了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29918",
+   "budget_bytes": 19,
+   "jp": "まだだ……！まだ沈んではならん！",
+   "zh_current": "还没完！还不能沉没！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29938",
+   "budget_bytes": 9,
+   "jp": "愚かなことを……！",
+   "zh_current": "真愚蠢……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29950",
+   "budget_bytes": 8,
+   "jp": "来るか……だが！",
+   "zh_current": "来了吗、哼",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29964",
+   "budget_bytes": 8,
+   "jp": "各機、散開っ！！",
+   "zh_current": "各机散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29978",
+   "budget_bytes": 19,
+   "jp": "抵抗は無駄だ！大人しく機体を捨てろ！",
+   "zh_current": "抵抗无用！乖乖弃机！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29998",
+   "budget_bytes": 5,
+   "jp": "くっ……！",
+   "zh_current": "唔……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x299AC",
+   "budget_bytes": 8,
+   "jp": "そうはいかんっ！",
+   "zh_current": "你休想！！",
+   "zh_current_bytes": 8
+  }
+ ]
+}

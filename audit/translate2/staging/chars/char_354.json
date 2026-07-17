@@ -1,0 +1,272 @@
+{
+ "entity": "char_354",
+ "kind": "character",
+ "cids": [
+  354
+ ],
+ "name_jp": "レズン",
+ "name_zh_KEEP": "蕾兹",
+ "cards": [
+  {
+   "cid": 354,
+   "ids": [
+    {
+     "idn": 1062,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8D9E",
+     "zh_name_ptr": "0x20B8D9E",
+     "name_jp": "アタシだけで掃除してやるよ！",
+     "name_zh_current": "我一人收拾",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 709,
+     "cutin_jp": "アタシだけで掃除してやるよ！",
+     "cutin_zh_current": "我一人就能收拾你们！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1063,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8DAE",
+     "zh_name_ptr": "0x20B8DAE",
+     "name_jp": "ナマイキやっちゃって！",
+     "name_zh_current": "真狂妄啊！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 108,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·装甲+4",
+     "cutin_group": 710,
+     "cutin_jp": "ナマイキやっちゃって！",
+     "cutin_zh_current": "真是狂妄啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1064,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8DBA",
+     "zh_name_ptr": "0x20B8DBA",
+     "name_jp": "こういう時に数を減らす！",
+     "name_zh_current": "趁此减敌数",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 77,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 711,
+     "cutin_jp": "こういう時に数を減らす！",
+     "cutin_zh_current": "就趁现在多杀几个！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x294A4",
+   "budget_bytes": 21,
+   "jp": "はんっ！のこのこやられに来るとはね！！",
+   "zh_current": "哼！！傻乎乎来送死！！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x294C8",
+   "budget_bytes": 29,
+   "jp": "ニュータイプだ、強化人間だって…何もできなきゃしょうがないんだよ！",
+   "zh_current": "NT、强化人……没本事就白搭！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x294F4",
+   "budget_bytes": 11,
+   "jp": "見つけたよ！そこッ！！",
+   "zh_current": "找到你了！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2950C",
+   "budget_bytes": 24,
+   "jp": "強化人間だけに良い思いさせるつもりはないよ！",
+   "zh_current": "凭什么只让强化人威风！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29530",
+   "budget_bytes": 16,
+   "jp": "逃げられるなんて思わないことだね！",
+   "zh_current": "别以为你逃得掉！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2954C",
+   "budget_bytes": 13,
+   "jp": "MSは白兵戦がメインなんだよ！",
+   "zh_current": "MS主打近身战！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29568",
+   "budget_bytes": 8,
+   "jp": "もらったぁーっ！",
+   "zh_current": "赢定了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2957C",
+   "budget_bytes": 9,
+   "jp": "やらせてもらうよ！",
+   "zh_current": "让我来吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29594",
+   "budget_bytes": 25,
+   "jp": "あ…あたしが直撃を愛けている！？うわぁぁぁーっ！",
+   "zh_current": "我、我竟被直击！？哇啊啊啊！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x295BC",
+   "budget_bytes": 5,
+   "jp": "なめるな！",
+   "zh_current": "别狂！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x295D0",
+   "budget_bytes": 21,
+   "jp": "こっ、こんなことでやられるアタシじゃない！",
+   "zh_current": "凭这点伤输不了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x295F4",
+   "budget_bytes": 11,
+   "jp": "ナマイキやっちゃって！",
+   "zh_current": "别太嚣张了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2960C",
+   "budget_bytes": 15,
+   "jp": "な！？このアタシに当てたのかい？",
+   "zh_current": "什么？竟打中我了？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29628",
+   "budget_bytes": 14,
+   "jp": "チッ！やるじゃないのさ！！",
+   "zh_current": "啧！有两下子嘛",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29644",
+   "budget_bytes": 13,
+   "jp": "なんなんだ！？この力は！？",
+   "zh_current": "什么！？这力量！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29660",
+   "budget_bytes": 24,
+   "jp": "バ、バカな！？このアタシが……押されてる！？",
+   "zh_current": "什么！？我竟被压制了！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29684",
+   "budget_bytes": 12,
+   "jp": "ダテじゃないってのさ！！",
+   "zh_current": "不是好惹的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2969C",
+   "budget_bytes": 23,
+   "jp": "そんなものに当たるほど間抜けじゃないんだよ！",
+   "zh_current": "那种东西怎么打得中我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x296C0",
+   "budget_bytes": 23,
+   "jp": "来るぞ！あんなフヌケた弾に当たるなよ！",
+   "zh_current": "来了！那种软弹可别撞上！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x296E4",
+   "budget_bytes": 24,
+   "jp": "カワイイよ、アンタいい子だからおとなしくしてな！",
+   "zh_current": "你真可爱、乖乖老实待着！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29708",
+   "budget_bytes": 25,
+   "jp": "くそっ！……これじゃあ何にもならないじゃないか！",
+   "zh_current": "可恶！……这样什么都做不成！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29730",
+   "budget_bytes": 8,
+   "jp": "冗談じゃないよ！",
+   "zh_current": "想得美！！",
+   "zh_current_bytes": 8
+  }
+ ]
+}

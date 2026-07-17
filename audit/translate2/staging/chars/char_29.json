@@ -1,0 +1,328 @@
+{
+ "entity": "char_29",
+ "kind": "character",
+ "cids": [
+  29
+ ],
+ "name_jp": "エルピー・プル",
+ "name_zh_KEEP": "艾露比·普露",
+ "cards": [
+  {
+   "cid": 29,
+   "ids": [
+    {
+     "idn": 87,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B71F6",
+     "zh_name_ptr": "0x20B71F6",
+     "name_jp": "ぷるぷるぷる〜っ♪",
+     "name_zh_current": "普露普露！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 50,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 55,
+     "cutin_jp": "ぷるぷるぷる〜っ♪",
+     "cutin_zh_current": "普露普露普露！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 88,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7205",
+     "zh_name_ptr": "0x20B7205",
+     "name_jp": "胸がきゅんきゅんする……",
+     "name_zh_current": "心跳得厉害",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 56,
+     "cutin_jp": "胸がきゆんきゆんする……とっても気持ちイイ！",
+     "cutin_zh_current": "心跳得好厉害……感觉超舒服！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 89,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7215",
+     "zh_name_ptr": "0x2329689",
+     "name_jp": "……宇宙へ帰れっ！",
+     "name_zh_current": "滚回宇宙去",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 57,
+     "cutin_jp": "不愉快なら……宇宙へ帰れっ！",
+     "cutin_zh_current": "不爽的话……就滚回宇宙去！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2FE8",
+   "budget_bytes": 13,
+   "jp": "そーは、いかないよーだ！！",
+   "zh_current": "没那么简单！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3004",
+   "budget_bytes": 12,
+   "jp": "！やっちゃえ！！",
+   "zh_current": "！上啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x301C",
+   "budget_bytes": 7,
+   "jp": "やってみる！！",
+   "zh_current": "试试看！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3030",
+   "budget_bytes": 8,
+   "jp": "やらせないっ！！",
+   "zh_current": "不让你！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3044",
+   "budget_bytes": 4,
+   "jp": "そこっ！",
+   "zh_current": "那！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3054",
+   "budget_bytes": 15,
+   "jp": "この敵、ざわざわして嫌いだ！",
+   "zh_current": "这家伙、烦死了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3070",
+   "budget_bytes": 13,
+   "jp": "あたしは、戦争やってんのよ！",
+   "zh_current": "我可是在打仗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x308C",
+   "budget_bytes": 5,
+   "jp": "どいてよ！",
+   "zh_current": "让开！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30A0",
+   "budget_bytes": 11,
+   "jp": "や、やられちゃった……",
+   "zh_current": "被打中了……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30B8",
+   "budget_bytes": 6,
+   "jp": "べーだ！！",
+   "zh_current": "切！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30CC",
+   "budget_bytes": 18,
+   "jp": "まだ……大丈夫……やられるもんか！",
+   "zh_current": "还没事……我才不会倒！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30EC",
+   "budget_bytes": 9,
+   "jp": "効かないよーだ！",
+   "zh_current": "没用啦！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3104",
+   "budget_bytes": 16,
+   "jp": "当たった！……読まれている！？",
+   "zh_current": "中了！被看穿了！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3120",
+   "budget_bytes": 13,
+   "jp": "うっ！……こいつ嫌いだーっ！",
+   "zh_current": "唔！讨厌死了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x313C",
+   "budget_bytes": 16,
+   "jp": "あぁっ！！おんなじにやる！？",
+   "zh_current": "啊啊！！一样的招！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3158",
+   "budget_bytes": 17,
+   "jp": "！……何なの？この不愉快さは……",
+   "zh_current": "！……什么？真不爽……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3178",
+   "budget_bytes": 11,
+   "jp": "私は、エルビー·プル！！！",
+   "zh_current": "人家是普露！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3190",
+   "budget_bytes": 9,
+   "jp": "当たんないよーだ！",
+   "zh_current": "打不中啦！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31A8",
+   "budget_bytes": 19,
+   "jp": "いやなものが来る……みんな避けてっ！",
+   "zh_current": "讨厌的东西来了！躲开！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31C8",
+   "budget_bytes": 25,
+   "jp": "もうやめようよ！誰もあなたをいじめないから、ねっ",
+   "zh_current": "别打了！！没人欺负你、好吗！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31F0",
+   "budget_bytes": 18,
+   "jp": "あ〜ん！捕まっちゃったよお〜！",
+   "zh_current": "呜哇！被抓住了啦！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3210",
+   "budget_bytes": 15,
+   "jp": "べー！捕まんないよお〜！",
+   "zh_current": "切！抓不到人家啦！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x9CC",
+   "budget_bytes": 14,
+   "jp": "お願い、みんな！力を貸して！！",
+   "zh_current": "拜托各位！支援！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x9E8",
+   "budget_bytes": 9,
+   "jp": "うん！やるよ！！",
+   "zh_current": "嗯！上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA00",
+   "budget_bytes": 8,
+   "jp": "任せて、ジュドー！！",
+   "zh_current": "交给我！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA14",
+   "budget_bytes": 16,
+   "jp": "うん！やろう！プルツー！！",
+   "zh_current": "嗯、上吧！普露兹！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA30",
+   "budget_bytes": 25,
+   "jp": "ジュドーが手伝えって言うからやってあげるんだからね！",
+   "zh_current": "既然捷多说了、就帮帮你吧！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA58",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA6C",
+   "budget_bytes": 24,
+   "jp": "エルビー·プルチーム攻撃固定応答セリフ05",
+   "zh_current": "普露、我来支援你了！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

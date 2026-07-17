@@ -1,0 +1,644 @@
+{
+ "entity": "char_119",
+ "kind": "character",
+ "cids": [
+  119,
+  121
+ ],
+ "name_jp": "プリベンター・W",
+ "name_zh_KEEP": "预防者·风",
+ "cards": [
+  {
+   "cid": 119,
+   "ids": [
+    {
+     "idn": 357,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AC8",
+     "zh_name_ptr": "0x20B7AC8",
+     "name_jp": "私の読みが正しかったな！",
+     "name_zh_current": "我料中了！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋先制攻撃",
+     "summary_zh_KEEP": "威命↑・先攻",
+     "didx": 140,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%先攻",
+     "cutin_group": 274,
+     "cutin_jp": "私の読みが正しかったな！こんな私でも少しは役立つという事だ！",
+     "cutin_zh_current": "我的判断果然没错……像我这样的人也能派上点用场！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_67",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 358,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AD6",
+     "zh_name_ptr": "0x20B7AD6",
+     "name_jp": "これくらいの事をしないと……！",
+     "name_zh_current": "不做可不行",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 275,
+     "cutin_jp": "これくらいの事をしないと誰も立ちあがることをしない！",
+     "cutin_zh_current": "不做到这种地步谁也不会站起来！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 359,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AE5",
+     "zh_name_ptr": "0x218C1F0",
+     "name_jp": "棺桶で眠っているわけには……",
+     "name_zh_current": "岂能长眠",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 276,
+     "cutin_jp": "おとなしく棺桶で眠っているわけにはいかんのでな！",
+     "cutin_zh_current": "要我老实地长眠在棺材里那可不行！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 121,
+   "ids": [
+    {
+     "idn": 363,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AF5",
+     "zh_name_ptr": "0x218C1E5",
+     "name_jp": "勝利を見せてくれ！！",
+     "name_zh_current": "让我见胜利",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 224,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 280,
+     "cutin_jp": "月光蝶よ！私に勝利を見せてくれ！！",
+     "cutin_zh_current": "月光蝶啊！让我见证胜利吧！",
+     "name_owner": false,
+     "name_shared_with_idn": 360,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 364,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AD6",
+     "zh_name_ptr": "0x20B7AD6",
+     "name_jp": "これくらいの事をしないと……！",
+     "name_zh_current": "不做可不行",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 281,
+     "cutin_jp": "これくらいの事をしないと誰も立ちあがることをしない！",
+     "cutin_zh_current": "不做到这种地步谁也不会站起来！",
+     "name_owner": true,
+     "name_shared_with_idn": 358,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 365,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AE5",
+     "zh_name_ptr": "0x218C1F0",
+     "name_jp": "棺桶で眠っているわけには……",
+     "name_zh_current": "岂能长眠",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 282,
+     "cutin_jp": "おとなしく棺桶で眠っているわけにはいかんのでな！",
+     "cutin_zh_current": "要我老实地长眠在棺材里那可不行！",
+     "name_owner": true,
+     "name_shared_with_idn": 359,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xEF64",
+   "budget_bytes": 24,
+   "jp": "私の読みが正しかったようだな……そこだ！！",
+   "zh_current": "我的判断没错……就是那里！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEF88",
+   "budget_bytes": 18,
+   "jp": "無理は承知！だがやらねばならん！",
+   "zh_current": "明知不可为、仍要为！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEFA8",
+   "budget_bytes": 17,
+   "jp": "第2のミリアルドは生み出させん！",
+   "zh_current": "别再有米利亚尔特！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEFC8",
+   "budget_bytes": 25,
+   "jp": "平和になじめぬ男も少しは役に立たんとな！",
+   "zh_current": "不适应和平的人也得出力！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEFF0",
+   "budget_bytes": 29,
+   "jp": "しょせんは血塗られた宿命……今さら逃れようとは思わん！！",
+   "zh_current": "终究是血染的命运、如今不想逃！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF01C",
+   "budget_bytes": 19,
+   "jp": "同じ過ちは……二度と繰り返させん！",
+   "zh_current": "不会让同样的错重演！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF03C",
+   "budget_bytes": 21,
+   "jp": "たとえ無理でもやってみせねばならんのだ！",
+   "zh_current": "纵使勉强、也非做不可！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF060",
+   "budget_bytes": 19,
+   "jp": "一機一機に手間取ってはいられんのだ！",
+   "zh_current": "没空一架一架地耗！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF080",
+   "budget_bytes": 14,
+   "jp": "クッ！ここまでとはな……",
+   "zh_current": "唔！竟至于此……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF09C",
+   "budget_bytes": 26,
+   "jp": "この火消しの風……甘く見てもらっては困る！",
+   "zh_current": "我这灭火之风、休想小看！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF0C4",
+   "budget_bytes": 21,
+   "jp": "そう簡単に死んでやるわけにはいかんな！",
+   "zh_current": "我可不会轻易赴死！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF0E8",
+   "budget_bytes": 16,
+   "jp": "チィッ！反応がわずかに遅れたか！",
+   "zh_current": "啧！慢了半拍！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF104",
+   "budget_bytes": 11,
+   "jp": "死なぬ程度には十分！！",
+   "zh_current": "这点死不了！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF11C",
+   "budget_bytes": 7,
+   "jp": "無理は承知！！",
+   "zh_current": "豁出去！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF130",
+   "budget_bytes": 14,
+   "jp": "何ッ！？これほどとは……！！",
+   "zh_current": "什么！？这么强！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF14C",
+   "budget_bytes": 21,
+   "jp": "ま、まだだ！まだ倒れるわけにはいかん！",
+   "zh_current": "还、还没！我不能倒下！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF170",
+   "budget_bytes": 19,
+   "jp": "今は余計なダメージを愛けておれんのだ！",
+   "zh_current": "现在不能再受伤了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF190",
+   "budget_bytes": 11,
+   "jp": "そう来るか……ならば！",
+   "zh_current": "这招吗……好！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF1A8",
+   "budget_bytes": 6,
+   "jp": "……来るぞ！",
+   "zh_current": "……来了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF1BC",
+   "budget_bytes": 24,
+   "jp": "ここは命を捨てるべき戦場ではないはずだ！",
+   "zh_current": "这里不是该舍命的战场！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF1E0",
+   "budget_bytes": 16,
+   "jp": "こ、この私を捕えるとは……！",
+   "zh_current": "竟、竟敢抓住我……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF1FC",
+   "budget_bytes": 7,
+   "jp": "……甘い！！",
+   "zh_current": "太天真！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4568",
+   "budget_bytes": 28,
+   "jp": "私だけでは力不足か……すまない、貴様らの力を借りるぞ！",
+   "zh_current": "仅凭我一人还不够……借你们之力！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4590",
+   "budget_bytes": 12,
+   "jp": "こちらウィンド！承知した！！",
+   "zh_current": "『风』、明白！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x45A8",
+   "budget_bytes": 21,
+   "jp": "了解だ、ファイア！ウィンドは支援に回る！！",
+   "zh_current": "明白、『火』！我去支援！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x45CC",
+   "budget_bytes": 26,
+   "jp": "いいだろう、我が友トレーズよ！手助けさせてもらうぞ！",
+   "zh_current": "好吧、吾友特列斯！让我来助你！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x45F4",
+   "budget_bytes": 19,
+   "jp": "了解だ、ゴールド！ウィンドは支援に回る！！",
+   "zh_current": "明白、『金』！我去支援！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4614",
+   "budget_bytes": 12,
+   "jp": "こちらウィンド！承知した！！",
+   "zh_current": "『风』、明白！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x462C",
+   "budget_bytes": 12,
+   "jp": "こちらウィンド！承知した！！",
+   "zh_current": "『风』、明白！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF4B8",
+   "budget_bytes": 24,
+   "jp": "私の読みが正しかったようだな……そこだ！！",
+   "zh_current": "我的判断没错……就是那里！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF4DC",
+   "budget_bytes": 18,
+   "jp": "無理は承知！だがやらねばならん！",
+   "zh_current": "明知不可为、仍要为！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF4FC",
+   "budget_bytes": 17,
+   "jp": "第2のミリアルドは生み出させん！",
+   "zh_current": "别再有米利亚尔特！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF51C",
+   "budget_bytes": 25,
+   "jp": "平和になじめぬ男も少しは役に立たんとな！",
+   "zh_current": "不适应和平的人也得出力！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF544",
+   "budget_bytes": 29,
+   "jp": "しょせんは血塗られた宿命……今さら逃れようとは思わん！！",
+   "zh_current": "终究是血染的命运、如今不想逃！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF570",
+   "budget_bytes": 19,
+   "jp": "同じ過ちは……二度と繰り返させん！",
+   "zh_current": "不会让同样的错重演！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF590",
+   "budget_bytes": 21,
+   "jp": "たとえ無理でもやってみせねばならんのだ！",
+   "zh_current": "纵使勉强、也非做不可！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF5B4",
+   "budget_bytes": 19,
+   "jp": "一機一機に手間取ってはいられんのだ！",
+   "zh_current": "没空一架一架地耗！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF5D4",
+   "budget_bytes": 14,
+   "jp": "クッ！ここまでとはな……",
+   "zh_current": "唔！竟至于此……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF5F0",
+   "budget_bytes": 26,
+   "jp": "この火消しの風……甘く見てもらっては困る！",
+   "zh_current": "我这灭火之风、休想小看！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF618",
+   "budget_bytes": 21,
+   "jp": "そう簡単に死んでやるわけにはいかんな！",
+   "zh_current": "我可不会轻易赴死！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF63C",
+   "budget_bytes": 16,
+   "jp": "チィッ！反応がわずかに遅れたか！",
+   "zh_current": "啧！慢了半拍！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF658",
+   "budget_bytes": 11,
+   "jp": "死なぬ程度には十分！！",
+   "zh_current": "这点死不了！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF670",
+   "budget_bytes": 7,
+   "jp": "無理は承知！！",
+   "zh_current": "豁出去！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF684",
+   "budget_bytes": 14,
+   "jp": "何ッ！？これほどとは……！！",
+   "zh_current": "什么！？这么强！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF6A0",
+   "budget_bytes": 21,
+   "jp": "ま、まだだ！まだ倒れるわけにはいかん！",
+   "zh_current": "还、还没！我不能倒下！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF6C4",
+   "budget_bytes": 19,
+   "jp": "今は余計なダメージを愛けておれんのだ！",
+   "zh_current": "现在不能再受伤了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF6E4",
+   "budget_bytes": 11,
+   "jp": "そう来るか……ならば！",
+   "zh_current": "这招吗……好！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF6FC",
+   "budget_bytes": 6,
+   "jp": "……来るぞ！",
+   "zh_current": "……来了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF710",
+   "budget_bytes": 24,
+   "jp": "ここは命を捨てるべき戦場ではないはずだ！",
+   "zh_current": "这里不是该舍命的战场！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF734",
+   "budget_bytes": 16,
+   "jp": "こ、この私を捕えるとは……！",
+   "zh_current": "竟、竟敢抓住我……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF750",
+   "budget_bytes": 7,
+   "jp": "……甘い！！",
+   "zh_current": "太天真！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4724",
+   "budget_bytes": 28,
+   "jp": "私だけでは力不足か……すまない、貴様らの力を借りるぞ！",
+   "zh_current": "仅凭我一人还不够……借你们之力！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x474C",
+   "budget_bytes": 12,
+   "jp": "こちらウィンド！承知した！！",
+   "zh_current": "『风』、明白！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4764",
+   "budget_bytes": 21,
+   "jp": "了解だ、ファイア！ウィンドは支援に回る！！",
+   "zh_current": "明白、『火』！我去支援！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4788",
+   "budget_bytes": 26,
+   "jp": "いいだろう、我が友トレーズよ！手助けさせてもらうぞ！",
+   "zh_current": "好吧、吾友特列斯！让我来助你！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x47B0",
+   "budget_bytes": 19,
+   "jp": "了解だ、ゴールド！ウィンドは支援に回る！！",
+   "zh_current": "明白、『金』！我去支援！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x47D0",
+   "budget_bytes": 26,
+   "jp": "プリベンター·Xチーム攻撃固定応答セリフ04",
+   "zh_current": "预防者X、全军突击！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x47F8",
+   "budget_bytes": 26,
+   "jp": "プリベンター·Xチーム攻撃固定応答セリフ05",
+   "zh_current": "预防者X、全军突击！！",
+   "zh_current_bytes": 17
+  }
+ ]
+}

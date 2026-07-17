@@ -1,0 +1,328 @@
+{
+ "entity": "char_142",
+ "kind": "character",
+ "cids": [
+  142
+ ],
+ "name_jp": "ドズル・ザビ",
+ "name_zh_KEEP": "多兹鲁·扎比",
+ "cards": [
+  {
+   "cid": 142,
+   "ids": [
+    {
+     "idn": 426,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7D58",
+     "zh_name_ptr": "0x218C29E",
+     "name_jp": "…ザビ家の伝統を則る軍人だ",
+     "name_zh_current": "扎比家军人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 1,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复100%",
+     "cutin_group": 337,
+     "cutin_jp": "俺は軍人だ…ザビ家の伝統を創る軍人だ……死にはせん！",
+     "cutin_zh_current": "我是军人……开创扎比家传统的军人……我绝不会死！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_72",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 427,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7D6A",
+     "zh_name_ptr": "0x20B7D6A",
+     "name_jp": "ジオンの栄光をやらせはせん！",
+     "name_zh_current": "守吉翁荣光",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 338,
+     "cutin_jp": "貴様ごときにジオンの栄光をやらせはせん！",
+     "cutin_zh_current": "就凭你这种货色休想夺走吉翁荣光！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 428,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7D78",
+     "zh_name_ptr": "0x20B7D78",
+     "name_jp": "地獄に引きずり込んでやる！",
+     "name_zh_current": "拖你下地狱",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋散開封印",
+     "summary_zh_KEEP": "威力↑・封散",
+     "didx": 159,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加。チームの間接攻撃の際、相手が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·解除封印",
+     "cutin_group": 339,
+     "cutin_jp": "道連れに一人でも多く地獄に引きずり込んでやるわ！",
+     "cutin_zh_current": "拉更多人陪葬一起拖下地狱！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x12958",
+   "budget_bytes": 12,
+   "jp": "ええい、やらせはせんっ！",
+   "zh_current": "可恶、休想！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12970",
+   "budget_bytes": 32,
+   "jp": "このビグ·ザムが量産の暁には連邦なぞ物の数ではないわ！",
+   "zh_current": "等大扎姆量产之时、联邦不算什么！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1299C",
+   "budget_bytes": 32,
+   "jp": "このビグ·ザムが量産の暁には連邦なぞ物の数ではないわ！",
+   "zh_current": "等大扎姆量产之时、联邦不算什么！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x129C8",
+   "budget_bytes": 14,
+   "jp": "一人残らず片付けてくれるわ！",
+   "zh_current": "杀光、一个不留！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x129E4",
+   "budget_bytes": 30,
+   "jp": "可愛いミネバのためにも……この戦い、決して負けはせん！！",
+   "zh_current": "也为了米涅瓦……这一战决不能输！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12A10",
+   "budget_bytes": 17,
+   "jp": "貴様らごときにやらせはせんぞ！",
+   "zh_current": "凭你们也想得逞！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12A30",
+   "budget_bytes": 17,
+   "jp": "貴様らごときにやらせはせんぞ！",
+   "zh_current": "凭你们也想得逞！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12A50",
+   "budget_bytes": 14,
+   "jp": "一人残らず片付けてくれるわ！",
+   "zh_current": "杀光、一个不留！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12A6C",
+   "budget_bytes": 21,
+   "jp": "ぬおおっ！ゼナ、ミネバ……すまぬ！！",
+   "zh_current": "泽娜、米涅瓦……对不起！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12A90",
+   "budget_bytes": 13,
+   "jp": "ふんっ！甘いわァ！！",
+   "zh_current": "哼！太天真了！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12AAC",
+   "budget_bytes": 26,
+   "jp": "たかがこれしき！！国中の笑いものになるわァ！！",
+   "zh_current": "这点本事！！也想挡我去路吗！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12AD4",
+   "budget_bytes": 16,
+   "jp": "ははははっ！ムダなことを！！",
+   "zh_current": "哈哈哈！白费力气！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12AF0",
+   "budget_bytes": 10,
+   "jp": "なんの、これしき！！",
+   "zh_current": "区区这点！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12B08",
+   "budget_bytes": 6,
+   "jp": "ええい……！",
+   "zh_current": "可恶……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12B1C",
+   "budget_bytes": 19,
+   "jp": "ぬううっ！！こ、こんな力が……！",
+   "zh_current": "嗷啊啊！！这种力量！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12B3C",
+   "budget_bytes": 26,
+   "jp": "こ、この俺がいる限り……やらせはせんぞォ！！",
+   "zh_current": "只要我还在、就休想得逞！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12B64",
+   "budget_bytes": 26,
+   "jp": "この程度のビーム砲などどうということはないわッ！",
+   "zh_current": "这点光束炮、根本不算什么！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12B8C",
+   "budget_bytes": 16,
+   "jp": "おのれ！そうはさせるかっ！！",
+   "zh_current": "可恶！休想得逞！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12BA8",
+   "budget_bytes": 16,
+   "jp": "来るぞ……！散開してやり過ごせ！",
+   "zh_current": "来了……散开躲过去！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12BC4",
+   "budget_bytes": 22,
+   "jp": "大人しく降伏すれば命までは取らんぞ！？",
+   "zh_current": "乖乖投降、就饶你一命！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12BE8",
+   "budget_bytes": 18,
+   "jp": "なっ、なんだと！？この……俺が！",
+   "zh_current": "什、什么！？我竟……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12C08",
+   "budget_bytes": 20,
+   "jp": "やらせはせん！やらせはせんぞォ！！",
+   "zh_current": "休想！绝不让你得逞！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x529C",
+   "budget_bytes": 14,
+   "jp": "一斉攻撃だ！行けいっ！！",
+   "zh_current": "一齐攻击！上啊！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x52B8",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x52D0",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x52E8",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5300",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5318",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5330",
+   "budget_bytes": 9,
+   "jp": "うむ！行くぞ！！",
+   "zh_current": "嗯！上吧！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "entity": "char_301",
+ "kind": "character",
+ "cids": [
+  301
+ ],
+ "name_jp": "カーンズ",
+ "name_zh_KEEP": "卡恩兹",
+ "cards": [
+  {
+   "cid": 301,
+   "ids": [
+    {
+     "idn": 903,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8826",
+     "zh_name_ptr": "0x21945BF",
+     "name_jp": "コロニー市民のものだ！",
+     "name_zh_current": "宇宙归市民",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 595,
+     "cutin_jp": "宇宙は我々コロニー市民のものだ！",
+     "cutin_zh_current": "宇宙是我们殖民地市民的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 904,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8830",
+     "zh_name_ptr": "0x20B8830",
+     "name_jp": "我々はホワイトファングだ！",
+     "name_zh_current": "白色獠牙！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 596,
+     "cutin_jp": "我々はコロニーの革命闘士！ホワイトファングだ！",
+     "cutin_zh_current": "我们是殖民地的革命斗士！白色獠牙！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 905,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B883B",
+     "zh_name_ptr": "0x20B883B",
+     "name_jp": "消滅させるべきなのだ！",
+     "name_zh_current": "该被消灭了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑＋散開封印",
+     "summary_zh_KEEP": "命中↑・封散",
+     "didx": 158,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇。チームの間接攻撃の際、相手が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·解除封印",
+     "cutin_group": 597,
+     "cutin_jp": "我々の理想をくじく可能性のあるものは消滅させるべきなのだ！",
+     "cutin_zh_current": "凡有可能阻碍我们理想者都该被消灭！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_155",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x21CF8",
+   "budget_bytes": 17,
+   "jp": "我々に逆らうだと！？愚か者め！",
+   "zh_current": "敢违抗我们！？蠢货！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D18",
+   "budget_bytes": 10,
+   "jp": "必ず落してみせる！",
+   "zh_current": "一定打倒你！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D30",
+   "budget_bytes": 11,
+   "jp": "コロニーの未来のために！！",
+   "zh_current": "为了殖民地！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D48",
+   "budget_bytes": 20,
+   "jp": "全砲門開け！何としても撃ち落すのだ！！",
+   "zh_current": "打开全炮门！务必击落！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D68",
+   "budget_bytes": 24,
+   "jp": "我々の未来の為にやっておかねばならんのだ！",
+   "zh_current": "为了未来这是必须做的！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D8C",
+   "budget_bytes": 22,
+   "jp": "宇宙の平和の為に、今こそ立ち上がるのだ！！",
+   "zh_current": "为宇宙和平、现在奋起！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21DB0",
+   "budget_bytes": 18,
+   "jp": "宇宙は……我々コロニー市民のものだ！",
+   "zh_current": "宇宙属于我们市民！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21DD0",
+   "budget_bytes": 14,
+   "jp": "我々は誰の支配も愛けない！",
+   "zh_current": "我们不受支配！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21DEC",
+   "budget_bytes": 27,
+   "jp": "コロニーの自由のために！ホワイト·ファング……バンザーイ！！",
+   "zh_current": "为殖民地自由！白色獠牙万岁！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21E14",
+   "budget_bytes": 26,
+   "jp": "これは聖戦なのだ！コロニーの意志を守るための！！",
+   "zh_current": "这是圣战！为守护殖民地意志！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21E3C",
+   "budget_bytes": 23,
+   "jp": "お、おのれ……！コロニーの自由を奪う敵め！！",
+   "zh_current": "可恶……夺自由的敌人！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21E60",
+   "budget_bytes": 23,
+   "jp": "ふざけるな！これは子供の遊びではない！！",
+   "zh_current": "休想！这不是过家家！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21E84",
+   "budget_bytes": 23,
+   "jp": "我々には大義があるのだ！決して屈しはせん！",
+   "zh_current": "我们有大义！绝不低头！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21EA8",
+   "budget_bytes": 22,
+   "jp": "どうあっても、我々の邪魔をするつもりか！？",
+   "zh_current": "说什么、都要碍事吗！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21ECC",
+   "budget_bytes": 20,
+   "jp": "こ、こんな……こんなバカなことが……！！",
+   "zh_current": "怎么……竟有这种蠢事！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21EEC",
+   "budget_bytes": 18,
+   "jp": "い、いかん！ミリアルド司令……！！",
+   "zh_current": "米利亚尔特司令……！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F0C",
+   "budget_bytes": 11,
+   "jp": "そんなものは効かぬ！！",
+   "zh_current": "那东西没用！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F24",
+   "budget_bytes": 10,
+   "jp": "回避だ！回避しろ！！",
+   "zh_current": "回避！回避！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F3C",
+   "budget_bytes": 20,
+   "jp": "攻撃だと！？緊急回避だ！急げっ！！",
+   "zh_current": "攻击！？紧急回避！快！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F5C",
+   "budget_bytes": 10,
+   "jp": "無駄な抵抗は止めろ！",
+   "zh_current": "停止抵抗！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F74",
+   "budget_bytes": 14,
+   "jp": "ぬうう、なんということだ！",
+   "zh_current": "唔、怎会这样！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F90",
+   "budget_bytes": 18,
+   "jp": "面白い冗談だが……笑えんな！！",
+   "zh_current": "有趣……但我笑不出！",
+   "zh_current_bytes": 15
+  }
+ ]
+}

@@ -1,0 +1,1112 @@
+{
+ "entity": "char_148",
+ "kind": "character",
+ "cids": [
+  148,
+  149,
+  150
+ ],
+ "name_jp": "ドモン（明鏡止水）",
+ "name_zh_KEEP": "多蒙（明镜止水）",
+ "cards": [
+  {
+   "cid": 148,
+   "ids": [
+    {
+     "idn": 444,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7DEE",
+     "zh_name_ptr": "0x218C2BF",
+     "name_jp": "俺も、燃える！！",
+     "name_zh_current": "我也要燃烧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 89,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）回避+20%·装甲+2",
+     "cutin_group": 352,
+     "cutin_jp": "お前が強くなればなるほど……俺も、燃える！！",
+     "cutin_zh_current": "你越是变强……我也越是燃烧！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 445,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7DF7",
+     "zh_name_ptr": "0x218C2CA",
+     "name_jp": "復讐は消えて行く……",
+     "name_zh_current": "复仇在消逝",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋0回避",
+     "summary_zh_KEEP": "威命・必闪",
+     "didx": 183,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%完全回避",
+     "cutin_group": 353,
+     "cutin_jp": "消える…俺の怒りと悲しみ……復重は消えて行く……",
+     "cutin_zh_current": "消逝吧……我的怒火与悲伤……复仇之心也渐渐消逝……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 446,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7DCD",
+     "zh_name_ptr": "0x218C2B4",
+     "name_jp": "つらい運命だろうと戦い抜く！",
+     "name_zh_current": "再苦也要战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 354,
+     "cutin_jp": "どんなにつらい運命だろうと戦い抜く！",
+     "cutin_zh_current": "无论命运多么痛苦也要战斗到底！",
+     "name_owner": false,
+     "name_shared_with_idn": 437,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 149,
+   "ids": [
+    {
+     "idn": 447,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7DEE",
+     "zh_name_ptr": "0x218C2BF",
+     "name_jp": "俺も、燃える！！",
+     "name_zh_current": "我也要燃烧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 89,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）回避+20%·装甲+2",
+     "cutin_group": 355,
+     "cutin_jp": "お前が強くなればなるほど……俺も、燃える！！",
+     "cutin_zh_current": "你越是变强……我也越是燃烧！！",
+     "name_owner": true,
+     "name_shared_with_idn": 444,
+     "detail_owner": false,
+     "detail_owned_by": "char_148",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 448,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7DF7",
+     "zh_name_ptr": "0x218C2CA",
+     "name_jp": "復讐は消えて行く……",
+     "name_zh_current": "复仇在消逝",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 248,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と攻撃力が40%ずつ上昇、攻撃を必ず回避。相手の特殊防御を無効化",
+     "detail_zh_current": "使無条件·战斗中对象·本机（效果）命中率+40%·攻击+40%完全回避·破防使用条件：战斗中対象：仅自身（效果）命中率+20%·回避+40%攻击+40%使用条件：战斗中対象：仅自身（效果）攻击+40%·暴击·完全回避破防·破甲",
+     "cutin_group": 356,
+     "cutin_jp": "消える…俺の怒りと悲しみ……復重は消えて行く……",
+     "cutin_zh_current": "消逝吧……我的怒火与悲伤……复仇之心也渐渐消逝……",
+     "name_owner": true,
+     "name_shared_with_idn": 445,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 449,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7DCD",
+     "zh_name_ptr": "0x218C2B4",
+     "name_jp": "つらい運命だろうと戦い抜く！",
+     "name_zh_current": "再苦也要战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 357,
+     "cutin_jp": "どんなにつらい運命だろうと戦い抜く！",
+     "cutin_zh_current": "无论命运多么痛苦也要战斗到底！",
+     "name_owner": false,
+     "name_shared_with_idn": 437,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 150,
+   "ids": [
+    {
+     "idn": 450,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7E02",
+     "zh_name_ptr": "0x20B7E02",
+     "name_jp": "俺はもう失いたくない……",
+     "name_zh_current": "不想再失去",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护・必闪",
+     "didx": 184,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）チームへの攻撃を全て引き愛け、その攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军·完全回避",
+     "cutin_group": 358,
+     "cutin_jp": "俺はもう失いたくない……かけがえのない人々を！",
+     "cutin_zh_current": "我再也不想失去……那些无可替代的人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 451,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7DDD",
+     "zh_name_ptr": "0x20B7DDD",
+     "name_jp": "人の完路を邪魔する者は……",
+     "name_zh_current": "妨碍恋爱者",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 204,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化し、相手の特殊防御を無効化。敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避破防",
+     "cutin_group": 359,
+     "cutin_jp": "人の恋路を邪魔する奴は……馬に蹴られて地獄行きだぁぁっ！",
+     "cutin_zh_current": "妨碍他人恋爱者……就该被马踢下地狱去！",
+     "name_owner": false,
+     "name_shared_with_idn": 442,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 452,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7DCD",
+     "zh_name_ptr": "0x218C2B4",
+     "name_jp": "つらい運命だろうと戦い抜く！",
+     "name_zh_current": "再苦也要战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 360,
+     "cutin_jp": "どんなにつらい運命だろうと戦い抜く！",
+     "cutin_zh_current": "无论命运多么痛苦也要战斗到底！",
+     "name_owner": false,
+     "name_shared_with_idn": 437,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x136B8",
+   "budget_bytes": 18,
+   "jp": "しょせんキサマはファイターにあらずっ！！",
+   "zh_current": "你终究算不上斗士！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x136D8",
+   "budget_bytes": 10,
+   "jp": "くらえッ！！",
+   "zh_current": "看招！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x136F0",
+   "budget_bytes": 8,
+   "jp": "はぁぁぁぁ……！",
+   "zh_current": "哈啊啊……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13704",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13718",
+   "budget_bytes": 13,
+   "jp": "我が心……すでに明鏡止水！",
+   "zh_current": "我心、明镜止水！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13734",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13748",
+   "budget_bytes": 24,
+   "jp": "オレはもう失いたくないかけがえのない人々を！",
+   "zh_current": "我不想再失去重要的人们",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1376C",
+   "budget_bytes": 23,
+   "jp": "この魂の炎……極限まで高めればッ！",
+   "zh_current": "将这灵魂的烈火推向极限！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13790",
+   "budget_bytes": 18,
+   "jp": "クッ……！やはり勝てないのか……",
+   "zh_current": "唔……果然赢不了吗……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137B0",
+   "budget_bytes": 22,
+   "jp": "キング·オブ·ハートにそんな技は通用しない！",
+   "zh_current": "那种招数对红心之王没用！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137D4",
+   "budget_bytes": 13,
+   "jp": "俺は最後まで戦い続ける！！",
+   "zh_current": "我战斗到最后！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137F0",
+   "budget_bytes": 11,
+   "jp": "これしきの傷で……！",
+   "zh_current": "区区这点伤！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13808",
+   "budget_bytes": 9,
+   "jp": "くっ！出来る！！",
+   "zh_current": "唔！不赖！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13820",
+   "budget_bytes": 9,
+   "jp": "くっ！やるな！！",
+   "zh_current": "唔！不赖！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13838",
+   "budget_bytes": 26,
+   "jp": "たとえこの身が砕けようと……食らいついてやる！",
+   "zh_current": "纵使此身碎裂我也死咬不放",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13860",
+   "budget_bytes": 19,
+   "jp": "まだだ……！まだオレは……倒れん！",
+   "zh_current": "还没……我……不会倒！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13880",
+   "budget_bytes": 29,
+   "jp": "静かにたたえた水のごとき心……それこそが明鏡止水！",
+   "zh_current": "心如静止之水……明镜止水！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138AC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138C0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138D4",
+   "budget_bytes": 19,
+   "jp": "もはや勝負はついた自分の敗北を愛け入れろ",
+   "zh_current": "胜负已定、接受失败吧",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138F4",
+   "budget_bytes": 18,
+   "jp": "クッ……！俺が未熟だったか……！",
+   "zh_current": "唔……是我修行不足吗！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13914",
+   "budget_bytes": 19,
+   "jp": "まだだ！まだ勝負はついちゃいない！",
+   "zh_current": "还没完！胜负未定！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5658",
+   "budget_bytes": 23,
+   "jp": "一斉にかかるぞ！オレに続けええーーっ！！",
+   "zh_current": "一齐进攻！都给我跟上来啊！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x567C",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5690",
+   "budget_bytes": 6,
+   "jp": "はい、師匠！",
+   "zh_current": "师父！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56A4",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56B8",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56CC",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56E0",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x0",
+   "budget_bytes": 23,
+   "jp": "行くぞっ！！流派、東方不敗の名のもとに！",
+   "zh_current": "我上了！以东方不败之名！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x24",
+   "budget_bytes": 34,
+   "jp": "俺のこの手が真っ赤に燃えるっ！勝利をつかめと□き叫ぶ！",
+   "zh_current": "我这只手赤红燃烧！怒吼着抓住胜利！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x52",
+   "budget_bytes": 23,
+   "jp": "ばぁぁぁく熱っ！ゴッド！フィンガぁぁぁ……",
+   "zh_current": "爆热！神之手指——！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x78",
+   "budget_bytes": 27,
+   "jp": "石破！！天驚けえええええんっ！！！",
+   "zh_current": "石破！！天惊拳！！！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xA0",
+   "budget_bytes": 23,
+   "jp": "行くぞっ！！流派、東方不敗の名のもとに！",
+   "zh_current": "我上了！以东方不败之名！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xC4",
+   "budget_bytes": 34,
+   "jp": "俺のこの手が真っ赤に燃えるっ！勝利をつかめと□き叫ぶ！",
+   "zh_current": "我这只手赤红燃烧！怒吼着抓住胜利！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xF2",
+   "budget_bytes": 9,
+   "jp": "ばぁぁぁく熱っ！",
+   "zh_current": "爆热！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x108",
+   "budget_bytes": 32,
+   "jp": "石破天驚っ！！ゴおおッド！フィンガぁぁーーっ！！",
+   "zh_current": "石破天惊！！神之手指——！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x134",
+   "budget_bytes": 5,
+   "jp": "ならばっ！",
+   "zh_current": "那就！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x148",
+   "budget_bytes": 13,
+   "jp": "超級！覇王っ！！",
+   "zh_current": "超级！霸王！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x164",
+   "budget_bytes": 14,
+   "jp": "電影だぁぁぁぁぁんっ！！",
+   "zh_current": "电影弹！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x180",
+   "budget_bytes": 5,
+   "jp": "爆発っ！！",
+   "zh_current": "爆炸！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x264",
+   "budget_bytes": 17,
+   "jp": "俺のこの手が真っ赤に燃えるっ！",
+   "zh_current": "我这只手赤红燃烧！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x284",
+   "budget_bytes": 15,
+   "jp": "勝利をつかめと□き叫ぶ！",
+   "zh_current": "怒吼着抓住胜利！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2A0",
+   "budget_bytes": 9,
+   "jp": "ばぁぁぁく熱っ！",
+   "zh_current": "爆热！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2B8",
+   "budget_bytes": 3,
+   "jp": "ゴッド！",
+   "zh_current": "神！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2C8",
+   "budget_bytes": 10,
+   "jp": "フィンガぁぁーーッ！！",
+   "zh_current": "之手指——",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2E0",
+   "budget_bytes": 7,
+   "jp": "ヒィィィィト",
+   "zh_current": "热！！！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2F4",
+   "budget_bytes": 8,
+   "jp": "エンドおっ！！",
+   "zh_current": "终结！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13934",
+   "budget_bytes": 18,
+   "jp": "しょせんキサマはファイターにあらずっ！！",
+   "zh_current": "你这种人不配当斗士！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13954",
+   "budget_bytes": 12,
+   "jp": "愛けてみろっ！！",
+   "zh_current": "接我一招！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1396C",
+   "budget_bytes": 20,
+   "jp": "キング·オブ·ハートの名にかけて……！",
+   "zh_current": "以红心之王之名……！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1398C",
+   "budget_bytes": 13,
+   "jp": "我が心……すでに明鏡止水！",
+   "zh_current": "我心、明镜止水！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139A8",
+   "budget_bytes": 8,
+   "jp": "……見えたっ！！",
+   "zh_current": "看见了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139BC",
+   "budget_bytes": 23,
+   "jp": "この魂の炎……極限まで高めればッ！",
+   "zh_current": "将灵魂烈火推向极限！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139E0",
+   "budget_bytes": 34,
+   "jp": "皮を斬らせて肉を斬る……肉を切らせて骨を絶つ……！",
+   "zh_current": "甘愿被你斩血肉……也要斩断你筋骨！！",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A10",
+   "budget_bytes": 24,
+   "jp": "オレはもう失いたくないかけがえのない人々を！",
+   "zh_current": "我不愿再失去无可替代之人",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A34",
+   "budget_bytes": 17,
+   "jp": "クッ……！お、俺の完敗だ……！",
+   "zh_current": "唔……！我、我完败了……！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A54",
+   "budget_bytes": 22,
+   "jp": "キング·オブ·ハートにそんな技は通用しない！",
+   "zh_current": "那种招数对红心之王没用！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A78",
+   "budget_bytes": 13,
+   "jp": "俺は最後まで戦い続ける！！",
+   "zh_current": "我战斗到最后！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A94",
+   "budget_bytes": 11,
+   "jp": "これしきの傷で……！",
+   "zh_current": "区区这点伤！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AAC",
+   "budget_bytes": 8,
+   "jp": "くっ……出来る！",
+   "zh_current": "唔……不赖",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AC0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AD4",
+   "budget_bytes": 26,
+   "jp": "たとえこの身が砕けようと……食らいついてやる！",
+   "zh_current": "纵使此身粉碎……也绝不退！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AFC",
+   "budget_bytes": 19,
+   "jp": "まだだ……！まだオレは……倒れん！",
+   "zh_current": "还没完……我还能战！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B1C",
+   "budget_bytes": 29,
+   "jp": "静かにたたえた水のごとき心……それこそが明鏡止水！",
+   "zh_current": "心如平静无波之水……明镜止水！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B48",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B5C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B70",
+   "budget_bytes": 19,
+   "jp": "もはや勝負はついた自分の敗北を愛け入れろ",
+   "zh_current": "胜负已定、认输吧！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B90",
+   "budget_bytes": 5,
+   "jp": "くっ……！",
+   "zh_current": "唔……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BA4",
+   "budget_bytes": 13,
+   "jp": "たやすく捕まる俺ではないっ！",
+   "zh_current": "我才不会被抓！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56F4",
+   "budget_bytes": 23,
+   "jp": "一斉にかかるぞ！オレに続けええーーっ！！",
+   "zh_current": "全员一齐上！跟我冲！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5718",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x572C",
+   "budget_bytes": 6,
+   "jp": "はい、師匠！",
+   "zh_current": "师父！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5740",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5754",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5768",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x577C",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BC0",
+   "budget_bytes": 18,
+   "jp": "しょせんキサマはファイターにあらずっ！！",
+   "zh_current": "你终究算不上斗士！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BE0",
+   "budget_bytes": 10,
+   "jp": "くらえッ！！",
+   "zh_current": "尝尝这个！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BF8",
+   "budget_bytes": 8,
+   "jp": "……見えたっ！！",
+   "zh_current": "看见了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C0C",
+   "budget_bytes": 20,
+   "jp": "キング·オブ·ハートの名にかけて……！",
+   "zh_current": "以红心之王之名……！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C2C",
+   "budget_bytes": 13,
+   "jp": "我が心……すでに明鏡止水！",
+   "zh_current": "我心、明镜止水！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C48",
+   "budget_bytes": 23,
+   "jp": "この魂の炎……極限まで高めればッ！",
+   "zh_current": "将灵魂烈火推向极限！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C6C",
+   "budget_bytes": 24,
+   "jp": "オレはもう失いたくないかけがえのない人々を！",
+   "zh_current": "我不想再失去重要的人们",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C90",
+   "budget_bytes": 9,
+   "jp": "最後の仕上げだっ！！",
+   "zh_current": "最后一击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CA8",
+   "budget_bytes": 22,
+   "jp": "クッ……！し、修行が足りなかったか……！",
+   "zh_current": "唔……修、修行还不够吗……！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CCC",
+   "budget_bytes": 22,
+   "jp": "キング·オブ·ハートにそんな技は通用しない！",
+   "zh_current": "那种招数对红心之王没用！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CF0",
+   "budget_bytes": 13,
+   "jp": "俺は最後まで戦い続ける！！",
+   "zh_current": "我战斗到最后！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D0C",
+   "budget_bytes": 7,
+   "jp": "……効かん！",
+   "zh_current": "……无效！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D20",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D34",
+   "budget_bytes": 8,
+   "jp": "くっ……見事だ！",
+   "zh_current": "……漂亮！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D48",
+   "budget_bytes": 21,
+   "jp": "うっ！……だが！！俺は、絶対に負けん！",
+   "zh_current": "唔！可是！！我绝不会输！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D6C",
+   "budget_bytes": 19,
+   "jp": "まだだ……！まだオレは……倒れん！",
+   "zh_current": "还没……我……不会倒！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D8C",
+   "budget_bytes": 29,
+   "jp": "静かにたたえた水のごとき心……それこそが明鏡止水！",
+   "zh_current": "心如静止之水……明镜止水！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DB8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DCC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DE0",
+   "budget_bytes": 18,
+   "jp": "負けを認めるのは決して恥ではない……",
+   "zh_current": "认输绝非耻辱……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E00",
+   "budget_bytes": 20,
+   "jp": "しまった……！俺ともあろう者が……！",
+   "zh_current": "不妙……！我竟也会失手……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E20",
+   "budget_bytes": 18,
+   "jp": "拳ある限り、俺は戦い続ける！",
+   "zh_current": "拳在、我就继续战斗！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5790",
+   "budget_bytes": 45,
+   "jp": "この魂の炎！極限まで高めれば！倒せない者などおおおおっ…無いっ！",
+   "zh_current": "此魂之烈火！推向极限！便无打不倒的敌人！！",
+   "zh_current_bytes": 37
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57CC",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57E0",
+   "budget_bytes": 6,
+   "jp": "はい、師匠！",
+   "zh_current": "师父！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57F4",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5808",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x581C",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5830",
+   "budget_bytes": 7,
+   "jp": "……助太刀する！",
+   "zh_current": "来助阵！！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "entity": "char_411",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%B1%B3%E8%AF%BA%E5%A4%AB%E6%96%AF%E5%9F%BA%E7%B2%92%E5%AD%90",
+  "https://zh.wikipedia.org/zh-hans/%E5%90%89%E7%BF%81%E5%85%AC%E5%9C%8B",
+  "https://gundam.fandom.com/zh/wiki/%E5%90%89%E7%BF%81%E5%85%AC%E5%9C%8B"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1233,
+   "name_zh": "散布粒子！",
+   "cutin_zh": "散布米诺夫斯基粒子！",
+   "notes": "name与idn420共享且name_owner=false、按规范照旧输出与现值一致的译名（5格、与名台词共用散布/粒子关键词）；效果文本由char_140负责、已省略"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2AB4", "zh": "一齐发射！"},
+  {"file": "0.bin", "record": "0x2B88", "zh": "……已回避！本舰未受损！"},
+  {"file": "0.bin", "record": "0x2BD0", "zh": "舰首受损！不影响航行！"},
+  {"file": "0.bin", "record": "0x1FD90", "zh": "敌、进入射程！"},
+  {"file": "0.bin", "record": "0x1FDE0", "zh": "已捕捉敌人！开始攻击！"},
+  {"file": "0.bin", "record": "0x1FF0C", "zh": "这威力……是敌方新型！？"},
+  {"file": "0.bin", "record": "0x203AC", "zh": "敌、进入射击线！"},
+  {"file": "0.bin", "record": "0x203FC", "zh": "敌、进入射程内！"},
+  {"file": "0.bin", "record": "0x20548", "zh": "总帅！再受攻击……"},
+  {"file": "0.bin", "record": "0x20AEC", "zh": "发射准备完毕！"},
+  {"file": "0.bin", "record": "0x20BC4", "zh": "本……本舰仍可战斗！"},
+  {"file": "0.bin", "record": "0x20C50", "zh": "左舷装甲受损！并非直击！"},
+  {"file": "0.bin", "record": "0x23C3C", "zh": "射击就绪！"},
+  {"file": "0.bin", "record": "0x23CDC", "zh": "敌人攻击……已回避！本舰未中弹！"},
+  {"file": "0.bin", "record": "0x2C7B0", "zh": "先手必胜！解决他！"},
+  {"file": "0.bin", "record": "0x2C7D0", "zh": "开火！开火啊！！"},
+  {"file": "0.bin", "record": "0x2C7EC", "zh": "准备发射……开火！"},
+  {"file": "0.bin", "record": "0x2C808", "zh": "好！全弹、给我砸过去！！"},
+  {"file": "0.bin", "record": "0x2C828", "zh": "对准目标……好、开火！"},
+  {"file": "0.bin", "record": "0x2C848", "zh": "瞄准完毕……好、开火！！"},
+  {"file": "0.bin", "record": "0x2C868", "zh": "好！全弹、统统砸过去！！"},
+  {"file": "0.bin", "record": "0x2C888", "zh": "现在发起突击！"},
+  {"file": "0.bin", "record": "0x2C8A4", "zh": "到此为止……荣光归于吉翁！"},
+  {"file": "0.bin", "record": "0x2C8C8", "zh": "好、很好！继续索敌、别大意！"},
+  {"file": "0.bin", "record": "0x2C8EC", "zh": "还不能松懈！本舰绝不能沉！"},
+  {"file": "0.bin", "record": "0x2C914", "zh": "只是擦伤！沉着应对！"},
+  {"file": "0.bin", "record": "0x2C934", "zh": "……中弹了吗！快报损伤！"},
+  {"file": "0.bin", "record": "0x2C958", "zh": "边规避边后退！别当活靶！！"},
+  {"file": "0.bin", "record": "0x2C97C", "zh": "唔……！这怪物！！"},
+  {"file": "0.bin", "record": "0x2C998", "zh": "唔……！该做好觉悟了……"},
+  {"file": "0.bin", "record": "0x2C9B8", "zh": "这种武器岂能击沉本舰！"},
+  {"file": "0.bin", "record": "0x2C9DC", "zh": "别小看人！！"},
+  {"file": "0.bin", "record": "0x2C9F4", "zh": "远程攻击！散开防御！"},
+  {"file": "0.bin", "record": "0x2CA14", "zh": "那机体归我们了！！"},
+  {"file": "0.bin", "record": "0x2CA30", "zh": "什、什么！？"},
+  {"file": "0.bin", "record": "0x2CA48", "zh": "可恶！别小看我们！"}
+ ],
+ "notes": "军舰舰桥/军官口吻统一：对上级用报告体（已回避/发射准备完毕）、对部下用命令体。要点：0x20BC4 JP ほ……本艦 是结巴不是叹息、旧译呼……已改为本……本舰；0x20548 JP 愛けては 判定为 受けては 的原文错字；0x2C8A4 ジオン公国に栄光あれ 按社区通行译法作荣光归于吉翁（与ジーク・ジオン=吉翁万岁区分、公国二字因字节预算省略）；0x2C934 补回くらったか的吗、0x2B88/0x1FF0C 补回原文省略号；索敵按社区用语作索敌。预算强制取舍：0x1FF0C 舍去こ、こ结巴与まさか（保留……！？的惊疑）、0x2C9F4 舍去か/各员、0x2C7B0 一気に片付けるぞ压缩为解决他（理想为先手必胜！一口气解决掉他！）、0x2C9DC ええい无字节可容。"
+}

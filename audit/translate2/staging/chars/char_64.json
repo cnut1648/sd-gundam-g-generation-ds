@@ -1,0 +1,532 @@
+{
+ "entity": "char_64",
+ "kind": "character",
+ "cids": [
+  64,
+  65
+ ],
+ "name_jp": "グエン",
+ "name_zh_KEEP": "格温",
+ "cards": [
+  {
+   "cid": 64,
+   "ids": [
+    {
+     "idn": 192,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B74FA",
+     "zh_name_ptr": "0x20B74FA",
+     "name_jp": "……これが政治というものだ",
+     "name_zh_current": "这就是政治",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵威力減少",
+     "summary_zh_KEEP": "敌威力减少",
+     "didx": 81,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）攻击-30%",
+     "cutin_group": 127,
+     "cutin_jp": "……これが政治というものだ",
+     "cutin_zh_current": "……这就是所谓的政治",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 193,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B750F",
+     "zh_name_ptr": "0x20B750F",
+     "name_jp": "銃には銃で応えたい！！",
+     "name_zh_current": "以枪还枪！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 128,
+     "cutin_jp": "目には目、歯には歯！銃には銃で応えたい！！",
+     "cutin_zh_current": "以眼还眼、以牙还牙以枪还枪来回敬！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 194,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B751D",
+     "zh_name_ptr": "0x20B751D",
+     "name_jp": "船は守れ！",
+     "name_zh_current": "守住船！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 129,
+     "cutin_jp": "船は守れ！……腹案はできた！！",
+     "cutin_zh_current": "守住船！……我已有腹案！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 65,
+   "ids": [
+    {
+     "idn": 195,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7525",
+     "zh_name_ptr": "0x20B7525",
+     "name_jp": "汚れている地球を我慢できるか！",
+     "name_zh_current": "再也忍不了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "防御力上昇",
+     "summary_zh_KEEP": "防御力上升",
+     "didx": 134,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン回避率が20%、反応が20、装甲が2上昇、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）回避+20%·反应+20装甲+2·先攻",
+     "cutin_group": 130,
+     "cutin_jp": "月に比べて千年遅れている地球を我慢できるか！",
+     "cutin_zh_current": "比月球落后千年这种地球、怎能忍受！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 196,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B753B",
+     "zh_name_ptr": "0x20B753B",
+     "name_jp": "何で私のそばにいようとしない！",
+     "name_zh_current": "为何不陪我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 60,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+40%",
+     "cutin_group": 131,
+     "cutin_jp": "ローラはなんで私のそばにいようとしないのだ！",
+     "cutin_zh_current": "罗拉、为何不肯留在我身边！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 197,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B754B",
+     "zh_name_ptr": "0x20B754B",
+     "name_jp": "ローラ！私は……！",
+     "name_zh_current": "罗拉！我……",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命反减",
+     "didx": 87,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·反应-30攻击-30%",
+     "cutin_group": 132,
+     "cutin_jp": "ローラ！私は、私はぁぁぁっ！！",
+     "cutin_zh_current": "罗拉！我、我啊啊啊！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x719C",
+   "budget_bytes": 21,
+   "jp": "私はいつでも先のことを見据えている！",
+   "zh_current": "我随时都看清前路！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x71C0",
+   "budget_bytes": 13,
+   "jp": "よし！メガ粒子砲を！！",
+   "zh_current": "米加粒子炮！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x71DC",
+   "budget_bytes": 13,
+   "jp": "よし！メガ粒子砲を！！",
+   "zh_current": "米加粒子炮！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7254",
+   "budget_bytes": 15,
+   "jp": "私を家柄だけの男と思うなよ！",
+   "zh_current": "别当我只靠家世！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x72A4",
+   "budget_bytes": 18,
+   "jp": "人生の最後に成功すればいいのだよ……",
+   "zh_current": "人生最后成功就好……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x72E0",
+   "budget_bytes": 18,
+   "jp": "いかん！何としてもウィルゲムを守れ！！",
+   "zh_current": "不好！死守威尔盖姆！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7320",
+   "budget_bytes": 20,
+   "jp": "ミハエル大佐！弾幕が薄いのではないか？",
+   "zh_current": "米哈埃尔大佐！弹幕太薄？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7364",
+   "budget_bytes": 26,
+   "jp": "敵も黙っているわけにはいかないということか……",
+   "zh_current": "敌人也不会坐视不管的……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x738C",
+   "budget_bytes": 22,
+   "jp": "当たった！？大丈夫なんだろうな、ミハエル大佐？",
+   "zh_current": "中弹了！？大佐、你没事吧？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7448",
+   "budget_bytes": 25,
+   "jp": "駆け引きを進めるには、タイミングというものがあってね",
+   "zh_current": "讨价还价、也要讲究时机啊",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7470",
+   "budget_bytes": 12,
+   "jp": "当たるほど愚かではない！",
+   "zh_current": "我没那么蠢！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7488",
+   "budget_bytes": 16,
+   "jp": "……来るぞ！散開してかわせ！",
+   "zh_current": "……来了！散开躲避！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x74A4",
+   "budget_bytes": 33,
+   "jp": "追い詰められたものに救いの手を差し伸べるのが私の役目なのだ",
+   "zh_current": "向绝境者伸出援手、正是我的职责所在",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x74D4",
+   "budget_bytes": 30,
+   "jp": "うっ！捕虜としての待遇は、ちゃんとしてくれるんだろうな！？",
+   "zh_current": "唔！会好好给我俘虏待遇的吧！？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7500",
+   "budget_bytes": 31,
+   "jp": "冗談じゃない！貴重な戦力を一つでも渡すわけにはいかない！",
+   "zh_current": "开什么玩笑！战力一个也不能给！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x752C",
+   "budget_bytes": 21,
+   "jp": "私はいつでも先のことを見据えている！",
+   "zh_current": "我随时都看清前路！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7550",
+   "budget_bytes": 12,
+   "jp": "これが政治というものだ！",
+   "zh_current": "这就是政治！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7568",
+   "budget_bytes": 21,
+   "jp": "ローラぁぁぁ！どこだ！どこにいる！？",
+   "zh_current": "罗拉啊啊！在哪！在哪！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x758C",
+   "budget_bytes": 34,
+   "jp": "ローラには私の側にいてほしいというだけなのだ！私はぁぁっ！！",
+   "zh_current": "希望罗拉在我身边、仅此而已！我啊啊！！",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x75BC",
+   "budget_bytes": 29,
+   "jp": "抵抗するというならこの炎がお前たちを焼くことになる！",
+   "zh_current": "胆敢抵抗的话……就把你们清除！！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x75E8",
+   "budget_bytes": 34,
+   "jp": "ローラには私の側にいてほしいというだけなのだ！私はぁぁっ！！",
+   "zh_current": "希望罗拉在我身边、仅此而已！我啊啊！！",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7618",
+   "budget_bytes": 21,
+   "jp": "ローラぁぁぁ！どこだ！どこにいる！？",
+   "zh_current": "罗拉啊！在哪！在哪！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x763C",
+   "budget_bytes": 30,
+   "jp": "ローラが私を拒むというなら私はこの世界の全てを……！！",
+   "zh_current": "罗拉若拒绝我、我就毁掉这一切……！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7668",
+   "budget_bytes": 9,
+   "jp": "ロ、ローラぁぁ……",
+   "zh_current": "罗、罗拉……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7680",
+   "budget_bytes": 25,
+   "jp": "この私を家柄だけの男とは思わないでいただこう！",
+   "zh_current": "请别把我当成只靠家世的人！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x76A8",
+   "budget_bytes": 18,
+   "jp": "私はこんなところで終るつもりはないっ！",
+   "zh_current": "我不会就此终结的！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x76C8",
+   "budget_bytes": 18,
+   "jp": "私は……私は……ローラぁぁぁ！！",
+   "zh_current": "我……我……罗拉啊啊！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x76E8",
+   "budget_bytes": 23,
+   "jp": "私とローラの仲を引き裂こうという魂胆か！！",
+   "zh_current": "想离间我和罗拉的情谊吗！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x770C",
+   "budget_bytes": 17,
+   "jp": "私の元へ来るのだ！ローラ！！",
+   "zh_current": "到我身边来！罗拉！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x772C",
+   "budget_bytes": 14,
+   "jp": "貴様たち！……はかったな！！",
+   "zh_current": "你们！算计我！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7748",
+   "budget_bytes": 17,
+   "jp": "こ、この私が！？そんなバカな！！",
+   "zh_current": "我、竟然！？不可能！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7768",
+   "budget_bytes": 22,
+   "jp": "この私の力、甘く見ないでいただきたい！！",
+   "zh_current": "请不要小看我的力量！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x778C",
+   "budget_bytes": 15,
+   "jp": "当たるわけにはいかないのだよ！",
+   "zh_current": "绝不能被打中！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x77A8",
+   "budget_bytes": 15,
+   "jp": "来るのか！？各機、散開だ！",
+   "zh_current": "来了！？全员散开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x77C4",
+   "budget_bytes": 33,
+   "jp": "追い詰められたものに救いの手を差し伸べるのが私の役目なのだ",
+   "zh_current": "向绝境者伸援手……正是我的职责所在",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x77F4",
+   "budget_bytes": 24,
+   "jp": "まさかな……敵を甘く見ていたということか……",
+   "zh_current": "怎会……是小看敌人了吗……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7818",
+   "budget_bytes": 23,
+   "jp": "私とローラの仲を引き裂こうという魂胆か！！",
+   "zh_current": "想离间我和罗拉的情谊吗！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1ED0",
+   "budget_bytes": 16,
+   "jp": "グエン2チーム攻撃汎用開始%",
+   "zh_current": "这……就是政治！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1EEC",
+   "budget_bytes": 16,
+   "jp": "グエン2チーム攻撃汎用応答%",
+   "zh_current": "交……给我吧！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1F08",
+   "budget_bytes": 21,
+   "jp": "グエン2チーム攻撃固定応答セリフ01",
+   "zh_current": "让你见识我的力量！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1F2C",
+   "budget_bytes": 21,
+   "jp": "グエン2チーム攻撃固定応答セリフ02",
+   "zh_current": "罗拉、为了你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1F50",
+   "budget_bytes": 21,
+   "jp": "グエン2チーム攻撃固定応答セリフ03",
+   "zh_current": "别小看我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1F74",
+   "budget_bytes": 22,
+   "jp": "グエン2チーム攻撃固定応答セリフ04",
+   "zh_current": "这就是政治！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1F98",
+   "budget_bytes": 22,
+   "jp": "グエン2チーム攻撃固定応答セリフ05",
+   "zh_current": "交给我吧！",
+   "zh_current_bytes": 8
+  }
+ ]
+}

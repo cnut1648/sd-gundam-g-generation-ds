@@ -1,0 +1,328 @@
+{
+ "entity": "char_133",
+ "kind": "character",
+ "cids": [
+  133
+ ],
+ "name_jp": "チェーン（共戦）",
+ "name_zh_KEEP": "倩恩（共振）",
+ "cards": [
+  {
+   "cid": 133,
+   "ids": [
+    {
+     "idn": 399,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7C5F",
+     "zh_name_ptr": "0x20B7C5F",
+     "name_jp": "どうか、ご無事で……",
+     "name_zh_current": "愿你平安……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "チーム防御力↑",
+     "summary_zh_KEEP": "队・回甲↑",
+     "didx": 98,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）回避+20%·装甲+2",
+     "cutin_group": 316,
+     "cutin_jp": "どうか、ご無事で……",
+     "cutin_zh_current": "愿你平安无事……",
+     "name_owner": false,
+     "name_shared_with_idn": 396,
+     "detail_owner": false,
+     "detail_owned_by": "char_52",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 400,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C6A",
+     "zh_name_ptr": "0x218C321",
+     "name_jp": "サイコフレームが……",
+     "name_zh_current": "感应框架……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威应↑",
+     "didx": 79,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）反応が40上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）反应+40·攻击+20%",
+     "cutin_group": 317,
+     "cutin_jp": "サイコフレームが多い方がアムロには有利なんです！",
+     "cutin_zh_current": "精神感应框架越多对阿姆罗就越有利！",
+     "name_owner": false,
+     "name_shared_with_idn": 397,
+     "detail_owner": false,
+     "detail_owned_by": "char_132",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 401,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C72",
+     "zh_name_ptr": "0x218C253",
+     "name_jp": "その子は危険よ！！",
+     "name_zh_current": "那孩子危险",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "強制散開",
+     "summary_zh_KEEP": "强制散开",
+     "didx": 163,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）チームの間接攻撃に対して、攻撃対象のチームを強制的に散開させる",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）强制散开",
+     "cutin_group": 318,
+     "cutin_jp": "どきなさい！その子は危険よ！！",
+     "cutin_zh_current": "让开！那孩子很危险！",
+     "name_owner": false,
+     "name_shared_with_idn": 398,
+     "detail_owner": false,
+     "detail_owned_by": "char_131",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x112DC",
+   "budget_bytes": 14,
+   "jp": "なら、先手を打って……！！",
+   "zh_current": "那就先发制人！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x112F8",
+   "budget_bytes": 22,
+   "jp": "サイコフレームが私に力を貸してくれている……！",
+   "zh_current": "精神感应框架在助我……！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1131C",
+   "budget_bytes": 5,
+   "jp": "いきます！",
+   "zh_current": "我上！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11330",
+   "budget_bytes": 4,
+   "jp": "そこね！",
+   "zh_current": "那里",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11340",
+   "budget_bytes": 10,
+   "jp": "直接射撃すれば……！",
+   "zh_current": "直接射击……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11358",
+   "budget_bytes": 3,
+   "jp": "こっち！",
+   "zh_current": "过来",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11368",
+   "budget_bytes": 19,
+   "jp": "アムロ一人に無理はさせられないわ！！",
+   "zh_current": "决不能让阿姆罗一人扛！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11388",
+   "budget_bytes": 9,
+   "jp": "やってみせる……！",
+   "zh_current": "做给你看！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x113A0",
+   "budget_bytes": 10,
+   "jp": "ごめんなさい、アムロ……",
+   "zh_current": "抱歉阿姆罗",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x113B8",
+   "budget_bytes": 6,
+   "jp": "かわせた！？",
+   "zh_current": "闪过！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x113CC",
+   "budget_bytes": 9,
+   "jp": "まだ……まだよっ！",
+   "zh_current": "还没完！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x113E4",
+   "budget_bytes": 20,
+   "jp": "これくらいは装甲が吸収してくれる！",
+   "zh_current": "这点！装甲能吸收掉！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11404",
+   "budget_bytes": 7,
+   "jp": "当たったの！？",
+   "zh_current": "打中了！？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11418",
+   "budget_bytes": 12,
+   "jp": "し、しまった！ダメージは！？",
+   "zh_current": "不好！损伤呢？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11430",
+   "budget_bytes": 13,
+   "jp": "きゃあああ！アムローッ！！",
+   "zh_current": "呀啊！阿姆罗！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1144C",
+   "budget_bytes": 10,
+   "jp": "こ、これ以上は機体が……",
+   "zh_current": "机体撑不住",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11464",
+   "budget_bytes": 21,
+   "jp": "防御システムが上手く機能しているようね……",
+   "zh_current": "防御系统运作良好呢……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11488",
+   "budget_bytes": 10,
+   "jp": "来るっ！避けなきゃ！",
+   "zh_current": "来了！快躲",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x114A0",
+   "budget_bytes": 15,
+   "jp": "危険だわ！散開して下さい！",
+   "zh_current": "危险！大家快散开！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x114BC",
+   "budget_bytes": 22,
+   "jp": "もうその機体では戦えません投降して下さい",
+   "zh_current": "机体已无法再战、投降吧",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x114E0",
+   "budget_bytes": 21,
+   "jp": "あぁっ！つ、捕まって……助けて！アムロ！",
+   "zh_current": "啊！被抓……阿姆罗救我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11504",
+   "budget_bytes": 20,
+   "jp": "やめなさい！捕縛されるつもりはないわ！",
+   "zh_current": "快住手！我可不会被抓的！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5094",
+   "budget_bytes": 22,
+   "jp": "私一人では無理ね……支援をお願いします！！",
+   "zh_current": "光靠我一人不行……请求支援！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x50B8",
+   "budget_bytes": 16,
+   "jp": "はい！こちらは任せてください！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x50D4",
+   "budget_bytes": 12,
+   "jp": "はい、アムロ！任せて！！",
+   "zh_current": "好、阿姆罗！上！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x50EC",
+   "budget_bytes": 16,
+   "jp": "はい！こちらは任せてください！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5108",
+   "budget_bytes": 16,
+   "jp": "はい！こちらは任せてください！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5124",
+   "budget_bytes": 16,
+   "jp": "はい！こちらは任せてください！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5140",
+   "budget_bytes": 16,
+   "jp": "はい！こちらは任せてください！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

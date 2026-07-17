@@ -1,0 +1,428 @@
+{
+ "entity": "char_426",
+ "kind": "character",
+ "cids": [
+  426,
+  427
+ ],
+ "name_jp": "デラーズ士官",
+ "name_zh_KEEP": "迪拉兹士官",
+ "cards": [
+  {
+   "cid": 426,
+   "ids": [
+    {
+     "idn": 1278,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B902B",
+     "zh_name_ptr": "0x232880B",
+     "name_jp": "ジオンの栄光のために！！",
+     "name_zh_current": "为吉翁荣光",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回甲↑",
+     "didx": 127,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%·装甲+2",
+     "cutin_group": 808,
+     "cutin_jp": "ジオンの栄光のために！！",
+     "cutin_zh_current": "为了吉翁的荣光！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_330",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 427,
+   "ids": [
+    {
+     "idn": 1281,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9037",
+     "zh_name_ptr": "0x20B9037",
+     "name_jp": "我らの意地を見よ！",
+     "name_zh_current": "我等骨气！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 811,
+     "cutin_jp": "我らの意地を見よ！",
+     "cutin_zh_current": "看看我等的骨气吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2EDEC",
+   "budget_bytes": 30,
+   "jp": "敵の攻撃は届かないな？よし、こちらから先に砲撃開始だ！！",
+   "zh_current": "敌人攻击够不着？好、我方先开炮！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EE18",
+   "budget_bytes": 7,
+   "jp": "ジーク·ジオン！！",
+   "zh_current": "为吉翁！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EE2C",
+   "budget_bytes": 15,
+   "jp": "全砲門開け！一斉射撃用意！！",
+   "zh_current": "全炮门、齐射准备！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EE48",
+   "budget_bytes": 20,
+   "jp": "積年の恨み、今こそ晴らしてやる！！",
+   "zh_current": "多年宿怨、今日清算！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EE68",
+   "budget_bytes": 22,
+   "jp": "砲撃手！十分にひきつけてから撃つんだ！",
+   "zh_current": "炮手！等敌人放近了再打！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EE8C",
+   "budget_bytes": 16,
+   "jp": "かまわん！このまま直進しろ！",
+   "zh_current": "无妨！保持直进！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EEA8",
+   "budget_bytes": 22,
+   "jp": "敵の懐に突っ込め！一気に勝負を決めてやる！",
+   "zh_current": "冲进敌阵！一举决出胜负！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EECC",
+   "budget_bytes": 10,
+   "jp": "、全力射撃だ！！",
+   "zh_current": "、全力射击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EEE4",
+   "budget_bytes": 19,
+   "jp": "くっ……ジオン公国に栄光あれーっ！！",
+   "zh_current": "唔……荣光归于吉翁！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EF04",
+   "budget_bytes": 13,
+   "jp": "簡単に当たるものではない！",
+   "zh_current": "哪有那么好打！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EF20",
+   "budget_bytes": 22,
+   "jp": "ま、まだだ！祖国を再興するまでは……！！",
+   "zh_current": "还没完！祖国复兴之前……！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EF44",
+   "budget_bytes": 19,
+   "jp": "かまうな！使命の遂行あるのみだ！！",
+   "zh_current": "别管我！唯有完成使命！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EF64",
+   "budget_bytes": 23,
+   "jp": "こちらを見逃してくれる気はないようだな……！",
+   "zh_current": "你们看来无意放过我们……！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EF88",
+   "budget_bytes": 23,
+   "jp": "損傷箇所をチェックしろっ！反撃準備、急げ！！",
+   "zh_current": "检查损伤处！快准备反击！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EFAC",
+   "budget_bytes": 18,
+   "jp": "くっ……！直撃を愛けるとは……！",
+   "zh_current": "唔……！竟然被直击……！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EFCC",
+   "budget_bytes": 27,
+   "jp": "戦友の死を無駄にするな！何としても踏みとどまれ！！",
+   "zh_current": "别让战友白死！无论如何守住！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EFF4",
+   "budget_bytes": 24,
+   "jp": "崇高な志を持つ我らにそんな攻撃は無駄だ！！",
+   "zh_current": "对胸怀崇高之志的我们没用！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F018",
+   "budget_bytes": 17,
+   "jp": "回避運動！当たるんじゃないぞ！",
+   "zh_current": "快回避！可别被击中！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F038",
+   "budget_bytes": 17,
+   "jp": "回避運動！当たるんじゃないぞ！",
+   "zh_current": "快回避！可别被击中！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F058",
+   "budget_bytes": 26,
+   "jp": "その機体は我らデラーズ·フリートで使わせてもらおう！",
+   "zh_current": "这机体归我们迪拉兹舰队用！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F080",
+   "budget_bytes": 21,
+   "jp": "しまった！？虜囚の辱めを愛けるとは……",
+   "zh_current": "不妙！？竟遭这般痛击……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F0A4",
+   "budget_bytes": 19,
+   "jp": "なめるな！まだ敗れたわけではない！",
+   "zh_current": "别狂！我还远没落败！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F0C4",
+   "budget_bytes": 22,
+   "jp": "先制攻撃をかける！一撃で終らせるぞ！！",
+   "zh_current": "先制攻击！一击了结！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F0E8",
+   "budget_bytes": 7,
+   "jp": "ジーク·ジオン！！",
+   "zh_current": "为吉翁！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F0FC",
+   "budget_bytes": 13,
+   "jp": "目にものを見せてくれる！！",
+   "zh_current": "让你见识见识！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F118",
+   "budget_bytes": 15,
+   "jp": "全砲門開け！一斉射撃用意！！",
+   "zh_current": "全炮门、齐射准备！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F134",
+   "budget_bytes": 11,
+   "jp": "ジオン再興の為にっ！！",
+   "zh_current": "为吉翁复兴！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F14C",
+   "budget_bytes": 32,
+   "jp": "敵の鼻っ面まで接近しろ！デカいのを一発喰らわせてやる！",
+   "zh_current": "逼到敌人鼻尖！给他来发大的尝尝！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F178",
+   "budget_bytes": 10,
+   "jp": "軟弱者どもめがっ！！",
+   "zh_current": "一群弱者！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F190",
+   "budget_bytes": 18,
+   "jp": "各砲座、一発でも多く当てろ！！",
+   "zh_current": "各炮座、多多命中！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F1B0",
+   "budget_bytes": 28,
+   "jp": "「星の屑」成就ならずとは……くっ、無念……！！",
+   "zh_current": "『星之屑』竟未能成就……不甘心！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F1D8",
+   "budget_bytes": 22,
+   "jp": "ひるむな！ガトー少佐が必ず守ってくださる！",
+   "zh_current": "别退缩！卡多少佐会护我们！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F1FC",
+   "budget_bytes": 31,
+   "jp": "悲願達成を目の前にして、落とされるわけにはいかんのだ！",
+   "zh_current": "宿愿就在眼前！岂能在此被击落！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F228",
+   "budget_bytes": 19,
+   "jp": "くっ！さすがに的が大きいからな……",
+   "zh_current": "唔！这靶子确实太大……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F248",
+   "budget_bytes": 32,
+   "jp": "外部の損傷はどうとでもなる！核パルスエンジンだけは守りぬけ！",
+   "zh_current": "外部受损无妨！死守核脉冲引擎！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F274",
+   "budget_bytes": 25,
+   "jp": "核パルスエンジンは無事か！？損傷箇所をチェックしろっ！",
+   "zh_current": "核脉冲引擎没事吧！？查损伤！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F29C",
+   "budget_bytes": 26,
+   "jp": "くっ、いかん！連邦がこんな兵器を用意していたとは！",
+   "zh_current": "唔、不妙！联邦竟备有这种兵器！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F2C4",
+   "budget_bytes": 28,
+   "jp": "こ、ここまで来て……！むざむざやられるわけにはいかん！！",
+   "zh_current": "都到这一步了……岂能白白败北！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F2EC",
+   "budget_bytes": 23,
+   "jp": "その程度の攻撃では何の効果もあげられんよ！",
+   "zh_current": "这程度的攻击毫无效果！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F310",
+   "budget_bytes": 9,
+   "jp": "撃つだけ無駄だな！",
+   "zh_current": "打也没用！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F328",
+   "budget_bytes": 9,
+   "jp": "撃つだけ無駄だな！",
+   "zh_current": "打也没用！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F340",
+   "budget_bytes": 20,
+   "jp": "投降しろっ！すでに勝敗は決した！",
+   "zh_current": "投降吧！胜负已定！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F360",
+   "budget_bytes": 24,
+   "jp": "こ、これではデラーズ閣下に顔向け出来ない……！",
+   "zh_current": "这下无颜面对迪拉兹阁下……！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F384",
+   "budget_bytes": 11,
+   "jp": "降伏などあり得んよ！",
+   "zh_current": "绝不会投降！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

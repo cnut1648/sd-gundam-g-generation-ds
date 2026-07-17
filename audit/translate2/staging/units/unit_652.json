@@ -1,0 +1,59 @@
+{
+ "entity": "unit_652",
+ "kind": "unit",
+ "utids": [
+  652
+ ],
+ "name_jp": "ソレイユ",
+ "name_zh_current": "太阳号",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189DDC",
+   "jp": "集束ビーム砲",
+   "zh_current": "集束光束炮",
+   "shared_by_n_units": 1
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21907AB",
+   "jp": "拡散ビーム砲",
+   "zh_current": "扩散光束炮",
+   "shared_by_n_units": 1
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218EE1A",
+   "jp": "機関砲",
+   "zh_current": "机炮",
+   "shared_by_n_units": 20
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6E6A",
+   "jp": "Iフィールド",
+   "zh_current": "I力场",
+   "owner": false,
+   "owned_by": "unit_4"
+  },
+  "defense": {
+   "record": 1,
+   "record_offset": "0xc",
+   "budget_bytes": 56,
+   "jp_segments": [
+    "威力450までのビーム属性の射撃攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束射击无效",
+    "超过则减30%"
+   ],
+   "owner": false,
+   "owned_by": "unit_4"
+  }
+ }
+}

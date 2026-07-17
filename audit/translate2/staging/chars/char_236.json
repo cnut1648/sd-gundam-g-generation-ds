@@ -1,0 +1,328 @@
+{
+ "entity": "char_236",
+ "kind": "character",
+ "cids": [
+  236
+ ],
+ "name_jp": "ステラ・ルーシェ",
+ "name_zh_KEEP": "史黛拉",
+ "cards": [
+  {
+   "cid": 236,
+   "ids": [
+    {
+     "idn": 708,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8665",
+     "zh_name_ptr": "0x2329249",
+     "name_jp": "コイツーーッ！",
+     "name_zh_current": "这家伙！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 559,
+     "cutin_jp": "コイツーーッ！",
+     "cutin_zh_current": "这家伙……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 709,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B866C",
+     "zh_name_ptr": "0x20B7404",
+     "name_jp": "死んでない……",
+     "name_zh_current": "我没死……",
+     "name_zh_px": 52,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 560,
+     "cutin_jp": "死んでない……私、だいじょうぶだいじょうぶよねステラ……",
+     "cutin_zh_current": "我没死……我没事没事的吧、史黛拉……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 710,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8674",
+     "zh_name_ptr": "0x20B8674",
+     "name_jp": "でぇぇぇっ！",
+     "name_zh_current": "哇啊啊啊！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋装甲無効",
+     "summary_zh_KEEP": "威暴击破甲",
+     "didx": 210,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカル化、相手の装甲を無効化する",
+     "detail_zh_current": "使用条件：战斗中対象：仅自身（效果）攻击+40%·暴击·破甲",
+     "cutin_group": 561,
+     "cutin_jp": "でえええっ！",
+     "cutin_zh_current": "哇啊啊啊啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_46",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1FB30",
+   "budget_bytes": 14,
+   "jp": "それじゃ、つまんないってば！",
+   "zh_current": "那样就没意思了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB4C",
+   "budget_bytes": 12,
+   "jp": "行けえええっっ！！",
+   "zh_current": "上！！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB64",
+   "budget_bytes": 11,
+   "jp": "すぐに落としてやるっ！！",
+   "zh_current": "立刻打下你！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB7C",
+   "budget_bytes": 10,
+   "jp": "オマエなんかに……！！",
+   "zh_current": "你这家伙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB94",
+   "budget_bytes": 7,
+   "jp": "コノーーッ！！",
+   "zh_current": "这家伙！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FBA8",
+   "budget_bytes": 9,
+   "jp": "はぁぁぁぁーっ！！",
+   "zh_current": "哈啊啊！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FBC0",
+   "budget_bytes": 10,
+   "jp": "オマエええーっ！！",
+   "zh_current": "你这家伙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FBD8",
+   "budget_bytes": 13,
+   "jp": "てえええーーいっ！！",
+   "zh_current": "嘿啊啊！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FBF4",
+   "budget_bytes": 4,
+   "jp": "あ……？",
+   "zh_current": "啊？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC04",
+   "budget_bytes": 7,
+   "jp": "コイツはぁっ！！",
+   "zh_current": "这家伙！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC18",
+   "budget_bytes": 18,
+   "jp": "あ……生きて、私……生きてる！！",
+   "zh_current": "啊……我、我还活着！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC38",
+   "budget_bytes": 9,
+   "jp": "なんだ！？これ？",
+   "zh_current": "这是啥！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC50",
+   "budget_bytes": 14,
+   "jp": "何なのよお！？……アンタは！",
+   "zh_current": "你是什么人！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC6C",
+   "budget_bytes": 9,
+   "jp": "アイツ……アイツっっ！",
+   "zh_current": "那家伙……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC84",
+   "budget_bytes": 11,
+   "jp": "っ！し、死ぬ……！？",
+   "zh_current": "要、要死了！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FC9C",
+   "budget_bytes": 26,
+   "jp": "やめて！アッチへ行ってえ！！いやぁぁぁぁ！！",
+   "zh_current": "住手！快走开啊！！不要啊啊！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FCC4",
+   "budget_bytes": 9,
+   "jp": "だから、何なのよ！！",
+   "zh_current": "你想怎样！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FCDC",
+   "budget_bytes": 9,
+   "jp": "そんなものおっ！！",
+   "zh_current": "就这玩意！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FCF4",
+   "budget_bytes": 9,
+   "jp": "そんなものおっ！！",
+   "zh_current": "就这玩意！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FD0C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FD20",
+   "budget_bytes": 4,
+   "jp": "………？",
+   "zh_current": "………？",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FD30",
+   "budget_bytes": 14,
+   "jp": "オマエえええっっ！！！",
+   "zh_current": "你这家伙！！！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C50",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C64",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C74",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C84",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C94",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7CA4",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7CB4",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  }
+ ]
+}

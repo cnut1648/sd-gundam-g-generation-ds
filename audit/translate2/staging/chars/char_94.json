@@ -1,0 +1,644 @@
+{
+ "entity": "char_94",
+ "kind": "character",
+ "cids": [
+  94,
+  95
+ ],
+ "name_jp": "クワトロ・バジーナ",
+ "name_zh_KEEP": "克瓦特罗",
+ "cards": [
+  {
+   "cid": 94,
+   "ids": [
+    {
+     "idn": 282,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B784A",
+     "zh_name_ptr": "0x20B784A",
+     "name_jp": "罪を払わせてもらう！",
+     "name_zh_current": "了结罪业！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 205,
+     "cutin_jp": "せめて私の手でその業を払わせてもらう！",
+     "cutin_zh_current": "至少让我亲手了结你的罪业！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 283,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7830",
+     "zh_name_ptr": "0x20B7830",
+     "name_jp": "迷いは自分を殺すことになる……",
+     "name_zh_current": "犹豫害死人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 77,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 206,
+     "cutin_jp": "迷いは自分を殺すことになる……ここは戦場だぞ！",
+     "cutin_zh_current": "犹豫只会害死自己……这里是战场啊！",
+     "name_owner": false,
+     "name_shared_with_idn": 280,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 284,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7857",
+     "zh_name_ptr": "0x20B7857",
+     "name_jp": "まだ、終わらんよ！！",
+     "name_zh_current": "还没结束！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 207,
+     "cutin_jp": "まだだ！まだ、終わらんよ！！",
+     "cutin_zh_current": "还没！还没结束呢！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 95,
+   "ids": [
+    {
+     "idn": 285,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B784A",
+     "zh_name_ptr": "0x20B784A",
+     "name_jp": "罪を払わせてもらう！",
+     "name_zh_current": "了结罪业！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 208,
+     "cutin_jp": "せめて私の手でその業を払わせてもらう！",
+     "cutin_zh_current": "至少让我亲手了结你的罪业！",
+     "name_owner": true,
+     "name_shared_with_idn": 282,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 286,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7862",
+     "zh_name_ptr": "0x20B7862",
+     "name_jp": "人は変わっていくものだ……",
+     "name_zh_current": "人是会变的",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命应↑",
+     "didx": 249,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、反応が40上昇、攻撃力が20%増加する",
+     "detail_zh_current": "",
+     "cutin_group": 209,
+     "cutin_jp": "人は変わっていくものだ……だからこそ、やり直すこともできる",
+     "cutin_zh_current": "人是会改变的……正因如此才能重新来过",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 287,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7857",
+     "zh_name_ptr": "0x20B7857",
+     "name_jp": "まだ、終わらんよ！！",
+     "name_zh_current": "还没结束！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 210,
+     "cutin_jp": "まだだ！まだ、終わらんよ！！",
+     "cutin_zh_current": "还没！还没结束呢！！",
+     "name_owner": true,
+     "name_shared_with_idn": 284,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xB628",
+   "budget_bytes": 6,
+   "jp": "させるかっ！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB63C",
+   "budget_bytes": 8,
+   "jp": "やってみるさ！！",
+   "zh_current": "试试看！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB650",
+   "budget_bytes": 4,
+   "jp": "沈めっ！",
+   "zh_current": "击沉",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB660",
+   "budget_bytes": 9,
+   "jp": "これ以上やらせはせん！",
+   "zh_current": "休想再来",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB678",
+   "budget_bytes": 8,
+   "jp": "ここまでだな！！",
+   "zh_current": "到此为止",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB68C",
+   "budget_bytes": 8,
+   "jp": "これ以上はやらせん！",
+   "zh_current": "休想再来！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB6A0",
+   "budget_bytes": 14,
+   "jp": "これであの武器は使えまい！",
+   "zh_current": "那武器废了！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB6BC",
+   "budget_bytes": 10,
+   "jp": "ええい！落ちろ！！",
+   "zh_current": "可恶！坠落！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB6D4",
+   "budget_bytes": 9,
+   "jp": "これが若さか……",
+   "zh_current": "年轻气盛",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB6EC",
+   "budget_bytes": 14,
+   "jp": "そうそう当たるものではない！",
+   "zh_current": "哪能轻易命中！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB708",
+   "budget_bytes": 8,
+   "jp": "ええい！ままよ！",
+   "zh_current": "豁出去！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB71C",
+   "budget_bytes": 5,
+   "jp": "チィィッ！",
+   "zh_current": "啧！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB730",
+   "budget_bytes": 32,
+   "jp": "しょせん手に血のつかぬ戦いでは痛みはわからんと見える……",
+   "zh_current": "手上不沾血的战斗、终究不懂痛苦……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB75C",
+   "budget_bytes": 27,
+   "jp": "ええい！…1機ごときにはかまってられんというのに！",
+   "zh_current": "可恶！我可没空理会区区一架！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB784",
+   "budget_bytes": 16,
+   "jp": "この強烈な波動はまるで……！",
+   "zh_current": "这强烈的波动……！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB7A0",
+   "budget_bytes": 22,
+   "jp": "ええい！打ち所が悪いとこんなものか！",
+   "zh_current": "可恶！竟没击中要害！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB7C4",
+   "budget_bytes": 7,
+   "jp": "そこまでだな！",
+   "zh_current": "到头了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB7D8",
+   "budget_bytes": 13,
+   "jp": "そうそう上手くはいかんよ！",
+   "zh_current": "没那么顺利！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB7F4",
+   "budget_bytes": 17,
+   "jp": "各機散開！流れ弾に当たるな！",
+   "zh_current": "散开！！小心流弹！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB814",
+   "budget_bytes": 8,
+   "jp": "よし、捕捉する！",
+   "zh_current": "好、捕获",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB828",
+   "budget_bytes": 8,
+   "jp": "まるで道化だな……",
+   "zh_current": "太可笑了",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB83C",
+   "budget_bytes": 15,
+   "jp": "そんな決定権がお前にあるのか？",
+   "zh_current": "你哪有决定权？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3274",
+   "budget_bytes": 36,
+   "jp": "ここは全機でかかるのが得索か……フォーメーシヨンで一気にしとめるぞ！",
+   "zh_current": "全军一起上才是上策……用编队一举解决",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x32A4",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x32CC",
+   "budget_bytes": 36,
+   "jp": "そうだ！新しい時代を作るのは老人ではない、君のような若者だ！！",
+   "zh_current": "对！开创新时代的不是老人而是年轻人！！",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x32FC",
+   "budget_bytes": 20,
+   "jp": "いいだろう、アムロ！ここは手を貸す！",
+   "zh_current": "好啊、阿姆罗！一起上！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x331C",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3344",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x336C",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB858",
+   "budget_bytes": 6,
+   "jp": "させるかっ！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB86C",
+   "budget_bytes": 8,
+   "jp": "やってみるさ！！",
+   "zh_current": "试试看！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB880",
+   "budget_bytes": 4,
+   "jp": "沈めっ！",
+   "zh_current": "击沉",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB890",
+   "budget_bytes": 4,
+   "jp": "そこだ！",
+   "zh_current": "接招",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB8A0",
+   "budget_bytes": 5,
+   "jp": "させるか！",
+   "zh_current": "休想！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB8B4",
+   "budget_bytes": 14,
+   "jp": "これであの武器は使えまい！",
+   "zh_current": "那武器废了！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB8D0",
+   "budget_bytes": 7,
+   "jp": "ここまでだな！",
+   "zh_current": "到头了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB8E4",
+   "budget_bytes": 8,
+   "jp": "これ以上はやらせん！",
+   "zh_current": "休想再来！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB8F8",
+   "budget_bytes": 11,
+   "jp": "すまない……ハマーン……",
+   "zh_current": "哈曼、抱歉……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB910",
+   "budget_bytes": 31,
+   "jp": "人は生きている間にやらねばならぬ事というものがあるのだ……",
+   "zh_current": "人活着的时候总有非做不可的事……",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB93C",
+   "budget_bytes": 22,
+   "jp": "彼女を悲しませるわけにはいかんのでな！！",
+   "zh_current": "绝不能让她伤心！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB960",
+   "budget_bytes": 5,
+   "jp": "チィィッ！",
+   "zh_current": "啧……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB974",
+   "budget_bytes": 21,
+   "jp": "私にはまだやらねばならぬ事があるのだ！",
+   "zh_current": "我还有非做不可的事！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB998",
+   "budget_bytes": 32,
+   "jp": "しょせん手に血のつかぬ戦いでは痛みはわからんと見える……",
+   "zh_current": "手上不沾血的战斗、终究不懂痛苦……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB9C4",
+   "budget_bytes": 16,
+   "jp": "この強烈な波動はまるで……！",
+   "zh_current": "这股强烈波动……！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xB9E0",
+   "budget_bytes": 23,
+   "jp": "ええい！打ち所が悪いとこんなものか！？",
+   "zh_current": "可恶！竟没击中要害！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBA04",
+   "budget_bytes": 13,
+   "jp": "そうそう上手くはいかんよ！",
+   "zh_current": "没那么顺利！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBA20",
+   "budget_bytes": 10,
+   "jp": "プレッシャーか！だがっ！！",
+   "zh_current": "施压吗！哼！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBA38",
+   "budget_bytes": 14,
+   "jp": "来たな！各機、散開だ！！",
+   "zh_current": "来了！各机散开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBA54",
+   "budget_bytes": 21,
+   "jp": "できれば無傷で手に入れたいのだがな……",
+   "zh_current": "尽量完好无损地拿下……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBA78",
+   "budget_bytes": 25,
+   "jp": "今の私は虜囚だ……それ以上でもそれ以下でもない",
+   "zh_current": "如今的我是俘虏……不多也不少",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xBAA0",
+   "budget_bytes": 15,
+   "jp": "そんな決定権がお前にあるのか？",
+   "zh_current": "你有那种决定权？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3394",
+   "budget_bytes": 36,
+   "jp": "ここは全機でかかるのが得索か……フォーメーシヨンで一気にしとめるぞ！",
+   "zh_current": "全军一起上才是上策……用编队一举解决",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x33C4",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x33EC",
+   "budget_bytes": 25,
+   "jp": "大丈夫だ、ハマーン！君の身は私が守ってみせる！！",
+   "zh_current": "放心吧、哈曼！由我来守护你！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3414",
+   "budget_bytes": 36,
+   "jp": "そうだ！新しい時代を作るのは老人ではない、君のような若者だ！！",
+   "zh_current": "对！开创新时代的不是老人而是年轻人！！",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3444",
+   "budget_bytes": 20,
+   "jp": "いいだろう、アムロ！ここは手を貸す！",
+   "zh_current": "好啊、阿姆罗！一起上！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3464",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x348C",
+   "budget_bytes": 25,
+   "jp": "こちらクワトロ·バジーナ、了解だ！サボートに回らせてもらう！",
+   "zh_current": "克瓦特罗·巴吉纳、收到！！",
+   "zh_current_bytes": 22
+  }
+ ]
+}

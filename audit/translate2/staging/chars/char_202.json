@@ -1,0 +1,328 @@
+{
+ "entity": "char_202",
+ "kind": "character",
+ "cids": [
+  202
+ ],
+ "name_jp": "ミアン・ファーレン",
+ "name_zh_KEEP": "蜜安·法琳",
+ "cards": [
+  {
+   "cid": 202,
+   "ids": [
+    {
+     "idn": 606,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82DE",
+     "zh_name_ptr": "0x20B82DE",
+     "name_jp": "守ってみせる！",
+     "name_zh_current": "我来守护",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护・装甲↑",
+     "didx": 153,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加。チームへの攻撃を全て1／4に軽減し、引き愛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军·装甲+4",
+     "cutin_group": 487,
+     "cutin_jp": "アナタの背中……守ってみせる！",
+     "cutin_zh_current": "你的背后……由我守护！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_50",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 607,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82E7",
+     "zh_name_ptr": "0x218C45F",
+     "name_jp": "戦おう！みんなで！！",
+     "name_zh_current": "大家战斗吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命回↑",
+     "didx": 54,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 488,
+     "cutin_jp": "戦おう！みんなで！！",
+     "cutin_zh_current": "一起战斗吧！大家一起！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_66",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 608,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B82F2",
+     "zh_name_ptr": "0x20B82F2",
+     "name_jp": "……負けないで！！",
+     "name_zh_current": "千万别输！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 242,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）HPが50%回復する",
+     "detail_zh_current": "",
+     "cutin_group": 489,
+     "cutin_jp": "お願い……負けないで！！",
+     "cutin_zh_current": "拜托了……千万别输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1B350",
+   "budget_bytes": 12,
+   "jp": "来るの！？……けどっ！！",
+   "zh_current": "来了！？可是！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B368",
+   "budget_bytes": 10,
+   "jp": "落としてみせるっ！！",
+   "zh_current": "我要击落你！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B380",
+   "budget_bytes": 11,
+   "jp": "私だって……パイロットだもの！",
+   "zh_current": "我也是驾驶员",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B398",
+   "budget_bytes": 10,
+   "jp": "お願い……当たって！！",
+   "zh_current": "拜托……打中！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B3B0",
+   "budget_bytes": 9,
+   "jp": "やってみせるわ！！",
+   "zh_current": "做给你看！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B3C8",
+   "budget_bytes": 14,
+   "jp": "ミアン·ファーレン……行きますっ！！",
+   "zh_current": "蜜安·法琳……上！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B3E4",
+   "budget_bytes": 10,
+   "jp": "負けられないのっ！！",
+   "zh_current": "我不能输！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B3FC",
+   "budget_bytes": 15,
+   "jp": "つかまえた！……そこおっ！！",
+   "zh_current": "抓到了！……那里！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B418",
+   "budget_bytes": 27,
+   "jp": "無理しすぎちゃったかな？もっと頭、冷やさないと……",
+   "zh_current": "太勉强了吧？得再练练本事……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B440",
+   "budget_bytes": 18,
+   "jp": "よーしっ！この調子、この調子！！",
+   "zh_current": "好！保持这状态！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B460",
+   "budget_bytes": 21,
+   "jp": "だ、だいじょうぶ……まだ、なんとか……",
+   "zh_current": "没、没事……还撑得住……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B484",
+   "budget_bytes": 33,
+   "jp": "振り向いてもらえなくてもいい……あの人の側にいられるなら……",
+   "zh_current": "不被回应也无妨……能陪在他身边……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B4B4",
+   "budget_bytes": 6,
+   "jp": "きゃんっ！！",
+   "zh_current": "呀！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B4C8",
+   "budget_bytes": 14,
+   "jp": "こっ、これくらいヘーキよ！！",
+   "zh_current": "这、这点没事！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B4E4",
+   "budget_bytes": 9,
+   "jp": "ウ、ウソおっ！？",
+   "zh_current": "骗人吧！？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B4FC",
+   "budget_bytes": 24,
+   "jp": "わたしじゃあ……あの人を支えることはできないの？",
+   "zh_current": "我……撑不起那个人吗？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B520",
+   "budget_bytes": 8,
+   "jp": "効かないっ！！",
+   "zh_current": "没用！！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B534",
+   "budget_bytes": 10,
+   "jp": "きっ、来た……！！！",
+   "zh_current": "来、来了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B54C",
+   "budget_bytes": 9,
+   "jp": "みんな！避けて！！",
+   "zh_current": "各位躲开！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B564",
+   "budget_bytes": 19,
+   "jp": "もう、貴方は充分に戦ったわだから……",
+   "zh_current": "你已经打够了、所以……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B584",
+   "budget_bytes": 17,
+   "jp": "ああーっ！わ、私の機体があ……",
+   "zh_current": "啊啊！我的机体……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B5A4",
+   "budget_bytes": 13,
+   "jp": "そんなことっ！させない！！",
+   "zh_current": "这种事、我不许！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A4C",
+   "budget_bytes": 20,
+   "jp": "やりましょう！みんなで力を合わせるの！！",
+   "zh_current": "动手吧！大家齐心协力！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A6C",
+   "budget_bytes": 12,
+   "jp": "はい！任せてください！！",
+   "zh_current": "是！交给我！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A84",
+   "budget_bytes": 27,
+   "jp": "だいじょうぶよ、シグアナタの背中は私が守るわ……",
+   "zh_current": "没事的、西格……后背由我来守……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6AAC",
+   "budget_bytes": 9,
+   "jp": "任せて！セラ！！",
+   "zh_current": "交给我！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6AC4",
+   "budget_bytes": 12,
+   "jp": "はい！任せてください！！",
+   "zh_current": "是！交给我！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6ADC",
+   "budget_bytes": 12,
+   "jp": "はい！任せてください！！",
+   "zh_current": "是！交给我！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6AF4",
+   "budget_bytes": 12,
+   "jp": "はい！任せてください！！",
+   "zh_current": "是！交给我！！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

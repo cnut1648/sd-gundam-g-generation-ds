@@ -1,0 +1,328 @@
+{
+ "entity": "char_217",
+ "kind": "character",
+ "cids": [
+  217
+ ],
+ "name_jp": "ルクレツィア・ノイン",
+ "name_zh_KEEP": "诺茵",
+ "cards": [
+  {
+   "cid": 217,
+   "ids": [
+    {
+     "idn": 651,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8412",
+     "zh_name_ptr": "0x218C4C1",
+     "name_jp": "無意味さを感じる戦いなのだ",
+     "name_zh_current": "无意义之战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 511,
+     "cutin_jp": "これは戦う無意味さを感じるまでの戦いなのだ……",
+     "cutin_zh_current": "这是一场战斗、直到领悟其无谓为止……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 652,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B841F",
+     "zh_name_ptr": "0x20B841F",
+     "name_jp": "私に甘えに来たまえ",
+     "name_zh_current": "来依靠我吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 5,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）恢复50%",
+     "cutin_group": 512,
+     "cutin_jp": "さぁ、私に甘えに来たまえ",
+     "cutin_zh_current": "来吧、尽管来依靠我吧",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 653,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B842A",
+     "zh_name_ptr": "0x218C4CC",
+     "name_jp": "見習ってくれればありがたい",
+     "name_zh_current": "学着点就好",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・命回↑",
+     "didx": 32,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·回避+40%",
+     "cutin_group": 513,
+     "cutin_jp": "こんな私たちでも見習ってくれればありがたい",
+     "cutin_zh_current": "就连我们这样的人、若肯效仿便感激不尽",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1D09C",
+   "budget_bytes": 11,
+   "jp": "……だが、ここまでだ！",
+   "zh_current": "……到此为止！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D0B4",
+   "budget_bytes": 10,
+   "jp": "……ここで阻止する！",
+   "zh_current": "在此阻止！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D0CC",
+   "budget_bytes": 17,
+   "jp": "あの方の笑顔を守るためなら……！",
+   "zh_current": "为守护那位的笑容！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D0EC",
+   "budget_bytes": 10,
+   "jp": "……ここで阻止する！",
+   "zh_current": "在此阻止！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D104",
+   "budget_bytes": 24,
+   "jp": "今は戦うしかないのだたとえそれが不本意でも……！",
+   "zh_current": "只能战斗、哪怕并非本意……！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D128",
+   "budget_bytes": 8,
+   "jp": "何としても……！！",
+   "zh_current": "无论如何！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D13C",
+   "budget_bytes": 21,
+   "jp": "自ら選んだ道だ……ためらいはしない！",
+   "zh_current": "自己选的路……不犹豫！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D160",
+   "budget_bytes": 19,
+   "jp": "戦場では一瞬のスキが命取りになる！",
+   "zh_current": "一瞬破绽、便是致命！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D180",
+   "budget_bytes": 17,
+   "jp": "さよならは言いませんよ……ゼクス……",
+   "zh_current": "不说再见……杰克斯",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D1A0",
+   "budget_bytes": 7,
+   "jp": "……ムダだ！！",
+   "zh_current": "……白费！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D1B4",
+   "budget_bytes": 18,
+   "jp": "ここで死ぬわけにはいかないのだ！",
+   "zh_current": "我不能死在这里！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D1D4",
+   "budget_bytes": 4,
+   "jp": "やるっ！",
+   "zh_current": "上吧！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D1E4",
+   "budget_bytes": 26,
+   "jp": "こんな力があるから人は戦う事を考えてしまうのか……",
+   "zh_current": "正因有此力……人才要争斗吗……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D20C",
+   "budget_bytes": 31,
+   "jp": "戦いは辛いものに決まっているそれは私もわかっているさ……",
+   "zh_current": "战斗注定是悲哀的……我明白……",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D238",
+   "budget_bytes": 15,
+   "jp": "今の私は弱い……そういうことか！",
+   "zh_current": "是我太弱了吗！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D254",
+   "budget_bytes": 25,
+   "jp": "もう後がない！ここを突破されるわけには……！！",
+   "zh_current": "已无退路！休想突破这里！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D27C",
+   "budget_bytes": 17,
+   "jp": "……退け！命を無駄にするな！",
+   "zh_current": "……退下！别白送命！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D29C",
+   "budget_bytes": 19,
+   "jp": "武器は相手を選んで使うものだ！",
+   "zh_current": "用武器、也得挑对手！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D2BC",
+   "budget_bytes": 19,
+   "jp": "来るぞ！各自、散開して回避しろ！",
+   "zh_current": "来了！各自散开回避！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D2DC",
+   "budget_bytes": 17,
+   "jp": "投降しろ！これ以上の戦いは無意味だ！",
+   "zh_current": "投降吧！再战也没用！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D2FC",
+   "budget_bytes": 19,
+   "jp": "し、しまった……！私としたことが！",
+   "zh_current": "糟、糟了……竟失手！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D31C",
+   "budget_bytes": 21,
+   "jp": "焦りがスキを生む……それが命取りだ！",
+   "zh_current": "急躁生破绽……致命伤！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F48",
+   "budget_bytes": 12,
+   "jp": "各機、私に続いてくれ！",
+   "zh_current": "各机、跟我上！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F60",
+   "budget_bytes": 16,
+   "jp": "わかった！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F7C",
+   "budget_bytes": 10,
+   "jp": "お供します……ゼクス",
+   "zh_current": "我陪你上！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F94",
+   "budget_bytes": 23,
+   "jp": "プリベンター·ファイア、了解だ！ゴールドに続く！",
+   "zh_current": "预防者·火、明白！跟上『金』",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6FB8",
+   "budget_bytes": 16,
+   "jp": "わかった！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6FD4",
+   "budget_bytes": 16,
+   "jp": "わかった！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6FF0",
+   "budget_bytes": 16,
+   "jp": "わかった！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

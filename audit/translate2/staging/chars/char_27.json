@@ -1,0 +1,272 @@
+{
+ "entity": "char_27",
+ "kind": "character",
+ "cids": [
+  27
+ ],
+ "name_jp": "エギーユ・デラーズ",
+ "name_zh_KEEP": "艾裘·迪拉兹",
+ "cards": [
+  {
+   "cid": 27,
+   "ids": [
+    {
+     "idn": 81,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7181",
+     "zh_name_ptr": "0x20B7181",
+     "name_jp": "祖国の名誉のために……！",
+     "name_zh_current": "为祖国荣誉",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 26,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%",
+     "cutin_group": 49,
+     "cutin_jp": "繰り返し心に聞こえてくる祖国の名誉のために……ジーク·ジオン！",
+     "cutin_zh_current": "反复在心中回响、为了祖国的荣誉……吉翁万岁！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 82,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7197",
+     "zh_name_ptr": "0x23296DE",
+     "name_jp": "栄光をこの手に掴むまで……！",
+     "name_zh_current": "紧握荣光",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲HP回復",
+     "summary_zh_KEEP": "范围HP回复",
+     "didx": 6,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）自分を除く仲間のHPが25%回復する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）恢复25%",
+     "cutin_group": 50,
+     "cutin_jp": "生きてこそ手に入れることのできる栄光をこの手に掴むまで……！",
+     "cutin_zh_current": "活着才能得到的荣光、定要亲手紧握……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 83,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B71B0",
+     "zh_name_ptr": "0x20B71B0",
+     "name_jp": "もはや我が軍団に……",
+     "name_zh_current": "我军无犹豫",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 51,
+     "cutin_jp": "もはや我が軍団にためらいの吐息を漏らすものはおらぬ！",
+     "cutin_zh_current": "如今我军之中、再无人发出犹豫的叹息！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2A40",
+   "budget_bytes": 17,
+   "jp": "所詮は烏合の衆か……撃てっ！！",
+   "zh_current": "乌合之众……开火！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A60",
+   "budget_bytes": 8,
+   "jp": "……撃てえい！",
+   "zh_current": "……开火！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A74",
+   "budget_bytes": 25,
+   "jp": "我々はいささかも戦いの目的を見失ってはいない！",
+   "zh_current": "我们从未迷失战斗的目的！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A9C",
+   "budget_bytes": 11,
+   "jp": "ジオンの栄光のために！！",
+   "zh_current": "为吉翁荣光！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2ACC",
+   "budget_bytes": 21,
+   "jp": "連邦の雑兵どもに思い知らせてやるのだ！",
+   "zh_current": "让联邦杂兵尝尝厉害！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2AF0",
+   "budget_bytes": 17,
+   "jp": "行けっ！ジオンの栄光のために！！",
+   "zh_current": "上！为吉翁荣光！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B10",
+   "budget_bytes": 19,
+   "jp": "我らの手で勝利をつかみとるのだ！！",
+   "zh_current": "亲手夺取胜利！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B30",
+   "budget_bytes": 10,
+   "jp": "大義は我らにあり！！",
+   "zh_current": "大义在我！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B48",
+   "budget_bytes": 20,
+   "jp": "無念……我が身の不覚であったか……",
+   "zh_current": "不甘心……是我失算了……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B68",
+   "budget_bytes": 17,
+   "jp": "哀れ……志なき者の□さよ",
+   "zh_current": "可悲……无志者太弱！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BA8",
+   "budget_bytes": 25,
+   "jp": "見よ……！天も我らの勝利を望んでいるのだ！",
+   "zh_current": "看吧！连上天都盼我们胜利！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF0",
+   "budget_bytes": 12,
+   "jp": "連邦、恐れるに足らず！",
+   "zh_current": "联邦不足惧！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C08",
+   "budget_bytes": 27,
+   "jp": "崇高な志を持つ者は苦難の全てをはねのけるのだ！",
+   "zh_current": "怀崇高之志者能克服一切苦难！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C30",
+   "budget_bytes": 28,
+   "jp": "大事をなさんとする者は小事にはこだわってはならぬ！",
+   "zh_current": "欲成大事者不可拘泥于小节！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C58",
+   "budget_bytes": 16,
+   "jp": "これぞ呪わしき連邦の悪意……！",
+   "zh_current": "可恨的联邦恶意！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C74",
+   "budget_bytes": 28,
+   "jp": "死を求めるのではない醜い生を忌み嫌うだけだ……",
+   "zh_current": "我并非求死只是厌恶苟活……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C9C",
+   "budget_bytes": 5,
+   "jp": "哀れ……",
+   "zh_current": "可悲！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CB0",
+   "budget_bytes": 10,
+   "jp": "ええい……やらせん！",
+   "zh_current": "可恶、休想！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CC8",
+   "budget_bytes": 19,
+   "jp": "そのような攻撃に我らがひるむものか！！",
+   "zh_current": "这种攻击难不倒我们！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CE8",
+   "budget_bytes": 24,
+   "jp": "ジオンの大義のため……その機体は我らがいただく！",
+   "zh_current": "为吉翁大义、机体我们收下！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D0C",
+   "budget_bytes": 13,
+   "jp": "くっ！む、無念……！！",
+   "zh_current": "唔！不甘心……！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D28",
+   "budget_bytes": 21,
+   "jp": "そのような物言い……許してはおけぬ！！",
+   "zh_current": "那种言论……决不饶恕！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "entity": "unit_25",
+ "kind": "unit",
+ "utids": [
+  25
+ ],
+ "name_jp": "GP03デンドロビウム",
+ "name_zh_current": "GP03石斛兰",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EB79",
+   "jp": "コンテナ・ミサイル",
+   "zh_current": "集装导弹",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CAE8",
+   "jp": "大型ビーム・サーベル",
+   "zh_current": "大型光束军刀",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218C7B6",
+   "jp": "メガ・ビーム砲",
+   "zh_current": "米加光束炮",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 4,
+   "ptr": "0x218EB94",
+   "jp": "マイクロ・ミサイル",
+   "zh_current": "微型导弹",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 5,
+   "ptr": "0x218EB9D",
+   "jp": "爆導索",
+   "zh_current": "爆导索",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 8,
+   "record_offset": "0x100",
+   "budget_bytes": 40,
+   "jp_segments": [
+    "地形適正・宇宙大型ユニット",
+    "アームド・ベース（フルアーマーシステム解除可能）"
+   ],
+   "zh_segments_current": [
+    "宇宙适应巨大",
+    "武装基地"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E6A",
+   "jp": "Iフィールド",
+   "zh_current": "I力场",
+   "owner": false,
+   "owned_by": "unit_4"
+  },
+  "defense": {
+   "record": 1,
+   "record_offset": "0xc",
+   "budget_bytes": 56,
+   "jp_segments": [
+    "威力450までのビーム属性の射撃攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束射击无效",
+    "超过则减30%"
+   ],
+   "owner": false,
+   "owned_by": "unit_4"
+  }
+ }
+}

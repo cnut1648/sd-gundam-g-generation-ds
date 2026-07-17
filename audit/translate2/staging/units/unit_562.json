@@ -1,0 +1,76 @@
+{
+ "entity": "unit_562",
+ "kind": "unit",
+ "utids": [
+  562,
+  563,
+  564
+ ],
+ "name_jp": "ガイアガンダム",
+ "name_zh_current": "盖亚高达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2189C11",
+   "jp": "グリフォン2",
+   "zh_current": "格里芬2",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 187,
+   "record_offset": "0xb54",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "地形適正・地上",
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "地面适应",
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EE0",
+   "jp": "VPS装甲",
+   "zh_current": "VPS装甲",
+   "owner": false,
+   "owned_by": "unit_550"
+  },
+  "defense": {
+   "record": 21,
+   "record_offset": "0x3c4",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "（ヴァリアブルフェイズシフト装甲）",
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "可变PS装甲",
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_550"
+  }
+ }
+}

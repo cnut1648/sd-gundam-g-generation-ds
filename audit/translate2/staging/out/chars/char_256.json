@@ -1,0 +1,104 @@
+{
+ "entity": "char_256",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%83%8E%E3%83%BC%E3%83%9E%E3%83%BB%E3%83%AC%E3%82%AE%E3%82%AA",
+  "https://gundam.fandom.com/wiki/Legion",
+  "https://gundam.huijiwiki.com/wiki/%E7%99%BE%E5%A4%AB%E9%95%BF",
+  "https://dic.pixiv.net/a/%CE%BD%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%81%AF%E4%BC%8A%E9%81%94%E3%81%98%E3%82%83%E3%81%AA%E3%81%84"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 768,
+   "name_zh": "米吉多之火",
+   "cutin_zh": "燃烧殆尽吧……在米吉多之火中",
+   "notes": "メギド=米吉多（圣经地名、哈米吉多顿之源）。名台词由燃尽吧改为燃烧殆尽吧、语气更庄重。detail归char_4所有"
+  },
+  {
+   "idn": 769,
+   "name_zh": "皇帝守护我",
+   "cutin_zh": "皇帝在……守护着我……",
+   "detail_effect_zh": "搭乘皇帝时、HP完全回复",
+   "notes": "インペラトール=专机皇帝（Imperator）、机体图鉴原文即注明インベラトール（皇帝）、与data/zh/units.json一致。原效果文恢复100%漏掉搭乘条件、已补全。指令名全形为它会守护我、名台词是其省略形、故译作陈述而非祈求"
+  },
+  {
+   "idn": 770,
+   "name_zh": "此力为大家",
+   "cutin_zh": "就让你们见识吧……我这份力量、为了大家",
+   "notes": "原指令名我力为众人与名台词的大家用词脱节、改为此力为大家以共用力量/大家关键词。detail归char_176所有"
+  },
+  {
+   "idn": 1098,
+   "name_zh": "米吉多之火",
+   "cutin_zh": "燃烧殆尽吧……在米吉多之火中",
+   "notes": "与idn768共用同一名称字符串、名台词同文。detail归char_134所有"
+  },
+  {
+   "idn": 1099,
+   "name_zh": "此即军团",
+   "cutin_zh": "万众归一……此即军团",
+   "notes": "原名军团为一体生硬、改为直接取名台词落点此即军团（4格）。レギオン=军团、出自马可福音5:9我名叫群/Legion。detail归char_28所有"
+  },
+  {
+   "idn": 1100,
+   "name_zh": "我是始与终",
+   "cutin_zh": "我是阿尔法、亦是欧米伽……无数而为一的完全存在",
+   "detail_effect_zh": "HP回复25%、所受伤害减轻至三分之一",
+   "notes": "启示录22:13我是阿拉法我是俄梅戛、我是初我是终；5格装不下阿尔法/欧米伽、指令名取始与终义译并与名台词概念呼应。JP的1／3因斜杠不可编码写作三分之一（数字校验会报warn、数值未变）。detail原文愛ける为受ける之讹"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x21A98", "zh": "看哪……我来像贼一样"},
+  {"file": "0.bin", "record": "0x21AB8", "zh": "这力量……为大家而用"},
+  {"file": "0.bin", "record": "0x21AD4", "zh": "粉碎吧……如陶工打碎瓦器"},
+  {"file": "0.bin", "record": "0x21AFC", "zh": "……"},
+  {"file": "0.bin", "record": "0x21B0C", "zh": "我应当迎战的……正是各位"},
+  {"file": "0.bin", "record": "0x21B30", "zh": "用刀杀人的、必被刀杀……"},
+  {"file": "0.bin", "record": "0x21B50", "zh": "我定会守护大家……"},
+  {"file": "0.bin", "record": "0x21B6C", "zh": "……"},
+  {"file": "0.bin", "record": "0x21B7C", "zh": "啊……这也是、报应？"},
+  {"file": "0.bin", "record": "0x21B98", "zh": "……打不中！"},
+  {"file": "0.bin", "record": "0x21BAC", "zh": "我、我还……还有必须做的事……"},
+  {"file": "0.bin", "record": "0x21BD4", "zh": "那人、视而不见、听而不闻……"},
+  {"file": "0.bin", "record": "0x21BFC", "zh": "看哪……我必快来"},
+  {"file": "0.bin", "record": "0x21C14", "zh": "让我来回答……我就是"},
+  {"file": "0.bin", "record": "0x21C34", "zh": "啊！？"},
+  {"file": "0.bin", "record": "0x21C48", "zh": "我、我还……"},
+  {"file": "0.bin", "record": "0x21C60", "zh": "住手吧……抵抗无益"},
+  {"file": "0.bin", "record": "0x21C7C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x21C90", "zh": "来了！？大家、回避！！"},
+  {"file": "0.bin", "record": "0x21CAC", "zh": "那机体……就由我来捕获"},
+  {"file": "0.bin", "record": "0x21CCC", "zh": "怎么会！？"},
+  {"file": "0.bin", "record": "0x21CE0", "zh": "我不再迷茫了！"},
+  {"file": "1de.bin", "record": "0x7FB0", "zh": "连续攻击！大家、请支援！！"},
+  {"file": "1de.bin", "record": "0x7FD4", "zh": "了解！支援！！"},
+  {"file": "1de.bin", "record": "0x7FEC", "zh": "了解！支援！！"},
+  {"file": "1de.bin", "record": "0x8004", "zh": "了解！支援！！"},
+  {"file": "1de.bin", "record": "0x801C", "zh": "了解！支援！！"},
+  {"file": "1de.bin", "record": "0x8034", "zh": "了解！支援！！"},
+  {"file": "1de.bin", "record": "0x804C", "zh": "了解！支援！！"},
+  {"file": "0.bin", "record": "0x2A6E4", "zh": "要来了吗……可是！"},
+  {"file": "0.bin", "record": "0x2A700", "zh": "上路吧……受审判之人"},
+  {"file": "0.bin", "record": "0x2A720", "zh": "这一切、皆为父亲大人……"},
+  {"file": "0.bin", "record": "0x2A740", "zh": "……"},
+  {"file": "0.bin", "record": "0x2A750", "zh": "来吧、上路吧……受审判之人"},
+  {"file": "0.bin", "record": "0x2A774", "zh": "该被刀杀之人啊……就由我用刀了结您吧"},
+  {"file": "0.bin", "record": "0x2A7A4", "zh": "……"},
+  {"file": "0.bin", "record": "0x2A7B4", "zh": "刈尽一切恶者……为了那位大人"},
+  {"file": "0.bin", "record": "0x2A7DC", "zh": "啊……为何……？"},
+  {"file": "0.bin", "record": "0x2A7F4", "zh": "呵……"},
+  {"file": "0.bin", "record": "0x2A804", "zh": "这种程度！"},
+  {"file": "0.bin", "record": "0x2A81C", "zh": "那人视而不见、听而不闻……愚不可及"},
+  {"file": "0.bin", "record": "0x2A848", "zh": "就由我来回答您……我就是"},
+  {"file": "0.bin", "record": "0x2A870", "zh": "看哪……我必快来"},
+  {"file": "0.bin", "record": "0x2A890", "zh": "唔！？这力量……"},
+  {"file": "0.bin", "record": "0x2A8A8", "zh": "还没……"},
+  {"file": "0.bin", "record": "0x2A8BC", "zh": "冠有皇帝之名、可不是摆设哦？"},
+  {"file": "0.bin", "record": "0x2A8E8", "zh": "没用的……"},
+  {"file": "0.bin", "record": "0x2A900", "zh": "没用的……"},
+  {"file": "0.bin", "record": "0x2A918", "zh": "………………"},
+  {"file": "0.bin", "record": "0x2A92C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x2A940", "zh": "绝不让你们……碍事！"}
+ ],
+ "notes": "诺玛·雷吉欧=GジェネDS原创最终boss、军团（Legion、蜂巢意识强化人）之首、专机皇帝（インペラトール/Imperator、图鉴原文自注（皇帝））。台词大量化用启示录、译文对齐和合本：我来像贼一样（启16:15）、我必快来（启22:7/12）、用刀杀人的必被刀杀（启13:10）、窑户瓦器典（启2:27、按JP用词保留陶工）、刈=收割恶者（启14）、我就是（约18:5-6）。重大修正：bark 0x2A8BC 的JP原文缺字□经JP原版12x12字库位图比对确证为slot1850=伊、原句为皇帝の名を冠しているのは伊達ではないのですよ？——阿姆罗νガンダムは伊達じゃない！的名梗回收（她的机体正名为皇帝）、按社区通行译法不是摆设处理；旧译败坏帝王之名的……并不是我们！！系误译。0x2A848旧译含违规引号『』已去除。悪しき者すべてを刈りましょう的割字stage面不可编码、故用刈尽。所有bark经仓库真实编码器复核均在budget_bytes内、指令名均≤5格/64px、名台词3x18回流通过。"
+}

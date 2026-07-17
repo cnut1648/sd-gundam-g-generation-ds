@@ -1,0 +1,83 @@
+{
+ "entity": "unit_7",
+ "kind": "unit",
+ "utids": [
+  7,
+  8,
+  9
+ ],
+ "name_jp": "∀ガンダム（月光蝶）",
+ "name_zh_current": "∀高达（月光蝶）",
+ "name_zh_px": 88,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C79E",
+   "jp": "マルチ・パーパス・サイロ",
+   "zh_current": "多用途发射井",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218A438",
+   "jp": "月光蝶",
+   "zh_current": "月光蝶",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 2,
+   "record_offset": "0x58",
+   "budget_bytes": 40,
+   "jp_segments": [
+    "I・フィールドキャンセラー自動修復：300",
+    "月光蝶システム：周囲1マスにダメージ"
+   ],
+   "zh_segments_current": [
+    "力场抵消自愈300",
+    "月光蝶系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E6E",
+   "jp": "月光蝶",
+   "zh_current": "月光蝶",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 16,
+   "record_offset": "0x2d4",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し、",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

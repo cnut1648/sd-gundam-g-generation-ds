@@ -1,0 +1,896 @@
+{
+ "entity": "char_199",
+ "kind": "character",
+ "cids": [
+  199,
+  200,
+  201
+ ],
+ "name_jp": "マリュー・ラミアス",
+ "name_zh_KEEP": "玛琉",
+ "cards": [
+  {
+   "cid": 199,
+   "ids": [
+    {
+     "idn": 597,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8294",
+     "zh_name_ptr": "0x218C449",
+     "name_jp": "ECM！最大出力！！",
+     "name_zh_current": "ECM全开",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 478,
+     "cutin_jp": "ECM！最大出力！！",
+     "cutin_zh_current": "ECM！最大功率！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 598,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B82A2",
+     "zh_name_ptr": "0x20B82A2",
+     "name_jp": "降伏する事はありません！",
+     "name_zh_current": "绝不投降！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 479,
+     "cutin_jp": "本艦が降伏……復隊する事はありません！",
+     "cutin_zh_current": "本舰绝不会投降……也绝不会弃舰！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 599,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B82AF",
+     "zh_name_ptr": "0x20B82AF",
+     "name_jp": "……戦争をしているんです！",
+     "name_zh_current": "这是战争啊",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 480,
+     "cutin_jp": "乱暴でもなんでも！……戦争をしているんです！",
+     "cutin_zh_current": "无论多么粗暴！……我们可是在打仗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 200,
+   "ids": [
+    {
+     "idn": 600,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82BD",
+     "zh_name_ptr": "0x20B82BD",
+     "name_jp": "小さくとも強い火は消えぬと……",
+     "name_zh_current": "强火不会熄",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 26,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%",
+     "cutin_group": 481,
+     "cutin_jp": "小さくとも強い火は消えぬと……私たちは信じています",
+     "cutin_zh_current": "纵使微小、强劲之火也不会熄灭我们对此深信不疑",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 601,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B82A2",
+     "zh_name_ptr": "0x20B82A2",
+     "name_jp": "降伏する事はありません！",
+     "name_zh_current": "绝不投降！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 482,
+     "cutin_jp": "本艦が降伏……復隊する事はありません！",
+     "cutin_zh_current": "本舰绝不会投降……也绝不会弃舰！",
+     "name_owner": true,
+     "name_shared_with_idn": 598,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 602,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82CE",
+     "zh_name_ptr": "0x218C454",
+     "name_jp": "私のような頼りない艦長に……",
+     "name_zh_current": "不可靠舰长",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围威命甲",
+     "didx": 104,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·攻击+20%装甲+2",
+     "cutin_group": 483,
+     "cutin_jp": "私のような頼りない艦長にここまでついて来てくれて…ありがとう",
+     "cutin_zh_current": "对我这不可靠的舰长你们一路追随……谢谢",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 201,
+   "ids": [
+    {
+     "idn": 603,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82BD",
+     "zh_name_ptr": "0x20B82BD",
+     "name_jp": "小さくとも強い火は消えぬと……",
+     "name_zh_current": "强火不会熄",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 26,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%",
+     "cutin_group": 484,
+     "cutin_jp": "小さくとも強い火は消えぬと……私たちは信じています",
+     "cutin_zh_current": "纵使微小、强劲之火也不会熄灭我们对此深信不疑",
+     "name_owner": true,
+     "name_shared_with_idn": 600,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 604,
+     "slot": 1,
+     "target": "全军",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7467",
+     "zh_name_ptr": "0x20B7467",
+     "name_jp": "『アナタを守るから……』",
+     "name_zh_current": "我会守护你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 485,
+     "cutin_jp": "『守るから……私の本当の想いがアナタを守るから……！』",
+     "cutin_zh_current": "我会守护你……我真正的心意会守护你……！",
+     "name_owner": false,
+     "name_shared_with_idn": 159,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 605,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82CE",
+     "zh_name_ptr": "0x218C454",
+     "name_jp": "私のような頼りない艦長に……",
+     "name_zh_current": "不可靠舰长",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围威命甲",
+     "didx": 104,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·攻击+20%装甲+2",
+     "cutin_group": 486,
+     "cutin_jp": "私のような頼りない艦長にここまでついて来てくれて…ありがとう",
+     "cutin_zh_current": "对我这不可靠的舰长你们一路追随……谢谢",
+     "name_owner": true,
+     "name_shared_with_idn": 602,
+     "detail_owner": false,
+     "detail_owned_by": "char_199",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1A9BC",
+   "budget_bytes": 20,
+   "jp": "来るわよ！対艦、対MS戦闘用意！",
+   "zh_current": "来了！！对舰对MS备战！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A9F4",
+   "budget_bytes": 9,
+   "jp": "！てーっ！",
+   "zh_current": "！开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA0C",
+   "budget_bytes": 9,
+   "jp": "！てーっ！",
+   "zh_current": "！开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA24",
+   "budget_bytes": 19,
+   "jp": "突破するわ！火力を正面に集中して！",
+   "zh_current": "突破！火力集中正面！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA44",
+   "budget_bytes": 20,
+   "jp": "迎撃します！1番、2番、てーっ！",
+   "zh_current": "迎击！1号2号、开火！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA64",
+   "budget_bytes": 9,
+   "jp": "！てーっ！",
+   "zh_current": "！开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA7C",
+   "budget_bytes": 9,
+   "jp": "！てーっ！",
+   "zh_current": "！开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AA94",
+   "budget_bytes": 9,
+   "jp": "！てーっ！",
+   "zh_current": "！开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AAAC",
+   "budget_bytes": 19,
+   "jp": "そんな……何もできなかっただなんて……",
+   "zh_current": "怎么、什么都做不了……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AAE0",
+   "budget_bytes": 20,
+   "jp": "進路そのままよ！艦の速度は落とさないで！",
+   "zh_current": "保持航向！别掉速度！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AB0F",
+   "budget_bytes": 15,
+   "jp": "回避……間に合ったようね……",
+   "zh_current": "回避、赶上了呢……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AB53",
+   "budget_bytes": 21,
+   "jp": "敵の動き、気をつけて！！まだ来るわよ！",
+   "zh_current": "注意敌动向！还会来！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AB74",
+   "budget_bytes": 32,
+   "jp": "イーゲルシュテルンで応戦！コリントス！……装填急いで！",
+   "zh_current": "用近防炮应战！快装填导弹！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ABA0",
+   "budget_bytes": 21,
+   "jp": "警戒を厳に！ECMは最大出力！！",
+   "zh_current": "提高警戒！ECM全开！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ABD8",
+   "budget_bytes": 10,
+   "jp": "ちょ、直撃……なの？",
+   "zh_current": "直、直击……？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ABF0",
+   "budget_bytes": 16,
+   "jp": "か……回避運動しつつ後退を！",
+   "zh_current": "……回避、后退！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC0C",
+   "budget_bytes": 30,
+   "jp": "ビームなら対応可能よ！排熱量にだけ注意すればいいわ！",
+   "zh_current": "光束的话能应对！注意排热量！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC38",
+   "budget_bytes": 6,
+   "jp": "回避ーっ！！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC4C",
+   "budget_bytes": 6,
+   "jp": "回避ーっ！！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC60",
+   "budget_bytes": 22,
+   "jp": "これ以上の抵抗は無意味よ！大人しく投降しなさい！",
+   "zh_current": "抵抗没用！乖乖投降！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC84",
+   "budget_bytes": 14,
+   "jp": "あ……！つ、捕まった！？",
+   "zh_current": "啊……被抓了！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ACA0",
+   "budget_bytes": 21,
+   "jp": "ふざけないで！私たちは戦争をしてるのよ！",
+   "zh_current": "少胡闹！我们在打仗！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0x5CC",
+   "budget_bytes": 18,
+   "jp": "ゴットフリート照準！目標、ドミニオン！",
+   "zh_current": "瞄准目标、主天使号！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0x609",
+   "budget_bytes": 14,
+   "jp": "っ！！もうそんな距離に！？",
+   "zh_current": "唔、这么近了！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x70D",
+   "budget_bytes": 6,
+   "jp": "回避ーっ！！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0x732",
+   "budget_bytes": 18,
+   "jp": "ヴァリアントで反撃！照準……",
+   "zh_current": "用瓦里安特反击！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0x773",
+   "budget_bytes": 5,
+   "jp": "……っ！？",
+   "zh_current": "……！？",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0x7C7",
+   "budget_bytes": 7,
+   "jp": "ベラ·ロナ！？",
+   "zh_current": "贝拉！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x820",
+   "budget_bytes": 7,
+   "jp": "反撃します！！",
+   "zh_current": "反击！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0x833",
+   "budget_bytes": 14,
+   "jp": "ゴットフリート！てーっ！",
+   "zh_current": "哥特弗里德！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0xD43",
+   "budget_bytes": 4,
+   "jp": "回避っ！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0xDA8",
+   "budget_bytes": 6,
+   "jp": "……ムウ！？",
+   "zh_current": "……穆！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0xDE0",
+   "budget_bytes": 7,
+   "jp": "ムウーーっ！！",
+   "zh_current": "穆——！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0xE28",
+   "budget_bytes": 12,
+   "jp": "ローエングリン……照準！！",
+   "zh_current": "罗恩格林！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ACC4",
+   "budget_bytes": 20,
+   "jp": "来るわよ！対艦、対MS戦闘用意！",
+   "zh_current": "来了！！对舰对MS备战！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ACFC",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD14",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD2C",
+   "budget_bytes": 20,
+   "jp": "推力最大！回頭20！一斉射撃！",
+   "zh_current": "全速转向20！齐射！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD4C",
+   "budget_bytes": 7,
+   "jp": "……てーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD60",
+   "budget_bytes": 20,
+   "jp": "迎撃します！1番、2番、てーっ！",
+   "zh_current": "迎击！1号2号、开火！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD80",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD98",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ADB0",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ADC8",
+   "budget_bytes": 27,
+   "jp": "ごめんなさい、みんな……私の指揮が足りないばかりに……",
+   "zh_current": "对不起、大家……是我指挥不力……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AE04",
+   "budget_bytes": 18,
+   "jp": "気を抜かないで！次が来るわよ！",
+   "zh_current": "别松懈！！还会再来！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AE24",
+   "budget_bytes": 25,
+   "jp": "希望の灯……絶やさせるわけにはいかないわ！",
+   "zh_current": "希望……绝不能让它消失！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AE4C",
+   "budget_bytes": 21,
+   "jp": "警戒を厳に！ECMは最大出力！！",
+   "zh_current": "提高警戒！ECM全开！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AE70",
+   "budget_bytes": 23,
+   "jp": "……回避運動そのまま！艦の速度を落とさないで！",
+   "zh_current": "保持回避机动！别掉速度！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AE94",
+   "budget_bytes": 32,
+   "jp": "イーゲルシュテルンで応戦！コリントス！……装填急いで！",
+   "zh_current": "用近防炮应战！快装填导弹！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AEE8",
+   "budget_bytes": 26,
+   "jp": "ここでやられては意味が無いわ！ふみとどまるのよ！",
+   "zh_current": "在这倒下没意义！！给我撑住！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF10",
+   "budget_bytes": 30,
+   "jp": "ビームなら対応可能よ！排熱量にだけ注意すればいいわ！",
+   "zh_current": "光束的话能应对！注意排热量！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF3C",
+   "budget_bytes": 16,
+   "jp": "私だって攻撃を避けるくらい……！",
+   "zh_current": "我也躲得开……！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF58",
+   "budget_bytes": 14,
+   "jp": "来るわよ！回避ーーっ！！",
+   "zh_current": "来了！全员回避！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF74",
+   "budget_bytes": 22,
+   "jp": "これ以上の抵抗は無意味よ！大人しく投降しなさい！",
+   "zh_current": "抵抗没用！乖乖投降！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF98",
+   "budget_bytes": 14,
+   "jp": "あ……！つ、捕まった！？",
+   "zh_current": "啊……被抓了！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AFB4",
+   "budget_bytes": 21,
+   "jp": "ふざけないで！私たちは戦争をしてるのよ！",
+   "zh_current": "少胡闹！我们在打仗！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AEC0",
+   "budget_bytes": 28,
+   "jp": "ま、まだ落とされたわけではないわ！対応、急いで！！",
+   "zh_current": "我、我还没被击落！全员、应对！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AFEE",
+   "budget_bytes": 12,
+   "jp": "迎撃します！を！",
+   "zh_current": "迎击！！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B008",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B020",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B04E",
+   "budget_bytes": 20,
+   "jp": "迎撃します！1番、2番、てーっ！",
+   "zh_current": "迎击！1号2号、开火！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B070",
+   "budget_bytes": 20,
+   "jp": "推力最大！回頭20！一斉射撃！",
+   "zh_current": "全速！转向20齐射！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B090",
+   "budget_bytes": 7,
+   "jp": "……てーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B0A4",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B0BC",
+   "budget_bytes": 10,
+   "jp": "！てーっ！！",
+   "zh_current": "！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B0D4",
+   "budget_bytes": 17,
+   "jp": "！照準！……てえーっ！",
+   "zh_current": "瞄准！……开火！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B0F4",
+   "budget_bytes": 26,
+   "jp": "これ以上は無理ね……遺憾ながら本艦を放棄します！",
+   "zh_current": "到极限了……很遗憾、放弃本舰！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B137",
+   "budget_bytes": 18,
+   "jp": "気を抜かないで！次が来るわよ！",
+   "zh_current": "别松懈！！还会再来！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B158",
+   "budget_bytes": 25,
+   "jp": "希望の灯……絶やさせるわけにはいかないわ！",
+   "zh_current": "希望……绝不能让它消失！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B180",
+   "budget_bytes": 8,
+   "jp": "クッ！状況は！？",
+   "zh_current": "唔！状况？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B194",
+   "budget_bytes": 25,
+   "jp": "回避運動、急いで！回頭30、艦首上げ15！",
+   "zh_current": "回避机动！转向30、抬首15！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B1BC",
+   "budget_bytes": 37,
+   "jp": "ECMを展開しつつ応戦！各発射管はコリントスを装填のこと！",
+   "zh_current": "展开ECM应战！各发射管装填导弹！",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B25C",
+   "budget_bytes": 16,
+   "jp": "くっ！まだ、後少しは……！！",
+   "zh_current": "唔！再撑一会儿……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B278",
+   "budget_bytes": 31,
+   "jp": "排熱量チェック急いで！耐ビーム装甲、まだ持つわね！？",
+   "zh_current": "快检查排热量！装甲还撑得住吧！？",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B2A4",
+   "budget_bytes": 18,
+   "jp": "艦首上げ、20！最大戦速で回避！",
+   "zh_current": "舰首抬20！战速回避！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B2C4",
+   "budget_bytes": 22,
+   "jp": "来るわっ！回避運動！速度、落とさないで！",
+   "zh_current": "来了！回避！别掉速度！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B2E8",
+   "budget_bytes": 29,
+   "jp": "もうあなたの戦争は終ったわ！命を粗末にしないで……！",
+   "zh_current": "你的战争结束了！珍惜性命吧！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B314",
+   "budget_bytes": 11,
+   "jp": "こ、こんなことって……！",
+   "zh_current": "怎会这样……！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B32C",
+   "budget_bytes": 21,
+   "jp": "ふざけないで！私たちは戦争をしてるのよ！",
+   "zh_current": "少胡闹！我们在打仗！！",
+   "zh_current_bytes": 17
+  }
+ ]
+}

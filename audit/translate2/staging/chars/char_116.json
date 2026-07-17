@@ -1,0 +1,644 @@
+{
+ "entity": "char_116",
+ "kind": "character",
+ "cids": [
+  116,
+  120
+ ],
+ "name_jp": "ゼクス・マーキス",
+ "name_zh_KEEP": "杰克斯",
+ "cards": [
+  {
+   "cid": 116,
+   "ids": [
+    {
+     "idn": 348,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A70",
+     "zh_name_ptr": "0x218FF25",
+     "name_jp": "呼ばれているわけではない！",
+     "name_zh_current": "非浪得虚名",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋先制攻撃",
+     "summary_zh_KEEP": "威命↑・先攻",
+     "didx": 140,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%先攻",
+     "cutin_group": 265,
+     "cutin_jp": "だてにライトニングカウントの二つ名で呼ばれているわけではない！",
+     "cutin_zh_current": "闪电伯爵之名绝非浪得虚名！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_67",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 349,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A7F",
+     "zh_name_ptr": "0x20B7A7F",
+     "name_jp": "体裁は必要ない！",
+     "name_zh_current": "我绝不输！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 266,
+     "cutin_jp": "美意識を気取った体裁は必要ない！これは戦争なのだ！",
+     "cutin_zh_current": "无需故作高雅的体面！这就是战争！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 350,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7A89",
+     "zh_name_ptr": "0x218C1DA",
+     "name_jp": "力を持つ資格はない！",
+     "name_zh_current": "没那个资格",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 267,
+     "cutin_jp": "貴様らに力を持つ資格はない！",
+     "cutin_zh_current": "尔等没有掌握力量的资格！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 120,
+   "ids": [
+    {
+     "idn": 360,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AF5",
+     "zh_name_ptr": "0x218C1E5",
+     "name_jp": "勝利を見せてくれ！！",
+     "name_zh_current": "让我见胜利",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 223,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 277,
+     "cutin_jp": "月光蝶よ！私に勝利を見せてくれ！！",
+     "cutin_zh_current": "月光蝶啊！让我见证胜利吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 361,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A7F",
+     "zh_name_ptr": "0x20B7A7F",
+     "name_jp": "体裁は必要ない！",
+     "name_zh_current": "我绝不输！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 278,
+     "cutin_jp": "美意識を気取った体裁は必要ない！これは戦争なのだ！",
+     "cutin_zh_current": "无需故作高雅的体面！这就是战争！",
+     "name_owner": true,
+     "name_shared_with_idn": 349,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 362,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7A89",
+     "zh_name_ptr": "0x218C1DA",
+     "name_jp": "力を持つ資格はない！",
+     "name_zh_current": "没那个资格",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 279,
+     "cutin_jp": "貴様らに力を持つ資格はない！",
+     "cutin_zh_current": "尔等没有掌握力量的资格！",
+     "name_owner": true,
+     "name_shared_with_idn": 350,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xE7C4",
+   "budget_bytes": 9,
+   "jp": "バカは来る……！！",
+   "zh_current": "蠢货来了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE7DC",
+   "budget_bytes": 27,
+   "jp": "この武器でどこまで戦えるか問題は敵より私自身だな……",
+   "zh_current": "这武器能战到何时……问题在我",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE804",
+   "budget_bytes": 26,
+   "jp": "死に物狂いの戦いでなければ得られぬものもあるのだ！",
+   "zh_current": "不拼死一战、有些东西就得不到！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE82C",
+   "budget_bytes": 10,
+   "jp": "戦いに美意識など不要！",
+   "zh_current": "无需美学！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE844",
+   "budget_bytes": 26,
+   "jp": "雑念ならばとうに捨てている！……行くぞっ！！",
+   "zh_current": "杂念早已抛弃！……上吧！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE86C",
+   "budget_bytes": 34,
+   "jp": "私の命の見積もりが謝っていたこと……証明せねばならんな！！",
+   "zh_current": "我对生命的估算错了……必须证明才行！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE89C",
+   "budget_bytes": 23,
+   "jp": "私とて数多くのMSを乗りこなしてきたのだ！",
+   "zh_current": "我也驾驭过无数的MS！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE8C0",
+   "budget_bytes": 19,
+   "jp": "これは私の甘さの清算なのだ……！",
+   "zh_current": "这是清算我的软弱……！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE8E0",
+   "budget_bytes": 15,
+   "jp": "我が愛機よ……安らかに眠れ",
+   "zh_current": "爱机啊……安息吧",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE8FC",
+   "budget_bytes": 7,
+   "jp": "……甘いな！",
+   "zh_current": "太天真！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE910",
+   "budget_bytes": 24,
+   "jp": "……良い攻めだ！だがそれでは私は倒せん！",
+   "zh_current": "……好攻势！！但打不倒我！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE934",
+   "budget_bytes": 20,
+   "jp": "この程度の戦いで、お互い、死ねんな……",
+   "zh_current": "这程度、你我可死不了",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE954",
+   "budget_bytes": 19,
+   "jp": "私の反応が……わずかに遅れている！？",
+   "zh_current": "我的反应慢了半拍！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE974",
+   "budget_bytes": 21,
+   "jp": "こ、この甘さを……切り捨てなければ！",
+   "zh_current": "这份天真……必须舍弃！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE998",
+   "budget_bytes": 21,
+   "jp": "こ、これが……私の倒すべき相手か！",
+   "zh_current": "这就是……我的对手！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE9BC",
+   "budget_bytes": 28,
+   "jp": "これだ……！この甘さを清算したいのだ！私は！",
+   "zh_current": "就是这个……我要清算这份软弱！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE9E4",
+   "budget_bytes": 17,
+   "jp": "もはや……技量の勝負ではないのだ",
+   "zh_current": "已经非技巧之争！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEA04",
+   "budget_bytes": 12,
+   "jp": "甘いな……そんなもので！",
+   "zh_current": "太天真！就这？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEA1C",
+   "budget_bytes": 19,
+   "jp": "各機、回避運動！遠距離攻撃が来るぞ！",
+   "zh_current": "各机、展开回避机动！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEA3C",
+   "budget_bytes": 17,
+   "jp": "その機体は捕縛させていただこう！",
+   "zh_current": "那机体、我收下了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEA5C",
+   "budget_bytes": 16,
+   "jp": "くっ……！私を捕えただと！？",
+   "zh_current": "唔……竟抓住了我！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEA78",
+   "budget_bytes": 17,
+   "jp": "私を甘く見ないでいただこうか！",
+   "zh_current": "休得小看我！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4274",
+   "budget_bytes": 28,
+   "jp": "私だけでは力不足か……すまない、貴様らの力を借りるぞ！",
+   "zh_current": "光靠我还不够……抱歉、借你们之力！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x429C",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x42B8",
+   "budget_bytes": 31,
+   "jp": "コンビネーシヨンで行くか……面白い！私もやるぞ、ノイン！！",
+   "zh_current": "用组合攻击……有趣！我也上、诺茵！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x42E4",
+   "budget_bytes": 31,
+   "jp": "いいだろう、我が友トレーズよ！仮面砕けるまでの付き合いだ！！",
+   "zh_current": "好、吾友特列斯！奉陪到面具碎裂！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4310",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x432C",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4348",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF210",
+   "budget_bytes": 9,
+   "jp": "バカは来る……！！",
+   "zh_current": "蠢货来了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF228",
+   "budget_bytes": 27,
+   "jp": "この武器でどこまで戦えるか問題は敵より私自身だな……",
+   "zh_current": "这武器能战到何时……问题在我",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF250",
+   "budget_bytes": 7,
+   "jp": "……遅い！！",
+   "zh_current": "太慢了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF264",
+   "budget_bytes": 10,
+   "jp": "戦いに美意識など不要！",
+   "zh_current": "无需美学！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF27C",
+   "budget_bytes": 17,
+   "jp": "貴様らに力を持つ資格はない！",
+   "zh_current": "你们不配拥有力量！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF29C",
+   "budget_bytes": 27,
+   "jp": "私の命の見積もり……誤ってもらっては困る！",
+   "zh_current": "我这条命的分量、可别算错了！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF2C4",
+   "budget_bytes": 23,
+   "jp": "私とて数多くのMSを乗りこなしてきたのだ！",
+   "zh_current": "我也驾驭过无数的MS！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF2E8",
+   "budget_bytes": 19,
+   "jp": "貴様の実力……確かめさせてもらおう！",
+   "zh_current": "你的实力……我来领教！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF308",
+   "budget_bytes": 27,
+   "jp": "前線の雇われ軍人は功を焦るべきではないな…",
+   "zh_current": "前线的雇佣兵、不该急于求功……",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF330",
+   "budget_bytes": 7,
+   "jp": "……甘いな！",
+   "zh_current": "太天真！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF344",
+   "budget_bytes": 24,
+   "jp": "……良い攻めだ！だがそれでは私は倒せん！",
+   "zh_current": "……好攻势！！但打不倒我！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF368",
+   "budget_bytes": 20,
+   "jp": "この程度の戦いで、お互い、死ねんな……",
+   "zh_current": "这程度、你我可死不了",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF388",
+   "budget_bytes": 19,
+   "jp": "私の反応が……わずかに遅れている！？",
+   "zh_current": "我的反应慢了半拍！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF3A8",
+   "budget_bytes": 21,
+   "jp": "こ、この甘さを……切り捨てなければ！",
+   "zh_current": "这份天真……必须舍弃！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF3CC",
+   "budget_bytes": 21,
+   "jp": "こ、これが……私の倒すべき相手か！",
+   "zh_current": "这就是……我的对手！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF3F0",
+   "budget_bytes": 8,
+   "jp": "まだ……死ねん！",
+   "zh_current": "还死不了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF404",
+   "budget_bytes": 17,
+   "jp": "もはや……技量の勝負ではないのだ",
+   "zh_current": "已经非技巧之争！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF424",
+   "budget_bytes": 12,
+   "jp": "甘いな……そんなもので！",
+   "zh_current": "太天真！就这？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF43C",
+   "budget_bytes": 19,
+   "jp": "各機、回避運動！遠距離攻撃が来るぞ！",
+   "zh_current": "各机、展开回避机动！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF45C",
+   "budget_bytes": 17,
+   "jp": "その機体は捕縛させていただこう！",
+   "zh_current": "那机体、我收下了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF47C",
+   "budget_bytes": 16,
+   "jp": "くっ……！私を捕えただと！？",
+   "zh_current": "唔……竟抓住了我！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF498",
+   "budget_bytes": 17,
+   "jp": "私を甘く見ないでいただこうか！",
+   "zh_current": "休得小看我！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4644",
+   "budget_bytes": 28,
+   "jp": "私だけでは力不足か……すまない、貴様らの力を借りるぞ！",
+   "zh_current": "光靠我还不够……抱歉、借你们之力！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x466C",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4688",
+   "budget_bytes": 31,
+   "jp": "コンビネーシヨンで行くか……面白い！私もやるぞ、ノイン！！",
+   "zh_current": "用组合攻击……有趣！我也上、诺茵！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x46B4",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x46D0",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x46EC",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4708",
+   "budget_bytes": 13,
+   "jp": "いいだろう！手助けする！！",
+   "zh_current": "好！我来助阵！！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

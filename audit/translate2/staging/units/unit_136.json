@@ -1,0 +1,44 @@
+{
+ "entity": "unit_136",
+ "kind": "unit",
+ "utids": [
+  136,
+  137,
+  138
+ ],
+ "name_jp": "ガンキャノン",
+ "name_zh_current": "钢加农",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21898CD",
+   "jp": "キャノン砲",
+   "zh_current": "加农炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

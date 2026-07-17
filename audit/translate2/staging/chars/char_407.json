@@ -1,0 +1,220 @@
+{
+ "entity": "char_407",
+ "kind": "character",
+ "cids": [
+  407
+ ],
+ "name_jp": "ザフト士官",
+ "name_zh_KEEP": "扎夫特士官",
+ "cards": [
+  {
+   "cid": 407,
+   "ids": [
+    {
+     "idn": 1221,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8FAF",
+     "zh_name_ptr": "0x23287B7",
+     "name_jp": "ECM作動！",
+     "name_zh_current": "ECM启动！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 751,
+     "cutin_jp": "ECM作動！",
+     "cutin_zh_current": "ECM启动！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2BD94",
+   "budget_bytes": 18,
+   "jp": "……先手を取ったぞ！全砲門開け！",
+   "zh_current": "先发制人！炮门全开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BDB4",
+   "budget_bytes": 11,
+   "jp": "てえーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BDCC",
+   "budget_bytes": 11,
+   "jp": "てえーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BDE4",
+   "budget_bytes": 21,
+   "jp": "照準を絞り込め！火力を集中するんだ！",
+   "zh_current": "锁定目标、集中火力！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE08",
+   "budget_bytes": 11,
+   "jp": "よーし、射撃開始だッ！",
+   "zh_current": "好、开始射击！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE20",
+   "budget_bytes": 11,
+   "jp": "てえーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE38",
+   "budget_bytes": 11,
+   "jp": "てえーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE50",
+   "budget_bytes": 11,
+   "jp": "てえーっ！！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE68",
+   "budget_bytes": 21,
+   "jp": "クッ！これまでか！！……総員退避！！",
+   "zh_current": "到此为止吗！全员退避！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BE8C",
+   "budget_bytes": 15,
+   "jp": "イーゲルシュテルンで迎え撃て！",
+   "zh_current": "用近防炮迎击！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BEA8",
+   "budget_bytes": 16,
+   "jp": "ふう……なんとかしのげたか……",
+   "zh_current": "呼……总算撑过去了",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BEC4",
+   "budget_bytes": 20,
+   "jp": "この程度とはな！しょせんはナチュラルか！！",
+   "zh_current": "这程度！果然是自然人！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BEE4",
+   "budget_bytes": 15,
+   "jp": "くそっ！被害報告、急げ！",
+   "zh_current": "可恶！速报损害！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF00",
+   "budget_bytes": 23,
+   "jp": "索敵が甘いぞ！撃たれてからでは遅い！",
+   "zh_current": "索敌太大意、中弹就晚了！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF24",
+   "budget_bytes": 18,
+   "jp": "おのれ、ナチュラルめ！やってくれる！！",
+   "zh_current": "可恶！让他们得手了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF44",
+   "budget_bytes": 20,
+   "jp": "くっ！応戦しつつ後退だ！振り切れッ！",
+   "zh_current": "唔！且战且退！摆脱敌人！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF64",
+   "budget_bytes": 11,
+   "jp": "そんな旧式の兵器で……！",
+   "zh_current": "旧式武器……！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF7C",
+   "budget_bytes": 7,
+   "jp": "……来たかっ！",
+   "zh_current": "来了吗！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BF90",
+   "budget_bytes": 10,
+   "jp": "来たぞ……回避だ！！",
+   "zh_current": "来了……回避！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BFA8",
+   "budget_bytes": 16,
+   "jp": "その機体は我らザフトがいただく！",
+   "zh_current": "那机体归扎夫特！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BFC4",
+   "budget_bytes": 16,
+   "jp": "しまった！う、動けん……！！",
+   "zh_current": "糟了！动不了了……！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BFE0",
+   "budget_bytes": 14,
+   "jp": "ナチュラルめ！ふざけた真似を！！",
+   "zh_current": "自然人！耍花招！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

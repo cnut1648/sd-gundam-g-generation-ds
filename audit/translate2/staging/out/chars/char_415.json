@@ -1,0 +1,48 @@
+{
+ "entity": "char_415",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E8%A5%BF%E7%8E%9B%C2%B7%E5%8D%A1%E6%8B%89%E8%B1%AA",
+  "https://wiki.biligame.com/gundam/%E8%A5%BF%E7%8E%9B%E8%88%B0%E9%98%9F"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1245,
+   "name_zh": "手痒了！！",
+   "cutin_zh": "嘿嘿、手都痒了！！",
+   "notes": "腕が鳴るぜ＝手痒/跃跃欲试；原译技痒难耐过于书面、不合海兵队粗人口吻、且丢了JP的！！。名称与名台词共用关键词手痒。detail归char_43、未输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2D1E4", "zh": "嘿嘿嘿……你看哪儿呢！"},
+  {"file": "0.bin", "record": "0x2D204", "zh": "好了……让老子乐一乐！"},
+  {"file": "0.bin", "record": "0x2D224", "zh": "哈哈哈！跳啊、跳啊！！"},
+  {"file": "0.bin", "record": "0x2D244", "zh": "让我刷刷击坠数吧！"},
+  {"file": "0.bin", "record": "0x2D264", "zh": "猎物任挑！我就不客气了！"},
+  {"file": "0.bin", "record": "0x2D288", "zh": "全是破绽！"},
+  {"file": "0.bin", "record": "0x2D2A0", "zh": "近身战我更胜一筹！"},
+  {"file": "0.bin", "record": "0x2D2BC", "zh": "好了……看我把你切碎！"},
+  {"file": "0.bin", "record": "0x2D2DC", "zh": "可、可恶！到头了……！"},
+  {"file": "0.bin", "record": "0x2D2FC", "zh": "哈哈！你瞄哪儿呢！"},
+  {"file": "0.bin", "record": "0x2D31C", "zh": "没那么容易被击落！！"},
+  {"file": "0.bin", "record": "0x2D33C", "zh": "哎呀……！挠痒痒呢！"},
+  {"file": "0.bin", "record": "0x2D35C", "zh": "这家伙……挺有两下子！"},
+  {"file": "0.bin", "record": "0x2D37C", "zh": "啧……！是我太轻敌了！"},
+  {"file": "0.bin", "record": "0x2D39C", "zh": "哇啊！！竟、竟是直击！？"},
+  {"file": "0.bin", "record": "0x2D3BC", "zh": "可、可恶！甩不掉！！"},
+  {"file": "0.bin", "record": "0x2D3D8", "zh": "嘿嘿……没用没用！！"},
+  {"file": "0.bin", "record": "0x2D3F4", "zh": "哎呀……！这套我可不吃！"},
+  {"file": "0.bin", "record": "0x2D414", "zh": "贵客上门了！快给我散开！！"},
+  {"file": "0.bin", "record": "0x2D438", "zh": "老实点就饶你一命！"},
+  {"file": "0.bin", "record": "0x2D458", "zh": "可恶……！真狼狈……"},
+  {"file": "0.bin", "record": "0x2D474", "zh": "别太得意了！"},
+  {"file": "1de.bin", "record": "0x8264", "zh": "好！一口气解决！！"},
+  {"file": "1de.bin", "record": "0x8280", "zh": "好、我来支援你！！"},
+  {"file": "1de.bin", "record": "0x829C", "zh": "是！西玛大人！！"},
+  {"file": "1de.bin", "record": "0x82B4", "zh": "哦！可别大意了！！"},
+  {"file": "1de.bin", "record": "0x82D0", "zh": "好、我来支援你！！"},
+  {"file": "1de.bin", "record": "0x82EC", "zh": "好、我来支援你！！"},
+  {"file": "1de.bin", "record": "0x8308", "zh": "好、我来支援你！！"}
+ ],
+ "notes": "吉翁海兵＝0083西玛舰队海兵队杂牌兵、走粗野海盗腔（与char_412海兵队士官同系）。全部29条bark经utils.text_codec.encode(surface=stage)实测字节、均在budget内（多条恰好顶格：0x2D2DC=17/17、0x2D3BC=16/16、0x2D3D8=14/14、0x8264=14/14）。修复类别：恢复JP的语气节奏（结尾！！、く、くそ结巴、……停顿）、消歧义（多刷点击坠数的点击误读）、去重（看哪儿呢vs瞄哪儿呢区分見ていやがる/狙ってやがる）、踊れ踊れ改直译跳啊跳啊、お出でなすった译作贵客上门保留反讽。シーマさま沿用西玛大人。"
+}

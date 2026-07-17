@@ -1,0 +1,280 @@
+{
+ "entity": "char_209",
+ "kind": "character",
+ "cids": [
+  209
+ ],
+ "name_jp": "ラクス（SEED）",
+ "name_zh_KEEP": "拉克丝（SEED）",
+ "cards": [
+  {
+   "cid": 209,
+   "ids": [
+    {
+     "idn": 627,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8353",
+     "zh_name_ptr": "0x218C48B",
+     "name_jp": "信じて戦うものは何ですか？",
+     "name_zh_current": "你为何而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵攻撃力減少",
+     "summary_zh_KEEP": "敌威应减少",
+     "didx": 86,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）反应-30·攻击-30%",
+     "cutin_group": 499,
+     "cutin_jp": "貴方が信じて戦うものは何ですか？",
+     "cutin_zh_current": "你所相信并为之战斗的是什么？",
+     "name_owner": false,
+     "name_shared_with_idn": 624,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 628,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B837A",
+     "zh_name_ptr": "0x218C4A1",
+     "name_jp": "……断ち切る力を！",
+     "name_zh_current": "斩断之力！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命防↑",
+     "didx": 201,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の反応が20、命中率と攻撃力が20%上昇",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·反应+20攻击+20%",
+     "cutin_group": 500,
+     "cutin_jp": "どうかこの果てない争いの連鎖を……断ち切る力を！",
+     "cutin_zh_current": "斩断这无尽纷争的锁链……请赐予我们那份力量！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 629,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8383",
+     "zh_name_ptr": "0x20B8383",
+     "name_jp": "帰って来てくださいね……",
+     "name_zh_current": "请一定回来",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "自軍HP0回復",
+     "summary_zh_KEEP": "自军HP全复",
+     "didx": 3,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）恢复100%",
+     "cutin_group": 501,
+     "cutin_jp": "帰って来てくださいね……ここへ……私の元へ",
+     "cutin_zh_current": "请一定要回来……回到这里……回到我身边",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1C190",
+   "budget_bytes": 26,
+   "jp": "思いだけでも、力だけでも、駄目なのです……だから！",
+   "zh_current": "光有思念、光有力量都不行！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C1B8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C1CC",
+   "budget_bytes": 31,
+   "jp": "兵器が争いを生むのでしょうか…それとも、人の心が……？",
+   "zh_current": "兵器催生争斗吗……还是、人心……？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C1F8",
+   "budget_bytes": 37,
+   "jp": "平和を叫びながら銃を取る……それは悪しき選択なのかもしれません",
+   "zh_current": "高呼和平却拿枪……或许是错误的选择",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C22C",
+   "budget_bytes": 25,
+   "jp": "私たちは……間に合わなかったのかもしれません……",
+   "zh_current": "我们……或许没能赶上……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C254",
+   "budget_bytes": 23,
+   "jp": "何としても戦いを終らせなければなりません！",
+   "zh_current": "必须让战斗就此终结！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C278",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C28C",
+   "budget_bytes": 23,
+   "jp": "何としても戦いを終らせなければなりません！",
+   "zh_current": "必须让战斗就此终结！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C2B0",
+   "budget_bytes": 13,
+   "jp": "撃たれた者には無い未来……",
+   "zh_current": "中弹者没有未来……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C2CC",
+   "budget_bytes": 25,
+   "jp": "私たち人は、おそらく戦わなくとも良かった存在……",
+   "zh_current": "我们人类、或许不战也好……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C2F4",
+   "budget_bytes": 24,
+   "jp": "戦うのは何のために？守るために？……何を？",
+   "zh_current": "为何而战？守护……什么？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C318",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C32C",
+   "budget_bytes": 23,
+   "jp": "なぜ人は争わなければならないのでしょう？",
+   "zh_current": "为何人非要相争不可呢？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C350",
+   "budget_bytes": 28,
+   "jp": "誰かを撃たねば守れぬ未来……それは何？……何故？",
+   "zh_current": "不开枪就守不住的未来……为何？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C378",
+   "budget_bytes": 14,
+   "jp": "まだ犠牲が欲しいのですか！？",
+   "zh_current": "还要牺牲吗！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C394",
+   "budget_bytes": 14,
+   "jp": "撃てば癒されるのですか！？",
+   "zh_current": "开枪能治愈吗！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C3B0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C3C4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C3D8",
+   "budget_bytes": 7,
+   "jp": "！……来ます！",
+   "zh_current": "……来了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C3EC",
+   "budget_bytes": 19,
+   "jp": "私はあなた方との戦闘を望みません！",
+   "zh_current": "我无意与你们交战！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C40C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C420",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x28",
+   "budget_bytes": 5,
+   "jp": "……………",
+   "zh_current": "……………",
+   "zh_current_bytes": 5
+  }
+ ]
+}

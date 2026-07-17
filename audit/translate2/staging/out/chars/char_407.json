@@ -1,0 +1,42 @@
+{
+ "entity": "char_407",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BESEED",
+  "https://wiki.biligame.com/gundam/%E6%89%8E%E5%A4%AB%E7%89%B9",
+  "https://wiki.biligame.com/gundam/%E8%87%AA%E7%84%B6%E4%BA%BA"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1221,
+   "name_zh": "ECM启动！",
+   "cutin_zh": "ECM启动！",
+   "notes": "ECM为拉丁代码保留；name_zh_px 56<=64 已实测可容纳。效果详情归char_140、不输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2BD94", "zh": "……先发制人！炮门全开！"},
+  {"file": "0.bin", "record": "0x2BDB4", "zh": "开火！！"},
+  {"file": "0.bin", "record": "0x2BDCC", "zh": "开火！！"},
+  {"file": "0.bin", "record": "0x2BDE4", "zh": "锁定目标！集中火力！"},
+  {"file": "0.bin", "record": "0x2BE08", "zh": "好、开始射击！"},
+  {"file": "0.bin", "record": "0x2BE20", "zh": "开火！！"},
+  {"file": "0.bin", "record": "0x2BE38", "zh": "开火！！"},
+  {"file": "0.bin", "record": "0x2BE50", "zh": "开火！！"},
+  {"file": "0.bin", "record": "0x2BE68", "zh": "到此为止吗！全员退避！！"},
+  {"file": "0.bin", "record": "0x2BE8C", "zh": "用近防炮迎击！"},
+  {"file": "0.bin", "record": "0x2BEA8", "zh": "呼……总算撑过去了"},
+  {"file": "0.bin", "record": "0x2BEC4", "zh": "就这程度！终究是自然人！"},
+  {"file": "0.bin", "record": "0x2BEE4", "zh": "可恶！快报损伤！"},
+  {"file": "0.bin", "record": "0x2BF00", "zh": "索敌太松懈！中弹就晚了！"},
+  {"file": "0.bin", "record": "0x2BF24", "zh": "自然人竟敢……可恶！！"},
+  {"file": "0.bin", "record": "0x2BF44", "zh": "唔！且战且退！摆脱敌人！"},
+  {"file": "0.bin", "record": "0x2BF64", "zh": "旧式武器……！"},
+  {"file": "0.bin", "record": "0x2BF7C", "zh": "……来了！"},
+  {"file": "0.bin", "record": "0x2BF90", "zh": "来了……回避！！"},
+  {"file": "0.bin", "record": "0x2BFA8", "zh": "机体归我们扎夫特！"},
+  {"file": "0.bin", "record": "0x2BFC4", "zh": "糟了！动不了了……！"},
+  {"file": "0.bin", "record": "0x2BFE0", "zh": "自然人！放肆！！"}
+ ],
+ "notes": "扎夫特军官口吻：对自然人的轻蔑（终究是自然人/自然人！放肆）与我ら誇り（机体归我们扎夫特）按JP保留。てえーっ！！为炮击口令、统一译开火！！（5处同句同译）。イーゲルシュテルン社区通译为豪猪阵（moegirl SEED页）、但字库无猪字、故保留通用近防炮；如日后铸字可改为用豪猪阵迎击！（12字节、预算15内）。0x2BF24理想长句：可恶的自然人！竟摆了我们一道！！（超预算）。所有行已按charmap one_byte/two_byte_zh实测字节数<=budget_bytes。"
+}

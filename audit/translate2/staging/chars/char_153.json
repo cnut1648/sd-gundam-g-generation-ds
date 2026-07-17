@@ -1,0 +1,644 @@
+{
+ "entity": "char_153",
+ "kind": "character",
+ "cids": [
+  153,
+  154
+ ],
+ "name_jp": "トレーズ",
+ "name_zh_KEEP": "特列斯",
+ "cards": [
+  {
+   "cid": 153,
+   "ids": [
+    {
+     "idn": 459,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E0F",
+     "zh_name_ptr": "0x218C2D5",
+     "name_jp": "祝福を与えたい……",
+     "name_zh_current": "送上祝福",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "チーム0回復",
+     "summary_zh_KEEP": "队・全回复",
+     "didx": 2,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）恢复100%",
+     "cutin_group": 361,
+     "cutin_jp": "私は勝者と敗者に祝福を与えたい……",
+     "cutin_zh_current": "我想为胜者与败者送上祝福……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 460,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7E1B",
+     "zh_name_ptr": "0x20B7E1B",
+     "name_jp": "ここは戦士だけの世界だ……",
+     "name_zh_current": "战士的世界",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・战斗力↑",
+     "didx": 100,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%反应+20·攻击+20%·装甲+2",
+     "cutin_group": 362,
+     "cutin_jp": "ここは戦士だけの世界だ……その純粋さゆえにこの戦場は美しい",
+     "cutin_zh_current": "这里是只有战士的世界……正因纯粹这战场才美丽",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 461,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E29",
+     "zh_name_ptr": "0x20B7E29",
+     "name_jp": "私は……敗者になりたい",
+     "name_zh_current": "我想当败者",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "すて身攻撃",
+     "summary_zh_KEEP": "舍身攻击",
+     "didx": 144,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）近接攻撃力が大幅上昇、敵の攻撃は回避不能に。戦闘終了までは撃破されない",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）舍身攻击·命中率+40%",
+     "cutin_group": 363,
+     "cutin_jp": "私は……敗者になりたい",
+     "cutin_zh_current": "我……想成为败者",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 154,
+   "ids": [
+    {
+     "idn": 462,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E3B",
+     "zh_name_ptr": "0x20B7E3B",
+     "name_jp": "行こう……敗北を得る戦いへ",
+     "name_zh_current": "为败北而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 230,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 364,
+     "cutin_jp": "さあ、行こう……ターンXよ敗北を得るための戦いへ……",
+     "cutin_zh_current": "走吧……倒X！为求败北而战……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 463,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7E1B",
+     "zh_name_ptr": "0x20B7E1B",
+     "name_jp": "ここは戦士だけの世界だ……",
+     "name_zh_current": "战士的世界",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・战斗力↑",
+     "didx": 100,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%反应+20·攻击+20%·装甲+2",
+     "cutin_group": 365,
+     "cutin_jp": "ここは戦士だけの世界だ……その純粋さゆえにこの戦場は美しい",
+     "cutin_zh_current": "这里是只有战士的世界……正因纯粹这战场才美丽",
+     "name_owner": true,
+     "name_shared_with_idn": 460,
+     "detail_owner": false,
+     "detail_owned_by": "char_153",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 464,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E29",
+     "zh_name_ptr": "0x20B7E29",
+     "name_jp": "私は……敗者になりたい",
+     "name_zh_current": "我想当败者",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "すて身攻撃",
+     "summary_zh_KEEP": "舍身攻击",
+     "didx": 144,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）近接攻撃力が大幅上昇、敵の攻撃は回避不能に。戦闘終了までは撃破されない",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）舍身攻击·命中率+40%",
+     "cutin_group": 366,
+     "cutin_jp": "私は……敗者になりたい",
+     "cutin_zh_current": "我……想成为败者",
+     "name_owner": true,
+     "name_shared_with_idn": 461,
+     "detail_owner": false,
+     "detail_owned_by": "char_153",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x13E40",
+   "budget_bytes": 8,
+   "jp": "……私の勝ちだな",
+   "zh_current": "……我赢了",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E54",
+   "budget_bytes": 8,
+   "jp": "私の……勝ちだ！",
+   "zh_current": "我……赢了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E68",
+   "budget_bytes": 25,
+   "jp": "見せてくれたまえ！君の戦いを、君の未来を……！",
+   "zh_current": "让我看看吧！你的战斗与未来！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E90",
+   "budget_bytes": 33,
+   "jp": "私の理想など、一人の人間の妄想でしかないことは分っているさ……",
+   "zh_current": "我的理想、不过是一介凡人的妄想……",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13EC0",
+   "budget_bytes": 30,
+   "jp": "嫌われ者は強くならねばならない……そう、この私も……",
+   "zh_current": "被人憎恶者必须变强……我也一样",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13EEC",
+   "budget_bytes": 23,
+   "jp": "さあ、私を撃ちたまえ……戦いの終結のために",
+   "zh_current": "来吧、向我开枪、为终结战争",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13F10",
+   "budget_bytes": 31,
+   "jp": "死をいとわぬ兵士……それこそが正しい人間の正しい姿なのだ",
+   "zh_current": "不惧死亡的战士、才是人真正的姿态",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13F3C",
+   "budget_bytes": 22,
+   "jp": "戦い続けよう……そして、勝ち続けよう、私は",
+   "zh_current": "战斗下去……一直赢下去吧",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13F60",
+   "budget_bytes": 23,
+   "jp": "良い戦いだった……また手合わせ願おう！",
+   "zh_current": "打得漂亮……再来过招吧！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13F84",
+   "budget_bytes": 17,
+   "jp": "狙いが甘いぞ！私はここだ！",
+   "zh_current": "瞄得不准！我在这里！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13FA4",
+   "budget_bytes": 33,
+   "jp": "戦う者には充実感がある……これこそ人の正しきあり方と言えよう",
+   "zh_current": "战斗者有充实感……这才是人的正道",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13FD4",
+   "budget_bytes": 22,
+   "jp": "そう……世界は闘い続けることが自然なのだ",
+   "zh_current": "是啊……世界本该不断争斗",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13FF8",
+   "budget_bytes": 34,
+   "jp": "それが君の選んだ未来か……ならば、私はそれに祝福を与えよう",
+   "zh_current": "那是你选的未来吗……我便为它祝福",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14028",
+   "budget_bytes": 38,
+   "jp": "迷いのない戦士は崇高で美しい……ある意味、神に最も近い存在だと言える",
+   "zh_current": "毫无犹豫的战士崇高而美丽……最接近于神",
+   "zh_current_bytes": 33
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1405C",
+   "budget_bytes": 34,
+   "jp": "膨れ上がる力がこれほど人間の心を置き去りにしていくとはな……",
+   "zh_current": "暴增的力量、竟如此将人心抛在身后……",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1408C",
+   "budget_bytes": 35,
+   "jp": "私の戦いは終わったが、戦いという行為に回答を見つけねばならないな……",
+   "zh_current": "我的战斗已结束、但须为战斗找到解答……",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x140BC",
+   "budget_bytes": 26,
+   "jp": "さあ、来たまえ！そして否定するのだ！この私を！！",
+   "zh_current": "来吧、来吧！然后否定这样的我！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x140E4",
+   "budget_bytes": 28,
+   "jp": "確かにその判断は正しい……だが、同時に悲しくもあるな",
+   "zh_current": "你的判断没错……但也同样悲哀",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1410C",
+   "budget_bytes": 14,
+   "jp": "事は全てエレガントに……だよ",
+   "zh_current": "凡事都要优雅……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14128",
+   "budget_bytes": 17,
+   "jp": "君の戦いはもう終っているのだ……",
+   "zh_current": "你的战斗早已结束",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14148",
+   "budget_bytes": 11,
+   "jp": "私は…敗者になりたい……",
+   "zh_current": "我想当败者……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14160",
+   "budget_bytes": 32,
+   "jp": "ならば私は一人の戦士として最期の瞬間までお相手させてもらおう！",
+   "zh_current": "那么、我便以战士的身份奉陪到底……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5844",
+   "budget_bytes": 12,
+   "jp": "事はエレガントに……だよ",
+   "zh_current": "凡事要优雅……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x585C",
+   "budget_bytes": 37,
+   "jp": "私は死者に哀悼の意を表することしかできない男ではあるがね……",
+   "zh_current": "我只能向逝者表达哀悼之意仅此而已……",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5890",
+   "budget_bytes": 13,
+   "jp": "事はエレガントにだ……レディ",
+   "zh_current": "要优雅……蕾蒂",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x58AC",
+   "budget_bytes": 10,
+   "jp": "君に任せるよ……レディ",
+   "zh_current": "靠你了蕾蒂",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x58C4",
+   "budget_bytes": 10,
+   "jp": "君に任せるよ……レディ",
+   "zh_current": "靠你了蕾蒂",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x58DC",
+   "budget_bytes": 29,
+   "jp": "我が友、ミルアルドよ……私はいつでも君に力を貸すとも",
+   "zh_current": "吾友米利亚尔特……我随时愿助你",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5908",
+   "budget_bytes": 37,
+   "jp": "私は死者に哀悼の意を表することしかできない男ではあるがね……",
+   "zh_current": "我只能向逝者表达哀悼之意仅此而已……",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1418C",
+   "budget_bytes": 8,
+   "jp": "……私の勝ちだな",
+   "zh_current": "……我赢了",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x141A0",
+   "budget_bytes": 8,
+   "jp": "私の……勝ちだ！",
+   "zh_current": "我……赢了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x141B4",
+   "budget_bytes": 25,
+   "jp": "見せてくれたまえ！君の戦いを、君の未来を……！",
+   "zh_current": "让我看看吧！你的战斗与未来！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x141DC",
+   "budget_bytes": 33,
+   "jp": "私の理想など、一人の人間の妄想でしかないことは分っているさ……",
+   "zh_current": "我的理想、不过是一介凡人的妄想……",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1420C",
+   "budget_bytes": 30,
+   "jp": "嫌われ者は強くならねばならない……そう、この私も……",
+   "zh_current": "被人憎恶者必须变强……我也一样",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14238",
+   "budget_bytes": 23,
+   "jp": "さあ、私を撃ちたまえ……戦いの終結のために",
+   "zh_current": "来吧、向我开枪、为终结战争",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1425C",
+   "budget_bytes": 31,
+   "jp": "死をいとわぬ兵士……それこそが正しい人間の正しい姿なのだ",
+   "zh_current": "不惧死亡的战士、才是人真正的姿态",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14288",
+   "budget_bytes": 22,
+   "jp": "戦い続けよう……そして、勝ち続けよう、私は",
+   "zh_current": "战斗下去……一直赢下去吧",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x142AC",
+   "budget_bytes": 23,
+   "jp": "良い戦いだった……また手合わせ願おう！",
+   "zh_current": "打得漂亮……再来过招吧！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x142D0",
+   "budget_bytes": 17,
+   "jp": "狙いが甘いぞ！私はここだ！",
+   "zh_current": "瞄得不准！我在这里！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x142F0",
+   "budget_bytes": 33,
+   "jp": "戦う者には充実感がある……これこそ人の正しきあり方と言えよう",
+   "zh_current": "战斗者自有充实感……这才是人的正道",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14320",
+   "budget_bytes": 22,
+   "jp": "そう……世界は闘い続けることが自然なのだ",
+   "zh_current": "是啊……世界本该不断争斗",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14344",
+   "budget_bytes": 34,
+   "jp": "それが君の選んだ未来か……ならば、私はそれに祝福を与えよう",
+   "zh_current": "那就是你选的未来吗……我便为它祝福",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14374",
+   "budget_bytes": 38,
+   "jp": "迷いのない戦士は崇高で美しい……ある意味、神に最も近い存在だと言える",
+   "zh_current": "毫无犹豫的战士崇高而美丽……最接近于神",
+   "zh_current_bytes": 33
+  },
+  {
+   "file": "0.bin",
+   "record": "0x143A8",
+   "budget_bytes": 34,
+   "jp": "膨れ上がる力がこれほど人間の心を置き去りにしていくとはな……",
+   "zh_current": "暴增的力量、竟如此将人心抛在身后……",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x143D8",
+   "budget_bytes": 35,
+   "jp": "私の戦いは終わったが、戦いという行為に回答を見つけねばならないな……",
+   "zh_current": "我的战斗已结束、但须为战斗找到解答……",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14408",
+   "budget_bytes": 26,
+   "jp": "さあ、来たまえ！そして否定するのだ！この私を！！",
+   "zh_current": "来吧、来吧！然后否定这样的我！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14430",
+   "budget_bytes": 28,
+   "jp": "確かにその判断は正しい……だが、同時に悲しくもあるな",
+   "zh_current": "你的判断没错……但也同样悲哀",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14458",
+   "budget_bytes": 14,
+   "jp": "事は全てエレガントに……だよ",
+   "zh_current": "凡事都要优雅……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14474",
+   "budget_bytes": 17,
+   "jp": "君の戦いはもう終っているのだ……",
+   "zh_current": "你的战斗早已结束",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14494",
+   "budget_bytes": 11,
+   "jp": "私は…敗者になりたい……",
+   "zh_current": "我想当败者……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x144AC",
+   "budget_bytes": 32,
+   "jp": "ならば私は一人の戦士として最期の瞬間までお相手させてもらおう！",
+   "zh_current": "那么、我便以战士的身份奉陪到底……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x593C",
+   "budget_bytes": 12,
+   "jp": "事はエレガントに……だよ",
+   "zh_current": "凡事要优雅……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5954",
+   "budget_bytes": 37,
+   "jp": "私は死者に哀悼の意を表することしかできない男ではあるがね……",
+   "zh_current": "我只能向逝者表达哀悼之意仅此而已……",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5988",
+   "budget_bytes": 13,
+   "jp": "事はエレガントにだ……レディ",
+   "zh_current": "要优雅……蕾蒂",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x59A4",
+   "budget_bytes": 10,
+   "jp": "君に任せるよ……レディ",
+   "zh_current": "靠你了蕾蒂",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x59BC",
+   "budget_bytes": 10,
+   "jp": "君に任せるよ……レディ",
+   "zh_current": "靠你了蕾蒂",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x59D4",
+   "budget_bytes": 29,
+   "jp": "我が友、ミルアルドよ……私はいつでも君に力を貸すとも",
+   "zh_current": "吾友米利亚尔特……我随时愿助你",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A00",
+   "budget_bytes": 37,
+   "jp": "私は死者に哀悼の意を表することしかできない男ではあるがね……",
+   "zh_current": "我只能向逝者表达哀悼之意仅此而已……",
+   "zh_current_bytes": 32
+  }
+ ]
+}

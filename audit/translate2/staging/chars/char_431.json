@@ -1,0 +1,220 @@
+{
+ "entity": "char_431",
+ "kind": "character",
+ "cids": [
+  431
+ ],
+ "name_jp": "グレミー軍士官",
+ "name_zh_KEEP": "格雷米军官",
+ "cards": [
+  {
+   "cid": 431,
+   "ids": [
+    {
+     "idn": 1293,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B906C",
+     "zh_name_ptr": "0x219467A",
+     "name_jp": "コロニーのひとつも……",
+     "name_zh_current": "给我殖民地",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 21,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%",
+     "cutin_group": 823,
+     "cutin_jp": "コロニーのひとつももらえるって言うんなら……！",
+     "cutin_zh_current": "只要肯给我一座殖民地我就拼了……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_402",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2FB30",
+   "budget_bytes": 31,
+   "jp": "のこのこ前に出てくるとはな！！一斉射撃だ……てえーっ！！",
+   "zh_current": "竟敢大摇大摆冒出来！齐射……放！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FB5C",
+   "budget_bytes": 14,
+   "jp": "真なるネオ·ジオンの為に！",
+   "zh_current": "为真正新吉翁！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FB78",
+   "budget_bytes": 19,
+   "jp": "、発射準備！……撃てえーっ！",
+   "zh_current": "、预备！……开火！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FB98",
+   "budget_bytes": 32,
+   "jp": "ャツをしとめれば恩賞は思いのままだ！撃て、撃てえーっ！",
+   "zh_current": "干掉那家伙重重有赏！开火！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FBC4",
+   "budget_bytes": 25,
+   "jp": "一機でも多くしとめるのだ！！……撃てえーっ！",
+   "zh_current": "多击落一架是一架！……开火！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FBEC",
+   "budget_bytes": 15,
+   "jp": "怖れるな！突撃するんだ！",
+   "zh_current": "别怕！！冲上去！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FC08",
+   "budget_bytes": 25,
+   "jp": "至近距離から一斉射撃だ！一気にケリをつけるぞ！！",
+   "zh_current": "近距离齐射！一口气做个了断！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FC30",
+   "budget_bytes": 22,
+   "jp": "突っ込め！我らの実力を思い知らせてやるんだ！",
+   "zh_current": "冲！让他们见识我们的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FC54",
+   "budget_bytes": 31,
+   "jp": "くそっ！グレミーなんかについたのがそもそも間違いだったのか……！",
+   "zh_current": "可恶！跟了格雷米本就是错……！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FC80",
+   "budget_bytes": 19,
+   "jp": "くそっ！こっちが狙われてるのか！！",
+   "zh_current": "可恶！在瞄准我们吗！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FCA0",
+   "budget_bytes": 25,
+   "jp": "え、ええいっ！こ、後退だ！艦を後退させろ！！",
+   "zh_current": "可恶……！后退！让舰艇后退！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FCC8",
+   "budget_bytes": 16,
+   "jp": "敵の抵抗は大したことないようだな！",
+   "zh_current": "敌人抵抗不算啥！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FCE4",
+   "budget_bytes": 12,
+   "jp": "くっ！前に出すぎだ！！",
+   "zh_current": "唔！太冒进了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FCFC",
+   "budget_bytes": 14,
+   "jp": "て、敵の抵抗がこれほどとは……！",
+   "zh_current": "敌人抵抗真强……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FD18",
+   "budget_bytes": 25,
+   "jp": "こっ、こんな敵と……オレたちは戦っているのか！？",
+   "zh_current": "我们竟在和这种敌人战斗！？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FD40",
+   "budget_bytes": 26,
+   "jp": "ダ、ダメだ！かなわない！！艦を後退させろーっ！",
+   "zh_current": "不、不行！赢不了！让舰后退！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FD68",
+   "budget_bytes": 24,
+   "jp": "我らの力をもってすれば造作もないことだ！",
+   "zh_current": "凭我们的力量、轻而易举！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FD8C",
+   "budget_bytes": 9,
+   "jp": "遠距離攻撃だ！回避！",
+   "zh_current": "敌袭！回避！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FDA4",
+   "budget_bytes": 10,
+   "jp": "来るぞ！散開しろっ！",
+   "zh_current": "来了！快散开！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FDBC",
+   "budget_bytes": 17,
+   "jp": "武器を捨てておとなしく投降しろっ！",
+   "zh_current": "弃械！乖乖投降！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FDDC",
+   "budget_bytes": 12,
+   "jp": "う、うかつだったか……！？",
+   "zh_current": "我、我大意了！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FDF4",
+   "budget_bytes": 20,
+   "jp": "ここで捕まっては何にもならないのだ！",
+   "zh_current": "在此被抓、一切就完了！",
+   "zh_current_bytes": 19
+  }
+ ]
+}

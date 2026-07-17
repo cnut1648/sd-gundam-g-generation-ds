@@ -1,0 +1,83 @@
+{
+ "entity": "unit_49",
+ "kind": "unit",
+ "utids": [
+  49,
+  50,
+  51
+ ],
+ "name_jp": "フルアーマーZZ／ハイパー",
+ "name_zh_current": "全装甲ZZ／强化",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB0F",
+   "jp": "ダブル・ビーム・ライフル",
+   "zh_current": "双管光束步枪",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CB1C",
+   "jp": "ハイパー・ビームサーベル",
+   "zh_current": "高能光束军刀",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CAA9",
+   "jp": "ハイ・メガ・キャノン",
+   "zh_current": "高能米加加农炮",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 16,
+   "record_offset": "0x188",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "フルアーマーシステム（解除可能）"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "全装甲系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E81",
+   "jp": "バイオフィールド",
+   "zh_current": "生体力场",
+   "owner": false,
+   "owned_by": "unit_43"
+  },
+  "defense": {
+   "record": 15,
+   "record_offset": "0x2a4",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し、",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": false,
+   "owned_by": "unit_43"
+  }
+ }
+}

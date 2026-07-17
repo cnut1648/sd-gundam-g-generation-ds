@@ -1,0 +1,83 @@
+{
+ "entity": "unit_55",
+ "kind": "unit",
+ "utids": [
+  55,
+  56,
+  57
+ ],
+ "name_jp": "Zガンダム／ハイパー",
+ "name_zh_current": "Z高达／强化",
+ "name_zh_px": 64,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7F5",
+   "jp": "ハイパー・メガランチャー",
+   "zh_current": "超级米加发射器",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218EC8B",
+   "jp": "突撃",
+   "zh_current": "突击",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 18,
+   "record_offset": "0x1bc",
+   "budget_bytes": 28,
+   "jp_segments": [
+    "バイオセンサー搭載（ニュータイプ対応機）",
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "生体感应器",
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E81",
+   "jp": "バイオフィールド",
+   "zh_current": "生体力场",
+   "owner": false,
+   "owned_by": "unit_43"
+  },
+  "defense": {
+   "record": 15,
+   "record_offset": "0x2a4",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し、",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": false,
+   "owned_by": "unit_43"
+  }
+ }
+}

@@ -1,0 +1,328 @@
+{
+ "entity": "char_176",
+ "kind": "character",
+ "cids": [
+  176
+ ],
+ "name_jp": "ヒイロ・ユイ（ゼロ）",
+ "name_zh_KEEP": "希罗·尤尔（零式）",
+ "cards": [
+  {
+   "cid": 176,
+   "ids": [
+    {
+     "idn": 528,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B803C",
+     "zh_name_ptr": "0x20B803C",
+     "name_jp": "ゼロ……俺を導いてくれ！",
+     "name_zh_current": "零式指引我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "战斗力↑",
+     "didx": 97,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·反应+20·装甲+2",
+     "cutin_group": 421,
+     "cutin_jp": "ゼロ……俺を導いてくれ！",
+     "cutin_zh_current": "零式啊、指引我吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 529,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B804A",
+     "zh_name_ptr": "0x218C383",
+     "name_jp": "世界を信じてみろ！！",
+     "name_zh_current": "相信世界吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 422,
+     "cutin_jp": "今、ここにある世界を信じてみろ！！",
+     "cutin_zh_current": "去相信此刻存在的世界吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 530,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8055",
+     "zh_name_ptr": "0x218C38E",
+     "name_jp": "人類全てが弱者なんだ！！",
+     "name_zh_current": "人类皆弱者",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌战力减少",
+     "didx": 124,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中·回避·攻撃力が30%ずつ低下、反応が30低下、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%反应-30·攻击-30%·装甲-3",
+     "cutin_group": 423,
+     "cutin_jp": "強者など、どこにもいない！人類全てが弱者なんだ！！",
+     "cutin_zh_current": "强者根本不存在！人类全是弱者！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x173B8",
+   "budget_bytes": 20,
+   "jp": "戦闘レベル…ターゲット確認……排除、開始！！",
+   "zh_current": "目标确认……排除、开始！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x173D8",
+   "budget_bytes": 19,
+   "jp": "俺にははっきり見える……俺の、敵が！！",
+   "zh_current": "看得很清楚……我的敌人！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x173F8",
+   "budget_bytes": 26,
+   "jp": "ゼロが見せた未来から俺が選んだのは……これだ！",
+   "zh_current": "零式所示的未来、我选这条！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17420",
+   "budget_bytes": 25,
+   "jp": "お前がいる限り同じ過ちが何度も繰り返される！",
+   "zh_current": "只要你在、错误就会重演！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17448",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1745C",
+   "budget_bytes": 17,
+   "jp": "お前にも未来は見えているはずだ！！",
+   "zh_current": "你也该看得见未来！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1747C",
+   "budget_bytes": 7,
+   "jp": "ゼロに聞け！",
+   "zh_current": "问零式！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17490",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x174A4",
+   "budget_bytes": 21,
+   "jp": "ゼロは俺に……なにも言ってくれない……",
+   "zh_current": "零式……什么都不说……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x174C8",
+   "budget_bytes": 9,
+   "jp": "お前の行為は無意味だ",
+   "zh_current": "毫无意义！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x174E0",
+   "budget_bytes": 12,
+   "jp": "俺は……俺は、死なない！",
+   "zh_current": "我……我不会死！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x174F8",
+   "budget_bytes": 15,
+   "jp": "くっ…！黙れ！ゼロ！！",
+   "zh_current": "唔……！闭嘴、零式！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17514",
+   "budget_bytes": 17,
+   "jp": "貴様が選び取った未来はそれか",
+   "zh_current": "那就是你选的未来？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17534",
+   "budget_bytes": 23,
+   "jp": "お前は、やはり偽りの平和しか生み出さない……",
+   "zh_current": "你、果然只会带来虚假和平",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17558",
+   "budget_bytes": 16,
+   "jp": "くっ！戦術レベル優位消失！",
+   "zh_current": "唔！优势尽失！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17574",
+   "budget_bytes": 27,
+   "jp": "判っている、ゼロこのままでは俺たちは奴に勝てない",
+   "zh_current": "我知道、零式、这样下去赢不了他",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1759C",
+   "budget_bytes": 9,
+   "jp": "お前の行為は無意味だ",
+   "zh_current": "毫无意义！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x175B4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x175C8",
+   "budget_bytes": 5,
+   "jp": "……来るぞ",
+   "zh_current": "……来了",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x175DC",
+   "budget_bytes": 23,
+   "jp": "生か死か……？貴様の未来は貴様が選べ！",
+   "zh_current": "生或死……？未来由你自己选！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17600",
+   "budget_bytes": 17,
+   "jp": "これで終わる……なにもかも……",
+   "zh_current": "就此结束一切……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17620",
+   "budget_bytes": 16,
+   "jp": "……無駄だ俺は降伏などしない",
+   "zh_current": "……没用、我不会投降",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6290",
+   "budget_bytes": 27,
+   "jp": "各機、フォーメーシヨンにて敵を攻撃……できるな？",
+   "zh_current": "各机、以阵型攻击敌人……可以吧？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x62B8",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x62D0",
+   "budget_bytes": 30,
+   "jp": "ゼロがお前に力を貸せといっている……手助けするぞ、ゼクス！",
+   "zh_current": "零式要我助你……我来了、杰克斯！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x62FC",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6314",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x632C",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6344",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  }
+ ]
+}

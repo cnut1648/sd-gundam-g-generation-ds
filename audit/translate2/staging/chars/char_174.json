@@ -1,0 +1,716 @@
+{
+ "entity": "char_174",
+ "kind": "character",
+ "cids": [
+  174,
+  175
+ ],
+ "name_jp": "ヒイロ・ユイ",
+ "name_zh_KEEP": "希罗·尤尔",
+ "cards": [
+  {
+   "cid": 174,
+   "ids": [
+    {
+     "idn": 522,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8003",
+     "zh_name_ptr": "0x218FFCA",
+     "name_jp": "……オマエを殺す",
+     "name_zh_current": "我要杀了你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋手加減",
+     "summary_zh_KEEP": "暴击・放水",
+     "didx": 173,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃が必ずクリティカル化するが、チームの攻撃で相手を撃破できなくなる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）放水·暴击",
+     "cutin_group": 415,
+     "cutin_jp": "……オマエを殺す",
+     "cutin_zh_current": "……我要杀了你",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 523,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8014",
+     "zh_name_ptr": "0x218C379",
+     "name_jp": "……それが俺の抵抗だ",
+     "name_zh_current": "我的抵抗",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 416,
+     "cutin_jp": "戦い抜く……それが俺の抵抗だ",
+     "cutin_zh_current": "战斗到底……这就是我的抵抗",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 524,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B801F",
+     "zh_name_ptr": "0x20B801F",
+     "name_jp": "命なんて安いものだ……",
+     "name_zh_current": "命不值钱……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护",
+     "didx": 151,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）チームへの攻撃を全て引き愛け、そのダメージを1／4に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军",
+     "cutin_group": 417,
+     "cutin_jp": "命なんて安いものだ……特に俺のはな",
+     "cutin_zh_current": "生命不值钱……尤其是我的",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_122",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 175,
+   "ids": [
+    {
+     "idn": 525,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8003",
+     "zh_name_ptr": "0x218FFCA",
+     "name_jp": "……オマエを殺す",
+     "name_zh_current": "我要杀了你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋手加減",
+     "summary_zh_KEEP": "暴击・放水",
+     "didx": 173,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃が必ずクリティカル化するが、チームの攻撃で相手を撃破できなくなる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）放水·暴击",
+     "cutin_group": 418,
+     "cutin_jp": "……オマエを殺す",
+     "cutin_zh_current": "……我要杀了你",
+     "name_owner": true,
+     "name_shared_with_idn": 522,
+     "detail_owner": false,
+     "detail_owned_by": "char_174",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 526,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B802C",
+     "zh_name_ptr": "0x20B802C",
+     "name_jp": "誰よりも戦い抜いて見せる！",
+     "name_zh_current": "战到最后！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 419,
+     "cutin_jp": "誰よりも戦い抜いて見せる！地球上の誰よりも！",
+     "cutin_zh_current": "我要比谁都战到底！比地球上任何人都要！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 527,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B801F",
+     "zh_name_ptr": "0x20B801F",
+     "name_jp": "命なんて安いものだ……",
+     "name_zh_current": "命不值钱……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护・装甲↑",
+     "didx": 153,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加。チームへの攻撃を全て1／4に軽減し、引き愛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军·装甲+4",
+     "cutin_group": 420,
+     "cutin_jp": "命なんて安いものだ……特に俺のはな",
+     "cutin_zh_current": "生命不值钱……尤其是我的",
+     "name_owner": true,
+     "name_shared_with_idn": 524,
+     "detail_owner": false,
+     "detail_owned_by": "char_50",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x16EE4",
+   "budget_bytes": 10,
+   "jp": "ターゲット確認……排除する",
+   "zh_current": "目标……排除",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16EFC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F10",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F24",
+   "budget_bytes": 19,
+   "jp": "……任務了解作戦内容、敵機の排除！",
+   "zh_current": "任务了解、排除敌机！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F44",
+   "budget_bytes": 9,
+   "jp": "攻撃を開始する……",
+   "zh_current": "开始攻击……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F5C",
+   "budget_bytes": 11,
+   "jp": "障害は……取り除く",
+   "zh_current": "清除障碍……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F74",
+   "budget_bytes": 18,
+   "jp": "俺には……この生き方しかできない",
+   "zh_current": "我……只能这样活着",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16F94",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16FA8",
+   "budget_bytes": 7,
+   "jp": "任務……失敗か",
+   "zh_current": "失败吗？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16FBC",
+   "budget_bytes": 21,
+   "jp": "貴様がその機体を選んだのはミスだ……",
+   "zh_current": "选那机体、就是失误……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16FE0",
+   "budget_bytes": 25,
+   "jp": "作戦ミスの代償は死だ……だがこのままでは死ねない！",
+   "zh_current": "失误即死……但还不能死！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17008",
+   "budget_bytes": 28,
+   "jp": "どこへ行っても同じだ……戦うことしか、俺にはできない",
+   "zh_current": "去哪都一样……我、只会战斗",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17030",
+   "budget_bytes": 17,
+   "jp": "感謝はするさ……俺なりのやり方でな",
+   "zh_current": "感谢……以我自己的方式",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17050",
+   "budget_bytes": 29,
+   "jp": "感情で行動することに異論はない……そう俺は学んだ",
+   "zh_current": "凭感情行动也无妨……这是我学到的",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1707C",
+   "budget_bytes": 16,
+   "jp": "左推進システム異常！……やるな！",
+   "zh_current": "左推进异常！好身手！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17098",
+   "budget_bytes": 22,
+   "jp": "オレは…オレは……いったいなにをやっている？",
+   "zh_current": "我……我……到底在干什么？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x170BC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x170D0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x170E4",
+   "budget_bytes": 5,
+   "jp": "……来るぞ",
+   "zh_current": "……来了",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x170F8",
+   "budget_bytes": 27,
+   "jp": "もう、気付いているはずだ貴様の戦争は終わっている！",
+   "zh_current": "你应该察觉了你的仗打完了！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17120",
+   "budget_bytes": 13,
+   "jp": "自爆するヒマも無かったか…",
+   "zh_current": "连自爆都来不及",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1713C",
+   "budget_bytes": 16,
+   "jp": "……無駄だ俺は降伏などしない",
+   "zh_current": "……没用、我不会投降",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0x2C0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x2D4",
+   "budget_bytes": 14,
+   "jp": "戦闘レベル……ターゲット確認……",
+   "zh_current": "战况……锁定……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x2EE",
+   "budget_bytes": 4,
+   "jp": "排除……",
+   "zh_current": "歼灭",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0x2FE",
+   "budget_bytes": 3,
+   "jp": "開始！",
+   "zh_current": "上！",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "1.bin",
+   "record": "0x324",
+   "budget_bytes": 6,
+   "jp": "遅い……！",
+   "zh_current": "太慢！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x360",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x3C8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x3DA",
+   "budget_bytes": 6,
+   "jp": "排除……完了",
+   "zh_current": "已歼灭",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6128",
+   "budget_bytes": 14,
+   "jp": "皆の力、貸してもらう……！",
+   "zh_current": "大家、借我力量！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6144",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x615C",
+   "budget_bytes": 17,
+   "jp": "いいだろう、ゼクス力を貸してやる",
+   "zh_current": "好吧、杰克斯……助你",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x617C",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6194",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x61AC",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x61C4",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17158",
+   "budget_bytes": 10,
+   "jp": "ターゲット確認……排除する",
+   "zh_current": "目标……排除",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17170",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17184",
+   "budget_bytes": 9,
+   "jp": "攻撃を開始する……",
+   "zh_current": "开始攻击……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1719C",
+   "budget_bytes": 19,
+   "jp": "……任務了解作戦内容、敵機の排除！",
+   "zh_current": "任务了解、排除敌机！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x171BC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x171D0",
+   "budget_bytes": 18,
+   "jp": "俺には……この生き方しかできない",
+   "zh_current": "我……只能这样活着",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x171F0",
+   "budget_bytes": 11,
+   "jp": "障害は……取り除く",
+   "zh_current": "清除障碍……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17208",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1721C",
+   "budget_bytes": 7,
+   "jp": "任務……失敗か",
+   "zh_current": "失败吗？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17230",
+   "budget_bytes": 21,
+   "jp": "貴様がその機体を選んだのはミスだ……",
+   "zh_current": "选那机体、就是失误……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17254",
+   "budget_bytes": 22,
+   "jp": "作戦ミスは死だ……だがこのままでは死ねない！",
+   "zh_current": "失误即死……但还不能死！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17278",
+   "budget_bytes": 28,
+   "jp": "どこへ行っても同じだ……戦うことしか、俺にはできない",
+   "zh_current": "去哪都一样……我、只会战斗",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x172A0",
+   "budget_bytes": 15,
+   "jp": "戦い抜く……それが俺の抵抗だ",
+   "zh_current": "战到底……我的抗争",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x172BC",
+   "budget_bytes": 31,
+   "jp": "俺はガンダムのパイロットだ戦場でしか生きることを許されない……",
+   "zh_current": "我是高达驾驶员……只能活在战场",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x172E8",
+   "budget_bytes": 27,
+   "jp": "全てが狂っているのなら……俺は自分を信じて戦う！",
+   "zh_current": "若一切已疯狂……我信自己而战！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17310",
+   "budget_bytes": 18,
+   "jp": "俺は……後、何人殺せばいい！？",
+   "zh_current": "我……还要再杀多少人！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17330",
+   "budget_bytes": 5,
+   "jp": "無駄だ……",
+   "zh_current": "没用……",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17344",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17358",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1736C",
+   "budget_bytes": 13,
+   "jp": "お前を殺すつもりはない……",
+   "zh_current": "我无意杀你……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17388",
+   "budget_bytes": 8,
+   "jp": "つかまったか……",
+   "zh_current": "被俘了……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1739C",
+   "budget_bytes": 16,
+   "jp": "……無駄だ俺は降伏などしない",
+   "zh_current": "……没用、我不会投降",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x124",
+   "budget_bytes": 20,
+   "jp": "ゼロは俺にはなにも言ってくれない……",
+   "zh_current": "零式什么都不告诉我……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x61DC",
+   "budget_bytes": 14,
+   "jp": "皆の力、貸してもらう……！",
+   "zh_current": "大家、借我力量！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x61F8",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6210",
+   "budget_bytes": 17,
+   "jp": "いいだろう、ゼクス力を貸してやる",
+   "zh_current": "好吧、杰克斯……助你",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6230",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6248",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6260",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6278",
+   "budget_bytes": 10,
+   "jp": "任務了解……援護する",
+   "zh_current": "任务了解……",
+   "zh_current_bytes": 10
+  }
+ ]
+}

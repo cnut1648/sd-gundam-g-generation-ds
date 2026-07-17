@@ -1,0 +1,73 @@
+{
+ "entity": "unit_490",
+ "kind": "unit",
+ "utids": [
+  490,
+  491,
+  492
+ ],
+ "name_jp": "マスターガンダム",
+ "name_zh_current": "尊者高达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CA09",
+   "jp": "マスタークロス",
+   "zh_current": "尊者光束布",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x2189A72",
+   "jp": "十二王方牌大車輪",
+   "zh_current": "十二王方牌大车轮",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2190774",
+   "jp": "ダークネスフィンガー",
+   "zh_current": "黑暗手指",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F226",
+   "jp": "石破天驚拳",
+   "zh_current": "石破天惊拳",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 4,
+   "ptr": "0x2190731",
+   "jp": "超級覇王電影弾",
+   "zh_current": "超级霸王电影弹",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6EAE",
+   "jp": "分身",
+   "zh_current": "分身",
+   "owner": false,
+   "owned_by": "unit_202"
+  },
+  "defense": {
+   "record": 9,
+   "record_offset": "0x1b8",
+   "budget_bytes": 32,
+   "jp_segments": [
+    "全ての攻撃を30%の確率で、0に回避する"
+   ],
+   "zh_segments_current": [
+    "有30%概率",
+    "完全回避攻击"
+   ],
+   "owner": false,
+   "owned_by": "unit_202"
+  }
+ }
+}

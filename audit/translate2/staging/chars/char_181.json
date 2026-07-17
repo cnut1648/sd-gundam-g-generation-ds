@@ -1,0 +1,596 @@
+{
+ "entity": "char_181",
+ "kind": "character",
+ "cids": [
+  181,
+  182
+ ],
+ "name_jp": "フォウ・ムラサメ",
+ "name_zh_KEEP": "凤·村雨",
+ "cards": [
+  {
+   "cid": 181,
+   "ids": [
+    {
+     "idn": 543,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8088",
+     "zh_name_ptr": "0x20B8088",
+     "name_jp": "私を不愉快にさせる敵！",
+     "name_zh_current": "讨厌的敌人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 171,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击",
+     "cutin_group": 430,
+     "cutin_jp": "私を不愉快にさせる敵！",
+     "cutin_zh_current": "惹我不快的敌人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 544,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8093",
+     "zh_name_ptr": "0x20B8093",
+     "name_jp": "しょせん、人形じゃないか！！",
+     "name_zh_current": "不过是人偶",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋貫防無効",
+     "summary_zh_KEEP": "威↑・破防",
+     "didx": 200,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃対象の特殊防御を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·破防",
+     "cutin_group": 431,
+     "cutin_jp": "しょせん、人形じゃないか！！",
+     "cutin_zh_current": "终究不过是人偶！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 545,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B80A2",
+     "zh_name_ptr": "0x218C3AF",
+     "name_jp": "記憶を奪ったのはオマエ達だ！",
+     "name_zh_current": "你夺走记忆",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 432,
+     "cutin_jp": "オマエたちは私をいじめに来た……私の記憶を奪ったのはオマエ達だ！",
+     "cutin_zh_current": "你们是来欺负我的……夺走我记忆的就是你们！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 182,
+   "ids": [
+    {
+     "idn": 546,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B80B2",
+     "zh_name_ptr": "0x20B80B2",
+     "name_jp": "忘れないで済むということ……",
+     "name_zh_current": "不必再遗忘",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 171,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击",
+     "cutin_group": 433,
+     "cutin_jp": "これでもう……忘れないで済むということ……",
+     "cutin_zh_current": "这样一来……就再也不会忘记了……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 547,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B80C2",
+     "zh_name_ptr": "0x218C3BA",
+     "name_jp": "私の敵じゃないよね？",
+     "name_zh_current": "非我之敌吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "捕獲率上昇",
+     "summary_zh_KEEP": "捕获率↑",
+     "didx": 246,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン捕縛率が通常の2倍になる",
+     "detail_zh_current": "",
+     "cutin_group": 434,
+     "cutin_jp": "あなた、私の敵じゃないよね？",
+     "cutin_zh_current": "你、不是我的敌人吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_22",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 548,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B80CD",
+     "zh_name_ptr": "0x20B80CD",
+     "name_jp": "カミーユをいじめるなら……",
+     "name_zh_current": "敢欺负卡缪",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃力大幅上昇",
+     "summary_zh_KEEP": "攻击力大升",
+     "didx": 239,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）カミーユがチームにいる時、攻撃能力が大幅に強化、相手の特殊防御を無効化",
+     "detail_zh_current": "",
+     "cutin_group": 435,
+     "cutin_jp": "カミーユをいじめるなら私が許さないっ！",
+     "cutin_zh_current": "敢欺负卡缪我绝不饶你！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x17C10",
+   "budget_bytes": 22,
+   "jp": "邪魔するやつは許さないといったはずだ！",
+   "zh_current": "说过了、绝不轻饶碍事者！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17C34",
+   "budget_bytes": 22,
+   "jp": "邪魔するやつは許さないといったはずだ！",
+   "zh_current": "说过了、绝不轻饶碍事者！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17C58",
+   "budget_bytes": 18,
+   "jp": "私を不愉快にする敵！消えてしまえ！",
+   "zh_current": "不快之敌！消失吧！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17C78",
+   "budget_bytes": 20,
+   "jp": "あはははっ！みんな燃えてしまえばいい！",
+   "zh_current": "啊哈哈！全都消失吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17C98",
+   "budget_bytes": 31,
+   "jp": "私の記憶を取り戻すためにはもっと敵を倒さなきゃならないんだ！",
+   "zh_current": "为了找回记忆、就得打倒更多敌人！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17CC4",
+   "budget_bytes": 16,
+   "jp": "前に出てくるとは、いい自信だよ！",
+   "zh_current": "敢上前来、好大的自信！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17CE0",
+   "budget_bytes": 17,
+   "jp": "お前たちはアタシの倒すべき敵だ！",
+   "zh_current": "你们就是我的敌人！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17D00",
+   "budget_bytes": 26,
+   "jp": "エゥーゴを倒すんだ……そうすれば、アタシは記憶を…！",
+   "zh_current": "打倒奥古……我就能找回记忆！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17D28",
+   "budget_bytes": 17,
+   "jp": "あ、頭が……！あううっ！！",
+   "zh_current": "啊、脑袋……！啊啊！！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17D48",
+   "budget_bytes": 25,
+   "jp": "出てきたのならさっさと撃破してくれればいいものを！",
+   "zh_current": "敢出来、就快点被我击破！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17D70",
+   "budget_bytes": 29,
+   "jp": "あ……て、敵……エゥーゴは…倒すべき敵……あうう！",
+   "zh_current": "啊……敌人……奥古是敌人……啊啊！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17D9C",
+   "budget_bytes": 27,
+   "jp": "うっ、うう…あぁぁ…！サイコ·ガンダムは…私を……",
+   "zh_current": "唔……啊啊……精神力高达……我……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17DC4",
+   "budget_bytes": 21,
+   "jp": "くっ…！あうう…あ、頭が……！！",
+   "zh_current": "唔……！啊啊……头、头痛！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17DE8",
+   "budget_bytes": 22,
+   "jp": "な、なんだ…！？このザラッとした感覚は！",
+   "zh_current": "什、什么！？这刺痛感是！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E0C",
+   "budget_bytes": 21,
+   "jp": "お前は私を苦しめるために作られたのか！",
+   "zh_current": "你是为折磨我而造的！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E30",
+   "budget_bytes": 26,
+   "jp": "やっぱりお前か！お前のせいで私は苦しむんじゃないか！",
+   "zh_current": "是你！！都是你害我受苦！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E58",
+   "budget_bytes": 35,
+   "jp": "昔の記憶も取り戻せないというのに！今の記憶があったってなんになる！",
+   "zh_current": "连旧记忆都找不回来！如今的记忆又有何用！",
+   "zh_current_bytes": 33
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E88",
+   "budget_bytes": 5,
+   "jp": "そんなもの！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E9C",
+   "budget_bytes": 5,
+   "jp": "そんなもの！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17EB0",
+   "budget_bytes": 24,
+   "jp": "アタシの敵になるな！でないとアタシはオマエを……！",
+   "zh_current": "别与我为敌！不然我就把你……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17ED4",
+   "budget_bytes": 27,
+   "jp": "アタシは自分の記憶すら取り戻せないって言うのに……！！",
+   "zh_current": "自己的记忆……都没能找回来！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17EFC",
+   "budget_bytes": 10,
+   "jp": "私を不愉快にさせるな！",
+   "zh_current": "别惹我不快！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5708",
+   "budget_bytes": 26,
+   "jp": "『カミーユのZは人の心を力に変えてくれる……』",
+   "zh_current": "『卡缪的Z把人心化作力量……』",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17F14",
+   "budget_bytes": 11,
+   "jp": "前に出てくるからっ！！",
+   "zh_current": "谁叫你上前！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17F2C",
+   "budget_bytes": 31,
+   "jp": "もう、迷いはしない……アタシは自分の意思でこの力を使う！",
+   "zh_current": "不再迷茫……以我意志用这力量！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17F58",
+   "budget_bytes": 27,
+   "jp": "一緒に戦ってくれる人がいるから……私は、戦える！！",
+   "zh_current": "有并肩作战的人……我就能战斗！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17F80",
+   "budget_bytes": 15,
+   "jp": "私のこの力……役立ててみせる！",
+   "zh_current": "我这力量……定有用！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17F9C",
+   "budget_bytes": 15,
+   "jp": "アタシが守るんだ！みんなを！！",
+   "zh_current": "我来守住大家！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17FB8",
+   "budget_bytes": 14,
+   "jp": "私はもう……人形じゃない！！",
+   "zh_current": "我不再是人偶！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17FD4",
+   "budget_bytes": 16,
+   "jp": "あの人は……私が守ってみせる！",
+   "zh_current": "那个人、由我来守护！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17FF0",
+   "budget_bytes": 7,
+   "jp": "やらせないっ！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18004",
+   "budget_bytes": 19,
+   "jp": "カミーユ……アタシ、ちゃんとやれたかな……？",
+   "zh_current": "卡缪……我做得好吗……？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18024",
+   "budget_bytes": 8,
+   "jp": "当たらないっ！！",
+   "zh_current": "打不中！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18038",
+   "budget_bytes": 16,
+   "jp": "帰るんだ！カミーユの元に！！",
+   "zh_current": "我要回到卡缪身边！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18054",
+   "budget_bytes": 7,
+   "jp": "こんなものっ！！",
+   "zh_current": "就凭这！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18068",
+   "budget_bytes": 10,
+   "jp": "アタシはやられないっ！",
+   "zh_current": "我不会输！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18080",
+   "budget_bytes": 10,
+   "jp": "まだ、これくらいはっ！",
+   "zh_current": "区区这点！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18098",
+   "budget_bytes": 34,
+   "jp": "今のアタシなら耐えられる！帰りを待ってくれてる人がいるから…！",
+   "zh_current": "我撑得住！因为有人在等我回去！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x180C8",
+   "budget_bytes": 10,
+   "jp": "私は……負けないっ！",
+   "zh_current": "我……不会输！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x180E0",
+   "budget_bytes": 21,
+   "jp": "このマシンがアタシを助けてくれている……！",
+   "zh_current": "机体在保护我……！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18104",
+   "budget_bytes": 5,
+   "jp": "そんなもの！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18118",
+   "budget_bytes": 12,
+   "jp": "来るわ！散開してっ！",
+   "zh_current": "来了！快散开！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18130",
+   "budget_bytes": 13,
+   "jp": "戦場はあなたにふさわしくないわ",
+   "zh_current": "战场不适合你",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1814C",
+   "budget_bytes": 16,
+   "jp": "機体を放棄するしかないのか……！",
+   "zh_current": "只能放弃机体……！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18168",
+   "budget_bytes": 15,
+   "jp": "捕まるわけには……いかないっ！",
+   "zh_current": "不能被抓……！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6460",
+   "budget_bytes": 16,
+   "jp": "アイツを倒す！……力を貸して！！",
+   "zh_current": "干掉他！……支援我！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x647C",
+   "budget_bytes": 12,
+   "jp": "ええ！私も手伝うわ！！",
+   "zh_current": "嗯！我也帮忙！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6494",
+   "budget_bytes": 10,
+   "jp": "わかった！カミーユ！！",
+   "zh_current": "明白！卡缪！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x64AC",
+   "budget_bytes": 7,
+   "jp": "任せて、ゼロ！",
+   "zh_current": "交给我！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x64C0",
+   "budget_bytes": 12,
+   "jp": "ええ！私も手伝うわ！！",
+   "zh_current": "我也来帮忙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x64D8",
+   "budget_bytes": 12,
+   "jp": "ええ！私も手伝うわ！！",
+   "zh_current": "我也来帮忙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x64F0",
+   "budget_bytes": 12,
+   "jp": "ええ！私も手伝うわ！！",
+   "zh_current": "我也来帮忙！！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

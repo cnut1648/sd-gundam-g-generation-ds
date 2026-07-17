@@ -1,0 +1,328 @@
+{
+ "entity": "char_205",
+ "kind": "character",
+ "cids": [
+  205
+ ],
+ "name_jp": "ミーシャ",
+ "name_zh_KEEP": "米莎",
+ "cards": [
+  {
+   "cid": 205,
+   "ids": [
+    {
+     "idn": 615,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B82FC",
+     "zh_name_ptr": "0x218C46A",
+     "name_jp": "……酔っぱらい操縦なんだ！",
+     "name_zh_current": "醉着开的！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 89,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）回避+20%·装甲+2",
+     "cutin_group": 490,
+     "cutin_jp": "前に出てくるんじゃねえよ！こちとら酔っぱらい操縦なんだ！",
+     "cutin_zh_current": "别往我前面凑过来！老子可是醉着开的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_148",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 616,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B830C",
+     "zh_name_ptr": "0x218C475",
+     "name_jp": "戦い方を教えてやる！",
+     "name_zh_current": "教你怎么战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 491,
+     "cutin_jp": "さあ、来い！戦い方を教えてやる！",
+     "cutin_zh_current": "来吧、放马过来！我来教你怎么打仗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 617,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8317",
+     "zh_name_ptr": "0x20B8317",
+     "name_jp": "滅び行く者のために……",
+     "name_zh_current": "为了灭亡者",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 492,
+     "cutin_jp": "滅び行く者のために……",
+     "cutin_zh_current": "敬那些走向灭亡的人……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1B918",
+   "budget_bytes": 15,
+   "jp": "へっ！モタモタしやがって！",
+   "zh_current": "哼！磨蹭什么！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B934",
+   "budget_bytes": 18,
+   "jp": "さーてと……一発お見舞いするか！",
+   "zh_current": "那么……送你一发！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B954",
+   "budget_bytes": 18,
+   "jp": "さーてと……一発お見舞いするか！",
+   "zh_current": "好了……送你一发！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B974",
+   "budget_bytes": 23,
+   "jp": "ヒ……ック！まだ酒が残ってやがる……",
+   "zh_current": "嗝……！酒劲还没过……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B998",
+   "budget_bytes": 20,
+   "jp": "青二才が！出て来るんじゃねえ！",
+   "zh_current": "小毛头！！别冒出来！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B9B8",
+   "budget_bytes": 16,
+   "jp": "さっさと片付けて一杯やるとすっか！",
+   "zh_current": "解决完就去喝酒！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B9D4",
+   "budget_bytes": 4,
+   "jp": "へへ……",
+   "zh_current": "嘿嘿",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B9E4",
+   "budget_bytes": 10,
+   "jp": "一撃で仕留めてやる！",
+   "zh_current": "一击解决！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B9FC",
+   "budget_bytes": 9,
+   "jp": "ぐあぁぁぁーっ！",
+   "zh_current": "啊啊啊！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BA14",
+   "budget_bytes": 10,
+   "jp": "どこ狙ってやがる！",
+   "zh_current": "你瞄哪呢！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BA2C",
+   "budget_bytes": 19,
+   "jp": "……っと！飲んでるヒマもねえや！",
+   "zh_current": "……哎！没空喝酒了！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BA4C",
+   "budget_bytes": 16,
+   "jp": "へっ！なんだよ、ソイツぁ？",
+   "zh_current": "哼！那什么玩意？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BA68",
+   "budget_bytes": 23,
+   "jp": "う……っぷ！二日酔いには堪えるぜ…",
+   "zh_current": "唔……噗！宿醉可真要命……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BA8C",
+   "budget_bytes": 13,
+   "jp": "へっ！まだまだ、だぜ！！",
+   "zh_current": "哼！还早呢！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BAA8",
+   "budget_bytes": 24,
+   "jp": "うおおっ！？よ、酔いも一気にさめるぜ……",
+   "zh_current": "呜啊！？酒、酒全醒了……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BACC",
+   "budget_bytes": 17,
+   "jp": "チッ……！このままじゃジリ貧だ！",
+   "zh_current": "啧……！迟早被拖垮！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BAEC",
+   "budget_bytes": 14,
+   "jp": "へへへっ！残念だったな！",
+   "zh_current": "嘿嘿！可惜啦！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BB08",
+   "budget_bytes": 12,
+   "jp": "そんな手は食らわねえぜ！",
+   "zh_current": "那招我不吃！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BB20",
+   "budget_bytes": 13,
+   "jp": "そう来るのは判ってんだ！",
+   "zh_current": "就知道你这招！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BB3C",
+   "budget_bytes": 15,
+   "jp": "よーし！そいつはいただきだ！",
+   "zh_current": "好！我收下了！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BB58",
+   "budget_bytes": 24,
+   "jp": "俺ぁ酔っ払って悪い夢でも見てるのか？",
+   "zh_current": "俺喝醉了在做恶梦吗？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BB7C",
+   "budget_bytes": 13,
+   "jp": "調子に乗るんじゃねえや！",
+   "zh_current": "别得意忘形！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B0C",
+   "budget_bytes": 12,
+   "jp": "じゃあ、やるとするかい！！",
+   "zh_current": "那、就上吧！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B24",
+   "budget_bytes": 14,
+   "jp": "よっしゃ！手助けするぜ！！",
+   "zh_current": "好！来帮忙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B40",
+   "budget_bytes": 8,
+   "jp": "へへ……OKだ！",
+   "zh_current": "嘿、OK！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B54",
+   "budget_bytes": 12,
+   "jp": "こちらミーシャ、了解ですぜ！",
+   "zh_current": "米莎、明白了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B6C",
+   "budget_bytes": 21,
+   "jp": "安心しな！背後はきっちり守ってやるぜ！",
+   "zh_current": "放心！背后我帮你守好！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B90",
+   "budget_bytes": 8,
+   "jp": "へへ……OKだ！",
+   "zh_current": "嘿嘿、好！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6BA4",
+   "budget_bytes": 8,
+   "jp": "へへ……OKだ！",
+   "zh_current": "嘿嘿、好！",
+   "zh_current_bytes": 8
+  }
+ ]
+}

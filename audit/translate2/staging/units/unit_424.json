@@ -1,0 +1,44 @@
+{
+ "entity": "unit_424",
+ "kind": "unit",
+ "utids": [
+  424,
+  425,
+  426
+ ],
+ "name_jp": "ハイザック",
+ "name_zh_current": "高扎古",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189913",
+   "jp": "ザク・マシンガン改",
+   "zh_current": "扎古机枪改",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F1E1",
+   "jp": "ヒート・ホーク",
+   "zh_current": "热能斧",
+   "shared_by_n_units": 18
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

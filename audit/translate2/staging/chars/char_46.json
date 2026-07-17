@@ -1,0 +1,644 @@
+{
+ "entity": "char_46",
+ "kind": "character",
+ "cids": [
+  46,
+  47
+ ],
+ "name_jp": "カミーユ（ハイパー）",
+ "name_zh_KEEP": "卡缪（强化）",
+ "cards": [
+  {
+   "cid": 46,
+   "ids": [
+    {
+     "idn": 138,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B73AF",
+     "zh_name_ptr": "0x232977A",
+     "name_jp": "悲しみを増やしちゃいけない！",
+     "name_zh_current": "别再添悲伤",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘↑＋先制攻撃",
+     "summary_zh_KEEP": "命回↑・先攻",
+     "didx": 132,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%先攻",
+     "cutin_group": 97,
+     "cutin_jp": "これ以上悲しみを増やしちゃいけない！",
+     "cutin_zh_current": "不能再增添悲伤了！",
+     "name_owner": false,
+     "name_shared_with_idn": 135,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 139,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B73C7",
+     "zh_name_ptr": "0x23297CA",
+     "name_jp": "生かしてはおけない！！",
+     "name_zh_current": "不能留你活",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 98,
+     "cutin_jp": "オマエは戦いの意思を生む源だ！生かしてはおけない！！",
+     "cutin_zh_current": "你是产生战意的根源！绝不能留你活命！",
+     "name_owner": false,
+     "name_shared_with_idn": 136,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 140,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B739E",
+     "zh_name_ptr": "0x218C161",
+     "name_jp": "命は力なんだ……",
+     "name_zh_current": "命即力量……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 99,
+     "cutin_jp": "命は力なんだ……宇宙を支えてるものなんだ！！",
+     "cutin_zh_current": "生命就是力量……是支撑宇宙的东西！",
+     "name_owner": false,
+     "name_shared_with_idn": 134,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 47,
+   "ids": [
+    {
+     "idn": 141,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B73D3",
+     "zh_name_ptr": "0x23297E6",
+     "name_jp": "『力を発揮してくれるマシンに』",
+     "name_zh_current": "展现力量！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘↑＋先制攻撃",
+     "summary_zh_KEEP": "威命回先攻",
+     "didx": 135,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中·回避·攻撃力が20%と装甲が2上昇、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·装甲+2·先攻",
+     "cutin_group": 100,
+     "cutin_jp": "『カミーユは力を表現してくれるマシンに乗っている……』",
+     "cutin_zh_current": "卡缪正乘坐着能展现力量的机体……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 142,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B73E2",
+     "zh_name_ptr": "0x20B73E2",
+     "name_jp": "ここからいなくなれーっ！",
+     "name_zh_current": "从这里消失",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋装甲無効",
+     "summary_zh_KEEP": "威暴击破甲",
+     "didx": 210,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカル化、相手の装甲を無効化する",
+     "detail_zh_current": "使用条件：战斗中対象：仅自身（效果）攻击+40%·暴击·破甲",
+     "cutin_group": 101,
+     "cutin_jp": "ここからいなくなれーっ！",
+     "cutin_zh_current": "都给我从这里消失！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 143,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B73F9",
+     "zh_name_ptr": "0x218C182",
+     "name_jp": "『あせりすぎよ……』",
+     "name_zh_current": "太心急了……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "チーム0回復",
+     "summary_zh_KEEP": "队・全回复",
+     "didx": 237,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）恢复100%",
+     "cutin_group": 102,
+     "cutin_jp": "『あせりすぎよ……だからいけないの』",
+     "cutin_zh_current": "太心急了……所以才不行哦",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x529C",
+   "budget_bytes": 31,
+   "jp": "本当に悪いのは…地球の重力に魂を引かれた人間たちだ！",
+   "zh_current": "真正有罪的是灵魂被重力束缚的人！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x52C8",
+   "budget_bytes": 26,
+   "jp": "これ以上悲しみを増やしちゃいけないんだよおおっ！",
+   "zh_current": "不能再增添更多的悲伤了啊！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x52F0",
+   "budget_bytes": 27,
+   "jp": "お前は戦いの意志を生む源だ！生かしてはおけない！",
+   "zh_current": "你是战意的根源！不能让你活！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5318",
+   "budget_bytes": 24,
+   "jp": "この俺の身体に変えても命に代えても……！！",
+   "zh_current": "哪怕拼上身躯拼上这条命……！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x533C",
+   "budget_bytes": 19,
+   "jp": "暗黒の世界に……還れえーッ！！",
+   "zh_current": "回到黑暗世界去！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x535C",
+   "budget_bytes": 10,
+   "jp": "はぁぁぁぁーーっ！！",
+   "zh_current": "哈啊啊啊！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5374",
+   "budget_bytes": 28,
+   "jp": "オマエのようなャツはクズだ！生きていちゃいけないんだ！",
+   "zh_current": "你这种家伙就是废物！不该活着！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x539C",
+   "budget_bytes": 18,
+   "jp": "キサマーーッ！消えてなくなれよ！！",
+   "zh_current": "你这……给我消失吧！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x53BC",
+   "budget_bytes": 17,
+   "jp": "あ……光が、広がって……！？",
+   "zh_current": "啊……光在扩散……！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x53F4",
+   "budget_bytes": 20,
+   "jp": "貴様は……！人がいっぱい死んでるんだぞ！",
+   "zh_current": "你这……死了那么多人！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5414",
+   "budget_bytes": 8,
+   "jp": "大したことはない！",
+   "zh_current": "没什么！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5428",
+   "budget_bytes": 25,
+   "jp": "オマエは人を不幸にする！……生かしてはおけない！",
+   "zh_current": "你只让人不幸！不能留你活！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5450",
+   "budget_bytes": 26,
+   "jp": "命は力なんだ！この宇宙を支えてるものなんだぞ！",
+   "zh_current": "生命即力量！支撑着整个宇宙！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5478",
+   "budget_bytes": 27,
+   "jp": "分かった！お前は生きていてはいけない人間なんだ！！",
+   "zh_current": "我懂了！你就是不该活的人！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x54A0",
+   "budget_bytes": 26,
+   "jp": "生命は……こうも簡単に失っちゃいけないんだよ！",
+   "zh_current": "生命怎能这样轻易被夺走啊！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x54C8",
+   "budget_bytes": 30,
+   "jp": "貴様にはわかるまい……！このオレの体を通して出る力が！！",
+   "zh_current": "你不会懂……经我身体涌出的力量！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x54F4",
+   "budget_bytes": 8,
+   "jp": "……こんなものっ！",
+   "zh_current": "……就这！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5508",
+   "budget_bytes": 9,
+   "jp": "……当たるかよっ！",
+   "zh_current": "休想打中",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5520",
+   "budget_bytes": 22,
+   "jp": "僕たちは……わかり合えるかもしれない！",
+   "zh_current": "我们……或许能理解彼此！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5544",
+   "budget_bytes": 15,
+   "jp": "くそっ！ここまでなのかよ！！",
+   "zh_current": "可恶！到此为止！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5560",
+   "budget_bytes": 25,
+   "jp": "貴様のようなのがいるから戦いは終わらないんだ！",
+   "zh_current": "有你这种人在、战争才没完！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x1B4",
+   "budget_bytes": 27,
+   "jp": "遊びでやってんじゃないんだよおおーーっ！！",
+   "zh_current": "这可不是在闹着玩啊！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x150C",
+   "budget_bytes": 16,
+   "jp": "皆の命を一つに重ねるんだ！！",
+   "zh_current": "将众人之命合一！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1528",
+   "budget_bytes": 22,
+   "jp": "そうだ！アイツは許しておいちゃいけない！",
+   "zh_current": "没错！不能放任那家伙！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x154C",
+   "budget_bytes": 23,
+   "jp": "クワトロ大尉はこの世界にとって必要な人なんだ！！",
+   "zh_current": "这世界需要克瓦特罗大尉！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1570",
+   "budget_bytes": 30,
+   "jp": "そうだ、君のその感覚から発した意思には正当な理由がある！",
+   "zh_current": "没错、发自你感觉的意志是正当的！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x159C",
+   "budget_bytes": 18,
+   "jp": "フォウ！君だけを行かせはしない！！",
+   "zh_current": "凤！你不能一个人去！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x15BC",
+   "budget_bytes": 22,
+   "jp": "命は力なんだ！そうですよね、エマさん！",
+   "zh_current": "生命即力量！对吧、爱玛！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x15E0",
+   "budget_bytes": 22,
+   "jp": "そうだ！アイツは許しておいちゃいけない！",
+   "zh_current": "没错！不能放任那家伙！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x53DC",
+   "budget_bytes": 12,
+   "jp": "しょうこりもなく、コイツ！",
+   "zh_current": "死不悔改！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5588",
+   "budget_bytes": 27,
+   "jp": "人の心を大切にしない世界を作って何になるんだ！",
+   "zh_current": "不重视人心的世界造了又如何！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x55B0",
+   "budget_bytes": 11,
+   "jp": "人は分かり合えるんだ！",
+   "zh_current": "人心是相通的！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x55C8",
+   "budget_bytes": 29,
+   "jp": "生命は、生命は力なんだ！この宇宙を支えてるものなんだ！",
+   "zh_current": "生命就是力量！！支撑着这个宇宙！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x55F4",
+   "budget_bytes": 26,
+   "jp": "これ以上悲しみを増やしちゃいけないんだよおおっ！",
+   "zh_current": "不能再增添更多的悲伤了啊！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x561C",
+   "budget_bytes": 24,
+   "jp": "この俺の身体に変えても命に代えても……！！",
+   "zh_current": "哪怕拼上身躯拼上这条命……！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5640",
+   "budget_bytes": 10,
+   "jp": "はぁぁぁぁーーっ！！",
+   "zh_current": "哈啊啊啊！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5658",
+   "budget_bytes": 27,
+   "jp": "遊びでやってんじゃないんだよおおーーっ！！",
+   "zh_current": "我可不是在闹着玩的啊！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5680",
+   "budget_bytes": 24,
+   "jp": "この俺の身体に変えても命に代えても……！！",
+   "zh_current": "哪怕拼上身躯拼上这条命……！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x56A4",
+   "budget_bytes": 18,
+   "jp": "あ……光が、拡がって……！？",
+   "zh_current": "啊……光在扩散……！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x56DC",
+   "budget_bytes": 31,
+   "jp": "人がいっぱい死んでいく……そんな死に方、満足なのかよおおっ！",
+   "zh_current": "好多人死去……这种死法、你满足吗！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5730",
+   "budget_bytes": 21,
+   "jp": "貴様はぁっ！！人がいっぱい死んでんだぞ！！",
+   "zh_current": "你这……！死了那么多人！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5754",
+   "budget_bytes": 26,
+   "jp": "殺し合いを楽しんでんのかよ！……そんなャツは！！",
+   "zh_current": "你在享受残杀吗！这种家伙！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x57A4",
+   "budget_bytes": 12,
+   "jp": "ああ！……やってみる！！",
+   "zh_current": "啊！……试试看！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x57BC",
+   "budget_bytes": 26,
+   "jp": "生命は……こうも簡単に失っちゃいけないんだよ！",
+   "zh_current": "生命怎能这样轻易被夺走啊！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x57E4",
+   "budget_bytes": 30,
+   "jp": "貴様にはわかるまい！このオレの……身体を通して出る力が！",
+   "zh_current": "你不会懂……经这身躯涌出的力量！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5810",
+   "budget_bytes": 8,
+   "jp": "……こんなものっ！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5824",
+   "budget_bytes": 9,
+   "jp": "……当たるかよっ！",
+   "zh_current": "休想打中",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x583C",
+   "budget_bytes": 24,
+   "jp": "もうやめろ！俺たちは分かり合えるはずだろ！？",
+   "zh_current": "住手！我们本该能相互理解！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5860",
+   "budget_bytes": 26,
+   "jp": "俺に出来ることといったら人殺しだけみたいだな……",
+   "zh_current": "我能做的……似乎只有杀人……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5888",
+   "budget_bytes": 8,
+   "jp": "すまない……みんな",
+   "zh_current": "对不起……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x1DC",
+   "budget_bytes": 15,
+   "jp": "俺の身体……みんなに貸すっ！！",
+   "zh_current": "身体……借给大家！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1604",
+   "budget_bytes": 16,
+   "jp": "皆の命を一つに重ねるんだ！！",
+   "zh_current": "将众人之命合一！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1620",
+   "budget_bytes": 22,
+   "jp": "そうだ！アイツは許しておいちゃいけない！",
+   "zh_current": "没错！不能放任那家伙！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1644",
+   "budget_bytes": 23,
+   "jp": "クワトロ大尉はこの世界にとって必要な人なんだ！！",
+   "zh_current": "这世界需要克瓦特罗大尉！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1668",
+   "budget_bytes": 30,
+   "jp": "そうだ、君のその感覚から発した意思には正当な理由がある！",
+   "zh_current": "没错、发自你感觉的意志是正当的！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1694",
+   "budget_bytes": 18,
+   "jp": "フォウ！君だけを行かせはしない！！",
+   "zh_current": "凤！你不能一个人去！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x16B4",
+   "budget_bytes": 22,
+   "jp": "命は力なんだ！そうですよね、エマさん！",
+   "zh_current": "生命即力量！对吧、爱玛！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x16D8",
+   "budget_bytes": 22,
+   "jp": "そうだ！アイツは許しておいちゃいけない！",
+   "zh_current": "没错！不能放任那家伙！",
+   "zh_current_bytes": 20
+  }
+ ]
+}

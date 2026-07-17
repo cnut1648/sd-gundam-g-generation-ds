@@ -1,0 +1,606 @@
+{
+ "entity": "char_148",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/%E5%A4%9A%E8%92%99%C2%B7%E5%8D%A1%E4%BF%AE",
+  "https://zh.moegirl.org.cn/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE%E7%B3%BB%E5%88%97/%E6%A2%97",
+  "https://wiki.biligame.com/gundam/GF13-017NJ%E2%85%A1%E7%A5%9E%E9%AB%98%E8%BE%BE",
+  "https://wiki.biligame.com/gundam/%E5%A4%9A%E8%92%99%C2%B7%E5%8D%A1%E4%BF%AE",
+  "https://gundam.huijiwiki.com/wiki/%E5%A4%9A%E8%92%99%C2%B7%E5%8D%A1%E4%BF%AE",
+  "https://gundam-official.com/news/i/special-series/gundam-power-word/01_14349",
+  "https://zhidao.baidu.com/question/163767431.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 444,
+   "name_zh": "我也要燃烧",
+   "cutin_zh": "你越是变强……我也越是燃烧！！",
+   "detail_effect_zh": "1回合内回避率提升20%、装甲增加2",
+   "notes": "详情补回JP的1ターン（1回合内）时限、原译丢失"
+  },
+  {
+   "idn": 445,
+   "name_zh": "复仇在消逝",
+   "cutin_zh": "消失了……我的怒火与悲伤……复仇正渐渐消逝……",
+   "detail_effect_zh": "命中率提升20%、攻击力增加20%、必定回避敌方攻击",
+   "notes": "消える…为陈述句（怒火与悲伤在消散）、原译消逝吧误作祈使、JP的復重为ROM原文对復讐的误植"
+  },
+  {
+   "idn": 446,
+   "name_zh": "再苦也要战",
+   "cutin_zh": "无论命运多么痛苦也要战斗到底！",
+   "notes": "名称与idn437共用、归char_145所有、此处沿用现值"
+  },
+  {
+   "idn": 447,
+   "name_zh": "我也要燃烧",
+   "cutin_zh": "你越是变强……我也越是燃烧！！",
+   "notes": "名称与idn444共用同一记录、译文一致"
+  },
+  {
+   "idn": 448,
+   "name_zh": "复仇在消逝",
+   "cutin_zh": "消失了……我的怒火与悲伤……复仇正渐渐消逝……",
+   "detail_effect_zh": "命中率与攻击力各提升40%、必定回避攻击、并无效化对方的特殊防御",
+   "notes": "原详情为三条详情文本错误拼接的坏数据、按didx248的JP原文完整重译"
+  },
+  {
+   "idn": 449,
+   "name_zh": "再苦也要战",
+   "cutin_zh": "无论命运多么痛苦也要战斗到底！",
+   "notes": "同idn446、共用记录沿用现值"
+  },
+  {
+   "idn": 450,
+   "name_zh": "不想再失去",
+   "cutin_zh": "我再也不想失去……那些无可替代的人！",
+   "detail_effect_zh": "替全队承受所有攻击、并必定回避",
+   "notes": "详情原译放水式过简（掩护友军·完全回避）、补全引き受け＋必回避两层效果"
+  },
+  {
+   "idn": 451,
+   "name_zh": "妨碍恋爱者",
+   "cutin_zh": "妨碍别人恋爱的家伙……就该被马踢到地狱去！",
+   "notes": "第46话名场面、社区通行说法为妨碍别人恋爱的家伙就该被马踢到地狱去（官方powerword企划收录）、名称记录归char_145所有沿用现值"
+  },
+  {
+   "idn": 452,
+   "name_zh": "再苦也要战",
+   "cutin_zh": "无论命运多么痛苦也要战斗到底！",
+   "notes": "同idn446、共用记录沿用现值"
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x136B8",
+   "zh": "你终究算不上斗士！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x136D8",
+   "zh": "看招！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x136F0",
+   "zh": "哈啊啊……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13704",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13718",
+   "zh": "我心明镜止水！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13734",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13748",
+   "zh": "我不愿再失去无可替代之人！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1376C",
+   "zh": "此魂之烈火……推向极限！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13790",
+   "zh": "唔……果然赢不了吗……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137B0",
+   "zh": "那种招数对红心之王没用！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137D4",
+   "zh": "我会战到最后！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137F0",
+   "zh": "区区这点伤！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13808",
+   "zh": "唔！不赖！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13820",
+   "zh": "唔！不赖！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13838",
+   "zh": "纵使此身碎裂……也死咬不放！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13860",
+   "zh": "还没完……我还不会倒！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13880",
+   "zh": "心静如水……这正是明镜止水！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138AC",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138C0",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138D4",
+   "zh": "胜负已定、接受失败吧"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x138F4",
+   "zh": "唔……是我修行不足吗！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13914",
+   "zh": "还没完！胜负未定！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5658",
+   "zh": "一齐进攻！都给我跟上来啊！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x567C",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5690",
+   "zh": "师父！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56A4",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56B8",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56CC",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56E0",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x0",
+   "zh": "我上了！以流派东方不败之名！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x24",
+   "zh": "我这只手燃烧得通红！怒吼着抓住胜利！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x52",
+   "zh": "爆——热——！神指——……"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x78",
+   "zh": "石破！！天惊——拳！！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xA0",
+   "zh": "我上了！以流派东方不败之名！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xC4",
+   "zh": "我这只手燃烧得通红！怒吼着抓住胜利！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0xF2",
+   "zh": "爆——热！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x108",
+   "zh": "石破天惊！！神——指——！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x134",
+   "zh": "那就！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x148",
+   "zh": "超级！霸王！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x164",
+   "zh": "电影弹——！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x180",
+   "zh": "爆炸！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x264",
+   "zh": "我这只手燃烧得通红！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x284",
+   "zh": "怒吼着抓住胜利！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2A0",
+   "zh": "爆——热！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2B8",
+   "zh": "神！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2C8",
+   "zh": "指——！！"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2E0",
+   "zh": "热——"
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x2F4",
+   "zh": "终结！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13934",
+   "zh": "你终究算不上斗士！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13954",
+   "zh": "接下这招！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1396C",
+   "zh": "以红心之王之名……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1398C",
+   "zh": "我心、明镜止水！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139A8",
+   "zh": "看穿了！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139BC",
+   "zh": "此魂之烈火……推向极限！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x139E0",
+   "zh": "舍皮斩肉……舍肉断骨……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A10",
+   "zh": "我不愿再失去无可替代之人！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A34",
+   "zh": "唔……！我、我完败了……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A54",
+   "zh": "那种招数对红心之王没用！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A78",
+   "zh": "我会战到最后！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A94",
+   "zh": "区区这点伤！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AAC",
+   "zh": "唔……不赖"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AC0",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AD4",
+   "zh": "纵使此身碎裂……也死咬不放！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13AFC",
+   "zh": "还没完……我还不会倒！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B1C",
+   "zh": "心静如水……这正是明镜止水！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B48",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B5C",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B70",
+   "zh": "胜负已定、接受失败吧"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13B90",
+   "zh": "唔……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BA4",
+   "zh": "我才不会被抓！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x56F4",
+   "zh": "一齐进攻！都给我跟上来啊！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5718",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x572C",
+   "zh": "师父！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5740",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5754",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5768",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x577C",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BC0",
+   "zh": "你终究算不上斗士！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BE0",
+   "zh": "看招！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13BF8",
+   "zh": "看穿了！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C0C",
+   "zh": "以红心之王之名……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C2C",
+   "zh": "我心明镜止水！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C48",
+   "zh": "此魂之烈火……推向极限！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C6C",
+   "zh": "我不愿再失去无可替代之人！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13C90",
+   "zh": "最后一击！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CA8",
+   "zh": "唔……修、修行还不够吗……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CCC",
+   "zh": "那种招数对红心之王没用！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13CF0",
+   "zh": "我会战到最后！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D0C",
+   "zh": "……无效！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D20",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D34",
+   "zh": "……漂亮！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D48",
+   "zh": "唔！可是！！我绝不会输！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D6C",
+   "zh": "还没……我……不会倒！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D8C",
+   "zh": "心如静止之水……明镜止水！！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DB8",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DCC",
+   "zh": "………………"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13DE0",
+   "zh": "认输绝非耻辱……"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E00",
+   "zh": "不妙……！我竟也会失手……！"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13E20",
+   "zh": "只要拳在、战斗不止！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5790",
+   "zh": "此魂之烈火！推向极限！便无打不倒的敌人！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57CC",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57E0",
+   "zh": "师父！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x57F4",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5808",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x581C",
+   "zh": "来助阵！！"
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5830",
+   "zh": "来助阵！！"
+  }
+ ],
+ "notes": "招式喊话按社区通行译名统一：爆热神指（c4f中拆读为爆——热——！／神！／指——！！）、石破天惊拳（0x78石破！！天惊——拳！！！保留JP拖长音）、石破天惊神指（0x108）、超级霸王电影弹（0x148/0x164拆读超级！霸王！！／电影弹——！！）；ヒートエンド因Latin超预算按0x2E0热——／0x2F4终结！！拆读收尾。0x0/0xA0补回流派二字（以流派东方不败之名、23B恰好达标）；0x24/0xC4/0x264取萌娘百科通行句我这只手燃烧得通红。0x139E0舍皮斩肉……舍肉断骨……！按谚语本义重译（原译把斩谁的皮肉方向弄反）。明镜止水系：13B预算记录统一为我心明镜止水！（我が心明鏡止水通行句）、29B记录统一为心静如水……这正是明镜止水！。同JP台词跨三张卡统一（斗士／战到最后／看穿了／看招等）。0x136F0哈啊啊……与0x13AAC唔……不赖受8B预算限制无法补回JP句尾！、维持现值。ヒィィィィト理想译为HEAT（Latin 8B超7B预算）、见0x2E0。"
+}

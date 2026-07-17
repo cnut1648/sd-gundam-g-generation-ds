@@ -1,0 +1,618 @@
+{
+ "entity": "char_16",
+ "kind": "character",
+ "cids": [
+  16,
+  17
+ ],
+ "name_jp": "アポリー",
+ "name_zh_KEEP": "阿波利",
+ "cards": [
+  {
+   "cid": 16,
+   "ids": [
+    {
+     "idn": 48,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7072",
+     "zh_name_ptr": "0x20B7072",
+     "name_jp": "……いけるか！？",
+     "name_zh_current": "能拿下吗",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 28,
+     "cutin_jp": "こいつは……いけるか！？",
+     "cutin_zh_current": "这家伙……能拿下吗！？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 49,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B707B",
+     "zh_name_ptr": "0x20B707B",
+     "name_jp": "負けるわけにはいかないんだ！",
+     "name_zh_current": "我绝不能输",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 29,
+     "cutin_jp": "こんなところで……負けるわけにはいかないんだ！",
+     "cutin_zh_current": "在这种地方……我绝不能输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 17,
+   "ids": [
+    {
+     "idn": 51,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7072",
+     "zh_name_ptr": "0x20B7072",
+     "name_jp": "……いけるか！？",
+     "name_zh_current": "能拿下吗",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 31,
+     "cutin_jp": "こいつは……いけるか！？",
+     "cutin_zh_current": "这家伙……能拿下吗！？",
+     "name_owner": true,
+     "name_shared_with_idn": 48,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 52,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B707B",
+     "zh_name_ptr": "0x20B707B",
+     "name_jp": "負けるわけにはいかないんだ！",
+     "name_zh_current": "我绝不能输",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 32,
+     "cutin_jp": "こんなところで……負けるわけにはいかないんだ！",
+     "cutin_zh_current": "在这种地方……我绝不能输！",
+     "name_owner": true,
+     "name_shared_with_idn": 49,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 53,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B708A",
+     "zh_name_ptr": "0x2328EEA",
+     "name_jp": "ベテランなんだぜ？",
+     "name_zh_current": "我可是老手",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避上昇",
+     "summary_zh_KEEP": "回避上升",
+     "didx": 28,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%",
+     "cutin_group": 33,
+     "cutin_jp": "これでもベテランなんだぜ？負けるわけないでしょ！",
+     "cutin_zh_current": "我好歹也是个老手怎么可能会输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x19F0",
+   "budget_bytes": 13,
+   "jp": "そうそう好きにさせるかよ！",
+   "zh_current": "可不让你得逞！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A0C",
+   "budget_bytes": 6,
+   "jp": "撃ち落とせーッ！",
+   "zh_current": "击落！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A20",
+   "budget_bytes": 6,
+   "jp": "撃ち落とせーッ！",
+   "zh_current": "击落！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A34",
+   "budget_bytes": 4,
+   "jp": "そこだ！",
+   "zh_current": "接招！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A44",
+   "budget_bytes": 6,
+   "jp": "行けえっ！",
+   "zh_current": "冲啊！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A58",
+   "budget_bytes": 9,
+   "jp": "負けてたまるかよ！",
+   "zh_current": "岂能认输！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A70",
+   "budget_bytes": 6,
+   "jp": "やってやる！",
+   "zh_current": "拼了！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A84",
+   "budget_bytes": 7,
+   "jp": "食らえっ！！",
+   "zh_current": "看招！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A98",
+   "budget_bytes": 9,
+   "jp": "そ、そんなバカな……",
+   "zh_current": "怎么可能！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AB0",
+   "budget_bytes": 6,
+   "jp": "当たるかよ！",
+   "zh_current": "打不中！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AC4",
+   "budget_bytes": 5,
+   "jp": "まだまだぁっ！",
+   "zh_current": "还早！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AD8",
+   "budget_bytes": 10,
+   "jp": "ちっ、ミスったか！？",
+   "zh_current": "啧、糟糕！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1AF0",
+   "budget_bytes": 12,
+   "jp": "くそっ、当たったのか！？",
+   "zh_current": "可恶、中了！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B08",
+   "budget_bytes": 13,
+   "jp": "コノッ！……見てろよ！！",
+   "zh_current": "可恶！走着瞧！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B24",
+   "budget_bytes": 19,
+   "jp": "ウッ……！？マズイな……こりゃあ……",
+   "zh_current": "唔……！？这下不妙……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B44",
+   "budget_bytes": 14,
+   "jp": "クソッ！直撃だってのか！？",
+   "zh_current": "可恶！被直击！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B60",
+   "budget_bytes": 14,
+   "jp": "こんな攻撃……冗談じゃない！！",
+   "zh_current": "这攻击……开玩笑！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B7C",
+   "budget_bytes": 9,
+   "jp": "そんな砲撃くらいっ！！",
+   "zh_current": "区区炮击！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B94",
+   "budget_bytes": 11,
+   "jp": "来たぞ！お客さんだ！",
+   "zh_current": "来了！客人到！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BAC",
+   "budget_bytes": 10,
+   "jp": "よーし、抵抗するなよ",
+   "zh_current": "好、别抵抗！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC4",
+   "budget_bytes": 13,
+   "jp": "くそっ、俺としたことが……",
+   "zh_current": "可恶、我竟然……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BE0",
+   "budget_bytes": 6,
+   "jp": "なめるなよ！",
+   "zh_current": "别狂！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x548",
+   "budget_bytes": 12,
+   "jp": "よーし！一斉攻撃だ！！",
+   "zh_current": "好！一齐攻击！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x560",
+   "budget_bytes": 10,
+   "jp": "こちらアボリー、OKだ！！",
+   "zh_current": "这边OK！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x578",
+   "budget_bytes": 9,
+   "jp": "了解です、大佐！！",
+   "zh_current": "是、大佐！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x590",
+   "budget_bytes": 12,
+   "jp": "おお！やるぞ、ロベルト！！",
+   "zh_current": "上吧、罗伯托！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A8",
+   "budget_bytes": 10,
+   "jp": "こちらアボリー、OKだ！！",
+   "zh_current": "这边OK！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C0",
+   "budget_bytes": 10,
+   "jp": "こちらアボリー、OKだ！！",
+   "zh_current": "这边OK！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D8",
+   "budget_bytes": 10,
+   "jp": "こちらアボリー、OKだ！！",
+   "zh_current": "这边OK！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF4",
+   "budget_bytes": 20,
+   "jp": "そーいうのが甘いって言うんだよ！！",
+   "zh_current": "这种程度、太天真了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C14",
+   "budget_bytes": 6,
+   "jp": "撃ち落とせーッ！",
+   "zh_current": "击落！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C28",
+   "budget_bytes": 12,
+   "jp": "コイツ……落としてやる！！",
+   "zh_current": "干掉这家伙！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C40",
+   "budget_bytes": 6,
+   "jp": "行けえっ！",
+   "zh_current": "冲啊！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C54",
+   "budget_bytes": 10,
+   "jp": "このッ！落ちろ！！",
+   "zh_current": "给我倒下！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C6C",
+   "budget_bytes": 6,
+   "jp": "やってやる！",
+   "zh_current": "拼了！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C80",
+   "budget_bytes": 8,
+   "jp": "させるかよっ！！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C94",
+   "budget_bytes": 10,
+   "jp": "コイツでいただきだなっ！",
+   "zh_current": "拿下你了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CAC",
+   "budget_bytes": 9,
+   "jp": "よせええっ！！",
+   "zh_current": "住手啊！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC4",
+   "budget_bytes": 11,
+   "jp": "そう簡単に当たるかよ！",
+   "zh_current": "没那么容易！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CDC",
+   "budget_bytes": 13,
+   "jp": "こんなところでやられてたまるか！",
+   "zh_current": "怎能死在这里！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CF8",
+   "budget_bytes": 16,
+   "jp": "なんだ？張り合いのないやつだな",
+   "zh_current": "什么嘛、真没劲！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D14",
+   "budget_bytes": 22,
+   "jp": "次から次から……まるでモグラ叩きだ！",
+   "zh_current": "接二连三……跟打地鼠似的！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D38",
+   "budget_bytes": 3,
+   "jp": "チィッ！",
+   "zh_current": "啧！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D48",
+   "budget_bytes": 7,
+   "jp": "ま、まさかっ！？",
+   "zh_current": "难道！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D5C",
+   "budget_bytes": 15,
+   "jp": "クソッ！なぶり殺しかよ！！",
+   "zh_current": "可恶！想玩死我！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D78",
+   "budget_bytes": 14,
+   "jp": "こんな攻撃……冗談じゃない！！",
+   "zh_current": "这攻击……开玩笑！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D94",
+   "budget_bytes": 13,
+   "jp": "おっと！そうは行くか！！",
+   "zh_current": "哎呀！没门！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB0",
+   "budget_bytes": 12,
+   "jp": "来たぞ！お客さんだ！！",
+   "zh_current": "来了！有客人！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DC8",
+   "budget_bytes": 13,
+   "jp": "いいぞ、おとなしくしてろよ……",
+   "zh_current": "好、给我老实点！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE4",
+   "budget_bytes": 15,
+   "jp": "くそっ、俺ともあろうものが……",
+   "zh_current": "可恶、我居然……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E00",
+   "budget_bytes": 6,
+   "jp": "なめるなよ！",
+   "zh_current": "别狂！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5F0",
+   "budget_bytes": 12,
+   "jp": "よーし！一斉攻撃だ！！",
+   "zh_current": "好！一齐攻击！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x608",
+   "budget_bytes": 9,
+   "jp": "こちらアボリー、了解！！",
+   "zh_current": "这边收到！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x620",
+   "budget_bytes": 9,
+   "jp": "了解です、大佐！！",
+   "zh_current": "是、大佐！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x638",
+   "budget_bytes": 21,
+   "jp": "よーし！俺たちの力、見せてやろうぜ！",
+   "zh_current": "好！！见识我们的厉害！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x65C",
+   "budget_bytes": 23,
+   "jp": "一斉攻撃だな？よーし！援護は任せとけ！！",
+   "zh_current": "一齐攻击吗？支援交给我！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x680",
+   "budget_bytes": 9,
+   "jp": "こちらアボリー、了解！！",
+   "zh_current": "这边收到！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x698",
+   "budget_bytes": 9,
+   "jp": "こちらアボリー、了解！！",
+   "zh_current": "这边收到！",
+   "zh_current_bytes": 9
+  }
+ ]
+}

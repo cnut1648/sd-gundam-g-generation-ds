@@ -1,0 +1,79 @@
+{
+ "entity": "unit_202",
+ "kind": "unit",
+ "utids": [
+  202,
+  203,
+  204
+ ],
+ "name_jp": "クロスボーンX1／ハイパー",
+ "name_zh_current": "海盗X1／强化",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C8F0",
+   "jp": "ザンバスター",
+   "zh_current": "斩刀破坏枪",
+   "shared_by_n_units": 21
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F064",
+   "jp": "ビーム・ザンバー",
+   "zh_current": "光束斩刀",
+   "shared_by_n_units": 21
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906F3",
+   "jp": "グレネード・ランチャー",
+   "zh_current": "榴弹发射器",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F07B",
+   "jp": "分身攻撃",
+   "zh_current": "分身攻击",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 67,
+   "record_offset": "0x520",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EAE",
+   "jp": "分身",
+   "zh_current": "分身",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 9,
+   "record_offset": "0x1b8",
+   "budget_bytes": 32,
+   "jp_segments": [
+    "全ての攻撃を30%の確率で、0に回避する"
+   ],
+   "zh_segments_current": [
+    "有30%概率",
+    "完全回避攻击"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

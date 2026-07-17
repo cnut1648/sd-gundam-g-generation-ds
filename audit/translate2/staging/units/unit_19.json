@@ -1,0 +1,64 @@
+{
+ "entity": "unit_19",
+ "kind": "unit",
+ "utids": [
+  19,
+  20,
+  21
+ ],
+ "name_jp": "GP02サイサリス",
+ "name_zh_current": "GP02酸浆果",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218F2BA",
+   "jp": "バルカン",
+   "zh_current": "火神炮",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218CAD2",
+   "jp": "アトミック・バズーカ",
+   "zh_current": "原子火箭炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 6,
+   "record_offset": "0xdc",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "核バズーカ装備（使用不可）"
+   ],
+   "zh_segments_current": [
+    "核炮装备封印"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

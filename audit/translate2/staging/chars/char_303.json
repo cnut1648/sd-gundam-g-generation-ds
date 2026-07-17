@@ -1,0 +1,344 @@
+{
+ "entity": "char_303",
+ "kind": "character",
+ "cids": [
+  303
+ ],
+ "name_jp": "カテジナ・ルース",
+ "name_zh_KEEP": "卡迪珍娜·露丝",
+ "cards": [
+  {
+   "cid": 303,
+   "ids": [
+    {
+     "idn": 909,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B886E",
+     "zh_name_ptr": "0x218C56E",
+     "name_jp": "焼くものは焼く！！",
+     "name_zh_current": "该烧的就烧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋貫防無効",
+     "summary_zh_KEEP": "威暴击破防",
+     "didx": 203,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手の特殊防御を無効化、攻撃力が40%増加、必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·破防",
+     "cutin_group": 601,
+     "cutin_jp": "腐るものは腐らせ、焼くものは焼く！！",
+     "cutin_zh_current": "该腐则腐、该烧则烧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_123",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 910,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B887A",
+     "zh_name_ptr": "0x20B887A",
+     "name_jp": "お友達にでもなりに来たのか！？",
+     "name_zh_current": "想交朋友吗",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋0回避",
+     "summary_zh_KEEP": "威ID封必闪",
+     "didx": 186,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、命中した際、IDを1ターン封印。攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·ID封印完全回避",
+     "cutin_group": 602,
+     "cutin_jp": "トチ狂ってお友達にでもなりに来たのかい！？",
+     "cutin_zh_current": "你是不是疯了想来跟我交朋友！？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 911,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B888A",
+     "zh_name_ptr": "0x20B888A",
+     "name_jp": "ぴんしゃか動き回って！！",
+     "name_zh_current": "动来动去！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "散開&移動封印",
+     "summary_zh_KEEP": "行动・散开封",
+     "didx": 165,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）間接攻撃の際、相手の散開を封印、攻撃が命中した相手の移動を1ターン封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）解除封印·移动封印",
+     "cutin_group": 603,
+     "cutin_jp": "あなたという人はぴんしゃか動き回って！！",
+     "cutin_zh_current": "你这个人啊总是动来动去！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x221E4",
+   "budget_bytes": 18,
+   "jp": "来ると思ったよ、甘ちゃんボウャは！",
+   "zh_current": "果然来了、天真小子！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22204",
+   "budget_bytes": 13,
+   "jp": "わかるんだよ！あたしには！",
+   "zh_current": "我能明白的！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22220",
+   "budget_bytes": 32,
+   "jp": "正義を振りかざすだけのャツらなど…………消えてしまえっ！！",
+   "zh_current": "只会空喊正义的家伙……消失吧！！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2224C",
+   "budget_bytes": 19,
+   "jp": "消えろっ！アタシの邪魔をするなっ！！",
+   "zh_current": "消失！别妨碍我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2226C",
+   "budget_bytes": 30,
+   "jp": "さあ！戦え、戦え！！アタシに勝ったなら愛してあげるよ？",
+   "zh_current": "来！战斗吧！赢了我就爱你哟？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22298",
+   "budget_bytes": 28,
+   "jp": "アタシの腕の中の男の邪魔なんかさせやしないんだよ！",
+   "zh_current": "谁也别想妨碍我怀中的男人！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x222C0",
+   "budget_bytes": 28,
+   "jp": "少しは迷え！信念を貫く人間など気味が悪い！！",
+   "zh_current": "犹豫吧！贯彻信念的人真恶心！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x222E8",
+   "budget_bytes": 10,
+   "jp": "まやかすなーーっ！！",
+   "zh_current": "休想骗我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22300",
+   "budget_bytes": 12,
+   "jp": "オ、オマエはぁぁーーっ！！",
+   "zh_current": "你这家伙……！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22318",
+   "budget_bytes": 28,
+   "jp": "私を殺せるものなら殺してごらん！あははははっ！",
+   "zh_current": "有本事就杀了我！！啊哈哈！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22340",
+   "budget_bytes": 12,
+   "jp": "オマエたちなんかにーっ！！",
+   "zh_current": "竟败给你们！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22358",
+   "budget_bytes": 11,
+   "jp": "当たった！？何で！？",
+   "zh_current": "竟然中了！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22370",
+   "budget_bytes": 13,
+   "jp": "コイツ！バカにしてえ！",
+   "zh_current": "竟敢耍我！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2238C",
+   "budget_bytes": 15,
+   "jp": "はんっ！来ると思ったよ！！",
+   "zh_current": "哼！！我就知道！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x223A8",
+   "budget_bytes": 15,
+   "jp": "これ見よがしにバカにするのか！",
+   "zh_current": "你是在嘲笑我吗！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x223C4",
+   "budget_bytes": 13,
+   "jp": "くっ！シロッコ……来い！！",
+   "zh_current": "西罗克……来！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x223E0",
+   "budget_bytes": 13,
+   "jp": "甘いよねえ、本当に……",
+   "zh_current": "真是太天真了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x223FC",
+   "budget_bytes": 24,
+   "jp": "誰もこのアタシの邪魔なんか出来ないんだよ！！",
+   "zh_current": "谁也别想妨碍我的事！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22420",
+   "budget_bytes": 17,
+   "jp": "くそっ！オマエたち！散れっ！！",
+   "zh_current": "可恶！你们快散开！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22440",
+   "budget_bytes": 14,
+   "jp": "さぁ、あたしの腕の中においで！",
+   "zh_current": "来、投入我怀抱！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2245C",
+   "budget_bytes": 24,
+   "jp": "……殺してちょうだいどうしようもないでしょ？",
+   "zh_current": "……杀了我吧、没办法了吧？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22480",
+   "budget_bytes": 7,
+   "jp": "甘いんだよ！",
+   "zh_current": "太天真！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0xB78",
+   "budget_bytes": 9,
+   "jp": "バカにしてえっ！",
+   "zh_current": "别小看我！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1.bin",
+   "record": "0xB8D",
+   "budget_bytes": 17,
+   "jp": "ボウズがやること……！ボウズが！！",
+   "zh_current": "毛小子的能耐……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0xBAC",
+   "budget_bytes": 4,
+   "jp": "どうして！？",
+   "zh_current": "为何？",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0xBBC",
+   "budget_bytes": 13,
+   "jp": "なぜ、ウッソに当たらない！？",
+   "zh_current": "打不中胡索！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1.bin",
+   "record": "0xC00",
+   "budget_bytes": 5,
+   "jp": "な……！？",
+   "zh_current": "啥……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1.bin",
+   "record": "0xC41",
+   "budget_bytes": 3,
+   "jp": "あ……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "1.bin",
+   "record": "0xC84",
+   "budget_bytes": 4,
+   "jp": "くっ……",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0xC94",
+   "budget_bytes": 12,
+   "jp": "まやかすなぁぁぁーっ！！",
+   "zh_current": "别糊弄人！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0xCD0",
+   "budget_bytes": 13,
+   "jp": "ウッソおおおーーっ！！",
+   "zh_current": "胡索啊啊！！！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "entity": "char_432",
+ "web_sources": [
+  "https://gundam.huijiwiki.com/wiki/%E6%A0%BC%E9%9B%B7%E7%B1%B3%C2%B7%E6%89%98%E6%89%98",
+  "https://gundam.fandom.com/wiki/Glemy_Toto",
+  "https://baike.baidu.com/item/%E7%B1%B3%E8%AF%BA%E5%A4%AB%E6%96%AF%E5%9F%BA%E7%B2%92%E5%AD%90/2232917",
+  "https://www.zhihu.com/question/21426064"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1296,
+   "name_zh": "粒子散布！",
+   "cutin_zh": "米诺夫斯基粒子散布！",
+   "notes": "指令名与idn420共用同一记录（name_owner=false、归char_140所有）、照抄其定稿粒子散布！。名台词与char_140同句同译、采用社区通行的舰桥口令米诺夫斯基粒子散布。效果文本归char_140、按规则省略。"
+  },
+  {
+   "idn": 1297,
+   "name_zh": "真正新吉翁",
+   "cutin_zh": "建立真正的新吉翁！！",
+   "notes": "格雷米叛乱派系口号（打倒哈曼、由纯正血统建立真正的新吉翁）、中文圈通行说法即真正的新吉翁；指令名5格取核心词、与名台词及bark 0x2FE44/0x2FE60用词统一。效果文本归char_404、按规则省略。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x24A00", "zh": "全炮、齐射！"},
+  {"file": "0.bin", "record": "0x2FE14", "zh": "趁敌人立足未稳痛击！全炮门开……放！"},
+  {"file": "0.bin", "record": "0x2FE44", "zh": "为真正新吉翁！！"},
+  {"file": "0.bin", "record": "0x2FE60", "zh": "真正新吉翁是我们！"},
+  {"file": "0.bin", "record": "0x2FE80", "zh": "挡路的全是敌人！排除！"},
+  {"file": "0.bin", "record": "0x2FEA0", "zh": "、发射准备！……开火！"},
+  {"file": "0.bin", "record": "0x2FEC0", "zh": "冲！就当拿舰去撞！"},
+  {"file": "0.bin", "record": "0x2FEE0", "zh": "抵近齐射！一口气做个了断！！"},
+  {"file": "0.bin", "record": "0x2FF08", "zh": "、快装填！敌人就在眼前！！！"},
+  {"file": "0.bin", "record": "0x2FF2C", "zh": "这、这……不妙！全员弃舰、弃舰！"},
+  {"file": "0.bin", "record": "0x2FF54", "zh": "别被打中就行！"},
+  {"file": "0.bin", "record": "0x2FF70", "zh": "在此沉没、理想就无法实现！"},
+  {"file": "0.bin", "record": "0x2FF94", "zh": "这点损伤、算不了什么！"},
+  {"file": "0.bin", "record": "0x2FFB8", "zh": "敌人也想赢、仅此而已！"},
+  {"file": "0.bin", "record": "0x2FFD8", "zh": "可恶！中弹了！检查损伤部位！"},
+  {"file": "0.bin", "record": "0x30000", "zh": "啧！快抢修中弹部位！！"},
+  {"file": "0.bin", "record": "0x30024", "zh": "竟被逼至此！援军还没到！？"},
+  {"file": "0.bin", "record": "0x30048", "zh": "跟我们斗还差得远！"},
+  {"file": "0.bin", "record": "0x30068", "zh": "紧急回避！"},
+  {"file": "0.bin", "record": "0x30080", "zh": "来了！散开！"},
+  {"file": "0.bin", "record": "0x30098", "zh": "投降的话、就饶你一命！"},
+  {"file": "0.bin", "record": "0x300BC", "zh": "不好！被俘了！？"},
+  {"file": "0.bin", "record": "0x300D8", "zh": "抱歉……我不会束手就缚！"}
+ ],
+ "notes": "该组是格雷米叛军旗舰级高官（舰长口吻）的通用语音：全篇统一舰桥指令腔（全炮门、装填、弃舰、抵近齐射）。与char_431（格雷米军官）共通句保持一致：为真正新吉翁！！沿用现行共享译文；0x2FEE0与431现行的一口气做个了断措辞对齐。0x2FEA0/0x2FF08原文以、起头（前接机上插入片段）、译文保留起头顿号结构（0x2FEA0旧译擅自补全炮已改回）。0x2FE60由正统新吉翁改为真正新吉翁以统一派系口号用词；0x30068原文遠距離攻撃だ！回避！在9字节预算内取舰船指令紧急回避！。0x2FF2C补回原文总员退舰、退舰的复呼节奏。"
+}

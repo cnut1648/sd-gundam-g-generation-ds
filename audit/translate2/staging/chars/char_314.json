@@ -1,0 +1,272 @@
+{
+ "entity": "char_314",
+ "kind": "character",
+ "cids": [
+  314
+ ],
+ "name_jp": "キリング",
+ "name_zh_KEEP": "基林",
+ "cards": [
+  {
+   "cid": 314,
+   "ids": [
+    {
+     "idn": 942,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B89A9",
+     "zh_name_ptr": "0x218C50D",
+     "name_jp": "クズどもが……",
+     "name_zh_current": "这群废物……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 48,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）攻击+20%",
+     "cutin_group": 625,
+     "cutin_jp": "クズどもが……調子に乗りおって！",
+     "cutin_zh_current": "你们这群废物、竟敢得意忘形！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 943,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B89B1",
+     "zh_name_ptr": "0x20B89B1",
+     "name_jp": "ツキに救われたと言うことかな？",
+     "name_zh_current": "被运气救了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 626,
+     "cutin_jp": "ツキに救われたと言うことかな？",
+     "cutin_zh_current": "这也算是被运气救了吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 944,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B89C2",
+     "zh_name_ptr": "0x20B89C2",
+     "name_jp": "いかなる犠牲を払っても……",
+     "name_zh_current": "不惜牺牲！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 68,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+20%",
+     "cutin_group": 627,
+     "cutin_jp": "いかなる犠牲を払っても勝利せねばならんのだ！！",
+     "cutin_zh_current": "不惜一切代价也必须取得胜利！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x23BB8",
+   "budget_bytes": 25,
+   "jp": "もはや手段を選んでいられる場合ではないのだよ！",
+   "zh_current": "已经顾不上挑选手段了！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23BE0",
+   "budget_bytes": 30,
+   "jp": "戦局を打開する為には、いかなる犠牲を払おうとも！！",
+   "zh_current": "为了打开战局、不惜任何牺牲！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C0C",
+   "budget_bytes": 9,
+   "jp": "撃て！撃てえい！",
+   "zh_current": "开火！开火",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C24",
+   "budget_bytes": 11,
+   "jp": "かまわん！撃てっ！！",
+   "zh_current": "别管！开火！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C53",
+   "budget_bytes": 11,
+   "jp": "よし……せん滅せよ！",
+   "zh_current": "好……歼灭吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C6C",
+   "budget_bytes": 11,
+   "jp": "南極条約など私には関係ない！",
+   "zh_current": "管什么条约！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C84",
+   "budget_bytes": 11,
+   "jp": "何としても破壊するのだ！",
+   "zh_current": "一定要毁掉！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C9C",
+   "budget_bytes": 13,
+   "jp": "全てはジオン公国の為だ！！",
+   "zh_current": "为了吉翁公国！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23CB8",
+   "budget_bytes": 22,
+   "jp": "作戦成功を目の前にして……おのれ……！！",
+   "zh_current": "胜利就在眼前……可恶啊！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D04",
+   "budget_bytes": 10,
+   "jp": "ふん……雑魚どもめが",
+   "zh_current": "哼……杂鱼们",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D1C",
+   "budget_bytes": 25,
+   "jp": "このような所で時間を浪費するわけにはいかんのだ！",
+   "zh_current": "没空在这里浪费时间！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D44",
+   "budget_bytes": 14,
+   "jp": "かまうな！反撃、急げ！",
+   "zh_current": "别管！快反击！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D60",
+   "budget_bytes": 13,
+   "jp": "ちいっ！愚か者どもが！！",
+   "zh_current": "啧！蠢货们！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D7C",
+   "budget_bytes": 14,
+   "jp": "ええい！邪魔をしおって！！",
+   "zh_current": "可恶！碍事！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D98",
+   "budget_bytes": 22,
+   "jp": "おのれっ！本気で私を亡き者にする気か！",
+   "zh_current": "该死！！真想把我除掉吗！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23DBC",
+   "budget_bytes": 28,
+   "jp": "ここまできて、沈むわけにはいかんのだ！何とかしろっ！",
+   "zh_current": "都到这一步了、岂能沉没！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23DE4",
+   "budget_bytes": 15,
+   "jp": "我々には重要な任務があるのだ！",
+   "zh_current": "我们有重要任务！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E00",
+   "budget_bytes": 18,
+   "jp": "攻撃だと！？散開してかわすんだ！",
+   "zh_current": "攻击！？快散开躲避！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E20",
+   "budget_bytes": 24,
+   "jp": "ふん、そんな遠距離からなど……散開すればよいっ！",
+   "zh_current": "哼、隔那么远……散开就行了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E44",
+   "budget_bytes": 19,
+   "jp": "何かの役には立つ、捕縛しろっ！",
+   "zh_current": "总会有用处、抓住他！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E64",
+   "budget_bytes": 22,
+   "jp": "作戦成功を目の前にして……おのれ……！！",
+   "zh_current": "胜利就在眼前……可恶啊！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E88",
+   "budget_bytes": 11,
+   "jp": "誰が貴様などにっ！！",
+   "zh_current": "我岂会输你！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

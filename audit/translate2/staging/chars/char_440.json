@@ -1,0 +1,220 @@
+{
+ "entity": "char_440",
+ "kind": "character",
+ "cids": [
+  440
+ ],
+ "name_jp": "ネオ・ジオン熟練兵",
+ "name_zh_KEEP": "新吉翁兵",
+ "cards": [
+  {
+   "cid": 440,
+   "ids": [
+    {
+     "idn": 1320,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B90CA",
+     "zh_name_ptr": "0x2328859",
+     "name_jp": "自らの道を拓くのだ！",
+     "name_zh_current": "走自己的路",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 34,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 850,
+     "cutin_jp": "自らの道を拓くのだ！",
+     "cutin_zh_current": "自己的道路、由我开创！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_410",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x31300",
+   "budget_bytes": 8,
+   "jp": "遅いんだよ！！",
+   "zh_current": "太慢了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31314",
+   "budget_bytes": 13,
+   "jp": "スベースノイドの独立の為に！！",
+   "zh_current": "为宇宙民独立！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31330",
+   "budget_bytes": 9,
+   "jp": "しとめてやるっ！！",
+   "zh_current": "送你上路！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31348",
+   "budget_bytes": 21,
+   "jp": "我々こそジオンの意志を継ぐ者なのだ！",
+   "zh_current": "吉翁的意志由我们继承！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3136C",
+   "budget_bytes": 6,
+   "jp": "落ちろっ！！",
+   "zh_current": "掉下去！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31380",
+   "budget_bytes": 13,
+   "jp": "スベースノイドの独立の為に！！",
+   "zh_current": "为宇宙民独立！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3139C",
+   "budget_bytes": 11,
+   "jp": "……倒させてもらう！",
+   "zh_current": "我要打倒你！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x313B4",
+   "budget_bytes": 9,
+   "jp": "やらせはせんっ！！",
+   "zh_current": "休想得逞！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x313CC",
+   "budget_bytes": 26,
+   "jp": "ネ、ネオ·ジオン……万歳！！うわぁぁぁーっ！！",
+   "zh_current": "新、新吉翁万岁！！呜哇啊啊！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x313F4",
+   "budget_bytes": 13,
+   "jp": "ふん……狙いが甘いな！",
+   "zh_current": "哼……准头太差！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31410",
+   "budget_bytes": 11,
+   "jp": "まだ倒れられんのだ！！",
+   "zh_current": "我还不能倒下！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31428",
+   "budget_bytes": 8,
+   "jp": "そんなものなのか？",
+   "zh_current": "就这样？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3143C",
+   "budget_bytes": 19,
+   "jp": "くっ……！いつまでも好きにはさせんぞ！",
+   "zh_current": "唔……！休想为所欲为！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3145C",
+   "budget_bytes": 16,
+   "jp": "おのれ！これ以上はやらせるか！！",
+   "zh_current": "混账！休想再来！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31478",
+   "budget_bytes": 25,
+   "jp": "なんだと！？コイツ……並みの腕じゃないな！？",
+   "zh_current": "什么！？这家伙身手不简单！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x314A0",
+   "budget_bytes": 19,
+   "jp": "き、機体のコントロールが！？いかん……！！",
+   "zh_current": "机、机体失控！？不好！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x314C0",
+   "budget_bytes": 16,
+   "jp": "無駄だというのが分らないのか！？",
+   "zh_current": "不懂这是徒劳吗！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x314DC",
+   "budget_bytes": 8,
+   "jp": "……回避する！！",
+   "zh_current": "……回避！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x314F0",
+   "budget_bytes": 16,
+   "jp": "正面！来るぞ！散開しろっ！！",
+   "zh_current": "正面！来了、散开！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3150C",
+   "budget_bytes": 24,
+   "jp": "これ以上の抵抗は無意味だ！素直にその機体を引き渡せ！",
+   "zh_current": "再抵抗也没意义！交出机体！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31530",
+   "budget_bytes": 12,
+   "jp": "手も足も出ないとは……",
+   "zh_current": "竟束手无策……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31548",
+   "budget_bytes": 18,
+   "jp": "ふざけるな！誰が降伏などするか！",
+   "zh_current": "休想！我岂会投降！！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

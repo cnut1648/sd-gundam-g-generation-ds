@@ -1,0 +1,65 @@
+{
+ "entity": "char_66",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82%E5%A8%9C%C2%B7%E9%BA%A6%E8%82%AF%E5%90%89",
+  "https://baike.baidu.com/item/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE0080%EF%BC%9A%E5%8F%A3%E8%A2%8B%E9%87%8C%E7%9A%84%E6%88%98%E4%BA%89/15195766",
+  "https://movie.douban.com/review/5168095/",
+  "https://gundam-official.com/news/i/special-series/gundam-power-word/01_15955",
+  "https://srw.wiki.cre.jp/wiki/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%81%E3%83%BC%E3%83%8A%E3%83%BB%E3%83%9E%E3%83%83%E3%82%B1%E3%83%B3%E3%82%B8%E3%83%BC"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 198,
+   "name_zh": "如果不战斗",
+   "cutin_zh": "如果不战斗……就会有更多的人死去！",
+   "detail_effect_zh": "命中率提升20%、回避率提升40%、攻击力增加20%",
+   "notes": "名台词与巴尼对战时的觉悟、沿用社区通行句式（如果不战斗、会有更多的人死去）"
+  },
+  {
+   "idn": 199,
+   "name_zh": "非做不可！",
+   "cutin_zh": "这是非做不可的事！我绝不能逃跑！",
+   "notes": "效果文本归char_13所有、未输出"
+  },
+  {
+   "idn": 200,
+   "name_zh": "正确不存在",
+   "cutin_zh": "正确的事在哪里都不存在、只能做自己能做的事",
+   "detail_effect_zh": "1回合内命中率与回避率各提升20%、攻击力增加20%",
+   "notes": "0080第5话名台词、百度百科/豆瓣通行译法为：完全正确的事在哪儿都不存在的、只能做自己能做的事。按字符集规则以顿号代逗号并收敛为在哪里都不存在。旧效果文漏掉1回合、已补"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x783C", "zh": "没时间犹豫了、只能上了……"},
+  {"file": "0.bin", "record": "0x7860", "zh": "只能做自己能做的事！！"},
+  {"file": "0.bin", "record": "0x7884", "zh": "战斗就有人死"},
+  {"file": "0.bin", "record": "0x789C", "zh": "只能做自己能做的事！！"},
+  {"file": "0.bin", "record": "0x78C0", "zh": "哪有什么正确……可是！"},
+  {"file": "0.bin", "record": "0x78E0", "zh": "只顾自己逃跑毫无意义……！！"},
+  {"file": "0.bin", "record": "0x7904", "zh": "因为我无法忍受孤身一人……"},
+  {"file": "0.bin", "record": "0x7928", "zh": "这是……我选择的活法！"},
+  {"file": "0.bin", "record": "0x7948", "zh": "我驾驭不了这机体吗？"},
+  {"file": "0.bin", "record": "0x7968", "zh": "别小瞧！"},
+  {"file": "0.bin", "record": "0x797C", "zh": "怎能被击落"},
+  {"file": "0.bin", "record": "0x7994", "zh": "这种程度！"},
+  {"file": "0.bin", "record": "0x79AC", "zh": "唔……！！是我反应慢了？"},
+  {"file": "0.bin", "record": "0x79CC", "zh": "唔……！就这点小事！"},
+  {"file": "0.bin", "record": "0x79EC", "zh": "啊……！！"},
+  {"file": "0.bin", "record": "0x7A00", "zh": "机体要撑不住了！"},
+  {"file": "0.bin", "record": "0x7A1C", "zh": "厉害……全被挡住了！"},
+  {"file": "0.bin", "record": "0x7A3C", "zh": "绝不能被那个打中！"},
+  {"file": "0.bin", "record": "0x7A5C", "zh": "敌袭！各机、散开！"},
+  {"file": "0.bin", "record": "0x7A7C", "zh": "我不想杀人！老实点！"},
+  {"file": "0.bin", "record": "0x7A9C", "zh": "是说我太嫩了吗！？"},
+  {"file": "0.bin", "record": "0x7AB8", "zh": "休想得逞！"},
+  {"file": "1de.bin", "record": "0x1FBC", "zh": "同时攻击……！！"},
+  {"file": "1de.bin", "record": "0x1FD8", "zh": "明白了！我去支援！！"},
+  {"file": "1de.bin", "record": "0x1FF8", "zh": "我没事、巴尼！"},
+  {"file": "1de.bin", "record": "0x2014", "zh": "明白了！我去支援！！"},
+  {"file": "1de.bin", "record": "0x2034", "zh": "明白了！我去支援！！"},
+  {"file": "1de.bin", "record": "0x2054", "zh": "明白了！我去支援！！"},
+  {"file": "1de.bin", "record": "0x2074", "zh": "明白了！我去支援！！"}
+ ],
+ "notes": "克莉丝(克里斯蒂娜·麦肯吉)保持温柔而坚定的口吻。按成本规则修复超预算bark：0x7A5C(敌人来袭！各机散开！=18/17)、0x7A9C(唔！是我太嫩了吗！？=17/16)、0x1FBC(发动同时攻击！！=14/13)、0x1FF8(这边没事、巴尼！=14/13)。0x7AB8没那么容易缺感叹号、改为休想得逞！。0x797C坠落改为被击落(落とされる为被动击坠义)。巴尼为社区通行译名(バーニィ=巴纳德·瓦兹曼昵称)。"
+}

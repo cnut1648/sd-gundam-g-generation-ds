@@ -1,0 +1,506 @@
+{
+ "entity": "char_322",
+ "kind": "character",
+ "cids": [
+  322,
+  323
+ ],
+ "name_jp": "ジャマイカン",
+ "name_zh_KEEP": "牙买加",
+ "cards": [
+  {
+   "cid": 322,
+   "ids": [
+    {
+     "idn": 966,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8AA0",
+     "zh_name_ptr": "0x23288CB",
+     "name_jp": "……ゴミが！",
+     "name_zh_current": "……垃圾！",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 646,
+     "cutin_jp": "……ゴミが！",
+     "cutin_zh_current": "……垃圾！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 967,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8AA7",
+     "zh_name_ptr": "0x20B8AA7",
+     "name_jp": "気合だけでは勝てんよ！",
+     "name_zh_current": "气势赢不了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "装甲上昇",
+     "summary_zh_KEEP": "装甲上升",
+     "didx": 107,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）装甲+4",
+     "cutin_group": 647,
+     "cutin_jp": "気合だけでは勝てんよ！",
+     "cutin_zh_current": "光凭气势是赢不了的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 323,
+   "ids": [
+    {
+     "idn": 969,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8AA0",
+     "zh_name_ptr": "0x23288CB",
+     "name_jp": "……ゴミが！",
+     "name_zh_current": "……垃圾！",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 649,
+     "cutin_jp": "……ゴミが！",
+     "cutin_zh_current": "……垃圾！",
+     "name_owner": true,
+     "name_shared_with_idn": 966,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 970,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8AA7",
+     "zh_name_ptr": "0x20B8AA7",
+     "name_jp": "気合だけでは勝てんよ！",
+     "name_zh_current": "气势赢不了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "装甲上昇",
+     "summary_zh_KEEP": "装甲上升",
+     "didx": 107,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）装甲+4",
+     "cutin_group": 650,
+     "cutin_jp": "気合だけでは勝てんよ！",
+     "cutin_zh_current": "光凭气势是赢不了的！",
+     "name_owner": true,
+     "name_shared_with_idn": 967,
+     "detail_owner": false,
+     "detail_owned_by": "char_322",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 971,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8AB9",
+     "zh_name_ptr": "0x20B8AB9",
+     "name_jp": "私に盾突くつもりか？",
+     "name_zh_current": "竟敢违抗我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 651,
+     "cutin_jp": "私に盾突くつもりか？笑わせるわ！",
+     "cutin_zh_current": "竟敢违抗我？真是可笑！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x24F94",
+   "budget_bytes": 21,
+   "jp": "先手必勝だ！撃て！撃てーいっ！",
+   "zh_current": "抢先手！！开火！开火！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24FB8",
+   "budget_bytes": 11,
+   "jp": "一斉射で片をつけろ！",
+   "zh_current": "齐射、了结！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24FD0",
+   "budget_bytes": 13,
+   "jp": "だ！よく狙えよ！",
+   "zh_current": "！！瞄准了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25004",
+   "budget_bytes": 32,
+   "jp": "目にものを見せてやる！各砲座、各個に迎撃させい！",
+   "zh_current": "让你见识！各炮座、各自迎击！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25030",
+   "budget_bytes": 21,
+   "jp": "逃がすな！撃てっ！撃ちまくれえっ！",
+   "zh_current": "别放跑！开火！尽管打！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25054",
+   "budget_bytes": 17,
+   "jp": "敵の砲火から逃げるな！突っ込め！",
+   "zh_current": "别避敌炮火！！冲！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25074",
+   "budget_bytes": 17,
+   "jp": "敵の砲火から逃げるな！突っ込め！",
+   "zh_current": "别避敌炮火！！冲！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25094",
+   "budget_bytes": 22,
+   "jp": "いい気になるなよ！こちらの力を見せてやる！",
+   "zh_current": "别太得意！看看我们的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x250B8",
+   "budget_bytes": 22,
+   "jp": "バ、バカな！なぜ、あんなクズどもに……！！",
+   "zh_current": "怎么会输给那群废物！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x250FD",
+   "budget_bytes": 7,
+   "jp": "うむ、上出来だ！",
+   "zh_current": "干得好！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25110",
+   "budget_bytes": 25,
+   "jp": "は、ははははっ……貴様らごときにやらせはせん！",
+   "zh_current": "哈、哈哈哈……你们休想得逞！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25138",
+   "budget_bytes": 14,
+   "jp": "ふん、いきがりおって……！！",
+   "zh_current": "哼、逞什么强……！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25154",
+   "budget_bytes": 13,
+   "jp": "ええい！何をしている！！",
+   "zh_current": "你在干什么！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25170",
+   "budget_bytes": 30,
+   "jp": "護衛のMSはどうしたのだ！！…早く呼び戻さんか！！",
+   "zh_current": "护卫MS呢！！……还不快叫回来！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2519C",
+   "budget_bytes": 28,
+   "jp": "ま、まさか……まさか！？我が艦がここまでやられるのか！？",
+   "zh_current": "不、不会吧……我舰竟被打成这样！？",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x251C4",
+   "budget_bytes": 9,
+   "jp": "うぬぬぬぬ……！！",
+   "zh_current": "唔唔唔……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x251DC",
+   "budget_bytes": 5,
+   "jp": "バカめが！",
+   "zh_current": "蠢货！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x251F0",
+   "budget_bytes": 27,
+   "jp": "来るぞ！来るっ！来るっ！回避、どうした！？急げっ！",
+   "zh_current": "来了！来了！来了！回避呢！？快点！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25218",
+   "budget_bytes": 14,
+   "jp": "何してる！？回避、急げっ！",
+   "zh_current": "还不快回避！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25234",
+   "budget_bytes": 6,
+   "jp": "捕縛しろっ！",
+   "zh_current": "抓住！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25248",
+   "budget_bytes": 19,
+   "jp": "私は将校だぞ！それなりに扱えよ！",
+   "zh_current": "我是军官！好生对待！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25268",
+   "budget_bytes": 20,
+   "jp": "笑わせるな！降伏したわけではない！",
+   "zh_current": "少来！我可没有投降！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25288",
+   "budget_bytes": 17,
+   "jp": "来たぞ！早く迎え撃たんか！！",
+   "zh_current": "来了！还不快迎击！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x252A8",
+   "budget_bytes": 11,
+   "jp": "一斉射で片をつけろ！",
+   "zh_current": "齐射、了结！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x252C0",
+   "budget_bytes": 26,
+   "jp": "一斉射で片をつけろ！一機たりとも逃すなよ！！",
+   "zh_current": "齐射、了结！一架都别放跑！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25300",
+   "budget_bytes": 20,
+   "jp": "ティターンズに逆らう愚か者どもを一掃しろ！！",
+   "zh_current": "违抗提坦斯者、一律扫除！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25320",
+   "budget_bytes": 14,
+   "jp": "かまわんっ！撃ちまくれ！！",
+   "zh_current": "别管！尽管开火！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2533C",
+   "budget_bytes": 6,
+   "jp": "最大戦速だ！",
+   "zh_current": "全速！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25350",
+   "budget_bytes": 6,
+   "jp": "最大戦速だ！",
+   "zh_current": "全速！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25364",
+   "budget_bytes": 22,
+   "jp": "我々はティターンズだ！一般の軍とは違うのだよ！",
+   "zh_current": "提坦斯！与普通军不同！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25388",
+   "budget_bytes": 19,
+   "jp": "お、おのれ！やってくれおったな！！",
+   "zh_current": "可恶！！竟敢来这套！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x253C9",
+   "budget_bytes": 7,
+   "jp": "うむ、上出来だ！",
+   "zh_current": "干得好！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x253DC",
+   "budget_bytes": 23,
+   "jp": "そ、そうだ！私がやられるなど、ありえん！！",
+   "zh_current": "对、对！我怎么可能会输！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25400",
+   "budget_bytes": 21,
+   "jp": "生意気な！倍にして返してくれるわっ！",
+   "zh_current": "放肆！加倍奉还给你！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25424",
+   "budget_bytes": 22,
+   "jp": "ええい！こちらの弾は当たっているのか！？",
+   "zh_current": "可恶！我们打中了吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25448",
+   "budget_bytes": 25,
+   "jp": "何をしておる！回避運動、遅いのではないか！？",
+   "zh_current": "搞什么！回避太慢了吧！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25470",
+   "budget_bytes": 28,
+   "jp": "ま、まさか……まさか！？我が艦がここまでやられるのか！？",
+   "zh_current": "不会吧……我舰竟伤成这样！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25498",
+   "budget_bytes": 20,
+   "jp": "おっ、おのれ！よくも、よくも……！！",
+   "zh_current": "可、可恶……你竟敢……！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x254B8",
+   "budget_bytes": 15,
+   "jp": "フン、気合だけでは勝てんよ！",
+   "zh_current": "光有气势赢不了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x254D4",
+   "budget_bytes": 6,
+   "jp": "回避しろっ！",
+   "zh_current": "快回避！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x254E8",
+   "budget_bytes": 6,
+   "jp": "回避しろっ！",
+   "zh_current": "快回避！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x254FC",
+   "budget_bytes": 22,
+   "jp": "ティターンズの戦力にしてやる！ありがたく思うのだな！",
+   "zh_current": "把你编入提坦斯的战力！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25520",
+   "budget_bytes": 19,
+   "jp": "私は将校だぞ！それなりに扱えよ！",
+   "zh_current": "军官！！好生对待！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25540",
+   "budget_bytes": 16,
+   "jp": "貴様らごときに屈してたまるか！",
+   "zh_current": "岂会向你们低头！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

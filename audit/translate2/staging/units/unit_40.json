@@ -1,0 +1,73 @@
+{
+ "entity": "unit_40",
+ "kind": "unit",
+ "utids": [
+  40,
+  41,
+  42
+ ],
+ "name_jp": "ZZガンダム",
+ "name_zh_current": "ZZ高达",
+ "name_zh_px": 40,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB0F",
+   "jp": "ダブル・ビーム・ライフル",
+   "zh_current": "双管光束步枪",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CB1C",
+   "jp": "ハイパー・ビームサーベル",
+   "zh_current": "高能光束军刀",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CAA9",
+   "jp": "ハイ・メガ・キャノン",
+   "zh_current": "高能米加加农炮",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 13,
+   "record_offset": "0x140",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "フルアーマーシステム装着可能"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "全装甲系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

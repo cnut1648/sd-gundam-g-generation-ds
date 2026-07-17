@@ -1,0 +1,65 @@
+{
+ "entity": "char_111",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/天田士郎",
+  "https://www.gundam-c.com/other/wise-remark/08/shiro01.html",
+  "https://srw.wiki.cre.jp/wiki/シロー・アマダ",
+  "https://zh.wikipedia.org/zh-hans/機動戰士GUNDAM第08MS小隊",
+  "https://hk.gundam-official.com/series/08th-ms-team/story/pptee6pt0likoa49xjosmszi"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 333,
+   "name_zh": "为同伴而战",
+   "cutin_zh": "不是为了联邦……即使如此！为了同伴我也能战斗！",
+   "notes": "第9话名台词、社区通行译法即为·不是为了联邦！即使如此、为了同伴我也能战斗！·、现译与之一致、保留"
+  },
+  {
+   "idn": 334,
+   "name_zh": "白头到老",
+   "cutin_zh": "我要活下去！活着与爱娜白头到老！！",
+   "detail_effect_zh": "大幅强化攻击能力、受到的伤害减至三分之一",
+   "notes": "指令名原·与爱娜共生·生硬(共生像共栖)、改为白头到老、与cut-in及event_text同句(我要活着、与爱娜白头到老！！)一致；社区最通行为白头偕老、但偕字不在charmap故沿用repo既定的白头到老；detail原为空(缺失defect)已补全、JP的1／3用三分之一表述、若允许全角／则·受到的伤害减至1／3·亦可；JP原文愛ける为受ける之讹"
+  },
+  {
+   "idn": 335,
+   "name_zh": "共同背负",
+   "cutin_zh": "背负着走下去吧……我们两个人！！",
+   "detail_effect_zh": "爱娜在队伍中时、大幅强化攻击能力与防御力",
+   "notes": "detail原译混入了别处的数值(命中率+40%·回避+40%等)、与JP·アイナがチームにいる時、攻撃能力と防御力を大幅に強化する·不符、已按JP重译；指令名·二人共背负·改为更自然的·共同背负·"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xDAF0", "zh": "决不能让大家被打倒！"},
+  {"file": "0.bin", "record": "0xDB10", "zh": "总有办法的！！"},
+  {"file": "0.bin", "record": "0xDB28", "zh": "总有办法的！！"},
+  {"file": "0.bin", "record": "0xDB40", "zh": "我决定了！和爱娜活下去！！"},
+  {"file": "0.bin", "record": "0xDB64", "zh": "再往前一步……都休想！"},
+  {"file": "0.bin", "record": "0xDB84", "zh": "爱娜还在等着我！我不能输！"},
+  {"file": "0.bin", "record": "0xDBA8", "zh": "豁出去了……拼了！！"},
+  {"file": "0.bin", "record": "0xDBC8", "zh": "绝不能让你们得逞！"},
+  {"file": "0.bin", "record": "0xDBE8", "zh": "唔……！抱歉、爱娜……"},
+  {"file": "0.bin", "record": "0xDC04", "zh": "敌人也急！"},
+  {"file": "0.bin", "record": "0xDC18", "zh": "我要活下去！对吧……爱娜？"},
+  {"file": "0.bin", "record": "0xDC3C", "zh": "就这点！"},
+  {"file": "0.bin", "record": "0xDC50", "zh": "还早！！"},
+  {"file": "0.bin", "record": "0xDC64", "zh": "才这点！！"},
+  {"file": "0.bin", "record": "0xDC78", "zh": "果然挺吃力……"},
+  {"file": "0.bin", "record": "0xDC90", "zh": "怎能输！我……我要活下去！"},
+  {"file": "0.bin", "record": "0xDCB4", "zh": "快撤！再打也没用！"},
+  {"file": "0.bin", "record": "0xDCD4", "zh": "……打不中！"},
+  {"file": "0.bin", "record": "0xDCEC", "zh": "来了！！各机、散开！"},
+  {"file": "0.bin", "record": "0xDD0C", "zh": "……投降吧！别白白送命！"},
+  {"file": "0.bin", "record": "0xDD30", "zh": "可恶、动起来！快给我动！"},
+  {"file": "0.bin", "record": "0xDD54", "zh": "还没！还没有结束！"},
+  {"file": "1de.bin", "record": "0x3EC4", "zh": "我们一起上！！"},
+  {"file": "1de.bin", "record": "0x3EDC", "zh": "好！这边交给我！"},
+  {"file": "1de.bin", "record": "0x3EF8", "zh": "上吧！爱娜！！"},
+  {"file": "1de.bin", "record": "0x3F10", "zh": "好！这边交给我！"},
+  {"file": "1de.bin", "record": "0x3F2C", "zh": "好！这边交给我！"},
+  {"file": "1de.bin", "record": "0x3F48", "zh": "好！这边交给我！"},
+  {"file": "1de.bin", "record": "0x3F64", "zh": "好！这边交给我！"}
+ ],
+ "notes": "所有新改字符已对照data/charmap.json two_byte_zh验证可编码。改动的bark按brief费率均在budget内：0xDB40=23/23(补回JP的！！)、0xDB64=19/19(恢复JP省略号顿挫)、0xDC64=8/8(与0xDC3C区分)、0xDCD4=9/9(JP为单！)、0xDCEC=16/17(补回JP的顿号)、0xDD54=16/18(原·决不放弃·偏离JP·还没结束·)、0x3EC4=12/12、0x3EDC组=14/14(budget下舍一个！)、0x3EF8=11/12(改成やろう！アイナ！！的直对应)。未改动的bark(如敌人也急！、果然挺吃力……)为已提交且实测合入budget的原句、避免超支风险故保留。"
+}

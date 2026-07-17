@@ -1,0 +1,294 @@
+{
+ "entity": "char_404",
+ "kind": "character",
+ "cids": [
+  404
+ ],
+ "name_jp": "ギンガナム隊大大名",
+ "name_zh_KEEP": "金卡拉姆队大名",
+ "cards": [
+  {
+   "cid": 404,
+   "ids": [
+    {
+     "idn": 1212,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8F65",
+     "zh_name_ptr": "0x2328794",
+     "name_jp": "演習の成果を見せてやる！！",
+     "name_zh_current": "见演习成果",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 742,
+     "cutin_jp": "演習の成果を見せてやる！！",
+     "cutin_zh_current": "让你们见识演习的成果！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1213,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8F73",
+     "zh_name_ptr": "0x20B8F73",
+     "name_jp": "作戦はEマイナーだ！",
+     "name_zh_current": "作战E小调",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 743,
+     "cutin_jp": "作戦はEマイナーだ！",
+     "cutin_zh_current": "作战是E小调！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2305A",
+   "budget_bytes": 14,
+   "jp": "はっ！了解であります！！",
+   "zh_current": "是！明白！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x230BA",
+   "budget_bytes": 19,
+   "jp": "！十字砲火、開始します！！",
+   "zh_current": "！十字炮火开始！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2310C",
+   "budget_bytes": 12,
+   "jp": "一斉発射します！",
+   "zh_current": "一齐发射！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23150",
+   "budget_bytes": 21,
+   "jp": "ビームホイール展開！いつでも行けます！",
+   "zh_current": "光束轮展开！随时能上！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23200",
+   "budget_bytes": 20,
+   "jp": "回避成功！我が艦に損害はありません！",
+   "zh_current": "回避成功！本舰无损！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x232D0",
+   "budget_bytes": 9,
+   "jp": "おっ、御大将！！",
+   "zh_current": "御大将！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B4A8",
+   "budget_bytes": 30,
+   "jp": "来たぞ！Eメジャーだ！我ら大名の力、見せてやれ！！",
+   "zh_current": "敌人来了！迎战！！亮出我等大名之力！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B4D4",
+   "budget_bytes": 6,
+   "jp": "撃てーっ！！",
+   "zh_current": "开火！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B4E8",
+   "budget_bytes": 22,
+   "jp": "車懸かりの陣だ！次々に撃てーっ！！",
+   "zh_current": "正是车悬阵！轮番开火！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B50C",
+   "budget_bytes": 27,
+   "jp": "各砲座は雁の陣！集中砲火でしとめるぞ！！",
+   "zh_current": "各炮座就位！集中炮火了结他！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B534",
+   "budget_bytes": 22,
+   "jp": "車懸かりの陣だ！次々に撃てーっ！！",
+   "zh_current": "正是车悬阵！轮番开火！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B558",
+   "budget_bytes": 23,
+   "jp": "白兵戦用意！カマイタチの陣で肉薄しろ！",
+   "zh_current": "白刃战！以利刃之阵逼近！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B57C",
+   "budget_bytes": 28,
+   "jp": "吶喊をかけるぞ！艦首ホイール、槍の構えだ！！",
+   "zh_current": "发起突击！！舰首轮、摆好架势！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B5A4",
+   "budget_bytes": 20,
+   "jp": "恐れるな！演習の成果を見せてやれ！！",
+   "zh_current": "别怕！亮出演习成果！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B5C4",
+   "budget_bytes": 27,
+   "jp": "し、しまった……！ええい！退け！退けえーっ！",
+   "zh_current": "不、不妙！！可恶！撤退！快撤！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B5EC",
+   "budget_bytes": 26,
+   "jp": "ふふふ……我らの陣形に翻弄されているな？",
+   "zh_current": "呵呵……被我军阵形戏耍了吧？",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B614",
+   "budget_bytes": 27,
+   "jp": "おのれっ！お庭番ふぜいがいい気になりおって！",
+   "zh_current": "可恶！区区庭番竟敢得意！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B63C",
+   "budget_bytes": 22,
+   "jp": "よーし！次は竿の陣形で行くぞ！！",
+   "zh_current": "好！！下一阵形、给我上！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B660",
+   "budget_bytes": 24,
+   "jp": "くっ、やるな！こちらの作戦を先読みするとは！！",
+   "zh_current": "有两手！！竟看穿我军作战！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B684",
+   "budget_bytes": 25,
+   "jp": "くっ……！やはりEマイナーにすべきだったか！",
+   "zh_current": "唔……！果然该换别的战法吗！？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B6AC",
+   "budget_bytes": 23,
+   "jp": "なんと！？この鉄壁の守りを突破するとは！",
+   "zh_current": "什么！？竟突破这铁壁之守！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B6D0",
+   "budget_bytes": 31,
+   "jp": "お、御大将が見ておられるのだ！ブザマな姿は見せられん！",
+   "zh_current": "御、御大将在看着！不能显得狼狈！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B6FC",
+   "budget_bytes": 23,
+   "jp": "いいぞ！艦首ビームシールドはこのまま盾の構えだ！",
+   "zh_current": "好、舰首护盾保持巡航！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B720",
+   "budget_bytes": 15,
+   "jp": "回避すればいい！怖れるなっ！",
+   "zh_current": "回避就行！别怕！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B73C",
+   "budget_bytes": 24,
+   "jp": "見え見えの攻撃だな……！落ち着いて回避しろっ！",
+   "zh_current": "攻击破绽百出！沉住气回避！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B760",
+   "budget_bytes": 17,
+   "jp": "降伏しろっ！命まではとらん！",
+   "zh_current": "投降吧！饶你不死！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B780",
+   "budget_bytes": 18,
+   "jp": "ば、馬鹿な！？捕まったというのか！？",
+   "zh_current": "怎可能！？被抓住了！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B7A0",
+   "budget_bytes": 22,
+   "jp": "ふざけるなっ！これしきのことで、捕まるか！",
+   "zh_current": "少胡闹！这点事就想抓我？",
+   "zh_current_bytes": 19
+  }
+ ]
+}

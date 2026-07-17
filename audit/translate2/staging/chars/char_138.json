@@ -1,0 +1,336 @@
+{
+ "entity": "char_138",
+ "kind": "character",
+ "cids": [
+  138
+ ],
+ "name_jp": "ティファ・アディール",
+ "name_zh_KEEP": "蒂法·亚迪尔",
+ "cards": [
+  {
+   "cid": 138,
+   "ids": [
+    {
+     "idn": 414,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7CBE",
+     "zh_name_ptr": "0x218FF5C",
+     "name_jp": "大切な……力",
+     "name_zh_current": "珍贵的力量",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "マイクロ波受信",
+     "summary_zh_KEEP": "微波收信",
+     "didx": 226,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ガンダムX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "使用条件：地图対象：仅自身（效果）微波收信",
+     "cutin_group": 325,
+     "cutin_jp": "大切な……力",
+     "cutin_zh_current": "珍贵的……力量",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 415,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7CD0",
+     "zh_name_ptr": "0x20B7CD0",
+     "name_jp": "……アナタ自身が確かめて",
+     "name_zh_current": "你亲自确认",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋0回避",
+     "summary_zh_KEEP": "威暴击必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 326,
+     "cutin_jp": "……アナタ自身が確かめて",
+     "cutin_zh_current": "……你自己去确认吧",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 416,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7CDB",
+     "zh_name_ptr": "0x218FF67",
+     "name_jp": "アナタに……力を",
+     "name_zh_current": "赐予你力量",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "自軍SP&反応↑",
+     "summary_zh_KEEP": "自军SP・应",
+     "didx": 128,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）自分を除く仲間のSPが10回復さらに、3ターンの間、反応が20上昇",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）反应+20·SP恢复10%",
+     "cutin_group": 327,
+     "cutin_jp": "アナタに……力を",
+     "cutin_zh_current": "给你……力量",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x11F88",
+   "budget_bytes": 6,
+   "jp": "……見えます",
+   "zh_current": "……看见",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11F9C",
+   "budget_bytes": 6,
+   "jp": "私の、力……",
+   "zh_current": "我的力量",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11FB0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11FC4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11FD8",
+   "budget_bytes": 8,
+   "jp": "アナタにこれを……",
+   "zh_current": "给你这个",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11FEC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12000",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12014",
+   "budget_bytes": 10,
+   "jp": "私も、戦えるから……",
+   "zh_current": "我也能战斗",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1202C",
+   "budget_bytes": 4,
+   "jp": "ガロード……",
+   "zh_current": "加洛",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1203C",
+   "budget_bytes": 7,
+   "jp": "……当たらない",
+   "zh_current": "……打不中",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12050",
+   "budget_bytes": 8,
+   "jp": "私も、人だから……",
+   "zh_current": "我也是人",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12064",
+   "budget_bytes": 7,
+   "jp": "……効かない",
+   "zh_current": "……无效",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12078",
+   "budget_bytes": 17,
+   "jp": "悲しい時代……思い出も悲しい……",
+   "zh_current": "时代和回忆都悲伤……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12098",
+   "budget_bytes": 7,
+   "jp": "私も、ひとり……",
+   "zh_current": "我也孤单",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x120AC",
+   "budget_bytes": 11,
+   "jp": "とても強い……力……",
+   "zh_current": "好强的力量……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x120C4",
+   "budget_bytes": 5,
+   "jp": "ガロード……！",
+   "zh_current": "加洛！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x120D8",
+   "budget_bytes": 7,
+   "jp": "……それはダメ",
+   "zh_current": "……不行",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x120EC",
+   "budget_bytes": 4,
+   "jp": "……来る",
+   "zh_current": "……来",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x120FC",
+   "budget_bytes": 5,
+   "jp": "……来ます",
+   "zh_current": "……来了",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12110",
+   "budget_bytes": 8,
+   "jp": "脅えないで……",
+   "zh_current": "别害怕……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12124",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12138",
+   "budget_bytes": 12,
+   "jp": "わたし……道具じゃないから",
+   "zh_current": "我……不是道具",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x515C",
+   "budget_bytes": 8,
+   "jp": "お願い……手伝って",
+   "zh_current": "帮帮我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5170",
+   "budget_bytes": 4,
+   "jp": "……はい",
+   "zh_current": "……是",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5180",
+   "budget_bytes": 6,
+   "jp": "うん……ガロード",
+   "zh_current": "加洛德",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5194",
+   "budget_bytes": 4,
+   "jp": "……はい",
+   "zh_current": "……是",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x51A4",
+   "budget_bytes": 4,
+   "jp": "……はい",
+   "zh_current": "……是",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x51B4",
+   "budget_bytes": 4,
+   "jp": "……はい",
+   "zh_current": "……是",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x51C4",
+   "budget_bytes": 4,
+   "jp": "……はい",
+   "zh_current": "……是",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x52C",
+   "budget_bytes": 7,
+   "jp": "アナタに力を……",
+   "zh_current": "给你力量",
+   "zh_current_bytes": 7
+  }
+ ]
+}

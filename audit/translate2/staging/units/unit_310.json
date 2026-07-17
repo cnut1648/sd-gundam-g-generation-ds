@@ -1,0 +1,74 @@
+{
+ "entity": "unit_310",
+ "kind": "unit",
+ "utids": [
+  310,
+  311,
+  312
+ ],
+ "name_jp": "シスクード",
+ "name_zh_current": "西斯库德",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EF23",
+   "jp": "ロング・ライフル",
+   "zh_current": "长步枪",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218E64A",
+   "jp": "メガ・カノン",
+   "zh_current": "米加加农炮",
+   "shared_by_n_units": 15
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 103,
+   "record_offset": "0x684",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "シグ・ウェドナー専用機"
+   ],
+   "zh_segments_current": [
+    "西格专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E6A",
+   "jp": "Iフィールド",
+   "zh_current": "I力场",
+   "owner": false,
+   "owned_by": "unit_4"
+  },
+  "defense": {
+   "record": 1,
+   "record_offset": "0xc",
+   "budget_bytes": 56,
+   "jp_segments": [
+    "威力450までのビーム属性の射撃攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束射击无效",
+    "超过则减30%"
+   ],
+   "owner": false,
+   "owned_by": "unit_4"
+  }
+ }
+}

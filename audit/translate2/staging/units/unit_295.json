@@ -1,0 +1,64 @@
+{
+ "entity": "unit_295",
+ "kind": "unit",
+ "utids": [
+  295,
+  296,
+  297
+ ],
+ "name_jp": "ジ・オ",
+ "name_zh_current": "铁奥",
+ "name_zh_px": 24,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218EFA7",
+   "jp": "ビーム・ソード",
+   "zh_current": "光束剑",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218F2DA",
+   "jp": "サブ・マニピュレーター",
+   "zh_current": "副机械臂",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 98,
+   "record_offset": "0x634",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "バイオセンサー搭載（ニュータイプ対応機）"
+   ],
+   "zh_segments_current": [
+    "生体感应器"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

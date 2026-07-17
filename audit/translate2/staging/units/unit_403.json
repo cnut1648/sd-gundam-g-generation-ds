@@ -1,0 +1,44 @@
+{
+ "entity": "unit_403",
+ "kind": "unit",
+ "utids": [
+  403,
+  404,
+  405
+ ],
+ "name_jp": "トールギス",
+ "name_zh_current": "多鲁基斯",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x232940A",
+   "jp": "ドーバーガン",
+   "zh_current": "多佛炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

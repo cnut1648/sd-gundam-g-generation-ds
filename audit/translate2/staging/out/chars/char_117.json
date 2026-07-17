@@ -1,0 +1,64 @@
+{
+ "entity": "char_117",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/美利安多·匹斯克拉福特",
+  "https://zh.moegirl.org.cn/米利亚尔特·匹斯克拉福特",
+  "http://light37.web.fc2.com/wonder/gwmeigon.htm",
+  "https://movie.douban.com/review/5336309/",
+  "https://mr-blade.sakura.ne.jp/64_36A.htm"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 351,
+   "name_zh": "强者造弱者",
+   "cutin_zh": "制造出弱者的是强者！",
+   "notes": "TV49话对希罗的哲学名言、社区通行译法「制造出弱者的是强者」（萌娘百科/豆瓣台词集）。名称保留5格「强者造弱者」、与名台词关键词一致。"
+  },
+  {
+   "idn": 352,
+   "name_zh": "宇宙不需要",
+   "cutin_zh": "不需要！对这个宇宙而言！！……你们这些家伙！！",
+   "notes": "TV41话巴尔吉要塞斩名场面「必要ないのだ！宇宙にとって！！……貴様たちは！！」。名称与char_118（idn355）共享同一字符串、名台词同一JP原文、二者均与char_118产出逐字一致。"
+  },
+  {
+   "idn": 353,
+   "name_zh": "顽强活到底",
+   "cutin_zh": "我会顽强地活到底！！比任何人都严酷、作为一名战士！",
+   "notes": "TV49话最终决战名言（どこまでも生き抜いてみせる！誰よりも厳しく、戦士としてな！）。名称与char_118（idn356）共享同一字符串、名台词与char_118产出逐字一致。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xEA98", "zh": "来了……哼！！"},
+  {"file": "0.bin", "record": "0xEAB0", "zh": "这样……如何！"},
+  {"file": "0.bin", "record": "0xEAC8", "zh": "休想逃！！"},
+  {"file": "0.bin", "record": "0xEADC", "zh": "……在那！"},
+  {"file": "0.bin", "record": "0xEAF0", "zh": "休想逃！！"},
+  {"file": "0.bin", "record": "0xEB04", "zh": "绝不能容许地球这种强者的存在！！"},
+  {"file": "0.bin", "record": "0xEB2C", "zh": "由我来纠正这一切！！"},
+  {"file": "0.bin", "record": "0xEB4C", "zh": "这是为终结战斗的战斗！"},
+  {"file": "0.bin", "record": "0xEB70", "zh": "唔！精彩……！！"},
+  {"file": "0.bin", "record": "0xEB88", "zh": "别以为那点本事能当我对手！"},
+  {"file": "0.bin", "record": "0xEBAC", "zh": "零式！让我看到胜利！"},
+  {"file": "0.bin", "record": "0xEBCC", "zh": "留你一命！！"},
+  {"file": "0.bin", "record": "0xEBE4", "zh": "非要碍事！"},
+  {"file": "0.bin", "record": "0xEBFC", "zh": "唔……！区区这点！"},
+  {"file": "0.bin", "record": "0xEC18", "zh": "我为何如此心软……！"},
+  {"file": "0.bin", "record": "0xEC38", "zh": "还没！还没分出胜负！"},
+  {"file": "0.bin", "record": "0xEC58", "zh": "那种武器拦不住我！"},
+  {"file": "0.bin", "record": "0xEC78", "zh": "来了……哼！！"},
+  {"file": "0.bin", "record": "0xEC90", "zh": "来了……哼！！"},
+  {"file": "0.bin", "record": "0xECA8", "zh": "那机体与你不相称！！"},
+  {"file": "0.bin", "record": "0xECC8", "zh": "什么！"},
+  {"file": "0.bin", "record": "0xECDC", "zh": "可恶！别小看我！"},
+  {"file": "1dd.bin", "record": "0x144", "zh": "我清醒得很……！"},
+  {"file": "1de.bin", "record": "0x4364", "zh": "全队、随我突击！"},
+  {"file": "1de.bin", "record": "0x4384", "zh": "好！我来助阵！！"},
+  {"file": "1de.bin", "record": "0x43A4", "zh": "我来为你开路、上吧！"},
+  {"file": "1de.bin", "record": "0x43C8", "zh": "配合得不错、继续进攻！"},
+  {"file": "1de.bin", "record": "0x43EC", "zh": "战士自当如此、跟我上！"},
+  {"file": "1de.bin", "record": "0x4410", "zh": "胜负未分、不要松懈！"},
+  {"file": "1de.bin", "record": "0x4434", "zh": "为了终结战斗、进攻！"}
+ ],
+ "notes": "detail均非本entity所有（char_78/char_13/char_86）、按规则未输出。与已完成的char_118（米利亚尔特（零））保持同人同声：共享名称idn352/353与其idn355/356取值逐字一致、同JP名台词译文逐字一致。1de.bin七条在JP ROM里是开发占位标签（ミリアルドチーム攻撃汎用/固定応答セリフ、见data/jp/characters.json runs）、按车队惯例（char_55/char_64/char_118产出）填入符合白色獠牙领袖口吻的小队攻击台词、全部实测编码在预算内。修正类：0xEC18甘い指手下留情译「心软」（原「天真」误）；0xEBCC死なぬ程度には十分＝打到不死的程度、改「留你一命！！」（原「死不了你」歧义）；0xEBAC为TV37话ZERO系统名台词、17B预算下取「零式！让我看到胜利！」（全句「零式啊！让我看到胜利吧！！」见char_118 idn354名台词）；0xEB88/0xEC58原文被截断（无标点）、已补全为完整句；0xEA98/0xEC78/0xEC90同一JP原文统一译文。"
+}

@@ -1,0 +1,652 @@
+{
+ "entity": "char_109",
+ "kind": "character",
+ "cids": [
+  109,
+  110
+ ],
+ "name_jp": "シロー・アマダ",
+ "name_zh_KEEP": "天田士郎",
+ "cards": [
+  {
+   "cid": 109,
+   "ids": [
+    {
+     "idn": 327,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7991",
+     "zh_name_ptr": "0x20B7991",
+     "name_jp": "守ったら負ける……攻めろ！",
+     "name_zh_current": "防守必败！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 77,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 244,
+     "cutin_jp": "守ったら負ける……攻めろ！",
+     "cutin_zh_current": "一味防守只会失败……进攻！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 328,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79A0",
+     "zh_name_ptr": "0x20B79A0",
+     "name_jp": "あきらめてはいけない！",
+     "name_zh_current": "不能放弃！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 117,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+20%·装甲+2",
+     "cutin_group": 245,
+     "cutin_jp": "あきらめてはいけない！生き延びることだけを考えるんだ！",
+     "cutin_zh_current": "不要放弃！只要想着活下去就好了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_28",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 329,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79AA",
+     "zh_name_ptr": "0x218C177",
+     "name_jp": "……絶対に死ぬな！",
+     "name_zh_current": "绝对不许死",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 5,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）恢复50%",
+     "cutin_group": 246,
+     "cutin_jp": "これだけは言っておく……絶対に死ぬな！",
+     "cutin_zh_current": "我只说一点…………绝对不能死！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 110,
+   "ids": [
+    {
+     "idn": 330,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7991",
+     "zh_name_ptr": "0x20B7991",
+     "name_jp": "守ったら負ける……攻めろ！",
+     "name_zh_current": "防守必败！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 77,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 247,
+     "cutin_jp": "守ったら負ける……攻めろ！",
+     "cutin_zh_current": "一味防守只会失败……进攻！",
+     "name_owner": true,
+     "name_shared_with_idn": 327,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 331,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79A0",
+     "zh_name_ptr": "0x20B79A0",
+     "name_jp": "あきらめてはいけない！",
+     "name_zh_current": "不能放弃！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 117,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+20%·装甲+2",
+     "cutin_group": 248,
+     "cutin_jp": "あきらめてはいけない！生き延びることだけを考えるんだ！",
+     "cutin_zh_current": "不要放弃！只要想着活下去就好了！",
+     "name_owner": true,
+     "name_shared_with_idn": 328,
+     "detail_owner": false,
+     "detail_owned_by": "char_28",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 332,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79AA",
+     "zh_name_ptr": "0x218C177",
+     "name_jp": "……絶対に死ぬな！",
+     "name_zh_current": "绝对不许死",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 5,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）恢复50%",
+     "cutin_group": 249,
+     "cutin_jp": "これだけは言っておく……絶対に死ぬな！",
+     "cutin_zh_current": "我只说一点…………绝对不能死！",
+     "name_owner": true,
+     "name_shared_with_idn": 329,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xD5FC",
+   "budget_bytes": 9,
+   "jp": "よし……かかった！",
+   "zh_current": "好……成了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD614",
+   "budget_bytes": 12,
+   "jp": "戦い方は……あるはずだ！",
+   "zh_current": "总有办法的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD62C",
+   "budget_bytes": 20,
+   "jp": "もう、サイド2の二の舞はゴメンだ！！",
+   "zh_current": "不能让SIDE2重演！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD64C",
+   "budget_bytes": 9,
+   "jp": "落ち着けよ、シロー……",
+   "zh_current": "冷静、士郎！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD664",
+   "budget_bytes": 22,
+   "jp": "銃身が焼けるまで撃ちつづけてやる！",
+   "zh_current": "打到枪管烧红为止！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD688",
+   "budget_bytes": 14,
+   "jp": "えーい！いちかばちかだ！",
+   "zh_current": "豁出去、拼一把！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD6A4",
+   "budget_bytes": 12,
+   "jp": "アイツは俺がしとめてやる！",
+   "zh_current": "那家伙、归我！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD6BC",
+   "budget_bytes": 18,
+   "jp": "見てろよ！オレにだってやれるんだ！",
+   "zh_current": "瞧好了！我也能做到！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD6DC",
+   "budget_bytes": 10,
+   "jp": "し、しまった……！！",
+   "zh_current": "糟、糟糕……！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD6F4",
+   "budget_bytes": 16,
+   "jp": "……大丈夫だこれならやれるさ！",
+   "zh_current": "……不要紧、我没事！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD710",
+   "budget_bytes": 21,
+   "jp": "諦めるもんか……必ず生き延びてみせる！",
+   "zh_current": "怎能放弃……我要活下去！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD734",
+   "budget_bytes": 10,
+   "jp": "か、かすっただけだ！",
+   "zh_current": "只是擦过！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD74C",
+   "budget_bytes": 19,
+   "jp": "うわっ……！読まれていたのか！？",
+   "zh_current": "哇……！！被看穿了！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD76C",
+   "budget_bytes": 10,
+   "jp": "こ、このくらいなら！！",
+   "zh_current": "这、这点！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD784",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁっ！！",
+   "zh_current": "哇啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD798",
+   "budget_bytes": 13,
+   "jp": "くそっ……！まだまだぁ！！",
+   "zh_current": "可恶……还没完！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD7B4",
+   "budget_bytes": 16,
+   "jp": "……無駄だ！諦めて撤退しろ！",
+   "zh_current": "……没用！快撤退吧！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD7D0",
+   "budget_bytes": 12,
+   "jp": "その手は……食うかっ！",
+   "zh_current": "那一招……没用！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD7E8",
+   "budget_bytes": 22,
+   "jp": "1時方向から攻撃！小隊、分散隊形にシフト！",
+   "zh_current": "1点方向攻击！队形分散！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD80C",
+   "budget_bytes": 17,
+   "jp": "さあ、動けまい大人しくするんだ！",
+   "zh_current": "动不了了、老实点！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD82C",
+   "budget_bytes": 14,
+   "jp": "くそっ！動いてくれ……！",
+   "zh_current": "可恶！快动啊……！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD848",
+   "budget_bytes": 14,
+   "jp": "まだだ！諦めてたまるか！",
+   "zh_current": "还没！怎能放弃！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D1C",
+   "budget_bytes": 30,
+   "jp": "撃て、撃つんだ！！銃身が焼け付くまで撃ち続けろ！",
+   "zh_current": "开火、快开火！！打到枪管烧红为止！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D48",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D68",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D88",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3DA8",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3DC8",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3DE8",
+   "budget_bytes": 17,
+   "jp": "こちらシロー！支援は任せてくれ！！",
+   "zh_current": "我是士郎！支援交给我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD864",
+   "budget_bytes": 11,
+   "jp": "悪いが……仕留める！",
+   "zh_current": "抱歉……拿下！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD87C",
+   "budget_bytes": 11,
+   "jp": "悪いが……仕留める！",
+   "zh_current": "抱歉……拿下！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD894",
+   "budget_bytes": 12,
+   "jp": "戦い方は……あるはずだ！",
+   "zh_current": "总有办法的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD8AC",
+   "budget_bytes": 20,
+   "jp": "もう、サイド2の二の舞はゴメンだ！！",
+   "zh_current": "不能让SIDE2重演！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD8CC",
+   "budget_bytes": 22,
+   "jp": "銃身が焼けるまで撃ちつづけてやる！",
+   "zh_current": "打到枪管烧红为止！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD8F0",
+   "budget_bytes": 18,
+   "jp": "見てろよ！オレにだってやれるんだ！",
+   "zh_current": "看好了！我也能做到！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD910",
+   "budget_bytes": 15,
+   "jp": "一撃だ……一撃でしとめてやる！",
+   "zh_current": "一击……一击解决你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD92C",
+   "budget_bytes": 18,
+   "jp": "パイロットにはパイロットの戦い方があるんだ！",
+   "zh_current": "我有我的战斗方式！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD94C",
+   "budget_bytes": 9,
+   "jp": "すまない、アイナ……",
+   "zh_current": "抱歉、爱娜",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD964",
+   "budget_bytes": 21,
+   "jp": "これが戦争なら……どうしようもないのか？",
+   "zh_current": "这就是战争……没办法吗？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD988",
+   "budget_bytes": 22,
+   "jp": "オレは……オレは……オレは、生きたい！！",
+   "zh_current": "我……我啊……我想活下去！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD9AC",
+   "budget_bytes": 8,
+   "jp": "……この程度ッ！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD9C0",
+   "budget_bytes": 9,
+   "jp": "し、しまった……！",
+   "zh_current": "糟、糟了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD9D8",
+   "budget_bytes": 8,
+   "jp": "こ、こいつ……！？",
+   "zh_current": "这家伙！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD9EC",
+   "budget_bytes": 18,
+   "jp": "うわっ……！？なんてパワーなんだ！！",
+   "zh_current": "哇……！？这什么力量！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDA0C",
+   "budget_bytes": 24,
+   "jp": "何が生きて帰れだ……オレは……怖いんだ！",
+   "zh_current": "什么活着回去……我好怕啊……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDA30",
+   "budget_bytes": 22,
+   "jp": "もうやめてくれ！無駄な戦いはしたくない！",
+   "zh_current": "别打了！我不想再打了！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDA54",
+   "budget_bytes": 9,
+   "jp": "……当たるものか！",
+   "zh_current": "……打不中！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDA6C",
+   "budget_bytes": 21,
+   "jp": "……攻撃が来るぞ！散開してやり過ごすんだ！",
+   "zh_current": "……攻击来了！都散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDA90",
+   "budget_bytes": 23,
+   "jp": "……投降してくれ！無意味な戦いはしたくない！",
+   "zh_current": "……投降吧！我不想再打了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDAB4",
+   "budget_bytes": 18,
+   "jp": "くそっ！ここまでだっていうのか！？",
+   "zh_current": "可恶！这就完了吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDAD4",
+   "budget_bytes": 15,
+   "jp": "まだだ！俺は諦めないぞ！！",
+   "zh_current": "还没！我决不放弃！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x100",
+   "budget_bytes": 24,
+   "jp": "アイナッ！！死ぬのも生きるのも二人いっしょだ！",
+   "zh_current": "爱娜！！你我生死都在一起！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E08",
+   "budget_bytes": 12,
+   "jp": "やるんだ！俺たちで！！",
+   "zh_current": "上！靠我们来干！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E20",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E3C",
+   "budget_bytes": 12,
+   "jp": "ああ、やろう！アイナ！！",
+   "zh_current": "嗯、上吧、爱娜！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E54",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E70",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3E8C",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3EA8",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

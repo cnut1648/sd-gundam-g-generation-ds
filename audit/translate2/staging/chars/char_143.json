@@ -1,0 +1,400 @@
+{
+ "entity": "char_143",
+ "kind": "character",
+ "cids": [
+  143
+ ],
+ "name_jp": "トビア・アロナクス",
+ "name_zh_KEEP": "托比亚",
+ "cards": [
+  {
+   "cid": 143,
+   "ids": [
+    {
+     "idn": 429,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D87",
+     "zh_name_ptr": "0x2329848",
+     "name_jp": "チャンスはあるはず！",
+     "name_zh_current": "必有机会！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "命回应↑",
+     "didx": 40,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、反応が20上昇する",
+     "detail_zh_current": "",
+     "cutin_group": 340,
+     "cutin_jp": "むこうも人間、こっちも人間……チャンスはあるはず！",
+     "cutin_zh_current": "对面也是人、这边也是人……必有机会！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 430,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7D90",
+     "zh_name_ptr": "0x218C2A9",
+     "name_jp": "加減なんかきかねえぞっ！",
+     "name_zh_current": "我不会留情",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋先制攻撃",
+     "summary_zh_KEEP": "威力↑・先攻",
+     "didx": 139,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·先攻",
+     "cutin_group": 341,
+     "cutin_jp": "どけーっ！加減なんかきかねえぞっ！",
+     "cutin_zh_current": "都给我让开！绝不手下留情！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 431,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D9D",
+     "zh_name_ptr": "0x20B7D9D",
+     "name_jp": "おれは人間だ……！",
+     "name_zh_current": "我是人类！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋0回避",
+     "summary_zh_KEEP": "威力↑・必闪",
+     "didx": 179,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·完全回避",
+     "cutin_group": 342,
+     "cutin_jp": "おれは人間だ……人間でたくさんだ！",
+     "cutin_zh_current": "我是人类……当个人类就够了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_10",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x12C28",
+   "budget_bytes": 13,
+   "jp": "そうはさせるかぁーーっ！！",
+   "zh_current": "怎能让你得逞！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12C44",
+   "budget_bytes": 29,
+   "jp": "ボクにはあれの動く先が手にとるように「見える」！！",
+   "zh_current": "我能看穿它接下来的动向！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12C70",
+   "budget_bytes": 22,
+   "jp": "さぁ、来い！どこだ、相手になってやるぞ！",
+   "zh_current": "放马过来！我奉陪到底！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12C94",
+   "budget_bytes": 10,
+   "jp": "うおおおーっ！",
+   "zh_current": "喝啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12CAC",
+   "budget_bytes": 22,
+   "jp": "これ以上人殺しなんか……されてたまるかーっ！",
+   "zh_current": "不能再让你们杀人了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12CD0",
+   "budget_bytes": 18,
+   "jp": "接近！敵に接近するんだ、トビア！！",
+   "zh_current": "托比亚、接近敌机！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12CF0",
+   "budget_bytes": 11,
+   "jp": "ふざけんじゃねえぞおっ！",
+   "zh_current": "别开玩笑了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D08",
+   "budget_bytes": 12,
+   "jp": "うおおおーーっ！！",
+   "zh_current": "喝啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D20",
+   "budget_bytes": 14,
+   "jp": "けっきょく最後は腕かぁ……",
+   "zh_current": "到底还是看本事……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D3C",
+   "budget_bytes": 10,
+   "jp": "当たってたまるかっ！",
+   "zh_current": "岂会中招！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D54",
+   "budget_bytes": 23,
+   "jp": "こんなところで死んで……殺されてたまるかーッ！",
+   "zh_current": "我才不要死在这种地方！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D78",
+   "budget_bytes": 8,
+   "jp": "こんなかすり傷！",
+   "zh_current": "皮外伤！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D8C",
+   "budget_bytes": 13,
+   "jp": "うっ！……やったなぁーっ！",
+   "zh_current": "唔！……竟敢！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12DA8",
+   "budget_bytes": 9,
+   "jp": "まだまだ、だぁぁーッ！",
+   "zh_current": "还早得很！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12DC0",
+   "budget_bytes": 18,
+   "jp": "だめだ…だめだ……圧倒的すぎる！！",
+   "zh_current": "不行不行……差距太大！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12DE0",
+   "budget_bytes": 27,
+   "jp": "クソォーッ！まだ……まだ、やられるわけには……！",
+   "zh_current": "可恶！还没完……我还不能倒！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12E08",
+   "budget_bytes": 29,
+   "jp": "こうなりゃやけくそだ！どんな奴とでもやってやらぁーっ！",
+   "zh_current": "豁出去了！管他是谁我都奉陪！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12E34",
+   "budget_bytes": 9,
+   "jp": "なんのおーっ！！",
+   "zh_current": "这算什么！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12E4C",
+   "budget_bytes": 18,
+   "jp": "来たっ！散開するんだ！みんな！！",
+   "zh_current": "来了！大家快散开！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12E6C",
+   "budget_bytes": 21,
+   "jp": "投降しろっ！これ以上死んで欲しくはない！！",
+   "zh_current": "快投降！别再让人送命！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12E90",
+   "budget_bytes": 26,
+   "jp": "こんなんじゃあ……全然、ダメじゃないかっ！おれはっ！",
+   "zh_current": "再这样下去、我根本不顶用！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12EB8",
+   "budget_bytes": 14,
+   "jp": "ふざけるなっ！なめるなよーっ！",
+   "zh_current": "别胡闹！别狂！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x10A0",
+   "budget_bytes": 9,
+   "jp": "安心したよ……ドゥガチ",
+   "zh_current": "放心了……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1.bin",
+   "record": "0x10B8",
+   "budget_bytes": 10,
+   "jp": "……アンタ、まだ人間だ",
+   "zh_current": "你还是人……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1.bin",
+   "record": "0x10CE",
+   "budget_bytes": 32,
+   "jp": "ニュータイプでも新しい人類でも……異星からの侵略者でもない！！",
+   "zh_current": "新人类、新人种、外星侵略者都不是！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1.bin",
+   "record": "0x110F",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1121",
+   "budget_bytes": 24,
+   "jp": "アンタは心の歪んだだけのただの人間だ……！",
+   "zh_current": "你只是个内心扭曲的人……！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1164",
+   "budget_bytes": 6,
+   "jp": "ビーム砲！？",
+   "zh_current": "光束！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1176",
+   "budget_bytes": 7,
+   "jp": "そんなものっ！！",
+   "zh_current": "没用的！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0x11A0",
+   "budget_bytes": 14,
+   "jp": "うおおおおおっ！！",
+   "zh_current": "喝啊啊啊！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0x11BC",
+   "budget_bytes": 9,
+   "jp": "終わりだドゥガチッ！！",
+   "zh_current": "结束了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5348",
+   "budget_bytes": 20,
+   "jp": "やるぞっ！！みんなで一斉にかかるんだ！！",
+   "zh_current": "上吧！大家一起冲！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5368",
+   "budget_bytes": 14,
+   "jp": "は、はいっ！支援します！！",
+   "zh_current": "是、是！我来支援！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5384",
+   "budget_bytes": 13,
+   "jp": "キンケドゥさん！支援します！！",
+   "zh_current": "金凯度！支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x53A0",
+   "budget_bytes": 10,
+   "jp": "は、はい……ザビーネさん",
+   "zh_current": "是……扎比涅",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x53B8",
+   "budget_bytes": 14,
+   "jp": "は、はいっ！支援します！！",
+   "zh_current": "是、是！我来支援！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x53D4",
+   "budget_bytes": 14,
+   "jp": "は、はいっ！支援します！！",
+   "zh_current": "是、是！我来支援！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x53F0",
+   "budget_bytes": 14,
+   "jp": "は、はいっ！支援します！！",
+   "zh_current": "是、是！我来支援！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

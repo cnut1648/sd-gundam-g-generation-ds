@@ -1,0 +1,57 @@
+{
+ "entity": "unit_532",
+ "kind": "unit",
+ "utids": [
+  532,
+  533,
+  534
+ ],
+ "name_jp": "リック・ドム",
+ "name_zh_current": "里克·大魔",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C922",
+   "jp": "ジャイアント・バズ",
+   "zh_current": "巨型火箭炮",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21898BF",
+   "jp": "ヒート・サーベル",
+   "zh_current": "热能剑",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 177,
+   "record_offset": "0xad8",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "地形適正・宇宙"
+   ],
+   "zh_segments_current": [
+    "宇宙适应"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

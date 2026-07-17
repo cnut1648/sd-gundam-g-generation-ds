@@ -1,0 +1,66 @@
+{
+ "entity": "unit_388",
+ "kind": "unit",
+ "utids": [
+  388,
+  389,
+  390
+ ],
+ "name_jp": "テラ・スオーノ",
+ "name_zh_current": "泰拉·斯欧诺",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189822",
+   "jp": "ハンド・ランチャー",
+   "zh_current": "手部发射器",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218982D",
+   "jp": "サイ・ランチャー",
+   "zh_current": "灵能炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 129,
+   "record_offset": "0x858",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "システム・セイレーネ（未0）"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "塞壬系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

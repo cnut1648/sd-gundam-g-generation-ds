@@ -1,0 +1,83 @@
+{
+ "entity": "unit_181",
+ "kind": "unit",
+ "utids": [
+  181,
+  182,
+  183
+ ],
+ "name_jp": "キュベレイ／ハイパー",
+ "name_zh_current": "卡碧尼／强化",
+ "name_zh_px": 68,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EFBC",
+   "jp": "ビーム・ガン",
+   "zh_current": "光束枪",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218F30C",
+   "jp": "ファンネル",
+   "zh_current": "浮游炮",
+   "shared_by_n_units": 48
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F30C",
+   "jp": "ファンネル",
+   "zh_current": "浮游炮",
+   "shared_by_n_units": 48
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 60,
+   "record_offset": "0x4bc",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "ハマーン・カーン専用機"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "哈曼专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E81",
+   "jp": "バイオフィールド",
+   "zh_current": "生体力场",
+   "owner": false,
+   "owned_by": "unit_43"
+  },
+  "defense": {
+   "record": 15,
+   "record_offset": "0x2a4",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し、",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": false,
+   "owned_by": "unit_43"
+  }
+ }
+}

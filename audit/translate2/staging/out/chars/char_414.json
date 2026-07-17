@@ -1,0 +1,48 @@
+{
+ "entity": "char_414",
+ "web_sources": [
+  "https://gundam.fandom.com/zh/wiki/%E5%90%89%E7%BF%81%E5%85%AC%E5%9C%8B",
+  "https://zh.moegirl.org.cn/SD%E9%AB%98%E8%BE%BE%E5%A4%96%E4%BC%A0_%E5%90%89%E7%BF%81%E4%B8%87%E5%B2%81%E7%AF%87"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1242,
+   "name_zh": "见识吉翁魂",
+   "cutin_zh": "让你见识吉翁魂！",
+   "notes": "名与名台词共用关键词见识+吉翁魂；旧名展吉翁之魂生硬。ジオン魂社区通行译吉翁魂。detail归char_410、不输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2CFA4", "zh": "先下手为强！！"},
+  {"file": "0.bin", "record": "0x2CFC0", "zh": "尝尝这个！！"},
+  {"file": "0.bin", "record": "0x2CFD8", "zh": "位置……到手！"},
+  {"file": "0.bin", "record": "0x2CFF0", "zh": "抓住你了！！"},
+  {"file": "0.bin", "record": "0x2D008", "zh": "坠落吧！"},
+  {"file": "0.bin", "record": "0x2D01C", "zh": "我来击落你！"},
+  {"file": "0.bin", "record": "0x2D034", "zh": "别逃！！"},
+  {"file": "0.bin", "record": "0x2D048", "zh": "别再放肆！"},
+  {"file": "0.bin", "record": "0x2D060", "zh": "唔……吉、吉翁万岁！！"},
+  {"file": "0.bin", "record": "0x2D080", "zh": "准头太差！"},
+  {"file": "0.bin", "record": "0x2D098", "zh": "还没分出胜负！"},
+  {"file": "0.bin", "record": "0x2D0B4", "zh": "太嫩！"},
+  {"file": "0.bin", "record": "0x2D0C8", "zh": "唔！好强……！！"},
+  {"file": "0.bin", "record": "0x2D0E0", "zh": "唔……厉害！！"},
+  {"file": "0.bin", "record": "0x2D0F8", "zh": "一击就伤成这样！？"},
+  {"file": "0.bin", "record": "0x2D118", "zh": "可恶……这样下去……！"},
+  {"file": "0.bin", "record": "0x2D138", "zh": "这不算什么！"},
+  {"file": "0.bin", "record": "0x2D150", "zh": "哼……！"},
+  {"file": "0.bin", "record": "0x2D164", "zh": "有炮击！各机散开！"},
+  {"file": "0.bin", "record": "0x2D184", "zh": "乖乖投降才是为你好！"},
+  {"file": "0.bin", "record": "0x2D1A4", "zh": "可恶……遵守南极条约！"},
+  {"file": "0.bin", "record": "0x2D1C4", "zh": "笑话！这机体还能战！"},
+  {"file": "1de.bin", "record": "0x81B8", "zh": "来了！全员上！！"},
+  {"file": "1de.bin", "record": "0x81D4", "zh": "是、遵命！！"},
+  {"file": "1de.bin", "record": "0x81EC", "zh": "是、遵命！！"},
+  {"file": "1de.bin", "record": "0x8204", "zh": "是、遵命！！"},
+  {"file": "1de.bin", "record": "0x821C", "zh": "是、遵命！！"},
+  {"file": "1de.bin", "record": "0x8234", "zh": "是、遵命！！"},
+  {"file": "1de.bin", "record": "0x824C", "zh": "是、遵命！！"}
+ ],
+ "notes": "老兵语气取沉稳倨傲、与char_413新兵的莽撞相区分（力不足だな→太嫩！、狙いが甘い→准头太差！）。修正：ええい……やるっ！！系中弹时咬牙称赞对手（前后皆为受击台词）、旧译可恶……上！为误读；数条旧译按简报成本规则超预算已压缩重写（0x2CFD8/0x2D01C/0x2D0F8/0x2D118/0x2D138/0x2D164/0x2D1C4）。0x2D060补回濒死结巴吉、吉翁万岁（ジーク・ジオン=吉翁万岁、见web_sources）。0x2D0F8理想版为怎、怎么会！一击就伤成这样！？（超预算）。6条了解であります与char_413同句保持一致译法是、遵命！！。"
+}

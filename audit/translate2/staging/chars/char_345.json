@@ -1,0 +1,272 @@
+{
+ "entity": "char_345",
+ "kind": "character",
+ "cids": [
+  345
+ ],
+ "name_jp": "ライラ・ミラ・ライラ",
+ "name_zh_KEEP": "莱拉",
+ "cards": [
+  {
+   "cid": 345,
+   "ids": [
+    {
+     "idn": 1035,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8CBC",
+     "zh_name_ptr": "0x20B8CBC",
+     "name_jp": "気持ちはわかるが、無理だね！",
+     "name_zh_current": "理解但没用",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 691,
+     "cutin_jp": "気持ちはわかるが、無理だね！",
+     "cutin_zh_current": "心情我能理解、但没用！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1036,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8CCA",
+     "zh_name_ptr": "0x20B8CCA",
+     "name_jp": "パワーがダンチなんだよ！",
+     "name_zh_current": "力量差太多",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 692,
+     "cutin_jp": "パワーがダンチなんだよ！",
+     "cutin_zh_current": "力量差距天差地别！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1037,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8CD6",
+     "zh_name_ptr": "0x2194638",
+     "name_jp": "いい男になれる素質は……",
+     "name_zh_current": "好男人素质",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・命应↑",
+     "didx": 42,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率が20%上昇、反応が20上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·反应+20",
+     "cutin_group": 693,
+     "cutin_jp": "いい男になれる素質はあるんだよ……あんたには",
+     "cutin_zh_current": "你有成为好男人的素质……说的就是你",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x577C",
+   "budget_bytes": 28,
+   "jp": "『パワーがダンチなのさ！そういう時は……わかるだろ？」",
+   "zh_current": "实力根本不在一个档次！懂了吧？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2827C",
+   "budget_bytes": 21,
+   "jp": "恥を上乗せしに来るなんて律儀だねえ！",
+   "zh_current": "又来丢人现眼了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x282A0",
+   "budget_bytes": 25,
+   "jp": "宇宙は地球と違うって、どうしてわからないんだい？",
+   "zh_current": "宇宙和地球不同、还不明白？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x282C8",
+   "budget_bytes": 21,
+   "jp": "教えたげるよ…本気の戦いってやつをさ！",
+   "zh_current": "教教你……真正的战斗！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x282EC",
+   "budget_bytes": 13,
+   "jp": "逃げられるなんて思うなっ！！",
+   "zh_current": "别想逃走！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28308",
+   "budget_bytes": 24,
+   "jp": "宇宙にいる時は宇宙の戦い方ってのがあるのさ！",
+   "zh_current": "在宇宙、就有宇宙的打法！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2832C",
+   "budget_bytes": 24,
+   "jp": "恥をかきたくなかったらさっさと失せるんだね！！",
+   "zh_current": "不想丢脸的话就快滚吧！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28350",
+   "budget_bytes": 28,
+   "jp": "正規軍の強みってのアンタらに教えてやろうじゃないか！",
+   "zh_current": "正规军多强让你们好好见识！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28384",
+   "budget_bytes": 21,
+   "jp": "これが……オールドタイプということなのか……",
+   "zh_current": "这就是……旧人类吗……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x283A8",
+   "budget_bytes": 28,
+   "jp": "そういう雑なやり方をしてる限り勝てやしないのさ！！",
+   "zh_current": "还用这种乱打法就别想赢！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x283D0",
+   "budget_bytes": 25,
+   "jp": "私は正規のパイロットだ！お前らなどにに負けられるか！",
+   "zh_current": "正规军！怎能输给你们！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x283F8",
+   "budget_bytes": 16,
+   "jp": "名乗りもあげずにご登場かい！？",
+   "zh_current": "不报名号就登场！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28414",
+   "budget_bytes": 14,
+   "jp": "はんっ！よくやるよ……！！",
+   "zh_current": "哼！真能干……！！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28430",
+   "budget_bytes": 23,
+   "jp": "イラつくね！そういうやり方がカンに障るのさ！",
+   "zh_current": "烦人！这种打法让人火大！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28454",
+   "budget_bytes": 11,
+   "jp": "のせられてしまった！？",
+   "zh_current": "竟被耍了！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2846C",
+   "budget_bytes": 23,
+   "jp": "こっ、こいつら……只者ではないというのか！？",
+   "zh_current": "这帮人……不是等闲之辈！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28490",
+   "budget_bytes": 15,
+   "jp": "そういうのが甘いって言うのさ！！",
+   "zh_current": "你这套就叫天真！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x284AC",
+   "budget_bytes": 15,
+   "jp": "そういうのが甘いって言うのさ！！",
+   "zh_current": "你这套就叫天真！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x284C8",
+   "budget_bytes": 21,
+   "jp": "来たぞ！散開して各個に交戦しろ！！",
+   "zh_current": "来了！散开、各自交战！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x284EC",
+   "budget_bytes": 15,
+   "jp": "その機体は捕縛させてもらうよ！",
+   "zh_current": "我要捕获那机体",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28508",
+   "budget_bytes": 13,
+   "jp": "こいつら……只者じゃない……",
+   "zh_current": "这些人不简单……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28524",
+   "budget_bytes": 11,
+   "jp": "およしよ！触るのは！",
+   "zh_current": "别碰我！！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

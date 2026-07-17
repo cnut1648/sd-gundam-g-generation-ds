@@ -1,0 +1,62 @@
+{
+ "entity": "char_236",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E5%8F%B2%E9%BB%9B%E6%8B%89%C2%B7%E9%B2%81%E8%A5%BF%E8%80%B6",
+  "https://baike.baidu.com/item/%E5%8F%B2%E9%BB%9B%E6%8B%89%C2%B7%E9%B2%81%E8%A5%BF%E8%80%B6/9600205",
+  "https://zh.moegirl.org.cn/%E5%8F%B2%E9%BB%9B%E6%8B%89%C2%B7%E9%9C%B2%E8%B0%A2",
+  "https://w.atwiki.jp/gundam-vs-gnsk/pages/1167.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 708,
+   "name_zh": "这家伙！",
+   "cutin_zh": "这家伙……！",
+   "notes": "コイツーーッ！为战斗嘶吼、拉长音以……表现（长音符不在可用字符集内）。"
+  },
+  {
+   "idn": 709,
+   "name_zh": "没死……",
+   "cutin_zh": "没死……我、没事的没事的、对吧、史黛拉……",
+   "notes": "她的招牌受创自我安抚台词（gundam-vs系列语音表收录为她的受击语音）。保留JP无主语的恍惚开头、だいじょうぶだいじょうぶ的孩子气重复、以及她第三人称唤自己史黛拉的说话习惯（萌娘百科/百度百科均记载此特征）。"
+  },
+  {
+   "idn": 710,
+   "name_zh": "哇啊啊啊！",
+   "cutin_zh": "哇啊啊啊啊！",
+   "notes": "暴走时的纯尖叫、无实义。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1FB30", "zh": "那就不好玩了！"},
+  {"file": "0.bin", "record": "0x1FB4C", "zh": "上啊啊啊啊！！"},
+  {"file": "0.bin", "record": "0x1FB64", "zh": "马上击落你！"},
+  {"file": "0.bin", "record": "0x1FB7C", "zh": "就凭你……！！"},
+  {"file": "0.bin", "record": "0x1FB94", "zh": "可恶！！"},
+  {"file": "0.bin", "record": "0x1FBA8", "zh": "哈啊啊！！"},
+  {"file": "0.bin", "record": "0x1FBC0", "zh": "你这家伙！！"},
+  {"file": "0.bin", "record": "0x1FBD8", "zh": "嘿啊啊啊啊！！"},
+  {"file": "0.bin", "record": "0x1FBF4", "zh": "啊？"},
+  {"file": "0.bin", "record": "0x1FC04", "zh": "这家伙！"},
+  {"file": "0.bin", "record": "0x1FC18", "zh": "啊……我、我还活着！！"},
+  {"file": "0.bin", "record": "0x1FC38", "zh": "这是啥！？"},
+  {"file": "0.bin", "record": "0x1FC50", "zh": "你到底是什么！？"},
+  {"file": "0.bin", "record": "0x1FC6C", "zh": "那家伙……！"},
+  {"file": "0.bin", "record": "0x1FC84", "zh": "要、要死……！？"},
+  {"file": "0.bin", "record": "0x1FC9C", "zh": "住手！快走开啊！！不要啊啊！！"},
+  {"file": "0.bin", "record": "0x1FCC4", "zh": "你想怎样！"},
+  {"file": "0.bin", "record": "0x1FCDC", "zh": "这种东西！"},
+  {"file": "0.bin", "record": "0x1FCF4", "zh": "这种东西！"},
+  {"file": "0.bin", "record": "0x1FD0C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1FD20", "zh": "……？"},
+  {"file": "0.bin", "record": "0x1FD30", "zh": "你这家伙啊！！！"},
+  {"file": "1de.bin", "record": "0x7C50", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7C64", "zh": "……？"},
+  {"file": "1de.bin", "record": "0x7C74", "zh": "……？"},
+  {"file": "1de.bin", "record": "0x7C84", "zh": "……？"},
+  {"file": "1de.bin", "record": "0x7C94", "zh": "……？"},
+  {"file": "1de.bin", "record": "0x7CA4", "zh": "……？"},
+  {"file": "1de.bin", "record": "0x7CB4", "zh": "……？"}
+ ],
+ "notes": "史黛拉（强化人、禁语为死）全程保持孩子气而破碎的口吻。0x1FC84是禁语触发的恐慌台词、译为结巴加拖尾的 要、要死……！？（11字节恰好占满预算、保留JP的……）。0x1FB7C 就凭你……！！还原オマエなんかに的不甘。0x1FC50 何なのよお…アンタは 是她面对可怕对手的失控质问、改为 你到底是什么！？（14字节占满）。0x1FBF4 JP为あ……？、但 啊……？需5字节超预算4、只能保留 啊？。0x1FD20 JP原文………？为奇数省略号、按偶数对规则规范为 ……？。0x1FB4C、0x1FBD8、0x1FD30修正了原译感叹号数量与JP不符的问题。0x1FB30理想版为 那样就不好玩了嘛！（超预算、故用 那就不好玩了！）。"
+}

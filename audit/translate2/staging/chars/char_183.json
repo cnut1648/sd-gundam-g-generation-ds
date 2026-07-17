@@ -1,0 +1,272 @@
+{
+ "entity": "char_183",
+ "kind": "character",
+ "cids": [
+  183
+ ],
+ "name_jp": "ブラード・ファーレン",
+ "name_zh_KEEP": "布拉德·法伦",
+ "cards": [
+  {
+   "cid": 183,
+   "ids": [
+    {
+     "idn": 549,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 436,
+     "cutin_jp": "ミノフスキー粒子、散布しろ！",
+     "cutin_zh_current": "米诺夫斯基粒子、散布！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 550,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B80D8",
+     "zh_name_ptr": "0x20B80D8",
+     "name_jp": "誰一人、死ぬんじゃないぞ！",
+     "name_zh_current": "谁都不许死",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲装甲↑",
+     "summary_zh_KEEP": "范围装甲↑",
+     "didx": 101,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）装甲+2",
+     "cutin_group": 437,
+     "cutin_jp": "誰一人、死ぬんじゃないぞ！",
+     "cutin_zh_current": "一个都不许死！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_26",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 551,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B80E5",
+     "zh_name_ptr": "0x20B80E5",
+     "name_jp": "必ず帰るからな！",
+     "name_zh_current": "一定回来！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 438,
+     "cutin_jp": "ミアン……！父さんは必ず帰るからな！",
+     "cutin_zh_current": "蜜安……！爸爸一定会回来！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x18184",
+   "budget_bytes": 24,
+   "jp": "よおし、今だ！各砲座！迎え撃て！！",
+   "zh_current": "趁现在！！各炮座迎击！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x181A8",
+   "budget_bytes": 19,
+   "jp": "射撃開始だ！よく狙っていけよ！",
+   "zh_current": "射击开始！好好瞄准！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x181C8",
+   "budget_bytes": 19,
+   "jp": "射撃開始だ！よく狙っていけよ！",
+   "zh_current": "射击开始！好好瞄准！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18208",
+   "budget_bytes": 15,
+   "jp": "よおし、砲撃しつつ前進だ！！",
+   "zh_current": "好、边炮击边前进！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18224",
+   "budget_bytes": 26,
+   "jp": "各砲座、各個に照準！……撃てえーっ！",
+   "zh_current": "各炮座、各自瞄准、开火！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1824C",
+   "budget_bytes": 13,
+   "jp": "かまうな！そのまま突っ込め！",
+   "zh_current": "别管！冲过去！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18268",
+   "budget_bytes": 21,
+   "jp": "ギリギリまでひきつけろ！恐れるなっ！",
+   "zh_current": "放到最近再打！！别慌！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1828C",
+   "budget_bytes": 18,
+   "jp": "全砲門開け！一斉射撃、30秒間！",
+   "zh_current": "全炮门开！齐射30秒！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x182C6",
+   "budget_bytes": 16,
+   "jp": "くっ……！総員、退避急げ！",
+   "zh_current": "唔……！全员退避！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x182E4",
+   "budget_bytes": 12,
+   "jp": "よーし！この調子だ！！",
+   "zh_current": "好！就这势头！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x182FC",
+   "budget_bytes": 17,
+   "jp": "やれやれ……命拾いしたな……！",
+   "zh_current": "唉……总算保住命了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1831C",
+   "budget_bytes": 26,
+   "jp": "かすり傷の一つや二つ！かまうな！前進しろっ！",
+   "zh_current": "擦伤个一两处！别管、前进！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18344",
+   "budget_bytes": 13,
+   "jp": "敵も必死ということか……！",
+   "zh_current": "敌人也拼了……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1837F",
+   "budget_bytes": 20,
+   "jp": "よおし、まだ行けるぞ！反撃に移る！",
+   "zh_current": "好、还能打！！反击！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x183A0",
+   "budget_bytes": 19,
+   "jp": "くっ！大分もっていかれたな……！！",
+   "zh_current": "唔！被削掉一大块！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x183C0",
+   "budget_bytes": 21,
+   "jp": "ここが正念場だ！なんとしても持ちこたえろ！",
+   "zh_current": "胜负在此一举、撑住！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x183E4",
+   "budget_bytes": 12,
+   "jp": "いいぞ、このまま戦闘続行だ！",
+   "zh_current": "好、继续战斗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x183FC",
+   "budget_bytes": 9,
+   "jp": "回避運動、急げ！",
+   "zh_current": "快回避！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18414",
+   "budget_bytes": 9,
+   "jp": "回避運動、急げ！",
+   "zh_current": "快回避！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1842C",
+   "budget_bytes": 21,
+   "jp": "あの機体を捕縛するぞ！艦を接近させろ！",
+   "zh_current": "捕获那台机体！靠上去！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18450",
+   "budget_bytes": 21,
+   "jp": "まさか……！？こんなことになるとはな……！",
+   "zh_current": "难道……竟会变成这样！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18474",
+   "budget_bytes": 20,
+   "jp": "貴重な戦力を易々と渡してたまるか！",
+   "zh_current": "宝贵战力、怎能轻易交出！",
+   "zh_current_bytes": 20
+  }
+ ]
+}

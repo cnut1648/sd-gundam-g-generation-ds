@@ -1,0 +1,313 @@
+{
+ "entity": "char_192",
+ "kind": "character",
+ "cids": [
+  192
+ ],
+ "name_jp": "ベラ・ロナ",
+ "name_zh_KEEP": "贝拉·罗纳",
+ "cards": [
+  {
+   "cid": 192,
+   "ids": [
+    {
+     "idn": 576,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 457,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "米诺夫斯基粒子散布！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 577,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B81A1",
+     "zh_name_ptr": "0x218C407",
+     "name_jp": "海賊で驚きまして？",
+     "name_zh_current": "靠海盗过活",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ID封印＋先制",
+     "summary_zh_KEEP": "ID封・先攻",
+     "didx": 167,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）先制攻撃を仕掛け、攻撃が命中した相手のIDを1ターン封印する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·先攻",
+     "cutin_group": 458,
+     "cutin_jp": "私のような者が海賊で驚きまして？",
+     "cutin_zh_current": "像我这种人也能当海盗、很意外吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 578,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B81B6",
+     "zh_name_ptr": "0x218C412",
+     "name_jp": "決めた通りに生きるしかないの",
+     "name_zh_current": "照己意而活",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 459,
+     "cutin_jp": "人はけっきょく自分が決めた通りに生きるしかないの",
+     "cutin_zh_current": "人终究只能按自己的决定活下去",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [],
+ "barks_shared_readonly": [
+  {
+   "file": "0.bin",
+   "record": "0x1973C",
+   "budget_bytes": 16,
+   "jp": "かまうなっ！直進しろーっ！",
+   "zh_current": "别管！直进！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19758",
+   "budget_bytes": 13,
+   "jp": "今です！一斉射撃開始！",
+   "zh_current": "现在齐射！！",
+   "zh_current_bytes": 9,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19774",
+   "budget_bytes": 12,
+   "jp": "用意！攻撃開始！",
+   "zh_current": "备！攻击！！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1978C",
+   "budget_bytes": 17,
+   "jp": "マザーバンガード！全艦攻撃態勢に移れ！！",
+   "zh_current": "先锋母舰、全舰攻击！",
+   "zh_current_bytes": 15,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x197AC",
+   "budget_bytes": 11,
+   "jp": "撃てえーっ！",
+   "zh_current": "开火！！！",
+   "zh_current_bytes": 9,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x197C4",
+   "budget_bytes": 10,
+   "jp": "全員、衝撃に備えよ！",
+   "zh_current": "全员防冲击！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x197DC",
+   "budget_bytes": 6,
+   "jp": "このまま突っ込め！",
+   "zh_current": "冲过去",
+   "zh_current_bytes": 6,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x197F0",
+   "budget_bytes": 15,
+   "jp": "ビーム·シールド展開！突撃する！",
+   "zh_current": "光束盾！！突击！",
+   "zh_current_bytes": 13,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1980C",
+   "budget_bytes": 24,
+   "jp": "うっ！だめか……！？全員、脱出カプセルに急げ！",
+   "zh_current": "不行了吗……！？快上逃生舱！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19830",
+   "budget_bytes": 10,
+   "jp": "よし、針路を戻せ！",
+   "zh_current": "修正航向！",
+   "zh_current_bytes": 8,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19848",
+   "budget_bytes": 21,
+   "jp": "まだです！まだ沈むわけにいきません！",
+   "zh_current": "还没！本舰还不能沉没！",
+   "zh_current_bytes": 19,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1986C",
+   "budget_bytes": 16,
+   "jp": "慌てるな！かすり傷程度だ！",
+   "zh_current": "别慌！只是擦伤！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19888",
+   "budget_bytes": 11,
+   "jp": "ビームシールド、展開急げ！",
+   "zh_current": "展开光束盾！",
+   "zh_current_bytes": 11,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x198A0",
+   "budget_bytes": 14,
+   "jp": "被弾個所の応急処置を！！",
+   "zh_current": "中弹处、快抢修！！",
+   "zh_current_bytes": 14,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x198BC",
+   "budget_bytes": 10,
+   "jp": "くっ…なんて火力なの！",
+   "zh_current": "好猛的火力！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x198D4",
+   "budget_bytes": 26,
+   "jp": "まだ沈むわけにはいきません！修理、急いで！！",
+   "zh_current": "还不能沉没！快抢修！！！",
+   "zh_current_bytes": 20,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x198FC",
+   "budget_bytes": 28,
+   "jp": "シールドが防いでくれる！今の内に体勢を立て直せ！！",
+   "zh_current": "护盾会挡住！趁现在重整态势！",
+   "zh_current_bytes": 26,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19924",
+   "budget_bytes": 8,
+   "jp": "来ます！シールドッ！",
+   "zh_current": "来了！开盾",
+   "zh_current_bytes": 8,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19938",
+   "budget_bytes": 12,
+   "jp": "来ます！回避して下さい！",
+   "zh_current": "来了！请回避！！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19950",
+   "budget_bytes": 24,
+   "jp": "我々の目的は殲滅ではありません投降して下さい",
+   "zh_current": "我们志不在歼灭、请投降吧",
+   "zh_current_bytes": 22,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19974",
+   "budget_bytes": 11,
+   "jp": "こんなことになるなんて……",
+   "zh_current": "竟会这样……",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1998C",
+   "budget_bytes": 16,
+   "jp": "おとなしく捕まるわけにはいきません！",
+   "zh_current": "我可不会乖乖被抓！",
+   "zh_current_bytes": 16,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x7B1",
+   "budget_bytes": 10,
+   "jp": "ここは任せてください！",
+   "zh_current": "这里交给我！",
+   "zh_current_bytes": 10,
+   "owned_by": "char_63"
+  },
+  {
+   "file": "1.bin",
+   "record": "0x7DC",
+   "budget_bytes": 19,
+   "jp": "ビームシールド展開！マザー·バンガード全速前進！",
+   "zh_current": "光束盾！母舰全速前进！",
+   "zh_current_bytes": 18,
+   "owned_by": "char_63"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "entity": "unit_283",
+ "kind": "unit",
+ "utids": [
+  283,
+  284,
+  285
+ ],
+ "name_jp": "ザクⅢ",
+ "name_zh_current": "扎古3",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C838",
+   "jp": "メガ粒子砲",
+   "zh_current": "米加粒子炮",
+   "shared_by_n_units": 77
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

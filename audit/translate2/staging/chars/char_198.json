@@ -1,0 +1,270 @@
+{
+ "entity": "char_198",
+ "kind": "character",
+ "cids": [
+  198
+ ],
+ "name_jp": "マリガン",
+ "name_zh_KEEP": "玛利根",
+ "cards": [
+  {
+   "cid": 198,
+   "ids": [
+    {
+     "idn": 594,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 475,
+     "cutin_jp": "ミノフスキー粒子、散布します！",
+     "cutin_zh_current": "米诺夫斯基粒子、散布！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 595,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B828A",
+     "zh_name_ptr": "0x20B828A",
+     "name_jp": "やってみましょう！",
+     "name_zh_current": "试试看吧！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 19,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%",
+     "cutin_group": 476,
+     "cutin_jp": "整備が万全とは言えませんがやってみましょう！",
+     "cutin_zh_current": "整备虽算不上万全但还是试试看吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x181E8",
+   "budget_bytes": 20,
+   "jp": "敵、我が方の射程圏内に入りました！",
+   "zh_current": "敌已进入我方射程圈！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x182AC",
+   "budget_bytes": 14,
+   "jp": "ダメです！本艦はもう……！",
+   "zh_current": "不行！本舰已经……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18360",
+   "budget_bytes": 19,
+   "jp": "艦首被弾！行動に支障はありません！",
+   "zh_current": "舰首中弹！不影响行动！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A764",
+   "budget_bytes": 13,
+   "jp": "来ました！先制します！！",
+   "zh_current": "来了！先发制人！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A780",
+   "budget_bytes": 13,
+   "jp": "一斉射撃！……撃てっ！",
+   "zh_current": "齐射！！……开火！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A79C",
+   "budget_bytes": 12,
+   "jp": "！発射します！！",
+   "zh_current": "全弹、发射！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A7B4",
+   "budget_bytes": 17,
+   "jp": "で敵機の迎撃を試みます！！",
+   "zh_current": "！尝试迎击敌机",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A7D4",
+   "budget_bytes": 15,
+   "jp": "！攻撃を開始します！！",
+   "zh_current": "！开始攻击！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A7F0",
+   "budget_bytes": 9,
+   "jp": "攻撃を開始します！",
+   "zh_current": "开始攻击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A808",
+   "budget_bytes": 9,
+   "jp": "攻撃を開始します！",
+   "zh_current": "开始攻击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A820",
+   "budget_bytes": 9,
+   "jp": "攻撃を開始します！",
+   "zh_current": "开始攻击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A838",
+   "budget_bytes": 12,
+   "jp": "大佐、申し訳ありません……",
+   "zh_current": "大佐、抱歉……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A850",
+   "budget_bytes": 18,
+   "jp": "っ！へ、へたに逃げると当たるぞ！",
+   "zh_current": "啊！乱躲反会中弹！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A870",
+   "budget_bytes": 22,
+   "jp": "全弾、回避に成功！被弾箇所、ありません！",
+   "zh_current": "全弹回避！！没有中弹！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A894",
+   "budget_bytes": 8,
+   "jp": "この程度ならっ！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A8A8",
+   "budget_bytes": 24,
+   "jp": "クッ！大佐が戻るまで船は守ってみせる！",
+   "zh_current": "大佐回来前我会守住船！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A8CC",
+   "budget_bytes": 20,
+   "jp": "右舷砲塔、被弾！？しまった……！",
+   "zh_current": "右舷中弹！？不好……！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A8EC",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁっ！！",
+   "zh_current": "啊啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A900",
+   "budget_bytes": 14,
+   "jp": "た、大佐が帰るまでは……！",
+   "zh_current": "大佐回来前……！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A91C",
+   "budget_bytes": 21,
+   "jp": "恐れるなっ！我々には大佐がついている！",
+   "zh_current": "别怕！！我们有大佐在！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A940",
+   "budget_bytes": 8,
+   "jp": "か、回避運動っ！",
+   "zh_current": "快、回避！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A954",
+   "budget_bytes": 8,
+   "jp": "か、回避運動っ！",
+   "zh_current": "快回避！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A968",
+   "budget_bytes": 11,
+   "jp": "あの機体を捕縛します！",
+   "zh_current": "捕获那机体！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A980",
+   "budget_bytes": 23,
+   "jp": "……これでは、大佐に顔向けができない……",
+   "zh_current": "……这样、没脸见大佐……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A9A4",
+   "budget_bytes": 12,
+   "jp": "つ、捕まってたまるか！！",
+   "zh_current": "怎、怎能被抓！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

@@ -1,0 +1,636 @@
+{
+ "entity": "char_221",
+ "kind": "character",
+ "cids": [
+  221,
+  222
+ ],
+ "name_jp": "レコア・ロンド",
+ "name_zh_KEEP": "蕾柯亚·朗德",
+ "cards": [
+  {
+   "cid": 221,
+   "ids": [
+    {
+     "idn": 663,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8483",
+     "zh_name_ptr": "0x218C4E1",
+     "name_jp": "危険なことばかりするのよね……",
+     "name_zh_current": "净干危险事",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避上昇",
+     "summary_zh_KEEP": "回避上升",
+     "didx": 28,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%",
+     "cutin_group": 520,
+     "cutin_jp": "危険なことばかりするのよね……アタシ",
+     "cutin_zh_current": "我啊、净做些危险的事……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 664,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8492",
+     "zh_name_ptr": "0x218C4EC",
+     "name_jp": "思想とか信念じゃない……",
+     "name_zh_current": "非思想信念",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 521,
+     "cutin_jp": "思想とか信念じゃない…ぎりぎりの所にいないと生きている気がしないのよ！",
+     "cutin_zh_current": "无关思想信念、不立于生死边缘就感觉不到自己活着！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 665,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B849F",
+     "zh_name_ptr": "0x20B849F",
+     "name_jp": "関心をもってもらいたくないの",
+     "name_zh_current": "不要你关心",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋装甲無効",
+     "summary_zh_KEEP": "威・破甲",
+     "didx": 206,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃対象の装甲を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·破甲",
+     "cutin_group": 522,
+     "cutin_jp": "アタシにはアタシというものがあるわアナタに関心をもってもらいたくないの",
+     "cutin_zh_current": "我有我自己的活法不希望你来关心我",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_67",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 222,
+   "ids": [
+    {
+     "idn": 666,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B84AF",
+     "zh_name_ptr": "0x218C4F7",
+     "name_jp": "女として満足しているの",
+     "name_zh_current": "女人的满足",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避上昇",
+     "summary_zh_KEEP": "回避上升",
+     "didx": 28,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%",
+     "cutin_group": 523,
+     "cutin_jp": "今の私は女としてとても充足しているの……安定しているのよ！",
+     "cutin_zh_current": "如今身为女人、我无比满足……内心也很安定！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 667,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84BB",
+     "zh_name_ptr": "0x2189164",
+     "name_jp": "私は女よ！",
+     "name_zh_current": "我是女人！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 524,
+     "cutin_jp": "私は女よ！だからここにいる！アナタの敵になった！！",
+     "cutin_zh_current": "我是女人！所以我才在这里！成为了你的敌人！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 668,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84C1",
+     "zh_name_ptr": "0x20B84C1",
+     "name_jp": "人の生き方はそれぞれ……",
+     "name_zh_current": "人各有活法",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋装甲無効",
+     "summary_zh_KEEP": "威・破甲",
+     "didx": 206,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃対象の装甲を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·破甲",
+     "cutin_group": 525,
+     "cutin_jp": "人の生き方はそれぞれ…………他人の干渉など！！",
+     "cutin_zh_current": "人各有各的活法…………无需他人干涉！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_67",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1D8A0",
+   "budget_bytes": 10,
+   "jp": "私は……パイロットなのよ！",
+   "zh_current": "我是驾驶员！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D8B8",
+   "budget_bytes": 8,
+   "jp": "……そこよっ！！",
+   "zh_current": "就在那！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D8CC",
+   "budget_bytes": 27,
+   "jp": "憎んでくれていいわ……アタシには戦いしかないのよ！",
+   "zh_current": "恨我也无妨……我只剩战斗了！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D8F4",
+   "budget_bytes": 20,
+   "jp": "エゥーゴのパイロットとして務めは果たしてみせる！",
+   "zh_current": "奥古驾驶员、必尽职责！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D914",
+   "budget_bytes": 28,
+   "jp": "こうして戦場に立つ私がいる！私にはそれで充分なの！",
+   "zh_current": "我就立于这战场！这就够了！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D93C",
+   "budget_bytes": 15,
+   "jp": "やるべきことをやるだけよ！！",
+   "zh_current": "只做我该做的事！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D958",
+   "budget_bytes": 30,
+   "jp": "私は自分の心に背きたくないの！それを貫きたいだけ！",
+   "zh_current": "我不愿违背本心！只想贯彻到底！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D984",
+   "budget_bytes": 32,
+   "jp": "感情の行き場を求めて戦う……それのどこが悪いと言うの！？",
+   "zh_current": "为安放感情而战……这有错吗！？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D9B0",
+   "budget_bytes": 28,
+   "jp": "あたしは死ぬのが怖くない……だから死にたかったんだ……",
+   "zh_current": "我不怕死……所以才想死的……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D9D8",
+   "budget_bytes": 22,
+   "jp": "だめね……戦いがクセになってしまうなんて",
+   "zh_current": "不行呢……战斗竟成了习惯",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D9FC",
+   "budget_bytes": 28,
+   "jp": "戦場に男も女もないわ！手加減していただかなくて結構よ！",
+   "zh_current": "战场无分男女！！无需手下留情！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DA24",
+   "budget_bytes": 13,
+   "jp": "格好で戦争はできなくてよ！",
+   "zh_current": "打仗不靠耍帅！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DA40",
+   "budget_bytes": 32,
+   "jp": "こんな緊張感を居心地よく感じてしまう……だめね、私って",
+   "zh_current": "这份紧张竟让我感到舒适……没救了呢",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DA6C",
+   "budget_bytes": 30,
+   "jp": "この充足感を感じるために私は戦場に出ているのね……",
+   "zh_current": "为了这份充实感……我才上战场",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DA98",
+   "budget_bytes": 18,
+   "jp": "聞こえる……とても意思のある力が……",
+   "zh_current": "听得见……意志之力……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DAB8",
+   "budget_bytes": 29,
+   "jp": "自分で選んだことなのよ！途中で投げ出すなんてできないわ！",
+   "zh_current": "是我自己选的！怎能半途而废！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DAE4",
+   "budget_bytes": 13,
+   "jp": "そんな武器は通用しないわ！！",
+   "zh_current": "那武器没用！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB00",
+   "budget_bytes": 20,
+   "jp": "そんな攻撃……当たるわけにはいかない！",
+   "zh_current": "那种攻击……绝不会中！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB20",
+   "budget_bytes": 24,
+   "jp": "敵の遠距離攻撃が来ます！各機、散開して下さい！",
+   "zh_current": "敌远程攻击！！各机快散开！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB44",
+   "budget_bytes": 21,
+   "jp": "見殺しにはできないわ投降して下さい！",
+   "zh_current": "不能不管你、快投降！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB68",
+   "budget_bytes": 18,
+   "jp": "聞こえる……とても意思のある力が……",
+   "zh_current": "听得见……意志之力……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DB88",
+   "budget_bytes": 11,
+   "jp": "捕虜になるのはたくさんよ！",
+   "zh_current": "我才不当俘虏！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7198",
+   "budget_bytes": 23,
+   "jp": "一機ずつかかってはだめ！全員でかかるのよ！",
+   "zh_current": "别一架一架上！全员一起上！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x71BC",
+   "budget_bytes": 13,
+   "jp": "了解！支援に回ります！！",
+   "zh_current": "明白！我去支援！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x71D8",
+   "budget_bytes": 12,
+   "jp": "お手伝いします、クワトロ大尉！！",
+   "zh_current": "交给我、大尉！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x71F0",
+   "budget_bytes": 13,
+   "jp": "了解！支援に回ります！！",
+   "zh_current": "了解！去支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x720C",
+   "budget_bytes": 13,
+   "jp": "了解！支援に回ります！！",
+   "zh_current": "了解！去支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7228",
+   "budget_bytes": 13,
+   "jp": "了解！支援に回ります！！",
+   "zh_current": "了解！去支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7244",
+   "budget_bytes": 13,
+   "jp": "了解！支援に回ります！！",
+   "zh_current": "了解！去支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DBA0",
+   "budget_bytes": 21,
+   "jp": "世界が自分を中心にして動くと思うなっ！",
+   "zh_current": "别以为世界为你而转！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DBD0",
+   "budget_bytes": 27,
+   "jp": "誰もいなくていいの……それが私の選んだ道よ！",
+   "zh_current": "孤身也无妨……这是我选的路！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DBF8",
+   "budget_bytes": 31,
+   "jp": "私は戦争でなくした感情の行き所を探したいだけなのよ！！",
+   "zh_current": "我只想找回战争中失去的感情归宿！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DC24",
+   "budget_bytes": 31,
+   "jp": "もう後戻りは出来ない……そんなことは私にだってわかってるわ！",
+   "zh_current": "已无路可退……这我自己也清楚！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DC50",
+   "budget_bytes": 14,
+   "jp": "男たちは戦うことばかりでっ！",
+   "zh_current": "男人只知打仗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DC6C",
+   "budget_bytes": 24,
+   "jp": "これが私の選んだ道よ！！後悔なんてないわ！",
+   "zh_current": "这是我选的路！我不后悔！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DC90",
+   "budget_bytes": 31,
+   "jp": "シロッコの邪魔をするというのなら……私はお前達を許さない！！",
+   "zh_current": "敢妨碍西罗克……我绝不饶你们！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DCBC",
+   "budget_bytes": 27,
+   "jp": "男たちは戦いばかりで女を道具に使うことしか……",
+   "zh_current": "男人只知打仗、拿女人当工具……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DCE4",
+   "budget_bytes": 24,
+   "jp": "死んだら許すも許さないもないのだろう！？",
+   "zh_current": "死了、还谈什么饶不饶恕！？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DD08",
+   "budget_bytes": 26,
+   "jp": "女としての充足を求めることがどうしていけないの！？",
+   "zh_current": "追求女人的幸福、哪里错了！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DD30",
+   "budget_bytes": 23,
+   "jp": "手加減なんて不要よ！敵同士でしょう、私たちは！？",
+   "zh_current": "不必留情！我们是敌人吧！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DD54",
+   "budget_bytes": 29,
+   "jp": "憎んでくれて結構よ！これは私が選んだことですもの！",
+   "zh_current": "尽管恨我！这是我自己选的！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DD80",
+   "budget_bytes": 23,
+   "jp": "そう！私はティターンズよ！！アナタたちの敵なのよ！",
+   "zh_current": "我是提坦斯！！你们的敌人！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DDA4",
+   "budget_bytes": 25,
+   "jp": "とても強い力が……！いったい、何なの！？これは！！",
+   "zh_current": "好强的力量……！这是什么！？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DDCC",
+   "budget_bytes": 22,
+   "jp": "クッ……！迷うことなんて……ないはずよ！",
+   "zh_current": "唔……！我不会……迷茫的！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DDF0",
+   "budget_bytes": 8,
+   "jp": "アナタでは無理ね！",
+   "zh_current": "你不行！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE04",
+   "budget_bytes": 20,
+   "jp": "そんな攻撃……当たるわけにはいかない！",
+   "zh_current": "那种攻击……绝不会中！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE24",
+   "budget_bytes": 21,
+   "jp": "！……来た！？各機、散開して回避を！！",
+   "zh_current": "来了！？各机快散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE48",
+   "budget_bytes": 23,
+   "jp": "聞こえるか？投降しろ！悪いようにはしない",
+   "zh_current": "听见吗？投降！不会亏待你",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE6C",
+   "budget_bytes": 12,
+   "jp": "また……囚われの身か……",
+   "zh_current": "又被俘了吗……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DE84",
+   "budget_bytes": 34,
+   "jp": "私はもう、選択はすませたのよ！アナタにどうこう言ってほしくないわ！",
+   "zh_current": "我早已做出选择！用不着你说三道四！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7260",
+   "budget_bytes": 19,
+   "jp": "レコア·ロンド2チーム攻撃汎用開始%",
+   "zh_current": "我来支援、一起上！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7280",
+   "budget_bytes": 19,
+   "jp": "レコア·ロンド2チーム攻撃汎用応答%",
+   "zh_current": "交给我、我掩护你！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x72A0",
+   "budget_bytes": 24,
+   "jp": "レコア·ロンド2チーム攻撃固定応答セリフ01",
+   "zh_current": "明白！我来掩护、放手上吧！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x72C4",
+   "budget_bytes": 24,
+   "jp": "レコア·ロンド2チーム攻撃固定応答セリフ02",
+   "zh_current": "了解！！这边交给我支援！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x72E8",
+   "budget_bytes": 24,
+   "jp": "レコア·ロンド2チーム攻撃固定応答セリフ03",
+   "zh_current": "我来助阵、别客气！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x730C",
+   "budget_bytes": 25,
+   "jp": "レコア·ロンド2チーム攻撃固定応答セリフ04",
+   "zh_current": "一起上！别让敌人得逞！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7334",
+   "budget_bytes": 25,
+   "jp": "レコア·ロンド2チーム攻撃固定応答セリフ05",
+   "zh_current": "了解！我马上去支援！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

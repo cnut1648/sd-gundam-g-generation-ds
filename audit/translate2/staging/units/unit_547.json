@@ -1,0 +1,79 @@
+{
+ "entity": "unit_547",
+ "kind": "unit",
+ "utids": [
+  547,
+  548,
+  549
+ ],
+ "name_jp": "レイダーガンダム",
+ "name_zh_current": "强夺高达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189B7C",
+   "jp": "2連装超高初速防盾砲",
+   "zh_current": "双联高速防盾炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x2189B8B",
+   "jp": "ミョルニル",
+   "zh_current": "雷神锤",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218E8A3",
+   "jp": "ツォーン",
+   "zh_current": "佐恩炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218994E",
+   "jp": "クロー",
+   "zh_current": "利爪",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 182,
+   "record_offset": "0xb08",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E9B",
+   "jp": "トランスフェイズ装甲",
+   "zh_current": "TP装甲",
+   "owner": false,
+   "owned_by": "unit_130"
+  },
+  "defense": {
+   "record": 4,
+   "record_offset": "0x9c",
+   "budget_bytes": 36,
+   "jp_segments": [
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_130"
+  }
+ }
+}

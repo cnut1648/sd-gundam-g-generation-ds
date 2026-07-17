@@ -1,0 +1,42 @@
+{
+ "entity": "unit_669",
+ "kind": "unit",
+ "utids": [
+  669
+ ],
+ "name_jp": "ヴェサリウス",
+ "name_zh_current": "维萨利乌斯",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189CD1",
+   "jp": "単装砲",
+   "zh_current": "单装炮",
+   "shared_by_n_units": 4
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218BF81",
+   "jp": "CIWS",
+   "zh_current": "CIWS",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

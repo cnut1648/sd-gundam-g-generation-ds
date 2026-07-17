@@ -1,0 +1,1268 @@
+{
+ "entity": "char_82",
+ "kind": "character",
+ "cids": [
+  82,
+  83,
+  84,
+  85
+ ],
+ "name_jp": "ジェリド・メサ",
+ "name_zh_KEEP": "捷利特·梅萨",
+ "cards": [
+  {
+   "cid": 82,
+   "ids": [
+    {
+     "idn": 246,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B76FC",
+     "zh_name_ptr": "0x20B76FC",
+     "name_jp": "ツキはオレにある！",
+     "name_zh_current": "好运在我！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避上昇",
+     "summary_zh_KEEP": "回避上升",
+     "didx": 28,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%",
+     "cutin_group": 175,
+     "cutin_jp": "また邪魔をしにきたといいたいが……ツキはオレにある！",
+     "cutin_zh_current": "本想说你又来碍事……可好运在我这边！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 247,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7706",
+     "zh_name_ptr": "0x20B7706",
+     "name_jp": "こんなところでオサラバとはな！",
+     "name_zh_current": "竟在此告别",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 176,
+     "cutin_jp": "無様だな！こんなところでオサラバとはな！",
+     "cutin_zh_current": "真是难看！竟要在这种地方告别！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 248,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7713",
+     "zh_name_ptr": "0x23298D5",
+     "name_jp": "オレだってティターンズだ！",
+     "name_zh_current": "我乃提坦斯",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 177,
+     "cutin_jp": "キサマだけが特別じゃない！オレだってティターンズだ！",
+     "cutin_zh_current": "别以为只有你特别！我也是提坦斯！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 83,
+   "ids": [
+    {
+     "idn": 249,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B771C",
+     "zh_name_ptr": "0x20B771C",
+     "name_jp": "怨念返しするだけなんだ！",
+     "name_zh_current": "了结怨念！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 178,
+     "cutin_jp": "オレは死んでいった者たちにかわって怨念返しするだけなんだ！",
+     "cutin_zh_current": "我代替那些死去的人们只是来了结这份怨念！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 250,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B772A",
+     "zh_name_ptr": "0x20B772A",
+     "name_jp": "この手で殺してやる！",
+     "name_zh_current": "亲手杀了你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&威力上昇",
+     "summary_zh_KEEP": "回避・威力↑",
+     "didx": 62,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+40%",
+     "cutin_group": 179,
+     "cutin_jp": "オレがこの手で殺してやる！そうすれば戦わずに済むだろう！！",
+     "cutin_zh_current": "我要亲手杀了你！这样就不必再战了吧！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 251,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7736",
+     "zh_name_ptr": "0x20B7736",
+     "name_jp": "マウアー……行けるぞ！！",
+     "name_zh_current": "玛雅！上吧",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "命回应甲↑",
+     "didx": 91,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%反応が20上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%反应+20·装甲+2",
+     "cutin_group": 180,
+     "cutin_jp": "マウアー……行けるぞ！！",
+     "cutin_zh_current": "玛雅……可以上了！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 84,
+   "ids": [
+    {
+     "idn": 252,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7741",
+     "zh_name_ptr": "0x20B7741",
+     "name_jp": "運を呼びこむためには……",
+     "name_zh_current": "为招来好运",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ダメージ軽減",
+     "summary_zh_KEEP": "伤害减轻",
+     "didx": 147,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加、愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）装甲+4·伤害减轻",
+     "cutin_group": 181,
+     "cutin_jp": "運を呼びこむためには我慢の時もあるさ……",
+     "cutin_zh_current": "为了招来好运有时也需要忍耐……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 253,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7758",
+     "zh_name_ptr": "0x218A69E",
+     "name_jp": "この手に掴んでやる！",
+     "name_zh_current": "亲手夺过来",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&威力上昇",
+     "summary_zh_KEEP": "回避・威力↑",
+     "didx": 62,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+40%",
+     "cutin_group": 182,
+     "cutin_jp": "負けられない……！オレは必ずこの手に掴んでやる！",
+     "cutin_zh_current": "我绝不能输……！我必定亲手夺取它！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 254,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7736",
+     "zh_name_ptr": "0x20B7736",
+     "name_jp": "マウアー……行けるぞ！！",
+     "name_zh_current": "玛雅！上吧",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "命回应甲↑",
+     "didx": 245,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターンマウアーがチームにいる時、戦闘能力が強化される",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%反应+20·装甲+2",
+     "cutin_group": 183,
+     "cutin_jp": "マウアー……行けるぞ！！",
+     "cutin_zh_current": "玛雅……可以上了！！",
+     "name_owner": true,
+     "name_shared_with_idn": 251,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 85,
+   "ids": [
+    {
+     "idn": 255,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7764",
+     "zh_name_ptr": "0x20B7764",
+     "name_jp": "……月光蝶は力だ！！",
+     "name_zh_current": "月光蝶之力",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 220,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 184,
+     "cutin_jp": "……月光蝶は力だ！！ターンXこそが全てを制するんだ！！",
+     "cutin_zh_current": "……月光蝶就是力量！！唯有倒X才能主宰一切！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 256,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7758",
+     "zh_name_ptr": "0x218A69E",
+     "name_jp": "この手に掴んでやる！",
+     "name_zh_current": "亲手夺过来",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&威力上昇",
+     "summary_zh_KEEP": "回避・威力↑",
+     "didx": 62,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+40%",
+     "cutin_group": 185,
+     "cutin_jp": "負けられない……！オレは必ず！この手に掴んでやる！",
+     "cutin_zh_current": "我绝不能输……！我一定！亲手夺取它！",
+     "name_owner": true,
+     "name_shared_with_idn": 253,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 257,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7736",
+     "zh_name_ptr": "0x20B7736",
+     "name_jp": "マウアー……行けるぞ！！",
+     "name_zh_current": "玛雅！上吧",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "命回应甲↑",
+     "didx": 245,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターンマウアーがチームにいる時、戦闘能力が強化される",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%反应+20·装甲+2",
+     "cutin_group": 186,
+     "cutin_jp": "マウアー……行けるぞ！！",
+     "cutin_zh_current": "玛雅……可以上了！！",
+     "name_owner": true,
+     "name_shared_with_idn": 251,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x9D4C",
+   "budget_bytes": 21,
+   "jp": "時代は変ったんだ！オールドタイプは失せろ！",
+   "zh_current": "时代变了！旧人类退散！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9D70",
+   "budget_bytes": 12,
+   "jp": "カタをつけるぞ…とどめだ！",
+   "zh_current": "做个了断！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9D88",
+   "budget_bytes": 14,
+   "jp": "力の無いャツぁ死ぬだけだ！！",
+   "zh_current": "无力者只能死！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9DA4",
+   "budget_bytes": 23,
+   "jp": "ただのパイロットがティターンズにかなうと思ってるのか！？",
+   "zh_current": "一介驾驶员能赢提坦斯！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9DC8",
+   "budget_bytes": 8,
+   "jp": "落ちろおーっ！",
+   "zh_current": "倒下吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9DDC",
+   "budget_bytes": 7,
+   "jp": "ティターンズは力だ！！",
+   "zh_current": "提坦斯！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9DF0",
+   "budget_bytes": 16,
+   "jp": "戦果を上げればコッチのものってね！",
+   "zh_current": "立功就是赢家！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E0C",
+   "budget_bytes": 18,
+   "jp": "死にたい奴からかかってくるんだな！",
+   "zh_current": "想死才找上门的吧！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E2C",
+   "budget_bytes": 10,
+   "jp": "なぜだ！？なぜ！？",
+   "zh_current": "为什么！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E44",
+   "budget_bytes": 20,
+   "jp": "どうやらツキはオレに傾いたようだな！！",
+   "zh_current": "好运似乎在我这边！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E64",
+   "budget_bytes": 10,
+   "jp": "こんなことで死ぬかよ！",
+   "zh_current": "怎能就此死！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E7C",
+   "budget_bytes": 12,
+   "jp": "よくもまあ、ぬけぬけと！",
+   "zh_current": "亏你好意思！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9E94",
+   "budget_bytes": 17,
+   "jp": "キサマっ！そんなに死にたいのか！？",
+   "zh_current": "你就这么想死！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9EB4",
+   "budget_bytes": 26,
+   "jp": "ティターンズに逆らってタダですむと思ってないだろうな！？",
+   "zh_current": "违逆提坦斯、休想全身而退！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9EDC",
+   "budget_bytes": 28,
+   "jp": "くそっ！何故だ！！こっちが当たらず、何で相手だけ！！",
+   "zh_current": "可恶！为什么只有我打不中！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F04",
+   "budget_bytes": 16,
+   "jp": "なんだというんだ、この不愉快さは！",
+   "zh_current": "怎么这么不痛快！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F20",
+   "budget_bytes": 11,
+   "jp": "はっ！ブザマだな！！",
+   "zh_current": "哈！真难看！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F38",
+   "budget_bytes": 9,
+   "jp": "そんな遠距離攻撃なぞ！",
+   "zh_current": "区区远程！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F50",
+   "budget_bytes": 14,
+   "jp": "来るぞ！各機、散開しろ！",
+   "zh_current": "来了！各机散开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F6C",
+   "budget_bytes": 7,
+   "jp": "つかまえたぞ！",
+   "zh_current": "抓到了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F80",
+   "budget_bytes": 13,
+   "jp": "……くそおおおっ！！",
+   "zh_current": "……可恶！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9F9C",
+   "budget_bytes": 13,
+   "jp": "冗談じゃない！やらせるか！",
+   "zh_current": "别开玩笑！休想",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2A10",
+   "budget_bytes": 13,
+   "jp": "来たぞ！一斉にかかれ！！",
+   "zh_current": "来了！一齐上！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2A2C",
+   "budget_bytes": 15,
+   "jp": "いいだろう！支援してやる！！",
+   "zh_current": "好吧！来支援！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2A48",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ1チーム攻撃固定応答セリフ01",
+   "zh_current": "捷利特·梅萨1",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2A6C",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ1チーム攻撃固定応答セリフ02",
+   "zh_current": "捷利特·梅萨1",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2A90",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ1チーム攻撃固定応答セリフ03",
+   "zh_current": "捷利特梅萨1",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2AB4",
+   "budget_bytes": 25,
+   "jp": "ジェリド·メサ1チーム攻撃固定応答セリフ04",
+   "zh_current": "捷利特梅萨1……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2ADC",
+   "budget_bytes": 25,
+   "jp": "ジェリド·メサ1チーム攻撃固定応答セリフ05",
+   "zh_current": "捷利特梅萨1……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9FC4",
+   "budget_bytes": 21,
+   "jp": "時代は変ったんだ！オールドタイプは失せろ！",
+   "zh_current": "时代变了！旧人类退散！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9FE8",
+   "budget_bytes": 26,
+   "jp": "キサマらだけが特別じゃない！オレだってティターンズだ！！",
+   "zh_current": "不止你们特别、我也是提坦斯！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA010",
+   "budget_bytes": 28,
+   "jp": "オレはキサマらを倒して前に進む！今度こそは……！！",
+   "zh_current": "打倒你们、继续前进！这次一定！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA038",
+   "budget_bytes": 13,
+   "jp": "今度こそ落としてやるっ！！",
+   "zh_current": "这次必击落你！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA054",
+   "budget_bytes": 21,
+   "jp": "キサマらは壁なんだよ！！オレにとっての！",
+   "zh_current": "你们就是敌人！对我而言……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA078",
+   "budget_bytes": 12,
+   "jp": "今度こそ……今度こそ！！",
+   "zh_current": "这次……这次！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA090",
+   "budget_bytes": 15,
+   "jp": "落とすぞ……必ず落としてやる！",
+   "zh_current": "击落……必击落你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA0AC",
+   "budget_bytes": 10,
+   "jp": "こんなはずは、こんな……",
+   "zh_current": "怎么会这样",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA0C4",
+   "budget_bytes": 13,
+   "jp": "これでいいんだな……マウアー！",
+   "zh_current": "没错吧、玛雅！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA0E0",
+   "budget_bytes": 24,
+   "jp": "ここで退いたらオレは一生、負けイヌだ！！",
+   "zh_current": "在这退缩、我一辈子都是败犬！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA104",
+   "budget_bytes": 11,
+   "jp": "はっ！ブザマだな！！",
+   "zh_current": "哈！真难看！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA11C",
+   "budget_bytes": 24,
+   "jp": "オレは戦える……！やれる男のはずなんだ！！",
+   "zh_current": "我还能战斗！应该做得到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA140",
+   "budget_bytes": 24,
+   "jp": "オレはこんなところでやられる男じゃないはずだ！！",
+   "zh_current": "我才不会死在这种地方！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA164",
+   "budget_bytes": 23,
+   "jp": "やはり、オレにとって壁になるのはキサマかぁっ！",
+   "zh_current": "果然啊……敌人竟是你吗！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA188",
+   "budget_bytes": 14,
+   "jp": "キサマぁっ！よくも！よくも！！",
+   "zh_current": "你竟敢！竟敢！！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA1A4",
+   "budget_bytes": 26,
+   "jp": "キサマらに勝てるんなら機体の性能にだって頼るさ！",
+   "zh_current": "为了赢你们、机体性能也得靠！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA1CC",
+   "budget_bytes": 29,
+   "jp": "また邪魔をしに来たか……が、今のオレにはツキがある！！",
+   "zh_current": "又来碍事了吗……可如今好运在我！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA1F8",
+   "budget_bytes": 29,
+   "jp": "また邪魔をしに来たか……が、今のオレにはツキがある！！",
+   "zh_current": "又来碍事了吗……可如今好运在我！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA224",
+   "budget_bytes": 9,
+   "jp": "殺すな！捕まえろ！",
+   "zh_current": "别杀！抓住",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA23C",
+   "budget_bytes": 18,
+   "jp": "こりゃあ、始末書じゃすまんかな……",
+   "zh_current": "这下不好收场了……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA25C",
+   "budget_bytes": 14,
+   "jp": "オレを……なめるなぁぁっ！！",
+   "zh_current": "别小看我！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2B04",
+   "budget_bytes": 19,
+   "jp": "ジェリド·メサ2チーム攻撃汎用開始%",
+   "zh_current": "捷利特·梅萨2",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2B24",
+   "budget_bytes": 19,
+   "jp": "ジェリド·メサ2チーム攻撃汎用応答%",
+   "zh_current": "捷利特·梅萨2",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2B44",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ2チーム攻撃固定応答セリフ01",
+   "zh_current": "捷利特梅萨2",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2B68",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ2チーム攻撃固定応答セリフ02",
+   "zh_current": "捷利特·梅萨2",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2B8C",
+   "budget_bytes": 24,
+   "jp": "ジェリド·メサ2チーム攻撃固定応答セリフ03",
+   "zh_current": "捷利特·梅萨2",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2BB0",
+   "budget_bytes": 25,
+   "jp": "ジェリド·メサ2チーム攻撃固定応答セリフ04",
+   "zh_current": "捷利特梅萨2……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2BD8",
+   "budget_bytes": 25,
+   "jp": "ジェリド·メサ2チーム攻撃固定応答セリフ05",
+   "zh_current": "捷利特梅萨2……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA278",
+   "budget_bytes": 16,
+   "jp": "やっぱりツキは俺のほうに傾いたな！",
+   "zh_current": "运气还在我这边！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA294",
+   "budget_bytes": 21,
+   "jp": "俺にだってやれるはずだ！！……行けッ！！",
+   "zh_current": "我也一定能做到！……上！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA2B8",
+   "budget_bytes": 13,
+   "jp": "この距離ならば……当たる！",
+   "zh_current": "这距离……能中！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA2D4",
+   "budget_bytes": 27,
+   "jp": "壁なら越えてやるさ！オレ自身の手で！必ずな！！",
+   "zh_current": "是敌人、我就亲手迎战！一定！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA2FC",
+   "budget_bytes": 20,
+   "jp": "オレはやるさ……マウアーのためにもな！！",
+   "zh_current": "我会上的……也为玛雅",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA31C",
+   "budget_bytes": 26,
+   "jp": "オレには退けない理由がある！負けられないんだ！！",
+   "zh_current": "我有不退的理由！我不能输！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA344",
+   "budget_bytes": 29,
+   "jp": "力の限りブチ当たってやるさ！！どんな壁があろうと！！",
+   "zh_current": "我会拼尽全力撞上去！！无论是何敌！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA370",
+   "budget_bytes": 29,
+   "jp": "死んでいったャツらの分もオレがやらなきゃならないんだ！",
+   "zh_current": "死去伙伴的那份、也由我来完成！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA39C",
+   "budget_bytes": 26,
+   "jp": "すまない、マウアー……期待には応えられなかったな……",
+   "zh_current": "对不起、玛雅……我辜负了你……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA3C4",
+   "budget_bytes": 10,
+   "jp": "よし！行けるぞ！！",
+   "zh_current": "好！能行！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA3DC",
+   "budget_bytes": 20,
+   "jp": "まだだ！まだ、勝負はついちゃいない！",
+   "zh_current": "还没！胜负尚未分晓！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA3FC",
+   "budget_bytes": 11,
+   "jp": "これしきのキズでっ！！",
+   "zh_current": "区区这点伤！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA414",
+   "budget_bytes": 13,
+   "jp": "この位は覚悟の内だ！！",
+   "zh_current": "这点早有觉悟！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA430",
+   "budget_bytes": 24,
+   "jp": "わかってるさ！無傷で勝てないなんてことはな！",
+   "zh_current": "我知道！没法毫发无伤取胜！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA454",
+   "budget_bytes": 12,
+   "jp": "クソッ、無様だぜ……！",
+   "zh_current": "可恶、真难看！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA46C",
+   "budget_bytes": 27,
+   "jp": "命がけで向かわなきゃ手に入らないものだってある！",
+   "zh_current": "有些东西、不拼命就得不到！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA494",
+   "budget_bytes": 26,
+   "jp": "ムダなことはやめろ！もう、勝負はついてるだろう！",
+   "zh_current": "别白费劲了！胜负早已分晓！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA4BC",
+   "budget_bytes": 12,
+   "jp": "来たのか！？だがっ！！",
+   "zh_current": "来了！？可是……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA4D4",
+   "budget_bytes": 11,
+   "jp": "回避しろ！当たるなよ！",
+   "zh_current": "回避！别中弹",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA4EC",
+   "budget_bytes": 13,
+   "jp": "よし！ャツを捕縛する！！",
+   "zh_current": "好！抓住那家伙",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA508",
+   "budget_bytes": 24,
+   "jp": "俺は一歩も先に進めない男になっちまった……",
+   "zh_current": "我变得连一步都迈不出了……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA52C",
+   "budget_bytes": 24,
+   "jp": "ここで引き下がったらオレは一生、負けイヌだ！！",
+   "zh_current": "在这退缩、我一辈子都是败犬！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C00",
+   "budget_bytes": 16,
+   "jp": "済まない、手を貸してもらうぞ！！",
+   "zh_current": "抱歉、要借大家的力！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C1C",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C38",
+   "budget_bytes": 16,
+   "jp": "よし！やろうぜ、マウアー！！",
+   "zh_current": "好！上吧、玛雅！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C54",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C70",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2C8C",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2CA8",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA550",
+   "budget_bytes": 16,
+   "jp": "やっぱりツキは俺のほうに傾いたな！",
+   "zh_current": "好运果然向着我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA56C",
+   "budget_bytes": 21,
+   "jp": "俺にだってやれるはずだ！！……行けッ！！",
+   "zh_current": "我也一定办得到！……上！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA590",
+   "budget_bytes": 13,
+   "jp": "この距離ならば……当たる！",
+   "zh_current": "这距离……能中！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA5AC",
+   "budget_bytes": 27,
+   "jp": "壁なら越えてやるさ！オレ自身の手で！必ずな！！",
+   "zh_current": "是敌人、我就亲手迎战！一定！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA5D4",
+   "budget_bytes": 20,
+   "jp": "オレはやるさ……マウアーのためにもな！！",
+   "zh_current": "我会上的……也为玛雅",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA5F4",
+   "budget_bytes": 26,
+   "jp": "オレには退けない理由がある！負けられないんだ！！",
+   "zh_current": "我有不退的理由！我不能输！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA61C",
+   "budget_bytes": 29,
+   "jp": "力の限りブチ当たってやるさ！！どんな壁があろうと！！",
+   "zh_current": "我会拼尽全力撞上去！！无论是何敌！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA648",
+   "budget_bytes": 29,
+   "jp": "死んでいったャツらの分もオレがやらなきゃならないんだ！",
+   "zh_current": "为死去的同伴、我也必须拼下去！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA674",
+   "budget_bytes": 26,
+   "jp": "すまない、マウアー……期待には応えられなかったな……",
+   "zh_current": "对不起、玛雅……我辜负了你……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA69C",
+   "budget_bytes": 10,
+   "jp": "よし！行けるぞ！！",
+   "zh_current": "好！能行！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA6B4",
+   "budget_bytes": 20,
+   "jp": "まだだ！まだ、勝負はついちゃいない！",
+   "zh_current": "还没！胜负尚未分晓！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA6D4",
+   "budget_bytes": 11,
+   "jp": "これしきのキズでっ！！",
+   "zh_current": "这点小伤！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA6EC",
+   "budget_bytes": 13,
+   "jp": "この位は覚悟の内だ！！",
+   "zh_current": "这点早有觉悟！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA708",
+   "budget_bytes": 24,
+   "jp": "わかってるさ！無傷で勝てないなんてことはな！",
+   "zh_current": "我知道！没法毫发无伤取胜！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA72C",
+   "budget_bytes": 12,
+   "jp": "クソッ、無様だぜ……！",
+   "zh_current": "可恶、真难看！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA744",
+   "budget_bytes": 27,
+   "jp": "命がけで向かわなきゃ手に入らないものだってある！",
+   "zh_current": "有些东西、不拼命就得不到！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA76C",
+   "budget_bytes": 26,
+   "jp": "ムダなことはやめろ！もう、勝負はついてるだろう！",
+   "zh_current": "别白费劲了！胜负早已分晓！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA794",
+   "budget_bytes": 12,
+   "jp": "来たのか！？だがっ！！",
+   "zh_current": "来了！？但是……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA7AC",
+   "budget_bytes": 11,
+   "jp": "回避しろ！当たるなよ！",
+   "zh_current": "回避！别中弹",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA7C4",
+   "budget_bytes": 13,
+   "jp": "よし！ャツを捕縛する！！",
+   "zh_current": "好！抓住那家伙",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA7E0",
+   "budget_bytes": 24,
+   "jp": "俺は一歩も先に進めない男になっちまった……",
+   "zh_current": "我变得连一步都迈不出了……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xA804",
+   "budget_bytes": 24,
+   "jp": "ここで引き下がったらオレは一生、負けイヌだ！！",
+   "zh_current": "在这退缩、我一辈子都是败犬！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2CC4",
+   "budget_bytes": 16,
+   "jp": "済まない、手を貸してもらうぞ！！",
+   "zh_current": "抱歉、要靠你了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2CE0",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2CFC",
+   "budget_bytes": 16,
+   "jp": "よし！やろうぜ、マウアー！！",
+   "zh_current": "好！上吧、玛雅！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2D18",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2D34",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2D50",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2D6C",
+   "budget_bytes": 16,
+   "jp": "了解だ！手え、貸すぜ！！",
+   "zh_current": "了解！我来帮你！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

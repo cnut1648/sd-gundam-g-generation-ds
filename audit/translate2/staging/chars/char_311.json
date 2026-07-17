@@ -1,0 +1,532 @@
+{
+ "entity": "char_311",
+ "kind": "character",
+ "cids": [
+  311,
+  312
+ ],
+ "name_jp": "キャラ・スーン",
+ "name_zh_KEEP": "卡拉·苏恩",
+ "cards": [
+  {
+   "cid": 311,
+   "ids": [
+    {
+     "idn": 933,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8933",
+     "zh_name_ptr": "0x20B8933",
+     "name_jp": "体が燃えるぅぅ！",
+     "name_zh_current": "身体在燃烧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 616,
+     "cutin_jp": "体が燃えるうう！熱いんだよお〜っ！",
+     "cutin_zh_current": "身体在燃烧！好烫啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 934,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B893E",
+     "zh_name_ptr": "0x21945F6",
+     "name_jp": "……宇宙をかける魂！",
+     "name_zh_current": "飞越宇宙魂",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 617,
+     "cutin_jp": "アタシの魂は宇宙をかける魂……！宇宙をかける魂！",
+     "cutin_zh_current": "我的灵魂是飞越宇宙的灵魂！飞越宇宙的灵魂！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 935,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B894A",
+     "zh_name_ptr": "0x20B894A",
+     "name_jp": "狼が食べちゃうよ！",
+     "name_zh_current": "狼会吃掉你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋先制攻撃",
+     "summary_zh_KEEP": "威力↑・先攻",
+     "didx": 139,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·先攻",
+     "cutin_group": 618,
+     "cutin_jp": "それそれえっ！早く逃げないと狼が食べちゃうよ！",
+     "cutin_zh_current": "看招吧！再不快点逃狼会吃掉你哦！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_143",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 312,
+   "ids": [
+    {
+     "idn": 936,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8957",
+     "zh_name_ptr": "0x20B8957",
+     "name_jp": "アタシはキャラ・スーンだぞ！",
+     "name_zh_current": "卡拉·苏恩",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 50,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 619,
+     "cutin_jp": "アタシを誰だと思ってるんだ！アタシはキャラ·スーンだぞ！！",
+     "cutin_zh_current": "你当我是谁！我可是卡拉·苏恩！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 937,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8963",
+     "zh_name_ptr": "0x218C5BB",
+     "name_jp": "やられるわけないだろ！",
+     "name_zh_current": "我怎会倒下",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 620,
+     "cutin_jp": "猫目のキャラがやられるわけないだろ！",
+     "cutin_zh_current": "我卡拉·苏恩岂会被打倒！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 938,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B896F",
+     "zh_name_ptr": "0x20B896F",
+     "name_jp": "目の前に倒す敵がいるんだよ！",
+     "name_zh_current": "眼前就有敌",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋先制攻撃",
+     "summary_zh_KEEP": "威命↑・先攻",
+     "didx": 138,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%先攻",
+     "cutin_group": 621,
+     "cutin_jp": "目の前に倒す敵がいるんだよっ！！",
+     "cutin_zh_current": "眼前就有要打倒的敌人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x233E0",
+   "budget_bytes": 17,
+   "jp": "あたしのMSに触るんじゃないよっ！",
+   "zh_current": "别碰我的MS！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23400",
+   "budget_bytes": 32,
+   "jp": "オマエなんかいるから……MSなんかあるから……キライだ〜っ！",
+   "zh_current": "都怪有你们……都怪有MS……讨厌！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2342C",
+   "budget_bytes": 32,
+   "jp": "オマエなんかいるから……MSなんかあるから……キライだ〜っ！",
+   "zh_current": "都怪有你们……都怪有MS……讨厌！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23458",
+   "budget_bytes": 23,
+   "jp": "そおーれ！それ、それ、それえ〜っ！！",
+   "zh_current": "看招！！看招、看招、看招！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2347C",
+   "budget_bytes": 12,
+   "jp": "あはは、もっともっと踊れ！",
+   "zh_current": "哈哈、再狂点！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23494",
+   "budget_bytes": 12,
+   "jp": "ほれえ、ほれほれ〜！",
+   "zh_current": "看招！看招！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x234AC",
+   "budget_bytes": 17,
+   "jp": "み〜んなメチャクチャにしちゃえ！",
+   "zh_current": "通通破坏掉！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x234CC",
+   "budget_bytes": 16,
+   "jp": "魂よ！……魂の躍動なのよ！",
+   "zh_current": "灵魂！灵魂在跃动！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x234E8",
+   "budget_bytes": 24,
+   "jp": "あぁ〜っ！MSはぁっ！MSはアタシをーッ！",
+   "zh_current": "啊啊！MS啊！！MS对我……！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2350C",
+   "budget_bytes": 18,
+   "jp": "もう死ぬ……死んじゃうぞお〜っ！",
+   "zh_current": "要死了……要死啦！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2352C",
+   "budget_bytes": 30,
+   "jp": "あぁ〜っ！この生と死のギリギリの感覚！感じちゃう〜！",
+   "zh_current": "啊！这生死边缘的感觉！感觉到了！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23558",
+   "budget_bytes": 24,
+   "jp": "あぁ〜っ！死んじゃううう〜〜っ！！",
+   "zh_current": "啊啊！！要死掉啦啊啊！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2357C",
+   "budget_bytes": 35,
+   "jp": "このリズム…この振動！くう〜っ、感じるう…感じちゃう〜！",
+   "zh_current": "这节奏……这震动！有感觉……太有感觉了！",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x235AC",
+   "budget_bytes": 16,
+   "jp": "熱い、熱いんだよお〜っ！",
+   "zh_current": "好热、好热啊！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x235C8",
+   "budget_bytes": 19,
+   "jp": "なにっ！バケモノか！？この攻撃は！？",
+   "zh_current": "怪物吗！？这攻击！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x235E8",
+   "budget_bytes": 23,
+   "jp": "ひぁぁ〜っ！ホントに死んじゃう〜っ！！",
+   "zh_current": "呀啊啊！！真的要死了",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2360C",
+   "budget_bytes": 21,
+   "jp": "あはははっ！そんなんじゃ、無理だっての！！",
+   "zh_current": "啊哈哈！那样可不行哟！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23630",
+   "budget_bytes": 12,
+   "jp": "来る、来る、来るよ〜！",
+   "zh_current": "来了、来了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23648",
+   "budget_bytes": 12,
+   "jp": "来る、来る、来るよ〜！",
+   "zh_current": "来了、来了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23660",
+   "budget_bytes": 12,
+   "jp": "そーら！捕まえたよ〜！",
+   "zh_current": "看！抓到你了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23678",
+   "budget_bytes": 23,
+   "jp": "キライだぁ〜っ！オマエたちなんかぁ〜っ！",
+   "zh_current": "最讨厌了！最讨厌你们了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2369C",
+   "budget_bytes": 17,
+   "jp": "あたしの機体に触るんじゃないよっ！",
+   "zh_current": "别碰我的机体！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x236BC",
+   "budget_bytes": 13,
+   "jp": "甘いんだよ！そんなの！！",
+   "zh_current": "那招太天真了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x236D8",
+   "budget_bytes": 9,
+   "jp": "やれっ！！",
+   "zh_current": "上啊！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x236F0",
+   "budget_bytes": 20,
+   "jp": "目の前に敵がいてむざむざ引き下がれるかっ！！",
+   "zh_current": "敌人就在眼前、怎能退缩！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23710",
+   "budget_bytes": 26,
+   "jp": "猫目のキャラの恐ろしさ身をもって知るんだね！",
+   "zh_current": "卡拉的可怕、你就亲身领教吧！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23738",
+   "budget_bytes": 13,
+   "jp": "いつまでも逃げられると思うな！",
+   "zh_current": "别想一直逃！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23754",
+   "budget_bytes": 15,
+   "jp": "ハマーンさまの邪魔はさせないよ！！",
+   "zh_current": "不准妨碍哈曼大人！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23770",
+   "budget_bytes": 19,
+   "jp": "オマエたちはアタシの敵なんだよーっ！！",
+   "zh_current": "你们都是我的敌人！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23790",
+   "budget_bytes": 26,
+   "jp": "猫目のキャラさまに勝てるわけないんだよっ！！",
+   "zh_current": "敢与卡拉斗、怎么可能赢！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x237B8",
+   "budget_bytes": 22,
+   "jp": "ア、アタシが！！このアタシが……やられる！？",
+   "zh_current": "我、我！！我竟然被打中！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x237DC",
+   "budget_bytes": 12,
+   "jp": "アタシをナメてんのかい！？",
+   "zh_current": "你敢小看我！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x237F4",
+   "budget_bytes": 13,
+   "jp": "クゥッ…あ、頭が……！！",
+   "zh_current": "唔……头、头痛……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23810",
+   "budget_bytes": 12,
+   "jp": "おふざけを言うんじゃない！",
+   "zh_current": "别开玩笑了！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23828",
+   "budget_bytes": 12,
+   "jp": "当てた！？このアタシに！",
+   "zh_current": "打中了我！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23840",
+   "budget_bytes": 17,
+   "jp": "はんっ！少しはやるじゃないか！",
+   "zh_current": "哼！！有点能耐嘛！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23860",
+   "budget_bytes": 21,
+   "jp": "くぁぁあっ！頭が……くううっ！！",
+   "zh_current": "呜啊啊！头好痛……唔！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23884",
+   "budget_bytes": 30,
+   "jp": "クゥッ！ず、頭痛がする……！！……あたしにかまうな！",
+   "zh_current": "唔！头、头好痛……！！……别管我！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x238B0",
+   "budget_bytes": 13,
+   "jp": "このアタシをなめてるのか！？",
+   "zh_current": "敢小看我吗！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x238CC",
+   "budget_bytes": 6,
+   "jp": "そんなのっ！！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x238E0",
+   "budget_bytes": 21,
+   "jp": "！…来るぞ！各機、回避行動に移れ！！",
+   "zh_current": "！来了！！各机快回避！！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23904",
+   "budget_bytes": 10,
+   "jp": "抵抗するんじゃないよ",
+   "zh_current": "别再抵抗！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2391C",
+   "budget_bytes": 13,
+   "jp": "クソッ！何てザマだい……！",
+   "zh_current": "该死！这惨样……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23938",
+   "budget_bytes": 16,
+   "jp": "アタシを怒らせるんじゃないよっ！",
+   "zh_current": "别想打倒我！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

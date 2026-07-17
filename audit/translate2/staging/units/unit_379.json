@@ -1,0 +1,71 @@
+{
+ "entity": "unit_379",
+ "kind": "unit",
+ "utids": [
+  379,
+  380,
+  381
+ ],
+ "name_jp": "デスパーダ",
+ "name_zh_current": "迪斯帕达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x21897E4",
+   "jp": "サイ・ロッド",
+   "zh_current": "灵能棒",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906C9",
+   "jp": "ビーム・カノン",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218EDA8",
+   "jp": "大型ミサイル",
+   "zh_current": "大型导弹",
+   "shared_by_n_units": 16
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 126,
+   "record_offset": "0x81c",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

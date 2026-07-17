@@ -1,0 +1,51 @@
+{
+ "entity": "unit_277",
+ "kind": "unit",
+ "utids": [
+  277,
+  278,
+  279
+ ],
+ "name_jp": "ザク9",
+ "name_zh_current": "扎古2F",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218F1D8",
+   "jp": "ザク・マシンガン",
+   "zh_current": "扎古机枪",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F1E1",
+   "jp": "ヒート・ホーク",
+   "zh_current": "热能斧",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2190710",
+   "jp": "ザク・バズーカ",
+   "zh_current": "扎古火箭炮",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

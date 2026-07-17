@@ -1,0 +1,328 @@
+{
+ "entity": "char_215",
+ "kind": "character",
+ "cids": [
+  215
+ ],
+ "name_jp": "リィナ・アーシタ",
+ "name_zh_KEEP": "莉娜·亚西塔",
+ "cards": [
+  {
+   "cid": 215,
+   "ids": [
+    {
+     "idn": 645,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B83C3",
+     "zh_name_ptr": "0x218C4B6",
+     "name_jp": "人殺しはイケナイわ！",
+     "name_zh_current": "不可杀人哦",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 505,
+     "cutin_jp": "やめなさい！人殺しはイケナイわ！",
+     "cutin_zh_current": "住手！不可以杀人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 646,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B83CF",
+     "zh_name_ptr": "0x20B83CF",
+     "name_jp": "何のために来ているんですか！？",
+     "name_zh_current": "为何而来！？",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 68,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+20%",
+     "cutin_group": 506,
+     "cutin_jp": "アナタたちは何のためにここに来ているんですか！？",
+     "cutin_zh_current": "你们究竟为了什么才来到这里的！？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 647,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B83DF",
+     "zh_name_ptr": "0x20B83DF",
+     "name_jp": "アタシがお兄ちゃんを助ける！",
+     "name_zh_current": "我要救哥哥",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 11,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）ジュドーがチームにいる時、HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）恢复50%",
+     "cutin_group": 507,
+     "cutin_jp": "こんどはアタシがお兄ちゃんを助ける番よ！",
+     "cutin_zh_current": "这次轮到我来救哥哥了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1CB4C",
+   "budget_bytes": 15,
+   "jp": "あたしだってやる時はやります！",
+   "zh_current": "我也是会出手的！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CB68",
+   "budget_bytes": 9,
+   "jp": "お願い……行って！！",
+   "zh_current": "拜托……上！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CB80",
+   "budget_bytes": 9,
+   "jp": "あっ…あたしだって！！",
+   "zh_current": "啊……我也！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CB98",
+   "budget_bytes": 10,
+   "jp": "や、やるしかないわ！",
+   "zh_current": "只、只能上！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CBB0",
+   "budget_bytes": 11,
+   "jp": "こ、これでいいのよね？",
+   "zh_current": "这样就行吧？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CBC8",
+   "budget_bytes": 23,
+   "jp": "こんなことしてたら……あたしまで悪の道に！",
+   "zh_current": "这样下去……我也成坏人了！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CBEC",
+   "budget_bytes": 20,
+   "jp": "こうなったら……もう行くしかないわ！",
+   "zh_current": "事到如今只能上了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC0C",
+   "budget_bytes": 14,
+   "jp": "リィナ·アーシタ……行きます！",
+   "zh_current": "莉娜·亚西塔、上！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC28",
+   "budget_bytes": 22,
+   "jp": "やっぱり無理だったのかなあ……ごめんなさい……",
+   "zh_current": "果然不行啊……对不起……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC4C",
+   "budget_bytes": 10,
+   "jp": "は、、てくれた！？",
+   "zh_current": "啊、躲过了！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC64",
+   "budget_bytes": 12,
+   "jp": "あ……な、なんとか……",
+   "zh_current": "啊……总算……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC7C",
+   "budget_bytes": 8,
+   "jp": "だっ、大丈夫です！",
+   "zh_current": "没、没事！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CC90",
+   "budget_bytes": 17,
+   "jp": "きゃぁっ！お、お兄ちゃん……！",
+   "zh_current": "呀啊！哥、哥哥……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CCB0",
+   "budget_bytes": 13,
+   "jp": "か弱い女の子に何するの！？",
+   "zh_current": "欺负弱女孩！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CCCC",
+   "budget_bytes": 17,
+   "jp": "ダ、ダメ……！機体がもたない！",
+   "zh_current": "不行……！！撑不住！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CCEC",
+   "budget_bytes": 18,
+   "jp": "きゃあぁっ！お兄ちゃん、助けて！",
+   "zh_current": "呀啊！！哥哥、救我！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CD0C",
+   "budget_bytes": 17,
+   "jp": "きゃぁぁっ！！……え？大丈夫？",
+   "zh_current": "啊啊！！！咦？没事？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CD2C",
+   "budget_bytes": 7,
+   "jp": "く、来るの！？",
+   "zh_current": "来、来了！？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CD40",
+   "budget_bytes": 18,
+   "jp": "みんな逃げて！ここにいたら危ないわ！",
+   "zh_current": "快逃！！这里危险！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CD60",
+   "budget_bytes": 23,
+   "jp": "悪いようにはしません！大人しくして下さい！",
+   "zh_current": "不会害你们！请老实点！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CD84",
+   "budget_bytes": 17,
+   "jp": "きゃぁっ！お、お兄ちゃん……！",
+   "zh_current": "呀啊！哥、哥哥……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CDA4",
+   "budget_bytes": 15,
+   "jp": "もうっ！やめてくださいっ！！",
+   "zh_current": "真是的！快住手！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D80",
+   "budget_bytes": 13,
+   "jp": "みんなの力を合わせれば……！！",
+   "zh_current": "齐心协力……！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D9C",
+   "budget_bytes": 19,
+   "jp": "は、はい！私にもお手伝いさせてください！",
+   "zh_current": "是、是！也让我帮忙吧！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6DBC",
+   "budget_bytes": 27,
+   "jp": "だいじょうぶよ、お兄ちゃん！私にだってできるわ！！",
+   "zh_current": "没事的、哥哥！我也能做到！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6DE4",
+   "budget_bytes": 19,
+   "jp": "は、はい！私にもお手伝いさせてください！",
+   "zh_current": "是、是！也让我帮忙吧！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6E04",
+   "budget_bytes": 19,
+   "jp": "は、はい！私にもお手伝いさせてください！",
+   "zh_current": "是、是！也让我帮忙吧！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6E24",
+   "budget_bytes": 19,
+   "jp": "は、はい！私にもお手伝いさせてください！",
+   "zh_current": "是、是！也让我帮忙吧！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6E44",
+   "budget_bytes": 19,
+   "jp": "は、はい！私にもお手伝いさせてください！",
+   "zh_current": "是、是！也让我帮忙吧！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

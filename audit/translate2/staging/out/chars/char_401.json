@@ -1,0 +1,56 @@
+{
+ "entity": "char_401",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E8%BE%BE%E5%96%80%E5%B0%94%E6%BC%94%E8%AF%B4",
+  "https://gundam.wiki.cre.jp/wiki/%E3%83%80%E3%82%AB%E3%83%BC%E3%83%AB%E6%BC%94%E8%AA%AC",
+  "https://www.gundam-c.com/other/wise-remark/"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1203,
+   "name_zh": "解地球重负",
+   "cutin_zh": "为了把地球从人类的重负中解救出来！",
+   "notes": "台词化用Z高达达喀尔演说的奥古理念（人が宇宙に出たのは、地球が人間の重みで沈むのを避けるためだ）、biligame译本作「地球已经不堪人类的重负」、故沿用「人类的重负」措辞；指令名保留5格「解地球重负」、与名台词共享关键词地球/重负。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x154CC", "zh": "敌影锁定！全炮射程内！"},
+  {"file": "0.bin", "record": "0x15560", "zh": "中弹了！两发直击、引擎区！"},
+  {"file": "0.bin", "record": "0x155BC", "zh": "躲、躲开了！全弹回避！"},
+  {"file": "0.bin", "record": "0x15634", "zh": "左舷二、三号副炮中弹！……仍可发射！"},
+  {"file": "0.bin", "record": "0x156A8", "zh": "直、直击！引擎区封闭！"},
+  {"file": "0.bin", "record": "0x1948C", "zh": "正在攻击！炮手、瞄准！"},
+  {"file": "0.bin", "record": "0x19548", "zh": "回避成功！已在敌射程之外！"},
+  {"file": "0.bin", "record": "0x195D4", "zh": "左舷弹射器受损！"},
+  {"file": "0.bin", "record": "0x19634", "zh": "引擎中弹！出力减半！"},
+  {"file": "0.bin", "record": "0x19CEE", "zh": "是……！开始射击！"},
+  {"file": "0.bin", "record": "0x19DD0", "zh": "回避敌袭！已脱离射线！"},
+  {"file": "0.bin", "record": "0x19DF1", "zh": "好、恢复航向！"},
+  {"file": "0.bin", "record": "0x19E4C", "zh": "装甲受损！"},
+  {"file": "0.bin", "record": "0x19EE8", "zh": "攻击已无效化！舰体零损伤！"},
+  {"file": "0.bin", "record": "0x2ACBC", "zh": "先制攻击！炮门全开！"},
+  {"file": "0.bin", "record": "0x2ACDC", "zh": "各炮座、各自射击准备！……放！！"},
+  {"file": "0.bin", "record": "0x2AD04", "zh": "各炮座、各自射击准备！……放！！"},
+  {"file": "0.bin", "record": "0x2AD2C", "zh": "各炮座、齐射！"},
+  {"file": "0.bin", "record": "0x2AD44", "zh": "好！就是现在、开火！"},
+  {"file": "0.bin", "record": "0x2AD64", "zh": "、发射预备！……放！！"},
+  {"file": "0.bin", "record": "0x2AD84", "zh": "、好好瞄准！！"},
+  {"file": "0.bin", "record": "0x2AD9C", "zh": "对空炮！别让敌人靠近！！"},
+  {"file": "0.bin", "record": "0x2ADC0", "zh": "不好！！……全员、准备弃舰！"},
+  {"file": "0.bin", "record": "0x2ADE4", "zh": "敌人准头差！快准备反击！"},
+  {"file": "0.bin", "record": "0x2AE08", "zh": "没那么容易被击沉！"},
+  {"file": "0.bin", "record": "0x2AE28", "zh": "这点伤没问题！炮击别停！"},
+  {"file": "0.bin", "record": "0x2AE4C", "zh": "瞄准我们了！？对空炮火、加厚弹幕！"},
+  {"file": "0.bin", "record": "0x2AE78", "zh": "可恶！别想再得逞！！"},
+  {"file": "0.bin", "record": "0x2AE98", "zh": "……直击！？"},
+  {"file": "0.bin", "record": "0x2AEB0", "zh": "稳、稳住！这艘舰决不能沉在这里！"},
+  {"file": "0.bin", "record": "0x2AEDC", "zh": "这伤不了我们！！"},
+  {"file": "0.bin", "record": "0x2AEF8", "zh": "来了！回避！"},
+  {"file": "0.bin", "record": "0x2AF10", "zh": "来了！回避！"},
+  {"file": "0.bin", "record": "0x2AF28", "zh": "好！捕获那敌机！"},
+  {"file": "0.bin", "record": "0x2AF44", "zh": "被抓住了！？"},
+  {"file": "0.bin", "record": "0x2AF5C", "zh": "休想抓住我！"}
+ ],
+ "notes": "舰桥/舰长系语音、按军用无线电口吻处理（炮座/齐射/弹幕/回避/弃舰）。0x19634：理想句「第一引擎中弹！出力下降50%！」超出19字节预算（50%即占6字节）、以「出力减半」精确保留50%数值。0x2ACDC/0x2AD04（各個に射撃用意）译为「各自射击准备！……放！！」、与0x2AD64「发射预备！……放！！」的炮令口令一致；与0x2AD2C「齐射」形成单放/齐射对照。修正与日文不符的标点：0x19DF1/0x19E4C去掉多余的！、0x2AD84由！！！改回！！、0x2AD9C/0x2AE78/0x2AEDC补回日文的！！、0x15634/0x2ADC0补回被丢弃的……停顿。0x195D4/0x2ACBC/0x2AEF8/0x2AF10/0x2AF28/0x2AF44/0x2AF5C现译已达意且实测字节在预算内、按原样保留以保证可编码。"
+}

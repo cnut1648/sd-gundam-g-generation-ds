@@ -1,0 +1,83 @@
+{
+ "entity": "unit_565",
+ "kind": "unit",
+ "utids": [
+  565,
+  566,
+  567
+ ],
+ "name_jp": "アビスガンダム",
+ "name_zh_current": "深渊高达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189C23",
+   "jp": "連装砲",
+   "zh_current": "连装炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F19A",
+   "jp": "ビーム・ランス",
+   "zh_current": "光束长枪",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218CA4D",
+   "jp": "3連装ビーム砲",
+   "zh_current": "3连装光束炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CA37",
+   "jp": "カリドゥス改",
+   "zh_current": "卡利杜斯改",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 188,
+   "record_offset": "0xb68",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "地形適正・水",
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "水域适应",
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EE0",
+   "jp": "VPS装甲",
+   "zh_current": "VPS装甲",
+   "owner": false,
+   "owned_by": "unit_550"
+  },
+  "defense": {
+   "record": 21,
+   "record_offset": "0x3c4",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "（ヴァリアブルフェイズシフト装甲）",
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "可变PS装甲",
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_550"
+  }
+ }
+}

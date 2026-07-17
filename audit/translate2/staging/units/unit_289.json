@@ -1,0 +1,73 @@
+{
+ "entity": "unit_289",
+ "kind": "unit",
+ "utids": [
+  289,
+  290,
+  291
+ ],
+ "name_jp": "サザビー",
+ "name_zh_current": "沙扎比",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218BC61",
+   "jp": "ビーム・ショットライフル",
+   "zh_current": "光束散弹步枪",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218A450",
+   "jp": "ビーム・トマホーク",
+   "zh_current": "光束战斧",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C838",
+   "jp": "メガ粒子砲",
+   "zh_current": "米加粒子炮",
+   "shared_by_n_units": 77
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F30C",
+   "jp": "ファンネル",
+   "zh_current": "浮游炮",
+   "shared_by_n_units": 48
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 96,
+   "record_offset": "0x60c",
+   "budget_bytes": 28,
+   "jp_segments": [
+    "サイコフレーム搭載（ニュータイプ対応機）",
+    "シャア・アズナブル専用機"
+   ],
+   "zh_segments_current": [
+    "精神感应框架",
+    "夏亚专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

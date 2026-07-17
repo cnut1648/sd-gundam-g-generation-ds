@@ -1,0 +1,254 @@
+{
+ "entity": "char_450",
+ "kind": "character",
+ "cids": [
+  450
+ ],
+ "name_jp": "連邦エリート士官",
+ "name_zh_KEEP": "联邦精英士官",
+ "cards": [
+  {
+   "cid": 450,
+   "ids": [
+    {
+     "idn": 1350,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 880,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "散布米诺夫斯基粒子！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1351,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9154",
+     "zh_name_ptr": "0x219469B",
+     "name_jp": "一掃するのだ！",
+     "name_zh_current": "一举扫清！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 881,
+     "cutin_jp": "薄汚いスベースノイドどもを一掃するのだ！",
+     "cutin_zh_current": "将这些肮脏的宇宙居民一举扫清干净！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_404",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x266B1",
+   "budget_bytes": 14,
+   "jp": "はっ！攻撃、開始します！",
+   "zh_current": "是！开始攻击！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32A08",
+   "budget_bytes": 29,
+   "jp": "ふん……まるで訓練の的だな！射撃用意！一気に片付けるぞ！！",
+   "zh_current": "哼……像训练靶子！准备、一举解决！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32A34",
+   "budget_bytes": 18,
+   "jp": "一斉射撃用意！……てえーっ！！",
+   "zh_current": "齐射准备……开火！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32A54",
+   "budget_bytes": 21,
+   "jp": "、発射用意！30秒間全力射撃だ！",
+   "zh_current": "、预备！全力射击30秒！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32A78",
+   "budget_bytes": 22,
+   "jp": "宇宙人どもが……！地球は我々のものだ！！",
+   "zh_current": "宇宙人……地球是我们的！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32A9C",
+   "budget_bytes": 28,
+   "jp": "よし、各砲座よく狙え！無駄弾を撃つなよ！！",
+   "zh_current": "好、各炮座瞄准！！别浪费弹药！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32AC4",
+   "budget_bytes": 13,
+   "jp": "敵に反撃の暇を与えるな！",
+   "zh_current": "别让敌人反击！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32AE0",
+   "budget_bytes": 13,
+   "jp": "敵のふところに飛び込め！",
+   "zh_current": "冲进敌阵里去！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32AFC",
+   "budget_bytes": 14,
+   "jp": "我々が負けるはずはないのだ！",
+   "zh_current": "我们绝不会输！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32B18",
+   "budget_bytes": 31,
+   "jp": "ま、まさか！？嘘だろう！？我々が敗れるはず……うわぁぁっ！",
+   "zh_current": "骗、骗人吧！？我们怎会败……呜哇！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32B44",
+   "budget_bytes": 9,
+   "jp": "ふん、カスどもめ！",
+   "zh_current": "哼、废物！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32B5C",
+   "budget_bytes": 27,
+   "jp": "え、ええッい……！あ、危ないところだったではないか！",
+   "zh_current": "可、可恶……！刚、刚才好险啊！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32B84",
+   "budget_bytes": 9,
+   "jp": "無駄なあがきを！！",
+   "zh_current": "徒劳挣扎！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32B9C",
+   "budget_bytes": 27,
+   "jp": "被弾しただと！？索敵班、どこに目をつけてる！！",
+   "zh_current": "竟然中弹！？侦察组在看哪里！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32BC4",
+   "budget_bytes": 37,
+   "jp": "な……！何故こうも簡単に当たる！？敵の方が優れているとは言わせんぞ！！",
+   "zh_current": "什……！怎会轻易中弹！？休说敌人更胜一筹！",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32BF8",
+   "budget_bytes": 30,
+   "jp": "うっ！……直撃じゃないのか！？おい、大丈夫なんだろうな！？",
+   "zh_current": "唔！……不是直击吧！？喂、没事吧！？",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32C24",
+   "budget_bytes": 28,
+   "jp": "くそっ！駄目だ！！司令部に後退の許可を取れっ！！",
+   "zh_current": "可恶、不行了！向司令部请求撤退！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32C4C",
+   "budget_bytes": 27,
+   "jp": "我々は精鋭部隊だぞ、貴様ら一般兵と一緒にするな！！",
+   "zh_current": "我们是精锐！别和杂兵混为一谈！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32C74",
+   "budget_bytes": 11,
+   "jp": "ふん、当たりはせんよ！",
+   "zh_current": "哼、打不中的！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32C8C",
+   "budget_bytes": 11,
+   "jp": "ふん、当たりはせんよ！",
+   "zh_current": "哼、打不中的！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32CA4",
+   "budget_bytes": 24,
+   "jp": "無駄な抵抗は止めろ！貴様らでは勝てんよ！！",
+   "zh_current": "停止顽抗！！你们赢不了！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32CC8",
+   "budget_bytes": 25,
+   "jp": "エリートの我々が、捕虜だと！？そんな……バカなっ！？",
+   "zh_current": "精英竟当俘虏！？不可能！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32CF0",
+   "budget_bytes": 22,
+   "jp": "恥をかかせる気か！退がれ！退がれ！",
+   "zh_current": "让我蒙羞吗！退下！退下！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

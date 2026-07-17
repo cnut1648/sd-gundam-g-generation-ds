@@ -1,0 +1,384 @@
+{
+ "entity": "char_173",
+ "kind": "character",
+ "cids": [
+  173
+ ],
+ "name_jp": "ハリー・オード",
+ "name_zh_KEEP": "哈利·奥德",
+ "cards": [
+  {
+   "cid": 173,
+   "ids": [
+    {
+     "idn": 519,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7FE3",
+     "zh_name_ptr": "0x218C36E",
+     "name_jp": "ディアナの法の裁き……",
+     "name_zh_current": "迪安娜审判",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 412,
+     "cutin_jp": "ディアナの法の裁き……愛けていただく！",
+     "cutin_zh_current": "迪安娜之法的审判……就请你领受吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 520,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7FEF",
+     "zh_name_ptr": "0x218FFBF",
+     "name_jp": "……ごアイサツだな",
+     "name_zh_current": "你可真客气",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 108,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·装甲+4",
+     "cutin_group": 413,
+     "cutin_jp": "……ごアイサツだな",
+     "cutin_zh_current": "……你可真客气啊",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 521,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7FF8",
+     "zh_name_ptr": "0x20B7FF8",
+     "name_jp": "ユニバァーース！！",
+     "name_zh_current": "宇宙啊！！",
+     "name_zh_px": 52,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威应甲↑",
+     "didx": 95,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%増加、反応が20上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）反应+20·攻击+20%装甲+2",
+     "cutin_group": 414,
+     "cutin_jp": "ユニバァーース！！",
+     "cutin_zh_current": "宇宙啊！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_18",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x16C54",
+   "budget_bytes": 25,
+   "jp": "後顧の憂いとなるものは……断っておかねばな！",
+   "zh_current": "会留后患的……必须断绝！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16C7C",
+   "budget_bytes": 16,
+   "jp": "そろそろ……しかけさせてもらう！",
+   "zh_current": "差不多……该我出手了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16C98",
+   "budget_bytes": 16,
+   "jp": "そろそろ……しかけさせてもらう！",
+   "zh_current": "差不多……该我出手了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16CB4",
+   "budget_bytes": 18,
+   "jp": "貴様らにディアナさまの邪魔はさせん！",
+   "zh_current": "休想妨碍陛下！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16CD4",
+   "budget_bytes": 13,
+   "jp": "逃がさんと言ったはずだ！！",
+   "zh_current": "说过不让你逃！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16CF0",
+   "budget_bytes": 11,
+   "jp": "ぬおおおーーっ！",
+   "zh_current": "嗷啊啊！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16D08",
+   "budget_bytes": 16,
+   "jp": "実戦はシミュレーシヨンとは違うのだよ！",
+   "zh_current": "实战和模拟不一样！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16D24",
+   "budget_bytes": 24,
+   "jp": "そういう貴様だからこそ撃破しておかねばならんのだ！",
+   "zh_current": "正因是你才必须先击破！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16D48",
+   "budget_bytes": 19,
+   "jp": "ディアナさま……もうしわけありません！",
+   "zh_current": "陛下……属下知罪！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16D68",
+   "budget_bytes": 19,
+   "jp": "そうも言うなら貴様を撃破するぞ！！",
+   "zh_current": "既然如此、就击破你！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16D88",
+   "budget_bytes": 9,
+   "jp": "クッ！……間一髪か！",
+   "zh_current": "唔！好险！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16DA0",
+   "budget_bytes": 10,
+   "jp": "……これしきのこと！",
+   "zh_current": "……小意思！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16DB8",
+   "budget_bytes": 9,
+   "jp": "この敵、侮れん！",
+   "zh_current": "此敌不弱！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16DD0",
+   "budget_bytes": 17,
+   "jp": "ええい！手ぎわが良いっ！！",
+   "zh_current": "可恶！身手真快！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16DF0",
+   "budget_bytes": 17,
+   "jp": "何ッ！？この私としたことが！？",
+   "zh_current": "什么、我竟失手！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E10",
+   "budget_bytes": 16,
+   "jp": "ぬうっ！まっ、まだまだぁっ！！",
+   "zh_current": "唔！还没完！！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E2C",
+   "budget_bytes": 13,
+   "jp": "ダテではないということだ！",
+   "zh_current": "可不是虚名！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E48",
+   "budget_bytes": 10,
+   "jp": "そんな単純な手で……！",
+   "zh_current": "这种把戏！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E60",
+   "budget_bytes": 18,
+   "jp": "正面から来るぞ！各機、直ちに散開！",
+   "zh_current": "正面来袭！各机快散开！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E80",
+   "budget_bytes": 18,
+   "jp": "ここは大人しくしてもらいたいな……",
+   "zh_current": "现在乖乖就范吧……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16EA0",
+   "budget_bytes": 19,
+   "jp": "しまった！この私としたことが……！",
+   "zh_current": "不好！我竟失手……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16EC0",
+   "budget_bytes": 22,
+   "jp": "そう思い通りに事が運ぶと思うなっ！！",
+   "zh_current": "别以为事事都能如你所愿！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1.bin",
+   "record": "0x44C",
+   "budget_bytes": 6,
+   "jp": "き…貴様……",
+   "zh_current": "你这……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x45E",
+   "budget_bytes": 9,
+   "jp": "貴様ぁぁーーっ！！",
+   "zh_current": "混蛋！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0x473",
+   "budget_bytes": 16,
+   "jp": "ディアナさまの尻と言ったなぁぁ！！",
+   "zh_current": "竟敢说陛下的屁股！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1.bin",
+   "record": "0x4CF",
+   "budget_bytes": 12,
+   "jp": "言ったな、マシュマー·セロ！！",
+   "zh_current": "你敢说、塞罗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x4E7",
+   "budget_bytes": 29,
+   "jp": "あんな変な髪型の女がディアナさまと比べ物にならんとは！！",
+   "zh_current": "那怪发型的女人、怎配跟陛下比！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1.bin",
+   "record": "0x584",
+   "budget_bytes": 11,
+   "jp": "それはこちらのセリフだ！！",
+   "zh_current": "这话该我说！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0x59B",
+   "budget_bytes": 37,
+   "jp": "我が魂魄百万回生まれ変わろうと貴様だけは討ち果たしてくれる！！",
+   "zh_current": "纵使灵魂转生百万次、也要将你讨灭！！",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6054",
+   "budget_bytes": 14,
+   "jp": "一斉にかかるぞ！遅れるな！！",
+   "zh_current": "一齐上！别落后！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6070",
+   "budget_bytes": 20,
+   "jp": "委細承知！後は任せてもらおう！！",
+   "zh_current": "一切明白！剩下交给我吧！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6090",
+   "budget_bytes": 15,
+   "jp": "手助けするぞ！ロラン·セアック！！",
+   "zh_current": "我来助你！罗兰！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x60AC",
+   "budget_bytes": 11,
+   "jp": "……放ってはおけんか",
+   "zh_current": "……不能不管",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x60C4",
+   "budget_bytes": 23,
+   "jp": "眼鏡のよしみだ！手助けさせてもらおう！！",
+   "zh_current": "看在交情份上！让我帮把手！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x60E8",
+   "budget_bytes": 20,
+   "jp": "委細承知！後は任せてもらおう！！",
+   "zh_current": "完全明白！剩下交给我！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6108",
+   "budget_bytes": 20,
+   "jp": "委細承知！後は任せてもらおう！！",
+   "zh_current": "完全明白！剩下交给我！！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

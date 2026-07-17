@@ -1,0 +1,650 @@
+{
+ "entity": "char_18",
+ "kind": "character",
+ "cids": [
+  18,
+  19
+ ],
+ "name_jp": "アムロ・レイ",
+ "name_zh_KEEP": "阿姆罗·雷",
+ "cards": [
+  {
+   "cid": 18,
+   "ids": [
+    {
+     "idn": 54,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7098",
+     "zh_name_ptr": "0x2328E8A",
+     "name_jp": "……見える！",
+     "name_zh_current": "……看得见！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋0回避",
+     "summary_zh_KEEP": "威力↑・必闪",
+     "didx": 179,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·完全回避",
+     "cutin_group": 34,
+     "cutin_jp": "敵の動きが……見える！",
+     "cutin_zh_current": "敌人的动作……我看得见！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_10",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 55,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B709F",
+     "zh_name_ptr": "0x23293A9",
+     "name_jp": "時間だって支配できるさ……",
+     "name_zh_current": "时间也支配",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "反応上昇",
+     "summary_zh_KEEP": "反应上升",
+     "didx": 38,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応が20上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）反应+20",
+     "cutin_group": 35,
+     "cutin_jp": "人はいつか……時間だって支配できるさ……",
+     "cutin_zh_current": "人总有一天……连时间都能支配……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 19,
+   "ids": [
+    {
+     "idn": 57,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B70B1",
+     "zh_name_ptr": "0x20B70B1",
+     "name_jp": "人は変わって行くものだろ？",
+     "name_zh_current": "人是会变的",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威应甲↑",
+     "didx": 95,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%増加、反応が20上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）反应+20·攻击+20%装甲+2",
+     "cutin_group": 37,
+     "cutin_jp": "人は変わって行くものだろ？",
+     "cutin_zh_current": "人是会改变的吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 58,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B70BF",
+     "zh_name_ptr": "0x2188733",
+     "name_jp": "エゴだよ！",
+     "name_zh_current": "太自我了！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃力大幅上昇",
+     "summary_zh_KEEP": "攻击力大升",
+     "didx": 215,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化、攻撃を必ず回避、相手の特殊防御と装甲を無効化する",
+     "detail_zh_current": "使用条件：战斗中対象：仅自身（效果）攻击+40%·暴击·完全回避破防·破甲使用条件：战斗中対象：全队（效果）命中率+20%·反应+40攻击+20%使用条件：战斗中対象：仅自身（效果）攻击+40%·装甲+4·破甲",
+     "cutin_group": 38,
+     "cutin_jp": "エゴだよ！それは！！",
+     "cutin_zh_current": "太自我了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 59,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B70CD",
+     "zh_name_ptr": "0x20B70CD",
+     "name_jp": "人の心の光を……！",
+     "name_zh_current": "人心之光……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "自軍戦闘力上昇",
+     "summary_zh_KEEP": "自军战力↑",
+     "didx": 106,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）1ターン命中·回避·攻撃力が20%上昇、反応が20と装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）命中率+20%·回避+20%反应+20·攻击+20%·装甲+2",
+     "cutin_group": 39,
+     "cutin_jp": "世界に人の心の光を見せなけりゃならないんだ！",
+     "cutin_zh_current": "必须让这个世界……看见人心之光！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1E14",
+   "budget_bytes": 9,
+   "jp": "……させるかぁっ！",
+   "zh_current": "……休想！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E2C",
+   "budget_bytes": 9,
+   "jp": "行けっ！！",
+   "zh_current": "上！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E44",
+   "budget_bytes": 9,
+   "jp": "……そこかぁっ！！",
+   "zh_current": "原来在那！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E5C",
+   "budget_bytes": 9,
+   "jp": "逃がすものか……！",
+   "zh_current": "休想逃……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E74",
+   "budget_bytes": 8,
+   "jp": "……そこだぁっ！",
+   "zh_current": "……在那！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E88",
+   "budget_bytes": 9,
+   "jp": "……このおっ！！",
+   "zh_current": "……可恶！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA0",
+   "budget_bytes": 6,
+   "jp": "ひとつ……！！",
+   "zh_current": "再来！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB4",
+   "budget_bytes": 10,
+   "jp": "……しとめてみせる！",
+   "zh_current": "……解决你！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ECC",
+   "budget_bytes": 10,
+   "jp": "や、やられた……！？",
+   "zh_current": "被打中了！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EE4",
+   "budget_bytes": 6,
+   "jp": "来た……！！",
+   "zh_current": "来了！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EF8",
+   "budget_bytes": 8,
+   "jp": "……見えるっ！！",
+   "zh_current": "看得见！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F0C",
+   "budget_bytes": 7,
+   "jp": "この程度……！",
+   "zh_current": "就这点！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F20",
+   "budget_bytes": 10,
+   "jp": "こいつ！……やったな！",
+   "zh_current": "好啊你……！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F38",
+   "budget_bytes": 16,
+   "jp": "まだだ……！大したことはない！",
+   "zh_current": "还没完！不算什么！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F54",
+   "budget_bytes": 19,
+   "jp": "なんだ！？シャア以上のNTみたいだ！",
+   "zh_current": "比夏亚还强的新人类！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F74",
+   "budget_bytes": 15,
+   "jp": "ダメだ！……押されている！！",
+   "zh_current": "不行！被压制了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F90",
+   "budget_bytes": 6,
+   "jp": "そんなもので！",
+   "zh_current": "就这！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA4",
+   "budget_bytes": 5,
+   "jp": "……今だ！",
+   "zh_current": "现在！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB8",
+   "budget_bytes": 23,
+   "jp": "来ます……！右10度、1時半の方向！",
+   "zh_current": "来了……！右侧一点半方向",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FDC",
+   "budget_bytes": 16,
+   "jp": "こんなところで死んじゃつまらないだろ？",
+   "zh_current": "死在这里多没意思？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF8",
+   "budget_bytes": 20,
+   "jp": "しまった！動力系統をやられたのか！？",
+   "zh_current": "不妙！动力系统中弹！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2018",
+   "budget_bytes": 14,
+   "jp": "捕まるわけにはいかないんだ！",
+   "zh_current": "绝不能被俘！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x14",
+   "budget_bytes": 10,
+   "jp": "くっ……このおっ！",
+   "zh_current": "唔……可恶！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0x2C",
+   "budget_bytes": 17,
+   "jp": "シャアだってわかっているはずだ！！",
+   "zh_current": "夏亚也该明白的！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0x49",
+   "budget_bytes": 24,
+   "jp": "本当に倒すべき敵が誰かということを！！",
+   "zh_current": "真正该打倒的敌人是谁！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1.bin",
+   "record": "0x6D",
+   "budget_bytes": 18,
+   "jp": "本当の敵はザビ家だろうにっ！！",
+   "zh_current": "真正之敌是扎比家！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0xA4",
+   "budget_bytes": 5,
+   "jp": "くっ……！",
+   "zh_current": "唔……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1.bin",
+   "record": "0xB8",
+   "budget_bytes": 17,
+   "jp": "たかがメインカメラをやられただけだ！",
+   "zh_current": "主摄像头坏了而已！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0xD8",
+   "budget_bytes": 4,
+   "jp": "いま……",
+   "zh_current": "刚才",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1.bin",
+   "record": "0xE8",
+   "budget_bytes": 8,
+   "jp": "ララァが言った……",
+   "zh_current": "拉拉说……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1.bin",
+   "record": "0xFC",
+   "budget_bytes": 21,
+   "jp": "ニュータイプは殺し合う道具ではないって…",
+   "zh_current": "新人类不是残杀工具……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1.bin",
+   "record": "0x168",
+   "budget_bytes": 20,
+   "jp": "キサマだって……ニュータイプだろうに……！！",
+   "zh_current": "你也是新人类啊……！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2034",
+   "budget_bytes": 10,
+   "jp": "邪気が来たか……！",
+   "zh_current": "杀气来了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x204C",
+   "budget_bytes": 10,
+   "jp": "行けっ！！！",
+   "zh_current": "上！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2064",
+   "budget_bytes": 9,
+   "jp": "この一撃で……！！",
+   "zh_current": "这一击……！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x207C",
+   "budget_bytes": 8,
+   "jp": "こいつ……落ちろ！",
+   "zh_current": "倒下吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2090",
+   "budget_bytes": 10,
+   "jp": "……しとめてみせる！",
+   "zh_current": "……拿下你！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20A8",
+   "budget_bytes": 7,
+   "jp": "やらせるかっ！",
+   "zh_current": "休想！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20BC",
+   "budget_bytes": 7,
+   "jp": "……そこだ！！",
+   "zh_current": "……在那！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20D0",
+   "budget_bytes": 10,
+   "jp": "邪魔は……させない！",
+   "zh_current": "不许碍事！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20E8",
+   "budget_bytes": 8,
+   "jp": "クッ……情けない！",
+   "zh_current": "真丢人！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20FC",
+   "budget_bytes": 7,
+   "jp": "……当たるか！",
+   "zh_current": "打不中！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2110",
+   "budget_bytes": 8,
+   "jp": "そうは行くか！！",
+   "zh_current": "没门！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2124",
+   "budget_bytes": 9,
+   "jp": "大したダメージじゃない！",
+   "zh_current": "不算什么！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x213C",
+   "budget_bytes": 7,
+   "jp": "……チィィッ！",
+   "zh_current": "……啧！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2150",
+   "budget_bytes": 10,
+   "jp": "しくじったか……！？",
+   "zh_current": "失手了吗！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2168",
+   "budget_bytes": 10,
+   "jp": "こ、この力は……！？",
+   "zh_current": "这股力量！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2180",
+   "budget_bytes": 8,
+   "jp": "やられる……！？",
+   "zh_current": "要完了！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2194",
+   "budget_bytes": 10,
+   "jp": "無駄だ……やめろ！！",
+   "zh_current": "没用、住手！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21AC",
+   "budget_bytes": 8,
+   "jp": "そんなもので……！",
+   "zh_current": "就这……！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C0",
+   "budget_bytes": 9,
+   "jp": "一時方向、来るぞ！",
+   "zh_current": "右前来袭！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21D8",
+   "budget_bytes": 19,
+   "jp": "投降するんだ！これ以上の戦いは無意味だ！",
+   "zh_current": "投降吧！再打没意义",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21F8",
+   "budget_bytes": 18,
+   "jp": "しまった！動力系統をやられた！？",
+   "zh_current": "不妙！动力系统中弹！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2218",
+   "budget_bytes": 8,
+   "jp": "そんな理屈……！！",
+   "zh_current": "没道理！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x60",
+   "budget_bytes": 16,
+   "jp": "νガンダムはダテじゃないっ！！",
+   "zh_current": "ν高达不是摆设！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6B0",
+   "budget_bytes": 27,
+   "jp": "一機ずつかかっていてはだめだ！全員で一斉にかかるぞ！",
+   "zh_current": "别一架架单打！全员一齐上！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D8",
+   "budget_bytes": 12,
+   "jp": "こちらアムロ！支援する！！",
+   "zh_current": "阿姆罗、支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F0",
+   "budget_bytes": 19,
+   "jp": "いいだろう！手を貸すぞ、シャア！！",
+   "zh_current": "好吧！我帮你、夏亚",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x710",
+   "budget_bytes": 19,
+   "jp": "わかった！援護は任せてくれ、チェーン！",
+   "zh_current": "明白！交给我、切恩",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x730",
+   "budget_bytes": 12,
+   "jp": "こちらアムロ！支援する！！",
+   "zh_current": "阿姆罗、支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x748",
+   "budget_bytes": 12,
+   "jp": "こちらアムロ！支援する！！",
+   "zh_current": "阿姆罗、支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x760",
+   "budget_bytes": 12,
+   "jp": "こちらアムロ！支援する！！",
+   "zh_current": "阿姆罗、支援！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

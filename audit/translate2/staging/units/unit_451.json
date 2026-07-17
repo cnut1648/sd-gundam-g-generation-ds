@@ -1,0 +1,51 @@
+{
+ "entity": "unit_451",
+ "kind": "unit",
+ "utids": [
+  451,
+  452,
+  453
+ ],
+ "name_jp": "ハンマ・ハンマ",
+ "name_zh_current": "悍马·悍马",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C9FE",
+   "jp": "有線ビーム砲",
+   "zh_current": "有线光束炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218E8D2",
+   "jp": "シールド・メガ粒子砲",
+   "zh_current": "盾米加粒子炮",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

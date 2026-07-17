@@ -1,0 +1,80 @@
+{
+ "entity": "char_316",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E6%A0%BC%E6%8B%89%E5%85%8B%E6%96%AF%C2%B7%E5%BE%B7%E5%8D%A1%E5%A5%91",
+  "https://wiki.biligame.com/gundam/%E6%9C%A8%E6%98%9F%E5%B8%9D%E5%9B%BD",
+  "https://wiki.biligame.com/gundam/EMA-10%E8%BF%AA%E7%BB%B4%E7%BA%B3%E8%BE%BE",
+  "https://gundam.fandom.com/wiki/Crux_Dogatie",
+  "https://dic.pixiv.net/a/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%E3%83%BB%E3%83%89%E3%82%A5%E3%82%AC%E3%83%81",
+  "https://www.icecitynet.com/gundampeople_info.php?gundamid=17&pid=468"
+ ],
+ "name_flag": "当前名格拉克斯·德卡与repo姓氏canon杜加奇不一致（sweep已将杜卡奇/德卡契统一为杜加奇）。biligame条目名为格拉克斯·德卡契（ドゥガチ=Dogatie即杜加奇）、char_60/char_143的成品台词均以杜加奇称呼此人。建议改为格拉克斯·杜加奇。证据：https://wiki.biligame.com/gundam/%E6%A0%BC%E6%8B%89%E5%85%8B%E6%96%AF%C2%B7%E5%BE%B7%E5%8D%A1%E5%A5%91",
+ "ids": [
+  {
+   "idn": 948,
+   "name_zh": "老夫要毁灭",
+   "cutin_zh": "老夫要毁灭……企图否定老夫的一切！",
+   "notes": "ワシ全篇统一为老夫（与全部bark一致）。cutin保留倒装强调：ワシを否定しようとする全てを！=企图否定老夫的一切。detail归char_82所有、未输出。"
+  },
+  {
+   "idn": 949,
+   "name_zh": "这就是战争",
+   "cutin_zh": "战斗没有肮脏干净之分！这就是战争！",
+   "detail_effect_zh": "攻击必定暴击。攻击命中的对手ID与移动封印1回合",
+   "notes": "原name战不分净污生硬、改取cutin后半这就是战争（5格）。原detail漏译暴击条件的封印对象、按JP整句重译（1ターン=1回合）。"
+  },
+  {
+   "idn": 950,
+   "name_zh": "说了你碍事",
+   "cutin_zh": "都说了你碍事啊啊啊！",
+   "detail_effect_zh": "攻击力增加、封印对方的散开、HP30%以下的攻击目标必定击破",
+   "notes": "原detail攻击+40%系无中生有、解除封印为反义错译；JP无数字（攻撃力を増加）、按JP重译并保留30%。cutin补回うううっ的拖长嘶吼。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x240F0", "zh": "蠢货！特地来送死吗！！"},
+  {"file": "0.bin", "record": "0x24110", "zh": "老夫在打仗呢！"},
+  {"file": "0.bin", "record": "0x2412C", "zh": "哈哈哈！"},
+  {"file": "0.bin", "record": "0x24140", "zh": "别……妨碍老夫！！"},
+  {"file": "0.bin", "record": "0x2415C", "zh": "老夫要毁灭一切！！"},
+  {"file": "0.bin", "record": "0x24178", "zh": "你们……你们懂老夫什么！"},
+  {"file": "0.bin", "record": "0x2419C", "zh": "木星圈是老夫所建！是老夫独力壮大的！"},
+  {"file": "0.bin", "record": "0x241CC", "zh": "敢与杜加奇作对、蠢货！"},
+  {"file": "0.bin", "record": "0x241EC", "zh": "呜哦哦！怎、怎么可能！？老夫竟会败……"},
+  {"file": "0.bin", "record": "0x2421C", "zh": "最后的挣扎？"},
+  {"file": "0.bin", "record": "0x24234", "zh": "老夫……都说了别妨碍老夫！！"},
+  {"file": "0.bin", "record": "0x2425C", "zh": "哼、搞什么？"},
+  {"file": "0.bin", "record": "0x24274", "zh": "想对抗老夫？对抗杜加奇？"},
+  {"file": "0.bin", "record": "0x24298", "zh": "哼！杂鱼乱吠！！"},
+  {"file": "0.bin", "record": "0x242B4", "zh": "呜哦哦！你这混账！！"},
+  {"file": "0.bin", "record": "0x242D4", "zh": "敢弄脏老夫的机体……饶不了你！"},
+  {"file": "0.bin", "record": "0x242FC", "zh": "哈哈！没用的、小子们！！"},
+  {"file": "0.bin", "record": "0x2431C", "zh": "雕虫小技……！！"},
+  {"file": "0.bin", "record": "0x24338", "zh": "雕虫小技……！！"},
+  {"file": "0.bin", "record": "0x24354", "zh": "哈哈哈！你已无力抵抗！！"},
+  {"file": "0.bin", "record": "0x24378", "zh": "等着瞧……这份屈辱老夫必报……"},
+  {"file": "0.bin", "record": "0x243A0", "zh": "别妨碍老夫！"},
+  {"file": "0.bin", "record": "0x26F38", "zh": "『蠢货！特地来送死吗！』"},
+  {"file": "0.bin", "record": "0x26F5C", "zh": "『老夫在打仗呢！』"},
+  {"file": "0.bin", "record": "0x26F8F", "zh": "『呵呵、没用的、吾女……』"},
+  {"file": "0.bin", "record": "0x26FD4", "zh": "『哈哈哈！』"},
+  {"file": "0.bin", "record": "0x26FEC", "zh": "『你开得了枪吗！连吾女一起！？』"},
+  {"file": "0.bin", "record": "0x27030", "zh": "『敢违抗杜加奇的蠢货！一架不留！』"},
+  {"file": "0.bin", "record": "0x27098", "zh": "『哈哈！何必顾忌？朝吾女开枪便是！！』"},
+  {"file": "0.bin", "record": "0x270C8", "zh": "『事到如今还在犹豫吗！蠢货们！！』"},
+  {"file": "0.bin", "record": "0x27164", "zh": "『哈哈哈！那才叫徒劳！』"},
+  {"file": "0.bin", "record": "0x27188", "zh": "『别小看老夫！小子们！』"},
+  {"file": "0.bin", "record": "0x271AC", "zh": "『别小看老夫！小子们！』"},
+  {"file": "0.bin", "record": "0x271D0", "zh": "『那台机体、归老夫所用！』"},
+  {"file": "0.bin", "record": "0x27210", "zh": "『自己送上门来！蠢货们！』"},
+  {"file": "1.bin", "record": "0x1078", "zh": "被红莲之炎烧尽的地球本身！！"},
+  {"file": "1.bin", "record": "0x10FC", "zh": "导弹！？"},
+  {"file": "1.bin", "record": "0x1148", "zh": "毛头小子懂什么！！"},
+  {"file": "1.bin", "record": "0x118C", "zh": "什么！"},
+  {"file": "1.bin", "record": "0x11D4", "zh": "呜哦哦！！"},
+  {"file": "1.bin", "record": "0x11E8", "zh": "呵、呵呵……哈哈哈……"},
+  {"file": "1.bin", "record": "0x1205", "zh": "地、地球在燃烧……一切都……"},
+  {"file": "1.bin", "record": "0x1228", "zh": "哈哈……"}
+ ],
+ "notes": "voice统一：ワシ=老夫（衰老独裁者的自负老人腔）。canon名杜加奇用于台词内自称与他称、与char_60成品一致。1.bin为最终决战（红莲之炎告白、中弹、狂笑幻视地球燃烧而死）、与char_143成品（放心了/你只是内心扭曲的普通人/到此为止）同场景对齐；0x1078为名台词后半、按社区通行译保留红莲之炎与地球本身（icecitynet）、在27字节内成句。所有改动行按每CJK2字节、常用标点1字节、『』1字节（由staging的zh_current_bytes对0x26FD4实测）核算均不超budget_bytes。0x1205理想全句为地球在燃烧……一切都在消失……（超预算、故保留断句式垂死呓语）。"
+}

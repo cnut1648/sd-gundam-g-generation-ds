@@ -1,0 +1,328 @@
+{
+ "entity": "char_195",
+ "kind": "character",
+ "cids": [
+  195
+ ],
+ "name_jp": "ポゥ・エイジ",
+ "name_zh_KEEP": "波·艾吉",
+ "cards": [
+  {
+   "cid": 195,
+   "ids": [
+    {
+     "idn": 585,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8209",
+     "zh_name_ptr": "0x20B8209",
+     "name_jp": "なんと無防備な！",
+     "name_zh_current": "毫无防备",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 466,
+     "cutin_jp": "なんと無防備な！的にしてくださいと言っている！？",
+     "cutin_zh_current": "毫无防备！这是在求我拿你当靶子！？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 586,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8212",
+     "zh_name_ptr": "0x218C428",
+     "name_jp": "前ばかり見てるからだ！",
+     "name_zh_current": "只顾看前方",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避↑＋先制攻撃",
+     "summary_zh_KEEP": "回避↑・先攻",
+     "didx": 136,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が20%上昇、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+20%·先攻",
+     "cutin_group": 467,
+     "cutin_jp": "前ばかり見てるからだ、ボケナス！",
+     "cutin_zh_current": "谁叫你只顾看前面、笨蛋！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 587,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8226",
+     "zh_name_ptr": "0x20B8226",
+     "name_jp": "手ぶらで戻る私ではないわ！",
+     "name_zh_current": "不会空手归",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 468,
+     "cutin_jp": "手ぶらで戻る私ではないわ！",
+     "cutin_zh_current": "我可不会空手而归！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x19FC0",
+   "budget_bytes": 9,
+   "jp": "なめるなーーっ！！",
+   "zh_current": "别小看人！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19FD8",
+   "budget_bytes": 16,
+   "jp": "こっちは本気でやってるんだよ！",
+   "zh_current": "我可是动真格的！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19FF4",
+   "budget_bytes": 14,
+   "jp": "こっちは本気でやってるんだよ！",
+   "zh_current": "我可是认真的！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A010",
+   "budget_bytes": 26,
+   "jp": "逃げ切ろうなんてムシの良い考えは捨てろっ！！",
+   "zh_current": "别打逃跑的如意算盘！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A038",
+   "budget_bytes": 18,
+   "jp": "実戦経験者の強みを見せてやる！",
+   "zh_current": "见识下老兵的厉害！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A058",
+   "budget_bytes": 10,
+   "jp": "回避などさせるかっ！",
+   "zh_current": "休想回避！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A070",
+   "budget_bytes": 9,
+   "jp": "このおーーっ！！",
+   "zh_current": "这家伙！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A088",
+   "budget_bytes": 15,
+   "jp": "コイツッ！ふざけんじゃないよ！",
+   "zh_current": "这家伙！少来！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A0A4",
+   "budget_bytes": 20,
+   "jp": "やっ、やられたぁぁ！？フィル少佐ぁぁ！",
+   "zh_current": "被打中了！？菲尔少佐！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A0C4",
+   "budget_bytes": 19,
+   "jp": "そう簡単にやられる私ではないわっ！",
+   "zh_current": "我可没那么容易输！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A0E4",
+   "budget_bytes": 17,
+   "jp": "こっ……これしきのことおっ！",
+   "zh_current": "这……这点小事！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A104",
+   "budget_bytes": 27,
+   "jp": "クサクサするんだよ……！こんな敵ばかりが相手じゃあ！！",
+   "zh_current": "烦死人了……！！老打这种对手！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A12C",
+   "budget_bytes": 26,
+   "jp": "やられた！？被害は！？次は直撃を食らうのか？",
+   "zh_current": "中弹！？损伤！？下次是直击吗？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A154",
+   "budget_bytes": 25,
+   "jp": "ナマイキな！火力でアタシを撃退しようというのか！",
+   "zh_current": "嚣张！！想用火力击退我吗！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A17C",
+   "budget_bytes": 21,
+   "jp": "こ、こんな武器があるなんて聞いてないぞ！",
+   "zh_current": "没听说过有这种武器啊！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A1A0",
+   "budget_bytes": 21,
+   "jp": "こ、このままじゃ私の面目は丸つぶれだ！",
+   "zh_current": "这样面子要丢光了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A1C4",
+   "budget_bytes": 10,
+   "jp": "ふざけるんじゃないよ！",
+   "zh_current": "别开玩笑！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A1DC",
+   "budget_bytes": 8,
+   "jp": "そんなものでえ！",
+   "zh_current": "区区那种",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A1F0",
+   "budget_bytes": 17,
+   "jp": "……来るぞ！各機、散開しろッ！",
+   "zh_current": "……来了！各机散开！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A210",
+   "budget_bytes": 18,
+   "jp": "コイツー！大人しく捕まれええっ！",
+   "zh_current": "这家伙！乖乖被抓吧！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A230",
+   "budget_bytes": 14,
+   "jp": "なっ！？どうして私がこんな！！",
+   "zh_current": "什么！？怎么会！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A24C",
+   "budget_bytes": 19,
+   "jp": "コイツめっ……！バカにするなぁーっ！",
+   "zh_current": "这家伙……！别小看人！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x67EC",
+   "budget_bytes": 13,
+   "jp": "一斉攻撃だ！やれーっ！！",
+   "zh_current": "一齐攻击！上！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6808",
+   "budget_bytes": 14,
+   "jp": "了解っ！やらせてもらう！！",
+   "zh_current": "明白！上！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6824",
+   "budget_bytes": 12,
+   "jp": "了解です！フィル少佐！！",
+   "zh_current": "明白！菲尔少佐！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x683C",
+   "budget_bytes": 14,
+   "jp": "後は任せろ！ハリー·オード！！",
+   "zh_current": "剩下交给我！哈利！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6858",
+   "budget_bytes": 14,
+   "jp": "了解っ！やらせてもらう！！",
+   "zh_current": "了解！让我来！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6874",
+   "budget_bytes": 14,
+   "jp": "了解っ！やらせてもらう！！",
+   "zh_current": "了解！让我来！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6890",
+   "budget_bytes": 14,
+   "jp": "了解っ！やらせてもらう！！",
+   "zh_current": "了解！让我来！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

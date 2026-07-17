@@ -1,0 +1,588 @@
+{
+ "entity": "char_337",
+ "kind": "character",
+ "cids": [
+  337,
+  338
+ ],
+ "name_jp": "マシュマー・セロ",
+ "name_zh_KEEP": "玛修曼·塞罗",
+ "cards": [
+  {
+   "cid": 337,
+   "ids": [
+    {
+     "idn": 1011,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8BF4",
+     "zh_name_ptr": "0x20B8BF4",
+     "name_jp": "胸のバラにかけておまえを倒す！",
+     "name_zh_current": "以玫瑰起誓",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 676,
+     "cutin_jp": "私は胸のバラにかけておまえを倒す！……覚悟おーっ！",
+     "cutin_zh_current": "我以胸前的玫瑰起誓、打倒你！……觉悟吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1012,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C06",
+     "zh_name_ptr": "0x20B8C06",
+     "name_jp": "ハマーン様のご意思に……",
+     "name_zh_current": "为哈曼大人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 677,
+     "cutin_jp": "ハマーンさまのご意思に沿うことが我々の生きる道なのだ！",
+     "cutin_zh_current": "顺应哈曼大人之意正是我们的活路！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1013,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C12",
+     "zh_name_ptr": "0x218C660",
+     "name_jp": "……あぁハマーン様！",
+     "name_zh_current": "啊哈曼大人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命应减少",
+     "didx": 45,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、反応が30低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·反应-30",
+     "cutin_group": 678,
+     "cutin_jp": "どうかこの子羊に知恵と勇気をお与え下さい……あぁハマーンさま！",
+     "cutin_zh_current": "愿赐此子智慧与勇气啊、哈曼大人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 338,
+   "ids": [
+    {
+     "idn": 1014,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C1B",
+     "zh_name_ptr": "0x20B8C1B",
+     "name_jp": "悪に悪の報いが……！",
+     "name_zh_current": "恶有恶报",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 679,
+     "cutin_jp": "悪に悪の報いが……！罪には罪の報いが下されるのだ！",
+     "cutin_zh_current": "恶有恶报……罪有罪报、必受惩罚！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1015,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C28",
+     "zh_name_ptr": "0x20B8C28",
+     "name_jp": "……この戦、勝てるぞ！",
+     "name_zh_current": "此战能赢！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "ダメージ軽減",
+     "summary_zh_KEEP": "伤害减轻",
+     "didx": 147,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加、愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）装甲+4·伤害减轻",
+     "cutin_group": 680,
+     "cutin_jp": "力を感じる……この戦、勝てるぞ！はははははっ！！",
+     "cutin_zh_current": "我感受到力量了……此战能赢！哈哈哈哈哈！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1016,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C35",
+     "zh_name_ptr": "0x219462D",
+     "name_jp": "子供だましが！",
+     "name_zh_current": "小孩子把戏",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "貫通防御無効",
+     "summary_zh_KEEP": "破防",
+     "didx": 195,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃対象の特殊防御を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）破防",
+     "cutin_group": 681,
+     "cutin_jp": "子供……だましがぁぁぁーっ！",
+     "cutin_zh_current": "区区骗小孩的把戏！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x27238",
+   "budget_bytes": 27,
+   "jp": "向かってくるか……ならば、愛けて立ってくれる！！",
+   "zh_current": "冲过来了……那我便接下挑战！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27260",
+   "budget_bytes": 11,
+   "jp": "よおしいけいッ！！",
+   "zh_current": "好！冲上去！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27278",
+   "budget_bytes": 11,
+   "jp": "よおしいけいッ！！",
+   "zh_current": "好！冲上去！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27290",
+   "budget_bytes": 25,
+   "jp": "ライオンはウサギを倒すにも全力を尽くすのだ！",
+   "zh_current": "狮子捕猎、亦用全力！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x272B8",
+   "budget_bytes": 28,
+   "jp": "私はこのバラの香りに応える使命を持っているのだ！",
+   "zh_current": "我要不负这朵玫瑰的荣耀！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x272E0",
+   "budget_bytes": 12,
+   "jp": "マシュマー·セロ……参る！！",
+   "zh_current": "玛修曼、参上！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x272F8",
+   "budget_bytes": 27,
+   "jp": "ハマーンさまの騎士である我が名誉にかけて……行くぞ！！",
+   "zh_current": "我乃哈曼大人的骑士、赌上荣誉！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27320",
+   "budget_bytes": 15,
+   "jp": "いざ！正々堂々と勝負！！",
+   "zh_current": "堂堂正正决胜负！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2733C",
+   "budget_bytes": 32,
+   "jp": "おわーっ！ババラが……ハマーン様から超いた大切なバラがー！",
+   "zh_current": "哇啊！玫、玫瑰……哈曼大人赐的玫瑰！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27368",
+   "budget_bytes": 11,
+   "jp": "ええい！悪あがきをっ！！",
+   "zh_current": "还想挣扎！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27380",
+   "budget_bytes": 22,
+   "jp": "ええいっ！私は負けるわけにはいかんのだ！",
+   "zh_current": "可恶！我绝不能输！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x273A4",
+   "budget_bytes": 16,
+   "jp": "火照った身体に心地よいわ！！",
+   "zh_current": "正合我这火热的身体！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x273C0",
+   "budget_bytes": 15,
+   "jp": "ほう！少しはやるようだな！！",
+   "zh_current": "哦！倒有几分本事！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x273DC",
+   "budget_bytes": 24,
+   "jp": "はははっ！そう来なくては戦う甲費もない！",
+   "zh_current": "哈哈哈！这才值得一战！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27400",
+   "budget_bytes": 14,
+   "jp": "なっ、なにいい〜っ！？",
+   "zh_current": "什、什么！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2741C",
+   "budget_bytes": 28,
+   "jp": "こっ……この程度で私がたじろぐとは思うな〜っ！！",
+   "zh_current": "这……这点程度、休想让我退缩！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27444",
+   "budget_bytes": 33,
+   "jp": "騎士道精神にはそむくがこれも社会を正すため……許されよ！",
+   "zh_current": "虽有违骑士道、为正世道……请见谅！！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27474",
+   "budget_bytes": 18,
+   "jp": "おのれっ！遠距離攻撃とは卑怯な！！",
+   "zh_current": "可恶！放冷箭真无耻！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27494",
+   "budget_bytes": 31,
+   "jp": "ハマーンさまからいただいた機体、一機たりとも傷つけてはならんぞ！！",
+   "zh_current": "哈曼大人赐予的机体、绝不容毁损！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x274C0",
+   "budget_bytes": 27,
+   "jp": "その機体を無傷で手に入れ、ハマーン様に献上するのだ！",
+   "zh_current": "要无伤夺下机体、献给哈曼大人！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x274E8",
+   "budget_bytes": 33,
+   "jp": "え、ええい！離せ！離せ！！正々堂々と勝負しろっ！！",
+   "zh_current": "可恶！放开！放开！给我堂堂正正地打！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27518",
+   "budget_bytes": 14,
+   "jp": "なにをするっ！無礼者っ！！",
+   "zh_current": "干什么！好无礼！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1.bin",
+   "record": "0x408",
+   "budget_bytes": 14,
+   "jp": "ハマーンさまが馬の骨だと！？",
+   "zh_current": "敢辱哈曼大人！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x422",
+   "budget_bytes": 29,
+   "jp": "貴様こそディアナの尻を追いかけてるだけの男だろうに！",
+   "zh_current": "你才是整天追着迪安娜屁股跑的！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1.bin",
+   "record": "0x490",
+   "budget_bytes": 14,
+   "jp": "尻といってどこが悪い！！",
+   "zh_current": "那又有何不可！！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1.bin",
+   "record": "0x4AA",
+   "budget_bytes": 25,
+   "jp": "ハマーンさまに比べればディアナなど月とスッボン！！",
+   "zh_current": "迪安娜哪比得上哈曼大人！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1.bin",
+   "record": "0x510",
+   "budget_bytes": 11,
+   "jp": "へ、へんな髪型だと！？",
+   "zh_current": "说我发型怪！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1.bin",
+   "record": "0x527",
+   "budget_bytes": 27,
+   "jp": "度重なるハマーンさまへの侮辱……もはや許さん！！",
+   "zh_current": "屡次侮辱哈曼大人、绝不轻饶！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1.bin",
+   "record": "0x550",
+   "budget_bytes": 38,
+   "jp": "己の肉が骨からそぎ取れようと貴様だけは討ち取ってくれる！！",
+   "zh_current": "纵使血肉从骨上被削尽、也要取你性命！！",
+   "zh_current_bytes": 35
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27534",
+   "budget_bytes": 17,
+   "jp": "向かってくるか！命知らずめ！",
+   "zh_current": "敢冲过来！不要命了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27554",
+   "budget_bytes": 27,
+   "jp": "私は力を手にしたのだ！貴様らごときに負けはせん！！",
+   "zh_current": "力量在我手！！岂会输给你们！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2757C",
+   "budget_bytes": 28,
+   "jp": "我々に逆らうというならここが貴様の死に場所となる！！",
+   "zh_current": "敢违抗我们、这就是你的死地！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x275A4",
+   "budget_bytes": 26,
+   "jp": "ネオ·ジオンの栄光……貴様らごときにやらせはせん！",
+   "zh_current": "新吉翁之荣岂能让你们碰！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x275CC",
+   "budget_bytes": 28,
+   "jp": "さあ、かかって来い！一機残らず叩き落してくれる！！",
+   "zh_current": "放马过来！一架不剩全部击落！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x275F4",
+   "budget_bytes": 27,
+   "jp": "勝利は我らネオ·ジオンのものだ！邪魔立てはさせん！！",
+   "zh_current": "胜利属于新吉翁！休想妨碍！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2761C",
+   "budget_bytes": 31,
+   "jp": "ネオ·ジオンの騎士である私が貴様らに負けるはずはないのだ！！",
+   "zh_current": "新吉翁的骑士怎会输给你们！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27648",
+   "budget_bytes": 28,
+   "jp": "ハマーンさまに逆らう愚か者め！このマシュマーが成敗してくれる！",
+   "zh_current": "敢逆哈曼大人、由我来处决！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27670",
+   "budget_bytes": 14,
+   "jp": "！…ハマーンさま、バンザーイ！！",
+   "zh_current": "哈曼大人万岁！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2768C",
+   "budget_bytes": 13,
+   "jp": "ふんっ！無駄な抵抗を！！",
+   "zh_current": "哼！无谓抵抗！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x276A8",
+   "budget_bytes": 16,
+   "jp": "倒れるわけにはいかんのだーっ！",
+   "zh_current": "我绝不能倒下！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x276C4",
+   "budget_bytes": 17,
+   "jp": "ええい！五月蝿いャツめ！！",
+   "zh_current": "可恶！烦人的家伙！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x276E4",
+   "budget_bytes": 14,
+   "jp": "ええい！これしきのこと！！",
+   "zh_current": "可恶！这种程度！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27700",
+   "budget_bytes": 9,
+   "jp": "まだ、まだぁーっ！",
+   "zh_current": "还没完！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27718",
+   "budget_bytes": 17,
+   "jp": "ぬうっ！くっ…しかし……！！",
+   "zh_current": "唔！可、可是……！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27738",
+   "budget_bytes": 24,
+   "jp": "このマシュマー·セロ……この程度で倒れはせんっ！！",
+   "zh_current": "我玛修曼……岂会就此倒下！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2775C",
+   "budget_bytes": 13,
+   "jp": "ええい！無駄な抵抗を！！",
+   "zh_current": "无谓的抵抗！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27778",
+   "budget_bytes": 4,
+   "jp": "悪あがきを！",
+   "zh_current": "徒劳",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27788",
+   "budget_bytes": 19,
+   "jp": "各機、散開だ！この私に続けいっ！！",
+   "zh_current": "散开！！跟我上！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x277A8",
+   "budget_bytes": 27,
+   "jp": "この機体を無傷で手に入れ、ハマーン様に献上するのだ！",
+   "zh_current": "无伤夺下机体、献予哈曼大人！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x277D0",
+   "budget_bytes": 21,
+   "jp": "この姿は……ハマーン様には見せられぬ……",
+   "zh_current": "这模样……没脸见大人……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x277F4",
+   "budget_bytes": 17,
+   "jp": "貴様らなどに捕まる私ではないわっ！",
+   "zh_current": "我才不会被你们抓！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

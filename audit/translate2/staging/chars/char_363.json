@@ -1,0 +1,488 @@
+{
+ "entity": "char_363",
+ "kind": "character",
+ "cids": [
+  363,
+  364
+ ],
+ "name_jp": "レギオン",
+ "name_zh_KEEP": "军团",
+ "cards": [
+  {
+   "cid": 363,
+   "ids": [
+    {
+     "idn": 1089,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B87F5",
+     "zh_name_ptr": "0x20B87F5",
+     "name_jp": "焼かれなさい……メギドの火に",
+     "name_zh_current": "米吉多之火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 721,
+     "cutin_jp": "焼かれなさい……メギドの火に",
+     "cutin_zh_current": "燃尽吧……在米吉多之火中",
+     "name_owner": false,
+     "name_shared_with_idn": 768,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1090,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8E25",
+     "zh_name_ptr": "0x20B8E25",
+     "name_jp": "……T",
+     "name_zh_current": "恶者堕烈火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵威力減少",
+     "summary_zh_KEEP": "敌威命回减",
+     "didx": 85,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%攻击-30%",
+     "cutin_group": 722,
+     "cutin_jp": "……悪しき者は火と硫黄の池に",
+     "cutin_zh_current": "……恶者必堕火与硫磺之池",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_141",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 364,
+   "ids": [
+    {
+     "idn": 1092,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B87F5",
+     "zh_name_ptr": "0x20B87F5",
+     "name_jp": "焼かれなさい……メギドの火に",
+     "name_zh_current": "米吉多之火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 724,
+     "cutin_jp": "焼かれなさい……メギドの火に",
+     "cutin_zh_current": "燃尽吧……在米吉多之火中",
+     "name_owner": false,
+     "name_shared_with_idn": 768,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1093,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8E25",
+     "zh_name_ptr": "0x20B8E25",
+     "name_jp": "……T",
+     "name_zh_current": "恶者堕烈火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命回减",
+     "didx": 85,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%攻击-30%",
+     "cutin_group": 725,
+     "cutin_jp": "……悪しき者は火と硫黄の池に",
+     "cutin_zh_current": "……恶者必堕火与硫磺之池",
+     "name_owner": true,
+     "name_shared_with_idn": 1090,
+     "detail_owner": false,
+     "detail_owned_by": "char_141",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2A024",
+   "budget_bytes": 19,
+   "jp": "見なさい……私は盗人のように来る",
+   "zh_current": "看哪……我将如贼而来",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A044",
+   "budget_bytes": 17,
+   "jp": "逝きなさい……裁かれし者たちよ",
+   "zh_current": "逝去吧……受裁决之人",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A064",
+   "budget_bytes": 25,
+   "jp": "砕きましょう……陶工が器を砕くように",
+   "zh_current": "粉碎吧……像陶工碎瓦罐一样",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A08C",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A09C",
+   "budget_bytes": 17,
+   "jp": "逝きなさい……裁かれし者たちよ",
+   "zh_current": "逝去吧……受裁者们",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A0BC",
+   "budget_bytes": 20,
+   "jp": "剣で殺されるべき者は剣で……",
+   "zh_current": "当死于剑者、必死于剑……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A0DC",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A0EC",
+   "budget_bytes": 20,
+   "jp": "刈り入れましょう……ブドウの房を",
+   "zh_current": "来收成吧……这些果实",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A10C",
+   "budget_bytes": 23,
+   "jp": "損失ではない……ひとつの部分が欠けただけ……",
+   "zh_current": "非损失……只是缺一角……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A130",
+   "budget_bytes": 4,
+   "jp": "……無駄",
+   "zh_current": "没用",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A140",
+   "budget_bytes": 6,
+   "jp": "これ……は？",
+   "zh_current": "这是？",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A154",
+   "budget_bytes": 26,
+   "jp": "その者、見れども見えず聞けども決して認めない……",
+   "zh_current": "那人、视而不见、听而不闻……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A17C",
+   "budget_bytes": 12,
+   "jp": "見なさい……私はすぐに来る",
+   "zh_current": "看哪……我必快来",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A194",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A1A8",
+   "budget_bytes": 6,
+   "jp": "！？…………",
+   "zh_current": "！？…………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A1BC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A1D0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A1E4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A1F8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A20C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A220",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A234",
+   "budget_bytes": 13,
+   "jp": "愚かな者は愚かなままに……",
+   "zh_current": "愚者恒愚……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A250",
+   "budget_bytes": 19,
+   "jp": "見なさい……私は盗人のように来る",
+   "zh_current": "看哪……我将如贼而来",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A270",
+   "budget_bytes": 17,
+   "jp": "逝きなさい……裁かれし者たちよ",
+   "zh_current": "逝去吧……受裁决之人",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A290",
+   "budget_bytes": 25,
+   "jp": "砕きましょう……陶工が器を砕くように",
+   "zh_current": "粉碎吧……像陶工碎瓦罐一样",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A2B8",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A2C8",
+   "budget_bytes": 17,
+   "jp": "逝きなさい……裁かれし者たちよ",
+   "zh_current": "逝去吧……受裁者们",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A2E8",
+   "budget_bytes": 20,
+   "jp": "剣で殺されるべき者は剣で……",
+   "zh_current": "当死于剑者、必死于剑……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A308",
+   "budget_bytes": 20,
+   "jp": "刈り入れましょう……ブドウの房を",
+   "zh_current": "来收成吧……这些果实",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A328",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A338",
+   "budget_bytes": 23,
+   "jp": "損失ではない……ひとつの部分が欠けただけ……",
+   "zh_current": "非损失……只是缺一角……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A35C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A370",
+   "budget_bytes": 23,
+   "jp": "ひとつが倒れても替わりは無数にあるのです……",
+   "zh_current": "倒下一个、替补无数……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A394",
+   "budget_bytes": 26,
+   "jp": "その者、見れども見えず聞けども決して認めない……",
+   "zh_current": "那人、视而不见、听而不闻……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A3BC",
+   "budget_bytes": 12,
+   "jp": "見なさい……私はすぐに来る",
+   "zh_current": "看哪……我必快来",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A3D4",
+   "budget_bytes": 18,
+   "jp": "答えましょう……「私はそれだ」と",
+   "zh_current": "来战吧……我即是那存在",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A3F4",
+   "budget_bytes": 3,
+   "jp": "ッ！？",
+   "zh_current": "唔！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A404",
+   "budget_bytes": 12,
+   "jp": "これは全体の小さなひとつ……",
+   "zh_current": "不过大局一角……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A41C",
+   "budget_bytes": 15,
+   "jp": "おやめなさい……無益な抵抗は",
+   "zh_current": "住手吧……无益抵抗",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A438",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A44C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A460",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A474",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A488",
+   "budget_bytes": 13,
+   "jp": "愚かな者は愚かなままに……",
+   "zh_current": "愚者恒愚……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x2AC",
+   "budget_bytes": 10,
+   "jp": "オーバーブースト……",
+   "zh_current": "过载推进……",
+   "zh_current_bytes": 10
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "entity": "unit_46",
+ "kind": "unit",
+ "utids": [
+  46,
+  47,
+  48
+ ],
+ "name_jp": "フルアーマーZZ",
+ "name_zh_current": "全装甲ZZ",
+ "name_zh_px": 52,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB0F",
+   "jp": "ダブル・ビーム・ライフル",
+   "zh_current": "双管光束步枪",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CB1C",
+   "jp": "ハイパー・ビームサーベル",
+   "zh_current": "高能光束军刀",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CAA9",
+   "jp": "ハイ・メガ・キャノン",
+   "zh_current": "高能米加加农炮",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 15,
+   "record_offset": "0x170",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "フルアーマーシステム（解除可能）"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "全装甲系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E86",
+   "jp": "ビームコート",
+   "zh_current": "光束涂层",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 2,
+   "record_offset": "0x44",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "威力250までのビーム属性の攻撃を無効化し、",
+    "それを超える場合ダメージを20%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力250以下",
+    "光束攻击无效",
+    "超过则减20%"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

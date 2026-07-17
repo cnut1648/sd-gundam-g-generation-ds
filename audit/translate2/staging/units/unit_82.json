@@ -1,0 +1,64 @@
+{
+ "entity": "unit_82",
+ "kind": "unit",
+ "utids": [
+  82,
+  83,
+  84
+ ],
+ "name_jp": "イージスガンダム／ダウン",
+ "name_zh_current": "圣盾高达／解除",
+ "name_zh_px": 80,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C9CE",
+   "jp": "スキュラ",
+   "zh_current": "斯库拉加农炮",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 27,
+   "record_offset": "0x2a4",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

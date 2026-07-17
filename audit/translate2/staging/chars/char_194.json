@@ -1,0 +1,264 @@
+{
+ "entity": "char_194",
+ "kind": "character",
+ "cids": [
+  194
+ ],
+ "name_jp": "ヘンケン・ベッケナー",
+ "name_zh_KEEP": "汉肯·贝克纳",
+ "cards": [
+  {
+   "cid": 194,
+   "ids": [
+    {
+     "idn": 582,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 463,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "米诺夫斯基粒子散布！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 583,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B81F1",
+     "zh_name_ptr": "0x20B81F1",
+     "name_jp": "本艦を盾にしろ！",
+     "name_zh_current": "本舰当盾！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲装甲↑",
+     "summary_zh_KEEP": "范围装甲↑",
+     "didx": 101,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）装甲+2",
+     "cutin_group": 464,
+     "cutin_jp": "本艦を盾にしろ！",
+     "cutin_zh_current": "用本舰当盾牌！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_26",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 584,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B81FB",
+     "zh_name_ptr": "0x20B81FB",
+     "name_jp": "死に急ぐんじゃないぞ！",
+     "name_zh_current": "别急着送死",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲HP回復",
+     "summary_zh_KEEP": "范围HP回复",
+     "didx": 6,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）自分を除く仲間のHPが25%回復する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）恢复25%",
+     "cutin_group": 465,
+     "cutin_jp": "死に急ぐんじゃないぞ！",
+     "cutin_zh_current": "别急着送死！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x19C9C",
+   "budget_bytes": 14,
+   "jp": "来たぞ！このまま突っ込めーっ！",
+   "zh_current": "来了！冲过去！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19CB8",
+   "budget_bytes": 11,
+   "jp": "よしっ！一斉射撃用意！",
+   "zh_current": "好！准备齐射！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19CD0",
+   "budget_bytes": 18,
+   "jp": "発射用意！敵に照準を合わせろ！",
+   "zh_current": "准备发射！瞄准！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D0C",
+   "budget_bytes": 29,
+   "jp": "ジグザグに航行をとりつつ対空戦！敵を寄せ付けるな！",
+   "zh_current": "之字航行、对空战！别让敌人靠近！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D38",
+   "budget_bytes": 19,
+   "jp": "よーく狙えよ！……てえーっ！！",
+   "zh_current": "瞄准了！……开火！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D58",
+   "budget_bytes": 10,
+   "jp": "聞こえてるか？撃てよ！",
+   "zh_current": "听到没？打！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D70",
+   "budget_bytes": 16,
+   "jp": "反撃を許すなよ！撃てーっ！",
+   "zh_current": "别让他反击！开火！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D8C",
+   "budget_bytes": 12,
+   "jp": "かまわん！突撃しろっ！",
+   "zh_current": "无所谓！突击！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19DA4",
+   "budget_bytes": 29,
+   "jp": "くそおおおーっ！止むを得ん！総員、退艦用意！",
+   "zh_current": "可恶！没办法！全员准备弃舰！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19E0C",
+   "budget_bytes": 23,
+   "jp": "こんな所でこの船を沈めるわけにはいかん！",
+   "zh_current": "这艘船、不能沉在这里！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19E30",
+   "budget_bytes": 15,
+   "jp": "かすった程度だ！反撃用意！",
+   "zh_current": "擦伤而已！反击！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19E62",
+   "budget_bytes": 29,
+   "jp": "対空砲火、絶やすな！敵は待っちゃあくれないぞ！",
+   "zh_current": "对空炮火别停！敌人可不等人！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19E8C",
+   "budget_bytes": 12,
+   "jp": "クソッ、逃げ切れんか！",
+   "zh_current": "可恶、逃不掉！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19EA4",
+   "budget_bytes": 24,
+   "jp": "くっ、いかん！対空砲火を上げつつ後退！！",
+   "zh_current": "不妙！边打对空炮边后退！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19EC8",
+   "budget_bytes": 20,
+   "jp": "くっ……まだ落ちてくれるなよ……！！",
+   "zh_current": "唔……可别再坠了……！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F0C",
+   "budget_bytes": 11,
+   "jp": "よし！よくやった！",
+   "zh_current": "好！干得好！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F24",
+   "budget_bytes": 14,
+   "jp": "来るぞお！全速で回避しろ！",
+   "zh_current": "来了！全速回避！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F40",
+   "budget_bytes": 14,
+   "jp": "攻撃、来るぞ！回避しろ！",
+   "zh_current": "敌袭！回避！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F5C",
+   "budget_bytes": 12,
+   "jp": "いいぞ！目標を捕縛しろ！",
+   "zh_current": "好！捕获目标！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F74",
+   "budget_bytes": 26,
+   "jp": "くっ……！情けない……！これじゃあ、エマ中尉とも……",
+   "zh_current": "不能输……没脸见爱玛中尉……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19F9C",
+   "budget_bytes": 21,
+   "jp": "まだだ！まだ沈んだわけじゃないんだ！",
+   "zh_current": "还没！本舰还没沉！",
+   "zh_current_bytes": 15
+  }
+ ]
+}

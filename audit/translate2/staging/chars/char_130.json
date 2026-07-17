@@ -1,0 +1,328 @@
+{
+ "entity": "char_130",
+ "kind": "character",
+ "cids": [
+  130
+ ],
+ "name_jp": "ソシエ・ハイム",
+ "name_zh_KEEP": "索希耶·海姆",
+ "cards": [
+  {
+   "cid": 130,
+   "ids": [
+    {
+     "idn": 390,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C00",
+     "zh_name_ptr": "0x20B7C00",
+     "name_jp": "この分からず屋ぁーっ！！",
+     "name_zh_current": "你这死脑筋",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 307,
+     "cutin_jp": "この分からず屋ぁーっ！！",
+     "cutin_zh_current": "你这个死脑筋！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 391,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C0E",
+     "zh_name_ptr": "0x20B7C0E",
+     "name_jp": "気合でカバーするのよ！",
+     "name_zh_current": "用气势弥补",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームSP回復",
+     "summary_zh_KEEP": "队・SP回复",
+     "didx": 13,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）自分を除く仲間のSPが10回復する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）SP恢复10%",
+     "cutin_group": 308,
+     "cutin_jp": "戦力が足りない分は気合でカバーするのよ！……精神力っ！",
+     "cutin_zh_current": "战力不足之处就用气势弥补……精神力！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 392,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7C21",
+     "zh_name_ptr": "0x20B7C21",
+     "name_jp": "あんたは月の味方かぁーっ！",
+     "name_zh_current": "你帮月亮吗",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威甲减少",
+     "didx": 121,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）攻撃力が30%減少、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）攻击-30%·装甲-3",
+     "cutin_group": 309,
+     "cutin_jp": "あんたは月の味方かぁーっ！",
+     "cutin_zh_current": "你是月亮那边的吗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x10BBC",
+   "budget_bytes": 12,
+   "jp": "そっちがそう来るならっ！！",
+   "zh_current": "你既然这样！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10BD4",
+   "budget_bytes": 8,
+   "jp": "撃つぞおーっ！",
+   "zh_current": "开火了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10BE8",
+   "budget_bytes": 8,
+   "jp": "撃つぞおーっ！",
+   "zh_current": "开火啦！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10BFC",
+   "budget_bytes": 6,
+   "jp": "当たれーっ！",
+   "zh_current": "中啊！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C10",
+   "budget_bytes": 15,
+   "jp": "やってみせるわ、あたしの腕で！",
+   "zh_current": "让你瞧瞧我本事",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C2C",
+   "budget_bytes": 10,
+   "jp": "あたしだってこれくらいは！",
+   "zh_current": "我也办得到！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C44",
+   "budget_bytes": 13,
+   "jp": "女のカンは冴えてるのよ！",
+   "zh_current": "女人的直觉很准！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C60",
+   "budget_bytes": 7,
+   "jp": "見てなさいよ！",
+   "zh_current": "瞧好了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C74",
+   "budget_bytes": 25,
+   "jp": "お父さま……貴方の娘は立派に戦いました……",
+   "zh_current": "父亲大人……女儿英勇奋战了",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10C9C",
+   "budget_bytes": 7,
+   "jp": "なめるなーっ！",
+   "zh_current": "少小看我！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10CB0",
+   "budget_bytes": 12,
+   "jp": "お父様が守ってくださる！",
+   "zh_current": "父亲会保护我！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10CC8",
+   "budget_bytes": 7,
+   "jp": "これっぽっち！",
+   "zh_current": "看这招！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10CDC",
+   "budget_bytes": 12,
+   "jp": "まずい！前へ出すぎた！！",
+   "zh_current": "糟！冲太前了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10CF4",
+   "budget_bytes": 8,
+   "jp": "……やったわね！",
+   "zh_current": "……竟敢！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D08",
+   "budget_bytes": 20,
+   "jp": "よくも！……倍にして返してやる！",
+   "zh_current": "竟敢……！我要加倍奉还！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D28",
+   "budget_bytes": 19,
+   "jp": "ウッ！これじゃあバカみたいじゃない！",
+   "zh_current": "唔！这样我像个傻子！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D48",
+   "budget_bytes": 13,
+   "jp": "そんなの効かないんだからね！",
+   "zh_current": "那种没用啦！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D64",
+   "budget_bytes": 13,
+   "jp": "当たってたまるものですか！",
+   "zh_current": "怎能被打中！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D80",
+   "budget_bytes": 12,
+   "jp": "来るわよ！回避ーっ！！",
+   "zh_current": "来了！回避！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10D98",
+   "budget_bytes": 13,
+   "jp": "コイツ！捕まえてやるーっ！！",
+   "zh_current": "看我抓住你！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10DB4",
+   "budget_bytes": 23,
+   "jp": "こんなんじゃあ、お父様の敵も討てやしない……",
+   "zh_current": "这样、连父仇都报不了……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10DD8",
+   "budget_bytes": 8,
+   "jp": "何よ！うるさーい！",
+   "zh_current": "吵死了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4E30",
+   "budget_bytes": 20,
+   "jp": "アイツらを倒すのよ！それえーーっ！",
+   "zh_current": "打倒它们！！上啊！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4E50",
+   "budget_bytes": 8,
+   "jp": "私もやるわっ！！",
+   "zh_current": "我也上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4E64",
+   "budget_bytes": 23,
+   "jp": "アンタの面倒くらいきっちり、見てあげるわよ！！",
+   "zh_current": "你那点麻烦、我全包了！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4E88",
+   "budget_bytes": 8,
+   "jp": "私もやるわっ！！",
+   "zh_current": "我也上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4E9C",
+   "budget_bytes": 8,
+   "jp": "私もやるわっ！！",
+   "zh_current": "我也上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4EB0",
+   "budget_bytes": 8,
+   "jp": "私もやるわっ！！",
+   "zh_current": "我也上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4EC4",
+   "budget_bytes": 8,
+   "jp": "私もやるわっ！！",
+   "zh_current": "我也上！！",
+   "zh_current_bytes": 6
+  }
+ ]
+}

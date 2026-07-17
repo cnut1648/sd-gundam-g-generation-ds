@@ -1,0 +1,71 @@
+{
+ "entity": "unit_430",
+ "kind": "unit",
+ "utids": [
+  430,
+  431,
+  432
+ ],
+ "name_jp": "バウ",
+ "name_zh_current": "龙飞",
+ "name_zh_px": 24,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218E8D2",
+   "jp": "シールド・メガ粒子砲",
+   "zh_current": "盾米加粒子炮",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F1AE",
+   "jp": "ミサイル",
+   "zh_current": "导弹",
+   "shared_by_n_units": 25
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 143,
+   "record_offset": "0x8f4",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

@@ -1,0 +1,328 @@
+{
+ "entity": "char_111",
+ "kind": "character",
+ "cids": [
+  111
+ ],
+ "name_jp": "シロー（ハイパー）",
+ "name_zh_KEEP": "士郎（强化）",
+ "cards": [
+  {
+   "cid": 111,
+   "ids": [
+    {
+     "idn": 333,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79B4",
+     "zh_name_ptr": "0x218FF04",
+     "name_jp": "仲間のためなら戦える！",
+     "name_zh_current": "为同伴而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 68,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+20%",
+     "cutin_group": 250,
+     "cutin_jp": "連邦のためじゃない……それでも！仲間のためなら戦える！",
+     "cutin_zh_current": "不是为了联邦……即使如此！为了同伴我也能战斗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 334,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79C0",
+     "zh_name_ptr": "0x218C18D",
+     "name_jp": "生きてアイナと添い遂げる！！",
+     "name_zh_current": "与爱娜共生",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 247,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力が大幅に強化、愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "",
+     "cutin_group": 251,
+     "cutin_jp": "オレは生きる！生きてアイナと添い遂げる！！",
+     "cutin_zh_current": "我要活下去！活着与爱娜白头到老！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 335,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79CF",
+     "zh_name_ptr": "0x20B79CF",
+     "name_jp": "背負っていこう……二人で！！",
+     "name_zh_current": "二人共背负",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・战斗力↑",
+     "didx": 112,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）アイナがチームにいる時、攻撃能力と防御力を大幅に強化する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%·回避+40%攻击+40%·装甲+4",
+     "cutin_group": 252,
+     "cutin_jp": "背負っていこう……二人で！！",
+     "cutin_zh_current": "一同背负下去……两人一起！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xDAF0",
+   "budget_bytes": 20,
+   "jp": "みんなをやらせるわけにはいかないんだ！",
+   "zh_current": "决不能让大家被打倒！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDB10",
+   "budget_bytes": 12,
+   "jp": "戦い方は……あるはずだ！",
+   "zh_current": "总有办法的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDB28",
+   "budget_bytes": 12,
+   "jp": "戦い方は……あるはずだ！",
+   "zh_current": "总有办法的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDB40",
+   "budget_bytes": 23,
+   "jp": "オレは決めたんだ！アイナと共に生きると！！",
+   "zh_current": "我决定了！和爱娜活下去！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDB64",
+   "budget_bytes": 19,
+   "jp": "ここから先へは……行かせるものか！",
+   "zh_current": "休想再前进一步！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDB84",
+   "budget_bytes": 24,
+   "jp": "アイナが待ってくれている！負けられないんだ！",
+   "zh_current": "爱娜还在等着我！我不能输！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDBA8",
+   "budget_bytes": 17,
+   "jp": "いちかばちか……やってみる！！",
+   "zh_current": "豁出去了……拼了！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDBC8",
+   "budget_bytes": 18,
+   "jp": "お前たちの好きにはさせるものか！",
+   "zh_current": "绝不能让你们得逞！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDBE8",
+   "budget_bytes": 16,
+   "jp": "クッ……！すまない、アイナ……",
+   "zh_current": "唔……！抱歉、爱娜……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC04",
+   "budget_bytes": 8,
+   "jp": "……敵も必死だ！",
+   "zh_current": "敌人也急！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC18",
+   "budget_bytes": 23,
+   "jp": "必ず生き延びてみせる！そうだろう……アイナ？",
+   "zh_current": "我要活下去！对吧……爱娜？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC3C",
+   "budget_bytes": 7,
+   "jp": "こんなもの……！",
+   "zh_current": "就这点！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC50",
+   "budget_bytes": 6,
+   "jp": "……まだまだッ！",
+   "zh_current": "还早！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC64",
+   "budget_bytes": 8,
+   "jp": "……これくらいで！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC78",
+   "budget_bytes": 11,
+   "jp": "さ、さすがにキツいな……",
+   "zh_current": "果然挺吃力……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDC90",
+   "budget_bytes": 23,
+   "jp": "ま、負けるもんか！オレは……オレは生きる！",
+   "zh_current": "怎能输！我……我要活下去！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDCB4",
+   "budget_bytes": 17,
+   "jp": "もう退くんだ！これ以上は無意味だ！",
+   "zh_current": "快撤！再打也没用！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDCD4",
+   "budget_bytes": 9,
+   "jp": "……当たるものか！",
+   "zh_current": "……打不中！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDCEC",
+   "budget_bytes": 17,
+   "jp": "来たぞ！！各機、散開するんだ！",
+   "zh_current": "来了！！各机散开！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDD0C",
+   "budget_bytes": 23,
+   "jp": "……投降しろ！命を粗末にするんじゃない！",
+   "zh_current": "……投降吧！别白白送命！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDD30",
+   "budget_bytes": 21,
+   "jp": "くそっ、動け！動いてくれええ……！",
+   "zh_current": "可恶、动起来！快给我动！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDD54",
+   "budget_bytes": 18,
+   "jp": "まだだ！まだ、終わっちゃいない！",
+   "zh_current": "还没！决不放弃！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3EC4",
+   "budget_bytes": 12,
+   "jp": "やるんだ！俺たちで！！",
+   "zh_current": "上！靠我们来干！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3EDC",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3EF8",
+   "budget_bytes": 12,
+   "jp": "ああ、やろう！アイナ！！",
+   "zh_current": "嗯、上吧、爱娜！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F10",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F2C",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F48",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F64",
+   "budget_bytes": 14,
+   "jp": "よし！コッチは任せてくれ！！",
+   "zh_current": "好！这边交给我！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

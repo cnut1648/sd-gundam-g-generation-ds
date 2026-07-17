@@ -1,0 +1,328 @@
+{
+ "entity": "char_106",
+ "kind": "character",
+ "cids": [
+  106
+ ],
+ "name_jp": "ジュドー（ハイパー）",
+ "name_zh_KEEP": "捷多（强化）",
+ "cards": [
+  {
+   "cid": 106,
+   "ids": [
+    {
+     "idn": 318,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7935",
+     "zh_name_ptr": "0x20B7935",
+     "name_jp": "憎しみを育てる血を吐き出せ！",
+     "name_zh_current": "吐出仇恨血",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 235,
+     "cutin_jp": "憎しみを生むもの……憎しみを育てる血を吐き出せっ！",
+     "cutin_zh_current": "生出仇恨之物……吐出养育仇恨之血！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 319,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7945",
+     "zh_name_ptr": "0x218C14B",
+     "name_jp": "つぶされてたまるか！",
+     "name_zh_current": "不容粉碎",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 236,
+     "cutin_jp": "人間の可能性を、ちっぽけな自己満足のためにつぶされてたまるか！",
+     "cutin_zh_current": "人类的可能性、岂能为区区自我满足而被粉碎！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 320,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7950",
+     "zh_name_ptr": "0x20B7950",
+     "name_jp": "『怒りといらだちは理由になる』",
+     "name_zh_current": "怒火即理由",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "战斗力↑",
+     "didx": 97,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·反应+20·装甲+2",
+     "cutin_group": 237,
+     "cutin_jp": "『その君の勧から発した怒りといらだちは理由になる！』",
+     "cutin_zh_current": "你心中生出的怒火与烦躁、都能成为理由！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xCD64",
+   "budget_bytes": 14,
+   "jp": "いつまでも好きにさせるかーっ！！",
+   "zh_current": "休想一直得逞！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCD80",
+   "budget_bytes": 15,
+   "jp": "自分の頭だけで考えるなっ！！",
+   "zh_current": "别光用脑袋想事！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCD9C",
+   "budget_bytes": 8,
+   "jp": "消えろよーっ！！",
+   "zh_current": "消失吧！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCDB0",
+   "budget_bytes": 31,
+   "jp": "アンタみたいな人間は倒さなきゃ地球に明日は見えないんだよ！",
+   "zh_current": "不打倒你这种人、地球就没有明天！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCDDC",
+   "budget_bytes": 25,
+   "jp": "戦いはつらいだけだって、見ててわかんないのかっ！",
+   "zh_current": "战斗只有痛苦、看不出来吗！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCE04",
+   "budget_bytes": 35,
+   "jp": "誰でも彼でも巻き添えにして！許せないんだよ！お前らーーっ！",
+   "zh_current": "不管是谁都卷进来！我绝不饶你们！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCE34",
+   "budget_bytes": 33,
+   "jp": "何が戦争だ！そんなにしたいのならオマエらだけで勝手にやればいい！",
+   "zh_current": "什么战争！想打的话你们自己打！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCE64",
+   "budget_bytes": 25,
+   "jp": "アンタは危険なんだ！悪いけど……止めを刺す！",
+   "zh_current": "你太危险了！恕我了结你！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCE8C",
+   "budget_bytes": 22,
+   "jp": "ひ、光！？光が…広がってく……！？",
+   "zh_current": "光、光！？光在扩散！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCEB0",
+   "budget_bytes": 3,
+   "jp": "！……",
+   "zh_current": "！……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCEC0",
+   "budget_bytes": 17,
+   "jp": "アンタは頭で考えて理屈を言ってる！",
+   "zh_current": "你光用脑子讲歪理！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCEE0",
+   "budget_bytes": 24,
+   "jp": "今持ってる肉体だけにとらわれるから……！！",
+   "zh_current": "只被现有的肉体束缚住……！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCF04",
+   "budget_bytes": 31,
+   "jp": "オレはこの戦いを見届ける……それまでは絶対にやられるもんか！",
+   "zh_current": "我要见证这场战斗……此前绝不倒下！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCF30",
+   "budget_bytes": 21,
+   "jp": "あんたの存在そのものが、鬱陶しいんだよ！！",
+   "zh_current": "你的存在本身就可恨！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCF54",
+   "budget_bytes": 27,
+   "jp": "そうやって自分の独善ばかり押し付けようとするからっ！！",
+   "zh_current": "就因你总把独断强加于人！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCF7C",
+   "budget_bytes": 31,
+   "jp": "いつの時代も子供が犠牲になる……それじゃあ、ダメなんだよ！！",
+   "zh_current": "总是孩子在牺牲……这样是不行的！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCFA8",
+   "budget_bytes": 28,
+   "jp": "俺は……間違いなくみんなの意思を背負って戦っている！！",
+   "zh_current": "我……一定要背负起大家的意志！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCFD0",
+   "budget_bytes": 6,
+   "jp": "無駄だっ！！",
+   "zh_current": "没用！！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCFE4",
+   "budget_bytes": 9,
+   "jp": "性懲りも無くっ！！",
+   "zh_current": "还不死心！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xCFFC",
+   "budget_bytes": 23,
+   "jp": "脱出するんだ……！そのマシンはもう死に体だ！",
+   "zh_current": "快逃出来……！那机体不行了！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD020",
+   "budget_bytes": 27,
+   "jp": "無駄死にするよりは、いいんだろうけどさ……クソッ！",
+   "zh_current": "总比白白送死强吧……可恶！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD048",
+   "budget_bytes": 21,
+   "jp": "よせっ！俺の戦いはまだ終ってないっ！",
+   "zh_current": "住手！我的战斗还没完！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3A94",
+   "budget_bytes": 29,
+   "jp": "アイツは倒さなきゃだめなんだ！みんな、手を貸してくれ！！",
+   "zh_current": "必须打倒那家伙！大家帮帮我！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3AC0",
+   "budget_bytes": 28,
+   "jp": "そうだ！今という世界にャツは必要ない人間なんだ！！",
+   "zh_current": "对！如今的世界不需要那家伙！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3AE8",
+   "budget_bytes": 15,
+   "jp": "リィナ一人だけを行かせられるか！",
+   "zh_current": "岂能让莉娜独行！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B04",
+   "budget_bytes": 12,
+   "jp": "ああ、やろう！プル！！",
+   "zh_current": "上吧、普露！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B1C",
+   "budget_bytes": 13,
+   "jp": "俺も行くぞ！プルツー！！",
+   "zh_current": "我也上！普露兹！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B38",
+   "budget_bytes": 23,
+   "jp": "そうだ！カミーユさんは正しいことを言ってる！！",
+   "zh_current": "没错！卡缪说得对！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B5C",
+   "budget_bytes": 23,
+   "jp": "そうだ！カミーユさんは正しいことを言ってる！！",
+   "zh_current": "没错！卡缪说得对！！",
+   "zh_current_bytes": 17
+  }
+ ]
+}

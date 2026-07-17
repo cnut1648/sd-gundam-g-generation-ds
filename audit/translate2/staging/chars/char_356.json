@@ -1,0 +1,596 @@
+{
+ "entity": "char_356",
+ "kind": "character",
+ "cids": [
+  356,
+  357
+ ],
+ "name_jp": "ムルタ・アズラエル",
+ "name_zh_KEEP": "阿兹拉埃尔",
+ "cards": [
+  {
+   "cid": 356,
+   "ids": [
+    {
+     "idn": 1068,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8DED",
+     "zh_name_ptr": "0x20B8DED",
+     "name_jp": "僕は勝つンだ…！",
+     "name_zh_current": "我会赢的！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回甲↑",
+     "didx": 94,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%攻撃力が20%増加、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·装甲+2",
+     "cutin_group": 715,
+     "cutin_jp": "僕は勝つンだ…！そうさ、いつだって…！！",
+     "cutin_zh_current": "我会赢的……！没错、一直如此……！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_107",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1069,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8DF8",
+     "zh_name_ptr": "0x2328746",
+     "name_jp": "叩き落すンだ！！",
+     "name_zh_current": "彻底碾碎你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋先制攻撃",
+     "summary_zh_KEEP": "威力↑・先攻",
+     "didx": 137,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·先攻",
+     "cutin_group": 716,
+     "cutin_jp": "あの忌々しいャツら！一機残らず叩き落すンだよっ！！",
+     "cutin_zh_current": "那些可恶的家伙！一架不留、全部砸烂！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_127",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1070,
+     "slot": 2,
+     "target": "全军",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8E03",
+     "zh_name_ptr": "0x2328753",
+     "name_jp": "駄目駄目です、そんなの",
+     "name_zh_current": "不行不行！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌战力减少",
+     "didx": 122,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中·回避が30%ずつ低下、攻撃力が50%減少、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%攻击-30%·装甲-3",
+     "cutin_group": 717,
+     "cutin_jp": "駄目駄目だって言ってるだろう！？そんなのっ！！",
+     "cutin_zh_current": "都说了不行不行！？那种事休想！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 357,
+   "ids": [
+    {
+     "idn": 1071,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8E10",
+     "zh_name_ptr": "0x20B8E10",
+     "name_jp": "兵器は使わなきゃ",
+     "name_zh_current": "要用兵器",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 718,
+     "cutin_jp": "兵器は使わなきゃ……せっかく高い金かけて造ったんだし…ね",
+     "cutin_zh_current": "兵器不用怎么行……毕竟是花血本造的嘛……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1072,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8E1A",
+     "zh_name_ptr": "0x20B8E1A",
+     "name_jp": "さっさと終わらせてください",
+     "name_zh_current": "快点结束吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋先制攻撃",
+     "summary_zh_KEEP": "威力↑・先攻",
+     "didx": 139,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·先攻",
+     "cutin_group": 719,
+     "cutin_jp": "さっさと撃って、さっさと終わらせてください……こんな戦争は",
+     "cutin_zh_current": "快点开火、快点结束……这种战争……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_143",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1073,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8E03",
+     "zh_name_ptr": "0x2328753",
+     "name_jp": "駄目駄目です、そんなの",
+     "name_zh_current": "不行不行！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回减少",
+     "didx": 37,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%",
+     "cutin_group": 720,
+     "cutin_jp": "あーもう駄目駄目です、そんなの",
+     "cutin_zh_current": "啊真是的、那样不行不行！",
+     "name_owner": true,
+     "name_shared_with_idn": 1070,
+     "detail_owner": false,
+     "detail_owned_by": "char_78",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x14550",
+   "budget_bytes": 14,
+   "jp": "やっちゃってください、艦長さん",
+   "zh_current": "上吧、舰长！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14670",
+   "budget_bytes": 16,
+   "jp": "ちょっと！？大丈夫なんですか、これ？",
+   "zh_current": "等等！？没问题吗！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x299C0",
+   "budget_bytes": 11,
+   "jp": "オマエたちはぁーーっ！！",
+   "zh_current": "你们这些！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x299D8",
+   "budget_bytes": 19,
+   "jp": "僕に逆らったこと後悔させてやる！",
+   "zh_current": "违抗我、就让你后悔！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x299F8",
+   "budget_bytes": 28,
+   "jp": "ボクは力を手に入れたんだ！コーディネイターにも負けない力を！",
+   "zh_current": "我得到了不输调整者的力量！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29A20",
+   "budget_bytes": 22,
+   "jp": "許せないんだよお！オマエたちはーっ！！",
+   "zh_current": "我绝不饶你们这些家伙！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29A44",
+   "budget_bytes": 24,
+   "jp": "オマエたちさえ！オマエたちさえいなければ……！！",
+   "zh_current": "都怪你们！只要你们不在……！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29A68",
+   "budget_bytes": 21,
+   "jp": "僕に逆らうからこうなるんだよーっ！！",
+   "zh_current": "违抗我就是这个下场！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29A8C",
+   "budget_bytes": 30,
+   "jp": "そうさ！今度は僕の番だ！！僕が強い方に回るンだ！",
+   "zh_current": "没错！轮到我了！我站强者这边！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29AB8",
+   "budget_bytes": 33,
+   "jp": "連邦もブルーコスモスも知った事か！これはもう、僕の戦いなんだ！",
+   "zh_current": "联邦也好、蓝色宇宙也好、我才不管！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29AE8",
+   "budget_bytes": 25,
+   "jp": "くそっ！こんな所でっ！ふざけるんじゃないよっ！",
+   "zh_current": "可恶！岂能倒在这种地方！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29B10",
+   "budget_bytes": 22,
+   "jp": "アハハハハ！この期に及んで悪あがきかい！？",
+   "zh_current": "啊哈哈哈！还想挣扎吗！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29B34",
+   "budget_bytes": 29,
+   "jp": "僕にこんなことして……どうなるか分かってんだろうな！？",
+   "zh_current": "竟敢这样对我……休想全身而退！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29B60",
+   "budget_bytes": 16,
+   "jp": "ああ、もう！いちいちうるさいなっ！",
+   "zh_current": "啊、真是烦死人了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29B7C",
+   "budget_bytes": 23,
+   "jp": "だから、さあ！何で死んでくれないんだよーっ！",
+   "zh_current": "所以、你怎么就不去死啊！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29BA0",
+   "budget_bytes": 21,
+   "jp": "オマエらーっ！どうして僕に逆らうんだよ！？",
+   "zh_current": "你们！！竟敢违抗我！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29BC4",
+   "budget_bytes": 10,
+   "jp": "お前ッッ！この！",
+   "zh_current": "你这家伙！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29BDC",
+   "budget_bytes": 23,
+   "jp": "ウ、ウソだろ……？僕がこんな、こんな……！！",
+   "zh_current": "不、不会吧……？我竟然……！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C00",
+   "budget_bytes": 27,
+   "jp": "効かないって言ってるだろ！！それくらいわかれよ！！",
+   "zh_current": "都说了没用！！这点还不懂吗！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C28",
+   "budget_bytes": 13,
+   "jp": "だから！無駄なんだってば！！",
+   "zh_current": "都说了！没用！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C44",
+   "budget_bytes": 13,
+   "jp": "だから！無駄なんだってば！！",
+   "zh_current": "都说了！没用！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C60",
+   "budget_bytes": 13,
+   "jp": "さっさと降伏するんだよおっ！",
+   "zh_current": "快点投降吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C7C",
+   "budget_bytes": 11,
+   "jp": "な、なんで僕が……！！",
+   "zh_current": "为什么是我！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29C94",
+   "budget_bytes": 22,
+   "jp": "オマエーっ！僕をバカにするなぁぁーっ！！",
+   "zh_current": "你这家伙！休想耍我！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29CB8",
+   "budget_bytes": 21,
+   "jp": "来ましたね……じゃ、やっちゃってください",
+   "zh_current": "来了呢……那、请动手吧",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29CF4",
+   "budget_bytes": 21,
+   "jp": "来ましたね……じゃ、やっちゃってください",
+   "zh_current": "来了呢……那、请动手吧",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29D18",
+   "budget_bytes": 27,
+   "jp": "危険な敵は飼い慣らすか退治しちゃうかしないと……ね",
+   "zh_current": "危险的敌人、不驯服就得除掉……",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29D5D",
+   "budget_bytes": 30,
+   "jp": "あー、いちいち言わなくてもわかります倒すんでしょう、敵を？",
+   "zh_current": "啊、不说我也懂、打倒敌人对吧？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29D88",
+   "budget_bytes": 22,
+   "jp": "撃たなきゃ勝てないんですよこの戦争はね",
+   "zh_current": "不开火就赢不了这战争啊",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29DAC",
+   "budget_bytes": 16,
+   "jp": "さあ、今度こそケリにしましょう！",
+   "zh_current": "这次就做个了断！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29DC8",
+   "budget_bytes": 16,
+   "jp": "さあ、今度こそケリにしましょう！",
+   "zh_current": "这次就做个了断！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29DE4",
+   "budget_bytes": 16,
+   "jp": "さあ、今度こそケリにしましょう！",
+   "zh_current": "这次就做个了断！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E00",
+   "budget_bytes": 22,
+   "jp": "く、くそおっ！覚えておけよ、お前ら！！",
+   "zh_current": "可、可恶！你们给我记住！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E24",
+   "budget_bytes": 16,
+   "jp": "ま……今のトコ、順調ですかね",
+   "zh_current": "嘛……目前很顺利呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E40",
+   "budget_bytes": 33,
+   "jp": "お、おい！何やってるんだよ！？こんなこと僕は聞いてないぞ！",
+   "zh_current": "喂、喂！搞什么呀！？我可没听说！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E70",
+   "budget_bytes": 15,
+   "jp": "まあ……こんなもんでしょうね",
+   "zh_current": "哎……也就这样吧",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E8C",
+   "budget_bytes": 33,
+   "jp": "ほら、ね……僕らは弱い立場なのさだから敵は滅ぼさなくちゃ……",
+   "zh_current": "瞧、我们处境弱……所以才要除掉敌人",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29EBC",
+   "budget_bytes": 21,
+   "jp": "あのさあ、君？ちょっと前に出すぎじゃない？",
+   "zh_current": "我说你啊、冲太前了吧？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29F15",
+   "budget_bytes": 20,
+   "jp": "あーもう！なんでこんなことになるのさ！！",
+   "zh_current": "啊真是的！怎么会这样！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29F4C",
+   "budget_bytes": 24,
+   "jp": "守ってたら負けるだろう！？攻めるンだよ！！",
+   "zh_current": "光防守是会输的！？要进攻！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29F70",
+   "budget_bytes": 18,
+   "jp": "いやー、さすがはアークエンジェル級ですね",
+   "zh_current": "不愧是大天使号啊",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29F90",
+   "budget_bytes": 13,
+   "jp": "そーいうの、無駄なんですよね",
+   "zh_current": "那种事、没用的",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29FAC",
+   "budget_bytes": 21,
+   "jp": "そんなあさっての方に撃ってどうするんですか？",
+   "zh_current": "瞄那么偏的地方干什么？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29FCD",
+   "budget_bytes": 16,
+   "jp": "その機体……もらっちゃいましょう",
+   "zh_current": "那机体……就归我了吧",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29FEC",
+   "budget_bytes": 18,
+   "jp": "こっ、こんな！？どうして僕が……！！",
+   "zh_current": "这样！？为何是我……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A00C",
+   "budget_bytes": 10,
+   "jp": "僕は勝つンだ！！",
+   "zh_current": "我一定会赢！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0x694",
+   "budget_bytes": 22,
+   "jp": "ちょっと、艦長？今の方角、間違ってませんか？",
+   "zh_current": "等等、舰长？方位错了吧？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1.bin",
+   "record": "0x784",
+   "budget_bytes": 16,
+   "jp": "あの目障りな戦艦を打ち落とせ！！",
+   "zh_current": "击落那碍眼战舰！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1.bin",
+   "record": "0xD00",
+   "budget_bytes": 24,
+   "jp": "僕は勝つンだ……！そうさ、いつだって……！",
+   "zh_current": "我一定会赢……！没错、永远……！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1.bin",
+   "record": "0xD84",
+   "budget_bytes": 24,
+   "jp": "僕は勝つンだ……！そうさ、いつだって……！",
+   "zh_current": "我一定会赢……！没错、永远……！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1.bin",
+   "record": "0xDF4",
+   "budget_bytes": 19,
+   "jp": "オマエたち……オマエたちはぁぁ……！！",
+   "zh_current": "你们这些家伙……！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1.bin",
+   "record": "0xE5C",
+   "budget_bytes": 14,
+   "jp": "あ、あ、うわああああっっ！！",
+   "zh_current": "啊、啊、哇啊啊！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

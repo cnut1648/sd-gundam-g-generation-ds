@@ -1,0 +1,676 @@
+{
+ "entity": "char_60",
+ "kind": "character",
+ "cids": [
+  60,
+  61
+ ],
+ "name_jp": "キンケドゥ・ナウ",
+ "name_zh_KEEP": "金凯度·纳乌",
+ "cards": [
+  {
+   "cid": 60,
+   "ids": [
+    {
+     "idn": 180,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B74A7",
+     "zh_name_ptr": "0x23288B1",
+     "name_jp": "独善でも機善でも関係ない！",
+     "name_zh_current": "伪善也无妨",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 121,
+     "cutin_jp": "俺はベラの力になると決めた……それが独善でも偽善でも関係ない！",
+     "cutin_zh_current": "我决意成为贝拉之力……无论独善伪善都无所谓！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 181,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B74B8",
+     "zh_name_ptr": "0x218C1B9",
+     "name_jp": "マシンが良くても……",
+     "name_zh_current": "机体再好……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命减",
+     "didx": 83,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·攻击-30%",
+     "cutin_group": 122,
+     "cutin_jp": "マシンが良くてもパイロットが性能を引き出せなければ！",
+     "cutin_zh_current": "机体再好、驾驶员若是发挥不出性能也徒劳！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 182,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B74C2",
+     "zh_name_ptr": "0x2188775",
+     "name_jp": "とまどいは無い！",
+     "name_zh_current": "绝不迟疑！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 123,
+     "cutin_jp": "貴様を撃つことだけにはとまどいは無い！",
+     "cutin_zh_current": "唯独击落你这件事我绝不会迟疑！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 61,
+   "ids": [
+    {
+     "idn": 183,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B74A7",
+     "zh_name_ptr": "0x23288B1",
+     "name_jp": "独善でも機善でも関係ない！",
+     "name_zh_current": "伪善也无妨",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 124,
+     "cutin_jp": "俺はベラの力になると決めた……それが独善でも偽善でも関係ない！",
+     "cutin_zh_current": "我决意成为贝拉之力……无论独善伪善都无所谓！",
+     "name_owner": true,
+     "name_shared_with_idn": 180,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 184,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B74CB",
+     "zh_name_ptr": "0x20B74CB",
+     "name_jp": "終わらせなくちゃいけない……",
+     "name_zh_current": "战争须终结",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命反↑",
+     "didx": 80,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が40%上昇、反応が20上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%·反应+20攻击+20%",
+     "cutin_group": 125,
+     "cutin_jp": "戦争は終わらせなくちゃいけない……彼女が戻って来れないから",
+     "cutin_zh_current": "这场战争必须终结……因为她再也回不来了",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 185,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B74E2",
+     "zh_name_ptr": "0x20B74E2",
+     "name_jp": "奇跡を見せてやろうじゃないか！",
+     "name_zh_current": "见识奇迹吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 204,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化し、相手の特殊防御を無効化。敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避破防",
+     "cutin_group": 126,
+     "cutin_jp": "奇跡を見せてやろうじゃないか！",
+     "cutin_zh_current": "就让你们见识奇迹吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x6C8C",
+   "budget_bytes": 29,
+   "jp": "キサマらと遊んでられるほどヒマじゃないっ！どけッ！！",
+   "zh_current": "没空陪你们玩、快让开！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6CB8",
+   "budget_bytes": 18,
+   "jp": "コイツで決めてやるっ！！……！",
+   "zh_current": "这招了结你！……！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6CD8",
+   "budget_bytes": 18,
+   "jp": "立ちはだかるというなら……撃つ！！",
+   "zh_current": "若挡路……就开火！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6CF8",
+   "budget_bytes": 12,
+   "jp": "俺はベラを守り続ける！",
+   "zh_current": "我守护贝拉！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D10",
+   "budget_bytes": 8,
+   "jp": "……もらうっ！！",
+   "zh_current": "……拿下！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D24",
+   "budget_bytes": 9,
+   "jp": "どけええーっ！",
+   "zh_current": "快让开！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D3C",
+   "budget_bytes": 9,
+   "jp": "邪魔をするなーっ！",
+   "zh_current": "别碍我事！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D54",
+   "budget_bytes": 10,
+   "jp": "これが海賊流だ！！",
+   "zh_current": "海盗流！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D6C",
+   "budget_bytes": 18,
+   "jp": "こんなところで……すまない……ベラ……",
+   "zh_current": "对不起……贝拉……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6D8C",
+   "budget_bytes": 11,
+   "jp": "寝言を言うなぁーっ！",
+   "zh_current": "别说梦话！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6DA4",
+   "budget_bytes": 26,
+   "jp": "今まで戦ってきたのは……無駄死にするためじゃない！",
+   "zh_current": "一路奋战至今、不是为了白死！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6DCC",
+   "budget_bytes": 5,
+   "jp": "この程度！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6DE0",
+   "budget_bytes": 27,
+   "jp": "自分の命すら大事と思えないから人の命を奪う！",
+   "zh_current": "不珍惜自己的命、才夺人性命！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6E08",
+   "budget_bytes": 24,
+   "jp": "くそっ、なんのためらいもなく攻撃してきやがる！",
+   "zh_current": "可恶、毫不犹豫就这么攻来！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6E2C",
+   "budget_bytes": 31,
+   "jp": "だめか？目では追えても……体の反射が追いつかない！",
+   "zh_current": "不行？眼睛追得上、身体却跟不上！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6E58",
+   "budget_bytes": 20,
+   "jp": "クッ……！もうセンサーが限界だ……！",
+   "zh_current": "唔……！传感器到极限了！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6E78",
+   "budget_bytes": 8,
+   "jp": "……無駄だっ！！",
+   "zh_current": "……没用！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6E8C",
+   "budget_bytes": 12,
+   "jp": "それしきの攻撃くらいっ！！",
+   "zh_current": "区区这攻击！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6EA4",
+   "budget_bytes": 14,
+   "jp": "砲撃が来るぞ！散れーっ！",
+   "zh_current": "炮击来了！散开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6EC0",
+   "budget_bytes": 22,
+   "jp": "投降しろ！さもなくば……コクビットを潰すぞ！",
+   "zh_current": "投降！否则就打爆驾驶舱！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6EE4",
+   "budget_bytes": 16,
+   "jp": "バカなっ！俺としたことが……",
+   "zh_current": "怎么可能！我竟然……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F00",
+   "budget_bytes": 21,
+   "jp": "冗談じゃない！海賊が捕まってたまるか！",
+   "zh_current": "开玩笑！海盗岂会被抓！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0xB8",
+   "budget_bytes": 8,
+   "jp": "なんとおーっ！！",
+   "zh_current": "什么！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1D30",
+   "budget_bytes": 16,
+   "jp": "全員で同時に攻める！行くぞ！！",
+   "zh_current": "全员同时进攻！上！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1D4C",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1D68",
+   "budget_bytes": 32,
+   "jp": "言っておくが、俺はお前のことを信用しているわけじゃあないからな",
+   "zh_current": "先把话说清楚、我并不信任你！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1D94",
+   "budget_bytes": 18,
+   "jp": "いいぞ、トビア！そのまま一気に行けっ！！",
+   "zh_current": "好、托比亚！一口气冲！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1DB4",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1DD0",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1DEC",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F24",
+   "budget_bytes": 12,
+   "jp": "この一撃に勝負をかける！",
+   "zh_current": "一击定胜负！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F3C",
+   "budget_bytes": 18,
+   "jp": "コイツで決めてやるっ！！……！",
+   "zh_current": "这招了结你！……！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F5C",
+   "budget_bytes": 18,
+   "jp": "立ちはだかるというなら……撃つ！！",
+   "zh_current": "若挡路……就开火！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F7C",
+   "budget_bytes": 12,
+   "jp": "俺はベラを守り続ける！",
+   "zh_current": "我守护贝拉！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6F94",
+   "budget_bytes": 6,
+   "jp": "邪魔だぁっ！",
+   "zh_current": "碍事！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6FA8",
+   "budget_bytes": 12,
+   "jp": "クロスボーン·バンガード、参上！",
+   "zh_current": "十字先锋、到！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6FC0",
+   "budget_bytes": 10,
+   "jp": "これが海賊流だ！！",
+   "zh_current": "海盗流！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6FD8",
+   "budget_bytes": 15,
+   "jp": "この戦い……すぐにケリをつける！",
+   "zh_current": "立刻了结这一战！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6FF4",
+   "budget_bytes": 18,
+   "jp": "こんなところで……すまない……ベラ……",
+   "zh_current": "对不起……贝拉……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7014",
+   "budget_bytes": 28,
+   "jp": "地獄からよみがえってきた男を甘く見るんじゃない！",
+   "zh_current": "别小看从地狱归来的我！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x703C",
+   "budget_bytes": 26,
+   "jp": "今まで戦ってきたのは……無駄死にするためじゃない！",
+   "zh_current": "一路奋战至今、不是为了白死！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7064",
+   "budget_bytes": 11,
+   "jp": "寝言を言うなーっ！！",
+   "zh_current": "别说梦话！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x707C",
+   "budget_bytes": 23,
+   "jp": "くそっ！なんのためらいもなく撃ってきやがる！",
+   "zh_current": "可恶！毫不犹豫就开火！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x70A0",
+   "budget_bytes": 16,
+   "jp": "ちっ！かわしきれなかったか！",
+   "zh_current": "啧！没躲开吗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x70BC",
+   "budget_bytes": 9,
+   "jp": "火力がでかいっ！？",
+   "zh_current": "火力好猛！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x70D4",
+   "budget_bytes": 15,
+   "jp": "だめだ！さばき切れないっ！",
+   "zh_current": "不行！招架不住！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x70F0",
+   "budget_bytes": 6,
+   "jp": "無駄だっ！！",
+   "zh_current": "没用！！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7104",
+   "budget_bytes": 12,
+   "jp": "それしきの攻撃くらいっ！！",
+   "zh_current": "区区这攻击！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x711C",
+   "budget_bytes": 14,
+   "jp": "砲撃が来るぞ！散れーっ！",
+   "zh_current": "炮击来了！散开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7138",
+   "budget_bytes": 22,
+   "jp": "投降しろ！さもなくば……コクビットをつぶすぞ！",
+   "zh_current": "投降！否则就打爆驾驶舱！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x715C",
+   "budget_bytes": 16,
+   "jp": "しまった！？捕まったのか！？",
+   "zh_current": "糟糕！被抓了吗！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7178",
+   "budget_bytes": 22,
+   "jp": "こんなところで、やられるわけにはいかないんだ！",
+   "zh_current": "不能在这种地方被打倒！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1.bin",
+   "record": "0x123C",
+   "budget_bytes": 7,
+   "jp": "……クラックス·ドゥガチ",
+   "zh_current": "……总统！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0x124F",
+   "budget_bytes": 25,
+   "jp": "たとえ幻でもあなたにそれを見せるわけにはいかない",
+   "zh_current": "就算是幻影、也不让你看见！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0xCC",
+   "budget_bytes": 8,
+   "jp": "なんとおーっ！！",
+   "zh_current": "什么！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E08",
+   "budget_bytes": 16,
+   "jp": "全員で同時に攻める！行くぞ！！",
+   "zh_current": "全员同时进攻！上！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E24",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E40",
+   "budget_bytes": 18,
+   "jp": "いいぞ、トビア！そのまま一気に行けっ！！",
+   "zh_current": "好、托比亚！一口气冲！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E60",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E7C",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1E98",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1EB4",
+   "budget_bytes": 13,
+   "jp": "了解だ！手を貸すっ！！",
+   "zh_current": "了解！我助你！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

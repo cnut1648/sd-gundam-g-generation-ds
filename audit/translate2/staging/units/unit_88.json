@@ -1,0 +1,66 @@
+{
+ "entity": "unit_88",
+ "kind": "unit",
+ "utids": [
+  88,
+  89,
+  90
+ ],
+ "name_jp": "Wガンダムゼロ（EW）",
+ "name_zh_current": "W高达零式",
+ "name_zh_px": 56,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB29",
+   "jp": "ツイン・バスターライフル",
+   "zh_current": "双管破坏步枪",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218ED73",
+   "jp": "マシンキャノン",
+   "zh_current": "机炮",
+   "shared_by_n_units": 18
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 29,
+   "record_offset": "0x2c0",
+   "budget_bytes": 40,
+   "jp_segments": [
+    "ゼロ・システム：SP20点以上で発動",
+    "命中回避＋5%、先制率上昇"
+   ],
+   "zh_segments_current": [
+    "零式系统",
+    "命中回避提升"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

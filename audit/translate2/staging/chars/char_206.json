@@ -1,0 +1,344 @@
+{
+ "entity": "char_206",
+ "kind": "character",
+ "cids": [
+  206
+ ],
+ "name_jp": "ムウ・ラ・フラガ",
+ "name_zh_KEEP": "穆",
+ "cards": [
+  {
+   "cid": 206,
+   "ids": [
+    {
+     "idn": 618,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8323",
+     "zh_name_ptr": "0x20B8323",
+     "name_jp": "守れないから戦うんだ！",
+     "name_zh_current": "守不住才战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "反応&威力上昇",
+     "summary_zh_KEEP": "反应・威力↑",
+     "didx": 75,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）反応が20上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）反应+20·攻击+20%",
+     "cutin_group": 493,
+     "cutin_jp": "戦わなきゃ守れねえから戦うんだ！",
+     "cutin_zh_current": "不战斗就无法守护、所以才战斗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 619,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8330",
+     "zh_name_ptr": "0x20B8330",
+     "name_jp": "撃たなければ撃たれる……",
+     "name_zh_current": "不击就被击",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 53,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 494,
+     "cutin_jp": "撃たなければ撃たれる……俺も！お前も！……皆！",
+     "cutin_zh_current": "不开火就会被击落……我也、你也、大家都一样！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 620,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B833D",
+     "zh_name_ptr": "0x218C480",
+     "name_jp": "俺は不可能を可能に……",
+     "name_zh_current": "化不能为能",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋防御無効",
+     "summary_zh_KEEP": "威↑・破防甲",
+     "didx": 211,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃対象の特殊防御と装甲を無効化する",
+     "detail_zh_current": "",
+     "cutin_group": 495,
+     "cutin_jp": "……忘れた？俺は不可能を可能にする男だってこと！",
+     "cutin_zh_current": "……忘了？我可是化不可能为可能的男人！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1BB98",
+   "budget_bytes": 15,
+   "jp": "おっと！まずはコッチからだ！！",
+   "zh_current": "哎呀！先打这边！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BBB4",
+   "budget_bytes": 8,
+   "jp": "……そこかッ！！",
+   "zh_current": "……就那！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BBC8",
+   "budget_bytes": 18,
+   "jp": "ええい！ちょろちょろするなよ！！",
+   "zh_current": "可恶！别乱晃！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BBE8",
+   "budget_bytes": 14,
+   "jp": "しつこいんだよ！お前らッ！",
+   "zh_current": "真烦人！！你们！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC04",
+   "budget_bytes": 17,
+   "jp": "よーし、行くか！……つつましく、な",
+   "zh_current": "好、上！……稳着点",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC24",
+   "budget_bytes": 12,
+   "jp": "うおりゃぁぁぁぁーッ！！",
+   "zh_current": "嗷啊啊啊！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC3C",
+   "budget_bytes": 18,
+   "jp": "やるしかないでしょ？こういう時はッ！",
+   "zh_current": "这种时候、只能上！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC5C",
+   "budget_bytes": 24,
+   "jp": "ったく！ヒーローはガラじゃねえってのに！",
+   "zh_current": "真是的、我不是当英雄的料！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BC80",
+   "budget_bytes": 25,
+   "jp": "やれやれ……ャキが回ったもんだぜ……俺もな",
+   "zh_current": "唉唉……我也开始不中用了……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BCA8",
+   "budget_bytes": 9,
+   "jp": "おおっとお！！",
+   "zh_current": "哎呀！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BCC0",
+   "budget_bytes": 24,
+   "jp": "ここでやられちゃカッコ悪過ぎでしょ、オレ！",
+   "zh_current": "死在这里也太丢人了吧、我！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BCE4",
+   "budget_bytes": 19,
+   "jp": "ええい！チヨロチヨロするなよ！",
+   "zh_current": "可恶！别乱晃！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BD04",
+   "budget_bytes": 25,
+   "jp": "なーるほどねえ！これは確かにオレのミスかな？",
+   "zh_current": "原来如此！！确实是我失误？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BD2C",
+   "budget_bytes": 18,
+   "jp": "チィ……ッ！さすがに甘くないか！",
+   "zh_current": "啧……！！真不好惹！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BD4C",
+   "budget_bytes": 23,
+   "jp": "チッ…この戦力差ではどうにもならんかぁっ！？",
+   "zh_current": "啧……这战力差、没法打呀！？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BD70",
+   "budget_bytes": 17,
+   "jp": "チィ……ッ！どうにもキツいぜ！！",
+   "zh_current": "啧……！！太吃力了！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BD90",
+   "budget_bytes": 8,
+   "jp": "……ムダだっ！！",
+   "zh_current": "……白费！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BDA4",
+   "budget_bytes": 11,
+   "jp": "お出でなすったな……！",
+   "zh_current": "终于来了……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BDBC",
+   "budget_bytes": 23,
+   "jp": "死にたくなけりゃ、散れッ！！攻撃が来るぞ！",
+   "zh_current": "不想死就散开！敌袭来了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BDE0",
+   "budget_bytes": 23,
+   "jp": "あんまし抵抗してくれるなよ………それっ！！",
+   "zh_current": "别太顽抗啊……接招！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BE04",
+   "budget_bytes": 20,
+   "jp": "やれやれ……こりゃ、言い訳もできんなぁ",
+   "zh_current": "唉唉……借口都没法找",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BE24",
+   "budget_bytes": 18,
+   "jp": "おっと！まだ勝負はこっからだぜ！",
+   "zh_current": "哎呀！好戏在后头！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0xD70",
+   "budget_bytes": 8,
+   "jp": "ええいっ……！！",
+   "zh_current": "可恶……！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1.bin",
+   "record": "0xDBC",
+   "budget_bytes": 22,
+   "jp": "ヘヘ……やっぱ俺って、不可能を可能に……",
+   "zh_current": "嘿嘿……化不可能为可能……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6BB8",
+   "budget_bytes": 17,
+   "jp": "全員で一斉にかかるぞ！遅れんな！",
+   "zh_current": "全员一齐上！别掉队！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6BD8",
+   "budget_bytes": 19,
+   "jp": "任せてくれ！コッチはいつだってOKさ！",
+   "zh_current": "交给我！我随时都行！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6BF8",
+   "budget_bytes": 10,
+   "jp": "援護するぞ、キラ！！",
+   "zh_current": "支援、基拉！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6C10",
+   "budget_bytes": 27,
+   "jp": "お嬢ちゃんのお守りか……ま、やってやるとしますか！！",
+   "zh_current": "守护大小姐吗……好、就干一场！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6C38",
+   "budget_bytes": 19,
+   "jp": "任せてくれ！コッチはいつだってOKさ！",
+   "zh_current": "交给我！我随时都行！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6C58",
+   "budget_bytes": 19,
+   "jp": "任せてくれ！コッチはいつだってOKさ！",
+   "zh_current": "交给我！我随时都行！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6C78",
+   "budget_bytes": 19,
+   "jp": "任せてくれ！コッチはいつだってOKさ！",
+   "zh_current": "交给我！我随时都行！",
+   "zh_current_bytes": 15
+  }
+ ]
+}

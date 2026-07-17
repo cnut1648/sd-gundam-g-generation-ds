@@ -1,0 +1,66 @@
+{
+ "entity": "unit_517",
+ "kind": "unit",
+ "utids": [
+  517,
+  518,
+  519
+ ],
+ "name_jp": "リ・ガズィ／BWS",
+ "name_zh_current": "灵格斯／BWS",
+ "name_zh_px": 68,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x21906BE",
+   "jp": "ビーム・キャノン",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 38
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21906F3",
+   "jp": "グレネード・ランチャー",
+   "zh_current": "榴弹发射器",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7CE",
+   "jp": "メガ・ビーム・キャノン",
+   "zh_current": "米加光束加农炮",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 172,
+   "record_offset": "0xa74",
+   "budget_bytes": 36,
+   "jp_segments": [
+    "バックウェポンシステム（フルアーマー解除可能）",
+    "地形適正・宇宙"
+   ],
+   "zh_segments_current": [
+    "背部武器系统",
+    "宇宙适应"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

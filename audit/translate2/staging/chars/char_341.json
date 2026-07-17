@@ -1,0 +1,272 @@
+{
+ "entity": "char_341",
+ "kind": "character",
+ "cids": [
+  341
+ ],
+ "name_jp": "メリーベル",
+ "name_zh_KEEP": "梅丽贝尔",
+ "cards": [
+  {
+   "cid": 341,
+   "ids": [
+    {
+     "idn": 1023,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C48",
+     "zh_name_ptr": "0x20B8C48",
+     "name_jp": "きゅいぃ〜ん♪",
+     "name_zh_current": "感觉真好！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避&反応上昇",
+     "summary_zh_KEEP": "回避・反应↑",
+     "didx": 39,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン回避率が20%上昇、反応が20上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）回避+20%·反应+20",
+     "cutin_group": 685,
+     "cutin_jp": "きゆいい〜ん♪",
+     "cutin_zh_current": "这感觉真是太爽了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1024,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C54",
+     "zh_name_ptr": "0x20B8C54",
+     "name_jp": "土下座してみせるんだよ！",
+     "name_zh_current": "让你跪谢罪",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 686,
+     "cutin_jp": "はいつくばって土下座してみせるんだよ！",
+     "cutin_zh_current": "给我趴在地上下跪谢罪给我看！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1025,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C63",
+     "zh_name_ptr": "0x20B8C63",
+     "name_jp": "アタシが盛り上げてあげるよ！",
+     "name_zh_current": "我来助兴！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 687,
+     "cutin_jp": "アタシが盛り上げてあげるよ！",
+     "cutin_zh_current": "就由本小姐来助兴吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x27D88",
+   "budget_bytes": 8,
+   "jp": "こっちが先だよ！！",
+   "zh_current": "我先上！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27D9C",
+   "budget_bytes": 8,
+   "jp": "強いのはこっちだ！",
+   "zh_current": "我更强！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27DB0",
+   "budget_bytes": 7,
+   "jp": "いけえーっ！",
+   "zh_current": "冲啊！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27DC4",
+   "budget_bytes": 10,
+   "jp": "あははは、落ちなよ！",
+   "zh_current": "哈哈、接招！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27DDC",
+   "budget_bytes": 7,
+   "jp": "邪魔なんだよ！",
+   "zh_current": "别挡路！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27DF0",
+   "budget_bytes": 15,
+   "jp": "あいつらをつぶしゃいいだけだろ！",
+   "zh_current": "压扁他们就行了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E0C",
+   "budget_bytes": 11,
+   "jp": "どきなよ！あはははは！",
+   "zh_current": "让开！哈哈！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E24",
+   "budget_bytes": 8,
+   "jp": "強いのはこっちだ！",
+   "zh_current": "我更强！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E38",
+   "budget_bytes": 10,
+   "jp": "ギ、ギムーッ！！……",
+   "zh_current": "基、基姆！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E50",
+   "budget_bytes": 18,
+   "jp": "どーしたのさ？アタシはこっちだよ！！",
+   "zh_current": "怎么了？我在这边哟！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E70",
+   "budget_bytes": 8,
+   "jp": "こっ、こんなの！！",
+   "zh_current": "这、这种！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27E84",
+   "budget_bytes": 25,
+   "jp": "なんだい、それは？目くらましをかけてるつもりか？",
+   "zh_current": "那是什么？想耍障眼法吗？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27EAC",
+   "budget_bytes": 12,
+   "jp": "当てたのか！？生意気な！",
+   "zh_current": "竟敢打中我！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27EC4",
+   "budget_bytes": 12,
+   "jp": "やってくれるじゃないか！",
+   "zh_current": "干得不错嘛！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27EDC",
+   "budget_bytes": 20,
+   "jp": "こっ、こいつ！よくもやってくれたな！！",
+   "zh_current": "这家伙竟敢来这套！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27EFC",
+   "budget_bytes": 22,
+   "jp": "じょ、冗談じゃないよ！こんなにやられて……",
+   "zh_current": "开什么玩笑！伤成这样……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27F20",
+   "budget_bytes": 23,
+   "jp": "なんだい、できるじゃないか！あはははは！！",
+   "zh_current": "哟、挺能干嘛！啊哈哈！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27F44",
+   "budget_bytes": 21,
+   "jp": "そーいうの戦いがヘタって言うのさ！！",
+   "zh_current": "那样就叫不会打仗！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27F68",
+   "budget_bytes": 14,
+   "jp": "あはは、来るよ、来る、来る！",
+   "zh_current": "哈哈、来了来了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27F84",
+   "budget_bytes": 22,
+   "jp": "命が惜しいんなら大人しくするんだねっ！！",
+   "zh_current": "想活命的话就老实点！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27FA8",
+   "budget_bytes": 7,
+   "jp": "ま……しょうがないか",
+   "zh_current": "没办法",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27FBC",
+   "budget_bytes": 10,
+   "jp": "ふざけるんじゃないよ！",
+   "zh_current": "别开玩笑！！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

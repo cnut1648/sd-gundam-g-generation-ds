@@ -1,0 +1,67 @@
+{
+ "entity": "char_28",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%88%B1%E7%8E%9B%C2%B7%E8%BE%9B",
+  "https://gundam.huijiwiki.com/wiki/%E8%89%BE%E7%8E%9B%C2%B7%E8%BE%9B",
+  "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E%E3%83%BB%E3%82%B7%E3%83%BC%E3%83%B3",
+  "http://www5b.biglobe.ne.jp/~kamaki/link/gundam/gun-z16.htm",
+  "http://gundam.daihouko.com/sd/ggcd/36.html",
+  "https://ameblo.jp/pandada1976/entry-12885170293.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 84,
+   "name_zh": "这就是战争",
+   "cutin_zh": "这就是战争啊……别恨我！",
+   "notes": "对应她与蕾柯亚等旧识交战的心境（灰机wiki人物页）。指令名与名台词共用关键词、5格。detail由char_1翻译、此处按规则省略。"
+  },
+  {
+   "idn": 85,
+   "name_zh": "见好就收",
+   "cutin_zh": "战斗中、见好就收也很重要",
+   "detail_effect_zh": "回避率提升20%、装甲增加2",
+   "notes": "出处TV第24话「反撃」、爱玛制止卡缪深追的原话「引き際も大事よ、戦闘は」。译作见好就收更合中文语感、指令名与名台词同词。"
+  },
+  {
+   "idn": 86,
+   "name_zh": "吸取我生命",
+   "cutin_zh": "吸取我的生命……然后取得胜利！",
+   "detail_effect_zh": "HP回复25%",
+   "notes": "TV最终话（第50话）临终名场面「私の命を吸って。そして勝つのよ」、采用社区通行译法（灰机wiki：吸取我的生命……然后取得胜利）。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2D4C", "zh": "别碍事！"},
+  {"file": "0.bin", "record": "0x2D60", "zh": "坠落吧！！"},
+  {"file": "0.bin", "record": "0x2D74", "zh": "坠落吧！！"},
+  {"file": "0.bin", "record": "0x2D88", "zh": "我只想按自己的信念活下去！"},
+  {"file": "0.bin", "record": "0x2DB0", "zh": "有战斗的理由！不能输！"},
+  {"file": "0.bin", "record": "0x2DD0", "zh": "不能让你得逞！"},
+  {"file": "0.bin", "record": "0x2DEC", "zh": "模拟够了！能行！"},
+  {"file": "0.bin", "record": "0x2E08", "zh": "战争本就是不讲理的！你也明白的吧！？"},
+  {"file": "0.bin", "record": "0x2E38", "zh": "就算我不在了……也不必寂寞……"},
+  {"file": "0.bin", "record": "0x2E60", "zh": "怎么可能中！"},
+  {"file": "0.bin", "record": "0x2E78", "zh": "我还不能倒在这里！"},
+  {"file": "0.bin", "record": "0x2E98", "zh": "请别犯傻了！"},
+  {"file": "0.bin", "record": "0x2EB0", "zh": "战斗在污染地球、你为何不懂！？"},
+  {"file": "0.bin", "record": "0x2ED8", "zh": "自己在做些什么……你明白吗！？"},
+  {"file": "0.bin", "record": "0x2F00", "zh": "怎会！？"},
+  {"file": "0.bin", "record": "0x2F14", "zh": "这样下去不行！"},
+  {"file": "0.bin", "record": "0x2F30", "zh": "太心急可不行……"},
+  {"file": "0.bin", "record": "0x2F4C", "zh": "没用！"},
+  {"file": "0.bin", "record": "0x2F60", "zh": "来了！快散开！！"},
+  {"file": "0.bin", "record": "0x2F7C", "zh": "别再抵抗！你的战争结束了！"},
+  {"file": "0.bin", "record": "0x2FA4", "zh": "明明早就知道、勉强就会这样……"},
+  {"file": "0.bin", "record": "0x2FCC", "zh": "我才不要当俘虏！"},
+  {"file": "0.bin", "record": "0x56C4", "zh": "『……不要紧』"},
+  {"file": "1de.bin", "record": "0x90C", "zh": "一齐攻击！请支援！！"},
+  {"file": "1de.bin", "record": "0x92C", "zh": "爱玛、收到！！"},
+  {"file": "1de.bin", "record": "0x944", "zh": "卡缪、别一人冒进！我来支援！！"},
+  {"file": "1de.bin", "record": "0x96C", "zh": "收到、大尉！"},
+  {"file": "1de.bin", "record": "0x984", "zh": "爱玛、收到！！"},
+  {"file": "1de.bin", "record": "0x99C", "zh": "爱玛、收到！！"},
+  {"file": "1de.bin", "record": "0x9B4", "zh": "爱玛、收到！！"}
+ ],
+ "notes": "0x2E38：ROM原文「疾しがることはなくてよ」判断为「寂しがる」的汉字误变换、呼应其临终名台词「寂しがることはなくてよ」（灰机wiki通行译法：不用感到寂寞哦）、故译寂寞而非难过。0x2D88对应TV第4话「私は自分が信じるように生きていたいというだけ」、预算内理想版为「我只是想照自己所相信的方式活下去！」。0x2F14受13字节预算限制、舍去「ダ、ダメだわ」结巴、理想版「不行……这样下去的话！」。0x2F30理想版「太心急了……所以才不行啊」（超15字节预算）。0x96C受10字节预算限制、克瓦特罗大尉只保留军衔。0x56C4的『』沿用原有引用括号（现行编码计数10≤11）。0x2D60/0x2D74「落ちなさいっ！！」改坠落吧！！以符合MS空战语境（原译倒下吧）。0x2F4C原译「就这！」为时代违和网络语、改译没用！。"
+}

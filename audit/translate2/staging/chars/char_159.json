@@ -1,0 +1,328 @@
+{
+ "entity": "char_159",
+ "kind": "character",
+ "cids": [
+  159
+ ],
+ "name_jp": "バーニィ",
+ "name_zh_KEEP": "巴尼",
+ "cards": [
+  {
+   "cid": 159,
+   "ids": [
+    {
+     "idn": 477,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7EAF",
+     "zh_name_ptr": "0x20B7EAF",
+     "name_jp": "よーし、良い子だ……",
+     "name_zh_current": "好、乖孩子",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "捕獲率上昇",
+     "summary_zh_KEEP": "捕获率↑",
+     "didx": 246,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン捕縛率が通常の2倍になる",
+     "detail_zh_current": "",
+     "cutin_group": 376,
+     "cutin_jp": "よーし、良い子だ……",
+     "cutin_zh_current": "好啦、乖孩子……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_22",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 478,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7EBC",
+     "zh_name_ptr": "0x20B7EBC",
+     "name_jp": "戦争ごっこやってるんじゃ……",
+     "name_zh_current": "不是玩战争",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 74,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 377,
+     "cutin_jp": "戦争ごっこやってるんじゃないんだ！",
+     "cutin_zh_current": "这可不是在玩打仗游戏！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 479,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7ECC",
+     "zh_name_ptr": "0x20B7ECC",
+     "name_jp": "逃げちゃいけないんだ！",
+     "name_zh_current": "绝不能逃避",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "すて身攻撃",
+     "summary_zh_KEEP": "舍身攻击",
+     "didx": 144,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）近接攻撃力が大幅上昇、敵の攻撃は回避不能に。戦闘終了までは撃破されない",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）舍身攻击·命中率+40%",
+     "cutin_group": 378,
+     "cutin_jp": "この戦いは、逃げちゃいけないんだ！俺が俺であるために……！",
+     "cutin_zh_current": "这一战、绝不能逃避！为了让我成为我自己……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_153",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x14CDC",
+   "budget_bytes": 22,
+   "jp": "やる前にやらなきゃ……こっちがやられる！！",
+   "zh_current": "不先动手……就会被干掉！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D00",
+   "budget_bytes": 23,
+   "jp": "できるかどうかじゃない……やるしかないんだ！",
+   "zh_current": "不管行不行……只能上了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D24",
+   "budget_bytes": 16,
+   "jp": "ターゲットは落とすしかないんだ……",
+   "zh_current": "必须击落目标……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D40",
+   "budget_bytes": 12,
+   "jp": "お互い、ツイてないよな……",
+   "zh_current": "彼此都不走运",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D58",
+   "budget_bytes": 12,
+   "jp": "お、俺だって…軍人なんだ！",
+   "zh_current": "我、也是军人！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D70",
+   "budget_bytes": 11,
+   "jp": "このおおおーーっ！",
+   "zh_current": "可恶啊啊啊！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D88",
+   "budget_bytes": 24,
+   "jp": "やるべきだと思ったことをやるしかないんだ！",
+   "zh_current": "认定该做的事只能去做！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14DAC",
+   "budget_bytes": 23,
+   "jp": "できるかどうかじゃない……やるしかないんだ！",
+   "zh_current": "不管行不行……只能上了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14DD0",
+   "budget_bytes": 9,
+   "jp": "ツイてないよな……",
+   "zh_current": "不走运……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14DE8",
+   "budget_bytes": 8,
+   "jp": "よし、いいぞ！！",
+   "zh_current": "好、不错！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14DFC",
+   "budget_bytes": 23,
+   "jp": "負けられないんだ……頑張れよ、ボンコツ！",
+   "zh_current": "我不能输……撑住啊、破烂！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14E20",
+   "budget_bytes": 9,
+   "jp": "こ、このくらいなら！",
+   "zh_current": "这点程度！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14E38",
+   "budget_bytes": 7,
+   "jp": "し、しまった！",
+   "zh_current": "不妙！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14E4C",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁーっ！",
+   "zh_current": "呜啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14E60",
+   "budget_bytes": 25,
+   "jp": "こ、こんな化け物……どうやりゃ倒せるんだ！",
+   "zh_current": "这种怪物……怎么打得倒啊！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14E88",
+   "budget_bytes": 17,
+   "jp": "く、くそっ……！逃げ出すもんか！",
+   "zh_current": "可恶……！！才不逃！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14EA8",
+   "budget_bytes": 18,
+   "jp": "よーし……これなら楽勝だな！",
+   "zh_current": "好……这就轻松了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14EC8",
+   "budget_bytes": 17,
+   "jp": "うわわっ！あ、当たるわけには！",
+   "zh_current": "哇哇！可不能中弹啊！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14EE8",
+   "budget_bytes": 18,
+   "jp": "く、来るぞ……！みんな気をつけろ！",
+   "zh_current": "来了……！都小心！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14F08",
+   "budget_bytes": 25,
+   "jp": "あ、アイツを捕まえるのか……よし！やってやる！！",
+   "zh_current": "要抓那家伙……好！看我的！！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14F30",
+   "budget_bytes": 11,
+   "jp": "ツ、ツイてないなぁ……",
+   "zh_current": "运、运气真差",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14F48",
+   "budget_bytes": 17,
+   "jp": "捕まるわけにはいかないんだよ！",
+   "zh_current": "我可不能被抓啊！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5ADC",
+   "budget_bytes": 12,
+   "jp": "よーし！やるぞーっ！！",
+   "zh_current": "好！上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5AF4",
+   "budget_bytes": 21,
+   "jp": "は、はい！バーナード·ワイズマン、行きます！",
+   "zh_current": "是！巴纳德·怀兹曼、上！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5B18",
+   "budget_bytes": 10,
+   "jp": "オレも手伝う、クリス！",
+   "zh_current": "我也帮你！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5B30",
+   "budget_bytes": 20,
+   "jp": "あんなャツ俺たちなら楽勝ですよね！",
+   "zh_current": "那种家伙、我们能轻取！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5B50",
+   "budget_bytes": 20,
+   "jp": "あんなャツ俺たちなら楽勝ですよね！",
+   "zh_current": "那种家伙、我们能轻取！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5B70",
+   "budget_bytes": 16,
+   "jp": "ガトーさん！ボクも手伝います！！",
+   "zh_current": "卡多先生！我也帮忙！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5B8C",
+   "budget_bytes": 23,
+   "jp": "バーニィチーム攻撃固定応答セリフ05",
+   "zh_current": "巴尼…………",
+   "zh_current_bytes": 22
+  }
+ ]
+}

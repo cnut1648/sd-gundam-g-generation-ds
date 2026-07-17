@@ -1,0 +1,318 @@
+{
+ "entity": "char_422",
+ "kind": "character",
+ "cids": [
+  422
+ ],
+ "name_jp": "ティターンズ上級士官",
+ "name_zh_KEEP": "提坦斯高官",
+ "cards": [
+  {
+   "cid": 422,
+   "ids": [
+    {
+     "idn": 1266,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 796,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "散布米诺夫斯基粒子！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1267,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9000",
+     "zh_name_ptr": "0x23287E6",
+     "name_jp": "ティターンズに逆らう愚か者め！",
+     "name_zh_current": "违抗提坦斯",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 797,
+     "cutin_jp": "ティターンズに逆らう愚か者め！",
+     "cutin_zh_current": "违抗提坦斯的蠢货！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_404",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x252E6",
+   "budget_bytes": 13,
+   "jp": "はっ！発射します！",
+   "zh_current": "是！发射！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x253A8",
+   "budget_bytes": 21,
+   "jp": "砲撃を回避しました！針路、戻します！",
+   "zh_current": "已回避炮击！！恢复航向！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x258B4",
+   "budget_bytes": 17,
+   "jp": "敵影捕捉！先手を打てます！！",
+   "zh_current": "已捕捉到敌影！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25940",
+   "budget_bytes": 24,
+   "jp": "閣下が見ておられるのだ！無様な戦いをするな！",
+   "zh_current": "阁下正看着呢！别丢人现眼！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2597C",
+   "budget_bytes": 20,
+   "jp": "敵、捕捉しました！攻撃を開始します！",
+   "zh_current": "已捕捉敌人！开始攻击！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25A1C",
+   "budget_bytes": 10,
+   "jp": "攻撃、回避しました！",
+   "zh_current": "已回避攻击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25A74",
+   "budget_bytes": 19,
+   "jp": "損害は微弱！問題はありません！",
+   "zh_current": "损伤轻微！没有问题！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x269A4",
+   "budget_bytes": 14,
+   "jp": "敵、射程内に入りました！",
+   "zh_current": "敌进入射程了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26AE0",
+   "budget_bytes": 9,
+   "jp": "第7ブロック被弾！",
+   "zh_current": "7区中弹！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E340",
+   "budget_bytes": 30,
+   "jp": "のこのこ死ににくるとは……反乱分子に目にものみせてやれ！",
+   "zh_current": "竟敢来送死……给叛军点颜色看看！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E36C",
+   "budget_bytes": 8,
+   "jp": "宇宙人どもめ！！",
+   "zh_current": "臭宇宙人！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E380",
+   "budget_bytes": 30,
+   "jp": "邪魔するものは容赦するな！！徹底的にせん滅しろっ！！",
+   "zh_current": "挡路者绝不留情！将其彻底歼灭！！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E3AC",
+   "budget_bytes": 28,
+   "jp": "どうせ敵は反乱分子どもだ！一人残らずせん滅してやれ！！",
+   "zh_current": "敌人不过是叛乱分子！全数歼灭！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E3D4",
+   "budget_bytes": 26,
+   "jp": "ティターンズに逆らったこと奴らに後悔させてやるのだ！！",
+   "zh_current": "胆敢违抗提坦斯、让他们后悔！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E3FC",
+   "budget_bytes": 14,
+   "jp": "邪魔するものは容赦するな！！",
+   "zh_current": "挡路者别留情！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E418",
+   "budget_bytes": 14,
+   "jp": "徹底的にせん滅しろっ！！",
+   "zh_current": "给我彻底歼灭！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E434",
+   "budget_bytes": 21,
+   "jp": "、用意！……よし、叩き落せ！！",
+   "zh_current": "、准备！……好、打下来！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E458",
+   "budget_bytes": 26,
+   "jp": "反乱分子どもにしてやられるとは……おのれ……っ！",
+   "zh_current": "竟会败在叛军手里……可恶……！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E480",
+   "budget_bytes": 12,
+   "jp": "フン、無駄なことを……！",
+   "zh_current": "哼、白费力气！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E498",
+   "budget_bytes": 24,
+   "jp": "エリートである我らが、そう簡単にやられるものか！",
+   "zh_current": "身为精英、岂会轻易落败！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E4BC",
+   "budget_bytes": 13,
+   "jp": "ふん……問題にもならんな！",
+   "zh_current": "哼……不值一提！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E4D8",
+   "budget_bytes": 20,
+   "jp": "当たっただと！？回避運動が甘いぞ！",
+   "zh_current": "竟被打中！？回避太松懈了！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E4F8",
+   "budget_bytes": 23,
+   "jp": "くそっ！直援のMSは何をやっている！！",
+   "zh_current": "可恶！护卫的MS在干什么！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E51C",
+   "budget_bytes": 24,
+   "jp": "何だ今の攻撃は！？並みの火力ではないぞ！！",
+   "zh_current": "刚才那什么攻击！？火力惊人！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E540",
+   "budget_bytes": 28,
+   "jp": "おめおめと引き下がれるものか！これではいい笑いものだ！",
+   "zh_current": "岂能就这样狼狈退下！成笑柄了！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E568",
+   "budget_bytes": 9,
+   "jp": "我々はティターンズである！",
+   "zh_current": "提坦斯！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E580",
+   "budget_bytes": 17,
+   "jp": "攻撃が来るぞ！回避だ、回避！！",
+   "zh_current": "攻击来了！快回避！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E5A0",
+   "budget_bytes": 18,
+   "jp": "遠距離から来るぞ！散開させろっ！！",
+   "zh_current": "远距离来袭！快散开！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E5C0",
+   "budget_bytes": 27,
+   "jp": "あの機体……よく動けんようだな？よし、捕縛しろっ！",
+   "zh_current": "那机体动不了了？好、捕获它！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E5E8",
+   "budget_bytes": 20,
+   "jp": "クッ……！なぜ、エリートの我々が……！？",
+   "zh_current": "唔……我们可是精英……！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E608",
+   "budget_bytes": 21,
+   "jp": "なめるなよ！この艦はまだ生きている！！",
+   "zh_current": "别小看人！本舰还能战！！",
+   "zh_current_bytes": 19
+  }
+ ]
+}

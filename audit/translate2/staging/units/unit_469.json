@@ -1,0 +1,52 @@
+{
+ "entity": "unit_469",
+ "kind": "unit",
+ "utids": [
+  469,
+  470,
+  471
+ ],
+ "name_jp": "ビルゴ9",
+ "name_zh_current": "比尔歌2",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C7B6",
+   "jp": "メガ・ビーム砲",
+   "zh_current": "米加光束炮",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6EC5",
+   "jp": "Pディフェンサー",
+   "zh_current": "行星防御器",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 11,
+   "record_offset": "0x208",
+   "budget_bytes": 28,
+   "jp_segments": [
+    "威力500までの射撃攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "威力500以下",
+    "射击攻击无效"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

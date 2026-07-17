@@ -1,0 +1,73 @@
+{
+ "entity": "unit_633",
+ "kind": "unit",
+ "utids": [
+  633
+ ],
+ "name_jp": "アークエンジェル",
+ "name_zh_current": "大天使号",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2190795",
+   "jp": "ローエングリン",
+   "zh_current": "阳电子破城炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21906D4",
+   "jp": "ゴットフリート",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21907A2",
+   "jp": "バリアント",
+   "zh_current": "巴里安特",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 3,
+   "ptr": "0x2189CFB",
+   "jp": "スレッジハマー",
+   "zh_current": "重锤",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 4,
+   "ptr": "0x2189D00",
+   "jp": "イーゲルシュテルン",
+   "zh_current": "速射机炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6EED",
+   "jp": "ラミネート装甲",
+   "zh_current": "层压装甲",
+   "owner": false,
+   "owned_by": "unit_632"
+  },
+  "defense": {
+   "record": 5,
+   "record_offset": "0xc0",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "威力450までのビーム属性の攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束攻击无效",
+    "超过则减30%"
+   ],
+   "owner": false,
+   "owned_by": "unit_632"
+  }
+ }
+}

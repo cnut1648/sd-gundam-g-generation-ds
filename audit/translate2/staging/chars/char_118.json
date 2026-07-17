@@ -1,0 +1,328 @@
+{
+ "entity": "char_118",
+ "kind": "character",
+ "cids": [
+  118
+ ],
+ "name_jp": "ミリアルド（ゼロ）",
+ "name_zh_KEEP": "米利亚尔特（零）",
+ "cards": [
+  {
+   "cid": 118,
+   "ids": [
+    {
+     "idn": 354,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7ABB",
+     "zh_name_ptr": "0x218C1E5",
+     "name_jp": "私に勝利を見せてくれ！！",
+     "name_zh_current": "让我见胜利",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "战斗力↑",
+     "didx": 97,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·反应+20·装甲+2",
+     "cutin_group": 271,
+     "cutin_jp": "ゼロよ！私に勝利を見せてくれ！！",
+     "cutin_zh_current": "零式啊！让我看见胜利吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 355,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7AA2",
+     "zh_name_ptr": "0x218916F",
+     "name_jp": "必要ないのだ！",
+     "name_zh_current": "宇宙不需要",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 272,
+     "cutin_jp": "必要ないのだ！宇宙にとって！！……貴様たちは！！",
+     "cutin_zh_current": "宇宙不需要！……你们这些家伙！！",
+     "name_owner": false,
+     "name_shared_with_idn": 352,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 356,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7AAA",
+     "zh_name_ptr": "0x20B7AAA",
+     "name_jp": "どこまでも生き抜いてみせる！！",
+     "name_zh_current": "顽强活到底",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ダメージ軽減",
+     "summary_zh_KEEP": "伤害减轻",
+     "didx": 146,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）伤害减轻",
+     "cutin_group": 273,
+     "cutin_jp": "どこまでも生き抜いてみせる！！誰よりも厳しく、戦士としてな！",
+     "cutin_zh_current": "我定要顽强活到底！比谁都严酷、作为战士！",
+     "name_owner": false,
+     "name_shared_with_idn": 353,
+     "detail_owner": false,
+     "detail_owned_by": "char_86",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xECF8",
+   "budget_bytes": 28,
+   "jp": "殺しに来たものは殺せか……そう言うのだな、ゼロ！",
+   "zh_current": "来杀的就杀掉……是吧、零式！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED20",
+   "budget_bytes": 15,
+   "jp": "ゼロ！私に勝利を見せてくれ！！",
+   "zh_current": "零式！给我胜利！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED3C",
+   "budget_bytes": 15,
+   "jp": "ゼロ！私に勝利を見せてくれ！！",
+   "zh_current": "零式！给我胜利！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED58",
+   "budget_bytes": 8,
+   "jp": "……逃がさん！！",
+   "zh_current": "休想逃！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED6C",
+   "budget_bytes": 10,
+   "jp": "次で決まりだっ！！",
+   "zh_current": "决胜一击！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED84",
+   "budget_bytes": 8,
+   "jp": "決着をつけるぞ！",
+   "zh_current": "了断吧！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xED98",
+   "budget_bytes": 8,
+   "jp": "……逃がさん！！",
+   "zh_current": "休想逃！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEDAC",
+   "budget_bytes": 22,
+   "jp": "これは戦いを終わらせるための戦いなのだ！",
+   "zh_current": "这是为终结战斗的战斗！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEDD0",
+   "budget_bytes": 12,
+   "jp": "クッ！見事……だ！！",
+   "zh_current": "唔！好本事……！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEDE8",
+   "budget_bytes": 5,
+   "jp": "フ…………",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEDFC",
+   "budget_bytes": 26,
+   "jp": "しょせんは血塗られた宿命だ！逃れようとは思わん！",
+   "zh_current": "终究是血染的命运、我不逃避！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEE24",
+   "budget_bytes": 6,
+   "jp": "っ！…………",
+   "zh_current": "！……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEE38",
+   "budget_bytes": 22,
+   "jp": "ほう……！当ててきたか……この私に！！",
+   "zh_current": "哦……！竟能打中我！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEE5C",
+   "budget_bytes": 15,
+   "jp": "クッ……！たかがこの程度ッ！",
+   "zh_current": "唔……！区区这点！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEE78",
+   "budget_bytes": 18,
+   "jp": "なぜにこうも甘いのだ……私は！",
+   "zh_current": "我为何如此天真……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEE98",
+   "budget_bytes": 20,
+   "jp": "私はまだ……敗北を認めてはいないっ！",
+   "zh_current": "我还……还没认输！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEEB8",
+   "budget_bytes": 30,
+   "jp": "この戦いになんの意味がある？どんな意味があるというのだ！",
+   "zh_current": "这战斗有何意义？到底有何意义！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEEE4",
+   "budget_bytes": 4,
+   "jp": "…………",
+   "zh_current": "…………",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEEF4",
+   "budget_bytes": 16,
+   "jp": "来るっ！？全機、回避しろっ！",
+   "zh_current": "来了！？全机回避！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEF10",
+   "budget_bytes": 24,
+   "jp": "私の敵…違う！こいつは私の戦う相手ではない！",
+   "zh_current": "他不是……我该战斗的对手！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEF34",
+   "budget_bytes": 7,
+   "jp": "屈辱だな……！",
+   "zh_current": "真耻辱！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xEF48",
+   "budget_bytes": 15,
+   "jp": "ええい！甘く見るなーっ！",
+   "zh_current": "可恶！别小看我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4458",
+   "budget_bytes": 21,
+   "jp": "ミリアルド（ゼロ）チーム攻撃汎用開始%",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x447C",
+   "budget_bytes": 21,
+   "jp": "ミリアルド（ゼロ）チーム攻撃汎用応答%",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x44A0",
+   "budget_bytes": 26,
+   "jp": "ミリアルド（ゼロ）チーム攻撃固定応答セリフ01",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x44C8",
+   "budget_bytes": 26,
+   "jp": "ミリアルド（ゼロ）チーム攻撃固定応答セリフ02",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x44F0",
+   "budget_bytes": 26,
+   "jp": "ミリアルド（ゼロ）チーム攻撃固定応答セリフ03",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4518",
+   "budget_bytes": 27,
+   "jp": "ミリアルド（ゼロ）チーム攻撃固定応答セリフ04",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4540",
+   "budget_bytes": 27,
+   "jp": "ミリアルド（ゼロ）チーム攻撃固定応答セリフ05",
+   "zh_current": "米利亚尔特（零式）",
+   "zh_current_bytes": 23
+  }
+ ]
+}

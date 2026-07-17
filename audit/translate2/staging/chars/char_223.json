@@ -1,0 +1,952 @@
+{
+ "entity": "char_223",
+ "kind": "character",
+ "cids": [
+  223,
+  224,
+  225
+ ],
+ "name_jp": "レディ・アン",
+ "name_zh_KEEP": "蕾蒂·安",
+ "cards": [
+  {
+   "cid": 223,
+   "ids": [
+    {
+     "idn": 669,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84CC",
+     "zh_name_ptr": "0x20B84CC",
+     "name_jp": "……レディ・アンと申します",
+     "name_zh_current": "名为蕾蒂安",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "皇女へ人格変化",
+     "summary_zh_KEEP": "人格变化",
+     "didx": 232,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限聖女状態に人格変化する",
+     "detail_zh_current": "",
+     "cutin_group": 526,
+     "cutin_jp": "わたくし……レディ·アンと申します",
+     "cutin_zh_current": "我……名为蕾蒂·安",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 670,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84E3",
+     "zh_name_ptr": "0x20B84E3",
+     "name_jp": "全てを破壊せよ！！",
+     "name_zh_current": "毁灭一切！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 66,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%·攻击+40%",
+     "cutin_group": 527,
+     "cutin_jp": "かまわん！全てを破壊せよ！！",
+     "cutin_zh_current": "无所谓！毁灭一切！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 671,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84ED",
+     "zh_name_ptr": "0x218C502",
+     "name_jp": "正しいのだ、おまえの行為は",
+     "name_zh_current": "你做得正确",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑&装甲無効",
+     "summary_zh_KEEP": "威命↑・破甲",
+     "didx": 207,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と攻撃力が40%ずつ上昇、攻撃対象の装甲を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+40%破甲",
+     "cutin_group": 528,
+     "cutin_jp": "正しいのだ……おまえのその行為はそして、私のこの行為もまた正しいのだ",
+     "cutin_zh_current": "你的行为是正确的……我的行为也是正确的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 224,
+   "ids": [
+    {
+     "idn": 672,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8506",
+     "zh_name_ptr": "0x20B8506",
+     "name_jp": "……私はレディ・アンだ！",
+     "name_zh_current": "名为蕾蒂安",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "眼鏡へ人格変化",
+     "summary_zh_KEEP": "人格变化",
+     "didx": 233,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限眼鏡状態に人格変化する",
+     "detail_zh_current": "",
+     "cutin_group": 529,
+     "cutin_jp": "……私はレディ·アンだ！",
+     "cutin_zh_current": "……我是蕾蒂·安！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 673,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B851C",
+     "zh_name_ptr": "0x20B851C",
+     "name_jp": "おやめなさい……無益な戦いは",
+     "name_zh_current": "停止无谓战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム防御力↑",
+     "summary_zh_KEEP": "队・回甲↑",
+     "didx": 111,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が40%上昇、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+40%·装甲+4",
+     "cutin_group": 530,
+     "cutin_jp": "おやめなさい……無益な戦いは共に新しい時代を迎えましょう……",
+     "cutin_zh_current": "住手吧……无谓的战斗让我们共迎新时代……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_197",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 674,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B852C",
+     "zh_name_ptr": "0x20B852C",
+     "name_jp": "……輝き続けてください",
+     "name_zh_current": "请继续闪耀",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 105,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）HPが50%回復。1ターンの間、回避が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）恢复50%·回避+20%装甲+2",
+     "cutin_group": 531,
+     "cutin_jp": "けなげな者達よ……輝き続けてくださいそして、これからも愛させてください…",
+     "cutin_zh_current": "勇敢的人们啊……请继续闪耀今后也请让我爱你们……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 225,
+   "ids": [
+    {
+     "idn": 675,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8506",
+     "zh_name_ptr": "0x20B8506",
+     "name_jp": "……私はレディ・アンだ！",
+     "name_zh_current": "名为蕾蒂安",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "眼鏡へ人格変化",
+     "summary_zh_KEEP": "人格变化",
+     "didx": 234,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限眼鏡状態に人格変化する",
+     "detail_zh_current": "",
+     "cutin_group": 532,
+     "cutin_jp": "……私はレディ·アンだ！",
+     "cutin_zh_current": "……我是蕾蒂·安！",
+     "name_owner": true,
+     "name_shared_with_idn": 672,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 676,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B84CC",
+     "zh_name_ptr": "0x20B84CC",
+     "name_jp": "……レディ・アンと申します",
+     "name_zh_current": "名为蕾蒂安",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "皇女へ人格変化",
+     "summary_zh_KEEP": "人格变化",
+     "didx": 235,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限聖女状態に人格変化する",
+     "detail_zh_current": "",
+     "cutin_group": 533,
+     "cutin_jp": "わたくし……レディ·アンと申します",
+     "cutin_zh_current": "我……名为蕾蒂·安",
+     "name_owner": true,
+     "name_shared_with_idn": 669,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 677,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8538",
+     "zh_name_ptr": "0x20B8538",
+     "name_jp": "人々の心を動かすのは……",
+     "name_zh_current": "动人心的是",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "自軍SP0回復",
+     "summary_zh_KEEP": "自军SP全复",
+     "didx": 14,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）自分を除く仲間のSPが完全回復する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）SP恢复100%",
+     "cutin_group": 534,
+     "cutin_jp": "人々の心を動かすのは勝者ではないのです……",
+     "cutin_zh_current": "打动人心的并非胜者……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1DEB4",
+   "budget_bytes": 16,
+   "jp": "戦って勝ち取るのだ！……未来を！！",
+   "zh_current": "战斗、夺取未来！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DED0",
+   "budget_bytes": 17,
+   "jp": "我々に敵対するものは全て排除する！",
+   "zh_current": "排除所有敌对者！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DEF0",
+   "budget_bytes": 17,
+   "jp": "我々に敵対するものは全て排除する！",
+   "zh_current": "敌对者全部排除！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DF10",
+   "budget_bytes": 21,
+   "jp": "戦いは…戦ってこそ美しいものなのだ！！",
+   "zh_current": "战斗本身就是美学！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DF34",
+   "budget_bytes": 31,
+   "jp": "私が戦場に出ているのだ…これ以上敵の跳梁を許しはしないっ！！",
+   "zh_current": "我亲临战场……不许敌人再放肆！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DF60",
+   "budget_bytes": 17,
+   "jp": "今、ここで、叩き潰してくれる！",
+   "zh_current": "此时此地、击溃你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DF80",
+   "budget_bytes": 16,
+   "jp": "貴様らの好きにさせるつもりはない！",
+   "zh_current": "不让你们得逞！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DF9C",
+   "budget_bytes": 14,
+   "jp": "抵抗など許しはしないっ！！",
+   "zh_current": "不许你们抵抗！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DFB8",
+   "budget_bytes": 27,
+   "jp": "敗北を迎え入れることこそ戦士の正しい姿なのだ……",
+   "zh_current": "坦然迎接败北……才是战士本色……",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DFE0",
+   "budget_bytes": 13,
+   "jp": "私の作戦にミスはないのだ！",
+   "zh_current": "我的作战无误！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1DFFC",
+   "budget_bytes": 30,
+   "jp": "そうだ！この私を撃て！……己を首定するために！！",
+   "zh_current": "对！朝我开枪！……为肯定你自己！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E028",
+   "budget_bytes": 36,
+   "jp": "貴様を否定しようとは思わん……が、私の正義とて誰にも否定はできん！",
+   "zh_current": "我无意否定你……但我的正义不可否定！",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E058",
+   "budget_bytes": 18,
+   "jp": "だから敵となるのだ！お前と私は！！",
+   "zh_current": "所以为敌！你和我！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E078",
+   "budget_bytes": 31,
+   "jp": "勝敗などはどうでもよい！時代を動かすことが必要なのだ！",
+   "zh_current": "胜败无关紧要！！必须推动时代！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E0A4",
+   "budget_bytes": 21,
+   "jp": "これが…！時代をも動かす力なのか…！！",
+   "zh_current": "这……！这是时代之力吗！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E0C8",
+   "budget_bytes": 34,
+   "jp": "兵士としては甘いのかもしれん……が、人間としては厳しく生きたつもりだ",
+   "zh_current": "当兵或许太天真……但为人足够严格！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E0F8",
+   "budget_bytes": 30,
+   "jp": "無粋などとは言うなよ？これとて、戦争のあり方なのだ！！",
+   "zh_current": "可别嫌无趣？这也是战争之道！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E124",
+   "budget_bytes": 26,
+   "jp": "抵抗して見せよう！それが兵士としての私の義務だ！！",
+   "zh_current": "我会抵抗！这是军人的义务！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E14C",
+   "budget_bytes": 21,
+   "jp": "11時方向から来るぞ！全機、散開しろっ！",
+   "zh_current": "11点方向！全机散开！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E170",
+   "budget_bytes": 22,
+   "jp": "今すぐ降伏して、機体を我々に引き渡すのだ！",
+   "zh_current": "快投降、交出机体来！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E194",
+   "budget_bytes": 10,
+   "jp": "私としたことが……！",
+   "zh_current": "我居然……！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E1AC",
+   "budget_bytes": 14,
+   "jp": "なめてもらっては困るなっ！",
+   "zh_current": "别小看我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x735C",
+   "budget_bytes": 15,
+   "jp": "勝ち取るのだ！我々の未来を！！",
+   "zh_current": "夺取我们的未来！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7378",
+   "budget_bytes": 26,
+   "jp": "時には力を合わせることも必要なのだということだな！",
+   "zh_current": "有时携手也是必要之举！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x73A0",
+   "budget_bytes": 27,
+   "jp": "……次はバラのエッセンスをご用意いたしましょう",
+   "zh_current": "……下次为您备上玫瑰精华……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x73C8",
+   "budget_bytes": 25,
+   "jp": "まさか、貴様と力を合わせて戦うことになるとはな……",
+   "zh_current": "没想到竟要与你并肩作战……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x73F0",
+   "budget_bytes": 18,
+   "jp": "ファイアだな！？ゴールド、了解だ！！",
+   "zh_current": "是『火』吧！？收到！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7410",
+   "budget_bytes": 26,
+   "jp": "時には力を合わせることも必要なのだということだな！",
+   "zh_current": "有时携手也是必要之举！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7438",
+   "budget_bytes": 26,
+   "jp": "時には力を合わせることも必要なのだということだな！",
+   "zh_current": "有时携手也是必要之举！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E1C8",
+   "budget_bytes": 21,
+   "jp": "うふふ……だめです世界は平和なのですから……",
+   "zh_current": "不行呢……世界已和平……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E1EC",
+   "budget_bytes": 21,
+   "jp": "さあ……新しい時代を共に迎えましょう",
+   "zh_current": "来……一起迎接新时代吧",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E210",
+   "budget_bytes": 36,
+   "jp": "戦う心は時代の中に捨て去りましょう未来にその心は必要ありません",
+   "zh_current": "将好战之心舍弃吧、未来不需要它",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E240",
+   "budget_bytes": 21,
+   "jp": "さあ……新しい時代を共に迎えましょう",
+   "zh_current": "来……一起迎接新时代吧",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E264",
+   "budget_bytes": 17,
+   "jp": "共に宇宙を平和にしていきましょう",
+   "zh_current": "一起让宇宙和平吧",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E284",
+   "budget_bytes": 32,
+   "jp": "無益な争いはやめるのです私たちが未来へと向かうために……",
+   "zh_current": "停止无益的争斗、为了我们的未来……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E2B0",
+   "budget_bytes": 32,
+   "jp": "世界を平和に導くこと……それが、これからの私たちの務めです",
+   "zh_current": "让世界和平……是我们今后的使命",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E2DC",
+   "budget_bytes": 32,
+   "jp": "さあ、もう銃は置いて……共に手を携える時が来たのですわ",
+   "zh_current": "来、放下枪吧……该携手同行了",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E314",
+   "budget_bytes": 26,
+   "jp": "私の心の中では既に戦争は終わっているのですが……",
+   "zh_current": "在我心中战争早已结束了……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E33C",
+   "budget_bytes": 25,
+   "jp": "愛くるしさなのですね……全てを狂わせたのは",
+   "zh_current": "是这份可爱……让一切疯狂……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E364",
+   "budget_bytes": 29,
+   "jp": "貴方のその力、平和のために役立ててはいただけませんか？",
+   "zh_current": "你那力量、能否用于和平呢？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E390",
+   "budget_bytes": 40,
+   "jp": "戦う姿勢には私も心惹かれます……ですが、今は銃を降ろすべき時なのです",
+   "zh_current": "战斗姿态也让我心动……但现在该放下枪了",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E3C4",
+   "budget_bytes": 31,
+   "jp": "なぜ、戦うというのです？世界はもう、こんなに平和ですのに……",
+   "zh_current": "为何要战呢？世界已这么和平……",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E3F0",
+   "budget_bytes": 21,
+   "jp": "あぁっ！？な、なぜ、貴方がたは……！！",
+   "zh_current": "啊！？为、为什么你们……！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E414",
+   "budget_bytes": 29,
+   "jp": "違う、違うわ…ああっ！違うわ！あ、ああ……！！",
+   "zh_current": "不、不对……啊啊！不对！啊、啊啊……！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E440",
+   "budget_bytes": 15,
+   "jp": "おやめなさい……無益な抵抗は",
+   "zh_current": "住手吧……别抵抗",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E45C",
+   "budget_bytes": 30,
+   "jp": "貴方の気持ちも理解できます……ですが、それは不必要なのです",
+   "zh_current": "你的心情我懂……但那是不必要的",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E488",
+   "budget_bytes": 26,
+   "jp": "もう誰一人……戦ったり死んだりすることはないのです",
+   "zh_current": "谁都……不必再战斗或死去了",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E4B0",
+   "budget_bytes": 29,
+   "jp": "宇宙に平和をもたらすために私と共に学びましょう……",
+   "zh_current": "为了宇宙和平、和我一同学习吧",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E4DC",
+   "budget_bytes": 17,
+   "jp": "あぁっ！つ、捕まってしまう！？",
+   "zh_current": "啊啊！要被抓住了！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E4FC",
+   "budget_bytes": 29,
+   "jp": "仕方ありませんね……私はまだ、やるべき事があるのですから",
+   "zh_current": "没办法呢……我还有必须做的事",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7460",
+   "budget_bytes": 16,
+   "jp": "仕方ありませんね……戦いましょう",
+   "zh_current": "没办法……应战吧",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x747C",
+   "budget_bytes": 15,
+   "jp": "まあ……恐ろしいことですのね",
+   "zh_current": "哎呀……真可怕呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7498",
+   "budget_bytes": 20,
+   "jp": "トレーズさまが戦うことを望んでいる……",
+   "zh_current": "特列斯大人渴望战斗……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x74B8",
+   "budget_bytes": 15,
+   "jp": "まあ……恐ろしいことですのね",
+   "zh_current": "哎呀……真可怕呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x74D4",
+   "budget_bytes": 15,
+   "jp": "まあ……恐ろしいことですのね",
+   "zh_current": "哎呀……真可怕呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x74F0",
+   "budget_bytes": 15,
+   "jp": "まあ……恐ろしいことですのね",
+   "zh_current": "哎呀……真可怕呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x750C",
+   "budget_bytes": 15,
+   "jp": "まあ……恐ろしいことですのね",
+   "zh_current": "哎呀……真可怕呢",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E528",
+   "budget_bytes": 10,
+   "jp": "食い止めてみせる……！！",
+   "zh_current": "必定挡住！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E540",
+   "budget_bytes": 23,
+   "jp": "戦って勝ち取ってみせる！私たちの未来を……！",
+   "zh_current": "奋战夺取！我们的未来……！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E564",
+   "budget_bytes": 30,
+   "jp": "戦うことが正しき道だというなら……ためらいはしないっ！！",
+   "zh_current": "若战斗是正道……绝不犹豫！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E590",
+   "budget_bytes": 23,
+   "jp": "戦って勝ち取ってみせる！私たちの未来を……！",
+   "zh_current": "奋战夺取！我们的未来……！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E5B4",
+   "budget_bytes": 34,
+   "jp": "貴方のその行為は正しい……でも、私のこの行為もまた、正しいのよ！",
+   "zh_current": "你的行为正确……但我的行为也正确！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E5E4",
+   "budget_bytes": 27,
+   "jp": "これ以上、力が暴走していくのを許すわけにはいかない！",
+   "zh_current": "不能再让力量失控下去了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E60C",
+   "budget_bytes": 13,
+   "jp": "阻止してみせる……必ず！！",
+   "zh_current": "必定阻止……！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E628",
+   "budget_bytes": 21,
+   "jp": "これは……やらなくてはならない戦いよ！",
+   "zh_current": "这是……必须打的一战！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E64C",
+   "budget_bytes": 20,
+   "jp": "トレーズさま……もうしわけありません……",
+   "zh_current": "特列斯大人……抱歉……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E66C",
+   "budget_bytes": 28,
+   "jp": "こうしている間にも平和への犠牲が積み重ねられてゆく……",
+   "zh_current": "就在此刻……牺牲仍在不断累积",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E694",
+   "budget_bytes": 28,
+   "jp": "退くわけにはいかない！私たちの、未来のためにも！！",
+   "zh_current": "不能退！！为了我们的未来！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E6BC",
+   "budget_bytes": 28,
+   "jp": "純粋な心が……答えの見えぬ世界で苦しんでゆく……",
+   "zh_current": "纯粹的心……在无尽世界中受苦……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E6E4",
+   "budget_bytes": 32,
+   "jp": "いいでしょう！撃ちなさい！！……己を首定するために！",
+   "zh_current": "好吧！开枪吧！！……为了肯定你自己！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E710",
+   "budget_bytes": 28,
+   "jp": "勝敗の問題ではない！これは、必要なことなのよ！！",
+   "zh_current": "这无关胜败！！这是必要之事！！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E738",
+   "budget_bytes": 32,
+   "jp": "うっ！兵士として……良い勉強をさせてもらったようね……",
+   "zh_current": "唔！作为军人……这是宝贵的一课……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E764",
+   "budget_bytes": 22,
+   "jp": "人としては……厳しく…生きているつもりよ……",
+   "zh_current": "为人……我活得够严格……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E788",
+   "budget_bytes": 13,
+   "jp": "無駄なことはやめなさい！！",
+   "zh_current": "停止无益之事！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E7A4",
+   "budget_bytes": 26,
+   "jp": "抵抗して見せる！それが兵士としての私の義務なら！！",
+   "zh_current": "我必抵抗！这是军人的义务！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E7CC",
+   "budget_bytes": 12,
+   "jp": "！…各機！散開をっ！！",
+   "zh_current": "！各机！散开！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E7E4",
+   "budget_bytes": 25,
+   "jp": "例えあなたが敵でもみすみす死なせるわけにはいかない！",
+   "zh_current": "就算为敌也不能眼看你死！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E80C",
+   "budget_bytes": 16,
+   "jp": "今の私は……魂の抜け殻だ……",
+   "zh_current": "现在的我……是空壳",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E828",
+   "budget_bytes": 20,
+   "jp": "捕まるくらいなら……私は最後まで戦う！",
+   "zh_current": "与其被抓……不如死战！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7528",
+   "budget_bytes": 12,
+   "jp": "何としても阻止するのよ！！",
+   "zh_current": "必须阻止！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7540",
+   "budget_bytes": 18,
+   "jp": "こちらプリベンター·ゴールド……了解です！",
+   "zh_current": "预防者·金……了解！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7560",
+   "budget_bytes": 12,
+   "jp": "戦うのですね、トレーズさま！",
+   "zh_current": "您要出战了吧！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7578",
+   "budget_bytes": 18,
+   "jp": "ウィンドね！？ええ、ゴールド、了解よ！！",
+   "zh_current": "是『风』吧！？收到！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7598",
+   "budget_bytes": 18,
+   "jp": "ウィンドね！？ええ、ゴールド、了解よ！！",
+   "zh_current": "是『风』吧！？收到！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x75B8",
+   "budget_bytes": 22,
+   "jp": "了解よ、ファイア！ゴールドは支援に回ります！",
+   "zh_current": "收到、『火』！『金』去支援！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x75DC",
+   "budget_bytes": 18,
+   "jp": "こちらプリベンター·ゴールド……了解です！",
+   "zh_current": "预防者·金……了解！",
+   "zh_current_bytes": 15
+  }
+ ]
+}

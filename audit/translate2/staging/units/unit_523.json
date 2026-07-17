@@ -1,0 +1,51 @@
+{
+ "entity": "unit_523",
+ "kind": "unit",
+ "utids": [
+  523,
+  524,
+  525
+ ],
+ "name_jp": "リック・ディアス",
+ "name_zh_current": "里克·迪亚斯",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189B07",
+   "jp": "ビーム・ピストル",
+   "zh_current": "光束手枪",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2190769",
+   "jp": "クレイ・バズーカ",
+   "zh_current": "黏土火箭炮",
+   "shared_by_n_units": 15
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

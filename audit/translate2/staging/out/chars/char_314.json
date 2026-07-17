@@ -1,0 +1,56 @@
+{
+ "entity": "char_314",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/Killing",
+  "https://gundam.fandom.com/wiki/Operation_Rubicon",
+  "https://wiki.biligame.com/gundam/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE0080%EF%BC%9A%E5%8F%A3%E8%A2%8B%E9%87%8C%E7%9A%84%E6%88%98%E4%BA%89%E4%BA%BA%E7%89%A9",
+  "https://gundam.huijiwiki.com/wiki/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE0080_%E5%8F%A3%E8%A2%8B%E9%87%8C%E7%9A%84%E6%88%98%E4%BA%89"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 942,
+   "name_zh": "这群废物……",
+   "cutin_zh": "你们这群废物……竟敢得意忘形！",
+   "detail_effect_zh": "1回合内攻击力+20%",
+   "notes": "detail_zh_current丢了1ターン这一持续时间、已补回。cut-in恢复JP的……停顿。"
+  },
+  {
+   "idn": 943,
+   "name_zh": "被运气救了",
+   "cutin_zh": "这也算是被运气救了吧？",
+   "notes": ""
+  },
+  {
+   "idn": 944,
+   "name_zh": "不惜牺牲……",
+   "cutin_zh": "不惜任何牺牲、也必须取得胜利！！",
+   "notes": "名字改回JP的……收尾（4汉字48px+……16px=64px、与idn942现行名同形、恰好用满64px预算）。cut-in补回JP结尾的双感叹号、并与0x23BE0战吼的不惜任何牺牲措辞统一。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x23BB8", "zh": "已经不是挑手段的时候了！"},
+  {"file": "0.bin", "record": "0x23BE0", "zh": "为了打开战局、不惜任何牺牲！！"},
+  {"file": "0.bin", "record": "0x23C0C", "zh": "给我开火！"},
+  {"file": "0.bin", "record": "0x23C24", "zh": "别管！开火！！"},
+  {"file": "0.bin", "record": "0x23C53", "zh": "很好……歼灭！"},
+  {"file": "0.bin", "record": "0x23C6C", "zh": "管什么条约！"},
+  {"file": "0.bin", "record": "0x23C84", "zh": "一定要毁掉！"},
+  {"file": "0.bin", "record": "0x23C9C", "zh": "为了吉翁公国！"},
+  {"file": "0.bin", "record": "0x23CB8", "zh": "成功就在眼前……可恶……！！"},
+  {"file": "0.bin", "record": "0x23D04", "zh": "哼……杂鱼们"},
+  {"file": "0.bin", "record": "0x23D1C", "zh": "不能在这种地方浪费时间！"},
+  {"file": "0.bin", "record": "0x23D44", "zh": "别管他！快反击！"},
+  {"file": "0.bin", "record": "0x23D60", "zh": "啧！一群蠢货！！"},
+  {"file": "0.bin", "record": "0x23D7C", "zh": "可恶！竟敢碍事！"},
+  {"file": "0.bin", "record": "0x23D98", "zh": "混账！真要置我于死地吗！"},
+  {"file": "0.bin", "record": "0x23DBC", "zh": "事到如今、岂能沉没！想想办法！"},
+  {"file": "0.bin", "record": "0x23DE4", "zh": "我们有重要任务！"},
+  {"file": "0.bin", "record": "0x23E00", "zh": "攻击！？快散开躲避！"},
+  {"file": "0.bin", "record": "0x23E20", "zh": "哼、隔那么远……散开就行了！"},
+  {"file": "0.bin", "record": "0x23E44", "zh": "总会有用处、活捉他！"},
+  {"file": "0.bin", "record": "0x23E64", "zh": "成功就在眼前……可恶……！！"},
+  {"file": "0.bin", "record": "0x23E88", "zh": "岂会输给你！"}
+ ],
+ "notes": "身份确认：基林（キリング）、0080口袋里的战争中策划卢比孔作战、后夺权下令对Side6核打击（违反南极条约）的吉翁军官——0x23C6C的南極条約梗即出于此、但11字节预算装不下、理想句为：南极条约与我无关！。其他受预算压缩的理想句：0x23C0C=开火！给我开火！、0x23C9C=一切都是为了吉翁公国！！、0x23BB8=事到如今已经顾不得挑选手段了！。0x23CB8与0x23E64为同一JP句、译文保持一致并恢复JP的双重……。"
+}

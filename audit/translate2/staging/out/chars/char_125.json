@@ -1,0 +1,110 @@
+{
+ "entity": "char_125",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%82%BB%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%AA",
+  "https://dic.pixiv.net/a/%E3%82%B7%E3%82%B0%E3%83%BB%E3%82%A6%E3%82%A7%E3%83%89%E3%83%8A%E3%83%BC",
+  "https://wiki.biligame.com/gundam/Concept-X6-1-2%E5%80%92X",
+  "https://xneo.jp/ds_gene/"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 375,
+   "name_zh": "塞壬之歌！",
+   "cutin_zh": "塞壬的歌声……也让你听听吧！",
+   "notes": "セイレーネ沿用repo既定译塞壬（塞壬系统/塞壬计划、见data/zh/stages与special_abilities）。旧指令名让你听歌声生硬、改为名台词关键词塞壬+歌声的凝缩形。效果文归char_122所有未输出"
+  },
+  {
+   "idn": 376,
+   "name_zh": "没问题！",
+   "cutin_zh": "……没问题！",
+   "notes": "现行译已自然、保留。效果文归char_13所有未输出"
+  },
+  {
+   "idn": 377,
+   "name_zh": "小看我……",
+   "cutin_zh": "小看我也该适可而止了！",
+   "notes": "旧名台词别太小看我也该适可而止了！语法杂糅（别太+也该冲突）、修正为通顺句。指令名按JP原名私を甘く見るのは……取名台词开头+尾省略号形、与名台词呼应。效果文归char_91所有未输出"
+  },
+  {
+   "idn": 378,
+   "name_zh": "上吧！倒X",
+   "cutin_zh": "上吧！倒X！！",
+   "detail_effect_zh": "无限持续、搭乘倒X时、直到通关为止保持超级化",
+   "notes": "旧指令名冲上去！！丢失机体名、按名台词改为上吧！倒X（5格）。倒X=biligame条目Concept-X6-1-2倒X、与data/zh/units.json一致。效果文旧译为空、已补全：ROM原文的無限为{01}分隔的持续时间栏（与1ターン同位）、非机体名一部分；ハイパー化沿用data/zh/ui.json既定译超级化；措辞与char_78同句JP（didx219）的译文逐字一致"
+  },
+  {
+   "idn": 379,
+   "name_zh": "没问题！",
+   "cutin_zh": "……没问题！",
+   "notes": "与idn376共享同一名称记录、译文一致。效果文归char_43所有未输出"
+  },
+  {
+   "idn": 380,
+   "name_zh": "小看我……",
+   "cutin_zh": "小看我也该适可而止了！",
+   "notes": "与idn377共享同一名称记录、名台词同句、译文一致。效果文归char_91所有未输出"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xFF10", "zh": "这想法未免太天真了！"},
+  {"file": "0.bin", "record": "0xFF30", "zh": "见识我的力量！"},
+  {"file": "0.bin", "record": "0xFF4C", "zh": "在那！！"},
+  {"file": "0.bin", "record": "0xFF60", "zh": "拿下！"},
+  {"file": "0.bin", "record": "0xFF74", "zh": "好、乖孩子……"},
+  {"file": "0.bin", "record": "0xFF8C", "zh": "压制到底……！"},
+  {"file": "0.bin", "record": "0xFFA4", "zh": "有觉悟吗！？"},
+  {"file": "0.bin", "record": "0xFFBC", "zh": "太慢了！！"},
+  {"file": "0.bin", "record": "0xFFD0", "zh": "输了……完败"},
+  {"file": "0.bin", "record": "0xFFE8", "zh": "别想这么顺利！！"},
+  {"file": "0.bin", "record": "0x10004", "zh": "我不放弃……只要还有翻盘机会！"},
+  {"file": "0.bin", "record": "0x1002C", "zh": "不妙！失误了！？"},
+  {"file": "0.bin", "record": "0x10048", "zh": "看来不会让我轻松取胜……"},
+  {"file": "0.bin", "record": "0x1006C", "zh": "好身手！"},
+  {"file": "0.bin", "record": "0x10080", "zh": "直击！厉害！"},
+  {"file": "0.bin", "record": "0x10098", "zh": "万事休矣……可是！"},
+  {"file": "0.bin", "record": "0x100B4", "zh": "那是办不到的"},
+  {"file": "0.bin", "record": "0x100D0", "zh": "来这招……好！"},
+  {"file": "0.bin", "record": "0x100E8", "zh": "各机快散开！远程攻击！！"},
+  {"file": "0.bin", "record": "0x1010C", "zh": "那机体归我！"},
+  {"file": "0.bin", "record": "0x10124", "zh": "误了撤退时机……我竟如此狼狈"},
+  {"file": "0.bin", "record": "0x1014C", "zh": "竟敢对我的爱机下手！"},
+  {"file": "1de.bin", "record": "0x49E0", "zh": "全机、编队攻击！一齐上！！"},
+  {"file": "1de.bin", "record": "0x4A08", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4A20", "zh": "西格·韦德纳！助你一把！"},
+  {"file": "1de.bin", "record": "0x4A44", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4A5C", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4A74", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4A8C", "zh": "瑟蕾因收到"},
+  {"file": "0.bin", "record": "0x10170", "zh": "这想法未免太天真了！"},
+  {"file": "0.bin", "record": "0x10190", "zh": "见识我的力量！"},
+  {"file": "0.bin", "record": "0x101AC", "zh": "在那！！"},
+  {"file": "0.bin", "record": "0x101C0", "zh": "拿下！"},
+  {"file": "0.bin", "record": "0x101D4", "zh": "好、乖孩子……"},
+  {"file": "0.bin", "record": "0x101EC", "zh": "压制到底……！"},
+  {"file": "0.bin", "record": "0x10204", "zh": "有觉悟吗！？"},
+  {"file": "0.bin", "record": "0x1021C", "zh": "太慢了！！"},
+  {"file": "0.bin", "record": "0x10230", "zh": "输了……完败"},
+  {"file": "0.bin", "record": "0x10248", "zh": "别想这么顺利！！"},
+  {"file": "0.bin", "record": "0x10264", "zh": "我不放弃……只要还有翻盘机会！"},
+  {"file": "0.bin", "record": "0x1028C", "zh": "不妙！失误了！？"},
+  {"file": "0.bin", "record": "0x102A8", "zh": "看来不会让我轻松取胜……"},
+  {"file": "0.bin", "record": "0x102CC", "zh": "好身手！"},
+  {"file": "0.bin", "record": "0x102E0", "zh": "直击！厉害！"},
+  {"file": "0.bin", "record": "0x102F8", "zh": "万事休矣……可是！"},
+  {"file": "0.bin", "record": "0x10314", "zh": "那是办不到的"},
+  {"file": "0.bin", "record": "0x10330", "zh": "来这招……好！"},
+  {"file": "0.bin", "record": "0x10348", "zh": "各机快散开！远程攻击！！"},
+  {"file": "0.bin", "record": "0x1036C", "zh": "那机体归我！"},
+  {"file": "0.bin", "record": "0x10384", "zh": "误了撤退时机……我竟如此狼狈"},
+  {"file": "0.bin", "record": "0x103AC", "zh": "竟敢对我的爱机下手！"},
+  {"file": "1de.bin", "record": "0x4AA4", "zh": "全机、编队攻击！一齐上！！"},
+  {"file": "1de.bin", "record": "0x4ACC", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4AE4", "zh": "西格·韦德纳！助你一把！"},
+  {"file": "1de.bin", "record": "0x4B08", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4B20", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4B38", "zh": "瑟蕾因收到"},
+  {"file": "1de.bin", "record": "0x4B50", "zh": "瑟蕾因收到"}
+ ],
+ "notes": "cid125（泰拉·斯欧诺形态）与cid126（倒X形态、隐藏路线接替金加纳姆成为倒X新主人、pixiv百科）两卡共58条bark、重复语音对已逐对统一措辞。超预算旧译已按字节成本规则重排：これが私の力だ（13B）取见识我的力量！；退き際を誤ったか…取误了撤退时机……我竟如此狼狈（26B）。こちらセレイン、了承だ！！预算仅10B、维持瑟蕾因收到（无法再容纳标点）。理想长版：そこだっ！！=就是那里！！、ソイツは無理…=那可是办不到的事"
+}

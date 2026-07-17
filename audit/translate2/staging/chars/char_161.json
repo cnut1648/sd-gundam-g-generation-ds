@@ -1,0 +1,1764 @@
+{
+ "entity": "char_161",
+ "kind": "character",
+ "cids": [
+  161,
+  162,
+  163,
+  164,
+  165,
+  166
+ ],
+ "name_jp": "ハマーン・カーン",
+ "name_zh_KEEP": "哈曼·卡恩",
+ "cards": [
+  {
+   "cid": 161,
+   "ids": [
+    {
+     "idn": 483,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7ED8",
+     "zh_name_ptr": "0x218FF93",
+     "name_jp": "私……行きます！",
+     "name_zh_current": "我要上了！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋先制攻撃",
+     "summary_zh_KEEP": "威命↑・先攻",
+     "didx": 140,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%先攻",
+     "cutin_group": 379,
+     "cutin_jp": "私……行きます！",
+     "cutin_zh_current": "我……要上了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_67",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 484,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7EE1",
+     "zh_name_ptr": "0x23288DE",
+     "name_jp": "ダメなのよ！",
+     "name_zh_current": "光说不练",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋0回避",
+     "summary_zh_KEEP": "ID封・必闪",
+     "didx": 185,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃が命中した相手のIDを1ターン封印。敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·完全回避",
+     "cutin_group": 380,
+     "cutin_jp": "ダメなのよ！言葉だけじゃ！",
+     "cutin_zh_current": "光说不练可不行！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 485,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7EF3",
+     "zh_name_ptr": "0x20B7EF3",
+     "name_jp": "私一人でも戦う！！",
+     "name_zh_current": "一人也战！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 381,
+     "cutin_jp": "誰も戦わないなら……私一人でも戦う！！",
+     "cutin_zh_current": "若无人愿战……我一人也要战！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 162,
+   "ids": [
+    {
+     "idn": 486,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7EFD",
+     "zh_name_ptr": "0x20B7EFD",
+     "name_jp": "己の身を呪うがいい！",
+     "name_zh_current": "诅咒自己吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 190,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化。敵の攻撃を必ず回避、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避先攻",
+     "cutin_group": 382,
+     "cutin_jp": "こんなところで朽ち果てる己の身を呪うがいい！",
+     "cutin_zh_current": "竟要在此地腐朽消亡……尽管诅咒你自己吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 487,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7F0B",
+     "zh_name_ptr": "0x20B7F0B",
+     "name_jp": "無礼を許すわけには行かないな！",
+     "name_zh_current": "不许你无礼",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋戦闘力↑",
+     "summary_zh_KEEP": "ID封暴必闪",
+     "didx": 192,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃がクリティカル化、命中した相手のIDを1ターン封印、完全回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·暴击·完全回避",
+     "cutin_group": 383,
+     "cutin_jp": "無礼を許すわけにはいかないな！",
+     "cutin_zh_current": "岂能饶恕你的无礼！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 488,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F28",
+     "zh_name_ptr": "0x218C316",
+     "name_jp": "世界の都合というものを……",
+     "name_zh_current": "世界的道理",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命反↑",
+     "didx": 55,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と攻撃力が20%ずつ上昇、反応が20上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·反应+20攻击+20%",
+     "cutin_group": 384,
+     "cutin_jp": "世界の都合というものを洞察できない愚か者は排除すべきだ！",
+     "cutin_zh_current": "看不清世道的愚者……理应统统清除！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 163,
+   "ids": [
+    {
+     "idn": 489,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7EFD",
+     "zh_name_ptr": "0x20B7EFD",
+     "name_jp": "己の身を呪うがいい！",
+     "name_zh_current": "诅咒自己吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 190,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化。敵の攻撃を必ず回避、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避先攻",
+     "cutin_group": 385,
+     "cutin_jp": "こんなところで朽ち果てる己の身を呪うがいい！",
+     "cutin_zh_current": "竟要在此地腐朽消亡……尽管诅咒你自己吧！",
+     "name_owner": true,
+     "name_shared_with_idn": 486,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 490,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7F0B",
+     "zh_name_ptr": "0x20B7F0B",
+     "name_jp": "無礼を許すわけには行かないな！",
+     "name_zh_current": "不许你无礼",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋戦闘力↑",
+     "summary_zh_KEEP": "ID封暴必闪",
+     "didx": 192,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃がクリティカル化、命中した相手のIDを1ターン封印、完全回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·暴击·完全回避",
+     "cutin_group": 386,
+     "cutin_jp": "無礼を許すわけにはいかないな！",
+     "cutin_zh_current": "岂能饶恕你的无礼！",
+     "name_owner": true,
+     "name_shared_with_idn": 487,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 491,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F28",
+     "zh_name_ptr": "0x218C316",
+     "name_jp": "世界の都合というものを……",
+     "name_zh_current": "世界的道理",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命防↑",
+     "didx": 201,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の反応が20、命中率と攻撃力が20%上昇",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·反应+20攻击+20%",
+     "cutin_group": 387,
+     "cutin_jp": "世界の都合というものを洞察できない愚か者は排除すべきだ！",
+     "cutin_zh_current": "看不清世道的愚者……理应统统清除！",
+     "name_owner": true,
+     "name_shared_with_idn": 488,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 164,
+   "ids": [
+    {
+     "idn": 492,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7F36",
+     "zh_name_ptr": "0x20B7F36",
+     "name_jp": "天国とかでやるんだな！！",
+     "name_zh_current": "去天国继续",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 190,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を大幅に強化。敵の攻撃を必ず回避、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避先攻",
+     "cutin_group": 388,
+     "cutin_jp": "続きは天国とかでやるんだな！！",
+     "cutin_zh_current": "剩下的去天国继续吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 493,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F44",
+     "zh_name_ptr": "0x218FF9E",
+     "name_jp": "肉体があるから……",
+     "name_zh_current": "因为有肉体",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 389,
+     "cutin_jp": "肉体があるから……やれるのさ！",
+     "cutin_zh_current": "正因有肉体……才办得到！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 494,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F4E",
+     "zh_name_ptr": "0x218C32C",
+     "name_jp": "地球の愚かな人間を……",
+     "name_zh_current": "愚蠢地球人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命反↑",
+     "didx": 55,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と攻撃力が20%ずつ上昇、反応が20上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·反应+20攻击+20%",
+     "cutin_group": 390,
+     "cutin_jp": "地球の愚かな人間を許すわけにはいかないのだ！",
+     "cutin_zh_current": "地球上的愚蠢人类……我绝不能饶恕！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 165,
+   "ids": [
+    {
+     "idn": 495,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F5A",
+     "zh_name_ptr": "0x20B7F5A",
+     "name_jp": "思い知らせる時が来たのだ！",
+     "name_zh_current": "让你尝苦头",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋散開封印",
+     "summary_zh_KEEP": "威暴击封散",
+     "didx": 175,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手チームの散開を封印、攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·解除封印",
+     "cutin_group": 391,
+     "cutin_jp": "愚かなる人間たちに思い知らせる時が来たのだ！",
+     "cutin_zh_current": "是时候让愚蠢的人类……好好尝尝苦头！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 496,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F44",
+     "zh_name_ptr": "0x218FF9E",
+     "name_jp": "肉体があるから……",
+     "name_zh_current": "因为有肉体",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 392,
+     "cutin_jp": "肉体があるから……やれるのさ！",
+     "cutin_zh_current": "正因有肉体……才办得到！",
+     "name_owner": true,
+     "name_shared_with_idn": 493,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 497,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7F4E",
+     "zh_name_ptr": "0x218C32C",
+     "name_jp": "地球の愚かな人間を……",
+     "name_zh_current": "愚蠢地球人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命防↑",
+     "didx": 201,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の反応が20、命中率と攻撃力が20%上昇",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·反应+20攻击+20%",
+     "cutin_group": 393,
+     "cutin_jp": "地球の愚かな人間を許すわけにはいかないのだ！",
+     "cutin_zh_current": "地球上的愚蠢人类……我绝不能饶恕！",
+     "name_owner": true,
+     "name_shared_with_idn": 494,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 166,
+   "ids": [
+    {
+     "idn": 498,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7ED8",
+     "zh_name_ptr": "0x218FF93",
+     "name_jp": "私……行きます！",
+     "name_zh_current": "我要上了！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 191,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力を強化。敵の攻撃を必ず回避、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击·完全回避先攻",
+     "cutin_group": 394,
+     "cutin_jp": "私……行きます！",
+     "cutin_zh_current": "我……要上了！",
+     "name_owner": true,
+     "name_shared_with_idn": 483,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 499,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7EE1",
+     "zh_name_ptr": "0x23288DE",
+     "name_jp": "ダメなのよ！",
+     "name_zh_current": "光说不练",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋戦闘力↑",
+     "summary_zh_KEEP": "ID封暴必闪",
+     "didx": 192,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃がクリティカル化、命中した相手のIDを1ターン封印、完全回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·暴击·完全回避",
+     "cutin_group": 395,
+     "cutin_jp": "ダメなのよ！言葉だけじゃ！",
+     "cutin_zh_current": "光说不练可不行！",
+     "name_owner": true,
+     "name_shared_with_idn": 484,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 500,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7EF3",
+     "zh_name_ptr": "0x20B7EF3",
+     "name_jp": "私一人でも戦う！！",
+     "name_zh_current": "一人也战！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 396,
+     "cutin_jp": "誰も戦わないなら……私一人でも戦う！！",
+     "cutin_zh_current": "若无人愿战……我一人也要战！",
+     "name_owner": true,
+     "name_shared_with_idn": 485,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x14F68",
+   "budget_bytes": 30,
+   "jp": "やらなければやられる……感傷的になってる暇なんて！",
+   "zh_current": "不动手就会挨打……没空伤感了！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14F94",
+   "budget_bytes": 9,
+   "jp": "行って！！",
+   "zh_current": "上吧！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14FAC",
+   "budget_bytes": 10,
+   "jp": "やるのよ、ハマーン……！",
+   "zh_current": "哈曼、上吧！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14FC4",
+   "budget_bytes": 7,
+   "jp": "……そこよ！！",
+   "zh_current": "……那里！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14FD8",
+   "budget_bytes": 19,
+   "jp": "ここまできたら……やるしかない！！",
+   "zh_current": "事到如今……只能上了！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14FF8",
+   "budget_bytes": 25,
+   "jp": "今、ここで…戻るなんて………許されない……！",
+   "zh_current": "怎能在此回头……绝不可以！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15020",
+   "budget_bytes": 10,
+   "jp": "落としてみせるっ！！",
+   "zh_current": "定要击落！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15038",
+   "budget_bytes": 12,
+   "jp": "やってみせるしか……！！",
+   "zh_current": "只能拼了……！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15050",
+   "budget_bytes": 27,
+   "jp": "撃墜…される……私…これでもう…終わりなんですか…？",
+   "zh_current": "被击坠了……我就这样完了吗……？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15078",
+   "budget_bytes": 12,
+   "jp": "かわせた！……次は！？",
+   "zh_current": "躲开了！还来！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15090",
+   "budget_bytes": 15,
+   "jp": "私……こんなことまでして……",
+   "zh_current": "我……做这种事……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x150AC",
+   "budget_bytes": 30,
+   "jp": "何なの！？この不安感……これが実戦の恐怖なの！？",
+   "zh_current": "什么！？这股不安……实战的恐怖！？",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x150D8",
+   "budget_bytes": 8,
+   "jp": "……きゃぁっ！！",
+   "zh_current": "……呀啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x150EC",
+   "budget_bytes": 11,
+   "jp": "こ、これが実戦なの！？",
+   "zh_current": "这就是实战？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15104",
+   "budget_bytes": 20,
+   "jp": "ダ、ダメ……！機体の出力が低下して…",
+   "zh_current": "不、不行……！出力在下降！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15124",
+   "budget_bytes": 24,
+   "jp": "教えてください、シャア大佐！わたし、どう戦えば……",
+   "zh_current": "大佐、请教我！！该怎么打……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15148",
+   "budget_bytes": 15,
+   "jp": "私……負けられないのよ！！",
+   "zh_current": "我……我绝不能输！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15164",
+   "budget_bytes": 7,
+   "jp": "……来るっ！？",
+   "zh_current": "来了！？",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15178",
+   "budget_bytes": 8,
+   "jp": "みんな、散開して！",
+   "zh_current": "快散开！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1518C",
+   "budget_bytes": 17,
+   "jp": "もう抵抗は止めて！！投降して！",
+   "zh_current": "停止抵抗！！投降！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x151AC",
+   "budget_bytes": 7,
+   "jp": "そ、そんな……！",
+   "zh_current": "怎、怎会",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x151C0",
+   "budget_bytes": 14,
+   "jp": "私……まだ戦えるもの！！",
+   "zh_current": "我……我还能打！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5BB0",
+   "budget_bytes": 13,
+   "jp": "お願い！私に力を貸して！！",
+   "zh_current": "拜托！请支援我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5BCC",
+   "budget_bytes": 7,
+   "jp": "私もやります！",
+   "zh_current": "我也上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5BE0",
+   "budget_bytes": 12,
+   "jp": "お手伝いします、シャア大佐！！",
+   "zh_current": "大佐、我来帮忙！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5BF8",
+   "budget_bytes": 7,
+   "jp": "私もやります！",
+   "zh_current": "我也上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C0C",
+   "budget_bytes": 7,
+   "jp": "私もやります！",
+   "zh_current": "我也上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C20",
+   "budget_bytes": 7,
+   "jp": "私もやります！",
+   "zh_current": "我也上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C34",
+   "budget_bytes": 7,
+   "jp": "私もやります！",
+   "zh_current": "我也上！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x151DC",
+   "budget_bytes": 21,
+   "jp": "この私を……見くびってもらっては困る！",
+   "zh_current": "对我……可别太小看了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15200",
+   "budget_bytes": 5,
+   "jp": "……！",
+   "zh_current": "……！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15214",
+   "budget_bytes": 24,
+   "jp": "やってみるさ！！人々の未来にとって必要ならば！",
+   "zh_current": "试试看！！为了人们的未来！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15238",
+   "budget_bytes": 23,
+   "jp": "道を示してみせる！私のこの手によって！！",
+   "zh_current": "由我来为你们指明道路！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1525C",
+   "budget_bytes": 16,
+   "jp": "やるべき事をするだけのことだ！",
+   "zh_current": "我只做该做的事！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15278",
+   "budget_bytes": 21,
+   "jp": "これ以上……宇宙に悲しみを増やさせはせん！",
+   "zh_current": "不能再给宇宙添悲伤！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1529C",
+   "budget_bytes": 27,
+   "jp": "この時代を……世界を！守り抜くために……！！",
+   "zh_current": "这时代……世界！我会守护到底！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x152C4",
+   "budget_bytes": 30,
+   "jp": "皆の未来がかかっているのだ！退くわけにはいかないな！",
+   "zh_current": "大家的未来全系于此！我绝不能退！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x152F0",
+   "budget_bytes": 8,
+   "jp": "シャア…、私は……",
+   "zh_current": "夏亚、我……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15304",
+   "budget_bytes": 20,
+   "jp": "やめろ！それでは無駄死にするだけだ！",
+   "zh_current": "住手！那只是白白送死！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15324",
+   "budget_bytes": 17,
+   "jp": "まだっ……！倒れられんのだ！！",
+   "zh_current": "还没……！不能倒下！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15344",
+   "budget_bytes": 9,
+   "jp": "これしきのことっ！",
+   "zh_current": "这点小事！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1535C",
+   "budget_bytes": 13,
+   "jp": "やるっ！だ、だが……！！",
+   "zh_current": "上！可、可是……！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15378",
+   "budget_bytes": 11,
+   "jp": "くっ！大した役者だな！",
+   "zh_current": "真会演戏啊！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15390",
+   "budget_bytes": 15,
+   "jp": "っ！！なんだ、この力は！？",
+   "zh_current": "唔！！这力量是！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x153AC",
+   "budget_bytes": 25,
+   "jp": "来るなら来ればいい！私は逃げも隕れもしないぞ！",
+   "zh_current": "要来就来！！我绝不逃不躲！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x153D4",
+   "budget_bytes": 13,
+   "jp": "命が惜しいならば退けっ！",
+   "zh_current": "惜命就退下！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x153F0",
+   "budget_bytes": 4,
+   "jp": "フッ……",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15400",
+   "budget_bytes": 9,
+   "jp": "各機、散開せよ！！",
+   "zh_current": "各机、散开！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15418",
+   "budget_bytes": 20,
+   "jp": "私の声が聞こえるなら……私に従え！",
+   "zh_current": "若听得见……就追随我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15438",
+   "budget_bytes": 17,
+   "jp": "人は……分かり合えるのか……？",
+   "zh_current": "人……能相互理解吗？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15458",
+   "budget_bytes": 24,
+   "jp": "よくもずけずけと……恥を知れっ！俗物！！",
+   "zh_current": "竟敢放肆……知耻吧、俗物！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x220",
+   "budget_bytes": 35,
+   "jp": "話し合いの余地がないというのなら……ここがお前の死に場所となる！！",
+   "zh_current": "若无对话余地、这里就是你的死地！！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C48",
+   "budget_bytes": 17,
+   "jp": "済まない！私に力を貸してくれ！！",
+   "zh_current": "抱歉！请助我一臂！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C68",
+   "budget_bytes": 16,
+   "jp": "承知した！支援させてもらう！！",
+   "zh_current": "抱歉！借我力量！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5C84",
+   "budget_bytes": 26,
+   "jp": "背後のことは気にするな、シャア！存分に戦ってくれ！",
+   "zh_current": "背后交给我、夏亚！尽管去战！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5CAC",
+   "budget_bytes": 26,
+   "jp": "いいだろう、少年！ここは手を組むべき時だ！！",
+   "zh_current": "好吧、少年！如今正是携手之时！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5CD4",
+   "budget_bytes": 16,
+   "jp": "承知した！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5CF0",
+   "budget_bytes": 16,
+   "jp": "承知した！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D0C",
+   "budget_bytes": 16,
+   "jp": "承知した！支援させてもらう！！",
+   "zh_current": "明白！我来支援！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1547C",
+   "budget_bytes": 22,
+   "jp": "こうも簡単に先手をとらせてくれるとはな！",
+   "zh_current": "竟这么轻易就让出先手！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x154A0",
+   "budget_bytes": 8,
+   "jp": "今だ！一斉射撃！",
+   "zh_current": "上！齐射！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x154B4",
+   "budget_bytes": 9,
+   "jp": "よし！……撃てっ！",
+   "zh_current": "好！开火！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x154ED",
+   "budget_bytes": 9,
+   "jp": "よし、一斉射撃だ！",
+   "zh_current": "好、齐射！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15504",
+   "budget_bytes": 11,
+   "jp": "愚か者どもを排除せよ！",
+   "zh_current": "清除蠢货们！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1551C",
+   "budget_bytes": 13,
+   "jp": "我々の力、思い知らせるのだ！",
+   "zh_current": "让你们领教！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15538",
+   "budget_bytes": 5,
+   "jp": "目障りだな！",
+   "zh_current": "碍眼！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1554C",
+   "budget_bytes": 5,
+   "jp": "沈めるっ！",
+   "zh_current": "击沉！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15583",
+   "budget_bytes": 21,
+   "jp": "クッ……ここまでか！？総員、退艦せよ！",
+   "zh_current": "唔……到头了！？全员退舰！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x155A4",
+   "budget_bytes": 10,
+   "jp": "回避運動、急げっ！",
+   "zh_current": "快回避！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x155DC",
+   "budget_bytes": 20,
+   "jp": "態勢を立て直し次第、反撃に移る！",
+   "zh_current": "重整态势后、就反击！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x155FC",
+   "budget_bytes": 13,
+   "jp": "ええいっ！これしきで！！",
+   "zh_current": "区区这点小事！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15618",
+   "budget_bytes": 16,
+   "jp": "ひるむなっ！大したことはない！",
+   "zh_current": "别退缩！没什么！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15660",
+   "budget_bytes": 21,
+   "jp": "回避運動をとりつつ、敵の死角へ回れ！",
+   "zh_current": "一边回避、转入死角！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15684",
+   "budget_bytes": 23,
+   "jp": "敵のベースに乗せられすぎだ！見てられん！",
+   "zh_current": "被敌人牵着走！！丢人！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x156C8",
+   "budget_bytes": 12,
+   "jp": "ええい！やってくれる！",
+   "zh_current": "可恶！来这套！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x156E0",
+   "budget_bytes": 6,
+   "jp": "俗物が私に！",
+   "zh_current": "俗物！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x156F4",
+   "budget_bytes": 26,
+   "jp": "！……操舵手、取り舵だ！攻撃が来るぞっ！",
+   "zh_current": "操舵手、左满舵！敌人来袭！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1571C",
+   "budget_bytes": 18,
+   "jp": "回避！そうそう当たりはしないっ！",
+   "zh_current": "躲！没那么好打中！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1573C",
+   "budget_bytes": 27,
+   "jp": "ザビ家に忠誠を誓うなら命だけは助けてやろう！",
+   "zh_current": "若效忠扎比家、便饶你一命！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15764",
+   "budget_bytes": 17,
+   "jp": "人は……分かり合えるのか……？",
+   "zh_current": "人……能相互理解吗？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15784",
+   "budget_bytes": 24,
+   "jp": "よくもずけずけと……恥を知れっ！俗物！！",
+   "zh_current": "竟敢放肆……知耻吧、俗物！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x157A8",
+   "budget_bytes": 27,
+   "jp": "貴様は流れに乗るということを知らなすぎるのだ！",
+   "zh_current": "你根本不懂何为顺势而为！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x157D0",
+   "budget_bytes": 5,
+   "jp": "……！",
+   "zh_current": "……！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x157E4",
+   "budget_bytes": 20,
+   "jp": "これで終わりにするか……続けるか！？",
+   "zh_current": "就此罢手……还是继续！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15804",
+   "budget_bytes": 31,
+   "jp": "世界の都合というものを洞察できない愚か者は排除すべきだ！",
+   "zh_current": "连世界大势都不懂的蠢货、该清除！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15830",
+   "budget_bytes": 25,
+   "jp": "こんなところで朽ち果てる己の身を呪うがいい！",
+   "zh_current": "在这地方丧命……就怨你自己！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15858",
+   "budget_bytes": 15,
+   "jp": "肉体があるから……やれるのさ！",
+   "zh_current": "机体在……就能战！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15874",
+   "budget_bytes": 24,
+   "jp": "この私の力……その目に焼き付けるがいい！！",
+   "zh_current": "我的力量……让你亲眼见识！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15898",
+   "budget_bytes": 13,
+   "jp": "貴様などに邪魔はさせん！！",
+   "zh_current": "岂容你碍事！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x158B4",
+   "budget_bytes": 8,
+   "jp": "ここ…まで……か",
+   "zh_current": "到头了吗",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x158C8",
+   "budget_bytes": 3,
+   "jp": "フ……",
+   "zh_current": "哼！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x158D8",
+   "budget_bytes": 28,
+   "jp": "私の姉は宇宙で死んだ……！だが！私は死なない！！",
+   "zh_current": "姐姐死在宇宙……但我不会死！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15900",
+   "budget_bytes": 11,
+   "jp": "……私を失望させるな！",
+   "zh_current": "别让我失望！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15918",
+   "budget_bytes": 32,
+   "jp": "お前には分からないのか！？地球の俗物を一掃せねばならんのが！",
+   "zh_current": "你不懂吗！？得扫清地球的俗物！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15944",
+   "budget_bytes": 14,
+   "jp": "ふっ……大した手並みだな！",
+   "zh_current": "哼……真有手段！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15960",
+   "budget_bytes": 26,
+   "jp": "私をこうも脅かす……！やはり、貴様は危険な存在だ！",
+   "zh_current": "竟敢激怒我……你果然危险！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15988",
+   "budget_bytes": 21,
+   "jp": "くっ……！小ざかしいことを……！！",
+   "zh_current": "唔……！厚颜无耻……！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x159AC",
+   "budget_bytes": 8,
+   "jp": "無駄なことを！！",
+   "zh_current": "白费力气！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x159C0",
+   "budget_bytes": 9,
+   "jp": "フッ……甘いな！",
+   "zh_current": "太天真了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x159D8",
+   "budget_bytes": 13,
+   "jp": "来るぞっ！散開しろっ！",
+   "zh_current": "来了！！都散开！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x159F4",
+   "budget_bytes": 20,
+   "jp": "私の声が聞こえるなら……私に従え！",
+   "zh_current": "若听得见……就追随我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A14",
+   "budget_bytes": 9,
+   "jp": "何という不覚……！",
+   "zh_current": "太大意了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A2C",
+   "budget_bytes": 12,
+   "jp": "私もなめられたものだな！",
+   "zh_current": "竟敢小看我！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x250",
+   "budget_bytes": 33,
+   "jp": "人は生きる限り一人だよ！！人類全てがNTになどなれるものか！",
+   "zh_current": "人活着就是孤独！人类岂能都成NT！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A44",
+   "budget_bytes": 19,
+   "jp": "戦争が教科書通りに行くものか！！",
+   "zh_current": "战争哪会按部就班！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A64",
+   "budget_bytes": 8,
+   "jp": "今だ！一斉射撃！",
+   "zh_current": "上！齐射！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A78",
+   "budget_bytes": 23,
+   "jp": "行け！地球圏をザビ家のものとするのだ！",
+   "zh_current": "上！！让地球圈归于扎比家！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15AB8",
+   "budget_bytes": 19,
+   "jp": "慌てるな！十分にひきつけてからだ！",
+   "zh_current": "别慌！放近了再打！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15AD8",
+   "budget_bytes": 21,
+   "jp": "やれ！地球圏を我らが手にするために！",
+   "zh_current": "上！！为了夺取地球圈！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15AFC",
+   "budget_bytes": 21,
+   "jp": "愚かな者どもに思い知らせてやるがいいっ！",
+   "zh_current": "蠢货们、好好领教吧！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15B20",
+   "budget_bytes": 5,
+   "jp": "目障りだな！",
+   "zh_current": "碍眼！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15B34",
+   "budget_bytes": 12,
+   "jp": "目の前の敵を排除しろっ！",
+   "zh_current": "清除眼前敌！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15B6B",
+   "budget_bytes": 11,
+   "jp": "あっけないものだな……",
+   "zh_current": "真是没劲……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15B84",
+   "budget_bytes": 23,
+   "jp": "敵機の進入をこれ以上許すな！！弾幕を上げろ！",
+   "zh_current": "别让敌机前进！上弹幕！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15BCB",
+   "budget_bytes": 17,
+   "jp": "よし！引き続き攻撃を続行せよ！",
+   "zh_current": "好！继续攻击下去！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15BE8",
+   "budget_bytes": 16,
+   "jp": "ええい！敵から目を離すな！",
+   "zh_current": "可恶！盯紧敌人！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15C04",
+   "budget_bytes": 16,
+   "jp": "ひるむなっ！大したことはない！",
+   "zh_current": "别怕！！没什么！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15C4A",
+   "budget_bytes": 11,
+   "jp": "よし！直ちに反撃準備！",
+   "zh_current": "好！准备反击",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15C64",
+   "budget_bytes": 18,
+   "jp": "クッ……！私をこうも脅かすとは！",
+   "zh_current": "唔……！竟敢激怒我！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15C84",
+   "budget_bytes": 19,
+   "jp": "まだだ！まだ、落としてはならん！！",
+   "zh_current": "还没！还不能倒下！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15CA4",
+   "budget_bytes": 23,
+   "jp": "フッ……人類全てがニュータイプになれるものか！",
+   "zh_current": "哼……人类岂能全成新人类！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15CC8",
+   "budget_bytes": 17,
+   "jp": "ん？プレッシャーが来るな！回避運動だ！",
+   "zh_current": "嗯？压迫感！快回避！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15CE8",
+   "budget_bytes": 18,
+   "jp": "回避！そうそう当たりはしないっ！",
+   "zh_current": "躲！没那么好打中！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D08",
+   "budget_bytes": 27,
+   "jp": "ザビ家に忠誠を誓うなら命だけは助けてやろう！",
+   "zh_current": "若效忠扎比家、便饶你一命！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D30",
+   "budget_bytes": 9,
+   "jp": "何という不覚……！",
+   "zh_current": "太大意了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D48",
+   "budget_bytes": 12,
+   "jp": "私もなめられたものだな！",
+   "zh_current": "竟敢小看我！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D60",
+   "budget_bytes": 16,
+   "jp": "私は……昔の私じゃないっ！",
+   "zh_current": "我……已非当年的我！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D7C",
+   "budget_bytes": 11,
+   "jp": "……行けっ！！",
+   "zh_current": "……上！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D94",
+   "budget_bytes": 7,
+   "jp": "……見えるっ！",
+   "zh_current": "看得见！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15DA8",
+   "budget_bytes": 7,
+   "jp": "……そこだっ！",
+   "zh_current": "……那里！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15DBC",
+   "budget_bytes": 10,
+   "jp": "シャアは私が守るっ！",
+   "zh_current": "夏亚我来守！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15DD4",
+   "budget_bytes": 11,
+   "jp": "これ以上は……させないっ！",
+   "zh_current": "休想再得逞！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15DEC",
+   "budget_bytes": 12,
+   "jp": "私はもう一人じゃないっ！",
+   "zh_current": "我不再孤单！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E04",
+   "budget_bytes": 9,
+   "jp": "勝ってみせるっ！",
+   "zh_current": "我会取胜！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E1C",
+   "budget_bytes": 12,
+   "jp": "あぁっ！……シャア……！！",
+   "zh_current": "啊！……夏亚……！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E34",
+   "budget_bytes": 8,
+   "jp": "……甘いわっ！",
+   "zh_current": "太天真！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E48",
+   "budget_bytes": 10,
+   "jp": "……負けられない！！",
+   "zh_current": "……不能输！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E60",
+   "budget_bytes": 9,
+   "jp": "これくらいならっ！！",
+   "zh_current": "区区这点！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E78",
+   "budget_bytes": 6,
+   "jp": "しまった！！",
+   "zh_current": "糟了！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E8C",
+   "budget_bytes": 12,
+   "jp": "避けきれなかった……！？",
+   "zh_current": "没能躲开……！？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15EA4",
+   "budget_bytes": 25,
+   "jp": "！！……直撃された！？パワーダウンしていく……！？",
+   "zh_current": "……被直击！？出力在下降！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15ECC",
+   "budget_bytes": 22,
+   "jp": "くう……！き、機体が持たない……！？",
+   "zh_current": "唔……！！机体快撑不住了！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15EF0",
+   "budget_bytes": 13,
+   "jp": "私には守るものがあるの！",
+   "zh_current": "我有要守护的！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15F0C",
+   "budget_bytes": 7,
+   "jp": "……来るっ！？",
+   "zh_current": "来了！？",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15F20",
+   "budget_bytes": 17,
+   "jp": "！……来るわっ！各機、散開っ！",
+   "zh_current": "！……来了！！快散开！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15F40",
+   "budget_bytes": 21,
+   "jp": "これ以上の抵抗は無意味よっ！投降しなさいっ！",
+   "zh_current": "抵抗没意义！快投降！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15F64",
+   "budget_bytes": 14,
+   "jp": "しまった！？シ、シャア……",
+   "zh_current": "不好！？夏亚……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15F80",
+   "budget_bytes": 19,
+   "jp": "私は……捕まるわけにはいかないっ！",
+   "zh_current": "我……绝不能被抓住！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x280",
+   "budget_bytes": 10,
+   "jp": "私なら……闘れる！！",
+   "zh_current": "我……能战斗！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D28",
+   "budget_bytes": 13,
+   "jp": "お願い！私に力を貸して！！",
+   "zh_current": "拜托！请支援我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D44",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D60",
+   "budget_bytes": 20,
+   "jp": "ええ！私たちでやりましょう、シャア！！",
+   "zh_current": "嗯！一起上吧、夏亚！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D80",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5D9C",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5DB8",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5DD4",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  }
+ ]
+}

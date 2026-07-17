@@ -1,0 +1,51 @@
+{
+ "entity": "unit_100",
+ "kind": "unit",
+ "utids": [
+  100,
+  101,
+  102
+ ],
+ "name_jp": "エールストライク／ダウン",
+ "name_zh_current": "翔翼型强袭／解除",
+ "name_zh_px": 92,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218EDBE",
+   "jp": "アーマーシュナイダー",
+   "zh_current": "破甲者",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

@@ -1,0 +1,246 @@
+{
+ "entity": "char_434",
+ "kind": "character",
+ "cids": [
+  434
+ ],
+ "name_jp": "ネオ・ジオン熟練士官",
+ "name_zh_KEEP": "新吉翁士官",
+ "cards": [
+  {
+   "cid": 434,
+   "ids": [
+    {
+     "idn": 1302,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 832,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "散布米诺夫斯基粒子！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1303,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9091",
+     "zh_name_ptr": "0x2194685",
+     "name_jp": "粛清するのだ！",
+     "name_zh_current": "统统肃清！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 833,
+     "cutin_jp": "粛清するのだ！重力に魂をひかれた人間たちを！",
+     "cutin_zh_current": "统统肃清！被重力束缚住灵魂的人类！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_404",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x303D0",
+   "budget_bytes": 20,
+   "jp": "敵の出鼻をくじくぞ！射撃開始だ！！",
+   "zh_current": "打掉敌人锐气！开始射击！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x303F0",
+   "budget_bytes": 13,
+   "jp": "我々が地球を粛清するのだ！",
+   "zh_current": "我等肃清地球！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3040C",
+   "budget_bytes": 18,
+   "jp": "ターゲット修正急げ！……よし、発射！",
+   "zh_current": "修正目标！……好、发射！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3042C",
+   "budget_bytes": 23,
+   "jp": "、発射準備だ！……よし、撃てえーっ！",
+   "zh_current": "炮击预备……好、开火！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30450",
+   "budget_bytes": 23,
+   "jp": "いくぞ、第一波攻撃用意！……てえーっ！",
+   "zh_current": "上！准备第一波攻击！……放！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30474",
+   "budget_bytes": 24,
+   "jp": "戦闘エリアに突っ込むぞ！間違って味方を撃つなよ！",
+   "zh_current": "冲进战区！！别误伤友军！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30498",
+   "budget_bytes": 25,
+   "jp": "敵は待ってくれないぞ！一撃離脱で叩くんだ！",
+   "zh_current": "敌人可不会等！靠一击脱离！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x304C0",
+   "budget_bytes": 30,
+   "jp": "至近距離まで近づくぞ！弾が尽きるまで撃ちまくれ！！",
+   "zh_current": "逼近至极近距离！打到弹尽为止！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x304EC",
+   "budget_bytes": 30,
+   "jp": "直撃を喰らってはどうもならんか……総員、速やかに退艦せよ！",
+   "zh_current": "吃了直击可就完了……全员快弃舰！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30518",
+   "budget_bytes": 25,
+   "jp": "回避成功か！よし、続いて反撃戦に移行するぞ！",
+   "zh_current": "避开了！好、接着转入反击战！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30540",
+   "budget_bytes": 21,
+   "jp": "ここで沈んでは総帥に申し訳が立たん！",
+   "zh_current": "在此沉没、无颜见总帅！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30564",
+   "budget_bytes": 24,
+   "jp": "軽微な損傷は無視しろ！敵から注意をそらすな！",
+   "zh_current": "轻伤就无视！别移开视线！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30588",
+   "budget_bytes": 22,
+   "jp": "やはり……ただでは通してくれそうにないな！",
+   "zh_current": "果然不会轻易放我们过去！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x305AC",
+   "budget_bytes": 15,
+   "jp": "だが、我らも負けられんのだ！！",
+   "zh_current": "可我们也不能输！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x305C8",
+   "budget_bytes": 15,
+   "jp": "直撃だと！？応急急げっ！！",
+   "zh_current": "被直击！？快修理！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x305E4",
+   "budget_bytes": 23,
+   "jp": "後少しだけでいい！何としてももたせるのだ！！",
+   "zh_current": "再坚持一下！无论如何要撑！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30608",
+   "budget_bytes": 13,
+   "jp": "連邦の力とはその程度か！！",
+   "zh_current": "联邦就这能耐！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30624",
+   "budget_bytes": 13,
+   "jp": "遠距離攻撃などかわせばいい！",
+   "zh_current": "躲开远程攻击！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30640",
+   "budget_bytes": 13,
+   "jp": "遠距離攻撃などかわせばいい！",
+   "zh_current": "躲开远程攻击！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3065C",
+   "budget_bytes": 8,
+   "jp": "大人しく降伏しろ！",
+   "zh_current": "快投降！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30670",
+   "budget_bytes": 23,
+   "jp": "なにっ……！？まさか、こんな結果になるとは……",
+   "zh_current": "什么……？竟是这种结果……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30694",
+   "budget_bytes": 14,
+   "jp": "まだ終ったわけではない！！",
+   "zh_current": "还没结束呢！！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

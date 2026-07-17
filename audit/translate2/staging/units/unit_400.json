@@ -1,0 +1,50 @@
+{
+ "entity": "unit_400",
+ "kind": "unit",
+ "utids": [
+  400,
+  401,
+  402
+ ],
+ "name_jp": "トb",
+ "name_zh_current": "金牛座／SK规格",
+ "name_zh_px": 96,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x21906C9",
+   "jp": "ビーム・カノン",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 18
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 133,
+   "record_offset": "0x898",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "ルクレツィア・ノイン専用機"
+   ],
+   "zh_segments_current": [
+    "诺茵专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

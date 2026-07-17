@@ -1,0 +1,63 @@
+{
+ "entity": "char_231",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/%E7%9C%9F%C2%B7%E9%A3%9E%E9%B8%9F",
+  "https://wiki.biligame.com/gundam/%E7%9C%9F%C2%B7%E9%A3%9E%E9%B8%9F",
+  "https://wiki.biligame.com/gundam/ZGMF-X42S%E5%91%BD%E8%BF%90%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/%E7%8E%9B%E5%B0%A4%C2%B7%E9%A3%9E%E9%B8%9F/5455130",
+  "https://www.gundam-c.com/other/wise-remark/seed-d/shin01.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 693,
+   "name_zh": "…………",
+   "cutin_zh": "………………",
+   "notes": "SEED觉醒的无言指令。指令名与idn30共享、沿用其所有者char_10的定稿…………（4个…）；名台词照JP保留6个…。"
+  },
+  {
+   "idn": 694,
+   "name_zh": "休想放肆！！",
+   "cutin_zh": "我绝不会让你们为所欲为！！",
+   "notes": "SEED DESTINY第2话名台词そんな好き勝手……させるもんか！！、大陆社区定译关键词为为所欲为（我才不会让你们为所欲为／岂能让你们为所欲为类）、取我绝不会让你们为所欲为！！。指令名64px已满、休想放肆！！为同义浓缩（休想为所欲为超宽放不下）。"
+  },
+  {
+   "idn": 695,
+   "name_zh": "还想打仗吗",
+   "cutin_zh": "还想再打仗吗！？你们这些家伙！",
+   "notes": "与char_230的idn692为同一共享字符串（第1话名场面また／まだ戦争がしたいのか！あんた達は！）、指令名与名台词均与char_230定稿完全一致。原指令名还想战争吗不成话、已修复。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1F438", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F44C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F460", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F474", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F488", "zh": "这家伙"},
+  {"file": "0.bin", "record": "0x1F49C", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F4B0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F4C4", "zh": "呀啊啊啊！"},
+  {"file": "0.bin", "record": "0x1F4DC", "zh": "唔！玛尤……"},
+  {"file": "0.bin", "record": "0x1F4F4", "zh": "就这点！"},
+  {"file": "0.bin", "record": "0x1F508", "zh": "那种任性……玛尤她……！"},
+  {"file": "0.bin", "record": "0x1F528", "zh": "……没用的"},
+  {"file": "0.bin", "record": "0x1F53C", "zh": "这点……！"},
+  {"file": "0.bin", "record": "0x1F550", "zh": "岂能倒下！"},
+  {"file": "0.bin", "record": "0x1F568", "zh": "……！？"},
+  {"file": "0.bin", "record": "0x1F57C", "zh": "啊……这、这……"},
+  {"file": "0.bin", "record": "0x1F594", "zh": "……没用的"},
+  {"file": "0.bin", "record": "0x1F5A8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F5BC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F5D0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F5E4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x1F5F8", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7A50", "zh": "……干掉他！"},
+  {"file": "1de.bin", "record": "0x7A68", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7A7C", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7A90", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7AA4", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7AB8", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x7ACC", "zh": "………………"}
+ ],
+ "notes": "SEED觉醒形态的真·飞鸟、多数语音为觉醒无言（………………照搬）。修正：妹妹マユ按大陆通行译名玛尤（百度百科·biligame玛尤·飞鸟条目）、与char_230定稿0x1F2D4唔！玛尤……完全一致；0x1F550与char_230的岂能倒下措辞统一。受budget_bytes压缩的理想长句：0x1F488这家伙……！（预算6只容3汉字）；0x1F508完整句为就是那种任性妄为、把玛尤……把玛尤给……！；0x7A50完整句为把那家伙……干掉！。三条名台词所有权均在本entity、效果文本均归他人（char_91/char_13/char_230）未输出。"
+}

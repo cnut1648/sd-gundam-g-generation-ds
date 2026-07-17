@@ -1,0 +1,66 @@
+{
+ "entity": "unit_130",
+ "kind": "unit",
+ "utids": [
+  130,
+  131,
+  132
+ ],
+ "name_jp": "カラミティガンダム",
+ "name_zh_current": "灾厄高达",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189F6F",
+   "jp": "トーデスブロック",
+   "zh_current": "死亡块",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CB50",
+   "jp": "ケーファーツヴァイ",
+   "zh_current": "甲虫二式",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C9CE",
+   "jp": "スキュラ",
+   "zh_current": "斯库拉加农炮",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218C9DB",
+   "jp": "シュラーク",
+   "zh_current": "舒拉克加农炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6E9B",
+   "jp": "トランスフェイズ装甲",
+   "zh_current": "TP装甲",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 4,
+   "record_offset": "0x9c",
+   "budget_bytes": 36,
+   "jp_segments": [
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

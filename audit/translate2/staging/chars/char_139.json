@@ -1,0 +1,272 @@
+{
+ "entity": "char_139",
+ "kind": "character",
+ "cids": [
+  139
+ ],
+ "name_jp": "デトローフ・コッセル",
+ "name_zh_KEEP": "德托洛夫",
+ "cards": [
+  {
+   "cid": 139,
+   "ids": [
+    {
+     "idn": 417,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7CEE",
+     "zh_name_ptr": "0x218C274",
+     "name_jp": "よーく狙っていけよ！！",
+     "name_zh_current": "给我瞄准了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 328,
+     "cutin_jp": "目ン玉ひんむいてよーく狙っていけよ！！",
+     "cutin_zh_current": "睁大你的眼睛给我好好瞄准！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 418,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7CFB",
+     "zh_name_ptr": "0x218C27F",
+     "name_jp": "帰るんだ！俺たちの故郷へ！！",
+     "name_zh_current": "回故乡去！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 329,
+     "cutin_jp": "帰るんだ！俺たちの故郷へ！！",
+     "cutin_zh_current": "回去吧！回到我们的故乡！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 419,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D0C",
+     "zh_name_ptr": "0x218C289",
+     "name_jp": "シーマ様に……",
+     "name_zh_current": "为西玛大人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命回↑",
+     "didx": 27,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·回避+20%",
+     "cutin_group": 330,
+     "cutin_jp": "シーマ様に恥かかすんじゃあねえぞ！",
+     "cutin_zh_current": "可别给西玛大人丢脸！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x12150",
+   "budget_bytes": 15,
+   "jp": "バカが！どこを見てやがる！",
+   "zh_current": "蠢货！你看哪呢！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1216C",
+   "budget_bytes": 16,
+   "jp": "よーし！撃てええーっ！！",
+   "zh_current": "好！全部给我开火！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12188",
+   "budget_bytes": 17,
+   "jp": "そろそろ頃合だ！一発かましてやれ！",
+   "zh_current": "时机到了！来一发！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x121B8",
+   "budget_bytes": 13,
+   "jp": "を叩き込めッ！！",
+   "zh_current": "、打进去！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x121D4",
+   "budget_bytes": 13,
+   "jp": "よーし……ぶっ放せ！！",
+   "zh_current": "好……给我开火！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x121F0",
+   "budget_bytes": 14,
+   "jp": "だ！撃てッ、撃てェ！",
+   "zh_current": "！快开火！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1220C",
+   "budget_bytes": 13,
+   "jp": "を叩き込めッ！！",
+   "zh_current": "、打进去！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12228",
+   "budget_bytes": 13,
+   "jp": "を叩き込めッ！！",
+   "zh_current": "、打进去！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12244",
+   "budget_bytes": 17,
+   "jp": "シーマ様……面目ありやせん……",
+   "zh_current": "西玛大人……惭愧……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12264",
+   "budget_bytes": 21,
+   "jp": "……シロウトが！どこを狙ってやがる！",
+   "zh_current": "……外行！你到底瞄哪呢！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12288",
+   "budget_bytes": 20,
+   "jp": "ここで沈むわけにゃいかねえんだよ！",
+   "zh_current": "我岂能在这里沉没！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x122A8",
+   "budget_bytes": 19,
+   "jp": "チッ……！傷がついちまったぜ！",
+   "zh_current": "啧……！机体受损了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x122DA",
+   "budget_bytes": 24,
+   "jp": "うろたえるんじゃねえ！破損個所を報告しろ！",
+   "zh_current": "别慌！报告破损部位！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12300",
+   "budget_bytes": 22,
+   "jp": "……クソッ！シーマ様にどやされちまうぜ！",
+   "zh_current": "……可恶！要挨西玛大人骂了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12324",
+   "budget_bytes": 16,
+   "jp": "チクシヨウ……！ャツら、バケモノか！？",
+   "zh_current": "可恶！是怪物吗！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12340",
+   "budget_bytes": 14,
+   "jp": "チクシヨウ！振り切れねえのか！？",
+   "zh_current": "可恶！摆脱不掉！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12374",
+   "budget_bytes": 10,
+   "jp": "……残念だったなぁ？",
+   "zh_current": "……真可惜？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1238C",
+   "budget_bytes": 15,
+   "jp": "けっ！ナメんじゃねえや！",
+   "zh_current": "切！别小看我！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x123A8",
+   "budget_bytes": 15,
+   "jp": "けっ！ナメんじゃねえや！",
+   "zh_current": "切！别小看我！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x123C4",
+   "budget_bytes": 16,
+   "jp": "このャロウ！トッ捕まえてやる！！",
+   "zh_current": "这家伙！我要逮你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x123E0",
+   "budget_bytes": 15,
+   "jp": "くそっ！なんだってんだよ！！",
+   "zh_current": "可恶！搞什么啊！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x123FC",
+   "budget_bytes": 16,
+   "jp": "はっ！のこのこ死にに来たか！",
+   "zh_current": "哈！是来送死的吗！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

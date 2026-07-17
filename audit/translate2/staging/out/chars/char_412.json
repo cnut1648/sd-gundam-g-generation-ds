@@ -1,0 +1,45 @@
+{
+ "entity": "char_412",
+ "web_sources": [
+  "https://gundam.fandom.com/zh/wiki/%E7%B1%B3%E8%AB%BE%E5%A4%AB%E6%96%AF%E5%9F%BA%E7%B2%92%E5%AD%90",
+  "https://wiki.biligame.com/gundam/%E8%A5%BF%E7%8E%9B%E8%88%B0%E9%98%9F",
+  "https://baike.baidu.com/item/%E8%A5%BF%E7%8E%9B%C2%B7%E5%8D%A1%E6%8B%89%E8%B1%AA/1197765"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1236,
+   "name_zh": "粒子散布！",
+   "cutin_zh": "米诺夫斯基粒子散布！",
+   "notes": "指令名为共享记录（idn420、char_140所有）、原样重复其定稿粒子散布！；名台词按社区通行舰桥口令译法（米诺夫斯基粒子散布）、与char_140/192同句同译并与指令名共词。效果detail归char_140、不输出"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x121A5", "zh": "好嘞！"},
+  {"file": "0.bin", "record": "0x122C8", "zh": "呜哇！！"},
+  {"file": "0.bin", "record": "0x1235A", "zh": "正、正在干！"},
+  {"file": "0.bin", "record": "0x2CA64", "zh": "先下手！全炮门打开！"},
+  {"file": "0.bin", "record": "0x2CA84", "zh": "来轮齐射伺候！……开火！！"},
+  {"file": "0.bin", "record": "0x2CAA8", "zh": "、准备好了？……开火！！"},
+  {"file": "0.bin", "record": "0x2CAC8", "zh": "不是打得多就行！各炮座、给我好好瞄准了！"},
+  {"file": "0.bin", "record": "0x2CAFC", "zh": "射击准备！打偏了可没完！"},
+  {"file": "0.bin", "record": "0x2CB20", "zh": "太天真了！这样可打不赢仗！"},
+  {"file": "0.bin", "record": "0x2CB44", "zh": "别管损伤！打、打、给我猛打！！"},
+  {"file": "0.bin", "record": "0x2CB6C", "zh": "吃定你了……！一口气解决！"},
+  {"file": "0.bin", "record": "0x2CB90", "zh": "可恶！！太狼狈了……！！"},
+  {"file": "0.bin", "record": "0x2CBB0", "zh": "眼睛长哪了！？"},
+  {"file": "0.bin", "record": "0x2CBCC", "zh": "嘿嘿嘿……刚才可真悬……！"},
+  {"file": "0.bin", "record": "0x2CBF0", "zh": "哈！算打招呼？"},
+  {"file": "0.bin", "record": "0x2CC08", "zh": "看来还挺有种嘛！？"},
+  {"file": "0.bin", "record": "0x2CC28", "zh": "可恶！竟敢耍老子……！"},
+  {"file": "0.bin", "record": "0x2CC48", "zh": "什么！？臭小子……竟敢！！"},
+  {"file": "0.bin", "record": "0x2CC6C", "zh": "可恶！这下不妙……！！"},
+  {"file": "0.bin", "record": "0x2CC8C", "zh": "哼！……不痛不痒！"},
+  {"file": "0.bin", "record": "0x2CCAC", "zh": "哇哈哈哈、蠢货才会中那玩意！"},
+  {"file": "0.bin", "record": "0x2CCD4", "zh": "小子们、来客人了！别中弹！"},
+  {"file": "0.bin", "record": "0x2CCF8", "zh": "那机体归我们用了！"},
+  {"file": "0.bin", "record": "0x2CD18", "zh": "可恶……真窝囊……！"},
+  {"file": "0.bin", "record": "0x2CD34", "zh": "你们……找死！"}
+ ],
+ "notes": "语气按0083西玛舰队海兵队定调：比char_411正规吉翁士官（です/ます体、报告腔）明显粗野（好嘞/老子/臭小子/伺候/有种）、贴合原文でさ/まさ/テメェ/野郎ども。0x2CAA8保留原文行首顿号（记录结构、与char_134定稿做法一致）。0x2CA84现行译文按字节成本规则超预算（23大于21）、已重写至21。所有bark按成本规则核算均在budget_bytes内"
+}

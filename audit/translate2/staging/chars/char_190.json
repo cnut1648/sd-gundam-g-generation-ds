@@ -1,0 +1,368 @@
+{
+ "entity": "char_190",
+ "kind": "character",
+ "cids": [
+  190
+ ],
+ "name_jp": "フレイ・アルスター",
+ "name_zh_KEEP": "芙蕾",
+ "cards": [
+  {
+   "cid": 190,
+   "ids": [
+    {
+     "idn": 570,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8163",
+     "zh_name_ptr": "0x20B8163",
+     "name_jp": "何も分かってなかったから……",
+     "name_zh_current": "我一无所知",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 68,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·攻击+20%",
+     "cutin_group": 451,
+     "cutin_jp": "わたし……なにも分かってなかったから……",
+     "cutin_zh_current": "我……什么都不懂……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_31",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 571,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8172",
+     "zh_name_ptr": "0x218C3F1",
+     "name_jp": "今、やっと自由だわ……",
+     "name_zh_current": "终于自由了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 452,
+     "cutin_jp": "わたし……今、やっと自由だわ……",
+     "cutin_zh_current": "我……现在终于自由了……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 572,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B817E",
+     "zh_name_ptr": "0x218C3FC",
+     "name_jp": "本当の想いがアナタを守るから…",
+     "name_zh_current": "真情守护你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 453,
+     "cutin_jp": "守るから…本当の私の想いが……アナタを守るから…！",
+     "cutin_zh_current": "我会守护……我真正的心意会守护你……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x6B80",
+   "budget_bytes": 9,
+   "jp": "『守るから……』",
+   "zh_current": "『守护你』",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6BFC",
+   "budget_bytes": 9,
+   "jp": "『守るから……』",
+   "zh_current": "『守护你』",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x191B8",
+   "budget_bytes": 13,
+   "jp": "私にだって……やってみせる！",
+   "zh_current": "我也……做得到！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x191D4",
+   "budget_bytes": 8,
+   "jp": "私は負けないっ！",
+   "zh_current": "我不会输！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x191E8",
+   "budget_bytes": 9,
+   "jp": "やってみせるわ！！",
+   "zh_current": "做给你看！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19200",
+   "budget_bytes": 14,
+   "jp": "私もキラを助けるんだ……！！",
+   "zh_current": "我也要保护基拉！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1921C",
+   "budget_bytes": 15,
+   "jp": "決めたのよ！私も戦うって！！",
+   "zh_current": "我决定也要战斗！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19238",
+   "budget_bytes": 16,
+   "jp": "もう誰も死んでほしくないの！！",
+   "zh_current": "不想再有人死了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19254",
+   "budget_bytes": 13,
+   "jp": "今度は私がキラを支えるの！",
+   "zh_current": "这次我护基拉！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19270",
+   "budget_bytes": 25,
+   "jp": "もう泣かない……私が守るって、決めたから！",
+   "zh_current": "不再哭了……我要守护大家！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19298",
+   "budget_bytes": 18,
+   "jp": "きゃああああーっ！！キラッ……！",
+   "zh_current": "呀啊啊啊！！基拉……！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x192B8",
+   "budget_bytes": 6,
+   "jp": "かわせた！？",
+   "zh_current": "闪过！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x192CC",
+   "budget_bytes": 23,
+   "jp": "だっ、だいじょうぶ……！これくらいのこと！",
+   "zh_current": "没、没事……！这点小伤！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x192F0",
+   "budget_bytes": 17,
+   "jp": "負けないわ！これくらいのことで！",
+   "zh_current": "这点事我可不会输！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19310",
+   "budget_bytes": 18,
+   "jp": "わたし……やるって決めたんだもの！",
+   "zh_current": "我……已经决定要上了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19330",
+   "budget_bytes": 10,
+   "jp": "わたし、負けられない！",
+   "zh_current": "我、不能输！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19348",
+   "budget_bytes": 8,
+   "jp": "きゃぁぁぁーっ！",
+   "zh_current": "呀啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1935C",
+   "budget_bytes": 25,
+   "jp": "わ、私の力なんて……何の役にも立たないの！？",
+   "zh_current": "我、我的力量……根本没用吗！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19384",
+   "budget_bytes": 17,
+   "jp": "機体があたしを守ってくれてる……！",
+   "zh_current": "机体在守护着我……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x193A4",
+   "budget_bytes": 9,
+   "jp": "避けてみせるわ！！",
+   "zh_current": "我躲得开！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x193BC",
+   "budget_bytes": 15,
+   "jp": "攻撃っ！？みんな、避けてっ！",
+   "zh_current": "敌袭！大家快躲开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x193D8",
+   "budget_bytes": 17,
+   "jp": "お願いっ！もう戦うのはやめてっ！",
+   "zh_current": "求你别再打了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x193F8",
+   "budget_bytes": 14,
+   "jp": "やっぱり、無理なの？わたし……",
+   "zh_current": "果然……不行吗？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19414",
+   "budget_bytes": 13,
+   "jp": "そんなこと！させないっ！！",
+   "zh_current": "这种事！我不许！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B038",
+   "budget_bytes": 10,
+   "jp": "発射準備……完了！！",
+   "zh_current": "准备完毕！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B11C",
+   "budget_bytes": 15,
+   "jp": "あ……、て、くれた……？",
+   "zh_current": "啊……躲开了……？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B224",
+   "budget_bytes": 8,
+   "jp": "きゃぁぁぁぁっ！",
+   "zh_current": "呀啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6600",
+   "budget_bytes": 24,
+   "jp": "あの敵、私ひとりじゃあ……お願い、誰か手伝って！",
+   "zh_current": "那敌人我一人不行……谁来帮帮我！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6624",
+   "budget_bytes": 17,
+   "jp": "っ！は、はい！お手伝いします！！",
+   "zh_current": "啊！是、是！我来帮忙！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6644",
+   "budget_bytes": 13,
+   "jp": "私にも手伝わせて、キラ！！",
+   "zh_current": "让我帮你、基拉！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6660",
+   "budget_bytes": 17,
+   "jp": "っ！は、はい！お手伝いします！！",
+   "zh_current": "啊！是、是！我来帮忙！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6680",
+   "budget_bytes": 17,
+   "jp": "っ！は、はい！お手伝いします！！",
+   "zh_current": "啊！是、是！我来帮忙！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x66A0",
+   "budget_bytes": 17,
+   "jp": "っ！は、はい！お手伝いします！！",
+   "zh_current": "啊！是、是！我来帮忙！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x66C0",
+   "budget_bytes": 17,
+   "jp": "っ！は、はい！お手伝いします！！",
+   "zh_current": "啊！是、是！我来帮忙！！",
+   "zh_current_bytes": 17
+  }
+ ]
+}

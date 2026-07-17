@@ -1,0 +1,59 @@
+{
+ "entity": "char_27",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E8%89%BE%E8%A3%98%C2%B7%E8%BF%AA%E6%8B%89%E5%85%B9",
+  "https://www.sohu.com/a/402320930_120734095",
+  "http://eternalsisters.web.fc2.com/gundam/enzetsu16.html",
+  "https://zh.wikiquote.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%ABGUNDAM_0083:Stardust_Memory",
+  "https://srw.wiki.cre.jp/wiki/%E3%82%A8%E3%82%AE%E3%83%BC%E3%83%A6%E3%83%BB%E3%83%87%E3%83%A9%E3%83%BC%E3%82%BA"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 81,
+   "name_zh": "为祖国名誉",
+   "cutin_zh": "为了反复在心中回响的祖国之名誉……吉翁万岁！",
+   "detail_effect_zh": "1回合内除自己以外的同伴回避率提升20%",
+   "notes": "出自0083迪拉兹宣战演说结尾（繰り返し心に聞こえてくる祖国の名誉のために、ジーク・ジオン）。中文圈通译用名誉、ジーク・ジオン通行译法为吉翁万岁（sohu演说全文译本）。"
+  },
+  {
+   "idn": 82,
+   "name_zh": "紧握荣光！",
+   "cutin_zh": "直到亲手紧握那唯有活着才能得到的荣光……！",
+   "detail_effect_zh": "除自己以外的同伴HP回复25%",
+   "notes": "出自0083第1话阿·巴瓦·库对卡多的名场面（生きてこそ得ることのできる栄光をこの手に掴むまで）。zh.wikiquote作活着才能得到的荣耀、此处按社区惯例取荣光并与指令名共用紧握。"
+  },
+  {
+   "idn": 83,
+   "name_zh": "我军无犹豫",
+   "cutin_zh": "如今我军之中、再无人发出犹豫的叹息！",
+   "detail_effect_zh": "1回合内除自己以外的同伴命中率和攻击力各提升20%",
+   "notes": "同为宣战演说名句（もはや我が軍団にためらいの吐息を漏らす者はおらん）。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2A40", "zh": "乌合之众吗……开火！"},
+  {"file": "0.bin", "record": "0x2A60", "zh": "……开火！！"},
+  {"file": "0.bin", "record": "0x2A74", "zh": "我们丝毫未迷失战斗的目的！"},
+  {"file": "0.bin", "record": "0x2A9C", "zh": "为吉翁荣光！"},
+  {"file": "0.bin", "record": "0x2ACC", "zh": "让联邦的杂兵领教一下！"},
+  {"file": "0.bin", "record": "0x2AF0", "zh": "上啊！为吉翁荣光！！"},
+  {"file": "0.bin", "record": "0x2B10", "zh": "由我们亲手夺取胜利！"},
+  {"file": "0.bin", "record": "0x2B30", "zh": "大义在我！！"},
+  {"file": "0.bin", "record": "0x2B48", "zh": "不甘心……是我大意了……"},
+  {"file": "0.bin", "record": "0x2B68", "zh": "可悲……无志者脆弱！"},
+  {"file": "0.bin", "record": "0x2BA8", "zh": "看啊……上天也盼着我们胜利！"},
+  {"file": "0.bin", "record": "0x2BF0", "zh": "联邦、何足惧！"},
+  {"file": "0.bin", "record": "0x2C08", "zh": "怀崇高之志者能冲破一切苦难！"},
+  {"file": "0.bin", "record": "0x2C30", "zh": "欲成大事者、不可拘泥于小节！"},
+  {"file": "0.bin", "record": "0x2C58", "zh": "可憎的联邦恶意……"},
+  {"file": "0.bin", "record": "0x2C74", "zh": "我并非求死、只是憎恶苟活……"},
+  {"file": "0.bin", "record": "0x2C9C", "zh": "可悲！"},
+  {"file": "0.bin", "record": "0x2CB0", "zh": "可恶、休想！"},
+  {"file": "0.bin", "record": "0x2CC8", "zh": "这种攻击吓不倒我们！"},
+  {"file": "0.bin", "record": "0x2CE8", "zh": "为吉翁大义、机体我们收下！"},
+  {"file": "0.bin", "record": "0x2D0C", "zh": "唔！不甘心……！！"},
+  {"file": "0.bin", "record": "0x2D28", "zh": "此等言辞……绝不容忍！！"}
+ ],
+ "notes": "0x2B68 JP原文含缺字□（志なき者の□さよ）、按文意判断为脆（さ）、故译作脆弱。0x2A74与0x2C58亦源自宣战演说措辞（いささかも戦いの目的を見失ってはいない／呪わしき連邦の悪意）。0x2A9C受11字节预算限制只能取为吉翁荣光！、与0x2AF0保持同一短语。0x2C9C预算5字节、无法容纳……、以可悲！收束。人名艾裘·迪拉兹与biligame高达wiki一致、无需改动。"
+}

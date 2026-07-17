@@ -1,0 +1,55 @@
+{
+ "entity": "char_240",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E6%89%8E%E6%AF%94%E5%AE%B6",
+  "https://gundam.huijiwiki.com/wiki/%E5%9F%BA%E8%A5%BF%E8%8E%89%E4%BA%9A%C2%B7%E6%89%8E%E6%AF%94",
+  "https://nikenickel.com/archives/626",
+  "https://zeoncharacter.is-mine.net/page3.html"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 720,
+   "name_zh": "别胡闹！",
+   "cutin_zh": "别胡闹！根本不值一提！",
+   "notes": "出处TV第24话敖德萨作战会议名场面、おふざけでない！まったく問題にならぬプランです。与本人0x1FE34、0x1FF6C两条战斗语音统一用词。"
+  },
+  {
+   "idn": 721,
+   "name_zh": "太天真了",
+   "cutin_zh": "没想到……您也太天真了",
+   "notes": "即阿·巴瓦·库枪杀基连的名台词、意外と……兄上も甘いようで。中文圈通行译法为兄长也太天真了、游戏版原文略去兄上、故以您保留其讥讽的假客气。抽取件cutin_jp的意、と应为意外と。"
+  },
+  {
+   "idn": 722,
+   "name_zh": "取胜即可！",
+   "cutin_zh": "男人的面子、军队的权威……纵使这些受损、只要取胜即可！",
+   "notes": "出处TV第24话、男子の面子、軍の権威、それが傷つけられてもジオンが勝利すればよろしい。游戏版原文略去主语吉翁。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1FD4C", "zh": "出现了……拿下！"},
+  {"file": "0.bin", "record": "0x1FD68", "zh": "敌军数量绝不算多！逐个歼灭！"},
+  {"file": "0.bin", "record": "0x1FDA8", "zh": "逐个歼灭！"},
+  {"file": "0.bin", "record": "0x1FDC0", "zh": "敌军……绝不算多！！"},
+  {"file": "0.bin", "record": "0x1FE00", "zh": "嗯……随机应变！"},
+  {"file": "0.bin", "record": "0x1FE1C", "zh": "给我拿下！"},
+  {"file": "0.bin", "record": "0x1FE34", "zh": "别胡闹！"},
+  {"file": "0.bin", "record": "0x1FE48", "zh": "给我拿下！"},
+  {"file": "0.bin", "record": "0x1FE60", "zh": "格瓦金……！？"},
+  {"file": "0.bin", "record": "0x1FE78", "zh": "抵抗到头了……"},
+  {"file": "0.bin", "record": "0x1FE94", "zh": "唔……！我若倒下、吉翁……"},
+  {"file": "0.bin", "record": "0x1FEB4", "zh": "也不过如此"},
+  {"file": "0.bin", "record": "0x1FECC", "zh": "动作迟钝！……干什么！"},
+  {"file": "0.bin", "record": "0x1FEEC", "zh": "敌方战力……不容小觑"},
+  {"file": "0.bin", "record": "0x1FF2C", "zh": "战斗中！不许含糊其辞！"},
+  {"file": "0.bin", "record": "0x1FF50", "zh": "竟有此等力量……！"},
+  {"file": "0.bin", "record": "0x1FF6C", "zh": "不值一提！别胡闹！"},
+  {"file": "0.bin", "record": "0x1FF8C", "zh": "竟敢放肆！"},
+  {"file": "0.bin", "record": "0x1FFA4", "zh": "休想！全机、散开！"},
+  {"file": "0.bin", "record": "0x1FFC0", "zh": "已无退路！乖乖投降！！"},
+  {"file": "0.bin", "record": "0x1FFE0", "zh": "唔……！太大意了！！"},
+  {"file": "0.bin", "record": "0x1FFFC", "zh": "可恶！岂有此理！"}
+ ],
+ "notes": "0x1FD4C理想为出现了吗……给我拿下！、超14字节预算故压缩。0x1FE1C与0x1FE48日文原文相同故统一为给我拿下！、因预算9字节无法同时保留双叹号。0x1FFFC理想为可恶！岂有此理！！、双叹号超预算1字节故留单叹号。0x1FE78按日文语气改回省略号收尾、原译以叹号收尾与だな……的沉吟语气不符。0x1FEB4按日文しょせん、こんなものか去掉原译多加的双叹号。detail均归他人所有、未输出。"
+}

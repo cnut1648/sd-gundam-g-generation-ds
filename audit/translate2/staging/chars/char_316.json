@@ -1,0 +1,440 @@
+{
+ "entity": "char_316",
+ "kind": "character",
+ "cids": [
+  316
+ ],
+ "name_jp": "クラックス・ドゥガチ",
+ "name_zh_KEEP": "格拉克斯·德卡",
+ "cards": [
+  {
+   "cid": 316,
+   "ids": [
+    {
+     "idn": 948,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8A01",
+     "zh_name_ptr": "0x20B8A01",
+     "name_jp": "ワシは滅ぼすのだよ……",
+     "name_zh_current": "我要毁灭……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "威力&回避上昇",
+     "summary_zh_KEEP": "威力・回避↑",
+     "didx": 62,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+40%",
+     "cutin_group": 631,
+     "cutin_jp": "ワシは滅ぼすのだよ……ワシを否定しようとする全てを！",
+     "cutin_zh_current": "我要毁灭……一切想否定我的存在！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 949,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8A16",
+     "zh_name_ptr": "0x20B8A16",
+     "name_jp": "戦いに汚いきれいはない！",
+     "name_zh_current": "战不分净污",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "移動&ID封印",
+     "summary_zh_KEEP": "移动・ID封",
+     "didx": 177,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）必ずクリティカル攻撃。攻撃が命中した相手のID·移動を1ターン封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）移动封印·ID封印·暴击",
+     "cutin_group": 632,
+     "cutin_jp": "戦いに汚いきれいはない！これは戦争なのだよ！",
+     "cutin_zh_current": "战斗不分干净肮脏！这就是战争！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 950,
+     "slot": 2,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8A24",
+     "zh_name_ptr": "0x20B8A24",
+     "name_jp": "邪魔だと言っておる！",
+     "name_zh_current": "说了你碍事",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "撃破＋散開封印",
+     "summary_zh_KEEP": "威命↑・封散",
+     "didx": 161,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力を増加、相手の散開を封印、HPが30%以下の攻撃対象を必ず撃破する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·击破·解除封印",
+     "cutin_group": 633,
+     "cutin_jp": "邪魔だと言っておるうううっ！",
+     "cutin_zh_current": "都说了你碍事啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x240F0",
+   "budget_bytes": 20,
+   "jp": "愚か者め！わざわざやられに来おったか！！",
+   "zh_current": "蠢货！特地来送死吗！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24110",
+   "budget_bytes": 14,
+   "jp": "わたしは戦争をしているのだよ！",
+   "zh_current": "老夫在打仗呢！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2412C",
+   "budget_bytes": 7,
+   "jp": "フハハハハハ！",
+   "zh_current": "哈哈哈！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24140",
+   "budget_bytes": 15,
+   "jp": "ワシの邪魔を…するなぁぁっ！！",
+   "zh_current": "别妨碍老夫……！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2415C",
+   "budget_bytes": 15,
+   "jp": "全て滅ぼしてくれるわぁーっ！！",
+   "zh_current": "老夫要毁灭一切！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24178",
+   "budget_bytes": 21,
+   "jp": "貴様らに……貴様らにワシの何がわかる！",
+   "zh_current": "你们……懂老夫什么！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2419C",
+   "budget_bytes": 34,
+   "jp": "木星圏はワシが作ったのだぞ！ワシが一人で大きくしてきたのだ！",
+   "zh_current": "木星圈是老夫一手打造的！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x241CC",
+   "budget_bytes": 20,
+   "jp": "このクラックス·ドゥガチに歯向かう愚か者め！",
+   "zh_current": "敢与老夫作对、蠢货！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x241EC",
+   "budget_bytes": 33,
+   "jp": "うおおおーっ！ば、バカな！？こ、このワシが敗れるなど……",
+   "zh_current": "呜哦哦！怎么可能！？老夫竟会败……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2421C",
+   "budget_bytes": 12,
+   "jp": "最後の悪あがきというわけか？",
+   "zh_current": "最后的挣扎？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24234",
+   "budget_bytes": 27,
+   "jp": "ワシの……ワシの邪魔をするなと言っておるのだぁぁ！",
+   "zh_current": "老夫……都说了别妨碍老夫！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2425C",
+   "budget_bytes": 10,
+   "jp": "フン……何の真似だ？",
+   "zh_current": "哼、搞什么？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24274",
+   "budget_bytes": 22,
+   "jp": "歯向かうというのか？このクラックス·ドゥガチに？",
+   "zh_current": "想对抗老夫？就凭你？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24298",
+   "budget_bytes": 15,
+   "jp": "フン！雑魚がほざきよる！！",
+   "zh_current": "哼！杂鱼乱叫！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x242B4",
+   "budget_bytes": 18,
+   "jp": "ヌォォォーッ！きさまぁーっ！",
+   "zh_current": "呜哦哦！你这家伙！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x242D4",
+   "budget_bytes": 28,
+   "jp": "ワシの機体を汚しおって……ただですむと…思うなよ！",
+   "zh_current": "敢弄脏老夫的机体……休想善了！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x242FC",
+   "budget_bytes": 20,
+   "jp": "ハハハハ！無駄だ、若造どもが！！",
+   "zh_current": "哈哈！没用的、小子！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2431C",
+   "budget_bytes": 13,
+   "jp": "小しゃくなマネを……！！",
+   "zh_current": "竟敢耍花招！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24338",
+   "budget_bytes": 13,
+   "jp": "小しゃくなマネを……！！",
+   "zh_current": "竟敢耍花招！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24354",
+   "budget_bytes": 21,
+   "jp": "フハハハハハ！もはや抵抗などできんぞ！！",
+   "zh_current": "哈哈哈！你已无力抵抗！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24378",
+   "budget_bytes": 27,
+   "jp": "見ておれ……この屈辱……必ずや晴らさせてもらうぞ……",
+   "zh_current": "这份耻辱……老夫必定讨回！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x243A0",
+   "budget_bytes": 11,
+   "jp": "ワシの邪魔をするなー！",
+   "zh_current": "别妨碍老夫！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26F38",
+   "budget_bytes": 22,
+   "jp": "『愚か者め！わざわざやられに来おったか！』",
+   "zh_current": "『蠢货！特地来送死吗！』",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26F5C",
+   "budget_bytes": 16,
+   "jp": "『わたしは戦争をしているのだよ！』",
+   "zh_current": "『老夫在打仗呢！』",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26F8F",
+   "budget_bytes": 19,
+   "jp": "『ククク！無駄だベルナデット……』",
+   "zh_current": "『呵呵、没用的、吾女……』",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26FD4",
+   "budget_bytes": 9,
+   "jp": "『フハハハハハ！』",
+   "zh_current": "『哈哈哈！』",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26FEC",
+   "budget_bytes": 28,
+   "jp": "『このワシが撃てるかな！我が娘ベルナデットごと！？』",
+   "zh_current": "『你开得了枪吗！连吾女一起！？』",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27030",
+   "budget_bytes": 31,
+   "jp": "『このドゥガチに逆らう愚か者め！一機残らず葬ってくれよう！』",
+   "zh_current": "『胆敢违抗老夫的蠢货！一架不留！』",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27098",
+   "budget_bytes": 34,
+   "jp": "『フハハ！遠慮はいらぬのだぞ？ベルナデットを撃てばいいのだ！！』",
+   "zh_current": "『哈哈！不必客气？朝吾女开枪便是！』",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x270C8",
+   "budget_bytes": 29,
+   "jp": "『この期に及んでまだためらうか！愚か者どもが！！』",
+   "zh_current": "『事到如今还在犹豫！！蠢货们！』",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27164",
+   "budget_bytes": 24,
+   "jp": "『フハハハ！それこそ無益というものだ！』",
+   "zh_current": "『哈哈哈！那才叫徒劳！』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27188",
+   "budget_bytes": 24,
+   "jp": "『ワシを甘く見るなよ！若造どもが！』",
+   "zh_current": "『别小看老夫！小子们！』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x271AC",
+   "budget_bytes": 24,
+   "jp": "『ワシを甘く見るなよ！若造どもが！』",
+   "zh_current": "『别小看老夫！小子们！』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x271D0",
+   "budget_bytes": 24,
+   "jp": "『その機体はワシが有効に使ってやろう！』",
+   "zh_current": "『这台机体、归老夫所用！』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27210",
+   "budget_bytes": 25,
+   "jp": "『のこのこ前に出てくるとは！馬鹿者どもめ！』",
+   "zh_current": "『竟敢冒头出来！蠢货们！』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1078",
+   "budget_bytes": 27,
+   "jp": "紅蓮の炎に焼かれて消える地球そのものだーっ！！",
+   "zh_current": "被烈火焚烧的、正是这地球！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1.bin",
+   "record": "0x10FC",
+   "budget_bytes": 7,
+   "jp": "ミ、ミサイルが！？",
+   "zh_current": "导弹！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1148",
+   "budget_bytes": 16,
+   "jp": "若造のいうことかぁぁぁっ！！",
+   "zh_current": "毛头小子懂什么！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1.bin",
+   "record": "0x118C",
+   "budget_bytes": 5,
+   "jp": "なにっ！？",
+   "zh_current": "什么！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1.bin",
+   "record": "0x11D4",
+   "budget_bytes": 8,
+   "jp": "ぐおおおおっ！",
+   "zh_current": "啊啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1.bin",
+   "record": "0x11E8",
+   "budget_bytes": 17,
+   "jp": "フフハ…フハハハハハ……",
+   "zh_current": "呵、呵呵……哈哈哈……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1205",
+   "budget_bytes": 23,
+   "jp": "ち、地球が…、燃えるぞ……すべてが消えて……",
+   "zh_current": "地、地球在燃烧……一切都……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1228",
+   "budget_bytes": 6,
+   "jp": "アハハハハ……",
+   "zh_current": "哈哈……",
+   "zh_current_bytes": 6
+  }
+ ]
+}

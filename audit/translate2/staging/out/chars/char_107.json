@@ -1,0 +1,112 @@
+{
+ "entity": "char_107",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E5%BC%BA%E5%B0%BC%C2%B7%E8%8E%B1%E6%B1%80",
+  "https://baike.baidu.com/item/%E5%BC%BA%E5%B0%BC%C2%B7%E8%8E%B1%E6%B1%80/2106928",
+  "https://wiki.biligame.com/gundam/MS-06R-2%E9%AB%98%E6%9C%BA%E5%8A%A8%E5%9E%8B%E6%89%8E%E5%8F%A4%E2%85%A1",
+  "https://w.atwiki.jp/ps-one_ggene/pages/293.html",
+  "https://gundam.fandom.com/wiki/Concept-X_6-1-2_Turn_X"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 321,
+   "name_zh": "强尼莱汀！",
+   "cutin_zh": "纵横战场的真红闪电！没错、我就是强尼莱汀！",
+   "notes": "名称由裸名强尼莱汀补上！（5格整）、还原名台词オレがジョニー・ライデンだ！的自报家门宣言语气。cut-in沿用现译：真红闪电是本库与大陆社区对紅い稲妻／真紅の稲妻称号的通行译名（biligame/百度百科强尼·莱汀条目）、且与库内STG11A我是真红闪电、强尼莱汀一致。JP的ジヨニー为ROM原文假名笔误。"
+  },
+  {
+   "idn": 322,
+   "name_zh": "为骄傲而战",
+   "cutin_zh": "什么为了祖国、我才不装那一套！我、只为自己的骄傲而战！",
+   "notes": "名称沿用现译（与cut-in共享骄傲/而战关键词、5格）。cut-in重译：カッコはつけねえ＝不装腔作势、原译为祖国装样子读作为了祖国的利益而装、语义偏了；祖国のためなんて的なんて不屑语气以什么……那一套呈现。此句是Gジェネ系列强尼固定名台词（PS版Gジェネ台词wiki、变体オレはオレの誇りのために戦うだけだ）、故补只字点出对比。"
+  },
+  {
+   "idn": 323,
+   "name_zh": "死也要守护",
+   "cutin_zh": "我降生于这个宇宙的证明……我就算死也要守护到底！",
+   "notes": "名称沿用（与cut-in共享死也要守护关键词）。証原译意义不准确、改为证明（生まれてきた証＝降生于世的证明）。"
+  },
+  {
+   "idn": 324,
+   "name_zh": "这是月光蝶",
+   "cutin_zh": "纵横战场的光之翼……没错、这就是月光蝶！！",
+   "detail_effect_zh": "无限持续、搭乘倒X时、直到通关为止保持超级化",
+   "notes": "cut-in补回JP结尾的双感叹号、句式与idn321的戦場を駆ける开头保持平行。效果文原为占位月光蝶发动、按ROM原文补全：無限为{01}分隔的持续时间栏、ターンX＝倒X沿用data/zh/units.json机体名、ハイパー化＝超级化沿用data/zh/ui.json既定译名（ptr 0x218F702）、措辞与fleet同文记录（char_78/char_153的对手路线继承月光蝶指令）逐字一致。"
+  },
+  {
+   "idn": 325,
+   "name_zh": "为骄傲而战",
+   "cutin_zh": "什么为了祖国、我才不装那一套！我、只为自己的骄傲而战！",
+   "notes": "与idn322共享同一名称字符串（name_shared_with_idn=322）、cut-in原文同句、译文完全一致。"
+  },
+  {
+   "idn": 326,
+   "name_zh": "死也要守护",
+   "cutin_zh": "我降生于这个宇宙的证明……我就算死也要守护到底！",
+   "detail_effect_zh": "1回合内命中率与回避率各提升20%、攻击力增加20%、装甲增加2",
+   "notes": "名称/cut-in与idn323一致（name_shared_with_idn=323）。效果文按didx94原文补全三项数值（命中回避各20%、攻击20%、装甲2）、句式与fleet同类1回合效果译法一致。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xD06C", "zh": "真红闪电的速度……别小看了！"},
+  {"file": "0.bin", "record": "0xD094", "zh": "真红闪电的实力……领教吧！"},
+  {"file": "0.bin", "record": "0xD0B8", "zh": "看看你够不够格跟我打！"},
+  {"file": "0.bin", "record": "0xD0DC", "zh": "真红闪电的实力……领教吧！"},
+  {"file": "0.bin", "record": "0xD100", "zh": "敢走神、可不止是受伤！"},
+  {"file": "0.bin", "record": "0xD120", "zh": "听说过吧？我就是强尼莱汀！"},
+  {"file": "0.bin", "record": "0xD144", "zh": "竟然遇上了我、算你倒霉！"},
+  {"file": "0.bin", "record": "0xD16C", "zh": "想从我这逃走、还早一百年！！"},
+  {"file": "0.bin", "record": "0xD194", "zh": "真是的……失手了吗……"},
+  {"file": "0.bin", "record": "0xD1B4", "zh": "练好本事再来！"},
+  {"file": "0.bin", "record": "0xD1D0", "zh": "哎呀……！可没那么容易！"},
+  {"file": "0.bin", "record": "0xD1F0", "zh": "嘛、打中我值得夸奖"},
+  {"file": "0.bin", "record": "0xD210", "zh": "啧……！还有两下子嘛！"},
+  {"file": "0.bin", "record": "0xD230", "zh": "……可恶！被看穿了！？"},
+  {"file": "0.bin", "record": "0xD250", "zh": "唔！直、直击了……！？"},
+  {"file": "0.bin", "record": "0xD26C", "zh": "竟把我逼到这地步……"},
+  {"file": "0.bin", "record": "0xD28C", "zh": "……真遗憾啊！别灰心嘛"},
+  {"file": "0.bin", "record": "0xD2AC", "zh": "你可来了！"},
+  {"file": "0.bin", "record": "0xD2C4", "zh": "散开！大家伙来了！"},
+  {"file": "0.bin", "record": "0xD2E0", "zh": "看招！动不了了！！"},
+  {"file": "0.bin", "record": "0xD2FC", "zh": "可恶……！真狼狈啊……"},
+  {"file": "0.bin", "record": "0xD31C", "zh": "……太天真！"},
+  {"file": "1de.bin", "record": "0x3B80", "zh": "大家、帮我一把！"},
+  {"file": "1de.bin", "record": "0x3B9C", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3BB8", "zh": "特别帮你一把！红色彗星先生！"},
+  {"file": "1de.bin", "record": "0x3BE0", "zh": "哈！这表情不错嘛！！"},
+  {"file": "1de.bin", "record": "0x3C00", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3C1C", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3C38", "zh": "好！交给我吧！！"},
+  {"file": "0.bin", "record": "0xD334", "zh": "真红闪电的速度……别小看了！"},
+  {"file": "0.bin", "record": "0xD35C", "zh": "真红闪电的实力……领教吧！"},
+  {"file": "0.bin", "record": "0xD380", "zh": "看看你够不够格跟我打！"},
+  {"file": "0.bin", "record": "0xD3A4", "zh": "真红闪电的实力……领教吧！"},
+  {"file": "0.bin", "record": "0xD3C8", "zh": "敢走神、可不止是受伤！"},
+  {"file": "0.bin", "record": "0xD3E8", "zh": "听说过吧？我就是强尼莱汀！"},
+  {"file": "0.bin", "record": "0xD40C", "zh": "竟然遇上了我、算你倒霉！"},
+  {"file": "0.bin", "record": "0xD434", "zh": "想从我这逃走、还早一百年！！"},
+  {"file": "0.bin", "record": "0xD45C", "zh": "真是的……失手了吗……"},
+  {"file": "0.bin", "record": "0xD47C", "zh": "练好本事再来！"},
+  {"file": "0.bin", "record": "0xD498", "zh": "哎呀……！可没那么容易！"},
+  {"file": "0.bin", "record": "0xD4B8", "zh": "嘛、打中我值得夸奖"},
+  {"file": "0.bin", "record": "0xD4D8", "zh": "啧……！还有两下子嘛！"},
+  {"file": "0.bin", "record": "0xD4F8", "zh": "……可恶！被看穿了！？"},
+  {"file": "0.bin", "record": "0xD518", "zh": "唔！直、直击了……！？"},
+  {"file": "0.bin", "record": "0xD534", "zh": "竟把我逼到这地步……"},
+  {"file": "0.bin", "record": "0xD554", "zh": "……真遗憾啊！别灰心嘛"},
+  {"file": "0.bin", "record": "0xD574", "zh": "你可来了！"},
+  {"file": "0.bin", "record": "0xD58C", "zh": "散开！大家伙来了！"},
+  {"file": "0.bin", "record": "0xD5A8", "zh": "看招！动不了了！！"},
+  {"file": "0.bin", "record": "0xD5C4", "zh": "可恶……！真狼狈啊……"},
+  {"file": "0.bin", "record": "0xD5E4", "zh": "……太天真！"},
+  {"file": "1de.bin", "record": "0x3C54", "zh": "大家、帮我一把！"},
+  {"file": "1de.bin", "record": "0x3C70", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3C8C", "zh": "哈！这表情不错嘛！！"},
+  {"file": "1de.bin", "record": "0x3CAC", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3CC8", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3CE4", "zh": "好！交给我吧！！"},
+  {"file": "1de.bin", "record": "0x3D00", "zh": "好！交给我吧！！"}
+ ],
+ "notes": "语气基调：吉翁头号自恋王牌、粗豪自信的俺口吻（ぜ/な结尾）、全程第一人称我。两套bark为cid107/cid108镜像、逐条统一；原先分裂的重复组已归一：手え貸してもらうぜ、みんな！（0x3B80帮我一把/0x3C54搭把手不一致）统一为大家、帮我一把！、九条いいぜ！任せてくれ！！统一为好！交给我吧！！并补回原文！！。按简报成本规则逐条核算、修复了按该规则超支的旧译：0xD2C4快散开→散开（16/16）、0x3BB8删就字（26/27）、0xD120（24/24）、0xD1F0（17/18）。补回原文被丢的标点与语气：0xD16C/0xD2E0的！！、0xD06C/0xD094/0xD28C/0xD2FC的……、0xD250的ちょ、结巴（直、直击）、0xD1B4删去原文没有的第二个！。0xD094受24字节预算所限、理想长版为真红闪电的实力……让你见识见识！。JP原文スビード/ジヨニー为ROM假名笔误（＝スピード/ジョニー）。另两处供维护者复核（非本文件范围）：data/zh/placements/ui_names_bank.json:15383存在带乱码前缀的イぁ合た这是月光蝶！！；data/zh/stages/_STG03_2.json:1697称号作赤色闪电、与全库通行的真红闪电不一致。"
+}

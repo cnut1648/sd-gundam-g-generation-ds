@@ -1,0 +1,278 @@
+{
+ "entity": "char_430",
+ "kind": "character",
+ "cids": [
+  430
+ ],
+ "name_jp": "ネオ・ジオン上級士官",
+ "name_zh_KEEP": "新吉翁高级士官",
+ "cards": [
+  {
+   "cid": 430,
+   "ids": [
+    {
+     "idn": 1290,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B904E",
+     "zh_name_ptr": "0x232881C",
+     "name_jp": "ネオ・ジオンの栄光のために！",
+     "name_zh_current": "新吉翁荣光",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲命中↑",
+     "summary_zh_KEEP": "范围命中↑",
+     "didx": 18,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%",
+     "cutin_group": 820,
+     "cutin_jp": "ネオ·ジオンの栄光のために！",
+     "cutin_zh_current": "为了新吉翁的荣光！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_246",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1291,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B905C",
+     "zh_name_ptr": "0x20B905C",
+     "name_jp": "地球圏をザビ家のものに！！",
+     "name_zh_current": "地球归扎比",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 821,
+     "cutin_jp": "地球圏をザビ家のものに！！",
+     "cutin_zh_current": "地球圈、归扎比家所有！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_404",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x15A9C",
+   "budget_bytes": 16,
+   "jp": "敵、有効射程圏内に入りました！",
+   "zh_current": "敌已进入射程圈！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15B4C",
+   "budget_bytes": 19,
+   "jp": "直撃！右舷主砲沈黙！機関出力低下！",
+   "zh_current": "直撃！右舷主砲沉默！機関出力低下！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15BA8",
+   "budget_bytes": 23,
+   "jp": "な、なんとかかわしました！回避……成功です！",
+   "zh_current": "总、总算躲开了！回避成功！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15C20",
+   "budget_bytes": 30,
+   "jp": "右舷、第一装甲板、貫通！航行自体には影響ありません！",
+   "zh_current": "右舷第一装甲被贯穿！不影响航行！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F89C",
+   "budget_bytes": 16,
+   "jp": "チャンスを逃がすな！撃てーっ！！",
+   "zh_current": "别错过！！开火！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F8B8",
+   "budget_bytes": 15,
+   "jp": "ネオ·ジオンの栄光の為にっ！！",
+   "zh_current": "为新吉翁荣光！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F8D4",
+   "budget_bytes": 16,
+   "jp": "用意……撃てえーッ！！",
+   "zh_current": "预备……开火！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F8F0",
+   "budget_bytes": 11,
+   "jp": "！一斉射撃ッ！",
+   "zh_current": "全军齐射！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F908",
+   "budget_bytes": 16,
+   "jp": "目標捕捉！一斉射で沈めるぞ！",
+   "zh_current": "锁定！齐射击沉它！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F924",
+   "budget_bytes": 11,
+   "jp": "よし……突撃しろッ！！",
+   "zh_current": "好……突击吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F93C",
+   "budget_bytes": 11,
+   "jp": "！……発射！！",
+   "zh_current": "！……放！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F954",
+   "budget_bytes": 12,
+   "jp": "これで終わりにするんだ！",
+   "zh_current": "就此了结吧！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F96C",
+   "budget_bytes": 23,
+   "jp": "くっ、ダメか！ハマーンさま、申し訳ありません……",
+   "zh_current": "唔、不行了！哈曼大人、恕罪……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F990",
+   "budget_bytes": 8,
+   "jp": "よーし、いいぞ！",
+   "zh_current": "好、很好！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F9A4",
+   "budget_bytes": 22,
+   "jp": "くっ！なんとしても最後まで戦い続けるんだ！",
+   "zh_current": "唔！无论如何战到最后！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F9C8",
+   "budget_bytes": 12,
+   "jp": "まぐれ当たりにすぎん！",
+   "zh_current": "不过是运气！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F9E0",
+   "budget_bytes": 23,
+   "jp": "敵も必死だな……各員、心してかかれよ！！",
+   "zh_current": "敌人拼命……各位小心应战！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA04",
+   "budget_bytes": 15,
+   "jp": "くっ！索敵警戒怠るな！",
+   "zh_current": "唔！提高警戒！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA20",
+   "budget_bytes": 26,
+   "jp": "くそっ！直撃を愛けては……止むを得んか……！",
+   "zh_current": "可恶！吃了直击……没办法了！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA48",
+   "budget_bytes": 27,
+   "jp": "ひるんではならんぞ！ハマーンさまへの忠誠を見せるのだ！",
+   "zh_current": "绝不退缩！！向哈曼大人尽忠！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA70",
+   "budget_bytes": 17,
+   "jp": "……見たか！これが我々の力だ！",
+   "zh_current": "看吧！我们的力量！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA90",
+   "budget_bytes": 15,
+   "jp": "回避しろ！当たらなければいい！",
+   "zh_current": "回避！别被打中就行！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FAAC",
+   "budget_bytes": 16,
+   "jp": "遠距離攻撃だ！散開して、回避！",
+   "zh_current": "远程攻击！散开回避！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FAC8",
+   "budget_bytes": 28,
+   "jp": "安心しろ、その機体はネオ·ジオンの為に役立ててやる！",
+   "zh_current": "放心、那机体会为新吉翁所用！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FAF0",
+   "budget_bytes": 16,
+   "jp": "しまった！こんなことになるとは……",
+   "zh_current": "不好！竟会如此……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FB0C",
+   "budget_bytes": 21,
+   "jp": "そう簡単に捕まるわけにはいかんのだ！！",
+   "zh_current": "岂能轻易被你抓住！",
+   "zh_current_bytes": 17
+  }
+ ]
+}

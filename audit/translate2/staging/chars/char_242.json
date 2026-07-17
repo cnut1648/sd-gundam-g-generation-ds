@@ -1,0 +1,272 @@
+{
+ "entity": "char_242",
+ "kind": "character",
+ "cids": [
+  242
+ ],
+ "name_jp": "ギレン・ザビ",
+ "name_zh_KEEP": "基连·扎比",
+ "cards": [
+  {
+   "cid": 242,
+   "ids": [
+    {
+     "idn": 726,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B869E",
+     "zh_name_ptr": "0x218C52E",
+     "name_jp": "あえて言おう……",
+     "name_zh_current": "恕我直言",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命应减",
+     "didx": 87,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·反应-30攻击-30%",
+     "cutin_group": 565,
+     "cutin_jp": "あえて言おう……カスであると！",
+     "cutin_zh_current": "恕我直言……他们就是废物！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_64",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 727,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B86A6",
+     "zh_name_ptr": "0x20B86A6",
+     "name_jp": "神の放ったメギドの火に…",
+     "name_zh_current": "米吉多之火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋散開封印",
+     "summary_zh_KEEP": "威力↑・封散",
+     "didx": 159,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加。チームの間接攻撃の際、相手が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·解除封印",
+     "cutin_group": 566,
+     "cutin_jp": "神の放ったメギドの火に必ずや彼らは屈するであろう！！",
+     "cutin_zh_current": "神所降下的米吉多之火……他们必将降服！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 728,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B86B6",
+     "zh_name_ptr": "0x20B86B6",
+     "name_jp": "圧倒的じゃないか、我が軍は",
+     "name_zh_current": "压倒性优势",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 567,
+     "cutin_jp": "圧倒的じゃないか、我が軍は",
+     "cutin_zh_current": "我军不正是压倒性的吗！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x20370",
+   "budget_bytes": 11,
+   "jp": "さて……うまくやれよ！",
+   "zh_current": "那么、好好干",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20388",
+   "budget_bytes": 22,
+   "jp": "ククク……圧倒的じゃないか、我が軍は！",
+   "zh_current": "呵呵……压倒性优势、我军！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x203C6",
+   "budget_bytes": 7,
+   "jp": "よろしい……撃て",
+   "zh_current": "好、开火",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x203DC",
+   "budget_bytes": 20,
+   "jp": "無能なる者どもに思い知らせてやるのだ！",
+   "zh_current": "让无能之辈好好领教！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20416",
+   "budget_bytes": 16,
+   "jp": "くく……敵もこれまでだな……",
+   "zh_current": "呵呵……敌人完了……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20434",
+   "budget_bytes": 22,
+   "jp": "攻めるにしては数が少なすぎたようだな！",
+   "zh_current": "若要进攻、兵力未免太少！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20458",
+   "budget_bytes": 18,
+   "jp": "あえて言おう……敵はカスである！と",
+   "zh_current": "我敢断言、敌是废物！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20478",
+   "budget_bytes": 7,
+   "jp": "ジーク·ジオン！！",
+   "zh_current": "为吉翁！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2048C",
+   "budget_bytes": 18,
+   "jp": "ば、馬鹿な……冗談は……よせ……",
+   "zh_current": "怎么会……别开玩笑……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x204AC",
+   "budget_bytes": 13,
+   "jp": "敵の戦力もこれまでだな……",
+   "zh_current": "战力到此为止……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x204C8",
+   "budget_bytes": 7,
+   "jp": "……冗談はよせ",
+   "zh_current": "别说笑！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x204DC",
+   "budget_bytes": 14,
+   "jp": "フッ……よく支えてくれる",
+   "zh_current": "哼……撑得不错",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x204F8",
+   "budget_bytes": 18,
+   "jp": "私を倒すには数が足りんようだな？",
+   "zh_current": "想打倒我数量不够吧？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20518",
+   "budget_bytes": 11,
+   "jp": "ふん、軟弱の集団が……",
+   "zh_current": "哼、软弱之辈",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20530",
+   "budget_bytes": 11,
+   "jp": "……最期の悪あがきにすぎん",
+   "zh_current": "……垂死挣扎",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20564",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20578",
+   "budget_bytes": 26,
+   "jp": "優良種たる我らこそ人類を救い得るのである！",
+   "zh_current": "唯我等优良人种、能救人类！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x205A0",
+   "budget_bytes": 19,
+   "jp": "歯がゆいな……こんな攻撃なぞ……",
+   "zh_current": "这种攻击……不痛不痒！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x205C0",
+   "budget_bytes": 23,
+   "jp": "所詮は最後の悪あがきだな……散開して対抗しろ！",
+   "zh_current": "垂死挣扎罢了……散开对抗！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x205E4",
+   "budget_bytes": 38,
+   "jp": "人類は我らに管理運営されてこそ永久に生き延びることができるのだ！",
+   "zh_current": "人类唯有受我等管理才能永久存续！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20618",
+   "budget_bytes": 21,
+   "jp": "ば、馬鹿な……これでは人類の未来は……",
+   "zh_current": "怎么会……人类的未来……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2063C",
+   "budget_bytes": 6,
+   "jp": "冗談はよせ！",
+   "zh_current": "别说笑",
+   "zh_current_bytes": 6
+  }
+ ]
+}

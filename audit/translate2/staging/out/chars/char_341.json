@@ -1,0 +1,55 @@
+{
+ "entity": "char_341",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%83%A1%E3%83%AA%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%82%AC%E3%82%B8%E3%83%83%E3%83%88",
+  "https://gundam.fandom.com/wiki/Merrybell_Gadget",
+  "https://wiki.biligame.com/gundam/%E9%80%86A%E9%AB%98%E8%BE%BE",
+  "https://ja.wikipedia.org/wiki/%E2%88%80%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1023,
+   "name_zh": "太爽了！",
+   "cutin_zh": "这感觉真是太爽了！",
+   "notes": "JP是她标志性的口技拟声きゅいぃ〜ん♪（模仿光束/机体音效的小丑式怪叫、见pixiv百科）。♪与～为禁用字符、咻/咿/啾等拟声字不在字库、故按其亢奋尖叫的语义译出；指令名取名台词核心词太爽了。"
+  },
+  {
+   "idn": 1024,
+   "name_zh": "给我下跪！",
+   "cutin_zh": "趴在地上、给我下跪谢罪吧！",
+   "notes": "はいつくばって=趴在地上、土下座=下跪谢罪；原译双重给我看语句不顺、已理顺。指令名与名台词共享核心词给我下跪。"
+  },
+  {
+   "idn": 1025,
+   "name_zh": "我来助兴！",
+   "cutin_zh": "就由本小姐来助兴吧！",
+   "notes": "呼应TV版名场面あたしが盛り上げてあげるよ！（最终决战嘲讽基姆一段、pixiv百科收录）；アタシ取本小姐以合其目中无人的小丑腔。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x27D88", "zh": "我先上！！"},
+  {"file": "0.bin", "record": "0x27D9C", "zh": "我更强！"},
+  {"file": "0.bin", "record": "0x27DB0", "zh": "给我冲！"},
+  {"file": "0.bin", "record": "0x27DC4", "zh": "哈哈、坠落！"},
+  {"file": "0.bin", "record": "0x27DDC", "zh": "别挡路！"},
+  {"file": "0.bin", "record": "0x27DF0", "zh": "压扁他们就行了！"},
+  {"file": "0.bin", "record": "0x27E0C", "zh": "让开！哈哈！！"},
+  {"file": "0.bin", "record": "0x27E24", "zh": "我更强！"},
+  {"file": "0.bin", "record": "0x27E38", "zh": "基、基姆！……"},
+  {"file": "0.bin", "record": "0x27E50", "zh": "怎么了？我在这边哟！"},
+  {"file": "0.bin", "record": "0x27E70", "zh": "这、这种！"},
+  {"file": "0.bin", "record": "0x27E84", "zh": "什么玩意？想耍障眼法吗？"},
+  {"file": "0.bin", "record": "0x27EAC", "zh": "竟敢打中我！？"},
+  {"file": "0.bin", "record": "0x27EC4", "zh": "有两下子嘛！"},
+  {"file": "0.bin", "record": "0x27EDC", "zh": "这、这家伙！竟敢这样！！"},
+  {"file": "0.bin", "record": "0x27EFC", "zh": "开什么玩笑！伤成这样……"},
+  {"file": "0.bin", "record": "0x27F20", "zh": "哟、挺能干的嘛！啊哈哈哈！"},
+  {"file": "0.bin", "record": "0x27F44", "zh": "你这就叫不会打仗！！"},
+  {"file": "0.bin", "record": "0x27F68", "zh": "哈哈、来了来了！"},
+  {"file": "0.bin", "record": "0x27F84", "zh": "想活命就给我老实点！！"},
+  {"file": "0.bin", "record": "0x27FA8", "zh": "唉、算了"},
+  {"file": "0.bin", "record": "0x27FBC", "zh": "别开玩笑！"}
+ ],
+ "notes": "身份确认：∀高达（逆A）的梅丽贝尔·加吉特（メリーベル・ガジット）、基姆·金卡拉姆麾下班迪特队队长、视战斗为游戏的小丑系王牌、自称アタシ、口头禅式高笑あはははは。任务简报猜测的ZZ人物有误。0x27E38的ギムーッ即她被击坠时呼喊基姆之名、译名与角色库基姆·金卡拉姆一致；预算内保留结巴与拖尾……、舍去一个！。所有用字均已对照charmap two_byte_zh核验可编码；各bark按字节成本规则核算均不超budget_bytes。detail_effect_zh三条均非本人所有、按规则省略。"
+}

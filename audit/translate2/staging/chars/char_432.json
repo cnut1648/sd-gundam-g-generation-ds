@@ -1,0 +1,254 @@
+{
+ "entity": "char_432",
+ "kind": "character",
+ "cids": [
+  432
+ ],
+ "name_jp": "グレミー軍上級士官",
+ "name_zh_KEEP": "格雷米军高官",
+ "cards": [
+  {
+   "cid": 432,
+   "ids": [
+    {
+     "idn": 1296,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 826,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "散布米诺夫斯基粒子！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1297,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9075",
+     "zh_name_ptr": "0x20B9075",
+     "name_jp": "真のネオ・ジオンを作るのだ！！",
+     "name_zh_current": "真正新吉翁",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲威力↑",
+     "summary_zh_KEEP": "范围威力↑",
+     "didx": 56,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%",
+     "cutin_group": 827,
+     "cutin_jp": "真のネオ·ジオンを作るのだ！！",
+     "cutin_zh_current": "建立真正的新吉翁！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_404",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x24A00",
+   "budget_bytes": 12,
+   "jp": "一斉発射します！",
+   "zh_current": "全炮、齐射！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FE14",
+   "budget_bytes": 33,
+   "jp": "敵の態勢が整わない内に叩くぞ！全砲門開け！……てえーっ！",
+   "zh_current": "趁敌人立足未稳痛击！全炮门、开火！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FE44",
+   "budget_bytes": 14,
+   "jp": "真なるネオ·ジオンの為に！",
+   "zh_current": "为真正新吉翁！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FE60",
+   "budget_bytes": 17,
+   "jp": "我らこそが本当のネオ·ジオンなのだ！",
+   "zh_current": "正统新吉翁是我们！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FE80",
+   "budget_bytes": 20,
+   "jp": "邪魔するものは全て敵だ！排除しろっ！",
+   "zh_current": "挡路的全是敌人！排除掉！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FEA0",
+   "budget_bytes": 19,
+   "jp": "、発射準備！……撃てえーっ！",
+   "zh_current": "全炮预备……开火！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FEC0",
+   "budget_bytes": 18,
+   "jp": "行けっ！艦をぶつけるつもりで突っ込め！",
+   "zh_current": "冲！！拼死撞上去！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FEE0",
+   "budget_bytes": 25,
+   "jp": "至近距離から一斉射撃だ！一気にケリをつけるぞ！！",
+   "zh_current": "近距离一齐射击！一举解决！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FF08",
+   "budget_bytes": 23,
+   "jp": "、装填急げ！敵は目の前だぞ！！！",
+   "zh_current": "、快装填！敌人就在眼前！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FF2C",
+   "budget_bytes": 27,
+   "jp": "こ、これは……まずい！総員退艦、退艦だ！急げっ！",
+   "zh_current": "这、这下不妙……全员弃舰！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FF54",
+   "budget_bytes": 13,
+   "jp": "当たりさえしなければいい！",
+   "zh_current": "别被打中就行！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FF70",
+   "budget_bytes": 24,
+   "jp": "こんなところで沈んでは、我らの理想が実現できん！",
+   "zh_current": "在此沉没、理想就无法实现！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FF94",
+   "budget_bytes": 21,
+   "jp": "多少の損傷くらい、どうということはない！",
+   "zh_current": "一点损伤、不算什么！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FFB8",
+   "budget_bytes": 20,
+   "jp": "敵とて負けたくはない……そういうことだ！",
+   "zh_current": "敌人也想赢、仅此而已！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FFD8",
+   "budget_bytes": 25,
+   "jp": "くそっ！当たったか！損傷箇所のチェックを怠るな！",
+   "zh_current": "可恶！中弹了！查损伤！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30000",
+   "budget_bytes": 21,
+   "jp": "チィーッ！被弾箇所の応急処置、急げ！",
+   "zh_current": "啧！快抢修中弹部位！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30024",
+   "budget_bytes": 24,
+   "jp": "ここまでやられるとはな！援軍はまだなのか！？",
+   "zh_current": "竟被逼至此！援军还没到！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30048",
+   "budget_bytes": 17,
+   "jp": "我々と戦うには力不足だったようだな！",
+   "zh_current": "跟我们斗还差得远！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30068",
+   "budget_bytes": 9,
+   "jp": "遠距離攻撃だ！回避！",
+   "zh_current": "敌袭！回避！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30080",
+   "budget_bytes": 10,
+   "jp": "来るぞ！散開しろっ！",
+   "zh_current": "来了！散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30098",
+   "budget_bytes": 23,
+   "jp": "投降すれば、命だけは保障してやるぞ！",
+   "zh_current": "投降的话、就饶你一命！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x300BC",
+   "budget_bytes": 14,
+   "jp": "しまった！捕縛されたのか！？",
+   "zh_current": "不好！被俘了！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x300D8",
+   "budget_bytes": 23,
+   "jp": "悪いが……捕まるわけにはいかないのだよ！",
+   "zh_current": "抱歉……我不会束手就缚！",
+   "zh_current_bytes": 19
+  }
+ ]
+}

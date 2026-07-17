@@ -1,0 +1,66 @@
+{
+ "entity": "unit_76",
+ "kind": "unit",
+ "utids": [
+  76,
+  77,
+  78
+ ],
+ "name_jp": "アレックスFA",
+ "name_zh_current": "阿列克斯FA",
+ "name_zh_px": 64,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218ED02",
+   "jp": "ガトリングガン",
+   "zh_current": "加特林枪",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 25,
+   "record_offset": "0x284",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "フルアーマーシステム（解除可能）"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "全装甲系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

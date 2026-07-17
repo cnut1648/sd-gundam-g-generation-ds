@@ -1,0 +1,62 @@
+{
+ "entity": "char_158",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E8%AF%BA%E5%88%A9%E6%96%AF%C2%B7%E5%B7%B4%E5%8D%A1%E5%BE%B7",
+  "https://gundam.fandom.com/wiki/Norris_Packard",
+  "https://dic.pixiv.net/a/%E3%83%8E%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%91%E3%83%83%E3%82%AB%E3%83%BC%E3%83%89",
+  "https://gundam.wiki.cre.jp/wiki/%E3%83%8E%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%91%E3%83%83%E3%82%AB%E3%83%BC%E3%83%89"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 474,
+   "name_zh": "成就定一生",
+   "cutin_zh": "人的一生、取决于成就了什么！",
+   "notes": "社区通行译法为「人的一生取决于成就了什么」（震撼之山名台词）、指令名与名台词共用关键词成就·一生"
+  },
+  {
+   "idn": 475,
+   "name_zh": "但我不会输",
+   "cutin_zh": "但是……我不会输！",
+   "notes": "最终决战名台词「アイナ様の想い人と出会うとは……だが、負けぬ！」的通行中文为「但是……我不会输！」、保留だが的转折"
+  },
+  {
+   "idn": 476,
+   "name_zh": "死得其所",
+   "cutin_zh": "爱娜大人……我已找到死得其所之处",
+   "notes": "「死に場所を見つけました」中文圈通行译法用「死得其所」、比原稿「葬身之地」更贴合诺里斯从容赴死的觉悟"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x14A60", "zh": "……不来吗？那就由我上！"},
+  {"file": "0.bin", "record": "0x14A80", "zh": "是时候……出手了！"},
+  {"file": "0.bin", "record": "0x14A9C", "zh": "是时候……出手了！"},
+  {"file": "0.bin", "record": "0x14AB8", "zh": "为爱娜与基尼亚斯大人！"},
+  {"file": "0.bin", "record": "0x14AD8", "zh": "是我的！！"},
+  {"file": "0.bin", "record": "0x14AF0", "zh": "好眼力……反会要你命！"},
+  {"file": "0.bin", "record": "0x14B10", "zh": "觉悟吧！"},
+  {"file": "0.bin", "record": "0x14B24", "zh": "就此结束！"},
+  {"file": "0.bin", "record": "0x14B3C", "zh": "到此为止了吗……！"},
+  {"file": "0.bin", "record": "0x14B58", "zh": "竟被重力束缚！……可恶的陆地人！"},
+  {"file": "0.bin", "record": "0x14B80", "zh": "想让我死？没那么简单！"},
+  {"file": "0.bin", "record": "0x14BA0", "zh": "哼……！"},
+  {"file": "0.bin", "record": "0x14BB4", "zh": "唔……敌人竟如此了得！"},
+  {"file": "0.bin", "record": "0x14BD4", "zh": "唔……有点本事嘛！"},
+  {"file": "0.bin", "record": "0x14BF0", "zh": "什么……竟这么强！？"},
+  {"file": "0.bin", "record": "0x14C0C", "zh": "这里……是我的死地？"},
+  {"file": "0.bin", "record": "0x14C2C", "zh": "别做无用功！你没胜算！"},
+  {"file": "0.bin", "record": "0x14C50", "zh": "光有火力可不行……！"},
+  {"file": "0.bin", "record": "0x14C70", "zh": "各机散开！炮击来了！"},
+  {"file": "0.bin", "record": "0x14C90", "zh": "那机体归我！"},
+  {"file": "0.bin", "record": "0x14CA8", "zh": "竟想抓住我……"},
+  {"file": "0.bin", "record": "0x14CC0", "zh": "天真……要你命！"},
+  {"file": "1de.bin", "record": "0x5A34", "zh": "唯有前进！！"},
+  {"file": "1de.bin", "record": "0x5A4C", "zh": "明白！上了！！"},
+  {"file": "1de.bin", "record": "0x5A64", "zh": "明白！上了！！"},
+  {"file": "1de.bin", "record": "0x5A7C", "zh": "明白！上了！！"},
+  {"file": "1de.bin", "record": "0x5A94", "zh": "明白！上了！！"},
+  {"file": "1de.bin", "record": "0x5AAC", "zh": "明白！上了！！"},
+  {"file": "1de.bin", "record": "0x5AC4", "zh": "明白！上了！！"}
+ ],
+ "notes": "老兵诺里斯全程用克制庄重的口吻。フラットランダー按社区通行译法改为陆地人（原稿地居者非通行译名）、并补回原句省略号。命取りだ两句（好眼力·天真）统一为要你命的呼应句式。理想长版：0x14B58为竟被重力束缚！……你们这些可恶的陆地人！、0x14AF0为好眼力……反而会要了你的命！、均因byte预算压缩。1de.bin承知した！……参る！！保留现行明白！上了！！（12字节内无法同时保留停顿与语义）。"
+}

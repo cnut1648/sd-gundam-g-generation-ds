@@ -1,0 +1,66 @@
+{
+ "entity": "unit_457",
+ "kind": "unit",
+ "utids": [
+  457,
+  458,
+  459
+ ],
+ "name_jp": "ビグロ",
+ "name_zh_current": "比格罗",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C829",
+   "jp": "大型メガ粒子砲",
+   "zh_current": "大型米加粒子炮",
+   "shared_by_n_units": 19
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218994E",
+   "jp": "クロー",
+   "zh_current": "利爪",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 152,
+   "record_offset": "0x940",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "地形適正・宇宙",
+    "大型ユニット"
+   ],
+   "zh_segments_current": [
+    "宇宙适应",
+    "巨大"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

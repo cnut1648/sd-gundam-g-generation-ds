@@ -1,0 +1,67 @@
+{
+ "entity": "char_39",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/%E5%8D%A1%E5%98%89%E8%8E%89%C2%B7%E5%B0%A4%E6%8B%89%C2%B7%E9%98%BF%E6%96%AF%E5%93%88",
+  "https://zh.wikipedia.org/zh-hans/%E5%8D%A1%E5%98%89%E8%8E%89%C2%B7%E5%B0%A4%E6%8B%89%C2%B7%E9%98%BF%E6%96%AF%E5%93%88",
+  "https://baike.baidu.com/item/%E5%8D%A1%E5%98%89%E8%8E%89%C2%B7%E5%B0%A4%E6%8B%89%C2%B7%E9%98%BF%E6%96%AF%E5%93%88/2086686",
+  "https://m.douban.com/group/topic/343820625/",
+  "https://note.com/abe_keishi/n/nb7d1818d882a",
+  "https://ameblo.jp/121919951995/entry-12587126834.html"
+ ],
+ "name_flag": "卡嘉莉·尤拉 is a truncation; mainland canon full name is 卡嘉莉·尤拉·阿斯哈 (moegirl/baike). Likely width-limited; if the plate fits 8 cells, prefer the full name.",
+ "ids": [
+  {
+   "idn": 117,
+   "name_zh": "不想有人死",
+   "cutin_zh": "我不想再让任何人死去……！",
+   "detail_effect_zh": "回避率提升40%",
+   "notes": "name uses 不想 to match the cut-in wording (was 不愿)."
+  },
+  {
+   "idn": 118,
+   "name_zh": "活着即战斗",
+   "cutin_zh": "活着才是战斗！！",
+   "detail_effect_zh": "HP回复50%",
+   "notes": "PHASE-50 iconic line 逃げるな！生きる方が戦いだ！！ — mainland-canonical rendering 活着才是战斗 (zh.wikipedia/baike/douban). Detail now keeps the HP object (was 恢复50%)."
+  },
+  {
+   "idn": 119,
+   "name_zh": "做该做的事",
+   "cutin_zh": "能做的事、想做的事、该做的事……大家都一样吧？",
+   "detail_effect_zh": "1回合内命中率提升20%、攻击力增加20%",
+   "notes": "PHASE-48 famous triad できること、望むこと、すべきこと……みんな同じだろ？ rendered with the widely-quoted 能做的事/想做的事/该做的事 form. Detail restores the dropped 1ターン (1回合) duration."
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x4610", "zh": "不让你们得逞！"},
+  {"file": "0.bin", "record": "0x462C", "zh": "……休想逃走！"},
+  {"file": "0.bin", "record": "0x4644", "zh": "我想快点结束这场战争！"},
+  {"file": "0.bin", "record": "0x4668", "zh": "谁也不许死……！"},
+  {"file": "0.bin", "record": "0x4684", "zh": "现在需要这个！"},
+  {"file": "0.bin", "record": "0x46A0", "zh": "我怎能坐视不管！"},
+  {"file": "0.bin", "record": "0x46C0", "zh": "此战……我来终结！"},
+  {"file": "0.bin", "record": "0x46DC", "zh": "和平之灯、岂容熄灭！"},
+  {"file": "0.bin", "record": "0x46FC", "zh": "驰骋战场、也有无奈啊……"},
+  {"file": "0.bin", "record": "0x4720", "zh": "你脑袋变成小白鼠了？"},
+  {"file": "0.bin", "record": "0x4740", "zh": "岂能死在这！"},
+  {"file": "0.bin", "record": "0x4758", "zh": "皮外伤！！"},
+  {"file": "0.bin", "record": "0x476C", "zh": "你们！这样真的好吗？"},
+  {"file": "0.bin", "record": "0x478C", "zh": "老是打仗……"},
+  {"file": "0.bin", "record": "0x47A4", "zh": "这、这是什么啊！？"},
+  {"file": "0.bin", "record": "0x47C0", "zh": "我、奥布之狮之女！这点小事！"},
+  {"file": "0.bin", "record": "0x47E8", "zh": "区区武器！"},
+  {"file": "0.bin", "record": "0x4800", "zh": "……打不中！"},
+  {"file": "0.bin", "record": "0x4818", "zh": "正面来了！各机散开"},
+  {"file": "0.bin", "record": "0x4838", "zh": "不想再有任何人死去！"},
+  {"file": "0.bin", "record": "0x4858", "zh": "中弹了！？"},
+  {"file": "0.bin", "record": "0x486C", "zh": "可恶！别小看我！"},
+  {"file": "1de.bin", "record": "0x10E4", "zh": "拜托！帮我一把！！"},
+  {"file": "1de.bin", "record": "0x1100", "zh": "上吧！我随时能上！！"},
+  {"file": "1de.bin", "record": "0x1120", "zh": "交给我吧！"},
+  {"file": "1de.bin", "record": "0x1138", "zh": "好、我帮你！你太冒失了！"},
+  {"file": "1de.bin", "record": "0x115C", "zh": "守护弟弟是姐姐的责任！交给我！"},
+  {"file": "1de.bin", "record": "0x1184", "zh": "好、我帮你！你太冒失了！"},
+  {"file": "1de.bin", "record": "0x11A8", "zh": "守护弟弟是姐姐的责任！交给我！"}
+ ],
+ "notes": "0x4720 restores the famous ハツカネズミ meme (小白鼠、PHASE-43) that the old 原地打转 rendering lost. 0x46FC/0x4684 belong to the same PHASE-48 speech as cut-in 119 (戦場を駆けても駄目なこともある／でも今は必要だろ). 0x1120: アスラン cannot fit the 10-byte budget (阿斯兰 alone costs 6); ideal would be 交给我吧、阿斯兰！！. 0x47C0: 奥布之狮 = Uzumi's epithet, kept. 0x1138/0x1184 and 0x115C/0x11A8 are duplicate records and share identical lines."
+}

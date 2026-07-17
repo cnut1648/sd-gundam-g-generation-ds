@@ -1,0 +1,618 @@
+{
+ "entity": "char_1",
+ "kind": "character",
+ "cids": [
+  1,
+  2
+ ],
+ "name_jp": "アイナ・サハリン",
+ "name_zh_KEEP": "爱娜·萨哈林",
+ "cards": [
+  {
+   "cid": 1,
+   "ids": [
+    {
+     "idn": 3,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B6EF5",
+     "zh_name_ptr": "0x2328FA9",
+     "name_jp": "これが私の戦争です！！",
+     "name_zh_current": "我的战争！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "手加減",
+     "summary_zh_KEEP": "放水",
+     "didx": 143,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）攻撃対象を撃破しないように攻撃する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）放水",
+     "cutin_group": 1,
+     "cutin_jp": "見ていてください！これが私の戦争です！！",
+     "cutin_zh_current": "请看好了！这就是我的战争！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 4,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B6F04",
+     "zh_name_ptr": "0x23296AA",
+     "name_jp": "お兄さまの夢のため……",
+     "name_zh_current": "为兄长之梦",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 2,
+     "cutin_jp": "全てはお兄さまの夢のため……",
+     "cutin_zh_current": "一切都是为了兄长的梦想……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 2,
+   "ids": [
+    {
+     "idn": 6,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B6EF5",
+     "zh_name_ptr": "0x2328FA9",
+     "name_jp": "これが私の戦争です！！",
+     "name_zh_current": "我的战争！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "手加減",
+     "summary_zh_KEEP": "放水",
+     "didx": 143,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）攻撃対象を撃破しないように攻撃する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）放水",
+     "cutin_group": 4,
+     "cutin_jp": "見ていてください！これが私の戦争です！！",
+     "cutin_zh_current": "请看好了！这就是我的战争！！",
+     "name_owner": true,
+     "name_shared_with_idn": 3,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 7,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B6F25",
+     "zh_name_ptr": "0x2188728",
+     "name_jp": "撃ちます……！",
+     "name_zh_current": "我要开火了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 74,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 5,
+     "cutin_jp": "撃ちます……！",
+     "cutin_zh_current": "我要开火了……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 8,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B6F33",
+     "zh_name_ptr": "0x20B6F33",
+     "name_jp": "背負っていきましょう……",
+     "name_zh_current": "一起背负吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム0回復",
+     "summary_zh_KEEP": "队・全回复",
+     "didx": 9,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）シローがチームにいる時、HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）恢复100%",
+     "cutin_group": 6,
+     "cutin_jp": "背負っていきましょう……二人で",
+     "cutin_zh_current": "一起背负下去吧……我们两人",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x10C",
+   "budget_bytes": 14,
+   "jp": "倒さなければ倒される……",
+   "zh_current": "不动手就要挨打！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x128",
+   "budget_bytes": 21,
+   "jp": "全ては……お兄様の夢のためなのです！",
+   "zh_current": "一切都是为哥哥的梦想！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C",
+   "budget_bytes": 21,
+   "jp": "全ては……お兄様の夢のためなのです！",
+   "zh_current": "一切都为了哥哥的梦想！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x170",
+   "budget_bytes": 20,
+   "jp": "どいて下さい！私は戦いたくないのです！",
+   "zh_current": "请让开！我不想战斗！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x190",
+   "budget_bytes": 19,
+   "jp": "攻撃してくるならば止むを得ません！",
+   "zh_current": "你既然动手、休怪我！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1B0",
+   "budget_bytes": 19,
+   "jp": "こうも近づかれてはこうするしか……！",
+   "zh_current": "靠这么近也只能这样！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D0",
+   "budget_bytes": 9,
+   "jp": "やるしか……ない！",
+   "zh_current": "只能上了！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E8",
+   "budget_bytes": 28,
+   "jp": "これもサハリン家を復興するため……やるしかないのです！",
+   "zh_current": "为了复兴萨哈林家、只能这么做！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x210",
+   "budget_bytes": 22,
+   "jp": "止むを得ません……機体を放棄します！",
+   "zh_current": "无可奈何……放弃机体！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x234",
+   "budget_bytes": 7,
+   "jp": "……無駄です！",
+   "zh_current": "……没用！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x248",
+   "budget_bytes": 21,
+   "jp": "こんな所で死ぬわけにはいかないのです！",
+   "zh_current": "我绝不能死在这种地方！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26C",
+   "budget_bytes": 12,
+   "jp": "大した傷ではありません！",
+   "zh_current": "伤不算什么！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x284",
+   "budget_bytes": 18,
+   "jp": "クッ……！出力が低下している！？",
+   "zh_current": "唔……！输出在下降！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A4",
+   "budget_bytes": 22,
+   "jp": "バランサー損傷！？姿勢制御できない……！",
+   "zh_current": "平衡器损伤！？姿态失控！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C8",
+   "budget_bytes": 14,
+   "jp": "あ……そんな…直撃……！？",
+   "zh_current": "啊……被直击了！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E4",
+   "budget_bytes": 21,
+   "jp": "こ、ここで……落とされるわけには……！",
+   "zh_current": "这、这里……不能被击落！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x308",
+   "budget_bytes": 7,
+   "jp": "……無駄です！",
+   "zh_current": "……没用！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31C",
+   "budget_bytes": 18,
+   "jp": "エネルギー反応……！？急速離脱します！",
+   "zh_current": "能量反应！紧急脱离！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x33C",
+   "budget_bytes": 22,
+   "jp": "正面よりエネルギー反応！各機、散開して下さい！",
+   "zh_current": "正面能量反应！各机散开！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x360",
+   "budget_bytes": 25,
+   "jp": "……投降しましょうそして、楽になりましょう……",
+   "zh_current": "投降吧……然后就解脱了……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x388",
+   "budget_bytes": 11,
+   "jp": "すみません、お兄様……",
+   "zh_current": "对不起、哥哥",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3A0",
+   "budget_bytes": 19,
+   "jp": "撃ちなさい！私は投降などしません！",
+   "zh_current": "开火吧！我绝不投降！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x0",
+   "budget_bytes": 6,
+   "jp": "攻撃します！",
+   "zh_current": "攻击！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x14",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x30",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4C",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x68",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x84",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xA0",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3C0",
+   "budget_bytes": 19,
+   "jp": "向かって来るなら……戦うまでです！",
+   "zh_current": "要冲过来、那就一战！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3E0",
+   "budget_bytes": 7,
+   "jp": "撃ちます……！",
+   "zh_current": "我开火！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3F4",
+   "budget_bytes": 27,
+   "jp": "投降しなさい！無駄な血は、流したくありません！",
+   "zh_current": "投降吧！不想再造成无谓流血！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x41C",
+   "budget_bytes": 18,
+   "jp": "離れなさい！死にたいのですか！？",
+   "zh_current": "离远点！想死吗！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x43C",
+   "budget_bytes": 24,
+   "jp": "私はあの人と生きると決めたのです……だからっ！",
+   "zh_current": "我已决定和那个人活下去！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x460",
+   "budget_bytes": 21,
+   "jp": "私はもう……お兄さまの人形じゃない！",
+   "zh_current": "我再也不是哥哥的人偶！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x484",
+   "budget_bytes": 8,
+   "jp": "……行きます！！",
+   "zh_current": "……我上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x498",
+   "budget_bytes": 22,
+   "jp": "シローがいてくれるから……私は、戦える！！",
+   "zh_current": "有士郎在……我就能战斗！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x4BC",
+   "budget_bytes": 17,
+   "jp": "すみません……私はここまでです",
+   "zh_current": "抱歉……到此为止了",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x4DC",
+   "budget_bytes": 9,
+   "jp": "このくらいならっ！！",
+   "zh_current": "这点小事！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x4F4",
+   "budget_bytes": 19,
+   "jp": "必ず生き延びると約束したのですから……",
+   "zh_current": "说好了要活下去的……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x514",
+   "budget_bytes": 18,
+   "jp": "大丈夫です！大したことはありません！",
+   "zh_current": "我没事！这不算什么！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x534",
+   "budget_bytes": 16,
+   "jp": "……ッ！？捕捉されている！？",
+   "zh_current": "……！？被锁定了！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x550",
+   "budget_bytes": 21,
+   "jp": "……出力低下！？でも、これくらいならば！",
+   "zh_current": "……输出下降！？还能撑住！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x574",
+   "budget_bytes": 9,
+   "jp": "こっ、こんな……！？",
+   "zh_current": "这、这……！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x58C",
+   "budget_bytes": 9,
+   "jp": "ふ…振り切れない！？",
+   "zh_current": "甩不掉！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5A4",
+   "budget_bytes": 8,
+   "jp": "なんて無謀な……！",
+   "zh_current": "好鲁莽……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5B8",
+   "budget_bytes": 7,
+   "jp": "……来たっ！？",
+   "zh_current": "来了！？",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5CC",
+   "budget_bytes": 11,
+   "jp": "各機、散開して下さい！",
+   "zh_current": "各机、散开！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x5E4",
+   "budget_bytes": 25,
+   "jp": "……投降しましょうそして、楽になりましょう……",
+   "zh_current": "投降吧……然后就解脱了……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x60C",
+   "budget_bytes": 13,
+   "jp": "ああっ！？こ、こんな……",
+   "zh_current": "啊啊！？这、这……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x628",
+   "budget_bytes": 14,
+   "jp": "捕まるわけにはまいりません！",
+   "zh_current": "绝不能被俘！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xBC",
+   "budget_bytes": 12,
+   "jp": "やりましょう、私たちで！",
+   "zh_current": "我们一起上！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xD4",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0xF0",
+   "budget_bytes": 7,
+   "jp": "はい、シロー！！",
+   "zh_current": "是、士郎！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x104",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x120",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x13C",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x158",
+   "budget_bytes": 15,
+   "jp": "わかりました！援護します！！",
+   "zh_current": "明白！我来掩护！！",
+   "zh_current_bytes": 13
+  }
+ ]
+}

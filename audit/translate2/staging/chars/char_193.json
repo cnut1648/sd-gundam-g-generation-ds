@@ -1,0 +1,328 @@
+{
+ "entity": "char_193",
+ "kind": "character",
+ "cids": [
+  193
+ ],
+ "name_jp": "ベルナルド・モンシア",
+ "name_zh_KEEP": "伯纳德·蒙夏",
+ "cards": [
+  {
+   "cid": 193,
+   "ids": [
+    {
+     "idn": 579,
+     "slot": 0,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B81C5",
+     "zh_name_ptr": "0x20B81C5",
+     "name_jp": "待ちくたびれたってすねてるぜ！",
+     "name_zh_current": "等得不耐烦",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム威力上昇",
+     "summary_zh_KEEP": "队・威力↑",
+     "didx": 51,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）攻击+20%",
+     "cutin_group": 460,
+     "cutin_jp": "ほれほれ！待ちくたびれたってすねてるぜ！！",
+     "cutin_zh_current": "来吧来吧！都等得不耐烦闹别扭啦！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 580,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B81DE",
+     "zh_name_ptr": "0x218C41D",
+     "name_jp": "わざわざヨーイドンで……",
+     "name_zh_current": "还要预备吗",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋先制攻撃",
+     "summary_zh_KEEP": "威力↑・先攻",
+     "didx": 139,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·先攻",
+     "cutin_group": 461,
+     "cutin_jp": "わざわざヨーイドンでしかけてくる敵がいるかい……！",
+     "cutin_zh_current": "哪有特意喊预备开始就来进攻的敌人啊……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_143",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 581,
+     "slot": 2,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C30",
+     "zh_name_ptr": "0x20B7C30",
+     "name_jp": "敵を知り、己を知れば……",
+     "name_zh_current": "知己知彼……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "敵回避減少",
+     "summary_zh_KEEP": "敌回避减少",
+     "didx": 36,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）回避率が30%低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）回避-30%",
+     "cutin_group": 462,
+     "cutin_jp": "敵を知り、己を知れば、百姓一揆って言うだろうがよ！",
+     "cutin_zh_current": "知己知彼、百战一胜、不就是这么说的吗！",
+     "name_owner": false,
+     "name_shared_with_idn": 393,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x199A8",
+   "budget_bytes": 13,
+   "jp": "そー来るのはお見通しでいっ！",
+   "zh_current": "早看穿你了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x199C4",
+   "budget_bytes": 22,
+   "jp": "連邦のエース、モンシア様をなめるんじゃねえぞ！",
+   "zh_current": "联邦王牌蒙夏大爷不好惹！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x199E8",
+   "budget_bytes": 20,
+   "jp": "よーし！！撃墜スコアはもらいだぜ！",
+   "zh_current": "好！！！击坠数到手啦！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19A08",
+   "budget_bytes": 18,
+   "jp": "グウの音も出ないようにしてくれる！",
+   "zh_current": "让你哑口无言！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19A28",
+   "budget_bytes": 18,
+   "jp": "邪魔しやがると痛い目にあうぞ！",
+   "zh_current": "敢碍事有你好受！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19A48",
+   "budget_bytes": 9,
+   "jp": "いい加減に落ちやがれ！",
+   "zh_current": "给我倒下！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19A60",
+   "budget_bytes": 24,
+   "jp": "へっへっへ……可愛がってやるぜ、ええ！",
+   "zh_current": "嘿嘿嘿……好好疼疼你、啊！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19A84",
+   "budget_bytes": 30,
+   "jp": "先に棺桶に入るのはどっちかな……ええ、敵さんよォ！！",
+   "zh_current": "谁先进棺材呢……啊、敌人老兄！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19AB0",
+   "budget_bytes": 28,
+   "jp": "なっ、なにいいーっ！？このオレが…負けただと！？",
+   "zh_current": "什、什么！？我竟然输了！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19AD8",
+   "budget_bytes": 19,
+   "jp": "どうしたぁ！？腰でも抜けたかよ！？",
+   "zh_current": "怎么啦！？腿软了吗！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19AF8",
+   "budget_bytes": 20,
+   "jp": "あっぶねえ……何しやがんでい！",
+   "zh_current": "好险……你搞什么名堂！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19B18",
+   "budget_bytes": 35,
+   "jp": "今日の〜おいらは箱の中♪明日もきっと〜箱の中とくらぁ！",
+   "zh_current": "今天爷躲舱里……明天准还在舱里！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19B48",
+   "budget_bytes": 23,
+   "jp": "ケッ！オレなんて相手にならないってか！？",
+   "zh_current": "切！嫌我不配做对手！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19B6C",
+   "budget_bytes": 23,
+   "jp": "アッチでもコッチでもボコスカやりやがって！！",
+   "zh_current": "东打西打、揍个没完！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19B90",
+   "budget_bytes": 18,
+   "jp": "ぬわぁぁーーっ！？な、何だぁ！？",
+   "zh_current": "嗷啊啊！？什、什么！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19BB0",
+   "budget_bytes": 21,
+   "jp": "お、おい……！何の冗談だよ、コイツは！？",
+   "zh_current": "喂、喂……！开什么玩笑！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19BD4",
+   "budget_bytes": 19,
+   "jp": "へっ！顔を洗って出直して来な！",
+   "zh_current": "哼！洗干净脸再来！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19BF4",
+   "budget_bytes": 19,
+   "jp": "コイツぁ観光旅行じゃねえんだ！",
+   "zh_current": "这可不是观光旅行！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19C14",
+   "budget_bytes": 26,
+   "jp": "見せてやるぞ！□□の呼吸ってやつをな！！",
+   "zh_current": "瞧好了！不死队的本事！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19C3C",
+   "budget_bytes": 16,
+   "jp": "ほれほれっ！大人しくしやがれ！",
+   "zh_current": "看招！！老实点！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19C58",
+   "budget_bytes": 17,
+   "jp": "なっ！？なにいいーーっ！？",
+   "zh_current": "什！？什么——！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19C78",
+   "budget_bytes": 23,
+   "jp": "コッチにゃ、コッチの都合ってモンがあるんだよ！",
+   "zh_current": "我们也有自己的难处啊！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x66E0",
+   "budget_bytes": 31,
+   "jp": "おーし！一機残らずやってやる！！オレさまの後に続けーっ！！",
+   "zh_current": "好！一架不留全干掉！跟在本大爷后面！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x670C",
+   "budget_bytes": 18,
+   "jp": "おう！こちらモンシア、りょーかいだ！！",
+   "zh_current": "好、蒙夏收到！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x672C",
+   "budget_bytes": 30,
+   "jp": "任せてください、隊長！オレさまが加われば百人力ですぜ！",
+   "zh_current": "交给我、队长！本大爷加入顶百人！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6758",
+   "budget_bytes": 28,
+   "jp": "おうよ、ベイト！見せてやろうぜ、俺たちの腕をよ！！",
+   "zh_current": "好、贝特！让他们见识我们的本事！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6780",
+   "budget_bytes": 20,
+   "jp": "おう！遠慮なくやっちまえ、アデルよお！",
+   "zh_current": "好！别手软、阿德尔！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x67A0",
+   "budget_bytes": 31,
+   "jp": "コイツは特別に手助けするんだぞ！わかってるな、ウラキい！？",
+   "zh_current": "这次是特别帮你！听好了、浦木！？",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x67CC",
+   "budget_bytes": 18,
+   "jp": "おう！こちらモンシア、りょーかいだ！！",
+   "zh_current": "好、蒙夏收到！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

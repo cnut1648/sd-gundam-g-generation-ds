@@ -1,0 +1,74 @@
+{
+ "entity": "unit_292",
+ "kind": "unit",
+ "utids": [
+  292,
+  293,
+  294
+ ],
+ "name_jp": "ザンスパイン",
+ "name_zh_current": "赞斯派恩",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218EC12",
+   "jp": "光の翼",
+   "zh_current": "光之翼",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218A01D",
+   "jp": "ティンクル・ビット",
+   "zh_current": "闪光浮游炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 97,
+   "record_offset": "0x628",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E7B",
+   "jp": "光の翼",
+   "zh_current": "光之翼",
+   "owner": false,
+   "owned_by": "unit_37"
+  },
+  "defense": {
+   "record": 8,
+   "record_offset": "0x18c",
+   "budget_bytes": 44,
+   "jp_segments": [
+    "威力450までの攻撃を無効化し",
+    "それを超える場合ダメージを50%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "攻击无效",
+    "超过则减50%"
+   ],
+   "owner": false,
+   "owned_by": "unit_37"
+  }
+ }
+}

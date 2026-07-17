@@ -1,0 +1,82 @@
+{
+ "entity": "unit_61",
+ "kind": "unit",
+ "utids": [
+  61,
+  62,
+  63
+ ],
+ "name_jp": "νガンダム",
+ "name_zh_current": "ν高达",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906AF",
+   "jp": "ニュー・ハイパーバズーカ",
+   "zh_current": "新·超级火箭炮",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218C811",
+   "jp": "フィン・ファンネル",
+   "zh_current": "飞翼浮游炮",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 20,
+   "record_offset": "0x1f4",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "サイコフレーム搭載（ニュータイプ対応機）"
+   ],
+   "zh_segments_current": [
+    "精神感应框架"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E8C",
+   "jp": "FFバリア",
+   "zh_current": "FF屏障",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 7,
+   "record_offset": "0x144",
+   "budget_bytes": 72,
+   "jp_segments": [
+    "威力450までのビーム属性の射撃攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する",
+    "ニュータイプ／強化人間のみ作動可能"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束射击无效",
+    "NT・强化人用"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

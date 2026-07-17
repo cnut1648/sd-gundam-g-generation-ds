@@ -1,0 +1,49 @@
+{
+ "entity": "char_408",
+ "web_sources": [
+  "https://zh.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%ABGUNDAM_SEED",
+  "https://gundam.fandom.com/zh/wiki/%E8%B0%83%E6%95%B4%E8%80%85_(GUNDAM)",
+  "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q129440972",
+  "https://intindex.stars.ne.jp/archives/13083"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1224,
+   "name_zh": "ECM启动！",
+   "cutin_zh": "ECM启动！",
+   "notes": "名称记录与char_407的idn1221共享、保持同一译文ECM启动！"
+  },
+  {
+   "idn": 1225,
+   "name_zh": "为扎夫特！",
+   "cutin_zh": "为了扎夫特！",
+   "notes": "SEED第1话扎夫特士兵的标志性战吼、社区通行译法为了扎夫特！5格上限内指令名取为扎夫特！"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2BFFC", "zh": "挡住敌人攻势！"},
+  {"file": "0.bin", "record": "0x2C018", "zh": "为扎夫特"},
+  {"file": "0.bin", "record": "0x2C02C", "zh": "炮手、瞄准了！……开火！！"},
+  {"file": "0.bin", "record": "0x2C04C", "zh": "！开火！！！"},
+  {"file": "0.bin", "record": "0x2C064", "zh": "自然人、见识我等之力！"},
+  {"file": "0.bin", "record": "0x2C084", "zh": "开火！！！"},
+  {"file": "0.bin", "record": "0x2C09C", "zh": "别退缩！直冲过去！"},
+  {"file": "0.bin", "record": "0x2C0BC", "zh": "炮击不许停！火力全开！！"},
+  {"file": "0.bin", "record": "0x2C0E0", "zh": "可恶！竟敢这样……！快准备弃舰！"},
+  {"file": "0.bin", "record": "0x2C108", "zh": "好！轮到我们了！快准备反击！"},
+  {"file": "0.bin", "record": "0x2C130", "zh": "岂能轻易被击沉！！"},
+  {"file": "0.bin", "record": "0x2C14C", "zh": "别慌！只是擦伤！"},
+  {"file": "0.bin", "record": "0x2C168", "zh": "可恶！速报损害！"},
+  {"file": "0.bin", "record": "0x2C184", "zh": "可恶！火力被压制！"},
+  {"file": "0.bin", "record": "0x2C1A0", "zh": "自然人有这等兵器！？"},
+  {"file": "0.bin", "record": "0x2C1C0", "zh": "可恶！！别得意、自然人！"},
+  {"file": "0.bin", "record": "0x2C1E4", "zh": "凭这点也敢对抗我们……可笑！"},
+  {"file": "0.bin", "record": "0x2C20C", "zh": "来了！快规避！"},
+  {"file": "0.bin", "record": "0x2C224", "zh": "远程攻击！快回避！"},
+  {"file": "0.bin", "record": "0x2C244", "zh": "那机体归扎夫特！"},
+  {"file": "0.bin", "record": "0x2C260", "zh": "可恶！不行……"},
+  {"file": "0.bin", "record": "0x2C278", "zh": "岂会被自然人抓！"}
+ ],
+ "notes": "0x2C018预算仅8字节、理想全句为了扎夫特！！放不下、保留为扎夫特。0x2C04C日文原文即以！开头（！てえーっ！！）、译文保留该前导！并与0x2C084的开火！！！保持同族写法。0x2C278日文ナチュナル为ナチュラル的原文笔误。0x2C064／0x2C184／0x2C20C／0x2C224／0x2C278与现行译文逐字相同、其实际编码字节数（zh_current_bytes 16／15／10／13／13）均在预算内、简化2字节估算法会高估这些行。精英士官语气取我等、岂能、也敢、可笑等自信用词、与char_407普通士官区分；0x2C244那机体归扎夫特！与char_407同句0x2BFA8保持一致；idn1224指令名与char_407的idn1221共用同一记录、维持ECM启动！。"
+}

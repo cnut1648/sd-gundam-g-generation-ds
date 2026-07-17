@@ -1,0 +1,328 @@
+{
+ "entity": "char_66",
+ "kind": "character",
+ "cids": [
+  66
+ ],
+ "name_jp": "クリス",
+ "name_zh_KEEP": "克莉丝",
+ "cards": [
+  {
+   "cid": 66,
+   "ids": [
+    {
+     "idn": 198,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7556",
+     "zh_name_ptr": "0x20B7556",
+     "name_jp": "戦わなければ……",
+     "name_zh_current": "不战的话",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 71,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、回避率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+40%攻击+20%",
+     "cutin_group": 133,
+     "cutin_jp": "戦わなければ……もっと多くの人が死んでしまう！",
+     "cutin_zh_current": "如果不战斗……就会有更多人死去！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 199,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B755F",
+     "zh_name_ptr": "0x20B755F",
+     "name_jp": "やらなきゃいけないことなの！",
+     "name_zh_current": "非做不可！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 134,
+     "cutin_jp": "やらなきゃいけないことなの！逃げ出すわけにはいかないわ！",
+     "cutin_zh_current": "这是非做不可的事！决不能逃避！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 200,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B756E",
+     "zh_name_ptr": "0x20B756E",
+     "name_jp": "正しいことなんて、どこにもない",
+     "name_zh_current": "正确不存在",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命回↑",
+     "didx": 54,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 135,
+     "cutin_jp": "正しいことなんて、どこにもない自分にできる事をするしかないんだわ",
+     "cutin_zh_current": "正确的事根本不存在只能做自己能做的事",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x783C",
+   "budget_bytes": 23,
+   "jp": "迷ってるヒマはないやるしかないんだわ……",
+   "zh_current": "没空犹豫了、只能拼了……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7860",
+   "budget_bytes": 21,
+   "jp": "自分のできることをするしかないのよ！！",
+   "zh_current": "只能做自己能做的事！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7884",
+   "budget_bytes": 12,
+   "jp": "戦えばそのために人が死ぬ……",
+   "zh_current": "开战就会死人",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x789C",
+   "budget_bytes": 21,
+   "jp": "自分のできることをするしかないのよ！！",
+   "zh_current": "只能做自己能做的事！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x78C0",
+   "budget_bytes": 20,
+   "jp": "正しいことなんてどこにもない……でも！",
+   "zh_current": "哪有什么正确……可是！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x78E0",
+   "budget_bytes": 24,
+   "jp": "自分だけ逃げたって何にもならないから……！！",
+   "zh_current": "光顾自己逃也是白费……！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7904",
+   "budget_bytes": 24,
+   "jp": "一人ぼっちになるのには耐えられないから……",
+   "zh_current": "我无法忍受孤身一人……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7928",
+   "budget_bytes": 19,
+   "jp": "これが……私の選んだ生き方なの！",
+   "zh_current": "这是……我选择的活法！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7948",
+   "budget_bytes": 20,
+   "jp": "私じゃこの機体は使いこなせないってこと？",
+   "zh_current": "我驾驭不了这机体吗？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7968",
+   "budget_bytes": 8,
+   "jp": "甘く見ないで！",
+   "zh_current": "别小瞧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x797C",
+   "budget_bytes": 10,
+   "jp": "落とされるわけには！",
+   "zh_current": "不能坠落！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7994",
+   "budget_bytes": 9,
+   "jp": "このくらいなら……！",
+   "zh_current": "这点小事！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x79AC",
+   "budget_bytes": 19,
+   "jp": "………ッ！！私の反応が遅れたから？",
+   "zh_current": "唔……！我反应慢了？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x79CC",
+   "budget_bytes": 17,
+   "jp": "くっ……！こんなことぐらいで！",
+   "zh_current": "唔……！就这点小事！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x79EC",
+   "budget_bytes": 6,
+   "jp": "ああっ……！",
+   "zh_current": "啊……！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A00",
+   "budget_bytes": 16,
+   "jp": "このままじゃ……機体がもたない！",
+   "zh_current": "再这样机体不行！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A1C",
+   "budget_bytes": 18,
+   "jp": "すごい……！完全に無効化した！",
+   "zh_current": "厉害……全被挡住了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A3C",
+   "budget_bytes": 19,
+   "jp": "あれに当たるわけにはいかない……！",
+   "zh_current": "绝不能被那个打中！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A5C",
+   "budget_bytes": 17,
+   "jp": "攻撃が来るわ！各機、散開して！",
+   "zh_current": "敌人来袭！各机散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A7C",
+   "budget_bytes": 18,
+   "jp": "殺したくはないの！大人しくして！",
+   "zh_current": "我不想杀人！快投降！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7A9C",
+   "budget_bytes": 16,
+   "jp": "っ！！私が未熟だっていうの！？",
+   "zh_current": "唔！是我太嫩了吗！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x7AB8",
+   "budget_bytes": 10,
+   "jp": "そうはいかないわ！！",
+   "zh_current": "没那么容易",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1FBC",
+   "budget_bytes": 13,
+   "jp": "同時攻撃を仕掛ければ……！！",
+   "zh_current": "发动同时攻击！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1FD8",
+   "budget_bytes": 18,
+   "jp": "わかりました！支援に回ります！！",
+   "zh_current": "明白了！我去支援！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1FF8",
+   "budget_bytes": 13,
+   "jp": "こっちはOKよ、バーニィ！！",
+   "zh_current": "这边没事、巴尼！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2014",
+   "budget_bytes": 18,
+   "jp": "わかりました！支援に回ります！！",
+   "zh_current": "明白了！我去支援！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2034",
+   "budget_bytes": 18,
+   "jp": "わかりました！支援に回ります！！",
+   "zh_current": "明白了！我去支援！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2054",
+   "budget_bytes": 18,
+   "jp": "わかりました！支援に回ります！！",
+   "zh_current": "明白了！我去支援！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2074",
+   "budget_bytes": 18,
+   "jp": "わかりました！支援に回ります！！",
+   "zh_current": "明白了！我去支援！！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

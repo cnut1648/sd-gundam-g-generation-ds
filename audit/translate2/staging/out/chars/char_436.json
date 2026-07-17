@@ -1,0 +1,42 @@
+{
+ "entity": "char_436",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%8E%9B%E4%BF%AE%E6%9B%BC%C2%B7%E5%A1%9E%E7%BD%97",
+  "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B7%E3%83%A5%E3%83%9E%E3%83%BC%E3%83%BB%E3%82%BB%E3%83%AD",
+  "https://zh.moegirl.org.cn/%E8%A2%AB%E9%87%8D%E5%8A%9B%E6%9D%9F%E7%BC%9A%E4%BD%8F%E7%81%B5%E9%AD%82%E7%9A%84%E4%BA%BA%E7%B1%BB"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1308,
+   "name_zh": "新吉翁荣光",
+   "cutin_zh": "为了新吉翁的荣光！",
+   "notes": "name记录与idn1290共享、归char_430所有、此处按现值回填保持一致；cutin为社区通行译法（ZZ哈曼动员演说·玛修曼式口号、见biligame玛修曼页与ja.wikipedia）、与现译一致。detail归char_410、不输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x30924", "zh": "不来吗？那便由我出击！！"},
+  {"file": "0.bin", "record": "0x30948", "zh": "为米涅瓦！"},
+  {"file": "0.bin", "record": "0x30960", "zh": "正义在我新吉翁！！"},
+  {"file": "0.bin", "record": "0x3097C", "zh": "在寒暗宇宙忍下的恨……此刻必报！！"},
+  {"file": "0.bin", "record": "0x309A8", "zh": "尔等岂是我新吉翁的对手！！"},
+  {"file": "0.bin", "record": "0x309CC", "zh": "复兴扎比家！！"},
+  {"file": "0.bin", "record": "0x309E4", "zh": "休得阻挠！！"},
+  {"file": "0.bin", "record": "0x309FC", "zh": "新生吉翁之力……看好了！！"},
+  {"file": "0.bin", "record": "0x30A20", "zh": "吉翁万岁！！"},
+  {"file": "0.bin", "record": "0x30A38", "zh": "被重力束缚的灵魂！"},
+  {"file": "0.bin", "record": "0x30A54", "zh": "可恶！还没完！"},
+  {"file": "0.bin", "record": "0x30A6C", "zh": "就这？"},
+  {"file": "0.bin", "record": "0x30A80", "zh": "瞄得真准、难缠！"},
+  {"file": "0.bin", "record": "0x30A9C", "zh": "竟躲不开！！"},
+  {"file": "0.bin", "record": "0x30AB4", "zh": "糟了！回避慢了一步！！"},
+  {"file": "0.bin", "record": "0x30AD0", "zh": "唔！竟被逼到这地步……！！"},
+  {"file": "0.bin", "record": "0x30AF0", "zh": "伤不了我分毫！！"},
+  {"file": "0.bin", "record": "0x30B0C", "zh": "哼、乱射一通吗！"},
+  {"file": "0.bin", "record": "0x30B28", "zh": "散开！别中弹！"},
+  {"file": "0.bin", "record": "0x30B40", "zh": "这机体尚堪用……我收下了！！"},
+  {"file": "0.bin", "record": "0x30B64", "zh": "竟沦为俘虏……！"},
+  {"file": "0.bin", "record": "0x30B80", "zh": "别小看我等新吉翁！！"}
+ ],
+ "notes": "通用新吉翁骑士声线、按char_337玛修曼的骑士腔统一（尔等/岂是/我等/休得/由我出击）、忠于米涅瓦大人与扎比家的近卫骑士口吻。全部改句已用lib_apply.encode_stage实测字节、均在budget内。要点：0x30924杀过去改为那便由我出击（骑士不用匪气措辞）；0x309A8/0x30B80换尔等·我等并补回我ら；0x3097C/0x309FC/0x30AD0/0x30B40补回JP的……停顿与！！（0x3097C为29B恰满、寒暗宇宙系预算内最大保留、冰字stage面不可编码）；0x30A9C/0x30B64补回とは的竟字惊愕（竟躲不开·竟沦为俘虏）；0x30AB4回避慢了一步更贴遅れた；0x30AF0傷もつかん改伤不了我分毫；0x30B0C芸の無い遠距離攻撃改乱射一通吗（拙字stage面不可编码）；0x30B28补全当たるなよ（散开！别中弹！）。预算硬限的保留项：0x30948理想为了米涅瓦大人！！（14B超9B）取为米涅瓦！；0x30A20理想吉、吉翁……万岁！！（15B超10B）保留通行译吉翁万岁（与char_27/char_246一致）；0x30A38理想灵魂被重力束缚的家伙们！！（萌百通行全句）超16B、保留粉丝通用简称被重力束缚的灵魂；0x30A6C就这点？（7B）超6B、保留就这？。"
+}

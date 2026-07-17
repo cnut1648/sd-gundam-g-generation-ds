@@ -1,0 +1,328 @@
+{
+ "entity": "char_197",
+ "kind": "character",
+ "cids": [
+  197
+ ],
+ "name_jp": "マウアー・ファラオ",
+ "name_zh_KEEP": "玛雅·法拉奥",
+ "cards": [
+  {
+   "cid": 197,
+   "ids": [
+    {
+     "idn": 591,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8262",
+     "zh_name_ptr": "0x20B8262",
+     "name_jp": "守ってみせるって言ったろ？",
+     "name_zh_current": "说过守护你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护・威力↑",
+     "didx": 152,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加。チームへの攻撃を全て1／4に軽減し、引き愛ける",
+     "detail_zh_current": "",
+     "cutin_group": 472,
+     "cutin_jp": "守ってみせるって言ったろ？",
+     "cutin_zh_current": "我说过会守护你的吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 592,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8271",
+     "zh_name_ptr": "0x218C433",
+     "name_jp": "あなたは個人的な感情で……",
+     "name_zh_current": "凭私人感情",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム防御力↑",
+     "summary_zh_KEEP": "队・回甲↑",
+     "didx": 111,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が40%上昇、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+40%·装甲+4",
+     "cutin_group": 473,
+     "cutin_jp": "今のあなたは個人的な感情で動いているそれでは上は狙えない",
+     "cutin_zh_current": "如今的你只凭感情用事那样是出不了头的",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 593,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B827F",
+     "zh_name_ptr": "0x218C43E",
+     "name_jp": "今はそれが正しい……",
+     "name_zh_current": "如今那才对",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 241,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）ジェリドがチームにいる時、HPが50%回復する",
+     "detail_zh_current": "",
+     "cutin_group": 474,
+     "cutin_jp": "生き延びること、戦うことあなたにとって今はそれが正しい……",
+     "cutin_zh_current": "活下去、去战斗如今对你而言那是对的……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1A500",
+   "budget_bytes": 14,
+   "jp": "そっちがそう来るならば……！！",
+   "zh_current": "你既然这样……！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A51C",
+   "budget_bytes": 11,
+   "jp": "この感じ……そこっ！！",
+   "zh_current": "感觉……那里！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A534",
+   "budget_bytes": 15,
+   "jp": "ジェリドの背中……守ってみせる！",
+   "zh_current": "我来守护捷利特！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A550",
+   "budget_bytes": 15,
+   "jp": "戦いはためらった方が負ける……！",
+   "zh_current": "战斗中犹豫就输！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A56C",
+   "budget_bytes": 13,
+   "jp": "あの人の邪魔はさせない！！",
+   "zh_current": "不许妨碍他！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A588",
+   "budget_bytes": 23,
+   "jp": "私には……守らなくてはならない人がいる！",
+   "zh_current": "我有……必须守护的人！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A5AC",
+   "budget_bytes": 9,
+   "jp": "これ以上はやらせない！",
+   "zh_current": "到此为止！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A5C4",
+   "budget_bytes": 23,
+   "jp": "あの人の支えになると決めた…………だから！！",
+   "zh_current": "决心做他的后盾……所以！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A5E8",
+   "budget_bytes": 22,
+   "jp": "……ジェリド……守ってあげられなかった……",
+   "zh_current": "捷利特、没能护住你……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A60C",
+   "budget_bytes": 9,
+   "jp": "これくらいならっ！！",
+   "zh_current": "这点程度！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A624",
+   "budget_bytes": 14,
+   "jp": "まだ、死ぬわけにはいかない！",
+   "zh_current": "我还不能死！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A640",
+   "budget_bytes": 10,
+   "jp": "……大したことはないわ",
+   "zh_current": "……不算什么",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A658",
+   "budget_bytes": 11,
+   "jp": "やるわね！……けど！！",
+   "zh_current": "不错！可是！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A670",
+   "budget_bytes": 10,
+   "jp": "うかつだったようね……",
+   "zh_current": "我大意了……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A688",
+   "budget_bytes": 18,
+   "jp": "いけない！ジェリド、この敵は……！！",
+   "zh_current": "不好！捷利特小心！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A6A8",
+   "budget_bytes": 22,
+   "jp": "ま、まだ……！まだ、倒れられない……！！",
+   "zh_current": "还没……！！还不能倒下……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A6CC",
+   "budget_bytes": 13,
+   "jp": "おやめなさい！無駄よ！！",
+   "zh_current": "住手！没用的！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A6E8",
+   "budget_bytes": 12,
+   "jp": "これには当たれないっ！！",
+   "zh_current": "这个打不中！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A700",
+   "budget_bytes": 9,
+   "jp": "来た！散開を！！",
+   "zh_current": "来了！散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A718",
+   "budget_bytes": 17,
+   "jp": "これ以上の抵抗は無意味よ投降なさい！",
+   "zh_current": "抵抗没用、投降吧！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A738",
+   "budget_bytes": 7,
+   "jp": "くっ…ジェリド……",
+   "zh_current": "捷利特！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A74C",
+   "budget_bytes": 10,
+   "jp": "捕まるわけにはっ！！",
+   "zh_current": "不能被抓！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x69A8",
+   "budget_bytes": 18,
+   "jp": "全員でかかるわ！タイミングを合わせて！！",
+   "zh_current": "全员一起上！配合好时机！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x69C8",
+   "budget_bytes": 8,
+   "jp": "……援護します！",
+   "zh_current": "……掩护！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x69DC",
+   "budget_bytes": 18,
+   "jp": "ジェリド！こっちはいつでも行けるわ！！",
+   "zh_current": "捷利特！我随时能上！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x69FC",
+   "budget_bytes": 8,
+   "jp": "……援護します！",
+   "zh_current": "……掩护！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A10",
+   "budget_bytes": 8,
+   "jp": "……援護します！",
+   "zh_current": "……掩护！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A24",
+   "budget_bytes": 8,
+   "jp": "……援護します！",
+   "zh_current": "……掩护！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6A38",
+   "budget_bytes": 8,
+   "jp": "……援護します！",
+   "zh_current": "……掩护！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

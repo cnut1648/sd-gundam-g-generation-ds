@@ -1,0 +1,64 @@
+{
+ "entity": "unit_94",
+ "kind": "unit",
+ "utids": [
+  94,
+  95,
+  96
+ ],
+ "name_jp": "ウォドム",
+ "name_zh_current": "沃德姆",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x21906BE",
+   "jp": "ビーム・キャノン",
+   "zh_current": "光束加农炮",
+   "shared_by_n_units": 38
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218C7DD",
+   "jp": "ミサイル・ランチャー",
+   "zh_current": "导弹发射器",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218EDA8",
+   "jp": "大型ミサイル",
+   "zh_current": "大型导弹",
+   "shared_by_n_units": 16
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 31,
+   "record_offset": "0x328",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "大型ユニット"
+   ],
+   "zh_segments_current": [
+    "巨大"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

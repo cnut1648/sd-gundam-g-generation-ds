@@ -1,0 +1,66 @@
+{
+ "entity": "unit_220",
+ "kind": "unit",
+ "utids": [
+  220,
+  221,
+  222
+ ],
+ "name_jp": "グロムリン",
+ "name_zh_current": "格罗姆林",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2190707",
+   "jp": "対空ビーム",
+   "zh_current": "对空光束",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218BC26",
+   "jp": "有線ヘッド・ビーム",
+   "zh_current": "有线头部光束",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C908",
+   "jp": "ヴァリアブル・メガ粒子砲",
+   "zh_current": "可变米加粒子炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 73,
+   "record_offset": "0x568",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "地形適正・宇宙",
+    "大型ユニット"
+   ],
+   "zh_segments_current": [
+    "宇宙适应",
+    "巨大"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

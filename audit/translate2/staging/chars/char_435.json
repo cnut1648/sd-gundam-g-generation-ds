@@ -1,0 +1,428 @@
+{
+ "entity": "char_435",
+ "kind": "character",
+ "cids": [
+  435,
+  439
+ ],
+ "name_jp": "ネオ・ジオン兵",
+ "name_zh_KEEP": "新吉翁兵",
+ "cards": [
+  {
+   "cid": 435,
+   "ids": [
+    {
+     "idn": 1305,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B9099",
+     "zh_name_ptr": "0x232882E",
+     "name_jp": "ハマーンさまのために！！",
+     "name_zh_current": "为哈曼大人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 21,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%",
+     "cutin_group": 835,
+     "cutin_jp": "ハマーンさまのために！！",
+     "cutin_zh_current": "为了哈曼大人！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_402",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 439,
+   "ids": [
+    {
+     "idn": 1317,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B90C0",
+     "zh_name_ptr": "0x232884C",
+     "name_jp": "大佐に続くのだ！",
+     "name_zh_current": "追随大佐",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 21,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%",
+     "cutin_group": 847,
+     "cutin_jp": "大佐に続くのだ！我らも！！",
+     "cutin_zh_current": "追随大佐！我们也上！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_402",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x306B0",
+   "budget_bytes": 22,
+   "jp": "甘いなっ！そんな腕で勝てるつもりか！！",
+   "zh_current": "太天真！就这本事还想赢！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x306D4",
+   "budget_bytes": 9,
+   "jp": "これで終わりだ！！",
+   "zh_current": "就此结束！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x306EC",
+   "budget_bytes": 11,
+   "jp": "ネオ·ジオンのために！！",
+   "zh_current": "为了新吉翁！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30704",
+   "budget_bytes": 10,
+   "jp": "落ちろっ！落ちろっ！",
+   "zh_current": "坠落！坠落！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3071C",
+   "budget_bytes": 8,
+   "jp": "……もらったな！",
+   "zh_current": "……拿下了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30730",
+   "budget_bytes": 9,
+   "jp": "……倒してやる！",
+   "zh_current": "……干掉你！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30748",
+   "budget_bytes": 8,
+   "jp": "……そこだな！！",
+   "zh_current": "就在那！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3075C",
+   "budget_bytes": 11,
+   "jp": "ネオ·ジオンのために！！",
+   "zh_current": "为了新吉翁！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30774",
+   "budget_bytes": 13,
+   "jp": "ハ、ハマーンさま……うわぁぁ！",
+   "zh_current": "哈曼大人……哇啊！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30790",
+   "budget_bytes": 25,
+   "jp": "ハマーンさまの理想を実現するんだ！負けられるかっ！",
+   "zh_current": "定要实现哈曼大人的理想！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x307B8",
+   "budget_bytes": 11,
+   "jp": "た、助かったのか……？",
+   "zh_current": "得救了吗……？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x307D0",
+   "budget_bytes": 12,
+   "jp": "こっ、これしきのこと！！",
+   "zh_current": "就这点小事！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x307E8",
+   "budget_bytes": 11,
+   "jp": "うわっ！くらった！？",
+   "zh_current": "哇！中弹了！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30800",
+   "budget_bytes": 19,
+   "jp": "しまった！た、隊長、支援をーっ！！",
+   "zh_current": "不好！队长、请求支援！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30820",
+   "budget_bytes": 17,
+   "jp": "こ、こいつ……まさかニュータイプか！？",
+   "zh_current": "这、这……是新人类！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30840",
+   "budget_bytes": 18,
+   "jp": "うわぁぁっ！や、やられる……！！",
+   "zh_current": "哇啊啊！要完了……！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30860",
+   "budget_bytes": 15,
+   "jp": "ネオ·ジオンの力を甘く見るな！",
+   "zh_current": "别小看新吉翁！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3087C",
+   "budget_bytes": 10,
+   "jp": "そんな攻撃などにっ！！",
+   "zh_current": "这种攻击！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30894",
+   "budget_bytes": 18,
+   "jp": "来たっ！全機、回避に回れーっ！！",
+   "zh_current": "来了！全机立刻回避！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x308B4",
+   "budget_bytes": 26,
+   "jp": "その機体、ネオ·ジオンの為に役立たせてもらうぞ！",
+   "zh_current": "那台机体、就归新吉翁所有！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x308DC",
+   "budget_bytes": 26,
+   "jp": "ハ、ハマーンさまからいただいた機体を奪われるとは……",
+   "zh_current": "哈曼大人所赐机体、竟被夺！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x30904",
+   "budget_bytes": 17,
+   "jp": "我々を……ネオ·ジオンをなめるな！！",
+   "zh_current": "别小看我们新吉翁！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31094",
+   "budget_bytes": 15,
+   "jp": "スキを見せたな！くらえっ！！",
+   "zh_current": "有破绽！看招！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x310B0",
+   "budget_bytes": 18,
+   "jp": "これで終わりにさせてもらおうか！",
+   "zh_current": "就此做个了结吧！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x310D0",
+   "budget_bytes": 21,
+   "jp": "我々こそジオンの意志を継ぐ者なのだ！",
+   "zh_current": "吉翁的意志由我们继承！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x310F4",
+   "budget_bytes": 19,
+   "jp": "我々の邪魔はさせん！……落ちろッ！",
+   "zh_current": "谁也别想妨碍我们！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31114",
+   "budget_bytes": 8,
+   "jp": "……もらったぞ！",
+   "zh_current": "……拿下！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31128",
+   "budget_bytes": 11,
+   "jp": "……倒させてもらう！",
+   "zh_current": "我要打倒你！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31140",
+   "budget_bytes": 8,
+   "jp": "……そこかっ！！",
+   "zh_current": "……在那！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31154",
+   "budget_bytes": 20,
+   "jp": "スベースノイドの真の独立を勝ち取るのだ！！",
+   "zh_current": "夺取宇宙民真正独立！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31174",
+   "budget_bytes": 19,
+   "jp": "クッ……！ネオ·ジオンに栄光あれー！",
+   "zh_current": "唔……荣光归于新吉翁！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31194",
+   "budget_bytes": 19,
+   "jp": "当たらねばどうということはないッ！",
+   "zh_current": "打不中、便不算什么！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x311B4",
+   "budget_bytes": 20,
+   "jp": "スベースノイドの未来のため……負けられん！",
+   "zh_current": "为宇宙民、绝不能输！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x311D4",
+   "budget_bytes": 8,
+   "jp": "……この程度ッ！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x311E8",
+   "budget_bytes": 19,
+   "jp": "…………ッ！かわしきれなかった！？",
+   "zh_current": "唔……！！没能躲开吗！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31208",
+   "budget_bytes": 11,
+   "jp": "ええい！……やるっ！！",
+   "zh_current": "可恶！……上！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31220",
+   "budget_bytes": 15,
+   "jp": "こいつ……！？只者じゃない！",
+   "zh_current": "这家伙不简单！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3123C",
+   "budget_bytes": 17,
+   "jp": "こ、これ以上は機体がもたない……！",
+   "zh_current": "机体快撑不住了！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3125C",
+   "budget_bytes": 10,
+   "jp": "無駄なことを……！！",
+   "zh_current": "白费力气！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x31274",
+   "budget_bytes": 9,
+   "jp": "そうは行くかっ！！",
+   "zh_current": "门都没有！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3128C",
+   "budget_bytes": 13,
+   "jp": "来たぞ！全機、散開だ！",
+   "zh_current": "敌袭！快散开！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x312A8",
+   "budget_bytes": 18,
+   "jp": "さーて……大人しくしてもらおうか！",
+   "zh_current": "好了……乖乖就范吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x312C8",
+   "budget_bytes": 16,
+   "jp": "……何ッ！？捕まっただと！？",
+   "zh_current": "什么！？被抓了！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x312E4",
+   "budget_bytes": 15,
+   "jp": "ネオ·ジオンを甘く見るな！",
+   "zh_current": "别小看新吉翁！",
+   "zh_current_bytes": 13
+  }
+ ]
+}

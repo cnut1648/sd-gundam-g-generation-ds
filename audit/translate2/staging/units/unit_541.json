@@ -1,0 +1,59 @@
+{
+ "entity": "unit_541",
+ "kind": "unit",
+ "utids": [
+  541,
+  542,
+  543
+ ],
+ "name_jp": "ストライクルージュ",
+ "name_zh_current": "嫣红强袭",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218EDBE",
+   "jp": "アーマーシュナイダー",
+   "zh_current": "破甲者",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6E94",
+   "jp": "フェイズシフト装甲",
+   "zh_current": "相位转移装甲",
+   "owner": false,
+   "owned_by": "unit_79"
+  },
+  "defense": {
+   "record": 3,
+   "record_offset": "0x78",
+   "budget_bytes": 36,
+   "jp_segments": [
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_79"
+  }
+ }
+}

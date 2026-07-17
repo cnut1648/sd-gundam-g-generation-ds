@@ -1,0 +1,71 @@
+{
+ "entity": "unit_526",
+ "kind": "unit",
+ "utids": [
+  526,
+  527,
+  528
+ ],
+ "name_jp": "リック・ディアスS",
+ "name_zh_current": "里克·迪亚斯S",
+ "name_zh_px": 80,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189B07",
+   "jp": "ビーム・ピストル",
+   "zh_current": "光束手枪",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2190769",
+   "jp": "クレイ・バズーカ",
+   "zh_current": "黏土火箭炮",
+   "shared_by_n_units": 15
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CA21",
+   "jp": "ロングレンジ・バズーカ",
+   "zh_current": "远程火箭炮",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 175,
+   "record_offset": "0xaa8",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "ディフェンサーユニット装着可能"
+   ],
+   "zh_segments_current": [
+    "防御单元"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

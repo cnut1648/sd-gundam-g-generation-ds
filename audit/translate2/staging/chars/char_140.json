@@ -1,0 +1,294 @@
+{
+ "entity": "char_140",
+ "kind": "character",
+ "cids": [
+  140
+ ],
+ "name_jp": "トーレス",
+ "name_zh_KEEP": "托雷斯",
+ "cards": [
+  {
+   "cid": 140,
+   "ids": [
+    {
+     "idn": 420,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 331,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "米诺夫斯基粒子散布！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 421,
+     "slot": 1,
+     "target": "全军",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7D26",
+     "zh_name_ptr": "0x218FF72",
+     "name_jp": "進路、クリア！",
+     "name_zh_current": "航道畅通！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "強制散開",
+     "summary_zh_KEEP": "强制散开",
+     "didx": 163,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）チームの間接攻撃に対して、攻撃対象のチームを強制的に散開させる",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）强制散开",
+     "cutin_group": 332,
+     "cutin_jp": "進路、クリア！",
+     "cutin_zh_current": "航道、畅通无阻！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_131",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x12418",
+   "budget_bytes": 16,
+   "jp": "今だ！敵に先制をかけるぞっ！",
+   "zh_current": "冲！先发制敌！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12434",
+   "budget_bytes": 20,
+   "jp": "主砲、見えてんの！？弾幕を張れ！",
+   "zh_current": "主炮看到了吗！？弹幕！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12454",
+   "budget_bytes": 22,
+   "jp": "主砲、見えてんの！？弾幕を張るんだ！",
+   "zh_current": "主炮！快张开弹幕！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12478",
+   "budget_bytes": 17,
+   "jp": "発射用意！よく狙えよっ！",
+   "zh_current": "预备！瞄准！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12498",
+   "budget_bytes": 20,
+   "jp": "一斉射撃だっ！撃てっ！撃てえーっ！",
+   "zh_current": "齐射！！开火！开火！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x124B8",
+   "budget_bytes": 11,
+   "jp": "戦争なんだぞ、これは！",
+   "zh_current": "这可是战争！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x124D0",
+   "budget_bytes": 10,
+   "jp": "敵の動きを止めろっ！",
+   "zh_current": "拦住敌人！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x124E8",
+   "budget_bytes": 11,
+   "jp": "ボケっとしてんなよっ！",
+   "zh_current": "别发呆！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12500",
+   "budget_bytes": 20,
+   "jp": "くそっ！もうダメだっ！退艦準備をっ！",
+   "zh_current": "可恶！不行了！准备弃舰！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12520",
+   "budget_bytes": 14,
+   "jp": "ふう……何とかってとこだな",
+   "zh_current": "呼……总算撑住了",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1253C",
+   "budget_bytes": 21,
+   "jp": "冗談じゃないっ！沈められてたまるかっ！",
+   "zh_current": "开玩笑！岂能被击沉！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12560",
+   "budget_bytes": 20,
+   "jp": "うわっ！弾幕、薄いんじゃないの！？",
+   "zh_current": "哇啊！火力太猛了吧！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12580",
+   "budget_bytes": 15,
+   "jp": "好き勝手やってくれちゃって！！",
+   "zh_current": "真是为所欲为！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1259C",
+   "budget_bytes": 19,
+   "jp": "うわっ！か…回避運動、遅いぞっ！",
+   "zh_current": "哇啊！回避太慢了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x125BC",
+   "budget_bytes": 11,
+   "jp": "ちょっ、直撃いっ！？",
+   "zh_current": "等、直击！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x125D4",
+   "budget_bytes": 26,
+   "jp": "こ、これじゃあ……泣き言の一つも言いたくなるよ……",
+   "zh_current": "这、这样下去……真想发句牢骚……",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x125FC",
+   "budget_bytes": 24,
+   "jp": "ふうー……オレたち運が良かったのかな？",
+   "zh_current": "呼……我们算是走运的吗？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12620",
+   "budget_bytes": 11,
+   "jp": "来るぞっ！当たるなよ！",
+   "zh_current": "来了！别中弹！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12638",
+   "budget_bytes": 18,
+   "jp": "攻撃、来るぞっ！全速で回避だっ！",
+   "zh_current": "攻击来了！全速回避！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12658",
+   "budget_bytes": 15,
+   "jp": "よーし、あの敵機を捕縛するぞ！",
+   "zh_current": "好、捕获那敌机！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12674",
+   "budget_bytes": 13,
+   "jp": "参ったな……こいつは……！",
+   "zh_current": "麻烦……这家伙！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12690",
+   "budget_bytes": 18,
+   "jp": "ふざけんな！降伏なんかするかよっ！",
+   "zh_current": "别闹！谁会投降啊！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x186D4",
+   "budget_bytes": 9,
+   "jp": "敵影、射程圏内！！",
+   "zh_current": "敌入射程！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1873C",
+   "budget_bytes": 6,
+   "jp": "進路、クリア！",
+   "zh_current": "航路通！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18822",
+   "budget_bytes": 5,
+   "jp": "ラジャー！",
+   "zh_current": "收到！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18848",
+   "budget_bytes": 11,
+   "jp": "船体に若干の損傷！！",
+   "zh_current": "船体受损！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x188C0",
+   "budget_bytes": 16,
+   "jp": "エンジン出力低下！！……艦長！！",
+   "zh_current": "引擎出力下降！舰长！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x188F0",
+   "budget_bytes": 13,
+   "jp": "ブライト艦長！このままでは……！",
+   "zh_current": "舰长！再这样……",
+   "zh_current_bytes": 13
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "entity": "unit_406",
+ "kind": "unit",
+ "utids": [
+  406,
+  407,
+  408
+ ],
+ "name_jp": "トールギスⅢ",
+ "name_zh_current": "多鲁基斯3",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218E64A",
+   "jp": "メガ・キャノン",
+   "zh_current": "米加加农炮",
+   "shared_by_n_units": 15
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x232926A",
+   "jp": "ヒート・ロッド",
+   "zh_current": "热能鞭",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

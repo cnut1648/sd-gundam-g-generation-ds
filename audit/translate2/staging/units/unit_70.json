@@ -1,0 +1,66 @@
+{
+ "entity": "unit_70",
+ "kind": "unit",
+ "utids": [
+  70,
+  71,
+  72
+ ],
+ "name_jp": "Zガンダム（GD）",
+ "name_zh_current": "Z高达（GD）",
+ "name_zh_px": 64,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218C7F5",
+   "jp": "ハイパー・メガランチャー",
+   "zh_current": "超级米加发射器",
+   "shared_by_n_units": 9
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 23,
+   "record_offset": "0x25c",
+   "budget_bytes": 28,
+   "jp_segments": [
+    "バイオセンサー搭載（ニュータイプ対応機）",
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "生体感应器",
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

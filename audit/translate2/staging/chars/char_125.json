@@ -1,0 +1,644 @@
+{
+ "entity": "char_125",
+ "kind": "character",
+ "cids": [
+  125,
+  126
+ ],
+ "name_jp": "セレイン・イクスペリ",
+ "name_zh_KEEP": "瑟蕾因",
+ "cards": [
+  {
+   "cid": 125,
+   "ids": [
+    {
+     "idn": 375,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B5A",
+     "zh_name_ptr": "0x218C211",
+     "name_jp": "歌声を聞かせてやろう！",
+     "name_zh_current": "让你听歌声",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "SP減少＋痛撃",
+     "summary_zh_KEEP": "威暴・消SP",
+     "didx": 172,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）テラ·スオーノに搭乗時、攻撃能力を強化し、命中した際、SPを減らす",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）SP消除·攻击+20%·暴击",
+     "cutin_group": 292,
+     "cutin_jp": "セイレーネの歌声……お前にも聞かせてやろう！",
+     "cutin_zh_current": "塞壬的歌声……也让你听听吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_122",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 376,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B72",
+     "zh_name_ptr": "0x20B7B72",
+     "name_jp": "……問題ないな！",
+     "name_zh_current": "没问题！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 293,
+     "cutin_jp": "……問題ないな！",
+     "cutin_zh_current": "……没问题！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 377,
+     "slot": 2,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7B7A",
+     "zh_name_ptr": "0x20B7B7A",
+     "name_jp": "私を甘く見るのは……",
+     "name_zh_current": "别太小看我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 294,
+     "cutin_jp": "私を甘く見るのはたいがいにしてほしいな！",
+     "cutin_zh_current": "别太小看我也该适可而止了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 126,
+   "ids": [
+    {
+     "idn": 378,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B86",
+     "zh_name_ptr": "0x20B7B86",
+     "name_jp": "やるぞ！ターンX！！",
+     "name_zh_current": "冲上去！！",
+     "name_zh_px": 52,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 222,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 295,
+     "cutin_jp": "やるぞ！ターンX！！",
+     "cutin_zh_current": "上吧！倒X！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 379,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B72",
+     "zh_name_ptr": "0x20B7B72",
+     "name_jp": "……問題ないな！",
+     "name_zh_current": "没问题！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 296,
+     "cutin_jp": "……問題ないな！",
+     "cutin_zh_current": "……没问题！",
+     "name_owner": true,
+     "name_shared_with_idn": 376,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 380,
+     "slot": 2,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7B7A",
+     "zh_name_ptr": "0x20B7B7A",
+     "name_jp": "私を甘く見るのは……",
+     "name_zh_current": "别太小看我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 188,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·完全回避",
+     "cutin_group": 297,
+     "cutin_jp": "私を甘く見るのはたいがいにしてほしいな！",
+     "cutin_zh_current": "别太小看我也该适可而止了！",
+     "name_owner": true,
+     "name_shared_with_idn": 377,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xFF10",
+   "budget_bytes": 19,
+   "jp": "そいつは了見が甘すぎるというやつだ！",
+   "zh_current": "你想得太天真了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFF30",
+   "budget_bytes": 13,
+   "jp": "これが私の“力\"だ！！",
+   "zh_current": "这就是我的力量！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFF4C",
+   "budget_bytes": 6,
+   "jp": "そこだっ！！",
+   "zh_current": "在那！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFF60",
+   "budget_bytes": 5,
+   "jp": "もらった！",
+   "zh_current": "拿下",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFF74",
+   "budget_bytes": 12,
+   "jp": "よーし、良い子だ……",
+   "zh_current": "好、乖孩子……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFF8C",
+   "budget_bytes": 11,
+   "jp": "このまま押し切る……！！",
+   "zh_current": "就这样冲过！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFFA4",
+   "budget_bytes": 10,
+   "jp": "覚悟はできてるか！？",
+   "zh_current": "有觉悟吗！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFFBC",
+   "budget_bytes": 8,
+   "jp": "……遅いっ！！",
+   "zh_current": "太慢了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFFD0",
+   "budget_bytes": 10,
+   "jp": "やられたな……完敗だ",
+   "zh_current": "败了……完败",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFFE8",
+   "budget_bytes": 14,
+   "jp": "そうそう上手くいくと思うな！",
+   "zh_current": "别想这么顺利！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10004",
+   "budget_bytes": 27,
+   "jp": "諦めないさ……！少しでも逆転のチャンスがある内はな！",
+   "zh_current": "不放弃……只要还有翻盘机会！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1002C",
+   "budget_bytes": 13,
+   "jp": "っと！少しミスったか！？",
+   "zh_current": "不妙！失误了！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10048",
+   "budget_bytes": 23,
+   "jp": "どうやら楽に勝たせてはくれないようだな……",
+   "zh_current": "看来无法轻松取胜……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1006C",
+   "budget_bytes": 7,
+   "jp": "良い腕だ！",
+   "zh_current": "好身手",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10080",
+   "budget_bytes": 10,
+   "jp": "直撃か！やるっ！！",
+   "zh_current": "直击！厉害！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10098",
+   "budget_bytes": 16,
+   "jp": "万事休すというところか……だが！",
+   "zh_current": "万事休矣……可是！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x100B4",
+   "budget_bytes": 13,
+   "jp": "ソイツは無理というものだ",
+   "zh_current": "那可办不到！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x100D0",
+   "budget_bytes": 12,
+   "jp": "そう来るか……ならっ！！",
+   "zh_current": "来这招……好！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x100E8",
+   "budget_bytes": 21,
+   "jp": "各機、散開急げ！長距離攻撃が来るぞ！！",
+   "zh_current": "各机快散开！远程攻击来了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1010C",
+   "budget_bytes": 11,
+   "jp": "その機体！いただく！！",
+   "zh_current": "那机体归我！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10124",
+   "budget_bytes": 27,
+   "jp": "退き際を誤ったか私としたことが……ブザマだな",
+   "zh_current": "撤退太迟了……真不像我、太狼狈",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1014C",
+   "budget_bytes": 21,
+   "jp": "私の愛機に手を出してほしくはないな！！",
+   "zh_current": "竟敢对我的爱机下手！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x49E0",
+   "budget_bytes": 27,
+   "jp": "全機、フォーメーシヨンにて攻撃！一斉にかかるぞ！！",
+   "zh_current": "全机、以阵型攻击！一齐进攻！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A08",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A20",
+   "budget_bytes": 22,
+   "jp": "いいだろう、シグ·ウェドナー！手助けしてやるぞ！",
+   "zh_current": "西格·韦德纳、助你一把！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A44",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A5C",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A74",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4A8C",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10170",
+   "budget_bytes": 19,
+   "jp": "そいつは了見が甘すぎるというやつだ！",
+   "zh_current": "你想得太天真了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10190",
+   "budget_bytes": 13,
+   "jp": "これが私の“力\"だ！！",
+   "zh_current": "这就是我的力量！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x101AC",
+   "budget_bytes": 6,
+   "jp": "そこだっ！！",
+   "zh_current": "在那！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x101C0",
+   "budget_bytes": 5,
+   "jp": "もらった！",
+   "zh_current": "中了",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x101D4",
+   "budget_bytes": 12,
+   "jp": "よーし、良い子だ……",
+   "zh_current": "好、乖孩子……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x101EC",
+   "budget_bytes": 11,
+   "jp": "このまま押し切る……！！",
+   "zh_current": "就这样冲过！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10204",
+   "budget_bytes": 10,
+   "jp": "覚悟はできてるか！？",
+   "zh_current": "有觉悟吗！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1021C",
+   "budget_bytes": 8,
+   "jp": "……遅いっ！！",
+   "zh_current": "太慢了！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10230",
+   "budget_bytes": 10,
+   "jp": "やられたな……完敗だ",
+   "zh_current": "输了……完败",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10248",
+   "budget_bytes": 14,
+   "jp": "そうそう上手くいくと思うな！",
+   "zh_current": "别想这么顺利！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10264",
+   "budget_bytes": 27,
+   "jp": "諦めないさ……！少しでも逆転のチャンスがある内はな！",
+   "zh_current": "不放弃……只要还有翻盘机会！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1028C",
+   "budget_bytes": 13,
+   "jp": "っと！少しミスったか！？",
+   "zh_current": "不妙！失误了！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x102A8",
+   "budget_bytes": 23,
+   "jp": "どうやら楽に勝たせてはくれないようだな……",
+   "zh_current": "看来无法轻松取胜……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x102CC",
+   "budget_bytes": 7,
+   "jp": "良い腕だ！",
+   "zh_current": "好身手",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x102E0",
+   "budget_bytes": 10,
+   "jp": "直撃か！やるっ！！",
+   "zh_current": "直击！厉害！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x102F8",
+   "budget_bytes": 16,
+   "jp": "万事休すというところか……だが！",
+   "zh_current": "万事休矣……可是！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10314",
+   "budget_bytes": 13,
+   "jp": "ソイツは無理というものだ",
+   "zh_current": "那是不可能的！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10330",
+   "budget_bytes": 12,
+   "jp": "そう来るか……ならっ！！",
+   "zh_current": "来这招……好！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10348",
+   "budget_bytes": 21,
+   "jp": "各機、散開急げ！長距離攻撃が来るぞ！！",
+   "zh_current": "各机快散开！远程攻击来了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1036C",
+   "budget_bytes": 11,
+   "jp": "その機体！いただく！！",
+   "zh_current": "机体归我！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10384",
+   "budget_bytes": 27,
+   "jp": "退き際を誤ったか私としたことが……ブザマだな",
+   "zh_current": "撤退太迟了……真不像我、太狼狈",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x103AC",
+   "budget_bytes": 21,
+   "jp": "私の愛機に手を出してほしくはないな！！",
+   "zh_current": "竟敢对我的爱机下手！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4AA4",
+   "budget_bytes": 27,
+   "jp": "全機、フォーメーシヨンにて攻撃！一斉にかかるぞ！！",
+   "zh_current": "全机、以阵型攻击！一齐进攻！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4ACC",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4AE4",
+   "budget_bytes": 22,
+   "jp": "いいだろう、シグ·ウェドナー！手助けしてやるぞ！",
+   "zh_current": "西格·韦德纳、助你一把！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4B08",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4B20",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4B38",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4B50",
+   "budget_bytes": 10,
+   "jp": "こちらセレイン、了承だ！！",
+   "zh_current": "瑟蕾因收到",
+   "zh_current_bytes": 10
+  }
+ ]
+}

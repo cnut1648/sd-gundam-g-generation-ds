@@ -1,0 +1,228 @@
+{
+ "entity": "char_467",
+ "kind": "character",
+ "cids": [
+  467
+ ],
+ "name_jp": "マリーメイア士官",
+ "name_zh_KEEP": "玛莉梅亚士官",
+ "cards": [
+  {
+   "cid": 467,
+   "ids": [
+    {
+     "idn": 1401,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B91B8",
+     "zh_name_ptr": "0x23288D3",
+     "name_jp": "マリーメイアの兵士が立つのだ！",
+     "name_zh_current": "士兵奋起",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 21,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%",
+     "cutin_group": 931,
+     "cutin_jp": "我らマリーメイアの兵士が立つのだ！",
+     "cutin_zh_current": "我们玛莉梅亚的士兵、就此奋起！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_402",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x27B3C",
+   "budget_bytes": 19,
+   "jp": "全兵装、射撃準備完了！発射します！",
+   "zh_current": "全武装准备完毕、发射！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x34F9C",
+   "budget_bytes": 25,
+   "jp": "我々の前に立ち塞がるなら……容赦はしない！！",
+   "zh_current": "敢挡我们的路、就绝不容情！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x34FC4",
+   "budget_bytes": 17,
+   "jp": "地球圏の真の支配者は我々だ！！",
+   "zh_current": "地球圈支配者是我们！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x34FE4",
+   "budget_bytes": 31,
+   "jp": "地球圏の真の支配者が誰かということを教えてやれっ！！",
+   "zh_current": "让你见识谁才是地球圈支配者！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35010",
+   "budget_bytes": 20,
+   "jp": "全砲門開け！我らの敵を蹴散らすのだ！！",
+   "zh_current": "打开炮门！击溃敌人！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35030",
+   "budget_bytes": 32,
+   "jp": "バートン財団に逆らう愚か者が！各砲座！全力射撃だ！！",
+   "zh_current": "违抗巴顿财团的蠢货！各炮座开火！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3505C",
+   "budget_bytes": 14,
+   "jp": "これからは我々の時代なのだ！",
+   "zh_current": "今后属于我们！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35078",
+   "budget_bytes": 15,
+   "jp": "我らに従えぬのなら排除する！",
+   "zh_current": "不服从就排除！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35094",
+   "budget_bytes": 17,
+   "jp": "地球圏の真の支配者は我々だ！！",
+   "zh_current": "地球圈支配者是我们！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x350B4",
+   "budget_bytes": 17,
+   "jp": "いっ、いかん！退避しろーっ！！",
+   "zh_current": "不好了！快撤退！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x350D4",
+   "budget_bytes": 10,
+   "jp": "無駄な抵抗だな……！",
+   "zh_current": "抵抗无用……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x350EC",
+   "budget_bytes": 13,
+   "jp": "我々が負けるはずがない！！",
+   "zh_current": "我们绝不会输！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35108",
+   "budget_bytes": 7,
+   "jp": "悪あがきを……！！",
+   "zh_current": "别挣扎！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3511C",
+   "budget_bytes": 30,
+   "jp": "しょせん敵は少数にすぎん！このまま続ければ勝つのは我々だ！",
+   "zh_current": "敌人终究是少数！再打下去我们必赢！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35148",
+   "budget_bytes": 23,
+   "jp": "ひるむな！正義は我々の側にこそあるのだ！",
+   "zh_current": "别怕！正义在我们这边！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x3516C",
+   "budget_bytes": 28,
+   "jp": "ど、どういうことだ！？我々より優れた兵器があったのか！？",
+   "zh_current": "怎么回事！？竟有更强的兵器！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35194",
+   "budget_bytes": 16,
+   "jp": "ば、バカな！？こんな筈は……！！",
+   "zh_current": "怎么可能！？这……！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x351B0",
+   "budget_bytes": 10,
+   "jp": "貴様の抵抗は無意味だ！",
+   "zh_current": "你抵抗没用！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x351C8",
+   "budget_bytes": 25,
+   "jp": "予想通りの攻撃だな……そんなものには当たらん！！",
+   "zh_current": "正如我所料……打不中我的！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x351F0",
+   "budget_bytes": 10,
+   "jp": "来るぞ、各機散開！！",
+   "zh_current": "来了、散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35208",
+   "budget_bytes": 32,
+   "jp": "マリーメイア様に忠誠を誓うなら、命だけは助けてやってもいいぞ！！",
+   "zh_current": "效忠玛莉梅亚大人、就饶你一命！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35234",
+   "budget_bytes": 13,
+   "jp": "き、機体が動かない……！？",
+   "zh_current": "机体动不了！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x35250",
+   "budget_bytes": 21,
+   "jp": "我らに降伏しろだと！？……愚か者め！！",
+   "zh_current": "竟要我们投降！？蠢货！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

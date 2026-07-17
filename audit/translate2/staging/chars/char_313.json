@@ -1,0 +1,272 @@
+{
+ "entity": "char_313",
+ "kind": "character",
+ "cids": [
+  313
+ ],
+ "name_jp": "ギュネイ・ガス",
+ "name_zh_KEEP": "邱尼·加斯",
+ "cards": [
+  {
+   "cid": 313,
+   "ids": [
+    {
+     "idn": 939,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B897F",
+     "zh_name_ptr": "0x2194601",
+     "name_jp": "大佐だろうが総帥だろうが……！",
+     "name_zh_current": "管他是总帅",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 622,
+     "cutin_jp": "アレをやりゃあ大佐だろうが総帥だろうが……！",
+     "cutin_zh_current": "只要干掉那家伙管他大佐还是总帅！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 940,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B898F",
+     "zh_name_ptr": "0x219460C",
+     "name_jp": "来たな！プレッシャー！！",
+     "name_zh_current": "这股压迫感",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "先制攻撃",
+     "summary_zh_KEEP": "先制攻击",
+     "didx": 131,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）先攻",
+     "cutin_group": 623,
+     "cutin_jp": "来たな！プレッシャー！！",
+     "cutin_zh_current": "来了、这股压迫感！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 941,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B899C",
+     "zh_name_ptr": "0x218C5DB",
+     "name_jp": "警告を無視したから！",
+     "name_zh_current": "你无视警告",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋0回避",
+     "summary_zh_KEEP": "威力↑・必闪",
+     "didx": 182,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·完全回避",
+     "cutin_group": 624,
+     "cutin_jp": "このギュネイの警告を無視したから！！",
+     "cutin_zh_current": "我邱尼的警告你竟敢无视！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x23954",
+   "budget_bytes": 8,
+   "jp": "俺はニュータイプだ！",
+   "zh_current": "我是NT！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23968",
+   "budget_bytes": 9,
+   "jp": "いけっ！！",
+   "zh_current": "上啊！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23980",
+   "budget_bytes": 14,
+   "jp": "俺は大佐以上に働けるんだ！",
+   "zh_current": "我能胜过大佐！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2399C",
+   "budget_bytes": 11,
+   "jp": "当たれえええっ！",
+   "zh_current": "给我中啊！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x239B4",
+   "budget_bytes": 10,
+   "jp": "愛けられるかーっ！！",
+   "zh_current": "岂会中招！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x239CC",
+   "budget_bytes": 7,
+   "jp": "逃がすかっ！！",
+   "zh_current": "休想逃！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x239E0",
+   "budget_bytes": 10,
+   "jp": "丸腰にしてやる！",
+   "zh_current": "废你武装！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x239F8",
+   "budget_bytes": 11,
+   "jp": "回避などさせるかっ！！",
+   "zh_current": "休想回避！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A10",
+   "budget_bytes": 22,
+   "jp": "うわあああっ！バカな……この俺が……！？",
+   "zh_current": "哇啊啊！怎么会……我竟！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A34",
+   "budget_bytes": 14,
+   "jp": "俺相手に……甘いんだよ！！",
+   "zh_current": "跟我斗、太嫩了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A50",
+   "budget_bytes": 6,
+   "jp": "やらせるか！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A64",
+   "budget_bytes": 10,
+   "jp": "チッ！かすったか！？",
+   "zh_current": "啧！擦到了？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A7C",
+   "budget_bytes": 10,
+   "jp": "くそっ！プレッシャーめ！！",
+   "zh_current": "这压迫感！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23A94",
+   "budget_bytes": 27,
+   "jp": "この俺に逆らうんじゃない！！命が惜しいのならな！",
+   "zh_current": "别想违抗我！要是你还惜命！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23ABC",
+   "budget_bytes": 17,
+   "jp": "なっ！？なんだ、このプレッシャーは！？",
+   "zh_current": "什么！？这股压力！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23ADC",
+   "budget_bytes": 29,
+   "jp": "お、俺は大佐を超える男なんだ……！この程度で……！！",
+   "zh_current": "要超越大佐的我……岂能死在这里！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B08",
+   "budget_bytes": 28,
+   "jp": "そんなに死にたいのか！？なら、その通りにしてやるぞ！！",
+   "zh_current": "这么想死吗！？那就如你所愿！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B30",
+   "budget_bytes": 8,
+   "jp": "ふん、そんなもの！",
+   "zh_current": "哼、这点！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B44",
+   "budget_bytes": 23,
+   "jp": "感じる……来たぞ！各機、回避行動に移れ！",
+   "zh_current": "感觉到了……各机快回避！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B68",
+   "budget_bytes": 19,
+   "jp": "こいつは利用できるんだ！捕縛するっ！",
+   "zh_current": "这家伙有用！抓住他！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B88",
+   "budget_bytes": 9,
+   "jp": "くそっ！どうして！？",
+   "zh_current": "为什么！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23BA0",
+   "budget_bytes": 10,
+   "jp": "降伏勘告など……！！",
+   "zh_current": "劝我投降？",
+   "zh_current_bytes": 8
+  }
+ ]
+}

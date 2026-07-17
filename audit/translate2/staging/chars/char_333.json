@@ -1,0 +1,272 @@
+{
+ "entity": "char_333",
+ "kind": "character",
+ "cids": [
+  333
+ ],
+ "name_jp": "パプテマス・シロッコ",
+ "name_zh_KEEP": "西罗克",
+ "cards": [
+  {
+   "cid": 333,
+   "ids": [
+    {
+     "idn": 999,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B97",
+     "zh_name_ptr": "0x20B8B97",
+     "name_jp": "NTのなりそこないは……",
+     "name_zh_current": "残次新人类",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 670,
+     "cutin_jp": "貴様のようなNTのなりそこないは粛清される運命なのだ！",
+     "cutin_zh_current": "你这种新人类的残次品注定要被肃清！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1000,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8BA4",
+     "zh_name_ptr": "0x20B8BA4",
+     "name_jp": "生の感情丸出しで……",
+     "name_zh_current": "感情外露",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "ID封＋&0回避",
+     "summary_zh_KEEP": "ID封・必闪",
+     "didx": 185,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃が命中した相手のIDを1ターン封印。敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）ID封印·完全回避",
+     "cutin_group": 671,
+     "cutin_jp": "生の感情丸出しで戦うなど……これでは人に品性を求めるなど絶望的だ",
+     "cutin_zh_current": "毫不掩饰地凭感情而战……要人怀有品性、实属无望",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_161",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1001,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8BBD",
+     "zh_name_ptr": "0x20B8BBD",
+     "name_jp": "そういうことだ……すまないな",
+     "name_zh_current": "这样……抱歉",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "撃破＋防御力↑",
+     "summary_zh_KEEP": "击破・防御↑",
+     "didx": 150,
+     "detail_jp": "使用条件戦闘中対象：自分のみ（効果）防御能力を大幅に強化、HPが30%以下の攻撃対象を必ず撃破する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）击破·伤害减轻·装甲+4",
+     "cutin_group": 672,
+     "cutin_jp": "そういうことだ……すまないな",
+     "cutin_zh_current": "就是这么回事……抱歉了",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x26C38",
+   "budget_bytes": 28,
+   "jp": "天才であるこの私が俗人ごときに敗れるわけがあるまい！",
+   "zh_current": "天才如我、怎么可能败给俗人！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26C60",
+   "budget_bytes": 10,
+   "jp": "落ちろ……カトンボ！",
+   "zh_current": "坠落、小虫！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26C78",
+   "budget_bytes": 25,
+   "jp": "常に世の中を動かしてきたのは一握りの天才なのだ！",
+   "zh_current": "推动世界的、都是天才！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26CA0",
+   "budget_bytes": 10,
+   "jp": "落ちろ……カトンボ！",
+   "zh_current": "坠落、小虫！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26CB8",
+   "budget_bytes": 17,
+   "jp": "道を誤ったのだよ！貴様は！！",
+   "zh_current": "你走错路了！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26CD8",
+   "budget_bytes": 31,
+   "jp": "……そんな機体でこの私と対等に戦えると思っているのか！？",
+   "zh_current": "……凭那种机体、想和我平等对战吗！？",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26D04",
+   "budget_bytes": 15,
+   "jp": "この私からは逃げられはせん！！",
+   "zh_current": "休想逃出我手！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26D20",
+   "budget_bytes": 26,
+   "jp": "俗人には指導が必要だ絶対者としての私の指導がな！",
+   "zh_current": "俗人需要绝对者的指导！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26D48",
+   "budget_bytes": 33,
+   "jp": "ば、馬鹿な！？天才であるこの私が俗人ごときに敗れるのか……！？",
+   "zh_current": "不、不可能！？天才的我竟败给俗人……！？",
+   "zh_current_bytes": 31
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26D78",
+   "budget_bytes": 4,
+   "jp": "フッ……",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26D88",
+   "budget_bytes": 23,
+   "jp": "どうやら時の運はこの私に傾いたようだな！！",
+   "zh_current": "时运、站在我这边了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26DAC",
+   "budget_bytes": 24,
+   "jp": "良い腕ではある……が、それだけのことだな！！",
+   "zh_current": "身手不错……但仅此而已！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26DD0",
+   "budget_bytes": 27,
+   "jp": "決められた役割を演じるというのは難しいものだな……",
+   "zh_current": "扮演被注定的角色、真是困难……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26DF8",
+   "budget_bytes": 33,
+   "jp": "私は歴史の立会人にすぎん……が、それでも見過ごせん事はある！",
+   "zh_current": "我只是历史的见证人……但不能坐视！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26E28",
+   "budget_bytes": 28,
+   "jp": "この感覚は……今までと異質なプレッシャーを感じる。誰だ？",
+   "zh_current": "这感觉……有异质的压力……是谁？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26E50",
+   "budget_bytes": 24,
+   "jp": "ば、馬鹿な！？パワー負けしているというのか！？",
+   "zh_current": "什、什么！？力量竟然输了！？",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26E74",
+   "budget_bytes": 31,
+   "jp": "……そんな機体でこの私と対等に戦えると思っているのか！？",
+   "zh_current": "……凭那种机体、想和我平等对战吗！？",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26EA0",
+   "budget_bytes": 27,
+   "jp": "時の流れに逆らうほどこの私は愚かではないつもりだが？",
+   "zh_current": "违抗时流、我没那么愚蠢吧？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26EC8",
+   "budget_bytes": 18,
+   "jp": "フ……それでは我らに通用せんな！",
+   "zh_current": "哼……那对我们没用！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26EE8",
+   "budget_bytes": 15,
+   "jp": "すまないが、捕縛させてもらおう",
+   "zh_current": "抱歉、要捕获你了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26F04",
+   "budget_bytes": 14,
+   "jp": "こ、これでは……勝てん……",
+   "zh_current": "这样……赢不了……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26F20",
+   "budget_bytes": 11,
+   "jp": "……いい気になるなっ！",
+   "zh_current": "别得意忘形！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

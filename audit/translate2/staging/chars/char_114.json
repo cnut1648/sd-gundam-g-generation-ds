@@ -1,0 +1,618 @@
+{
+ "entity": "char_114",
+ "kind": "character",
+ "cids": [
+  114,
+  115
+ ],
+ "name_jp": "セイラ・マス",
+ "name_zh_KEEP": "塞拉·玛斯",
+ "cards": [
+  {
+   "cid": 114,
+   "ids": [
+    {
+     "idn": 342,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A20",
+     "zh_name_ptr": "0x218C1A3",
+     "name_jp": "慣れていくのね……",
+     "name_zh_current": "渐渐习惯",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 259,
+     "cutin_jp": "慣れていくのね……自分でもわかる",
+     "cutin_zh_current": "渐渐习惯了呢……自己也察觉得到",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 343,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7A2A",
+     "zh_name_ptr": "0x218C1AE",
+     "name_jp": "殺し合いの道具じゃないのに！",
+     "name_zh_current": "非残杀工具",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵反応減少",
+     "summary_zh_KEEP": "敌反应减少",
+     "didx": 44,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）反応が30低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）反应-30",
+     "cutin_group": 260,
+     "cutin_jp": "ニュータイプは殺し合いの道具じゃないのに……！",
+     "cutin_zh_current": "新人类不是互相残杀的工具啊……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 115,
+   "ids": [
+    {
+     "idn": 345,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7A41",
+     "zh_name_ptr": "0x218FF0F",
+     "name_jp": "古きものの全てが……",
+     "name_zh_current": "古老的事物",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 262,
+     "cutin_jp": "古きものの全てが悪しきものではないでしょうに！",
+     "cutin_zh_current": "古老的事物、并非全是坏的呀！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 346,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A4D",
+     "zh_name_ptr": "0x218C1C4",
+     "name_jp": "概念だけのニュータイプなど……",
+     "name_zh_current": "概念新人类",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "ID封印＋痛撃",
+     "summary_zh_KEEP": "ID封・威暴",
+     "didx": 176,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃がクリティカル化を中心に強化攻撃が命中した相手のIDを1ターン封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·ID封印·暴击",
+     "cutin_group": 263,
+     "cutin_jp": "慨念だけのニュータイプなど悲しいでしょうに……",
+     "cutin_zh_current": "只是概念的新人类未免太可悲了……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 347,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7A67",
+     "zh_name_ptr": "0x218FF1A",
+     "name_jp": "……野心と妄想ね",
+     "name_zh_current": "野心与妄想",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵攻撃力減少",
+     "summary_zh_KEEP": "敌威应减少",
+     "didx": 86,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）反应-30·攻击-30%",
+     "cutin_group": 264,
+     "cutin_jp": "……野心と妄想ね",
+     "cutin_zh_current": "……不过是野心与妄想",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xE30C",
+   "budget_bytes": 7,
+   "jp": "……見えた！？",
+   "zh_current": "看见了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE320",
+   "budget_bytes": 15,
+   "jp": "見えたわ！……やってみます！！",
+   "zh_current": "看见了！我试试！！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE33C",
+   "budget_bytes": 9,
+   "jp": "その程度のスビードで！",
+   "zh_current": "那点速度！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE354",
+   "budget_bytes": 9,
+   "jp": "つかまえたわ……！",
+   "zh_current": "抓到了……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE36C",
+   "budget_bytes": 18,
+   "jp": "撃たなければ……撃たれるのだから！",
+   "zh_current": "不开枪就会挨打",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE38C",
+   "budget_bytes": 15,
+   "jp": "シミュレーシヨン通りにやってみる……！",
+   "zh_current": "照模拟训练来……！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE3A8",
+   "budget_bytes": 12,
+   "jp": "できるわけないのに……！",
+   "zh_current": "明明做不到……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE3C0",
+   "budget_bytes": 18,
+   "jp": "じ、Gがこんなにすごいなんて……！",
+   "zh_current": "这、G竟这么厉害……！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE3E0",
+   "budget_bytes": 21,
+   "jp": "ごめんなさい……私が上手にできなくて……",
+   "zh_current": "对不起……怪我没做好……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE404",
+   "budget_bytes": 7,
+   "jp": "これなら……！",
+   "zh_current": "这样行！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE418",
+   "budget_bytes": 21,
+   "jp": "ここで死ぬわけにはいかないのだから……！",
+   "zh_current": "我可不能死在这里啊！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE43C",
+   "budget_bytes": 17,
+   "jp": "……大丈夫前を少しやられただけ！",
+   "zh_current": "……没事、擦伤而已！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE45C",
+   "budget_bytes": 6,
+   "jp": "……うまい！",
+   "zh_current": "……漂亮",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE470",
+   "budget_bytes": 16,
+   "jp": "シミュレーシヨンと同じには行かないか……",
+   "zh_current": "跟模拟不一样啊……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE48C",
+   "budget_bytes": 11,
+   "jp": "こ、この威力は……！？",
+   "zh_current": "这、这威力……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE4A4",
+   "budget_bytes": 17,
+   "jp": "な、何も……できないなんて……！",
+   "zh_current": "什么都做不到……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE4C4",
+   "budget_bytes": 6,
+   "jp": "……無駄よ！",
+   "zh_current": "没用！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE4D8",
+   "budget_bytes": 7,
+   "jp": "……来たわッ！",
+   "zh_current": "……来了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE4EC",
+   "budget_bytes": 16,
+   "jp": "11時方向から攻撃……よろしい？",
+   "zh_current": "11点攻击、明白吗？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE508",
+   "budget_bytes": 20,
+   "jp": "武器を捨て、手を上げて出て来なさい！",
+   "zh_current": "丢下武器、举手出来！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE528",
+   "budget_bytes": 15,
+   "jp": "ああっ！メインカメラが……！！",
+   "zh_current": "啊啊！主摄像头！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE544",
+   "budget_bytes": 11,
+   "jp": "こうするしかないのよ！",
+   "zh_current": "只能这样！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x40DC",
+   "budget_bytes": 13,
+   "jp": "皆で一斉に行きましょう！",
+   "zh_current": "大家一齐上！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x40F8",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4114",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4130",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x414C",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4168",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4184",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE55C",
+   "budget_bytes": 23,
+   "jp": "人の革新は……もう始まっているというのに！",
+   "zh_current": "人的革新……早已经开始了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE580",
+   "budget_bytes": 27,
+   "jp": "ニュータイプは殺し合いの道具ではないというのに……！",
+   "zh_current": "新人类并非互相残杀的道具……！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE5A8",
+   "budget_bytes": 20,
+   "jp": "慣れていくのね……自分でもわかります",
+   "zh_current": "渐渐习惯了……自己明白",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE5C8",
+   "budget_bytes": 15,
+   "jp": "悲しいけど……これも時代なのね",
+   "zh_current": "可悲、这就是时代",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE5E4",
+   "budget_bytes": 11,
+   "jp": "ここで食い止めなければ……",
+   "zh_current": "必须挡住……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE5FC",
+   "budget_bytes": 11,
+   "jp": "やるしか……ないようね",
+   "zh_current": "只能上了……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE614",
+   "budget_bytes": 30,
+   "jp": "戦う事でしか分かり合えないそれは空しいことでしょうに……",
+   "zh_current": "只能靠战斗相互理解……何等空虚……",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE640",
+   "budget_bytes": 11,
+   "jp": "倒すしかないのね……",
+   "zh_current": "只好打倒……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE658",
+   "budget_bytes": 26,
+   "jp": "これも報いかしら……父や兄がしてきたことの……",
+   "zh_current": "这是报应？父兄所做的一切……",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE680",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE694",
+   "budget_bytes": 11,
+   "jp": "これくらいのことはッ！！",
+   "zh_current": "区区这事！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE6AC",
+   "budget_bytes": 6,
+   "jp": "……軟弱者ね",
+   "zh_current": "……软弱",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE6C0",
+   "budget_bytes": 10,
+   "jp": "今はこうするしか……",
+   "zh_current": "如今只能……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE6D8",
+   "budget_bytes": 23,
+   "jp": "致命傷ではない……まだ行けるはずだわ",
+   "zh_current": "并非致命伤……我还能撑住！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE6FC",
+   "budget_bytes": 7,
+   "jp": "あぁっ……！！",
+   "zh_current": "啊啊……！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE710",
+   "budget_bytes": 16,
+   "jp": "まだ……まだ終わるわけには！",
+   "zh_current": "还……还没结束！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE72C",
+   "budget_bytes": 9,
+   "jp": "……おやめなさい！",
+   "zh_current": "……住手！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE744",
+   "budget_bytes": 7,
+   "jp": "……見えた！？",
+   "zh_current": "看见了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE758",
+   "budget_bytes": 18,
+   "jp": "遠距離攻撃が来ます！各機、散開を！",
+   "zh_current": "远程攻击！各机散开！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE778",
+   "budget_bytes": 13,
+   "jp": "無駄な抵抗はおやめなさい！",
+   "zh_current": "停止无谓抵抗！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE794",
+   "budget_bytes": 13,
+   "jp": "ああっ！メインカメラが！？",
+   "zh_current": "啊！主摄像头！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE7B0",
+   "budget_bytes": 8,
+   "jp": "お下がりなさいっ！！",
+   "zh_current": "请退下！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x41A0",
+   "budget_bytes": 13,
+   "jp": "皆で一斉に行きましょう！",
+   "zh_current": "大家一起上吧",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x41BC",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x41D8",
+   "budget_bytes": 30,
+   "jp": "今のキャスバル兄さんなら……信用してもいいのかもしれない……",
+   "zh_current": "卡斯巴尔哥哥……或许可以相信……",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4204",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4220",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x423C",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4258",
+   "budget_bytes": 15,
+   "jp": "わかりました！支援します！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  }
+ ]
+}

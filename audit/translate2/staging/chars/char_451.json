@@ -1,0 +1,220 @@
+{
+ "entity": "char_451",
+ "kind": "character",
+ "cids": [
+  451
+ ],
+ "name_jp": "連邦兵",
+ "name_zh_KEEP": "联邦兵",
+ "cards": [
+  {
+   "cid": 451,
+   "ids": [
+    {
+     "idn": 1353,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B915C",
+     "zh_name_ptr": "0x20B915C",
+     "name_jp": "……やってやる！",
+     "name_zh_current": "我来干！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 21,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%",
+     "cutin_group": 883,
+     "cutin_jp": "……やってやる！",
+     "cutin_zh_current": "……我来干掉你们！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_402",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x32D14",
+   "budget_bytes": 21,
+   "jp": "よーし、先手を取った！一気に決めるぞ！",
+   "zh_current": "好、抢得先机！一举拿下！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32D38",
+   "budget_bytes": 17,
+   "jp": "コイツから逃げられると思うなよ！",
+   "zh_current": "别想从我手里逃掉！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32D58",
+   "budget_bytes": 9,
+   "jp": "よーし、捕まえたぞ！",
+   "zh_current": "抓住你了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32D70",
+   "budget_bytes": 9,
+   "jp": "そら、そこだッ！！",
+   "zh_current": "就是那里！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32D88",
+   "budget_bytes": 11,
+   "jp": "これでも喰らえッ！！",
+   "zh_current": "尝尝这个！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32DA0",
+   "budget_bytes": 10,
+   "jp": "コイツで仕留めてやる！",
+   "zh_current": "用它干掉你！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32DB8",
+   "budget_bytes": 11,
+   "jp": "よーし、接近戦で行く！",
+   "zh_current": "好！上去近战！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32DD0",
+   "budget_bytes": 10,
+   "jp": "見つけたぞ……そこか！",
+   "zh_current": "找到你了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32DE8",
+   "budget_bytes": 18,
+   "jp": "し、しまった！うわあぁぁぁーッ！",
+   "zh_current": "不好了！呜哇啊！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E08",
+   "budget_bytes": 12,
+   "jp": "どこを狙ってるんだ！？",
+   "zh_current": "你瞄哪呢！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E20",
+   "budget_bytes": 20,
+   "jp": "はぁはぁはぁ……よ、避けられたのか？",
+   "zh_current": "呼……呼……躲过去了吗？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E40",
+   "budget_bytes": 19,
+   "jp": "かすり傷だ！どうってことはない！",
+   "zh_current": "小擦伤、没什么大碍！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E60",
+   "budget_bytes": 17,
+   "jp": "く、くそっ！避けられなかった！",
+   "zh_current": "可恶！！没能躲开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E80",
+   "budget_bytes": 13,
+   "jp": "くそっ！食らったか！！",
+   "zh_current": "可恶！中弹了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32E9C",
+   "budget_bytes": 17,
+   "jp": "こ、こいつ……！只者じゃないぞ！",
+   "zh_current": "这家伙！不简单！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32EBC",
+   "budget_bytes": 25,
+   "jp": "こ、これ以上はもたない！援護を！援護をおお！",
+   "zh_current": "撑不住了！！支援！快支援！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32EE4",
+   "budget_bytes": 19,
+   "jp": "無駄だ無駄だ！そんな武器が通じるか！",
+   "zh_current": "没用！那种武器没用！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32F04",
+   "budget_bytes": 10,
+   "jp": "そんなものに当たるか！",
+   "zh_current": "打不中我！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32F1C",
+   "budget_bytes": 19,
+   "jp": "大きいのが来るぞ！各機、散開しろ！",
+   "zh_current": "大家伙来了！各机散开！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32F3C",
+   "budget_bytes": 20,
+   "jp": "無駄な抵抗は止めて大人しくするんだな！",
+   "zh_current": "别再抵抗、乖乖就范！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32F5C",
+   "budget_bytes": 15,
+   "jp": "く、くそっ！これまでか……",
+   "zh_current": "可恶！！完了吗……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x32F78",
+   "budget_bytes": 18,
+   "jp": "こいつ……甘く見るんじゃないぞ！",
+   "zh_current": "这家伙……别小看我！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

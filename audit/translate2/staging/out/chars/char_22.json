@@ -1,0 +1,67 @@
+{
+ "entity": "char_22",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E9%98%BF%E5%B0%94%E6%B3%95%C2%B7A%C2%B7%E8%B4%9D%E7%89%B9",
+  "https://gundam.huijiwiki.com/wiki/%E9%98%BF%E5%B0%94%E6%B3%95%C2%B7A%C2%B7%E8%B4%9D%E7%89%B9",
+  "https://gundam.huijiwiki.com/wiki/%E4%B8%8D%E6%AD%BB%E8%BA%AB%E7%9A%84%E7%AC%AC4%E5%B0%8F%E9%98%9F",
+  "https://dic.pixiv.net/a/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%BBA%E3%83%BB%E3%83%99%E3%82%A4%E3%83%88",
+  "https://girenn.net/entry/2022/06/07/044618",
+  "https://zh.wikipedia.org/zh-cn/%E6%A9%9F%E5%8B%95%E6%88%B0%E5%A3%ABGUNDAM_0083%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 66,
+   "name_zh": "比泡妞简单",
+   "cutin_zh": "哈！比泡妞还简单！",
+   "detail_effect_zh": "回避率提升40%、攻击力提升20%",
+   "notes": "比泡妞还简单是中文社区对该名台词的通行说法、保留现译"
+  },
+  {
+   "idn": 67,
+   "name_zh": "乖乖丢武器",
+   "cutin_zh": "给我乖乖把武器丢下！",
+   "detail_effect_zh": "1回合内捕获率变为通常的2倍",
+   "notes": "原效果文缺失、已补译；捕获率与效果名捕获率↑用词一致"
+  },
+  {
+   "idn": 68,
+   "name_zh": "是你先惹我",
+   "cutin_zh": "哎呀哎呀……先招惹我的可是你啊",
+   "detail_effect_zh": "命中率降低30%",
+   "notes": "日文原句无句尾感叹号、中文同样不加"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x222C", "zh": "嘿……！肥羊送上门了！"},
+  {"file": "0.bin", "record": "0x224C", "zh": "试试看……！"},
+  {"file": "0.bin", "record": "0x2264", "zh": "……真是的、连饭都没空吃！"},
+  {"file": "0.bin", "record": "0x2288", "zh": "抓到你了！"},
+  {"file": "0.bin", "record": "0x22A0", "zh": "击坠分统统归我！"},
+  {"file": "0.bin", "record": "0x22C0", "zh": "看招！你没退路了！"},
+  {"file": "0.bin", "record": "0x22E0", "zh": "嘿……在那！"},
+  {"file": "0.bin", "record": "0x22F8", "zh": "好、拿下！"},
+  {"file": "0.bin", "record": "0x2310", "zh": "算了算了……真背！"},
+  {"file": "0.bin", "record": "0x232C", "zh": "这种对手太轻松！"},
+  {"file": "0.bin", "record": "0x2348", "zh": "不死身的第4小队！"},
+  {"file": "0.bin", "record": "0x2368", "zh": "啧……！嚣张的家伙！"},
+  {"file": "0.bin", "record": "0x2388", "zh": "该死！"},
+  {"file": "0.bin", "record": "0x239C", "zh": "啧！搞砸了！？"},
+  {"file": "0.bin", "record": "0x23B4", "zh": "呜啊啊！！这是什么！？"},
+  {"file": "0.bin", "record": "0x23D4", "zh": "……混蛋！"},
+  {"file": "0.bin", "record": "0x23E8", "zh": "嘿！别小看我！"},
+  {"file": "0.bin", "record": "0x2404", "zh": "哎呀……谁会中这招！"},
+  {"file": "0.bin", "record": "0x2424", "zh": "贵客到！各机散开！"},
+  {"file": "0.bin", "record": "0x2444", "zh": "老实点！你这家伙！"},
+  {"file": "0.bin", "record": "0x2460", "zh": "可恶！被抓住了！"},
+  {"file": "0.bin", "record": "0x247C", "zh": "没那么便宜的事！"},
+  {"file": "1de.bin", "record": "0x778", "zh": "一齐上！……可别掉链子！！"},
+  {"file": "1de.bin", "record": "0x79C", "zh": "好！交给我！！"},
+  {"file": "1de.bin", "record": "0x7B4", "zh": "收到队长！"},
+  {"file": "1de.bin", "record": "0x7CC", "zh": "好！让他们见识不死身第四小队之力！"},
+  {"file": "1de.bin", "record": "0x7F8", "zh": "阿德尔！背后交给我、放手干！！"},
+  {"file": "1de.bin", "record": "0x820", "zh": "交给我！"},
+  {"file": "1de.bin", "record": "0x834", "zh": "好！交给我！！"}
+ ],
+ "notes": "队名按灰机wiki规范写法：0x2348随日文用数字4（不死身的第4小队）、0x7CC随日文用汉字四。0x820预算7字节放不下浦木、理想为：交给我吧、浦木！。0x239C预算11字节、理想为：可恶！搞砸了吗！？。0x2388预算6字节放不下省略号前缀。へっ统一作嘿（0x222C/0x22E0/0x23E8）。0x7F8的ケツ持ち取掩护后方义译作背后交给我。カモ按中文习惯译作肥羊。"
+}

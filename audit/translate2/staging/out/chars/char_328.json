@@ -1,0 +1,49 @@
+{
+ "entity": "char_328",
+ "web_sources": [
+  "https://gundam.huijiwiki.com/wiki/%E9%82%93%E5%85%8B%E5%B0%94%C2%B7%E5%BA%93%E7%8F%80",
+  "https://wiki.biligame.com/gundam/%E4%BA%9A%E8%B5%9E%E9%98%9F",
+  "https://ja.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%CE%96%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+  "https://gundam.fandom.com/wiki/Dunkel_Cooper"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 984,
+   "name_zh": "这就收下了",
+   "cutin_zh": "对不住了队长、这就收下了！",
+   "notes": "隊長には悪いが＝抢了亚赞队长的猎物、现译已贴切、保留。名与名台词共用关键词收下了。"
+  },
+  {
+   "idn": 985,
+   "name_zh": "名不副实！",
+   "cutin_zh": "哈！名不副实嘛！！",
+   "notes": "噂ほどでもない＝没传闻那么强、名不副实达意且入5格、保留。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x261A0", "zh": "太慢了！"},
+  {"file": "0.bin", "record": "0x261B4", "zh": "接招！"},
+  {"file": "0.bin", "record": "0x261C4", "zh": "接招！"},
+  {"file": "0.bin", "record": "0x261D4", "zh": "上吧！"},
+  {"file": "0.bin", "record": "0x261E4", "zh": "给我中！"},
+  {"file": "0.bin", "record": "0x261F8", "zh": "看招！"},
+  {"file": "0.bin", "record": "0x2620C", "zh": "如何！"},
+  {"file": "0.bin", "record": "0x2621C", "zh": "受死吧！"},
+  {"file": "0.bin", "record": "0x26230", "zh": "哇、哇啊啊！亚赞队长！"},
+  {"file": "0.bin", "record": "0x26250", "zh": "太天真了！"},
+  {"file": "0.bin", "record": "0x26268", "zh": "我可没那么弱！！"},
+  {"file": "0.bin", "record": "0x26284", "zh": "就这点！！"},
+  {"file": "0.bin", "record": "0x26298", "zh": "哇啊！不妙！？"},
+  {"file": "0.bin", "record": "0x262B0", "zh": "这家伙！！"},
+  {"file": "0.bin", "record": "0x262C4", "zh": "啥、直击！？"},
+  {"file": "0.bin", "record": "0x262DC", "zh": "怎么会！亚赞队长！救命！！"},
+  {"file": "0.bin", "record": "0x26300", "zh": "没用的！"},
+  {"file": "0.bin", "record": "0x26314", "zh": "打不中！"},
+  {"file": "0.bin", "record": "0x26328", "zh": "远程攻击！？快散开！"},
+  {"file": "0.bin", "record": "0x26344", "zh": "跑不掉的！"},
+  {"file": "0.bin", "record": "0x2635C", "zh": "可恶、被捕获了！？"},
+  {"file": "0.bin", "record": "0x26378", "zh": "我还不能就此倒下！！"}
+ ],
+ "notes": "身份确认：邓克尔·库珀＝Z高达提坦斯汉布拉比队（亚赞队）成员、亚赞·盖布尔的忠实僚机（与拉姆萨斯三位一体攻击）、故bark中的队长即亚赞、与repo现行译名亚赞·盖布尔一致。改动：0x261F8食らえっ！由与そこだ！撞车的接招！！改为看招！（5字节内、区分台词）；0x262DC恢复原文的呼喊节奏怎么会！亚赞队长！救命！！（22字节整、助けてください→救命）；0x26344つかまえてやるっ！原译我抓住你！！语法生硬、改为跑不掉的！（捕获动作台词、9字节整）；0x2635C被捕→被捕获（G世代捕获系统用语、15字节整）。曾考虑乖乖就擒！但擒未登记于charmap、弃用。其余现译自然且在字节预算内、保留。"
+}

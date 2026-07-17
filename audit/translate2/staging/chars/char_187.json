@@ -1,0 +1,665 @@
+{
+ "entity": "char_187",
+ "kind": "character",
+ "cids": [
+  187,
+  188,
+  189
+ ],
+ "name_jp": "プルツー",
+ "name_zh_KEEP": "普露兹",
+ "cards": [
+  {
+   "cid": 187,
+   "ids": [
+    {
+     "idn": 561,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8125",
+     "zh_name_ptr": "0x218C3D0",
+     "name_jp": "私はプルツーだ！！",
+     "name_zh_current": "我是普露兹",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 445,
+     "cutin_jp": "私はプルツー……プルツーだ！！",
+     "cutin_zh_current": "我是普露兹……普露兹！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 562,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B812F",
+     "zh_name_ptr": "0x218C3DB",
+     "name_jp": "ノーテンキだってさ！！",
+     "name_zh_current": "太天真了",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "敵防御力減少",
+     "summary_zh_KEEP": "敌回甲减少",
+     "didx": 120,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）回避率が30%低下、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）回避-30%·装甲-3",
+     "cutin_group": 446,
+     "cutin_jp": "言ってるだろう……オマエらのやる事、ノーテンキだってさ！！",
+     "cutin_zh_current": "说过了吧……你们做的事实在太天真了！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 563,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B813A",
+     "zh_name_ptr": "0x20B813A",
+     "name_jp": "子供の遊びじゃないんだよ！",
+     "name_zh_current": "这不是儿戏",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 447,
+     "cutin_jp": "子供の遊びじゃないんだよ！",
+     "cutin_zh_current": "这可不是小孩子的游戏！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 188,
+   "ids": [
+    {
+     "idn": 564,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8125",
+     "zh_name_ptr": "0x218C3D0",
+     "name_jp": "私はプルツーだ！！",
+     "name_zh_current": "我是普露兹",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 448,
+     "cutin_jp": "私はプルツー……プルツーだ！！",
+     "cutin_zh_current": "我是普露兹……普露兹！！",
+     "name_owner": true,
+     "name_shared_with_idn": 561,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 565,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B814A",
+     "zh_name_ptr": "0x20B814A",
+     "name_jp": "一人じゃないみたいなんだ…私…",
+     "name_zh_current": "我并不孤单",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 50,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 449,
+     "cutin_jp": "一人じゃないみたいなんだ…私…",
+     "cutin_zh_current": "我好像不是一个人……我……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 566,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B815A",
+     "zh_name_ptr": "0x218C3E6",
+     "name_jp": "ジュドーといると……",
+     "name_zh_current": "和捷多一起",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チームHP回復",
+     "summary_zh_KEEP": "队・HP回复",
+     "didx": 240,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）ジュドーがチームにいる時、HPが50%回復する",
+     "detail_zh_current": "",
+     "cutin_group": 450,
+     "cutin_jp": "ジュドーといると気持ちいいんだ！",
+     "cutin_zh_current": "和捷多在一起好舒服！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 189,
+   "ids": []
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x189C0",
+   "budget_bytes": 26,
+   "jp": "よくもまあのこのこと……！恐れる心がないのかい！？",
+   "zh_current": "竟敢大摇大摆凑上来、不怕死吗！？",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x189E8",
+   "budget_bytes": 9,
+   "jp": "行けっ！！",
+   "zh_current": "冲！！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A00",
+   "budget_bytes": 10,
+   "jp": "これでお終いだっ！",
+   "zh_current": "到此为止！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A18",
+   "budget_bytes": 5,
+   "jp": "落ちろっ！",
+   "zh_current": "坠下！！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A2C",
+   "budget_bytes": 21,
+   "jp": "やってることが……いちいち間抜けなんだよ！",
+   "zh_current": "做的事……全都犯蠢！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A50",
+   "budget_bytes": 8,
+   "jp": "賢しいよっ！！",
+   "zh_current": "小聪明！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A64",
+   "budget_bytes": 20,
+   "jp": "そんな機体でっ！あたしに立ち向かう気かっ！？",
+   "zh_current": "那机体！！也想挑战我！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18A84",
+   "budget_bytes": 13,
+   "jp": "グレミーの邪魔はさせないよ！！",
+   "zh_current": "不许动格雷米！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18AA0",
+   "budget_bytes": 17,
+   "jp": "この、アタシが……！？そんな……！",
+   "zh_current": "我、我竟然……！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18AC0",
+   "budget_bytes": 15,
+   "jp": "それが賢しいって言うのさ！！",
+   "zh_current": "这就叫小聪明！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18ADC",
+   "budget_bytes": 16,
+   "jp": "まだ……終わりじゃないよっ！",
+   "zh_current": "还没！还没完呢！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18AF8",
+   "budget_bytes": 21,
+   "jp": "そうかい……そうやって遊ぶのかい！",
+   "zh_current": "是吗……那就陪你玩玩！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18B1C",
+   "budget_bytes": 10,
+   "jp": "クッ！不愉快なやつめ！",
+   "zh_current": "唔！真讨厌！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18B34",
+   "budget_bytes": 18,
+   "jp": "はんっ！やってくれるじゃないか！",
+   "zh_current": "哼！！倒有两下子嘛！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18B54",
+   "budget_bytes": 28,
+   "jp": "な…なんだ、この力は？ニュータイプの上をいく者なのか！？",
+   "zh_current": "这、这是什么力量？在新人类之上！？",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18B7C",
+   "budget_bytes": 19,
+   "jp": "クソッ！コイツら……並ではない！！",
+   "zh_current": "可恶！不是寻常对手！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18B9C",
+   "budget_bytes": 16,
+   "jp": "子供の遊びじゃないんだよっ！",
+   "zh_current": "这可不是儿戏！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18BB8",
+   "budget_bytes": 12,
+   "jp": "身体慣らしにはちょうどいい！",
+   "zh_current": "正好热身！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18BD0",
+   "budget_bytes": 12,
+   "jp": "身体慣らしにはちょうどいい！",
+   "zh_current": "正好热身！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18BE8",
+   "budget_bytes": 25,
+   "jp": "殺されたくなければ、その機体をこちらに渡せ！",
+   "zh_current": "不想死的话、就交出那机体！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C10",
+   "budget_bytes": 12,
+   "jp": "くそっ！オマエら……！！",
+   "zh_current": "可恶！你们……！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C28",
+   "budget_bytes": 11,
+   "jp": "捕まるわけないだろっ！",
+   "zh_current": "怎能被抓！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C40",
+   "budget_bytes": 16,
+   "jp": "のこのこ出てくるんじゃないっ！！",
+   "zh_current": "别傻乎乎地冲上来！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C5C",
+   "budget_bytes": 11,
+   "jp": "行けっ！たち！",
+   "zh_current": "冲！！去！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C74",
+   "budget_bytes": 5,
+   "jp": "そこだっ！",
+   "zh_current": "那里！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18C88",
+   "budget_bytes": 10,
+   "jp": "これ以上やらせないよっ！",
+   "zh_current": "休想再来！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18CA0",
+   "budget_bytes": 18,
+   "jp": "アタシは……昔のアタシじゃないっ！",
+   "zh_current": "我……已不是从前的我！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18CC0",
+   "budget_bytes": 17,
+   "jp": "ここから先へは行かさないよっ！",
+   "zh_current": "前面绝不让你过！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18CE0",
+   "budget_bytes": 23,
+   "jp": "ジュドーに手を出すャツはアタシが許さないよ！！",
+   "zh_current": "敢动捷多的人、我绝不轻饶！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D04",
+   "budget_bytes": 20,
+   "jp": "アタシは……アタシの居場所を守るんだ！！",
+   "zh_current": "我……要守住我的归宿！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D24",
+   "budget_bytes": 8,
+   "jp": "ごめん、ジュド……",
+   "zh_current": "抱歉捷多",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D38",
+   "budget_bytes": 10,
+   "jp": "そんなの当たらないね！",
+   "zh_current": "才打不中！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D50",
+   "budget_bytes": 12,
+   "jp": "アタシはもう一人じゃない！",
+   "zh_current": "我不再孤单！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D68",
+   "budget_bytes": 8,
+   "jp": "かすっただけだ！",
+   "zh_current": "皮外伤！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D7C",
+   "budget_bytes": 13,
+   "jp": "くっ！やるじゃないか……",
+   "zh_current": "唔！干得不错……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D98",
+   "budget_bytes": 14,
+   "jp": "小ざかしいマネを……！！",
+   "zh_current": "竟敢耍花招！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18DB4",
+   "budget_bytes": 21,
+   "jp": "この不愉快な感覚……いったい、何者なんだ！？",
+   "zh_current": "这不快感……你到底是谁！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18DD8",
+   "budget_bytes": 23,
+   "jp": "あううっ！こ、コイツら……並じゃない！",
+   "zh_current": "啊啊！这些家伙……不寻常！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18DFC",
+   "budget_bytes": 19,
+   "jp": "そういうのがノーテンキだって言うんだよ！",
+   "zh_current": "这就叫做没心没肺！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18E1C",
+   "budget_bytes": 8,
+   "jp": "賢しいよっ！！",
+   "zh_current": "小聪明！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18E30",
+   "budget_bytes": 17,
+   "jp": "あそこだ！みんな！避けて……！！",
+   "zh_current": "在那里！大家快躲开！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18E50",
+   "budget_bytes": 23,
+   "jp": "アイツを捕縛するんだな？よし！やってみる！",
+   "zh_current": "要捕获那家伙吗？好！我试试！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18E74",
+   "budget_bytes": 7,
+   "jp": "しまった……！",
+   "zh_current": "糟了……！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18E88",
+   "budget_bytes": 10,
+   "jp": "捕まってたまるか！！",
+   "zh_current": "怎能被抓！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6508",
+   "budget_bytes": 12,
+   "jp": "ここは全員で仕掛けるよ！！",
+   "zh_current": "全员一起上！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6520",
+   "budget_bytes": 26,
+   "jp": "前口上はいらないよ！勝たせてやるさ、アンタを！",
+   "zh_current": "无需开场白！我会让你赢的！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6548",
+   "budget_bytes": 10,
+   "jp": "わかった！ジュドー！！",
+   "zh_current": "明白、捷多！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6560",
+   "budget_bytes": 26,
+   "jp": "前口上はいらないよ！勝たせてやるさ、アンタを！",
+   "zh_current": "无需开场白！我会让你赢的！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6588",
+   "budget_bytes": 26,
+   "jp": "前口上はいらないよ！勝たせてやるさ、アンタを！",
+   "zh_current": "无需开场白！我会让你赢的！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x65B0",
+   "budget_bytes": 26,
+   "jp": "前口上はいらないよ！勝たせてやるさ、アンタを！",
+   "zh_current": "无需开场白！我会让你赢的！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x65D8",
+   "budget_bytes": 26,
+   "jp": "前口上はいらないよ！勝たせてやるさ、アンタを！",
+   "zh_current": "无需开场白！我会让你赢的！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24CC6",
+   "budget_bytes": 11,
+   "jp": "私を縛る……敵……！",
+   "zh_current": "抓我的……敌人！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24CE0",
+   "budget_bytes": 20,
+   "jp": "い、いやだ……！来るなぁーーっ！！！",
+   "zh_current": "不、不要……！别过来！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24D26",
+   "budget_bytes": 24,
+   "jp": "あ、あれを……あれを倒せばいいんだね……？",
+   "zh_current": "啊、打倒那个就行了吧……？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24D68",
+   "budget_bytes": 15,
+   "jp": "ううっ……！頭が痛い……！",
+   "zh_current": "唔……！头好痛！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24E24",
+   "budget_bytes": 15,
+   "jp": "ううっ……！頭が痛い……！",
+   "zh_current": "唔……！头好痛！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24E58",
+   "budget_bytes": 15,
+   "jp": "ううっ……！気持ちが悪い……",
+   "zh_current": "唔……！好难受……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24E74",
+   "budget_bytes": 8,
+   "jp": "やめてえーっ！",
+   "zh_current": "住手啊！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24EEC",
+   "budget_bytes": 7,
+   "jp": "！……来る……",
+   "zh_current": "！……来了",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24F18",
+   "budget_bytes": 7,
+   "jp": "！……来る……",
+   "zh_current": "！……来了",
+   "zh_current_bytes": 6
+  }
+ ]
+}

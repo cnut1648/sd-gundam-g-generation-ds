@@ -1,0 +1,328 @@
+{
+ "entity": "char_71",
+ "kind": "character",
+ "cids": [
+  71
+ ],
+ "name_jp": "ケリィ・レズナー",
+ "name_zh_KEEP": "凯利·雷兹纳",
+ "cards": [
+  {
+   "cid": 71,
+   "ids": [
+    {
+     "idn": 213,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B75B4",
+     "zh_name_ptr": "0x20B75B4",
+     "name_jp": "戦いは生か死か……！",
+     "name_zh_current": "非生即死",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 29,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が40%ずつ上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·回避+40%",
+     "cutin_group": 148,
+     "cutin_jp": "戦いは生か死か……それだけだ！",
+     "cutin_zh_current": "战斗非生即死……仅此而已！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 214,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B75BF",
+     "zh_name_ptr": "0x20B75BF",
+     "name_jp": "負け犬にはならないぞ！",
+     "name_zh_current": "绝不当败犬",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 149,
+     "cutin_jp": "俺は負け犬にはならないぞ！どんなことがあってもな！！",
+     "cutin_zh_current": "我绝不会沦为败犬！无论发生什么！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 215,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B75CC",
+     "zh_name_ptr": "0x20B75CC",
+     "name_jp": "兵士は闘争本能こそが！",
+     "name_zh_current": "士兵靠本能",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力&装甲上昇",
+     "summary_zh_KEEP": "威力・装甲↑",
+     "didx": 92,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）攻击+20%·装甲+2",
+     "cutin_group": 150,
+     "cutin_jp": "兵士は闘争本能こそが！",
+     "cutin_zh_current": "士兵靠的就是斗争本能！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x85BC",
+   "budget_bytes": 21,
+   "jp": "恨むなら自分の未熟さを恨むがいい！",
+   "zh_current": "要恨就恨自己太不成熟！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x85E0",
+   "budget_bytes": 15,
+   "jp": "戦いは生か死か……それだけだ！",
+   "zh_current": "战斗、非生即死！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x85FC",
+   "budget_bytes": 8,
+   "jp": "……遅いっ！！",
+   "zh_current": "……太慢！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8610",
+   "budget_bytes": 13,
+   "jp": "貴様の力！見せてみろ！！",
+   "zh_current": "亮出你的力量！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x862C",
+   "budget_bytes": 21,
+   "jp": "甘い！甘いぞ！どこを見ている！！",
+   "zh_current": "太天真！你在看哪里！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8650",
+   "budget_bytes": 20,
+   "jp": "戦いの中では相手など選べんのだ！",
+   "zh_current": "战斗中可没法挑对手！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8670",
+   "budget_bytes": 22,
+   "jp": "生半可な覚悟なら戦場に出て来るなッ！",
+   "zh_current": "觉悟不足就别上战场！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8694",
+   "budget_bytes": 12,
+   "jp": "ぬおおおおっ！！",
+   "zh_current": "嗷啊啊啊！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x86AC",
+   "budget_bytes": 18,
+   "jp": "パイロットというのは因果な人種だな……",
+   "zh_current": "驾驶员真是苦命啊……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x86CC",
+   "budget_bytes": 24,
+   "jp": "やめとけ！…そんな腕では無駄死にするだけだ！",
+   "zh_current": "算了！就你这本事只会白死！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x86F0",
+   "budget_bytes": 20,
+   "jp": "まだだ！まだ、オレは負けちゃいない！",
+   "zh_current": "还没！我可还没认输呢！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8710",
+   "budget_bytes": 20,
+   "jp": "そんな攻撃でオレを倒せると思うな！！",
+   "zh_current": "这种攻击休想打倒我！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8730",
+   "budget_bytes": 15,
+   "jp": "そうだ！そう来なくてはな！",
+   "zh_current": "没错就该这样！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x874C",
+   "budget_bytes": 10,
+   "jp": "そうだ……もっと来い！",
+   "zh_current": "好……再来！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8764",
+   "budget_bytes": 15,
+   "jp": "クッ！なんて力だ……だが！！",
+   "zh_current": "唔！好强……但是！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8780",
+   "budget_bytes": 17,
+   "jp": "……まだだ！まだ俺は戦えるぞ！",
+   "zh_current": "还没……我还能战斗！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x87A0",
+   "budget_bytes": 21,
+   "jp": "……甘いぞ！そんな武器で俺は倒せん！",
+   "zh_current": "……太天真！你打不倒我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x87C4",
+   "budget_bytes": 16,
+   "jp": "そんなものに当たる俺ではない！",
+   "zh_current": "那东西打不中我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x87E0",
+   "budget_bytes": 16,
+   "jp": "……来るぞ！散開してやり過ごせ！",
+   "zh_current": "……来了！散开躲避！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x87FC",
+   "budget_bytes": 12,
+   "jp": "その機体はいただいた！！",
+   "zh_current": "机体归我了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8814",
+   "budget_bytes": 19,
+   "jp": "くっ……！これで俺も負け犬か……",
+   "zh_current": "唔……！我也算败犬了……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8834",
+   "budget_bytes": 22,
+   "jp": "甘いぞ！戦いは殺すか殺されるかだ！",
+   "zh_current": "天真！战斗就是你死我活！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x23E0",
+   "budget_bytes": 16,
+   "jp": "すまない、皆の力を借りるぞ！！",
+   "zh_current": "抱歉、借大家之力！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x23FC",
+   "budget_bytes": 11,
+   "jp": "了解だ！助太刀する！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2414",
+   "budget_bytes": 24,
+   "jp": "野暮はなしだ！いつでも手助けするぞ、ガトー！",
+   "zh_current": "废话少说！随时助你、卡多！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2438",
+   "budget_bytes": 11,
+   "jp": "了解だ！助太刀する！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2450",
+   "budget_bytes": 11,
+   "jp": "了解だ！助太刀する！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2468",
+   "budget_bytes": 11,
+   "jp": "了解だ！助太刀する！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2480",
+   "budget_bytes": 11,
+   "jp": "了解だ！助太刀する！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

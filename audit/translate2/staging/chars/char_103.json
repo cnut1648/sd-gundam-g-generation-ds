@@ -1,0 +1,328 @@
+{
+ "entity": "char_103",
+ "kind": "character",
+ "cids": [
+  103
+ ],
+ "name_jp": "シュタイナー",
+ "name_zh_KEEP": "施泰纳",
+ "cards": [
+  {
+   "cid": 103,
+   "ids": [
+    {
+     "idn": 309,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B78C6",
+     "zh_name_ptr": "0x20B78C6",
+     "name_jp": "無茶をやるのがサイクロプスだ！",
+     "name_zh_current": "就是要乱来",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 53,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 226,
+     "cutin_jp": "無茶をやるのがサイクロプスだ！突っ込むぞ！！",
+     "cutin_zh_current": "敢乱来才是独眼巨人队！冲过去！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 310,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B78D4",
+     "zh_name_ptr": "0x20B78D4",
+     "name_jp": "やられるような間抜けは……",
+     "name_zh_current": "中弹的蠢货",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム回避上昇",
+     "summary_zh_KEEP": "队・回避↑",
+     "didx": 31,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+40%",
+     "cutin_group": 227,
+     "cutin_jp": "敵の弾にやられるような間抜けは俺の部隊には必要ない！",
+     "cutin_zh_current": "会被敌弹打中的蠢货本队不需要！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 311,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B78E2",
+     "zh_name_ptr": "0x20B78E2",
+     "name_jp": "滅び行く者のために……か",
+     "name_zh_current": "为逝者……吗",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 228,
+     "cutin_jp": "滅び行く者のために……か",
+     "cutin_zh_current": "为将逝之人……吗",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xC640",
+   "budget_bytes": 16,
+   "jp": "そうそう思い通りにはさせん！",
+   "zh_current": "哪能让你事事如愿！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC65C",
+   "budget_bytes": 20,
+   "jp": "手間取るわけにはいかん！……一気に行く！",
+   "zh_current": "不能再拖……一举拿下！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC67C",
+   "budget_bytes": 11,
+   "jp": "避けては通れんか……！",
+   "zh_current": "无可避免……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC694",
+   "budget_bytes": 20,
+   "jp": "手間取るわけにはいかん！……一気に行く！",
+   "zh_current": "不能再拖……一举拿下！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC6B4",
+   "budget_bytes": 11,
+   "jp": "仕留めさせてもらうぞ！",
+   "zh_current": "我来干掉你！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC6CC",
+   "budget_bytes": 22,
+   "jp": "我々も遊びで来ているわけではない！！",
+   "zh_current": "我们可不是来闹着玩的！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC6F0",
+   "budget_bytes": 13,
+   "jp": "逃がすわけにはいかんのだ！",
+   "zh_current": "不能让你逃！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC70C",
+   "budget_bytes": 7,
+   "jp": "……うかつだな！",
+   "zh_current": "大意了",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC720",
+   "budget_bytes": 15,
+   "jp": "ふふ……滅び行くもの……か",
+   "zh_current": "呵呵……终将灭亡",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC73C",
+   "budget_bytes": 17,
+   "jp": "身の程知らずだな！それは！！",
+   "zh_current": "不知天高地厚！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC75C",
+   "budget_bytes": 9,
+   "jp": "ツメが甘いな……",
+   "zh_current": "太松懈了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC774",
+   "budget_bytes": 5,
+   "jp": "チッ……！",
+   "zh_current": "啧……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC788",
+   "budget_bytes": 23,
+   "jp": "……止むを得んなタダで通れるはずもない",
+   "zh_current": "……真是无奈、休想轻易通过",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC7AC",
+   "budget_bytes": 10,
+   "jp": "うかつだったか……！？",
+   "zh_current": "大意了……！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC7C4",
+   "budget_bytes": 10,
+   "jp": "これ程の敵とはな！",
+   "zh_current": "竟是劲敌！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC7DC",
+   "budget_bytes": 11,
+   "jp": "そう長くはもたんか……",
+   "zh_current": "撑不了多久",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC7F4",
+   "budget_bytes": 17,
+   "jp": "こんなものまで開発されたとは……",
+   "zh_current": "竟造出这种东西……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC814",
+   "budget_bytes": 22,
+   "jp": "そんなものに当たるほど俺は間抜けではない！",
+   "zh_current": "哪会被那种东西打中！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC838",
+   "budget_bytes": 17,
+   "jp": "0時方向来るぞ！各機、散れッ！",
+   "zh_current": "0点方向！各机散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC858",
+   "budget_bytes": 12,
+   "jp": "その機体はいただいたぞ！",
+   "zh_current": "那机体归我了",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC870",
+   "budget_bytes": 11,
+   "jp": "むざむざやられるとはな……",
+   "zh_current": "竟白白挨打",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xC888",
+   "budget_bytes": 15,
+   "jp": "我々を甘く見ないでもらおう！",
+   "zh_current": "别小瞧我们！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3804",
+   "budget_bytes": 20,
+   "jp": "全機で一斉にかかるぞ！！用意はいいな！",
+   "zh_current": "全机一齐上！准备好了吧！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3824",
+   "budget_bytes": 22,
+   "jp": "面倒はこちらで見てやる！安心してやれ！",
+   "zh_current": "麻烦交给我处理！放心吧！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3848",
+   "budget_bytes": 25,
+   "jp": "サボートはこちらでする！お前は正面から敵を衝け！！",
+   "zh_current": "支援交给我！你正面攻击！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3870",
+   "budget_bytes": 20,
+   "jp": "あまり手間はかけさせるなよバーニィ！？",
+   "zh_current": "别添太多麻烦、巴尼！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3890",
+   "budget_bytes": 22,
+   "jp": "面倒はこちらで見てやる！安心してやれ！",
+   "zh_current": "麻烦交给我处理！放心吧！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x38B4",
+   "budget_bytes": 22,
+   "jp": "面倒はこちらで見てやる！安心してやれ！",
+   "zh_current": "麻烦交给我处理！放心吧！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x38D8",
+   "budget_bytes": 22,
+   "jp": "面倒はこちらで見てやる！安心してやれ！",
+   "zh_current": "麻烦交给我处理！放心吧！",
+   "zh_current_bytes": 21
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "entity": "unit_124",
+ "kind": "unit",
+ "utids": [
+  124,
+  125,
+  126
+ ],
+ "name_jp": "ガトー専用ゲルググ",
+ "name_zh_current": "卡多专用勇士",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB43",
+   "jp": "大型ビーム・ライフル",
+   "zh_current": "大型光束步枪",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21906DF",
+   "jp": "ビーム・ナギナタ",
+   "zh_current": "光束薙刀",
+   "shared_by_n_units": 18
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 41,
+   "record_offset": "0x3a8",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "アナベル・ガトー専用機"
+   ],
+   "zh_segments_current": [
+    "卡多专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

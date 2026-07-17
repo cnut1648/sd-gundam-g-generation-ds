@@ -1,0 +1,79 @@
+{
+ "entity": "unit_157",
+ "kind": "unit",
+ "utids": [
+  157,
+  158,
+  159
+ ],
+ "name_jp": "ガンダムMk9",
+ "name_zh_current": "高达Mk20号机",
+ "name_zh_px": 96,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218BBEB",
+   "jp": "試作ビーム・ライフル",
+   "zh_current": "试作光束步枪",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218BBF8",
+   "jp": "試作ビーム・サーベル",
+   "zh_current": "试作光束军刀",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 52,
+   "record_offset": "0x2f1",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "試作機",
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "试作机",
+    "新人类",
+    "暴击回避减伤",
+    "巨大",
+    "NT宇宙适应",
+    "巨大",
+    "NT宇宙适应",
+    "巨大",
+    "NT宇宙适应",
+    "巨大",
+    "可变",
+    "可变",
+    "可变",
+    "卡多专用",
+    "可变",
+    "磁性涂层",
+    "磁性涂层",
+    "防御单元",
+    "防御单元",
+    "全装甲系统",
+    "試作機",
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

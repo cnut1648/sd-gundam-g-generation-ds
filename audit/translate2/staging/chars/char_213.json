@@ -1,0 +1,328 @@
+{
+ "entity": "char_213",
+ "kind": "character",
+ "cids": [
+  213
+ ],
+ "name_jp": "ララァ・スン",
+ "name_zh_KEEP": "拉拉·辛",
+ "cards": [
+  {
+   "cid": 213,
+   "ids": [
+    {
+     "idn": 639,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8399",
+     "zh_name_ptr": "0x20B8399",
+     "name_jp": "私には見える……！",
+     "name_zh_current": "我能看见！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 502,
+     "cutin_jp": "私には見える……！",
+     "cutin_zh_current": "我能看见……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 640,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B83A3",
+     "zh_name_ptr": "0x20B83A3",
+     "name_jp": "それは……不自然なのよ！",
+     "name_zh_current": "那很不自然",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "0回避",
+     "summary_zh_KEEP": "必闪",
+     "didx": 178,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）完全回避",
+     "cutin_group": 503,
+     "cutin_jp": "それは……不自然なのよ！",
+     "cutin_zh_current": "那……不自然啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 641,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B83AF",
+     "zh_name_ptr": "0x218C4AB",
+     "name_jp": "アナタを倒さねば……",
+     "name_zh_current": "必须打倒你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "散開ID行動封印",
+     "summary_zh_KEEP": "行动ID封散",
+     "didx": 168,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手チームの散開と行動を封印、攻撃が命中した相手のIDを1ターン封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印·解除封印·ID封印",
+     "cutin_group": 504,
+     "cutin_jp": "アナタを倒さねば……シャアが死ぬ！",
+     "cutin_zh_current": "不打倒你……夏亚会死！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1C78C",
+   "budget_bytes": 11,
+   "jp": "来るのですね……なら！",
+   "zh_current": "来了……上吧！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C7A4",
+   "budget_bytes": 10,
+   "jp": "さあ……お行きなさい！",
+   "zh_current": "去吧……！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C7BC",
+   "budget_bytes": 15,
+   "jp": "シャアをいじめる悪い人……！",
+   "zh_current": "欺负夏亚的坏人！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C7D8",
+   "budget_bytes": 20,
+   "jp": "ごめんなさい……こうするしかないのよ！",
+   "zh_current": "对不起……只能这样了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C7F8",
+   "budget_bytes": 22,
+   "jp": "なぜ……こんな風にしか出会えないのかしら？",
+   "zh_current": "为什么……只能这样相遇？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C81C",
+   "budget_bytes": 19,
+   "jp": "倒すしかない……仕方がないのよ！",
+   "zh_current": "只能打倒……没办法！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C83C",
+   "budget_bytes": 22,
+   "jp": "なぜ……こんな風にしか出会えないのかしら？",
+   "zh_current": "为什么……只能这样相见？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C860",
+   "budget_bytes": 20,
+   "jp": "ごめんなさい……こうするしかないのよ！",
+   "zh_current": "对不起……只能这样了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C880",
+   "budget_bytes": 8,
+   "jp": "ああぁぁーっ！！",
+   "zh_current": "啊啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C894",
+   "budget_bytes": 23,
+   "jp": "何かしら…何かしら、これ！？何かが来るわ……！",
+   "zh_current": "这是什么！？有什么来了……！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C8B8",
+   "budget_bytes": 22,
+   "jp": "ニュータイプは……殺し合いの道具じゃない！",
+   "zh_current": "新人类……不是杀人工具！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C8DC",
+   "budget_bytes": 17,
+   "jp": "あなたは何のために戦っているの？",
+   "zh_current": "你是为了什么而战？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C8FC",
+   "budget_bytes": 5,
+   "jp": "………っ！",
+   "zh_current": "……唔！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C910",
+   "budget_bytes": 10,
+   "jp": "こ、この人は……！？",
+   "zh_current": "这、这人……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C928",
+   "budget_bytes": 15,
+   "jp": "あぁぁっ！た、大佐……！！",
+   "zh_current": "啊啊！大佐……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C944",
+   "budget_bytes": 19,
+   "jp": "どうして！？何故、こんなにも戦えるの！？",
+   "zh_current": "为、为何能这样战斗！？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C964",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C978",
+   "budget_bytes": 6,
+   "jp": "来ます……！",
+   "zh_current": "来了……！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C98C",
+   "budget_bytes": 6,
+   "jp": "来ます……！",
+   "zh_current": "来了……！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C9A0",
+   "budget_bytes": 23,
+   "jp": "もうおやめなさい！これ以上戦わなくてもいいのよ",
+   "zh_current": "请住手吧！无需再战斗了",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C9C4",
+   "budget_bytes": 6,
+   "jp": "ああ……！！",
+   "zh_current": "啊……！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C9D8",
+   "budget_bytes": 5,
+   "jp": "まだです！",
+   "zh_current": "还没！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6C98",
+   "budget_bytes": 11,
+   "jp": "みなさん！お願いします！！",
+   "zh_current": "各位！拜托！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6CB0",
+   "budget_bytes": 23,
+   "jp": "一緒に攻撃を仕掛けるのですね？わかりました！",
+   "zh_current": "一起发动攻击对吧？明白了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6CD4",
+   "budget_bytes": 14,
+   "jp": "大佐！私もお手伝いします！！",
+   "zh_current": "大佐！我来帮忙！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6CF0",
+   "budget_bytes": 23,
+   "jp": "一緒に攻撃を仕掛けるのですね？わかりました！",
+   "zh_current": "一起发动攻击对吧？明白了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D14",
+   "budget_bytes": 23,
+   "jp": "一緒に攻撃を仕掛けるのですね？わかりました！",
+   "zh_current": "一起发动攻击对吧？明白了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D38",
+   "budget_bytes": 23,
+   "jp": "一緒に攻撃を仕掛けるのですね？わかりました！",
+   "zh_current": "一起发动攻击对吧？明白了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6D5C",
+   "budget_bytes": 23,
+   "jp": "一緒に攻撃を仕掛けるのですね？わかりました！",
+   "zh_current": "一起发动攻击对吧？明白了！",
+   "zh_current_bytes": 22
+  }
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "entity": "char_315",
+ "kind": "character",
+ "cids": [
+  315
+ ],
+ "name_jp": "クェス・パラヤ",
+ "name_zh_KEEP": "奎丝·帕拉雅",
+ "cards": [
+  {
+   "cid": 315,
+   "ids": [
+    {
+     "idn": 945,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B89D1",
+     "zh_name_ptr": "0x20B89D1",
+     "name_jp": "逃がしゃしないよ！",
+     "name_zh_current": "休想逃掉！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋移動封印",
+     "summary_zh_KEEP": "威↑・移動封",
+     "didx": 164,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃が命中した相手の移動を1ターン封印する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·移动封印",
+     "cutin_group": 628,
+     "cutin_jp": "サイコミュがひっぱってくれるから逃がしゃしないよ！",
+     "cutin_zh_current": "精神感应系统会帮我锁定休想逃掉！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 946,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B89E6",
+     "zh_name_ptr": "0x20B89E6",
+     "name_jp": "アンタちょっとセコイよ！",
+     "name_zh_current": "你真小气！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "敵攻撃力減少",
+     "summary_zh_KEEP": "敌威命减少",
+     "didx": 83,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·攻击-30%",
+     "cutin_group": 629,
+     "cutin_jp": "アンタちょっとセコイよ！",
+     "cutin_zh_current": "你这人有点小气！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 947,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B89F1",
+     "zh_name_ptr": "0x20B89F1",
+     "name_jp": "……救われないんだよぉっ！",
+     "name_zh_current": "没救了啊！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 630,
+     "cutin_jp": "アンタみたいなのを生んだ地球を壊さなきゃ……救われないんだよおっ！",
+     "cutin_zh_current": "生出你这种东西的地球不毁掉就无法得救！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x23EA0",
+   "budget_bytes": 8,
+   "jp": "みんな落ちちゃえ！",
+   "zh_current": "都掉下去！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23EB4",
+   "budget_bytes": 11,
+   "jp": "いけっ！たち！",
+   "zh_current": "上啊！冲！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23ECC",
+   "budget_bytes": 16,
+   "jp": "落ちろ、落ちろ、落ちろおーっ！",
+   "zh_current": "下去！下去！下去！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23EE8",
+   "budget_bytes": 13,
+   "jp": "なれなれしいんだよ、コイツ！",
+   "zh_current": "这家伙真烦人！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F04",
+   "budget_bytes": 15,
+   "jp": "大佐の所には行かせないよ！！",
+   "zh_current": "休想接近大佐！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F20",
+   "budget_bytes": 13,
+   "jp": "邪魔すんじゃない、落ちろ！",
+   "zh_current": "别碍事、坠落！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F3C",
+   "budget_bytes": 8,
+   "jp": "このおーっ！！",
+   "zh_current": "可恶啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F50",
+   "budget_bytes": 9,
+   "jp": "落ちちゃえーっ！！",
+   "zh_current": "掉下去吧！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F68",
+   "budget_bytes": 12,
+   "jp": "あ……直撃！？大佐……",
+   "zh_current": "直击！？大佐……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F80",
+   "budget_bytes": 5,
+   "jp": "そんなもの！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23F94",
+   "budget_bytes": 20,
+   "jp": "やだっ…怖い！何でこんな事すんの！？",
+   "zh_current": "好可怕！！为什么！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23FB4",
+   "budget_bytes": 5,
+   "jp": "これくらい！",
+   "zh_current": "这点！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23FC8",
+   "budget_bytes": 15,
+   "jp": "こいつ！なれなれしくないか？",
+   "zh_current": "这家伙、真烦人！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23FE4",
+   "budget_bytes": 19,
+   "jp": "なに！？壁になるャツがいる……？",
+   "zh_current": "什么！？这种感觉……？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24004",
+   "budget_bytes": 18,
+   "jp": "な、何なの？この気持ち悪さは！？",
+   "zh_current": "这、这是什么感觉……？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24024",
+   "budget_bytes": 21,
+   "jp": "みんながアタシをいじめる！みんな……嫌いだ！！",
+   "zh_current": "都欺负我！都讨厌！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24048",
+   "budget_bytes": 17,
+   "jp": "フザケるんじゃないよおーっ！！",
+   "zh_current": "别开玩笑了啊！！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24068",
+   "budget_bytes": 13,
+   "jp": "この敵意……キライだっ！！",
+   "zh_current": "这敌意……讨厌！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x24084",
+   "budget_bytes": 13,
+   "jp": "この敵意……キライだっ！！",
+   "zh_current": "这敌意……讨厌！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x240A0",
+   "budget_bytes": 12,
+   "jp": "そのマシンはもらったよ！！",
+   "zh_current": "这机体归我了！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x240B8",
+   "budget_bytes": 14,
+   "jp": "うそ……どうしてこんな……！？",
+   "zh_current": "骗人……怎么会……？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x240D4",
+   "budget_bytes": 16,
+   "jp": "図々しいんだよ！オマエはーっ！",
+   "zh_current": "你也太放肆了！！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

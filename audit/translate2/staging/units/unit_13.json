@@ -1,0 +1,88 @@
+{
+ "entity": "unit_13",
+ "kind": "unit",
+ "utids": [
+  13,
+  14,
+  15
+ ],
+ "name_jp": "F91",
+ "name_zh_current": "高达F91",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218E6CB",
+   "jp": "ヴェスバー",
+   "zh_current": "VSBR",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218EB12",
+   "jp": "MEPE攻撃",
+   "zh_current": "MEPE攻击",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 4,
+   "ptr": "0x218E6CB",
+   "jp": "ヴェスバー",
+   "zh_current": "VSBR",
+   "shared_by_n_units": 18
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 4,
+   "record_offset": "0xb4",
+   "budget_bytes": 24,
+   "jp_segments": [
+    "バイオコンピュータ搭載（ニュータイプ対応機）"
+   ],
+   "zh_segments_current": [
+    "生体电脑"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E73",
+   "jp": "MEPE",
+   "zh_current": "MEPE",
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 10,
+   "record_offset": "0x1d8",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "全ての攻撃を25%の確率で、0に回避する",
+    "ニュータイプ／強化人間のみ作動可能"
+   ],
+   "zh_segments_current": [
+    "有25%概率",
+    "完全回避攻击",
+    "NT・强化人用"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

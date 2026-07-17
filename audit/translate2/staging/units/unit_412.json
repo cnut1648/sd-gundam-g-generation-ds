@@ -1,0 +1,64 @@
+{
+ "entity": "unit_412",
+ "kind": "unit",
+ "utids": [
+  412,
+  413,
+  414
+ ],
+ "name_jp": "ドム・バインニヒツ",
+ "name_zh_current": "大魔·拜恩尼希兹",
+ "name_zh_px": 96,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2190726",
+   "jp": "ラケーテン・バズ",
+   "zh_current": "扎古火箭炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x21898BF",
+   "jp": "ヒート・サーベル",
+   "zh_current": "热能剑",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2189A5B",
+   "jp": "シュツルム・ファウスト",
+   "zh_current": "铁拳火箭",
+   "shared_by_n_units": 15
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 137,
+   "record_offset": "0x8c0",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "地形適正・宇宙"
+   ],
+   "zh_segments_current": [
+    "宇宙适应"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

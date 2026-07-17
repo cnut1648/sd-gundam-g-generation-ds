@@ -1,0 +1,64 @@
+{
+ "entity": "unit_22",
+ "kind": "unit",
+ "utids": [
+  22,
+  23,
+  24
+ ],
+ "name_jp": "GP03ステイメン",
+ "name_zh_current": "GP03雄蕊",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906A2",
+   "jp": "フォールディングバズーカ",
+   "zh_current": "折叠式火箭炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 7,
+   "record_offset": "0xf0",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "地形適正・宇宙"
+   ],
+   "zh_segments_current": [
+    "宇宙适应"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

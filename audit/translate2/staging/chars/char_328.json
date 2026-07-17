@@ -1,0 +1,246 @@
+{
+ "entity": "char_328",
+ "kind": "character",
+ "cids": [
+  328
+ ],
+ "name_jp": "ダンケル・クーパー",
+ "name_zh_KEEP": "邓克尔·库珀",
+ "cards": [
+  {
+   "cid": 328,
+   "ids": [
+    {
+     "idn": 984,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B11",
+     "zh_name_ptr": "0x2194622",
+     "name_jp": "いただいたな！",
+     "name_zh_current": "这就收下了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 658,
+     "cutin_jp": "隊長には悪いが、いただいたな！",
+     "cutin_zh_current": "对不住了队长、这就收下了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 985,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8B18",
+     "zh_name_ptr": "0x218C629",
+     "name_jp": "噂ほどでもない！",
+     "name_zh_current": "名不副实！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "回避上昇",
+     "summary_zh_KEEP": "回避上升",
+     "didx": 28,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%",
+     "cutin_group": 659,
+     "cutin_jp": "はっ！噂ほどでもない！！",
+     "cutin_zh_current": "哈！名不副实嘛！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x261A0",
+   "budget_bytes": 7,
+   "jp": "遅いんだよ！",
+   "zh_current": "太慢了！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x261B4",
+   "budget_bytes": 4,
+   "jp": "そこだ！",
+   "zh_current": "接招！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x261C4",
+   "budget_bytes": 4,
+   "jp": "そこだ！",
+   "zh_current": "接招！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x261D4",
+   "budget_bytes": 4,
+   "jp": "いけっ！",
+   "zh_current": "上吧！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x261E4",
+   "budget_bytes": 5,
+   "jp": "当たれよ！",
+   "zh_current": "给我中！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x261F8",
+   "budget_bytes": 5,
+   "jp": "食らえっ！",
+   "zh_current": "接招！！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2620C",
+   "budget_bytes": 4,
+   "jp": "どうだ！",
+   "zh_current": "如何！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2621C",
+   "budget_bytes": 6,
+   "jp": "とどめだッ！！",
+   "zh_current": "受死吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26230",
+   "budget_bytes": 20,
+   "jp": "う、うわぁぁーっ！ャザン隊長おーっ！",
+   "zh_current": "哇、哇啊啊！亚赞队长！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26250",
+   "budget_bytes": 9,
+   "jp": "……甘いんだよ！",
+   "zh_current": "太天真了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26268",
+   "budget_bytes": 13,
+   "jp": "そ、そう簡単にやられるか！",
+   "zh_current": "我可没那么弱！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26284",
+   "budget_bytes": 8,
+   "jp": "は、その程度で！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26298",
+   "budget_bytes": 11,
+   "jp": "うわぁ！しまった！？",
+   "zh_current": "哇啊！不妙！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x262B0",
+   "budget_bytes": 8,
+   "jp": "こっ、コイツめ！！",
+   "zh_current": "这家伙！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x262C4",
+   "budget_bytes": 9,
+   "jp": "ちょ、直撃だって！？",
+   "zh_current": "啥、直击！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x262DC",
+   "budget_bytes": 22,
+   "jp": "こっ、こんな！ャザン隊長！助けてください！！",
+   "zh_current": "怎么这样！亚赞队长救命！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26300",
+   "budget_bytes": 8,
+   "jp": "ムダなんだよっ！",
+   "zh_current": "没用的！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26314",
+   "budget_bytes": 8,
+   "jp": "……当たるかよ！",
+   "zh_current": "打不中！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26328",
+   "budget_bytes": 16,
+   "jp": "遠距離攻撃！？各機、散開をっ！",
+   "zh_current": "远程攻击！？快散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26344",
+   "budget_bytes": 9,
+   "jp": "つかまえてやるっ！",
+   "zh_current": "我抓住你！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2635C",
+   "budget_bytes": 15,
+   "jp": "く、くそっ、捕縛されたのか！？",
+   "zh_current": "可、可恶、被捕了！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26378",
+   "budget_bytes": 18,
+   "jp": "まだやられるわけにはいかないんだよ！",
+   "zh_current": "我还不能就此倒下！！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

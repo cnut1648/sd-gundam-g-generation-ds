@@ -1,0 +1,37 @@
+{
+ "entity": "char_340",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%8E%9B%E8%8E%89%E7%BE%8E%E4%BA%9A%C2%B7%E5%B7%B4%E9%A1%BF",
+  "https://zh.moegirl.org.cn/%E6%96%B0%E6%9C%BA%E5%8A%A8%E6%88%98%E8%AE%B0%E9%AB%98%E8%BE%BEW_Endless_Waltz",
+  "https://baike.baidu.com/item/%E6%96%B0%E6%9C%BA%E5%8A%A8%E6%88%98%E8%AE%B0%E9%AB%98%E8%BE%BEW%EF%BC%9A%E6%97%A0%E5%B0%BD%E7%9A%84%E5%8D%8E%E5%B0%94%E5%85%B9/7785876",
+  "https://dozle0079.stars.ne.jp/speech_barton.html",
+  "https://mr-blade.sakura.ne.jp/R_23B.htm",
+  "https://gundam.fandom.com/wiki/Mariemaia_Khushrenada"
+ ],
+ "name_flag": "",
+ "ids": [],
+ "barks": [
+  {"file": "0.bin", "record": "0x27AE4", "zh": "我想成为胜者！"},
+  {"file": "0.bin", "record": "0x27AFC", "zh": "人类唯有战斗、才有意义！"},
+  {"file": "0.bin", "record": "0x27B20", "zh": "我继承父亲遗志！"},
+  {"file": "0.bin", "record": "0x27B5C", "zh": "真碍眼呢……请排除！"},
+  {"file": "0.bin", "record": "0x27B7C", "zh": "全人类都将向我下跪！"},
+  {"file": "0.bin", "record": "0x27B9C", "zh": "快让开！"},
+  {"file": "0.bin", "record": "0x27BB0", "zh": "我必成胜者！"},
+  {"file": "0.bin", "record": "0x27BC8", "zh": "怎、怎会……我为何会输……！？"},
+  {"file": "0.bin", "record": "0x27BEC", "zh": "……徒劳的挣扎！"},
+  {"file": "0.bin", "record": "0x27C08", "zh": "我是胜者……不会输！"},
+  {"file": "0.bin", "record": "0x27C28", "zh": "未免太无礼！？"},
+  {"file": "0.bin", "record": "0x27C40", "zh": "放肆！决不轻饶！"},
+  {"file": "0.bin", "record": "0x27C5C", "zh": "对我做出这种事、知道会怎样吗？"},
+  {"file": "0.bin", "record": "0x27C84", "zh": "唔……！？没、没事……吧？"},
+  {"file": "0.bin", "record": "0x27CA4", "zh": "……怎、怎么会、我不可能输！"},
+  {"file": "0.bin", "record": "0x27CC8", "zh": "认清自己的无力！"},
+  {"file": "0.bin", "record": "0x27CE4", "zh": "呵呵……怎会打中我！"},
+  {"file": "0.bin", "record": "0x27D04", "zh": "做这种事也没用……！"},
+  {"file": "0.bin", "record": "0x27D24", "zh": "停止无谓抵抗！"},
+  {"file": "0.bin", "record": "0x27D40", "zh": "……我、是不是做错了……？"},
+  {"file": "0.bin", "record": "0x27D64", "zh": "无礼！我可是元首继承人！"}
+ ],
+ "notes": "无ID卡、仅21条bark。多条bark直接引自EW宣战演说原文（私は父の遺志を継ぎます／人類は戦ってこそ意義ある存在なのであります／私は世界国家元首の正当なる継承者）、已对照日文演说全文核实。0x27D64因预算22字节无法容纳「世界国家元首」全称、理想句为「无礼！我可是世界国家元首的正当继承人！」、现压缩为「无礼！我可是元首继承人！」保留核心。0x27B7C补回原JP的「私に」（向我下跪）。0x27C84补回JP的！？与だ、大丈夫结巴。0x27CA4补回そ、そんな结巴。0x27BEC补回句首……。勝者三句（0x27AE4/0x27BB0/0x27C08）统一用「胜者」保持她的胜者执念主题。语气整体取幼年女帝居高临下的敬体风。"
+}

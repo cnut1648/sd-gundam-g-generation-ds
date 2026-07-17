@@ -1,0 +1,264 @@
+{
+ "entity": "char_330",
+ "kind": "character",
+ "cids": [
+  330
+ ],
+ "name_jp": "ティアンム",
+ "name_zh_KEEP": "提安姆",
+ "cards": [
+  {
+   "cid": 330,
+   "ids": [
+    {
+     "idn": 990,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8B22",
+     "zh_name_ptr": "0x20B8B22",
+     "name_jp": "我が軍は、まだまだ戦える！",
+     "name_zh_current": "我军尚能战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回甲↑",
+     "didx": 127,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%·装甲+2",
+     "cutin_group": 661,
+     "cutin_jp": "我が軍は、まだまだ戦える！",
+     "cutin_zh_current": "我军还能再战下去！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 991,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B2E",
+     "zh_name_ptr": "0x20B8B2E",
+     "name_jp": "ルウムの借りを返してくれる！",
+     "name_zh_current": "讨鲁姆血债",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 662,
+     "cutin_jp": "ルウムの借りを返してくれる！",
+     "cutin_zh_current": "鲁姆的血债、定要讨回！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 992,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B3D",
+     "zh_name_ptr": "0x20B8B3D",
+     "name_jp": "まだ、ガマンできるな……",
+     "name_zh_current": "我还忍得住",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 663,
+     "cutin_jp": "まだ、ガマンできるな……",
+     "cutin_zh_current": "我还忍得住……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x26398",
+   "budget_bytes": 18,
+   "jp": "よーし！敵の頭を押さえてやれ！！",
+   "zh_current": "好！！压制住敌人！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x263B8",
+   "budget_bytes": 12,
+   "jp": "よしっ！撃てえっ！",
+   "zh_current": "好！！开火！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x263D0",
+   "budget_bytes": 14,
+   "jp": "だ！照準、急げっ！",
+   "zh_current": "！！快瞄准！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x263EC",
+   "budget_bytes": 19,
+   "jp": "撃てっ！一機でも多くしとめるんだ！",
+   "zh_current": "开火！多打下一架！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2640C",
+   "budget_bytes": 10,
+   "jp": "一斉射撃！！",
+   "zh_current": "齐射！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26424",
+   "budget_bytes": 15,
+   "jp": "敵にかまうな！一気に突っ込め！",
+   "zh_current": "别恋战！猛冲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26440",
+   "budget_bytes": 15,
+   "jp": "敵にかまうな！一気に突っ込め！",
+   "zh_current": "别恋战！猛冲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2645C",
+   "budget_bytes": 15,
+   "jp": "敵に構うな！一気に突っ込め！",
+   "zh_current": "别恋战！猛冲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26478",
+   "budget_bytes": 17,
+   "jp": "クッ……！ま、またしても……！",
+   "zh_current": "唔……！又、又来了……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x264AB",
+   "budget_bytes": 10,
+   "jp": "よしっ！よくやった！",
+   "zh_current": "好！干得好！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x264C4",
+   "budget_bytes": 29,
+   "jp": "本艦が沈むわけにはいかん！何としても耐え抜くんだっ！",
+   "zh_current": "本舰决不能沉！给我撑住！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26509",
+   "budget_bytes": 23,
+   "jp": "雑魚にはかまうなっ！敵から目を離すなよ！",
+   "zh_current": "别管杂鱼！！盯紧主力！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2652C",
+   "budget_bytes": 8,
+   "jp": "むっ！やる！！",
+   "zh_current": "好身手！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26540",
+   "budget_bytes": 27,
+   "jp": "敵位置の特定急がせろ！このままでは良い的だぞ！！",
+   "zh_current": "快找敌位置！！这样会成活靶！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26568",
+   "budget_bytes": 21,
+   "jp": "くうっ！直撃とは……やってくれる！！",
+   "zh_current": "唔！竟敢直击我……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2658C",
+   "budget_bytes": 18,
+   "jp": "いかんっ！艦を後退させるのだ！！",
+   "zh_current": "不妙！全舰后退！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x265AC",
+   "budget_bytes": 15,
+   "jp": "ほう……！大したものだな！",
+   "zh_current": "哦……！！了不起！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x265C8",
+   "budget_bytes": 15,
+   "jp": "来るぞ！回避運動、急がせろ！",
+   "zh_current": "来了！加紧回避！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x265E4",
+   "budget_bytes": 15,
+   "jp": "来るぞ！回避運動、急がせろ！",
+   "zh_current": "来了！加紧回避！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26610",
+   "budget_bytes": 12,
+   "jp": "我々の戦争は終わりだ……",
+   "zh_current": "战争结束了……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26628",
+   "budget_bytes": 20,
+   "jp": "砲が生きている限り、撃ち続けろ！",
+   "zh_current": "只要炮还在、就打下去！",
+   "zh_current_bytes": 19
+  }
+ ]
+}

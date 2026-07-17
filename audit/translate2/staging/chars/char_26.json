@@ -1,0 +1,272 @@
+{
+ "entity": "char_26",
+ "kind": "character",
+ "cids": [
+  26
+ ],
+ "name_jp": "エイパー・シナプス",
+ "name_zh_KEEP": "艾帕·西纳普斯",
+ "cards": [
+  {
+   "cid": 26,
+   "ids": [
+    {
+     "idn": 78,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B714E",
+     "zh_name_ptr": "0x20B714E",
+     "name_jp": "なすべきことは一つ！",
+     "name_zh_current": "该做只一件",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲装甲↑",
+     "summary_zh_KEEP": "范围装甲↑",
+     "didx": 101,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）装甲+2",
+     "cutin_group": 46,
+     "cutin_jp": "なすべきことは一つ！いかに人命を救えるか…それだけだ！",
+     "cutin_zh_current": "该做的事只有一件！如何能多救人命……仅此而已！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 79,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7163",
+     "zh_name_ptr": "0x23295EA",
+     "name_jp": "真の目的を見せてみろ！！",
+     "name_zh_current": "亮出真目的",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 47,
+     "cutin_jp": "貴様の目的は何だ！真の目的を見せてみろ！！",
+     "cutin_zh_current": "你的目的是什么！亮出你真正的目的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 80,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7171",
+     "zh_name_ptr": "0x20B7171",
+     "name_jp": "まだ決着が付いたわけではない！",
+     "name_zh_current": "胜负还未分",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 48,
+     "cutin_jp": "まだだ……まだ決着が付いたわけではない！",
+     "cutin_zh_current": "还没……还没分出胜负呢！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x275C",
+   "budget_bytes": 17,
+   "jp": "舵は切るな！このまま突っ込むぞ！",
+   "zh_current": "别转舵！就这样冲！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x277C",
+   "budget_bytes": 9,
+   "jp": "今だ、一斉射撃！！",
+   "zh_current": "全员齐射！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2794",
+   "budget_bytes": 15,
+   "jp": "用意！照準は任せるぞ！",
+   "zh_current": "预备看你的！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27CC",
+   "budget_bytes": 18,
+   "jp": "最大戦速で前進！砲門開け！！",
+   "zh_current": "全速前进！打开炮门！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27EC",
+   "budget_bytes": 10,
+   "jp": "一斉射撃！！",
+   "zh_current": "齐射！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2804",
+   "budget_bytes": 18,
+   "jp": "舵は切るな！照準がずれる！！",
+   "zh_current": "别转舵！瞄准会偏！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2824",
+   "budget_bytes": 9,
+   "jp": "今だ、一斉射撃！！",
+   "zh_current": "全员齐射！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x283C",
+   "budget_bytes": 8,
+   "jp": "よし！撃て！！",
+   "zh_current": "好！开火！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2873",
+   "budget_bytes": 22,
+   "jp": "もはやこれまでか……ツケは高くついたな",
+   "zh_current": "到此为止了……代价真高……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28B7",
+   "budget_bytes": 9,
+   "jp": "よし、進路戻せ！",
+   "zh_current": "好、回航！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28CC",
+   "budget_bytes": 21,
+   "jp": "まだだ……！まだ沈むわけにはいかん！",
+   "zh_current": "还没……绝不能让它沉！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2904",
+   "budget_bytes": 19,
+   "jp": "かすっただけだ！慌てる必要はない！",
+   "zh_current": "只是擦过！不必惊慌！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2924",
+   "budget_bytes": 17,
+   "jp": "……クッ！見逃してはくれんか！",
+   "zh_current": "……唔！不肯放过吗！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2944",
+   "budget_bytes": 17,
+   "jp": "舵は切るな！照準がずれる！！",
+   "zh_current": "别转舵！瞄准会偏！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2964",
+   "budget_bytes": 15,
+   "jp": "くっ……！これほどの相手とは！",
+   "zh_current": "唔……好强的对手！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2980",
+   "budget_bytes": 17,
+   "jp": "まだだ！なんとしても、もたせろ！",
+   "zh_current": "还没！一定要撑住！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29A0",
+   "budget_bytes": 9,
+   "jp": "さすがは新鋭艦……！",
+   "zh_current": "不愧新锐！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29B8",
+   "budget_bytes": 11,
+   "jp": "来たぞ！回避ーっ！！",
+   "zh_current": "来了！快回避！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29D0",
+   "budget_bytes": 11,
+   "jp": "来たぞ！回避ーっ！！",
+   "zh_current": "来了！快回避！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x29E8",
+   "budget_bytes": 13,
+   "jp": "よし！ターゲット捕縛せよ！！",
+   "zh_current": "好！捕获目标！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A04",
+   "budget_bytes": 16,
+   "jp": "くっ……！まさか、このような……！",
+   "zh_current": "唔……怎么会这样！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A20",
+   "budget_bytes": 18,
+   "jp": "まだだ！まだ破れたわけではない！",
+   "zh_current": "还没！决不放弃！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

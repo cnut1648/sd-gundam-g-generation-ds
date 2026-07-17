@@ -1,0 +1,66 @@
+{
+ "entity": "char_138",
+ "web_sources": [
+  "https://baike.baidu.com/item/%E8%92%82%E7%8F%90%C2%B7%E4%BA%9A%E8%BF%AA%E5%B0%94/1802261",
+  "https://zh.moegirl.org.cn/%E6%9C%BA%E5%8A%A8%E6%96%B0%E4%B8%96%E7%BA%AA%E9%AB%98%E8%BE%BEX",
+  "https://gundam-official.cn/series/x/story/l356ogetx3yrbvcmby5rd1bf",
+  "https://en.wikipedia.org/wiki/List_of_After_War_Gundam_X_episodes",
+  "https://baike.baidu.com/item/%E6%9C%BA%E5%8A%A8%E6%96%B0%E4%B8%96%E7%BA%AA%E9%AB%98%E8%BE%BEX/7823628"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 414,
+   "name_zh": "珍贵的力量",
+   "cutin_zh": "珍贵的……力量",
+   "detail_effect_zh": "驾驶高达X时、直到关卡结束都保持超级化",
+   "notes": "旧效果文误抄效果名微波收信、已按ROM原文重译。ROM的無限为{01}分隔的使用次数栏、非机体名。超级化沿用data/zh/ui.json既有ハイパー化译名、措辞与char_50(贾米尔)同模板指令一致。"
+  },
+  {
+   "idn": 415,
+   "name_zh": "自己去确认",
+   "cutin_zh": "……你自己去确认吧",
+   "notes": "高达X第17话标题名台词、官方中文站(gundam-official.cn)作你自己去确认吧、保留JP句首省略号。效果文归char_91。"
+  },
+  {
+   "idn": 416,
+   "name_zh": "赐予你力量",
+   "cutin_zh": "赐予你……力量",
+   "detail_effect_zh": "自身以外的同伴SP恢复10、并在3回合内反应提升20",
+   "notes": "アナタに、力を……为高达X第2话标题、蒂法本人台词、通行译名赐予你力量、与char_50(贾米尔)同典故指令名保持一致；名台词保留JP句中省略号。旧效果文的SP恢复10%有误(JP为10点非百分比)且丢失除自身外与3回合、已全部补正。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x11F88", "zh": "……看见"},
+  {"file": "0.bin", "record": "0x11F9C", "zh": "我的力……"},
+  {"file": "0.bin", "record": "0x11FB0", "zh": "………………"},
+  {"file": "0.bin", "record": "0x11FC4", "zh": "………………"},
+  {"file": "0.bin", "record": "0x11FD8", "zh": "给你这个"},
+  {"file": "0.bin", "record": "0x11FEC", "zh": "………………"},
+  {"file": "0.bin", "record": "0x12000", "zh": "………………"},
+  {"file": "0.bin", "record": "0x12014", "zh": "我也、能战斗"},
+  {"file": "0.bin", "record": "0x1202C", "zh": "加洛"},
+  {"file": "0.bin", "record": "0x1203C", "zh": "……打不中"},
+  {"file": "0.bin", "record": "0x12050", "zh": "我也是人……"},
+  {"file": "0.bin", "record": "0x12064", "zh": "……没有用"},
+  {"file": "0.bin", "record": "0x12078", "zh": "时代悲伤……回忆也……"},
+  {"file": "0.bin", "record": "0x12098", "zh": "我也一人……"},
+  {"file": "0.bin", "record": "0x120AC", "zh": "好强的……力……"},
+  {"file": "0.bin", "record": "0x120C4", "zh": "加洛！"},
+  {"file": "0.bin", "record": "0x120D8", "zh": "……那不行"},
+  {"file": "0.bin", "record": "0x120EC", "zh": "……来"},
+  {"file": "0.bin", "record": "0x120FC", "zh": "……来了"},
+  {"file": "0.bin", "record": "0x12110", "zh": "别害怕……"},
+  {"file": "0.bin", "record": "0x12124", "zh": "………………"},
+  {"file": "0.bin", "record": "0x12138", "zh": "我……不是道具"},
+  {"file": "1de.bin", "record": "0x515C", "zh": "帮帮我……"},
+  {"file": "1de.bin", "record": "0x5170", "zh": "……好"},
+  {"file": "1de.bin", "record": "0x5180", "zh": "加洛德"},
+  {"file": "1de.bin", "record": "0x5194", "zh": "……好"},
+  {"file": "1de.bin", "record": "0x51A4", "zh": "……好"},
+  {"file": "1de.bin", "record": "0x51B4", "zh": "……好"},
+  {"file": "1de.bin", "record": "0x51C4", "zh": "……好"},
+  {"file": "c4f.bin", "record": "0x52C", "zh": "给你力量"}
+ ],
+ "notes": "全部译文经lib_apply.encode_stage/encode_bank实测字节合规。保持蒂法轻声破碎语感：句尾省略号尽量还原(我的力……、我也是人……、我也一人……、好强的……力……、我也、能战斗)。……はい统一改为更柔和的……好。预算硬限导致的不得已截短：0x1202C加洛/0x120C4加洛！(加洛德不入4/5字节、理想为加洛德……！)；0x5180加洛德(うん……加洛德需10字节超6)；0x515C帮帮我……(理想拜托……帮帮我超8)；0x52C给你力量(理想赐予你……力量超7)；0x11FD8给你这个(尾部……放不下)；0x11F88……看见(……看得见超6)；0x12078在17字节内保留双分句双省略号、第二个悲伤由语境承接。"
+}

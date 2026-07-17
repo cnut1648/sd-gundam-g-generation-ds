@@ -1,0 +1,860 @@
+{
+ "entity": "char_55",
+ "kind": "character",
+ "cids": [
+  55,
+  56
+ ],
+ "name_jp": "キラ（SEED）",
+ "name_zh_KEEP": "基拉（SEED）",
+ "cards": [
+  {
+   "cid": 55,
+   "ids": [
+    {
+     "idn": 165,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B700C",
+     "zh_name_ptr": "0x20B700C",
+     "name_jp": "………………",
+     "name_zh_current": "…………",
+     "name_zh_px": 32,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋散開封印",
+     "summary_zh_KEEP": "威暴击封散",
+     "didx": 82,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手の散開を封印。攻撃力が20%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击·解除封印",
+     "cutin_group": 115,
+     "cutin_jp": "………………",
+     "cutin_zh_current": "………………",
+     "name_owner": false,
+     "name_shared_with_idn": 30,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 166,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7486",
+     "zh_name_ptr": "0x23298CA",
+     "name_jp": "人はそんなものじゃない！！",
+     "name_zh_current": "人不是那样",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 116,
+     "cutin_jp": "人は……人はそんなものじゃない！！",
+     "cutin_zh_current": "人……人不是那样的！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 167,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7498",
+     "zh_name_ptr": "0x23287F1",
+     "name_jp": "守りたい世界があるんだ！！",
+     "name_zh_current": "想守护世界",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "战斗力↑",
+     "didx": 97,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·反应+20·装甲+2",
+     "cutin_group": 117,
+     "cutin_jp": "それでも！守りたい世界があるんだ！！",
+     "cutin_zh_current": "即便如此！也有我想守护的世界！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 56,
+   "ids": [
+    {
+     "idn": 168,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B700C",
+     "zh_name_ptr": "0x20B700C",
+     "name_jp": "………………",
+     "name_zh_current": "…………",
+     "name_zh_px": 32,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋散開封印",
+     "summary_zh_KEEP": "威暴击封散",
+     "didx": 82,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手の散開を封印。攻撃力が20%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击·解除封印",
+     "cutin_group": 118,
+     "cutin_jp": "………………",
+     "cutin_zh_current": "………………",
+     "name_owner": false,
+     "name_shared_with_idn": 30,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 169,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7486",
+     "zh_name_ptr": "0x23298CA",
+     "name_jp": "人はそんなものじゃない！！",
+     "name_zh_current": "人不是那样",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 119,
+     "cutin_jp": "人は……人はそんなものじゃない！！",
+     "cutin_zh_current": "人……人不是那样的！",
+     "name_owner": true,
+     "name_shared_with_idn": 166,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 170,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7498",
+     "zh_name_ptr": "0x23287F1",
+     "name_jp": "守りたい世界があるんだ！！",
+     "name_zh_current": "想守护世界",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "战斗力↑",
+     "didx": 97,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン反応20と装甲が2増加命中·回避·攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·反应+20·装甲+2",
+     "cutin_group": 120,
+     "cutin_jp": "それでも！守りたい世界があるんだ！！",
+     "cutin_zh_current": "即便如此！也有我想守护的世界！",
+     "name_owner": true,
+     "name_shared_with_idn": 167,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x65C8",
+   "budget_bytes": 20,
+   "jp": "もう逃げない……ボクは決めたんだ！！",
+   "zh_current": "不再逃避……我决定了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x65E8",
+   "budget_bytes": 14,
+   "jp": "ここで……食い止めてみせる！",
+   "zh_current": "在这里挡住你！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6604",
+   "budget_bytes": 14,
+   "jp": "ここで……食い止めてみせる！",
+   "zh_current": "在这里挡住你！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6620",
+   "budget_bytes": 20,
+   "jp": "どうしても戦うんなら……倒すしかない！",
+   "zh_current": "非战不可、只能打倒你！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6640",
+   "budget_bytes": 22,
+   "jp": "戦わなきゃ……守れないものもあるから！",
+   "zh_current": "不战斗、什么都守不住！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6664",
+   "budget_bytes": 23,
+   "jp": "大切なのは、何のために戦うかなんだ……！！",
+   "zh_current": "重要的是为了什么而战！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6688",
+   "budget_bytes": 25,
+   "jp": "できないって言ってたら何も変わらないんだ……！",
+   "zh_current": "光说做不到、什么都不会变！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x66B0",
+   "budget_bytes": 25,
+   "jp": "信じるもののために……今は戦うしかないんだ！！",
+   "zh_current": "为了相信的东西、只能战斗！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x66D8",
+   "budget_bytes": 16,
+   "jp": "何も……変えられなかった……",
+   "zh_current": "什么都没能改变……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x66F4",
+   "budget_bytes": 17,
+   "jp": "やめろ！ボクを行かせてくれ！！",
+   "zh_current": "住手！让我过去吧！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6714",
+   "budget_bytes": 9,
+   "jp": "まだ……死ねない！",
+   "zh_current": "还不能死！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x672C",
+   "budget_bytes": 8,
+   "jp": "……かすった！？",
+   "zh_current": "擦到了！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6740",
+   "budget_bytes": 8,
+   "jp": "これくらいで……！",
+   "zh_current": "就这点……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6754",
+   "budget_bytes": 11,
+   "jp": "かわしきれない……！？",
+   "zh_current": "躲不掉……！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x676C",
+   "budget_bytes": 10,
+   "jp": "こっ！こんな……！？",
+   "zh_current": "这怎么……！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6784",
+   "budget_bytes": 8,
+   "jp": "まだだ……ッ！！",
+   "zh_current": "还没……！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6798",
+   "budget_bytes": 8,
+   "jp": "そんなもの……！！",
+   "zh_current": "就这……！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x67AC",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x67C0",
+   "budget_bytes": 18,
+   "jp": "正面から来ます！散開して回避を！",
+   "zh_current": "正面来袭！散开回避！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x67E0",
+   "budget_bytes": 21,
+   "jp": "殺したいわけじゃないんだろう、君は？",
+   "zh_current": "你并不想杀人、对吧？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6804",
+   "budget_bytes": 8,
+   "jp": "捕まった……！？",
+   "zh_current": "被抓了！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6818",
+   "budget_bytes": 18,
+   "jp": "ボクは捕まるわけにいかないんだ！",
+   "zh_current": "我……绝不能被抓住！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1AC8",
+   "budget_bytes": 28,
+   "jp": "ボク一人の力じゃない……みんながいてくれるから……！！",
+   "zh_current": "不是我一人的力量……有大家在！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1AF0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B04",
+   "budget_bytes": 12,
+   "jp": "うん！やろう、アスラン！！",
+   "zh_current": "上吧、阿斯兰",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B1C",
+   "budget_bytes": 11,
+   "jp": "うん。行こう……カガリ！",
+   "zh_current": "走吧、卡嘉莉",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B34",
+   "budget_bytes": 15,
+   "jp": "フレイ！君を守って見せる！！",
+   "zh_current": "芙蕾！我会守护你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B50",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B64",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6838",
+   "budget_bytes": 13,
+   "jp": "もう、やめろおおっ！！",
+   "zh_current": "够了、住手！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6854",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6868",
+   "budget_bytes": 8,
+   "jp": "僕は……戦う！",
+   "zh_current": "我要战斗！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x687C",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6890",
+   "budget_bytes": 10,
+   "jp": "もう……迷わない！",
+   "zh_current": "不再迷茫！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x68A8",
+   "budget_bytes": 12,
+   "jp": "想いだけじゃない……！",
+   "zh_current": "不只是心意！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x68C0",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x68D4",
+   "budget_bytes": 13,
+   "jp": "ボクは、信じてるから……！",
+   "zh_current": "我、相信着……！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x68F0",
+   "budget_bytes": 18,
+   "jp": "何も……変えられなかったなんて……",
+   "zh_current": "什么都……没能改变……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6910",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6924",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6938",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x694C",
+   "budget_bytes": 7,
+   "jp": "くう……ッ！",
+   "zh_current": "唔……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6960",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6974",
+   "budget_bytes": 9,
+   "jp": "こ、これは……！？",
+   "zh_current": "这、这是！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x698C",
+   "budget_bytes": 6,
+   "jp": "…………！！",
+   "zh_current": "…………！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x69A0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x69B4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x69C8",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x69DC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x69F0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A04",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A18",
+   "budget_bytes": 20,
+   "jp": "もう逃げない……ボクは決めたんだ！！",
+   "zh_current": "不再逃避……我决定了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A38",
+   "budget_bytes": 14,
+   "jp": "力だけがボクの全てじゃない！",
+   "zh_current": "力量不是一切！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A54",
+   "budget_bytes": 14,
+   "jp": "力だけがボクの全てじゃない！",
+   "zh_current": "力量不是一切！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A70",
+   "budget_bytes": 22,
+   "jp": "戦わなきゃ……守れないものもあるから！",
+   "zh_current": "不战斗、什么都守不住！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6A94",
+   "budget_bytes": 27,
+   "jp": "もう、彼女のような悲しい人を増やさせはしない……！",
+   "zh_current": "不再让像她那样悲伤的人增加！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6ABC",
+   "budget_bytes": 25,
+   "jp": "できないって言ってたら何も変わらないんだ……！",
+   "zh_current": "光说做不到、什么都不会变！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6AE4",
+   "budget_bytes": 23,
+   "jp": "大切なのは、何のために戦うかなんだ……！！",
+   "zh_current": "重要的是为了什么而战！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6B08",
+   "budget_bytes": 22,
+   "jp": "約束したんだ……！ボクは、フレイと……！！",
+   "zh_current": "我约定过……！我和芙蕾……！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6B2C",
+   "budget_bytes": 26,
+   "jp": "……僕は……何の為に、戦ってきたんだ……！？",
+   "zh_current": "我……到底为了什么而战……！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6B54",
+   "budget_bytes": 3,
+   "jp": "！……",
+   "zh_current": "！……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6B64",
+   "budget_bytes": 16,
+   "jp": "まだ……終ってないんだっ！",
+   "zh_current": "还没……还没结束！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6B98",
+   "budget_bytes": 6,
+   "jp": "貴方は……！",
+   "zh_current": "你……！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6BAC",
+   "budget_bytes": 5,
+   "jp": "…………！",
+   "zh_current": "…………！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6BC0",
+   "budget_bytes": 21,
+   "jp": "うっ……！！そ、それでも、ボクは……！",
+   "zh_current": "唔……！！即便如此、我也……！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6BE4",
+   "budget_bytes": 10,
+   "jp": "まだ……死ねない！！",
+   "zh_current": "还不能死！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6C14",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6C28",
+   "budget_bytes": 12,
+   "jp": "みんな！……避けるんだっ！",
+   "zh_current": "各位！……快躲！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6C40",
+   "budget_bytes": 25,
+   "jp": "殺したいわけじゃないんでしょう？アナタだって……",
+   "zh_current": "你并不想杀人吧？你也一样……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6C68",
+   "budget_bytes": 4,
+   "jp": "…………",
+   "zh_current": "…………",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x6C78",
+   "budget_bytes": 6,
+   "jp": "……よせっ！",
+   "zh_current": "住手！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1B78",
+   "budget_bytes": 28,
+   "jp": "ボク一人の力じゃない……みんながいてくれるから……！！",
+   "zh_current": "不是我一人的力量……有大家在！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1BA0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1BB4",
+   "budget_bytes": 12,
+   "jp": "うん！やろう、アスラン！！",
+   "zh_current": "上吧、阿斯兰",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1BCC",
+   "budget_bytes": 11,
+   "jp": "うん。行こう……カガリ！",
+   "zh_current": "走吧、卡嘉莉",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1BE4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1BF8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1C0C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1C20",
+   "budget_bytes": 22,
+   "jp": "キラ3（SEED）チーム攻撃汎用開始%",
+   "zh_current": "上吧！我不会再逃避了！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1C44",
+   "budget_bytes": 22,
+   "jp": "キラ3（SEED）チーム攻撃汎用応答%",
+   "zh_current": "为了守护、我必须战斗！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1C68",
+   "budget_bytes": 27,
+   "jp": "キラ3（SEED）チーム攻撃固定応答セリフ01",
+   "zh_current": "我绝不会让任何人再受伤！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1C90",
+   "budget_bytes": 27,
+   "jp": "キラ3（SEED）チーム攻撃固定応答セリフ02",
+   "zh_current": "别再逼我了……我会阻止你！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1CB8",
+   "budget_bytes": 27,
+   "jp": "キラ3（SEED）チーム攻撃固定応答セリフ03",
+   "zh_current": "这一次、我绝对不会输！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1CE0",
+   "budget_bytes": 28,
+   "jp": "キラ3（SEED）チーム攻撃固定応答セリフ04",
+   "zh_current": "够了、不要再战斗下去了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x1D08",
+   "budget_bytes": 28,
+   "jp": "キラ3（SEED）チーム攻撃固定応答セリフ05",
+   "zh_current": "我要守护所有重要的人！",
+   "zh_current_bytes": 19
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "entity": "char_40",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E7%94%9F%E3%81%8D%E3%82%8B%E6%96%B9%E3%81%8C%E3%80%81%E6%88%A6%E3%81%84%E3%81%A0%21%21",
+  "https://zh.wikipedia.org/zh-hans/%E5%8D%A1%E5%98%89%E8%8E%89%C2%B7%E5%B0%A4%E6%8B%89%C2%B7%E9%98%BF%E6%96%AF%E5%93%88",
+  "https://wiki.biligame.com/gundam/%E5%8D%A1%E5%98%89%E8%8E%89%C2%B7%E5%B0%A4%E6%8B%89%C2%B7%E9%98%BF%E6%96%AF%E5%93%88",
+  "https://note.com/abe_keishi/n/nb7d1818d882a",
+  "https://gundam-official.com/news/i/special-series/gundam-power-word/01_9710"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 120,
+   "name_zh": "…………",
+   "cutin_zh": "………………",
+   "detail_effect_zh": "命中率与回避率各上升40%、攻击力增加40%",
+   "notes": "SEED觉醒的无言指令、名称与cut-in均为省略号（cut-in照JP保持6枚省略号、偶数对）。名称记录与阿斯兰（SEED）idn30共享且由其所有、沿用共享值。"
+  },
+  {
+   "idn": 121,
+   "name_zh": "活着即战斗",
+   "cutin_zh": "活着才是战斗！！",
+   "notes": "SEED第50话名台词「逃げるな！生きる方が、戦いだ！！」的后半句、游戏cut-in仅收后半。中文圈通行译法有活着才是战斗／活下去才是战斗两种、取维基百科与biligame高达wiki所用的活着才是战斗、并与共享指令名活着即战斗呼应；补上JP原有的双感叹号。名称与idn118（char_39）共享。"
+  },
+  {
+   "idn": 122,
+   "name_zh": "做该做的事",
+   "cutin_zh": "能做的事、想做的事、该做的事……大家不都一样吗？",
+   "notes": "SEED第48话怒りの日、卡嘉莉驾驶嫣红强袭出击前对阿斯兰的名台词。补回原cut-in漏掉的みんな（大家）。名称与idn119（char_39）共享。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x4888", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x489C", "zh": "……大家别死！"},
+  {"file": "0.bin", "record": "0x48B4", "zh": "想快点结束！这种战争！"},
+  {"file": "0.bin", "record": "0x48D8", "zh": "谁也不许死……！"},
+  {"file": "0.bin", "record": "0x48F4", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x4908", "zh": "这仗……我来终结！"},
+  {"file": "0.bin", "record": "0x4924", "zh": "和平之灯、岂容熄灭！"},
+  {"file": "0.bin", "record": "0x4944", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x4958", "zh": "有些事、上战场也没用……"},
+  {"file": "0.bin", "record": "0x497C", "zh": "！…………"},
+  {"file": "0.bin", "record": "0x4990", "zh": "可恶…………！"},
+  {"file": "0.bin", "record": "0x49A8", "zh": "………………"},
+  {"file": "0.bin", "record": "0x49BC", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x49D0", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x49E4", "zh": "唔……！"},
+  {"file": "0.bin", "record": "0x49F8", "zh": "我绝不能倒下！"},
+  {"file": "0.bin", "record": "0x4A14", "zh": "………………"},
+  {"file": "0.bin", "record": "0x4A28", "zh": "…………！"},
+  {"file": "0.bin", "record": "0x4A3C", "zh": "来了！快散开！"},
+  {"file": "0.bin", "record": "0x4A58", "zh": "不想再让任何人死去！"},
+  {"file": "0.bin", "record": "0x4A78", "zh": "啧…………"},
+  {"file": "0.bin", "record": "0x4A8C", "zh": "别嚣张！"},
+  {"file": "1dd.bin", "record": "0x14", "zh": "…………"},
+  {"file": "1de.bin", "record": "0x11D0", "zh": "大家一齐上！！"},
+  {"file": "1de.bin", "record": "0x11E8", "zh": "………………"},
+  {"file": "1de.bin", "record": "0x11FC", "zh": "交给我吧！！"},
+  {"file": "1de.bin", "record": "0x1214", "zh": "好、我帮你！你太冒失了！"},
+  {"file": "1de.bin", "record": "0x1238", "zh": "守护弟弟是姐姐的责任！交给我！"},
+  {"file": "1de.bin", "record": "0x1260", "zh": "好、我帮你！你太冒失了！"},
+  {"file": "1de.bin", "record": "0x1284", "zh": "守护弟弟是姐姐的责任！交给我！"}
+ ],
+ "notes": "0x4958（戦場を駆けてもダメなことだってあるさ）与idn122的cut-in同出SEED第48话那段台词、按同一语义译。1dd.bin 0x14原为5枚省略号（奇数）、按偶数对规则规整为4枚（4字节≤预算5）。1de.bin 0x11FC预算10字节放不下阿斯兰、理想版为：交给我吧、阿斯兰！！。0x489C理想版为：……大家别死啊！（13字节超预算12）。"
+}

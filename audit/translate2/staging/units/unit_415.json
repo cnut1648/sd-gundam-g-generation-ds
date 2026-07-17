@@ -1,0 +1,51 @@
+{
+ "entity": "unit_415",
+ "kind": "unit",
+ "utids": [
+  415,
+  416,
+  417
+ ],
+ "name_jp": "ドライセン",
+ "name_zh_current": "德莱森",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218E67C",
+   "jp": "トライブレード",
+   "zh_current": "三翼旋刃",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218A450",
+   "jp": "ビーム・トマホーク",
+   "zh_current": "光束战斧",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21898D4",
+   "jp": "ハンドガン",
+   "zh_current": "手枪",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

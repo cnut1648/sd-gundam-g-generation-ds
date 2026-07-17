@@ -1,0 +1,272 @@
+{
+ "entity": "char_246",
+ "kind": "character",
+ "cids": [
+  246
+ ],
+ "name_jp": "ユーリ・ハスラー",
+ "name_zh_KEEP": "尤里·哈斯勒",
+ "cards": [
+  {
+   "cid": 246,
+   "ids": [
+    {
+     "idn": 738,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B86C5",
+     "zh_name_ptr": "0x21945B4",
+     "name_jp": "負けられぬわけがあるのだ！",
+     "name_zh_current": "绝不能败！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 26,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%",
+     "cutin_group": 568,
+     "cutin_jp": "祖国の名誉、同胞の誇り！我らには負けられぬわけがあるのだ！",
+     "cutin_zh_current": "祖国的名誉、同胞的骄傲！我们有绝不能败的理由！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 739,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B86D3",
+     "zh_name_ptr": "0x218C542",
+     "name_jp": "魂の輝きだ……！",
+     "name_zh_current": "魂之光辉",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 569,
+     "cutin_jp": "男たちの、魂の輝きだ……！",
+     "cutin_zh_current": "这是男儿们魂之光辉……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 740,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B86DE",
+     "zh_name_ptr": "0x20B86DE",
+     "name_jp": "今、踏み出したのだ！",
+     "name_zh_current": "今迈出一步",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲命中↑",
+     "summary_zh_KEEP": "范围命中↑",
+     "didx": 18,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%",
+     "cutin_group": 570,
+     "cutin_jp": "今、踏み出したのだ！我々の歴史が！",
+     "cutin_zh_current": "如今、终于迈出了一步！我们的历史！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x20A70",
+   "budget_bytes": 19,
+   "jp": "敵が気付く前に一気に片をつけるぞ！",
+   "zh_current": "趁现在……一气了结！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20A90",
+   "budget_bytes": 7,
+   "jp": "……射撃開始！",
+   "zh_current": "……开火！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20AA4",
+   "budget_bytes": 28,
+   "jp": "我らが地球圏を制する日のために！……ゆくぞ！",
+   "zh_current": "为统治地球圈之日……上吧！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20ACC",
+   "budget_bytes": 17,
+   "jp": "一斉射撃用意！……てえーっ！",
+   "zh_current": "齐射准备！……开火！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20B07",
+   "budget_bytes": 21,
+   "jp": "連邦軍め……我々の力を見るがいい……！",
+   "zh_current": "联邦……见识我们的力量！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20B28",
+   "budget_bytes": 18,
+   "jp": "ジオン再興の為に……突撃しろっ！",
+   "zh_current": "为吉翁复兴突击！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20B48",
+   "budget_bytes": 34,
+   "jp": "我々を辺境へと追いやった奴らに今こそ、報いを愛けさせるのだ！",
+   "zh_current": "逼我们入绝境的人……现在就要偿还！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20B78",
+   "budget_bytes": 7,
+   "jp": "ジーク·ジオン！！",
+   "zh_current": "为吉翁！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20B8C",
+   "budget_bytes": 13,
+   "jp": "くっ……ジーク·ジオン！！",
+   "zh_current": "唔……吉翁万岁！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20BA8",
+   "budget_bytes": 15,
+   "jp": "貴様たちとは覚悟が違うのだ！",
+   "zh_current": "觉悟与你们不同！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20BE1",
+   "budget_bytes": 20,
+   "jp": "いいぞ！我らジオンの意地を見せてやれ！",
+   "zh_current": "好！！拿出吉翁的骨气！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20C04",
+   "budget_bytes": 20,
+   "jp": "この程度ではさして支障にはなるまい……",
+   "zh_current": "区区这点不算障碍……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20C24",
+   "budget_bytes": 29,
+   "jp": "ジオンの精神を愛け継ぐ我ら……まだ退くわけにはいかん！",
+   "zh_current": "继承吉翁精神……还不能撤退！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20C72",
+   "budget_bytes": 12,
+   "jp": "うむ……反撃に移るぞ！",
+   "zh_current": "嗯、转入反击！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20C8C",
+   "budget_bytes": 14,
+   "jp": "くっ！踏みとどまるのだ！",
+   "zh_current": "唔！必须挺住！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20CA8",
+   "budget_bytes": 22,
+   "jp": "まだっ、退けぬ！ジオンの栄光のためにも！！",
+   "zh_current": "不能退！！为吉翁荣光！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20CCC",
+   "budget_bytes": 17,
+   "jp": "甘くみてもらっては困るな……！",
+   "zh_current": "可别小看我……！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20CEC",
+   "budget_bytes": 19,
+   "jp": "敵、遠距離攻撃に対し、回避運動だ！",
+   "zh_current": "敌方远程攻击！回避！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20D0C",
+   "budget_bytes": 15,
+   "jp": "この距離で当たるものではない！",
+   "zh_current": "这距离打不中！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20D28",
+   "budget_bytes": 21,
+   "jp": "あの機体を捕縛しろ！アクシズへ運ぶぞ！",
+   "zh_current": "捕获机体！送回阿克西斯！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20D4C",
+   "budget_bytes": 26,
+   "jp": "この目で星の屑成就を、見れないとは……無念だ……！",
+   "zh_current": "星之屑成就……无法亲见、遗憾！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20D74",
+   "budget_bytes": 21,
+   "jp": "生憎だが、虜囚になるつもりはない……！",
+   "zh_current": "可惜、我不会当俘虏……！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

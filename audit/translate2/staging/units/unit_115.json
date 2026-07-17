@@ -1,0 +1,57 @@
+{
+ "entity": "unit_115",
+ "kind": "unit",
+ "utids": [
+  115,
+  116,
+  117
+ ],
+ "name_jp": "ガザC",
+ "name_zh_current": "加撒C",
+ "name_zh_px": 32,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C870",
+   "jp": "ナックル・バスター",
+   "zh_current": "指节破坏炮",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 38,
+   "record_offset": "0x390",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

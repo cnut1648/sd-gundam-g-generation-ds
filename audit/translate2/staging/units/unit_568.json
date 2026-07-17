@@ -1,0 +1,74 @@
+{
+ "entity": "unit_568",
+ "kind": "unit",
+ "utids": [
+  568,
+  569,
+  570
+ ],
+ "name_jp": "セイバーガンダム",
+ "name_zh_current": "救世主高达",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218A6AA",
+   "jp": "アムフォルタス",
+   "zh_current": "等离子收束光束炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 189,
+   "record_offset": "0xb7c",
+   "budget_bytes": 8,
+   "jp_segments": [
+    "可変機構"
+   ],
+   "zh_segments_current": [
+    "可变"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EE0",
+   "jp": "VPS装甲",
+   "zh_current": "VPS装甲",
+   "owner": false,
+   "owned_by": "unit_550"
+  },
+  "defense": {
+   "record": 21,
+   "record_offset": "0x3c4",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "（ヴァリアブルフェイズシフト装甲）",
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "可变PS装甲",
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_550"
+  }
+ }
+}

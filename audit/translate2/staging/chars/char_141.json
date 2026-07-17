@@ -1,0 +1,432 @@
+{
+ "entity": "char_141",
+ "kind": "character",
+ "cids": [
+  141
+ ],
+ "name_jp": "東方不敗",
+ "name_zh_KEEP": "东方不败",
+ "cards": [
+  {
+   "cid": 141,
+   "ids": [
+    {
+     "idn": 423,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D2D",
+     "zh_name_ptr": "0x20B7D2D",
+     "name_jp": "だからオマエはアホなのだ！",
+     "name_zh_current": "你才是笨蛋",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命回减",
+     "didx": 85,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%攻击-30%",
+     "cutin_group": 334,
+     "cutin_jp": "そう！だからオマエはアホなのだぁっ！！",
+     "cutin_zh_current": "没错！所以你才是笨蛋啊！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 424,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D39",
+     "zh_name_ptr": "0x218C294",
+     "name_jp": "負けを知らぬは東方不敗よ！",
+     "name_zh_current": "东方不败！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力大幅上昇",
+     "summary_zh_KEEP": "战斗力大升",
+     "didx": 247,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃能力が大幅に強化、愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "",
+     "cutin_group": 335,
+     "cutin_jp": "ワシの名前を忘れたか？未だ負けを知らぬは東方不敗よ！",
+     "cutin_zh_current": "忘了老夫的名字吗？至今未尝一败者正是东方不败！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_111",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 425,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D47",
+     "zh_name_ptr": "0x20B7D47",
+     "name_jp": "足を踏んばり腰を入れい！！",
+     "name_zh_current": "扎稳脚跟！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・威命回↑",
+     "didx": 54,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 336,
+     "cutin_jp": "そらそらどうした！？足を踏んばり腰を入れい！！",
+     "cutin_zh_current": "来呀来呀、怎么了！？扎稳脚跟、腰要用力！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_66",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x126B0",
+   "budget_bytes": 18,
+   "jp": "どこを見ておる？ワシはここだ！！",
+   "zh_current": "你看哪呢？老夫在此！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x126D0",
+   "budget_bytes": 20,
+   "jp": "流派、東方不敗は王者の風よッ！！",
+   "zh_current": "流派东方不败、王者之风！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x126F0",
+   "budget_bytes": 14,
+   "jp": "この、身のほど知らずがぁ！",
+   "zh_current": "不知天高地厚！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1270C",
+   "budget_bytes": 18,
+   "jp": "このワシの力、見せてくれるわッ！",
+   "zh_current": "让你见识老夫的力量！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1272C",
+   "budget_bytes": 10,
+   "jp": "そらそら、どうした！？",
+   "zh_current": "怎么了！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12744",
+   "budget_bytes": 12,
+   "jp": "この、うつけものがぁぁ！",
+   "zh_current": "你这蠢货！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1275C",
+   "budget_bytes": 23,
+   "jp": "流派、東方不敗はぁッ！王者の風よッ！！",
+   "zh_current": "流派东方不败、王者之风！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12780",
+   "budget_bytes": 9,
+   "jp": "つけあがるなぁっ！",
+   "zh_current": "别太张狂！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12798",
+   "budget_bytes": 29,
+   "jp": "なにっ！？このワシが……東方不敗マスター·アジアが……！？",
+   "zh_current": "什么！？我堂堂东方不败竟……！？",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x127C4",
+   "budget_bytes": 15,
+   "jp": "未熟！未熟！未熟千万！",
+   "zh_current": "嫩！太嫩！太嫩！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x127E0",
+   "budget_bytes": 17,
+   "jp": "ええい！片腹痛いわぁッ！！",
+   "zh_current": "可笑！笑掉大牙！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12800",
+   "budget_bytes": 23,
+   "jp": "なっちゃいない……本当になっちゃいないぞ！",
+   "zh_current": "差远了……实在不像话！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12824",
+   "budget_bytes": 16,
+   "jp": "ふん！小ざかしいわぁッ！！",
+   "zh_current": "哼！自作聪明！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12840",
+   "budget_bytes": 13,
+   "jp": "ザコが……ほざきおるわ！",
+   "zh_current": "杂兵……还敢吠",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1285C",
+   "budget_bytes": 24,
+   "jp": "こっ、この力……！このワシを越える力だと！？",
+   "zh_current": "这股力量……竟能超过老夫！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12880",
+   "budget_bytes": 24,
+   "jp": "ゴホッ…ゴホッ…！ええい、こんな時に！",
+   "zh_current": "咳咳……！偏在这时！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x128A4",
+   "budget_bytes": 9,
+   "jp": "……ムダの一言！！",
+   "zh_current": "……白费！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x128BC",
+   "budget_bytes": 19,
+   "jp": "そんなものがワシに当たると思うてか！",
+   "zh_current": "那种东西休想打中我！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x128DC",
+   "budget_bytes": 16,
+   "jp": "……来るか！抜かるでないぞ！",
+   "zh_current": "来了吗！不可大意！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x128F8",
+   "budget_bytes": 26,
+   "jp": "潔く負けを認めるもまた武の道と知れいっ！",
+   "zh_current": "坦然认输亦是武者之道！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12920",
+   "budget_bytes": 19,
+   "jp": "こ、この東方不敗……一生の不覚！！",
+   "zh_current": "我东方不败……一生之失！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12940",
+   "budget_bytes": 11,
+   "jp": "この、たわけがぁっ！！",
+   "zh_current": "你这蠢货！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x51D4",
+   "budget_bytes": 24,
+   "jp": "矢を束ねるがごとく！……次々とかかるのだ！",
+   "zh_current": "如万箭齐发！接连进攻！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x51F8",
+   "budget_bytes": 10,
+   "jp": "うむ！助太刀する！！",
+   "zh_current": "嗯！我助阵！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5210",
+   "budget_bytes": 29,
+   "jp": "流派東方不敗の名に恥じぬ戦い、見せるのだぞ、ドモンよ！",
+   "zh_current": "无愧东方不败之名的战斗、多蒙！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x523C",
+   "budget_bytes": 10,
+   "jp": "うむ！助太刀する！！",
+   "zh_current": "嗯！我助阵！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5254",
+   "budget_bytes": 10,
+   "jp": "うむ！助太刀する！！",
+   "zh_current": "嗯！我助阵！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x526C",
+   "budget_bytes": 10,
+   "jp": "うむ！助太刀する！！",
+   "zh_current": "嗯！我助阵！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5284",
+   "budget_bytes": 10,
+   "jp": "うむ！助太刀する！！",
+   "zh_current": "嗯！我助阵！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x3E4",
+   "budget_bytes": 11,
+   "jp": "流派東方不敗、奥義！！",
+   "zh_current": "东方不败奥义",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x3FC",
+   "budget_bytes": 11,
+   "jp": "十二王方牌！！",
+   "zh_current": "十二王方牌！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x414",
+   "budget_bytes": 16,
+   "jp": "大しゃりいいいいんっ！！",
+   "zh_current": "大车轮！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x430",
+   "budget_bytes": 7,
+   "jp": "ダークネス……",
+   "zh_current": "黑暗……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x444",
+   "budget_bytes": 5,
+   "jp": "フィンガーー！！",
+   "zh_current": "之指！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x458",
+   "budget_bytes": 21,
+   "jp": "ふん……！いちいち相手にしてはキリがない！",
+   "zh_current": "哼……！逐个理会没个完！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x47C",
+   "budget_bytes": 5,
+   "jp": "ならばっ！",
+   "zh_current": "那就！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x48D",
+   "budget_bytes": 10,
+   "jp": "超級覇王！！",
+   "zh_current": "超级霸王！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x4A4",
+   "budget_bytes": 14,
+   "jp": "電影だぁぁぁぁぁんっ！！",
+   "zh_current": "电影弹！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x4C0",
+   "budget_bytes": 5,
+   "jp": "爆発っ！！",
+   "zh_current": "爆炸！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x4D4",
+   "budget_bytes": 14,
+   "jp": "今こそ貴様に見せてくれる！！",
+   "zh_current": "此刻让你瞧瞧！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x4F0",
+   "budget_bytes": 16,
+   "jp": "流派！東方不敗が最終奥義！！",
+   "zh_current": "东方不败最终奥义",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "c4f.bin",
+   "record": "0x50C",
+   "budget_bytes": 20,
+   "jp": "石破！天驚けえええんっ！！",
+   "zh_current": "石破！天惊拳！！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

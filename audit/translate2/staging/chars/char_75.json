@@ -1,0 +1,588 @@
+{
+ "entity": "char_75",
+ "kind": "character",
+ "cids": [
+  75,
+  76
+ ],
+ "name_jp": "ザビーネ・シャル",
+ "name_zh_KEEP": "扎比涅·夏尔",
+ "cards": [
+  {
+   "cid": 75,
+   "ids": [
+    {
+     "idn": 225,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B763D",
+     "zh_name_ptr": "0x20B763D",
+     "name_jp": "我々は人殺しではありません",
+     "name_zh_current": "不是杀人犯",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 74,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 157,
+     "cutin_jp": "我々は人殺しではありませんから……極力ね",
+     "cutin_zh_current": "我们又不是杀人犯……会尽量手下留情的",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 226,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B764B",
+     "zh_name_ptr": "0x2329785",
+     "name_jp": "焦るのだよ……今はまだな！",
+     "name_zh_current": "现在还太早",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑＋ID封印",
+     "summary_zh_KEEP": "命↑・ID封",
+     "didx": 166,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%増加、攻撃が命中した相手のIDを1ターン封印する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·ID封印",
+     "cutin_group": 158,
+     "cutin_jp": "悪いが、ベラさまに傷をつけられては困るのだよ……今はまだな！",
+     "cutin_zh_current": "抱歉、不能让贝拉大人受伤现在还不是时候！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 227,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7665",
+     "zh_name_ptr": "0x218C1CF",
+     "name_jp": "……グッドラック",
+     "name_zh_current": "……祝你好运",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋散開封印",
+     "summary_zh_KEEP": "威命・封散",
+     "didx": 160,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と攻撃力が20%ずつ上昇、チームの間接攻撃の際、相手の散開を封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%解除封印",
+     "cutin_group": 159,
+     "cutin_jp": "……グッドラック",
+     "cutin_zh_current": "……祝你好运",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 76,
+   "ids": [
+    {
+     "idn": 228,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B766E",
+     "zh_name_ptr": "0x2188780",
+     "name_jp": "……さようなら！！",
+     "name_zh_current": "永别了！！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 63,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率と回避率が40%ずつ上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·回避+40%攻击+40%",
+     "cutin_group": 160,
+     "cutin_jp": "あはははは……さようなら！！",
+     "cutin_zh_current": "啊哈哈哈……永别了！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_40",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 229,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7675",
+     "zh_name_ptr": "0x20B7675",
+     "name_jp": "私の手ですばらしい未来を！",
+     "name_zh_current": "亲手创未来",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威应甲↑",
+     "didx": 95,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%増加、反応が20上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）反应+20·攻击+20%装甲+2",
+     "cutin_group": 161,
+     "cutin_jp": "私の手ですばらしい未来を！正しき貴族の支配する美しい世界を！",
+     "cutin_zh_current": "以我之手开创美好未来！正统贵族统治的美丽世界！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_18",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 230,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7683",
+     "zh_name_ptr": "0x20B7683",
+     "name_jp": "死んでなきゃぁぁぁーーっ！！",
+     "name_zh_current": "你非死不可",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "撃破＋散開封印",
+     "summary_zh_KEEP": "威命↑・封散",
+     "didx": 162,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃と命中を上昇、相手の散開封印HPが30%以下の攻撃対象を必ず撃破する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%击破·解除封印",
+     "cutin_group": 162,
+     "cutin_jp": "ダメじゃないか！死んでなきゃぁぁぁーーっ！！",
+     "cutin_zh_current": "这怎么行啊！你非死不可啊！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x8CFC",
+   "budget_bytes": 4,
+   "jp": "ふっ……",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8D0C",
+   "budget_bytes": 7,
+   "jp": "……死ねッ！！",
+   "zh_current": "……去死！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8D20",
+   "budget_bytes": 7,
+   "jp": "……死ねッ！！",
+   "zh_current": "……去死！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8D34",
+   "budget_bytes": 30,
+   "jp": "悪いが踏み石になってもらおう……キサマにはな、くくく",
+   "zh_current": "抱歉、请你当垫脚石吧……呵呵呵",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8D60",
+   "budget_bytes": 22,
+   "jp": "その好機……逃がすわけにはいかんのだよ！",
+   "zh_current": "这大好机会……岂能错过！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8D84",
+   "budget_bytes": 22,
+   "jp": "この程度の相手に手間取ってはいられんな……",
+   "zh_current": "对付这货色、岂能磨蹭……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8DA8",
+   "budget_bytes": 27,
+   "jp": "さて……少しは世界をさっぱりしたものにしないとな",
+   "zh_current": "那么……该把世界收拾干净了",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8DD0",
+   "budget_bytes": 29,
+   "jp": "より速く確実に敵は撃つべきなのだ……ためらわずにな！",
+   "zh_current": "杀敌就该又快又准……绝不犹豫！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8DFC",
+   "budget_bytes": 24,
+   "jp": "ちっ……！どこかで計算が狂ったか……！！",
+   "zh_current": "啧……！哪里算错了吗……！！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8E20",
+   "budget_bytes": 28,
+   "jp": "感情を処理できん人間はゴミにすぎんのだがな……",
+   "zh_current": "压不住情绪的人不过是垃圾……",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8E48",
+   "budget_bytes": 23,
+   "jp": "やられるわけにはいかんのだよ！今はまだな！",
+   "zh_current": "我不能倒下！现在还不行！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8E6C",
+   "budget_bytes": 24,
+   "jp": "ちっ……！一気にせん滅できれば楽なものを！",
+   "zh_current": "啧……！能一举歼灭就好了",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8E90",
+   "budget_bytes": 26,
+   "jp": "ふふん…なかなかどうして……腕の立つやつもいるものだ",
+   "zh_current": "哼哼……也有身手不错的家伙",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8EB8",
+   "budget_bytes": 25,
+   "jp": "見込んだだけのことはある……が、それだけのことだな",
+   "zh_current": "果然有两下子……但仅此而已",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8EE0",
+   "budget_bytes": 18,
+   "jp": "こ、これは！直撃だというのか！？",
+   "zh_current": "这、这！是直击吗！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F00",
+   "budget_bytes": 25,
+   "jp": "ふ、ふ、ふ……まさかこんなことで不覚を取るとはな",
+   "zh_current": "呵呵呵……没想到竟大意失手",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F28",
+   "budget_bytes": 15,
+   "jp": "……無駄なあがきというものだな",
+   "zh_current": "……徒劳挣扎罢了",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F44",
+   "budget_bytes": 4,
+   "jp": "ふん……",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F54",
+   "budget_bytes": 4,
+   "jp": "ふっ……",
+   "zh_current": "哼……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F64",
+   "budget_bytes": 29,
+   "jp": "死にたくないのなら我々に下るのだな……命は取らんさ",
+   "zh_current": "不想死的话就归顺我们……饶你不死",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8F90",
+   "budget_bytes": 9,
+   "jp": "そ、そんな馬鹿な……",
+   "zh_current": "不可能……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8FA8",
+   "budget_bytes": 15,
+   "jp": "我が野望！邪魔させはせん！！",
+   "zh_current": "休想拦我的野望！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2634",
+   "budget_bytes": 27,
+   "jp": "貴様たちの力…使わせてもらうぞ……クククク……",
+   "zh_current": "你们的力量……我收下了……呵呵呵……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x265C",
+   "budget_bytes": 9,
+   "jp": "ふっ……いいだろう",
+   "zh_current": "哼……好吧",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2674",
+   "budget_bytes": 20,
+   "jp": "せいぜい背後に気をつけることだなキンケドゥ……",
+   "zh_current": "小心背后、金凯度……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2694",
+   "budget_bytes": 16,
+   "jp": "ふん……子供のお守りとはな……",
+   "zh_current": "哼……得当保姆吗……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x26B0",
+   "budget_bytes": 9,
+   "jp": "ふっ……いいだろう",
+   "zh_current": "哼……好吧",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x26C8",
+   "budget_bytes": 9,
+   "jp": "ふっ……いいだろう",
+   "zh_current": "哼……好吧",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x26E0",
+   "budget_bytes": 9,
+   "jp": "ふっ……いいだろう",
+   "zh_current": "哼……好吧",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8FC4",
+   "budget_bytes": 11,
+   "jp": "……好機には違いないな！",
+   "zh_current": "……正是机会！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8FDC",
+   "budget_bytes": 16,
+   "jp": "私は貴族主義社会を創るのだよ！",
+   "zh_current": "我要建贵族社会！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8FF8",
+   "budget_bytes": 14,
+   "jp": "くくく……死ぬがいいッ！！",
+   "zh_current": "呵呵……去死吧！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9014",
+   "budget_bytes": 9,
+   "jp": "あはははははっ！！",
+   "zh_current": "哈哈哈哈！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x902C",
+   "budget_bytes": 24,
+   "jp": "ク、ククク……！貴様は私の縛物なのだぁぁっ！",
+   "zh_current": "呵呵呵……你可是我的猎物！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9050",
+   "budget_bytes": 34,
+   "jp": "もうすぐ出来上がるのだっ！！貴族の！支配する！正しき未来は！",
+   "zh_current": "马上就要完成了！！贵族支配的正确未来！",
+   "zh_current_bytes": 33
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9080",
+   "budget_bytes": 23,
+   "jp": "ハハハハハ！誰にも……邪魔はさせん！！",
+   "zh_current": "哈哈哈！谁也别想阻拦！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x90A4",
+   "budget_bytes": 26,
+   "jp": "コスモ·バビロニアはぁっ！！この！私の手でええっ！",
+   "zh_current": "宇宙巴比伦尼亚就靠我！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x90CC",
+   "budget_bytes": 27,
+   "jp": "わ、私の夢が……き、貴族社会が……ベ、ベラ様……",
+   "zh_current": "我的梦想……贵族社会……贝拉大人……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x90F4",
+   "budget_bytes": 33,
+   "jp": "感情を処理できない人間はゴミにすぎんのだよおおっ！！",
+   "zh_current": "压不住情绪的人……不过就是垃圾！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9124",
+   "budget_bytes": 20,
+   "jp": "コスモ……！バビロニアの…ためにいいっ！",
+   "zh_current": "为宇宙……巴比伦尼亚！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9144",
+   "budget_bytes": 10,
+   "jp": "ハハッ、アハハハハ！！",
+   "zh_current": "哈哈哈哈！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x915C",
+   "budget_bytes": 24,
+   "jp": "ははっ、あはははは！これだ……この感触っ！！",
+   "zh_current": "哈、啊哈哈！就是这感觉！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9180",
+   "budget_bytes": 15,
+   "jp": "ふふふふ…いいぞ……いいっ！！",
+   "zh_current": "呵呵……好……好！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x919C",
+   "budget_bytes": 29,
+   "jp": "貴様とは雌雄を決しなくてはならんようだなぁぁ！？",
+   "zh_current": "看来非得和你一决胜负不可了！？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x91C8",
+   "budget_bytes": 22,
+   "jp": "クッ、ク、クク！なかなか！どうして……クク！！",
+   "zh_current": "呵呵！有两下子……呵呵！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x91EC",
+   "budget_bytes": 8,
+   "jp": "クッ、ク、クク！",
+   "zh_current": "呵、呵呵！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9200",
+   "budget_bytes": 13,
+   "jp": "いいぞ！実にいいっ！！",
+   "zh_current": "好！真好！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x921C",
+   "budget_bytes": 9,
+   "jp": "あはははははっ！！",
+   "zh_current": "哈哈哈哈！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9234",
+   "budget_bytes": 18,
+   "jp": "キサマもバニロニアに下るのだぁっ！",
+   "zh_current": "归顺巴比伦尼亚吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9254",
+   "budget_bytes": 13,
+   "jp": "く、くく、く……ひひっ",
+   "zh_current": "呵、呵呵、呵……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x9270",
+   "budget_bytes": 27,
+   "jp": "だめだろおお！？邪魔なんかしちゃあーーっ！！！",
+   "zh_current": "不行的吧！？竟敢妨碍我！！！",
+   "zh_current_bytes": 21
+  }
+ ]
+}

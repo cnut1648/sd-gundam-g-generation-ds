@@ -1,0 +1,55 @@
+{
+ "entity": "char_183",
+ "web_sources": [
+  "https://ja.wikipedia.org/wiki/SD%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0_GGENERATION_%E3%83%A2%E3%83%8E%E3%82%A2%E3%82%A4%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%82%BA",
+  "https://dic.pixiv.net/a/%E3%82%B7%E3%82%B0%E3%83%BB%E3%82%A6%E3%82%A7%E3%83%89%E3%83%8A%E3%83%BC",
+  "https://gudamer.sakura.ne.jp/wiki/wiki.cgi/GUNDAM?page=%A5%D6%A5%E9%A1%BC%A5%C9%A1%A6%A5%D5%A5%A1%A1%BC%A5%EC%A5%F3",
+  "https://www.gundam-nyumon.com/technology/263/"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 549,
+   "name_zh": "散布粒子！",
+   "cutin_zh": "米诺夫斯基粒子、散布！",
+   "notes": "name shared with idn 420 (name_owner false) - repeated current shared value. Cut-in kept: matches the community cadence of the Bright-style order 米诺夫斯基粒子、战斗浓度散布！"
+  },
+  {
+   "idn": 550,
+   "name_zh": "谁都不许死",
+   "cutin_zh": "一个都不许死！",
+   "notes": "Name exactly 5 cells so no room for ！. Shares 不许死 with the cut-in."
+  },
+  {
+   "idn": 551,
+   "name_zh": "一定回来！",
+   "cutin_zh": "蜜安……！爸爸一定会回来的！",
+   "notes": "ミアン = his daughter Mian Fahlen; repo-established 蜜安 (data/zh/characters.json cid 202/203 蜜安·法琳). Added 的 for a natural fatherly promise."
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x18184", "zh": "好、趁现在！各炮座、迎击！！"},
+  {"file": "0.bin", "record": "0x181A8", "zh": "射击开始！好好瞄准！"},
+  {"file": "0.bin", "record": "0x181C8", "zh": "射击开始！好好瞄准！"},
+  {"file": "0.bin", "record": "0x18208", "zh": "好、边炮击边前进！"},
+  {"file": "0.bin", "record": "0x18224", "zh": "各炮座、各自瞄准！……开火！！"},
+  {"file": "0.bin", "record": "0x1824C", "zh": "别管！冲过去！"},
+  {"file": "0.bin", "record": "0x18268", "zh": "放近了再打！不要怕！"},
+  {"file": "0.bin", "record": "0x1828C", "zh": "全炮门开！齐射30秒！"},
+  {"file": "0.bin", "record": "0x182C6", "zh": "唔……！全员快退避！"},
+  {"file": "0.bin", "record": "0x182E4", "zh": "很好！就这样！"},
+  {"file": "0.bin", "record": "0x182FC", "zh": "唉……捡回一条命……！"},
+  {"file": "0.bin", "record": "0x1831C", "zh": "擦伤一两处而已！别管！前进！"},
+  {"file": "0.bin", "record": "0x18344", "zh": "敌人也拼了……！"},
+  {"file": "0.bin", "record": "0x1837F", "zh": "好、还能打！转入反击！"},
+  {"file": "0.bin", "record": "0x183A0", "zh": "唔！被削掉一大块……！！"},
+  {"file": "0.bin", "record": "0x183C0", "zh": "胜负在此一举！撑住！！"},
+  {"file": "0.bin", "record": "0x183E4", "zh": "好、继续战斗！"},
+  {"file": "0.bin", "record": "0x183FC", "zh": "紧急回避！"},
+  {"file": "0.bin", "record": "0x18414", "zh": "紧急回避！"},
+  {"file": "0.bin", "record": "0x1842C", "zh": "捕获那台机体！靠上去！"},
+  {"file": "0.bin", "record": "0x18450", "zh": "怎么会……！？竟会如此……！"},
+  {"file": "0.bin", "record": "0x18474", "zh": "宝贵战力、怎能轻易交出！"}
+ ],
+ "notes": "Brad Fahlen: Zeon 中佐, Musai captain commanding the Brad Squadron (布拉德战队, repo-established in _STG02) in the Monoeye Gundams original story; team-first veteran officer who dies covering his crew's retreat - voice kept as a warm but firm fleet commander. Barks 0x18208/0x1828C/0x18474 kept unchanged (already natural; their measured encodings exactly fit budgets that the brief cost rule would slightly exceed). All new lines fit budgets under the brief cost rule; details not owned (char_140/26/16)."
+}

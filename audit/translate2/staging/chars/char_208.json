@@ -1,0 +1,264 @@
+{
+ "entity": "char_208",
+ "kind": "character",
+ "cids": [
+  208
+ ],
+ "name_jp": "ラクス・クライン",
+ "name_zh_KEEP": "拉克丝",
+ "cards": [
+  {
+   "cid": 208,
+   "ids": [
+    {
+     "idn": 624,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8353",
+     "zh_name_ptr": "0x218C48B",
+     "name_jp": "信じて戦うものは何ですか？",
+     "name_zh_current": "你为何而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵攻撃力減少",
+     "summary_zh_KEEP": "敌威应减少",
+     "didx": 86,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）反应-30·攻击-30%",
+     "cutin_group": 496,
+     "cutin_jp": "貴方が信じて戦うものは何ですか？",
+     "cutin_zh_current": "你所相信并为之战斗的是什么？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 625,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8361",
+     "zh_name_ptr": "0x218C496",
+     "name_jp": "……私を撃ちますか？",
+     "name_zh_current": "会开枪吗？",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "行動封印",
+     "summary_zh_KEEP": "行动封印",
+     "didx": 154,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）敵チームが攻撃をできないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）行动封印",
+     "cutin_group": 497,
+     "cutin_jp": "敵だと言うのならば、私を撃ちますか？",
+     "cutin_zh_current": "若说我是敌人、你会向我开枪吗？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_55",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 626,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B836C",
+     "zh_name_ptr": "0x20B836C",
+     "name_jp": "思いだけでも、力だけでも……",
+     "name_zh_current": "思念或力量",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 498,
+     "cutin_jp": "思いだけでも、力だけでもできないことがあります……だから",
+     "cutin_zh_current": "仅凭思念、仅凭力量有些事是做不到的……所以",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1BE44",
+   "budget_bytes": 16,
+   "jp": "私たちは行かねばならないのです！",
+   "zh_current": "我们必须前行！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BE60",
+   "budget_bytes": 15,
+   "jp": "私は歌います……平和の歌を",
+   "zh_current": "我献上和平之歌……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BE94",
+   "budget_bytes": 10,
+   "jp": "コクビットは避けて下さいね",
+   "zh_current": "请避开座舱",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BEAC",
+   "budget_bytes": 15,
+   "jp": "私は歌います……平和の歌を",
+   "zh_current": "我献上和平之歌……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BEC8",
+   "budget_bytes": 24,
+   "jp": "……仕方ありませんね、攻撃準備をして下さい！",
+   "zh_current": "……没办法了、请准备攻击！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF04",
+   "budget_bytes": 13,
+   "jp": "直ちに戦闘行為を停止なさい！",
+   "zh_current": "请立即停战！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF20",
+   "budget_bytes": 28,
+   "jp": "あなた方は何を撃とうとしているのか本当にお分かりですか？",
+   "zh_current": "你们瞄准的是什么、真的明白吗？",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF48",
+   "budget_bytes": 14,
+   "jp": "撃てば癒されるのですか！？",
+   "zh_current": "开枪能治愈吗！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF64",
+   "budget_bytes": 13,
+   "jp": "撃たれた者には無い未来……",
+   "zh_current": "中弹者没有未来……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BF96",
+   "budget_bytes": 26,
+   "jp": "何と戦わねばならないのか……戦争は難しいですわね",
+   "zh_current": "该与什么战斗……战争真难呢",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1BFBC",
+   "budget_bytes": 20,
+   "jp": "この世界には悲しい夢が多すぎます……",
+   "zh_current": "这世界悲伤的梦太多……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C000",
+   "budget_bytes": 26,
+   "jp": "作りたい、と思いますわね……争いのない時代を",
+   "zh_current": "好想去创造呢……无争的时代",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C028",
+   "budget_bytes": 30,
+   "jp": "言葉は信じませんか？では、ご自分でご覧になったものは？",
+   "zh_current": "不信言语吗？那您亲眼所见的呢？",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C071",
+   "budget_bytes": 23,
+   "jp": "まあ……それはいけませんわねどうにか出来まして？",
+   "zh_current": "哎呀……那不行呢、怎么办？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C094",
+   "budget_bytes": 22,
+   "jp": "あまり良い状況とは言えないようですね……",
+   "zh_current": "状况似乎不太乐观……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C0FC",
+   "budget_bytes": 12,
+   "jp": "来ます！避けて下さい！",
+   "zh_current": "来了！请躲开！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C114",
+   "budget_bytes": 12,
+   "jp": "来ます！避けて下さい！",
+   "zh_current": "来了！请回避！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C12C",
+   "budget_bytes": 18,
+   "jp": "私はあなた方との戦闘を望みません",
+   "zh_current": "我无意与你们交战",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C14C",
+   "budget_bytes": 23,
+   "jp": "人は、戦わなくてもよい存在のはずなのに……",
+   "zh_current": "人、本应是无需战斗的……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1C170",
+   "budget_bytes": 19,
+   "jp": "まだ捕まるわけにはいかないのです！",
+   "zh_current": "我还不能被抓住！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0x884",
+   "budget_bytes": 9,
+   "jp": "発射してください！！",
+   "zh_current": "请发射！！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

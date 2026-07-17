@@ -1,0 +1,328 @@
+{
+ "entity": "char_74",
+ "kind": "character",
+ "cids": [
+  74
+ ],
+ "name_jp": "サウス・バニング",
+ "name_zh_KEEP": "沙乌斯·巴宁",
+ "cards": [
+  {
+   "cid": 74,
+   "ids": [
+    {
+     "idn": 222,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7612",
+     "zh_name_ptr": "0x20B7612",
+     "name_jp": "そういう時は身を隠すんだ！",
+     "name_zh_current": "这时就隐蔽",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム回避上昇",
+     "summary_zh_KEEP": "队・回避↑",
+     "didx": 31,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+40%",
+     "cutin_group": 154,
+     "cutin_jp": "そういう時は身を隕すんだ！",
+     "cutin_zh_current": "这种时候就要隐蔽！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_39",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 223,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7620",
+     "zh_name_ptr": "0x20B7620",
+     "name_jp": "戦いは一瞬で決まる……",
+     "name_zh_current": "战在一瞬间",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 155,
+     "cutin_jp": "戦いは一瞬で決まる……迷いのあるほうが負ける！",
+     "cutin_zh_current": "战斗胜负在一瞬间……犹豫的一方必败！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 224,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B762C",
+     "zh_name_ptr": "0x20B762C",
+     "name_jp": "いつまでガキの遊びをしてやがる！",
+     "name_zh_current": "别耍小把戏",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威回减",
+     "didx": 84,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）回避率が30%低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）回避-30%·攻击-30%",
+     "cutin_group": 156,
+     "cutin_jp": "いつまでガキの遊びをしてやがる！",
+     "cutin_zh_current": "还要玩多久小孩子的把戏！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x8A90",
+   "budget_bytes": 28,
+   "jp": "迷ってるようだな……なら、先手を取らせてもらう！",
+   "zh_current": "在犹豫吗……那我就先下手了！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8AB8",
+   "budget_bytes": 10,
+   "jp": "落とさせてもらうっ！",
+   "zh_current": "让你倒下！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8AD0",
+   "budget_bytes": 25,
+   "jp": "給料をただ取りするわけにはいかんからな！",
+   "zh_current": "可不能白拿这份工钱！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8AF8",
+   "budget_bytes": 7,
+   "jp": "一撃で決める！",
+   "zh_current": "解决你！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B0C",
+   "budget_bytes": 10,
+   "jp": "落とさせてもらうっ！",
+   "zh_current": "让你倒下！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B24",
+   "budget_bytes": 25,
+   "jp": "すまんが、オレも不器用でな……手加減は出来んぞ！！",
+   "zh_current": "抱歉、我这人不会手软……！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B4C",
+   "budget_bytes": 11,
+   "jp": "仕留めさせてもらうぞ！",
+   "zh_current": "看我收拾你！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B64",
+   "budget_bytes": 13,
+   "jp": "年季の違いを見せてやる！",
+   "zh_current": "让你见识老手！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B80",
+   "budget_bytes": 11,
+   "jp": "俺もそろそろロートルか……",
+   "zh_current": "我也老了……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8B98",
+   "budget_bytes": 9,
+   "jp": "どこを見てやがる！",
+   "zh_current": "你看哪呢！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8BB0",
+   "budget_bytes": 16,
+   "jp": "やれやれ……間一髪というところか",
+   "zh_current": "唉……真是千钧一发",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8BCC",
+   "budget_bytes": 8,
+   "jp": "かすっただけだ！",
+   "zh_current": "皮外伤！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8BE0",
+   "budget_bytes": 13,
+   "jp": "腕は悪く無いようだな！",
+   "zh_current": "身手不赖嘛！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8BFC",
+   "budget_bytes": 18,
+   "jp": "……クソ！回避し切れんとはな！",
+   "zh_current": "可恶！竟没躲过！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C1C",
+   "budget_bytes": 7,
+   "jp": "こ、こいつは！？",
+   "zh_current": "这是！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C30",
+   "budget_bytes": 20,
+   "jp": "そろそろ覚悟を決めねばならんようだな……",
+   "zh_current": "看来该做好觉悟了……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C50",
+   "budget_bytes": 8,
+   "jp": "……こういうことだ！",
+   "zh_current": "就这样！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C64",
+   "budget_bytes": 6,
+   "jp": "来たか……！",
+   "zh_current": "来了……！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C78",
+   "budget_bytes": 18,
+   "jp": "正面！来るぞ！散開してやり過ごせ！",
+   "zh_current": "正面！来了、散开！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8C98",
+   "budget_bytes": 17,
+   "jp": "さあ！覚悟を決めてもらおうか！",
+   "zh_current": "上！！做好觉悟吧！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8CB8",
+   "budget_bytes": 21,
+   "jp": "俺の腕もずいぶんとサビついちまったな……",
+   "zh_current": "我的身手也生疏了……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8CDC",
+   "budget_bytes": 19,
+   "jp": "そういうわけには行かんと言っている！！",
+   "zh_current": "我说了、那可不行！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x255C",
+   "budget_bytes": 26,
+   "jp": "フォーメーシヨン攻撃だ！全機、一斉にかかれ！！",
+   "zh_current": "编队攻击！全机一齐上！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2584",
+   "budget_bytes": 9,
+   "jp": "こちらバニング、了解だ！",
+   "zh_current": "巴宁收到！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x259C",
+   "budget_bytes": 14,
+   "jp": "よし！手助けするぞ、ウラキ！！",
+   "zh_current": "好！我来帮、浦木！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x25B8",
+   "budget_bytes": 22,
+   "jp": "モンシア！一人で突っ走るんじゃねえぞ！",
+   "zh_current": "蒙夏！别一个人乱冲！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x25DC",
+   "budget_bytes": 25,
+   "jp": "おう、そうだ！第四小隊の力を見せてやれ！！",
+   "zh_current": "对！让他们见识第四小队之力！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2604",
+   "budget_bytes": 11,
+   "jp": "手は抜くなよ、アデル！",
+   "zh_current": "别松懈了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x261C",
+   "budget_bytes": 9,
+   "jp": "こちらバニング、了解だ！",
+   "zh_current": "巴宁收到！",
+   "zh_current_bytes": 9
+  }
+ ]
+}

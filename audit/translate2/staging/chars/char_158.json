@@ -1,0 +1,328 @@
+{
+ "entity": "char_158",
+ "kind": "character",
+ "cids": [
+  158
+ ],
+ "name_jp": "ノリス・パッカード",
+ "name_zh_KEEP": "诺里斯",
+ "cards": [
+  {
+   "cid": 158,
+   "ids": [
+    {
+     "idn": 474,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E8A",
+     "zh_name_ptr": "0x20B7E8A",
+     "name_jp": "人の生は何を成したかで決まる！",
+     "name_zh_current": "人生看成就",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 373,
+     "cutin_jp": "人の生は何を成したかで決まる！",
+     "cutin_zh_current": "人的一生、由其成就而定！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 475,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7E9B",
+     "zh_name_ptr": "0x218FF88",
+     "name_jp": "だが……負けぬ！",
+     "name_zh_current": "但绝不认输",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 374,
+     "cutin_jp": "だが……負けぬ！",
+     "cutin_zh_current": "但是……绝不认输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 476,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7EA4",
+     "zh_name_ptr": "0x218C301",
+     "name_jp": "死に場所を見つけました",
+     "name_zh_current": "找到葬身地",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "すて身攻撃",
+     "summary_zh_KEEP": "舍身攻击",
+     "didx": 144,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）近接攻撃力が大幅上昇、敵の攻撃は回避不能に。戦闘終了までは撃破されない",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）舍身攻击·命中率+40%",
+     "cutin_group": 375,
+     "cutin_jp": "アイナ様……自分は死に場所を見つけました",
+     "cutin_zh_current": "爱娜大人……我已找到葬身之地",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_153",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x14A60",
+   "budget_bytes": 20,
+   "jp": "……来ぬのか？ならば、こちらから行く！",
+   "zh_current": "不来吗……那由我先攻！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14A80",
+   "budget_bytes": 15,
+   "jp": "そろそろ……仕掛けさせてもらう！",
+   "zh_current": "差不多该出手了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14A9C",
+   "budget_bytes": 15,
+   "jp": "そろそろ……仕掛けさせてもらう！",
+   "zh_current": "差不多该出手了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14AB8",
+   "budget_bytes": 20,
+   "jp": "アイナさま……そして、ギニアスさまのために！",
+   "zh_current": "为爱娜与基尼亚斯大人！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14AD8",
+   "budget_bytes": 9,
+   "jp": "もらったぁーっ！！",
+   "zh_current": "拿下！！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14AF0",
+   "budget_bytes": 19,
+   "jp": "その目の良さが……命取りだッ！！",
+   "zh_current": "好眼力……正会要你命！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14B10",
+   "budget_bytes": 7,
+   "jp": "覚悟おーっ！",
+   "zh_current": "觉悟吧！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14B24",
+   "budget_bytes": 9,
+   "jp": "これで終わりだ！！",
+   "zh_current": "就此结束！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14B3C",
+   "budget_bytes": 16,
+   "jp": "ぬうッ！これまで、か……！",
+   "zh_current": "到此为止了吗……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14B58",
+   "budget_bytes": 28,
+   "jp": "重力に縛られおって！……フラットランダーどもめが！",
+   "zh_current": "竟受制于重力！你们这些地居者！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14B80",
+   "budget_bytes": 20,
+   "jp": "そう簡単に死んでやるわけにはいかん！",
+   "zh_current": "想让我死？没那么简单！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14BA0",
+   "budget_bytes": 5,
+   "jp": "フン……！",
+   "zh_current": "哼……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14BB4",
+   "budget_bytes": 20,
+   "jp": "うぬっ……！敵ながらやるではないか！",
+   "zh_current": "可恶……这家伙有本事！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14BD4",
+   "budget_bytes": 15,
+   "jp": "クッ……！少しはできるか！",
+   "zh_current": "唔……有点本事嘛！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14BF0",
+   "budget_bytes": 16,
+   "jp": "何……っ！？これほどの相手とは！",
+   "zh_current": "什么……竟这么强！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C0C",
+   "budget_bytes": 18,
+   "jp": "ここが……私の死に場所だと……？",
+   "zh_current": "此地是我的死地吗……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C2C",
+   "budget_bytes": 21,
+   "jp": "無駄なことはするな！貴様に勝ち目はない！",
+   "zh_current": "别做无用功！你没胜算！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C50",
+   "budget_bytes": 17,
+   "jp": "火力はあってもそれだけではな……！",
+   "zh_current": "纵有火力、也不够看！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C70",
+   "budget_bytes": 17,
+   "jp": "各機、散開しろ！砲撃が来るぞ！",
+   "zh_current": "各机散开！炮击来了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14C90",
+   "budget_bytes": 10,
+   "jp": "その機体……いただく！",
+   "zh_current": "那机体归我！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14CA8",
+   "budget_bytes": 11,
+   "jp": "この私を捕えるとは……",
+   "zh_current": "竟想抓住我……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14CC0",
+   "budget_bytes": 13,
+   "jp": "その甘さが……命取りだ！",
+   "zh_current": "天真……会要命！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A34",
+   "budget_bytes": 10,
+   "jp": "後は行くのみ……！！",
+   "zh_current": "剩下只管上！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A4C",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A64",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A7C",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5A94",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5AAC",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x5AC4",
+   "budget_bytes": 12,
+   "jp": "承知した！……参る！！",
+   "zh_current": "明白！上了！！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

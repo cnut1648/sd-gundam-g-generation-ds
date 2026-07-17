@@ -1,0 +1,59 @@
+{
+ "entity": "unit_639",
+ "kind": "unit",
+ "utids": [
+  639
+ ],
+ "name_jp": "エターナル",
+ "name_zh_current": "永恒号",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CA70",
+   "jp": "単装エネルギー砲",
+   "zh_current": "单装能量炮",
+   "shared_by_n_units": 1
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CA7B",
+   "jp": "連装レールガン",
+   "zh_current": "连装轨道炮",
+   "shared_by_n_units": 1
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218BF81",
+   "jp": "CIWS",
+   "zh_current": "CIWS",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6E86",
+   "jp": "ビームコート",
+   "zh_current": "光束涂层",
+   "owner": false,
+   "owned_by": "unit_46"
+  },
+  "defense": {
+   "record": 2,
+   "record_offset": "0x44",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "威力250までのビーム属性の攻撃を無効化し、",
+    "それを超える場合ダメージを20%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力250以下",
+    "光束攻击无效",
+    "超过则减20%"
+   ],
+   "owner": false,
+   "owned_by": "unit_46"
+  }
+ }
+}

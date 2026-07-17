@@ -1,0 +1,460 @@
+{
+ "entity": "char_134",
+ "kind": "character",
+ "cids": [
+  134,
+  135
+ ],
+ "name_jp": "ディアナ・ソレル",
+ "name_zh_KEEP": "迪安娜",
+ "cards": [
+  {
+   "cid": 134,
+   "ids": [
+    {
+     "idn": 402,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7C7D",
+     "zh_name_ptr": "0x218FF51",
+     "name_jp": "……よしなに",
+     "name_zh_current": "一切拜托了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲防御力↑",
+     "summary_zh_KEEP": "范围回甲↑",
+     "didx": 103,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%·装甲+2",
+     "cutin_group": 319,
+     "cutin_jp": "……よしなに",
+     "cutin_zh_current": "……一切就拜托了",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 403,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C8E",
+     "zh_name_ptr": "0x218C25E",
+     "name_jp": "私は不和と争いを招く女神……",
+     "name_zh_current": "纷争的女神",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 320,
+     "cutin_jp": "今の私は不和と争いを蒔く女神……",
+     "cutin_zh_current": "如今的我、乃播撒纷争之种的女神……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 404,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C9F",
+     "zh_name_ptr": "0x20B7C9F",
+     "name_jp": "やってみせます！！",
+     "name_zh_current": "我会做到！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "反応&威力上昇",
+     "summary_zh_KEEP": "反应・威力↑",
+     "didx": 65,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）反応が40上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）反应+40·攻击+40%",
+     "cutin_group": 321,
+     "cutin_jp": "やってみます！やってみせます！！",
+     "cutin_zh_current": "我试试看！我做给你们看！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 135,
+   "ids": [
+    {
+     "idn": 405,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7C7D",
+     "zh_name_ptr": "0x218FF51",
+     "name_jp": "……よしなに",
+     "name_zh_current": "一切拜托了",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲防御力↑",
+     "summary_zh_KEEP": "范围回甲↑",
+     "didx": 103,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+20%·装甲+2",
+     "cutin_group": 322,
+     "cutin_jp": "……よしなに",
+     "cutin_zh_current": "……一切就拜托了",
+     "name_owner": true,
+     "name_shared_with_idn": 402,
+     "detail_owner": false,
+     "detail_owned_by": "char_134",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 406,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C8E",
+     "zh_name_ptr": "0x218C25E",
+     "name_jp": "私は不和と争いを招く女神……",
+     "name_zh_current": "纷争的女神",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 323,
+     "cutin_jp": "今の私は不和と争いを蒔く女神……",
+     "cutin_zh_current": "如今的我、乃播撒纷争之种的女神……",
+     "name_owner": true,
+     "name_shared_with_idn": 403,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 407,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7CB2",
+     "zh_name_ptr": "0x218C269",
+     "name_jp": "無惨さを示しましょう！",
+     "name_zh_current": "见识残酷吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃力大幅上昇",
+     "summary_zh_KEEP": "威↑↑・暴击",
+     "didx": 174,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が60%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+60%·暴击",
+     "cutin_group": 324,
+     "cutin_jp": "ここでもう一つの大罪を犯し暴走の果ての無残さを示しましょう！",
+     "cutin_zh_current": "在此再犯一项大罪展示暴走尽头的惨状！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x11524",
+   "budget_bytes": 18,
+   "jp": "まずは挨授が先ではありませんか？",
+   "zh_current": "不该先打招呼吗？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11544",
+   "budget_bytes": 16,
+   "jp": "やってみます！やってみせます！！",
+   "zh_current": "试试看！做给你看！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11560",
+   "budget_bytes": 5,
+   "jp": "用意！",
+   "zh_current": "备！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11590",
+   "budget_bytes": 13,
+   "jp": "これ以上の抵抗はお止めなさい！",
+   "zh_current": "请停止抵抗！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x115AC",
+   "budget_bytes": 8,
+   "jp": "、一斉射撃！",
+   "zh_current": "、齐射！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x115C0",
+   "budget_bytes": 15,
+   "jp": "私は逃げも隕れもいたしません！",
+   "zh_current": "我不逃也不躲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x115DC",
+   "budget_bytes": 15,
+   "jp": "私は逃げも隕れもいたしません！",
+   "zh_current": "我不逃也不躲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x115F8",
+   "budget_bytes": 18,
+   "jp": "針路、このまま！突撃を敢行します！",
+   "zh_current": "保持航向！全军突击！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1163B",
+   "budget_bytes": 27,
+   "jp": "これもまた、私の犯した罪のひとつなのでしょう……",
+   "zh_current": "这恐怕也是我犯下的罪过之一吧……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11688",
+   "budget_bytes": 28,
+   "jp": "ならば、本艦は現戦線を維持！引き続き敵に備えよ！",
+   "zh_current": "那么本舰维持战线！继续戒备敌人！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x116B0",
+   "budget_bytes": 22,
+   "jp": "私には、まだ女王としての使命があるのです！",
+   "zh_current": "我身为女王、仍有使命！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x116F4",
+   "budget_bytes": 22,
+   "jp": "全バリャー放出！次の攻撃に備えよ！！",
+   "zh_current": "全屏障展开！戒备下一波攻击！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11738",
+   "budget_bytes": 22,
+   "jp": "かまわぬ！この船が落ちねばそれでいい！",
+   "zh_current": "无妨！只要舰不沉就好！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1175C",
+   "budget_bytes": 20,
+   "jp": "こ、これも……報いというのですか！？",
+   "zh_current": "这、这也是报应吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1177C",
+   "budget_bytes": 36,
+   "jp": "禁断であるべきものを使った者は罰せられるべきなのでしょうか？",
+   "zh_current": "动用禁忌兵器之人难道就该受罚吗？",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x117AC",
+   "budget_bytes": 9,
+   "jp": "全フィールド、エネルギー放出！",
+   "zh_current": "全力场放能！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x117F4",
+   "budget_bytes": 30,
+   "jp": "もはや抵抗は何の意味も持ちません勇気をもって投降して下さい",
+   "zh_current": "抵抗已毫无意义、请勇敢地投降吧",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11820",
+   "budget_bytes": 27,
+   "jp": "今の私は不和と争いを蒔く女神なのだろうか……？",
+   "zh_current": "如今的我是招致纷争之女吗……？",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11848",
+   "budget_bytes": 23,
+   "jp": "無礼ではありませんか！？お退がりなさい！",
+   "zh_current": "太无礼了吧！？快退下吧",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1.bin",
+   "record": "0x7FC",
+   "budget_bytes": 23,
+   "jp": "マザー·バンガードを支援します！全バリアー放出！！",
+   "zh_current": "支援母舰！全部屏障放出！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11894",
+   "budget_bytes": 11,
+   "jp": "よろしい！開始せよ！！",
+   "zh_current": "很好！开始！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x118AC",
+   "budget_bytes": 22,
+   "jp": "ディアナ·カウンター全軍をもって敵を倒します！",
+   "zh_current": "迪安娜回归军、全军突击！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x118D0",
+   "budget_bytes": 26,
+   "jp": "戦争はなんとしても、終らせなければならぬのです！",
+   "zh_current": "战争、无论如何都必须终结！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11924",
+   "budget_bytes": 8,
+   "jp": "、一斉射撃！",
+   "zh_current": "全军齐射",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11978",
+   "budget_bytes": 10,
+   "jp": "よろしい！突撃を！！",
+   "zh_current": "很好！突击！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11990",
+   "budget_bytes": 15,
+   "jp": "私は逃げも隕れもいたしません！",
+   "zh_current": "我不逃也不躲！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x119AC",
+   "budget_bytes": 22,
+   "jp": "黒歴史を繰り返させるわけにはいかないのです！",
+   "zh_current": "决不能让黑历史重演下去！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x119EC",
+   "budget_bytes": 28,
+   "jp": "このようなことになるとは……全て女王たる私の青任です……",
+   "zh_current": "竟会这样……全是我这女王之责……",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11A34",
+   "budget_bytes": 22,
+   "jp": "私には、まだ女王としての使命があるのです！",
+   "zh_current": "我身为女王、仍有使命！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11AEF",
+   "budget_bytes": 23,
+   "jp": "かまわぬ！戦闘の間だけでももてば良い！！",
+   "zh_current": "无妨！能撑过战斗就行！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11B34",
+   "budget_bytes": 28,
+   "jp": "いいえ！私は成すべきことを果たさねばなりません！",
+   "zh_current": "不！我必须完成我该做的事！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11BA6",
+   "budget_bytes": 6,
+   "jp": "よしなに……",
+   "zh_current": "有劳……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11BB8",
+   "budget_bytes": 30,
+   "jp": "もはや抵抗は何の意味も持ちません勇気をもって投降して下さい",
+   "zh_current": "抵抗已毫无意义、请勇敢地投降吧",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11BE4",
+   "budget_bytes": 27,
+   "jp": "なんと無力なことか……こんなことでは永遠に平和など……",
+   "zh_current": "多么无力……这样下去和平永远……",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11C0C",
+   "budget_bytes": 22,
+   "jp": "無礼でありましょう！？お退がりなさい！",
+   "zh_current": "太无礼了吧！？快退下！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

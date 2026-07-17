@@ -1,0 +1,85 @@
+{
+ "entity": "unit_223",
+ "kind": "unit",
+ "utids": [
+  223,
+  224,
+  225
+ ],
+ "name_jp": "ゲーマルク",
+ "name_zh_current": "盖马克",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C838",
+   "jp": "メガ粒子砲",
+   "zh_current": "米加粒子炮",
+   "shared_by_n_units": 77
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906F3",
+   "jp": "グレネード・ランチャー",
+   "zh_current": "榴弹发射器",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F129",
+   "jp": "チルド・ファンネル",
+   "zh_current": "子浮游炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 4,
+   "ptr": "0x218C8E1",
+   "jp": "ハイパー・メガ粒子砲",
+   "zh_current": "超级米加粒子炮",
+   "shared_by_n_units": 10
+  },
+  {
+   "slot": 5,
+   "ptr": "0x218F132",
+   "jp": "マザー・ファンネル",
+   "zh_current": "母浮游炮",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 74,
+   "record_offset": "0x57c",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

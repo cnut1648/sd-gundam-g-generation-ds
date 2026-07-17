@@ -1,0 +1,618 @@
+{
+ "entity": "char_226",
+ "kind": "character",
+ "cids": [
+  226,
+  227
+ ],
+ "name_jp": "ロベルト",
+ "name_zh_KEEP": "罗伯托",
+ "cards": [
+  {
+   "cid": 226,
+   "ids": [
+    {
+     "idn": 678,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B854F",
+     "zh_name_ptr": "0x218FFEB",
+     "name_jp": "落としてやる！！",
+     "name_zh_current": "把你击落！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 535,
+     "cutin_jp": "こなくそー！落としてやる！！",
+     "cutin_zh_current": "可恶！我要把你击落！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 679,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8558",
+     "zh_name_ptr": "0x20B8558",
+     "name_jp": "勝てると思うなよ！",
+     "name_zh_current": "别光靠性能",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵防御減少",
+     "summary_zh_KEEP": "敌装甲减少",
+     "didx": 118,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）装甲-3",
+     "cutin_group": 536,
+     "cutin_jp": "性能だけで勝てると思うなよ！",
+     "cutin_zh_current": "别以为光靠性能就能赢！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 227,
+   "ids": [
+    {
+     "idn": 681,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B856A",
+     "zh_name_ptr": "0x218FFF6",
+     "name_jp": "マニュアル通りの操縦など！",
+     "name_zh_current": "我不照手册",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 538,
+     "cutin_jp": "マニュアル通りの操縦など……自分はしちゃいない！",
+     "cutin_zh_current": "照着手册操纵什么的……我可不那么干！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 682,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8558",
+     "zh_name_ptr": "0x20B8558",
+     "name_jp": "勝てると思うなよ！",
+     "name_zh_current": "别光靠性能",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵防御減少",
+     "summary_zh_KEEP": "敌装甲减少",
+     "didx": 118,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）装甲-3",
+     "cutin_group": 539,
+     "cutin_jp": "性能だけで勝てると思うなよ！",
+     "cutin_zh_current": "别以为光靠性能就能赢！",
+     "name_owner": true,
+     "name_shared_with_idn": 679,
+     "detail_owner": false,
+     "detail_owned_by": "char_226",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 683,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8575",
+     "zh_name_ptr": "0x20B8575",
+     "name_jp": "負けるわけがないんだよ！",
+     "name_zh_current": "我怎会输！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 540,
+     "cutin_jp": "この腕で戦いをくぐり抜けてきたんだ！負けるわけがないんだよ！",
+     "cutin_zh_current": "我靠这双手历经无数战斗！绝不可能输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1E848",
+   "budget_bytes": 9,
+   "jp": "遅いんだよっ！！",
+   "zh_current": "太慢了！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E860",
+   "budget_bytes": 13,
+   "jp": "腕の違いを見せてやる！",
+   "zh_current": "让你瞧瞧本事！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E87C",
+   "budget_bytes": 5,
+   "jp": "そこだっ！",
+   "zh_current": "在那！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E890",
+   "budget_bytes": 5,
+   "jp": "食らえっ！",
+   "zh_current": "看招！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E8A4",
+   "budget_bytes": 13,
+   "jp": "腕の違いを見せてやる！",
+   "zh_current": "让你见识差距！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E8C0",
+   "budget_bytes": 9,
+   "jp": "スキだらけなんだよ！",
+   "zh_current": "破绽百出！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E8D8",
+   "budget_bytes": 13,
+   "jp": "白兵戦のやり方を教えてやる！",
+   "zh_current": "教你白刃战！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E8F4",
+   "budget_bytes": 6,
+   "jp": "なめるなっ！",
+   "zh_current": "别狂！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E908",
+   "budget_bytes": 25,
+   "jp": "くそっ！……油断したか……すみません、大佐……",
+   "zh_current": "可恶！中弹了……抱歉、大佐……",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E930",
+   "budget_bytes": 9,
+   "jp": "当たってたまるか！",
+   "zh_current": "打不中我！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E948",
+   "budget_bytes": 24,
+   "jp": "こんなところで……やられるわけにはいかないんだよ！",
+   "zh_current": "在这里……我可不能就此倒下！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E96C",
+   "budget_bytes": 7,
+   "jp": "かすったか！？",
+   "zh_current": "擦过！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E980",
+   "budget_bytes": 12,
+   "jp": "っ！やるじゃないか！！",
+   "zh_current": "哦！干得不错！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E998",
+   "budget_bytes": 11,
+   "jp": "こりゃあ、手ごわいな……",
+   "zh_current": "这家伙难缠！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E9B0",
+   "budget_bytes": 13,
+   "jp": "うおっ！なんて火力だ！",
+   "zh_current": "呜啊！这火力！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E9CC",
+   "budget_bytes": 12,
+   "jp": "クソッ！まだ……まだだ！",
+   "zh_current": "可恶！还没完！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E9E4",
+   "budget_bytes": 8,
+   "jp": "そんなもんでっ！！",
+   "zh_current": "就这点！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1E9F8",
+   "budget_bytes": 5,
+   "jp": "当たるか！",
+   "zh_current": "白打！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA0C",
+   "budget_bytes": 17,
+   "jp": "デカいのが来るぞ！各機、散開！",
+   "zh_current": "大家伙来了！散开吧！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA2C",
+   "budget_bytes": 10,
+   "jp": "そいつはもらったぁっ！",
+   "zh_current": "那个归我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA44",
+   "budget_bytes": 18,
+   "jp": "捕まった！？こいつは……マズイな……",
+   "zh_current": "被困！？这下不妙……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA64",
+   "budget_bytes": 24,
+   "jp": "冗談じゃない！簡単に捕虜に出来ると思うなっ！",
+   "zh_current": "笑话！别想轻易抓住我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x75FC",
+   "budget_bytes": 20,
+   "jp": "一斉攻撃だ！間をあけずに行くぞーっ！",
+   "zh_current": "全军攻击！别停、一口气上！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x761C",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7634",
+   "budget_bytes": 26,
+   "jp": "任せてください！俺たちの力、思い知らせてやりますよ！",
+   "zh_current": "交给我们、让他们见识实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x765C",
+   "budget_bytes": 19,
+   "jp": "いいぞ、アボリー！コッチは準備OKだ！！",
+   "zh_current": "好、阿波利！准备OK！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x767C",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7694",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x76AC",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EA88",
+   "budget_bytes": 12,
+   "jp": "このっ！来させるか！！",
+   "zh_current": "你这！别过来！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EAA0",
+   "budget_bytes": 6,
+   "jp": "来させるか！",
+   "zh_current": "别过来！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EAB4",
+   "budget_bytes": 15,
+   "jp": "キャリアの違いを見せてやる！",
+   "zh_current": "让你见识老资历！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EAD0",
+   "budget_bytes": 10,
+   "jp": "よし、いけえーっ！",
+   "zh_current": "好、上！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EAE8",
+   "budget_bytes": 6,
+   "jp": "やらせるか！",
+   "zh_current": "休想！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EAFC",
+   "budget_bytes": 9,
+   "jp": "落としてやるっ！！",
+   "zh_current": "必击落你！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB14",
+   "budget_bytes": 7,
+   "jp": "邪魔はさせん！",
+   "zh_current": "别碍事！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB28",
+   "budget_bytes": 8,
+   "jp": "もらったぁーっ！",
+   "zh_current": "拿下！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB3C",
+   "budget_bytes": 14,
+   "jp": "すまん、アボリー……後を頼む！",
+   "zh_current": "阿波利、拜托了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB58",
+   "budget_bytes": 27,
+   "jp": "ダテに一年戦争を生き抜いて来たんじゃないんだよ！",
+   "zh_current": "一年战争……我可不是白活的！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EB80",
+   "budget_bytes": 21,
+   "jp": "そう簡単に……やられてたまるかーっ！！",
+   "zh_current": "没那么……轻易被干掉！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EBA4",
+   "budget_bytes": 13,
+   "jp": "……だが、この程度ならっ！",
+   "zh_current": "……但、就这点！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EBC0",
+   "budget_bytes": 12,
+   "jp": "ミスったか！？クソッ！",
+   "zh_current": "失手了！？可恶！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EBD8",
+   "budget_bytes": 22,
+   "jp": "また敵か！？この機体は人気があるなあ！！",
+   "zh_current": "又来！？这机体真抢手！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EBFC",
+   "budget_bytes": 14,
+   "jp": "くっ！まるでバケモノだ……！！",
+   "zh_current": "唔！是怪物吗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EC18",
+   "budget_bytes": 20,
+   "jp": "くそっ！並じゃないな……コイツら！！",
+   "zh_current": "可恶！不是普通杂兵！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EC38",
+   "budget_bytes": 22,
+   "jp": "その程度の攻撃で、勝てると思うなよっ！",
+   "zh_current": "凭那种攻击、休想赢我！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EC5C",
+   "budget_bytes": 11,
+   "jp": "当たってはやれないな！",
+   "zh_current": "可不能挨打！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EC74",
+   "budget_bytes": 9,
+   "jp": "来るぞ！散開っ！",
+   "zh_current": "来了！散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1EC8C",
+   "budget_bytes": 14,
+   "jp": "よーし、その機体はもらった！",
+   "zh_current": "好、那机体归我了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ECA8",
+   "budget_bytes": 9,
+   "jp": "なんてこった……！！",
+   "zh_current": "怎么会……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1ECC0",
+   "budget_bytes": 21,
+   "jp": "ふざけるな！まだ負けたわけじゃないんだ！",
+   "zh_current": "少来！我还没有输呢！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x76C4",
+   "budget_bytes": 20,
+   "jp": "一斉攻撃だ！間をあけずに行くぞーっ！",
+   "zh_current": "全军攻击！火力别停！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x76E4",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x76FC",
+   "budget_bytes": 26,
+   "jp": "任せてください！俺たちの力、思い知らせてやりますよ！",
+   "zh_current": "交给我！！尝尝我们的力量吧！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7724",
+   "budget_bytes": 12,
+   "jp": "おう！やるぞ、アボリー！！",
+   "zh_current": "上、阿波利！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x773C",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7754",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x776C",
+   "budget_bytes": 10,
+   "jp": "こちらロベルト、了解だ！！",
+   "zh_current": "罗伯托收到",
+   "zh_current_bytes": 10
+  }
+ ]
+}

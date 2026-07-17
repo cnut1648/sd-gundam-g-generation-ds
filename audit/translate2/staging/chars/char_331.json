@@ -1,0 +1,532 @@
+{
+ "entity": "char_331",
+ "kind": "character",
+ "cids": [
+  331,
+  332
+ ],
+ "name_jp": "バスク・オム",
+ "name_zh_KEEP": "巴斯克·欧姆",
+ "cards": [
+  {
+   "cid": 331,
+   "ids": [
+    {
+     "idn": 993,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B4A",
+     "zh_name_ptr": "0x218C634",
+     "name_jp": "……立場がなくなる！",
+     "name_zh_current": "立场不保！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中上昇",
+     "summary_zh_KEEP": "命中上升",
+     "didx": 19,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%",
+     "cutin_group": 664,
+     "cutin_jp": "敵を黙って見過ごしたとなれば私のジャミトフへの立場がなくなる！",
+     "cutin_zh_current": "若默许敌人就此逃脱我将无颜面对加米托夫！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_198",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 994,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8B55",
+     "zh_name_ptr": "0x20B8B55",
+     "name_jp": "徹底的にやってやる！",
+     "name_zh_current": "彻底干掉你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力&装甲上昇",
+     "summary_zh_KEEP": "威力・装甲↑",
+     "didx": 92,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）攻击+20%·装甲+2",
+     "cutin_group": 665,
+     "cutin_jp": "徹底的にやってやる！",
+     "cutin_zh_current": "我要彻底干掉你们！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_71",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 995,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B61",
+     "zh_name_ptr": "0x20B8B61",
+     "name_jp": "一撃せねば納まらん！！",
+     "name_zh_current": "非一击不可",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "散開封印",
+     "summary_zh_KEEP": "散开封印",
+     "didx": 156,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）チームの間接攻撃の際、攻撃対象が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）解除封印",
+     "cutin_group": 666,
+     "cutin_jp": "ャツらを一撃せねば納まらん！！",
+     "cutin_zh_current": "不痛击那帮家伙绝不罢休！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_131",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 332,
+   "ids": [
+    {
+     "idn": 996,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B6E",
+     "zh_name_ptr": "0x218C63F",
+     "name_jp": "無意味さを教えてやる！",
+     "name_zh_current": "见识徒劳吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑&散開封印",
+     "summary_zh_KEEP": "命中↑・封散",
+     "didx": 157,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が40%上昇。チームの間接攻撃の際、相手が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+40%·解除封印",
+     "cutin_group": 667,
+     "cutin_jp": "ティターンズに逆らうことの無意味さを教えてやる！",
+     "cutin_zh_current": "违抗提坦斯有多么徒劳让你见识见识！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 997,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B84",
+     "zh_name_ptr": "0x218C64A",
+     "name_jp": "ティターンズが立つのだ！",
+     "name_zh_current": "提坦斯登场",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 668,
+     "cutin_jp": "我々ティターンズが立つのだ！",
+     "cutin_zh_current": "我等提坦斯崛起了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 998,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8B8E",
+     "zh_name_ptr": "0x218C655",
+     "name_jp": "ティターンズそのものなのだ！",
+     "name_zh_current": "正是提坦斯",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 669,
+     "cutin_jp": "私がティターンズそのものなのだ！負けるわけがない！！",
+     "cutin_zh_current": "我就是提坦斯本身！我岂有败北之理！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x26648",
+   "budget_bytes": 26,
+   "jp": "わざわざ出向いてくるとはな……根絶やしにしてくれる！",
+   "zh_current": "竟特意找上门……斩尽杀绝！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26670",
+   "budget_bytes": 20,
+   "jp": "奴らを一撃せねばおさまらんわッ！！",
+   "zh_current": "不痛击敌人、气难平！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26690",
+   "budget_bytes": 21,
+   "jp": "我々に楯突くことの無意味さを教えてやれ！",
+   "zh_current": "跟我们斗毫无意义！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x266CC",
+   "budget_bytes": 18,
+   "jp": "一機たりとも逃がすな！……撃て！",
+   "zh_current": "一架都别放跑！开火！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x266EC",
+   "budget_bytes": 12,
+   "jp": "やれ！一斉射撃だ！！",
+   "zh_current": "上！！齐射！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26704",
+   "budget_bytes": 12,
+   "jp": "やれ！一斉射撃だ！！",
+   "zh_current": "上！！齐射！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2671C",
+   "budget_bytes": 12,
+   "jp": "やれ！一斉射撃だ！！",
+   "zh_current": "上！！齐射！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26734",
+   "budget_bytes": 21,
+   "jp": "宇宙人め……！生きて帰れると思うな！",
+   "zh_current": "宇宙人……休想活着回去！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26758",
+   "budget_bytes": 16,
+   "jp": "ええい……！なんたるザマだ！",
+   "zh_current": "可恶……丢人啊！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26774",
+   "budget_bytes": 19,
+   "jp": "……大したことはない！このまま前進する！",
+   "zh_current": "……不算什么！继续前进！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26794",
+   "budget_bytes": 20,
+   "jp": "ここで沈められればいい笑いものだ！",
+   "zh_current": "在此沉没、就成笑柄了！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x267B4",
+   "budget_bytes": 10,
+   "jp": "しょせんこの程度か！",
+   "zh_current": "不过如此！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x267EC",
+   "budget_bytes": 26,
+   "jp": "そんなことはどうでもいい！早く敵をせん滅しろ！",
+   "zh_current": "那都无所谓！！快歼灭敌人！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26814",
+   "budget_bytes": 18,
+   "jp": "ええい……！虫ケラどもめが！",
+   "zh_current": "可恶……一群臭虫！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2684A",
+   "budget_bytes": 21,
+   "jp": "おのれ……！雑魚どもがいきがりおって！",
+   "zh_current": "可恶……杂鱼也敢逞强！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2688A",
+   "budget_bytes": 28,
+   "jp": "ここで退いてはジャミトフへの立場がなくなる！戦闘続行だ！",
+   "zh_current": "退了无颜见加米托夫！继续战斗！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x268B4",
+   "budget_bytes": 20,
+   "jp": "私に逆らうことの無意味さが分かったか？",
+   "zh_current": "违抗我的下场、懂了？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x268D4",
+   "budget_bytes": 15,
+   "jp": "ふんっ！小ざかしい！！",
+   "zh_current": "哼！！自作聪明！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x268F0",
+   "budget_bytes": 15,
+   "jp": "ふんっ！小ざかしい！！",
+   "zh_current": "哼！！厚颜无耻！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2690C",
+   "budget_bytes": 17,
+   "jp": "その機体は我々が役立ててやる！",
+   "zh_current": "那机体、我们收下！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2692C",
+   "budget_bytes": 15,
+   "jp": "なにっ！こっ、これは……！",
+   "zh_current": "什么！这、这是……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26948",
+   "budget_bytes": 15,
+   "jp": "バカめ！わざわざ死にに来たか！",
+   "zh_current": "蠢货！来送死吗！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26964",
+   "budget_bytes": 13,
+   "jp": "！敵を迎え撃て！！",
+   "zh_current": "全军迎击！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26980",
+   "budget_bytes": 23,
+   "jp": "我がティターンズに逆らう事の無意味さを教えてくれる！",
+   "zh_current": "违抗提坦斯毫无意义！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x269BE",
+   "budget_bytes": 18,
+   "jp": "よし！反乱分子どもを一掃しろ！！",
+   "zh_current": "好！肃清叛乱分子！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x269DC",
+   "budget_bytes": 15,
+   "jp": "一機残らず叩き落せいっ！！",
+   "zh_current": "一架不剩全击落！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x269F8",
+   "budget_bytes": 19,
+   "jp": "徹底的に叩くのだ！！…撃てっ！",
+   "zh_current": "彻底打垮他们！！开火！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26A18",
+   "budget_bytes": 12,
+   "jp": "我らの力を見せてくれる！",
+   "zh_current": "让你见识实力！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26A30",
+   "budget_bytes": 12,
+   "jp": "貴様らの好きにはさせん！",
+   "zh_current": "不让你们乱来！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26A48",
+   "budget_bytes": 13,
+   "jp": "必ずやせん滅してみせるわ！",
+   "zh_current": "定要全歼你们！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26A64",
+   "budget_bytes": 19,
+   "jp": "お、おのれ！宇宙人どもめが……！！",
+   "zh_current": "可恶！！臭宇宙人……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26A84",
+   "budget_bytes": 18,
+   "jp": "ザコどもが！頭に乗るからだ！！",
+   "zh_current": "杂兵们！太得意了吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26AA4",
+   "budget_bytes": 22,
+   "jp": "ええい！直援部隊は何をしているか！！",
+   "zh_current": "可恶！直援部队在干什么！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26AC8",
+   "budget_bytes": 10,
+   "jp": "ふん！小賢しいっ！",
+   "zh_current": "哼！小聪明！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26AF5",
+   "budget_bytes": 22,
+   "jp": "ええい、何をやっている！さっさと反撃しろっ！",
+   "zh_current": "喂、在干什么！快反击！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26B18",
+   "budget_bytes": 18,
+   "jp": "おのれっ！このままでは帰さんぞ！！",
+   "zh_current": "该死！！别想回去！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26B38",
+   "budget_bytes": 15,
+   "jp": "ぬうっ！馬鹿にしおって！！",
+   "zh_current": "唔！！敢小看我！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26B54",
+   "budget_bytes": 21,
+   "jp": "え、ええい！後退だ！進路を確保しろ！",
+   "zh_current": "可恶！后退！！确保航路！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26B78",
+   "budget_bytes": 19,
+   "jp": "その程度の戦力で……自惚れるなよ！",
+   "zh_current": "凭这点战力……别自大！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26B98",
+   "budget_bytes": 16,
+   "jp": "何の変哲もない攻撃だな……！",
+   "zh_current": "毫无新意的攻击！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26BB4",
+   "budget_bytes": 14,
+   "jp": "この程度の攻撃に当たるなよ！",
+   "zh_current": "别中这点攻击！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26BD0",
+   "budget_bytes": 25,
+   "jp": "ティターンズに忠誠を誓うなら命だけは助けてやろう！",
+   "zh_current": "效忠提坦斯、便饶你一命！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26BF8",
+   "budget_bytes": 20,
+   "jp": "こんなもの……欲しければくれてやるわ！",
+   "zh_current": "这东西……想要就给你！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26C18",
+   "budget_bytes": 20,
+   "jp": "わしに指図する気か！？ふざけるなっ！！",
+   "zh_current": "想指挥我！？少来！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "entity": "char_246",
+ "web_sources": [
+  "https://dic.pixiv.net/a/%E3%83%A6%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%8F%E3%82%B9%E3%83%A9%E3%83%BC",
+  "https://gundam.dancing-doll.com/gundam-0083/0083-saying/others.html",
+  "https://wiki.biligame.com/gundam/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BE0083%E4%BA%BA%E7%89%A9",
+  "https://gundam.fandom.com/wiki/Yuri_Hasler"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 738,
+   "name_zh": "绝不能败！",
+   "cutin_zh": "祖国的名誉、同胞的骄傲！我们有绝不能败的理由！",
+   "notes": "名台词与指令名沿用现译、准确且共享关键词绝不能败"
+  },
+  {
+   "idn": 739,
+   "name_zh": "灵魂的光辉",
+   "cutin_zh": "这就是男人们灵魂的光辉……！",
+   "notes": "0083最终话殖民地坠落名场面台词、采用中文社区通行译法男人们灵魂的光辉、指令名随之取其后五字"
+  },
+  {
+   "idn": 740,
+   "name_zh": "迈出一步！",
+   "cutin_zh": "此刻、终于迈出了一步！我们的历史！",
+   "detail_effect_zh": "1回合内、除自身外的同伴命中率提升20%",
+   "notes": "效果补回原译丢失的1回合与除自身外限定；名台词保留日文倒装的两行结构"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x20A70", "zh": "趁敌不备、速战速决！"},
+  {"file": "0.bin", "record": "0x20A90", "zh": "……开火！"},
+  {"file": "0.bin", "record": "0x20AA4", "zh": "为我们称霸地球圈之日！……上吧！"},
+  {"file": "0.bin", "record": "0x20ACC", "zh": "齐射准备！……开火！"},
+  {"file": "0.bin", "record": "0x20B07", "zh": "联邦……见识我们的力量！"},
+  {"file": "0.bin", "record": "0x20B28", "zh": "为吉翁复兴……突击！"},
+  {"file": "0.bin", "record": "0x20B48", "zh": "将我们逐至边境之辈、如今要付出代价！"},
+  {"file": "0.bin", "record": "0x20B78", "zh": "为吉翁！"},
+  {"file": "0.bin", "record": "0x20B8C", "zh": "唔……吉翁万岁！"},
+  {"file": "0.bin", "record": "0x20BA8", "zh": "觉悟与你们不同！"},
+  {"file": "0.bin", "record": "0x20BE1", "zh": "很好！拿出吉翁的骨气！"},
+  {"file": "0.bin", "record": "0x20C04", "zh": "这点程度、不成大碍……"},
+  {"file": "0.bin", "record": "0x20C24", "zh": "继承吉翁精神的我们……还不能退！"},
+  {"file": "0.bin", "record": "0x20C72", "zh": "嗯、转入反击！"},
+  {"file": "0.bin", "record": "0x20C8C", "zh": "唔！必须挺住！"},
+  {"file": "0.bin", "record": "0x20CA8", "zh": "还不能退！为吉翁荣光！！"},
+  {"file": "0.bin", "record": "0x20CCC", "zh": "可别小看了我们……！"},
+  {"file": "0.bin", "record": "0x20CEC", "zh": "敌方远程攻击！回避！"},
+  {"file": "0.bin", "record": "0x20D0C", "zh": "这种距离打不中！"},
+  {"file": "0.bin", "record": "0x20D28", "zh": "捕获它！带回阿克西斯！"},
+  {"file": "0.bin", "record": "0x20D4C", "zh": "未能亲见星之屑功成……遗憾！"},
+  {"file": "0.bin", "record": "0x20D74", "zh": "不巧、我无意当俘虏……！"}
+ ],
+ "notes": "尤里·哈斯勒=0083星尘的回忆中阿克西斯先遣舰队司令(少将)、战舰格瓦赞舰长、向卡多转交诺耶·吉尔者(见data/jp/characters.json档案文本)、并非G世纪原创角色。全篇按其老派正式军人口吻统一(我ら/のだ体→我们/正式陈述)。要点：idn739名台词改用社区通行译法；0x20B48原译把辺境(被赶到宇宙边境=小行星带)误作绝境、已纠正并补回让其付出代价的使役义；0x20D4C与stage文本『星之屑』功成措辞对齐；0x20B78预算7字节放不下吉翁万岁！(8字节)、保留为吉翁！折中、0x20B8C处已为吉翁万岁；0x20D28预算21字节下用捕获它！保住双感叹句式(捕获机体！带回阿克西斯！为22字节超1)。"
+}

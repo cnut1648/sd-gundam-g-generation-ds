@@ -1,0 +1,272 @@
+{
+ "entity": "char_350",
+ "kind": "character",
+ "cids": [
+  350
+ ],
+ "name_jp": "ラカン・ダカラン",
+ "name_zh_KEEP": "拉坎·达卡兰",
+ "cards": [
+  {
+   "cid": 350,
+   "ids": [
+    {
+     "idn": 1050,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8D45",
+     "zh_name_ptr": "0x20B8D45",
+     "name_jp": "並のMSとは違うんだよっ！",
+     "name_zh_current": "非普通MS",
+     "name_zh_px": 52,
+     "name_budget_px": 64,
+     "summary_jp": "威力&装甲上昇",
+     "summary_zh_KEEP": "威力・装甲↑",
+     "didx": 92,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）攻击+20%·装甲+2",
+     "cutin_group": 700,
+     "cutin_jp": "並のMSとは違うんだよっ！",
+     "cutin_zh_current": "这可不是普通的MS！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_71",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1051,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8D55",
+     "zh_name_ptr": "0x218C558",
+     "name_jp": "ナマイキーーッ！！",
+     "name_zh_current": "狂妄小子！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 701,
+     "cutin_jp": "ナマイキーーッ！！",
+     "cutin_zh_current": "好狂妄的小子！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1052,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8D5F",
+     "zh_name_ptr": "0x20B8D5F",
+     "name_jp": "ここのガレキの一つとなれ！",
+     "name_zh_current": "化作残骸吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵防御力減少",
+     "summary_zh_KEEP": "敌回甲减少",
+     "didx": 120,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）回避率が30%低下、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）回避-30%·装甲-3",
+     "cutin_group": 702,
+     "cutin_jp": "ここのガレキの一つとなれ！",
+     "cutin_zh_current": "就化作此地的残骸吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_187",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x28B24",
+   "budget_bytes": 18,
+   "jp": "ハハハッ！わざわざやられに来たか！！",
+   "zh_current": "哈哈！特意来送死！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28B44",
+   "budget_bytes": 5,
+   "jp": "もらった！",
+   "zh_current": "拿下！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28B58",
+   "budget_bytes": 24,
+   "jp": "今日はいい日だ！……貴様をやれるのだからな！",
+   "zh_current": "好日子！因为能干掉你！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28B7C",
+   "budget_bytes": 12,
+   "jp": "一思いに楽にしてやる！",
+   "zh_current": "让你死个痛快！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28B94",
+   "budget_bytes": 11,
+   "jp": "手並みを見せてもらう！",
+   "zh_current": "让我见识下！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28BAC",
+   "budget_bytes": 7,
+   "jp": "よけられるか！",
+   "zh_current": "躲得开？",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28BC0",
+   "budget_bytes": 8,
+   "jp": "もらったーっ！！",
+   "zh_current": "拿下了！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28BD4",
+   "budget_bytes": 10,
+   "jp": "貴様らごときーーっ！",
+   "zh_current": "就凭你们！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28BEC",
+   "budget_bytes": 11,
+   "jp": "くそっ！……忘れんぞ！",
+   "zh_current": "可恶！没完！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C04",
+   "budget_bytes": 10,
+   "jp": "見掛け倒しが……！",
+   "zh_current": "虚有其表！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C1C",
+   "budget_bytes": 22,
+   "jp": "ぬええいっ！この俺をなめるなーっ！！",
+   "zh_current": "喝啊啊！！竟敢小看我！！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C40",
+   "budget_bytes": 21,
+   "jp": "ハハハハ、どうした！それで攻撃のつもりか？",
+   "zh_current": "哈哈哈！这算攻击？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C64",
+   "budget_bytes": 12,
+   "jp": "ほお！……噂通りだな！",
+   "zh_current": "哦！名不虚传！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C7C",
+   "budget_bytes": 13,
+   "jp": "少しは手応えがないとな！！",
+   "zh_current": "好歹给点挑战！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28C98",
+   "budget_bytes": 23,
+   "jp": "おのれーっ！雑魚どもがナマイキなマネを！！",
+   "zh_current": "混账！！杂鱼也敢放肆！！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28CBC",
+   "budget_bytes": 25,
+   "jp": "なっ、なんだと！この俺が……押されている！？",
+   "zh_current": "什、什么！我竟被压制！？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28CE4",
+   "budget_bytes": 12,
+   "jp": "ダテじゃあないんだよっ！！",
+   "zh_current": "不是吃素的！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28CFC",
+   "budget_bytes": 13,
+   "jp": "思い通りになどさせんっ！！",
+   "zh_current": "别想得逞！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28D18",
+   "budget_bytes": 23,
+   "jp": "ちいっ！陣形を崩すしかないとは！！",
+   "zh_current": "啧！竟然只能撤退！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28D3C",
+   "budget_bytes": 25,
+   "jp": "その機体は俺がもらってやる！ありがたく思うんだな！",
+   "zh_current": "那机体归我了！你该庆幸！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28D64",
+   "budget_bytes": 17,
+   "jp": "なぜだ！？なぜ、この俺がっ！？",
+   "zh_current": "为何！？为何是我！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28D84",
+   "budget_bytes": 9,
+   "jp": "おのれえーっ！！",
+   "zh_current": "你这混蛋！",
+   "zh_current_bytes": 9
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "entity": "char_335",
+ "kind": "character",
+ "cids": [
+  335
+ ],
+ "name_jp": "ベルナデット",
+ "name_zh_KEEP": "贝尔纳黛特",
+ "cards": [
+  {
+   "cid": 335,
+   "ids": [
+    {
+     "idn": 1005,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8BD4",
+     "zh_name_ptr": "0x20B8BD4",
+     "name_jp": "『私は戦争をしているのだよ！』",
+     "name_zh_current": "我在打仗呢",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力&回避上昇",
+     "summary_zh_KEEP": "威力・回避↑",
+     "didx": 62,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+40%",
+     "cutin_group": 673,
+     "cutin_jp": "『私は戦争をしているのだよ！』",
+     "cutin_zh_current": "『我可是在打仗啊！』",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_82",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1006,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8BE4",
+     "zh_name_ptr": "0x20B8BE4",
+     "name_jp": "『戦いにきれい汚いはない！』",
+     "name_zh_current": "战不分净污",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "移動&ID封印",
+     "summary_zh_KEEP": "移动・ID封",
+     "didx": 177,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）必ずクリティカル攻撃。攻撃が命中した相手のID·移動を1ターン封印",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）移动封印·ID封印·暴击",
+     "cutin_group": 674,
+     "cutin_jp": "『戦いにきれい汚いはない！』",
+     "cutin_zh_current": "『战斗不分干净肮脏！』",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_316",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x26F78",
+   "budget_bytes": 11,
+   "jp": "お、お願い……止まって！",
+   "zh_current": "求你……停下！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x26FB0",
+   "budget_bytes": 21,
+   "jp": "と、止められない……！お願い！逃げて！",
+   "zh_current": "停、停不下来……！快逃！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27014",
+   "budget_bytes": 14,
+   "jp": "あ……お、お父さま……",
+   "zh_current": "啊……爸、爸爸……",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2705C",
+   "budget_bytes": 14,
+   "jp": "お、お願い！止まって……！！",
+   "zh_current": "求你！停下来……！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27078",
+   "budget_bytes": 17,
+   "jp": "きゃあああ！助けてっ！トビア……",
+   "zh_current": "呀啊！救命！托比亚！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x270F4",
+   "budget_bytes": 6,
+   "jp": "あ、あぁ……",
+   "zh_current": "啊啊……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27108",
+   "budget_bytes": 7,
+   "jp": "きゃぁぁぁっ！",
+   "zh_current": "呀啊啊！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2711C",
+   "budget_bytes": 11,
+   "jp": "あ、あぁぁ……こんな……",
+   "zh_current": "啊……怎会……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27134",
+   "budget_bytes": 7,
+   "jp": "いやぁぁぁっ！",
+   "zh_current": "不要啊！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27148",
+   "budget_bytes": 14,
+   "jp": "ダ、ダメ……もう、私……",
+   "zh_current": "不行……我已经……",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x271F4",
+   "budget_bytes": 15,
+   "jp": "あ……私、助かったの……？",
+   "zh_current": "啊……得救了……？",
+   "zh_current_bytes": 13
+  }
+ ]
+}

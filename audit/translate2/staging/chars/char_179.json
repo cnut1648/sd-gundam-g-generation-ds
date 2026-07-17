@@ -1,0 +1,700 @@
+{
+ "entity": "char_179",
+ "kind": "character",
+ "cids": [
+  179,
+  180
+ ],
+ "name_jp": "フィル・アッカマン",
+ "name_zh_KEEP": "菲尔·阿克曼",
+ "cards": [
+  {
+   "cid": 179,
+   "ids": [
+    {
+     "idn": 537,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8062",
+     "zh_name_ptr": "0x218C399",
+     "name_jp": "力で思い知らせてやるしか……",
+     "name_zh_current": "以力让你懂",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 424,
+     "cutin_jp": "蛮族には力で思い知らせてやるしかないだろう！",
+     "cutin_zh_current": "对那帮蛮族只能用武力让他们好好领教一下！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 538,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8070",
+     "zh_name_ptr": "0x20B8070",
+     "name_jp": "できなくてもともと……！！",
+     "name_zh_current": "不成无妨！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 425,
+     "cutin_jp": "できなくてもともと……！！",
+     "cutin_zh_current": "做不到也无所谓……！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 539,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B807C",
+     "zh_name_ptr": "0x218C3A4",
+     "name_jp": "ムーンレィスのための国家を！！",
+     "name_zh_current": "为月之民战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・命回↑",
+     "didx": 35,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が40%上昇、回避率が20%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%·回避+20%",
+     "cutin_group": 426,
+     "cutin_jp": "ムーンレィスのムーンレィスのための国家を！！",
+     "cutin_zh_current": "为了月之民建立自己的国家！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 180,
+   "ids": [
+    {
+     "idn": 540,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8062",
+     "zh_name_ptr": "0x218C399",
+     "name_jp": "力で思い知らせてやるしか……",
+     "name_zh_current": "以力让你懂",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 427,
+     "cutin_jp": "蛮族には力で思い知らせてやるしかないだろう！",
+     "cutin_zh_current": "对那帮蛮族只能用武力让他们好好领教一下！",
+     "name_owner": true,
+     "name_shared_with_idn": 537,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 541,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8070",
+     "zh_name_ptr": "0x20B8070",
+     "name_jp": "できなくてもともと……！！",
+     "name_zh_current": "不成无妨！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 428,
+     "cutin_jp": "できなくてもともと……！！",
+     "cutin_zh_current": "做不到也无所谓……！！",
+     "name_owner": true,
+     "name_shared_with_idn": 538,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 542,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B807C",
+     "zh_name_ptr": "0x218C3A4",
+     "name_jp": "ムーンレィスのための国家を！！",
+     "name_zh_current": "为月之民战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲戦闘力↑",
+     "summary_zh_KEEP": "范围命回↑",
+     "didx": 27,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）命中率+20%·回避+20%",
+     "cutin_group": 429,
+     "cutin_jp": "ムーンレィスのムーンレィスのための国家を！！",
+     "cutin_zh_current": "为了月之民建立自己的国家！！",
+     "name_owner": true,
+     "name_shared_with_idn": 539,
+     "detail_owner": false,
+     "detail_owned_by": "char_139",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1186C",
+   "budget_bytes": 28,
+   "jp": "敵、制空圏内に入りました！陛下！攻撃許可を！",
+   "zh_current": "敌已入制空圈！陛下、请下攻击许可！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x118F8",
+   "budget_bytes": 29,
+   "jp": "ディアナカウンターの名に恥じぬ戦い！今こそ見せるべき時だ！",
+   "zh_current": "不负迪安娜回归军之名！就是现在！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11938",
+   "budget_bytes": 17,
+   "jp": "はっ！攻撃、開始いたします！！",
+   "zh_current": "遵命！开始攻击！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11958",
+   "budget_bytes": 20,
+   "jp": "艦首、ビームホイール！攻撃可能です！",
+   "zh_current": "舰首光束轮、可以攻击！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x119D0",
+   "budget_bytes": 16,
+   "jp": "機関部大破！陛下！退艦命令を！",
+   "zh_current": "机舱大破！请弃舰！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11A14",
+   "budget_bytes": 18,
+   "jp": "よーし！我らの力を見せてやれ！！",
+   "zh_current": "好！！让他们见识！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11A77",
+   "budget_bytes": 23,
+   "jp": "よし！では、本艦は現戦域を維持する！！",
+   "zh_current": "好！本舰维持当前战域！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11A9C",
+   "budget_bytes": 10,
+   "jp": "できなくてもともとっ！！",
+   "zh_current": "做不到也罢",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11AB4",
+   "budget_bytes": 20,
+   "jp": "フィールド出力上げろ！これ以上はやらせるな！！",
+   "zh_current": "力场全开！别让敌人得逞！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11AD4",
+   "budget_bytes": 15,
+   "jp": "クッ！？まさか、直撃だと！？",
+   "zh_current": "唔！？竟被直击！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11B14",
+   "budget_bytes": 20,
+   "jp": "ディアナさま！これ以上は、危険であります！！",
+   "zh_current": "陛下！！再继续太危险！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11B5C",
+   "budget_bytes": 24,
+   "jp": "引き続き全フィールド放出！！次弾に備えよ！！",
+   "zh_current": "继续放出全力场！备下一发！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11B80",
+   "budget_bytes": 6,
+   "jp": "回避します！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11B94",
+   "budget_bytes": 6,
+   "jp": "回避します！",
+   "zh_current": "回避！！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1763C",
+   "budget_bytes": 25,
+   "jp": "ノコノコ沈められに来たか！……くらえっ！！",
+   "zh_current": "傻乎乎送死来了吗！接招！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17664",
+   "budget_bytes": 17,
+   "jp": "ええいっ！しつこい奴らめ……！",
+   "zh_current": "可恶！纠缠不休！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17684",
+   "budget_bytes": 17,
+   "jp": "ええいっ！しつこい奴らめ……！",
+   "zh_current": "可恶！真是难缠！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x176A4",
+   "budget_bytes": 19,
+   "jp": "貴様らごとき一もみにしてくれるっ！",
+   "zh_current": "就凭你们、我一把碾碎！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x176C4",
+   "budget_bytes": 16,
+   "jp": "我らムーンレィスの力を見せてくれる！",
+   "zh_current": "见识我月之民之力！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x176E0",
+   "budget_bytes": 20,
+   "jp": "手間取ってはおれん！一気に叩き潰す！",
+   "zh_current": "没空磨蹭！一举碾碎！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17700",
+   "budget_bytes": 19,
+   "jp": "力の差というものを教えてくれる！",
+   "zh_current": "实力的差距、领教吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17720",
+   "budget_bytes": 10,
+   "jp": "蹴散らしてくれる！！",
+   "zh_current": "击溃你们！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17738",
+   "budget_bytes": 18,
+   "jp": "なにっ！？やられたというのか！？",
+   "zh_current": "什么！？竟被击中了！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17758",
+   "budget_bytes": 13,
+   "jp": "ふん……！そんなものか！",
+   "zh_current": "哼！就这点本事？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17774",
+   "budget_bytes": 16,
+   "jp": "貴様らごときに遅れはとらん！",
+   "zh_current": "凭你们、休想赢！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17790",
+   "budget_bytes": 15,
+   "jp": "それこそ力不足と言うもの！！",
+   "zh_current": "那才叫实力不足！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x177AC",
+   "budget_bytes": 27,
+   "jp": "クソッ！ああいうのに煮え等を飲まされてるんだ！",
+   "zh_current": "可恶！就是那家伙害惨了我们！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x177D4",
+   "budget_bytes": 15,
+   "jp": "おのれ！はしっこいャツ！！",
+   "zh_current": "可恶！手脚真快！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x177F0",
+   "budget_bytes": 21,
+   "jp": "……なんと！？奴ら、これ程の武器を？",
+   "zh_current": "……什么！？竟有这种武器！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17814",
+   "budget_bytes": 14,
+   "jp": "ぐっ！イ、イカン……！！",
+   "zh_current": "唔！！不妙……！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17830",
+   "budget_bytes": 10,
+   "jp": "話にもならんな！！",
+   "zh_current": "不是对手！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17848",
+   "budget_bytes": 5,
+   "jp": "ふん……！",
+   "zh_current": "哼……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1785C",
+   "budget_bytes": 15,
+   "jp": "来たぞ！各機、回避運動ッ！",
+   "zh_current": "来了！各机回避！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17878",
+   "budget_bytes": 10,
+   "jp": "無駄な抵抗はするな！",
+   "zh_current": "休要抵抗！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17890",
+   "budget_bytes": 9,
+   "jp": "なっ…なんとお！？",
+   "zh_current": "什、什么！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x178A8",
+   "budget_bytes": 18,
+   "jp": "ええい！誰が降伏などするか！！",
+   "zh_current": "可恶！谁会投降！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x635C",
+   "budget_bytes": 25,
+   "jp": "一斉攻撃だ！！ャツラなどひともみにしてしまえ！",
+   "zh_current": "一齐攻击！把他们全碾碎！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6384",
+   "budget_bytes": 22,
+   "jp": "今は協調も必要というもの！承知だ！！",
+   "zh_current": "如今也需协同作战！明白！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x63A8",
+   "budget_bytes": 22,
+   "jp": "いいだろう、ボゥ！先陣は貴様に任せた！！",
+   "zh_current": "好吧、波！先锋交给你！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x63CC",
+   "budget_bytes": 27,
+   "jp": "ふん……まさか貴様と手を組むことになろうとはな！！",
+   "zh_current": "哼……没想到竟会与你联手作战！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x63F4",
+   "budget_bytes": 22,
+   "jp": "今は協調も必要というもの！承知だ！！",
+   "zh_current": "如今也需协同作战！明白！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6418",
+   "budget_bytes": 22,
+   "jp": "今は協調も必要というもの！承知だ！！",
+   "zh_current": "如今也需协同作战！明白！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x643C",
+   "budget_bytes": 22,
+   "jp": "今は協調も必要というもの！承知だ！！",
+   "zh_current": "如今也需协同作战！明白！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x178C8",
+   "budget_bytes": 29,
+   "jp": "ははは！蛮族どもめ！！ノコノコ前に出てきたか！！",
+   "zh_current": "哈哈！蛮族们、傻乎乎送上门！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x178F4",
+   "budget_bytes": 8,
+   "jp": "一気に蹴散らせ！！",
+   "zh_current": "碾碎吧！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17908",
+   "budget_bytes": 10,
+   "jp": "！発射せよ！",
+   "zh_current": "！发射！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17938",
+   "budget_bytes": 21,
+   "jp": "よーし！ャツらに力の差を教えてやれ！",
+   "zh_current": "好！！让他们见识差距！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1795C",
+   "budget_bytes": 17,
+   "jp": "我々ムーンレィスの力思い知らせてくれる！",
+   "zh_current": "领教月之民之力！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1797C",
+   "budget_bytes": 20,
+   "jp": "ビームホイール展開！突撃、かけるぞ！",
+   "zh_current": "光束轮展开、突击！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x179B0",
+   "budget_bytes": 10,
+   "jp": "よーし、全速前進だ！",
+   "zh_current": "全速前进！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x179C8",
+   "budget_bytes": 21,
+   "jp": "一気にケリをつける！最大戦速で突撃しろ！",
+   "zh_current": "一口气了结！全速突击！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17A1B",
+   "budget_bytes": 9,
+   "jp": "なっ、なんと……！？",
+   "zh_current": "什、什么！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17A30",
+   "budget_bytes": 21,
+   "jp": "よし！各艦の動きを見て臨機応変に行け！！",
+   "zh_current": "好！盯紧各舰、随机应变！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17A54",
+   "budget_bytes": 20,
+   "jp": "これ以上蛮族どもを調子に乗せられるかっ！",
+   "zh_current": "岂能再让蛮族们得意！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17A74",
+   "budget_bytes": 18,
+   "jp": "いかにも蛮族どもがやりそうなこと！",
+   "zh_current": "真是蛮族的作风！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17AAC",
+   "budget_bytes": 22,
+   "jp": "……騒ぐな！ただのまぐれ当たりだ！",
+   "zh_current": "……别慌！不过是走运一击！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17AD0",
+   "budget_bytes": 27,
+   "jp": "ええい！ああいうのに煮え等を飲まされてるんだ！",
+   "zh_current": "可恶！就是那家伙害惨了我们！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17AF8",
+   "budget_bytes": 21,
+   "jp": "うおおおっ！な、何だこの武器は！？",
+   "zh_current": "呜哦哦！这是什么武器！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17B43",
+   "budget_bytes": 16,
+   "jp": "クソッ！やってくれる……！！",
+   "zh_current": "可恶！有两下子！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17B60",
+   "budget_bytes": 26,
+   "jp": "これで分かったか？貴様らなど蛮族に過ぎんことが！",
+   "zh_current": "明白了吗？你们不过是蛮族！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17B88",
+   "budget_bytes": 16,
+   "jp": "ええい！こしゃくな真似を！！",
+   "zh_current": "可恶！耍小聪明！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17BA4",
+   "budget_bytes": 17,
+   "jp": "来たぞ！各自散開してしのげ！",
+   "zh_current": "来了！各自散开！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17BC4",
+   "budget_bytes": 12,
+   "jp": "よーし！捕まえたぞ！！",
+   "zh_current": "好！！逮住了！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17BDC",
+   "budget_bytes": 10,
+   "jp": "そっ、そんなぁ……！？",
+   "zh_current": "怎、怎么会！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17BF4",
+   "budget_bytes": 15,
+   "jp": "ええい！来るんじゃない！！",
+   "zh_current": "可恶！别过来！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

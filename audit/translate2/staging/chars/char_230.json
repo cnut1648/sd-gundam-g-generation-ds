@@ -1,0 +1,328 @@
+{
+ "entity": "char_230",
+ "kind": "character",
+ "cids": [
+  230
+ ],
+ "name_jp": "シン・アスカ",
+ "name_zh_KEEP": "真·飞鸟",
+ "cards": [
+  {
+   "cid": 230,
+   "ids": [
+    {
+     "idn": 690,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B85CD",
+     "zh_name_ptr": "0x2190001",
+     "name_jp": "さすが、奇麗事はお家芸だな！",
+     "name_zh_current": "漂亮话拿手",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 30,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、回避率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·回避+40%",
+     "cutin_group": 547,
+     "cutin_jp": "さすが、奇麗事はお家芸だな！",
+     "cutin_zh_current": "不愧是你、漂亮话真拿手！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 691,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B85DF",
+     "zh_name_ptr": "0x20B85DF",
+     "name_jp": "全てを守ってみせる！！",
+     "name_zh_current": "守护一切！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 548,
+     "cutin_jp": "戦って……全てを守ってみせる！！",
+     "cutin_zh_current": "战斗……我要守护这一切！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 692,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B85EC",
+     "zh_name_ptr": "0x20B85EC",
+     "name_jp": "まだ、戦争がしたいのか！？",
+     "name_zh_current": "还想战争吗",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋先制攻撃",
+     "summary_zh_KEEP": "威命↑・先攻",
+     "didx": 133,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と攻撃力が20%ずつ上昇、先制攻撃を仕掛ける",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%先攻",
+     "cutin_group": 549,
+     "cutin_jp": "まだ、戦争がしたいのか！？あんた達は！",
+     "cutin_zh_current": "难道又想挑起战争吗！？你们这些家伙！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1F1EC",
+   "budget_bytes": 12,
+   "jp": "……なら、やってやるさ！",
+   "zh_current": "……那、就上！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F204",
+   "budget_bytes": 7,
+   "jp": "……行けっ！！",
+   "zh_current": "……上吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F218",
+   "budget_bytes": 14,
+   "jp": "そんな好き勝手、させるもんか！",
+   "zh_current": "怎能任你乱来！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F234",
+   "budget_bytes": 27,
+   "jp": "敵に回るっていうんなら、今度は俺が滅ぼしてやる！！",
+   "zh_current": "要与我为敌、现在就灭了你！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F25C",
+   "budget_bytes": 16,
+   "jp": "コイツを！コイツさえ落とせば！！",
+   "zh_current": "干掉这家伙就行！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F278",
+   "budget_bytes": 11,
+   "jp": "このおおーーっ！！",
+   "zh_current": "这家伙！！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F290",
+   "budget_bytes": 30,
+   "jp": "戦うべき時に戦わなくちゃなに一つ守れやしないんだ！！",
+   "zh_current": "该战之时不战、就什么都守不住！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F2BC",
+   "budget_bytes": 10,
+   "jp": "でゃぁぁぁーーっ！！",
+   "zh_current": "嗷啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F2D4",
+   "budget_bytes": 9,
+   "jp": "クッ！マユ……",
+   "zh_current": "唔！真由……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F2EC",
+   "budget_bytes": 12,
+   "jp": "こんなャツらにやられるか！",
+   "zh_current": "怎能输这帮人！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F304",
+   "budget_bytes": 11,
+   "jp": "くそっ！アイツ……！！",
+   "zh_current": "可恶！是他！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F31C",
+   "budget_bytes": 21,
+   "jp": "どこまでいい加減で身勝手なんだ！アンタたちは！",
+   "zh_current": "你们到底有多任性！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F340",
+   "budget_bytes": 22,
+   "jp": "なぜ、お前達は……！どうしてそんなことを！！",
+   "zh_current": "你们为何……要做这种事！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F364",
+   "budget_bytes": 17,
+   "jp": "くそ！なんなんだよ、コイツは！！",
+   "zh_current": "唔！可恶、这家伙！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F384",
+   "budget_bytes": 15,
+   "jp": "く、くそっ……！アイツ……！",
+   "zh_current": "可恶……！那家伙……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F3A0",
+   "budget_bytes": 8,
+   "jp": "効かないね！！",
+   "zh_current": "没用！！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F3B4",
+   "budget_bytes": 10,
+   "jp": "そんなものおーっ！！",
+   "zh_current": "区区那种！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F3CC",
+   "budget_bytes": 16,
+   "jp": "来たッ！各機、回避運動を！！",
+   "zh_current": "来了！各机回避！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F3E8",
+   "budget_bytes": 20,
+   "jp": "おとなしく降伏するんだ！でないと、撃つ！",
+   "zh_current": "乖乖投降！否则开枪！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F408",
+   "budget_bytes": 12,
+   "jp": "ッ、機体が！？……そんな！",
+   "zh_current": "机体！？怎会……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F420",
+   "budget_bytes": 9,
+   "jp": "そんな好き勝手！！！",
+   "zh_current": "休想乱来！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x3C",
+   "budget_bytes": 21,
+   "jp": "こんなことで……こんなことでオレは……！！",
+   "zh_current": "就这点事我岂能倒下！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x795C",
+   "budget_bytes": 14,
+   "jp": "頼む！手を貸してくれ！！",
+   "zh_current": "拜托！支援我！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7978",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x799C",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x79C0",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x79E4",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7A08",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7A2C",
+   "budget_bytes": 22,
+   "jp": "こちらシン·アスカ！サボートに回らせてもらう！！",
+   "zh_current": "真·飞鸟！支援交给我！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

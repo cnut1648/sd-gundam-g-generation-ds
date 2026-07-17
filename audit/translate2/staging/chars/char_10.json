@@ -1,0 +1,336 @@
+{
+ "entity": "char_10",
+ "kind": "character",
+ "cids": [
+  10
+ ],
+ "name_jp": "アスラン（SEED）",
+ "name_zh_KEEP": "阿斯兰（SEED）",
+ "cards": [
+  {
+   "cid": 10,
+   "ids": [
+    {
+     "idn": 30,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B700C",
+     "zh_name_ptr": "0x20B700C",
+     "name_jp": "………………",
+     "name_zh_current": "…………",
+     "name_zh_px": 32,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋0回避",
+     "summary_zh_KEEP": "威力↑・必闪",
+     "didx": 179,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·完全回避",
+     "cutin_group": 19,
+     "cutin_jp": "………………",
+     "cutin_zh_current": "………………",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 31,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B6FED",
+     "zh_name_ptr": "0x232938A",
+     "name_jp": "この介入は……",
+     "name_zh_current": "这次介入……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "貫防無効＋痛撃",
+     "summary_zh_KEEP": "破防・暴击",
+     "didx": 202,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃対象の特殊防御を無効化、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）破防·暴击",
+     "cutin_group": 20,
+     "cutin_jp": "この介入は……俺個人の意思だ！",
+     "cutin_zh_current": "这次介入……是我个人的意志！",
+     "name_owner": false,
+     "name_shared_with_idn": 28,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 32,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B6FFC",
+     "zh_name_ptr": "0x20B6FFC",
+     "name_jp": "撃ち返してはまた撃たれて！！",
+     "name_zh_current": "还击又挨打",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回↑",
+     "didx": 50,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%",
+     "cutin_group": 21,
+     "cutin_jp": "撃たれては撃ち返し！撃ち返してはまた撃たれて！！",
+     "cutin_zh_current": "挨打就还击、还击了又挨打！！",
+     "name_owner": false,
+     "name_shared_with_idn": 29,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1238",
+   "budget_bytes": 6,
+   "jp": "……………！",
+   "zh_current": "……………！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x124C",
+   "budget_bytes": 7,
+   "jp": "……そこだッ！",
+   "zh_current": "就在那！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1260",
+   "budget_bytes": 25,
+   "jp": "どうしてもやるというのなら……俺はお前を撃つっ！！",
+   "zh_current": "你执意如此……我只好奉陪",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1288",
+   "budget_bytes": 37,
+   "jp": "分かってるさ……戦ってでも守らなきゃいけないものがあることぐらい！",
+   "zh_current": "我明白……就算拼死作战、也要守住该守的！",
+   "zh_current_bytes": 34
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12BC",
+   "budget_bytes": 9,
+   "jp": "やらせるかぁーッ！",
+   "zh_current": "休想得逞！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12D4",
+   "budget_bytes": 11,
+   "jp": "お前は……俺が討つ！",
+   "zh_current": "我来打倒你！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x12EC",
+   "budget_bytes": 33,
+   "jp": "この戦いを終わらせるために……今はやるべき事をやるだけだ！！",
+   "zh_current": "为了结束这场战斗……现在只做该做的！",
+   "zh_current_bytes": 33
+  },
+  {
+   "file": "0.bin",
+   "record": "0x131C",
+   "budget_bytes": 25,
+   "jp": "お前たちが敵に回るというなら容赦はしないっ！！",
+   "zh_current": "你们要与我为敌、绝不留情！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1344",
+   "budget_bytes": 24,
+   "jp": "俺は何も出来無い……何も判って無かった……",
+   "zh_current": "我无能为力……什么都不懂……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1368",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x137C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1390",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13A4",
+   "budget_bytes": 29,
+   "jp": "力と力でぶつかるだけじゃダメなんだって、わからないのか！？",
+   "zh_current": "光靠力量硬拼不行、你不懂吗！？",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13D0",
+   "budget_bytes": 24,
+   "jp": "こんなことの繰り返しは終わらせなきゃダメなんだ！",
+   "zh_current": "这样的重复、必须终结！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x13F4",
+   "budget_bytes": 9,
+   "jp": "コイツ……やるっ！！",
+   "zh_current": "有两下子！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x140C",
+   "budget_bytes": 6,
+   "jp": "…………ッ！",
+   "zh_current": "唔……！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1420",
+   "budget_bytes": 7,
+   "jp": "……無駄だッ！",
+   "zh_current": "……没用！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1434",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1448",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x145C",
+   "budget_bytes": 11,
+   "jp": "捉えたぞ！……行ける！",
+   "zh_current": "锁定了！上！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1474",
+   "budget_bytes": 6,
+   "jp": "……まさか！？",
+   "zh_current": "怎会！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1488",
+   "budget_bytes": 23,
+   "jp": "討つべき時に討たねば死ぬのは自分だ！",
+   "zh_current": "该打时不打、死的是自己！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2F0",
+   "budget_bytes": 15,
+   "jp": "やるぞ！手を貸してくれ！！",
+   "zh_current": "上吧！这就动手！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x30C",
+   "budget_bytes": 8,
+   "jp": "こちらアスラン、了解！",
+   "zh_current": "收到！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x320",
+   "budget_bytes": 7,
+   "jp": "了解だ、キラ！",
+   "zh_current": "收到！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x334",
+   "budget_bytes": 20,
+   "jp": "こんなところで、君を死なせるわけにいくか！",
+   "zh_current": "怎能让你死在这里！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x354",
+   "budget_bytes": 13,
+   "jp": "わかった！手を貸す！！",
+   "zh_current": "明白！我来支援！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x370",
+   "budget_bytes": 8,
+   "jp": "こちらアスラン、了解！",
+   "zh_current": "收到！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x384",
+   "budget_bytes": 8,
+   "jp": "こちらアスラン、了解！",
+   "zh_current": "收到！！",
+   "zh_current_bytes": 6
+  }
+ ]
+}

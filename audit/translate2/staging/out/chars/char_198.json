@@ -1,0 +1,53 @@
+{
+ "entity": "char_198",
+ "web_sources": [
+  "https://www.gundam-c.com/manual/character/gundam/mulligan.html",
+  "https://dic.pixiv.net/a/%E3%83%9E%E3%83%AA%E3%82%AC%E3%83%B3%E4%B8%AD%E5%B0%89",
+  "https://ja.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9_%E3%82%B8%E3%82%AA%E3%83%B3%E5%85%AC%E5%9B%BD%E8%BB%8D_(%E3%81%9F%E8%A1%8C-%E3%82%8F%E8%A1%8C)",
+  "https://www.zhihu.com/question/21426064"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 594,
+   "name_zh": "散布粒子！",
+   "cutin_zh": "米诺夫斯基粒子、开始散布！",
+   "notes": "name与idn420共享且非本人所有、按现行译名照抄; cutin为舰桥执行报告体（ミノフスキー粒子、散布します！）、采用大陆通行的米诺夫斯基粒子散布桥段措辞"
+  },
+  {
+   "idn": 595,
+   "name_zh": "试试看吧！",
+   "cutin_zh": "虽说整备算不上万全、但还是试试看吧！",
+   "detail_effect_zh": "命中率提升40%",
+   "notes": ""
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x181E8", "zh": "敌人已进入我方射程！"},
+  {"file": "0.bin", "record": "0x182AC", "zh": "不行！本舰已……！"},
+  {"file": "0.bin", "record": "0x18360", "zh": "舰首中弹！行动无碍！"},
+  {"file": "0.bin", "record": "0x1A764", "zh": "来了！先开火！！"},
+  {"file": "0.bin", "record": "0x1A780", "zh": "齐射！……开火！"},
+  {"file": "0.bin", "record": "0x1A79C", "zh": "！发射！！"},
+  {"file": "0.bin", "record": "0x1A7B4", "zh": "！尝试迎击敌机！！"},
+  {"file": "0.bin", "record": "0x1A7D4", "zh": "！开始攻击！！"},
+  {"file": "0.bin", "record": "0x1A7F0", "zh": "开始攻击！"},
+  {"file": "0.bin", "record": "0x1A808", "zh": "开始攻击！"},
+  {"file": "0.bin", "record": "0x1A820", "zh": "开始攻击！"},
+  {"file": "0.bin", "record": "0x1A838", "zh": "大佐、抱歉……"},
+  {"file": "0.bin", "record": "0x1A850", "zh": "乱、乱躲反而会中弹！"},
+  {"file": "0.bin", "record": "0x1A870", "zh": "全弹回避成功！没有中弹！"},
+  {"file": "0.bin", "record": "0x1A894", "zh": "就这点！！"},
+  {"file": "0.bin", "record": "0x1A8A8", "zh": "唔！大佐回来前必守住本舰！"},
+  {"file": "0.bin", "record": "0x1A8CC", "zh": "右舷炮塔中弹！？糟了……"},
+  {"file": "0.bin", "record": "0x1A8EC", "zh": "啊啊啊！！"},
+  {"file": "0.bin", "record": "0x1A900", "zh": "大佐回来前……！"},
+  {"file": "0.bin", "record": "0x1A91C", "zh": "不要怕！我们有大佐在！"},
+  {"file": "0.bin", "record": "0x1A940", "zh": "快、回避！"},
+  {"file": "0.bin", "record": "0x1A954", "zh": "快回避！！"},
+  {"file": "0.bin", "record": "0x1A968", "zh": "捕获那机体！"},
+  {"file": "0.bin", "record": "0x1A980", "zh": "……这样下去、没脸见大佐……"},
+  {"file": "0.bin", "record": "0x1A9A4", "zh": "怎、怎能被抓！"}
+ ],
+ "notes": "身份确认: 初代0079中夏亚（大佐）升任后的副官马利根中尉（德伦的后任）、随桑给巴尔舰行动、生真面目的精英参谋型军官; 台词中的大佐均指夏亚、故全部采用正规舰桥报告语体。修正: 0x1A79C原译（全弹、发射！）丢失了行首！的武器名呼报结构、现与0x1A7B4/0x1A7D4同类记录保持镜像; 0x1A8CC补回被漏译的炮塔、因字节预算省去……后的句末！; 0x182AC理想全句为（不行！本舰已经……！）超预算、以（本舰已……！）保留はもう的语感; 0x1A850保留へ、へた的结巴并补全反而会中弹的完整句式。"
+}

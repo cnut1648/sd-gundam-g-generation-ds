@@ -1,0 +1,63 @@
+{
+ "entity": "char_215",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E8%8E%89%E5%A8%9C%C2%B7%E4%BA%9A%E8%A5%BF%E5%A1%94",
+  "https://dic.pixiv.net/a/%E3%83%AA%E3%82%A3%E3%83%8A%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%B7%E3%82%BF",
+  "https://mzh.moegirl.org.cn/%E6%9C%BA%E5%8A%A8%E6%88%98%E5%A3%AB%E9%AB%98%E8%BE%BEZZ",
+  "https://datenoba.exblog.jp/32160332/"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 645,
+   "name_zh": "不可以杀人",
+   "cutin_zh": "快住手！杀人是不可以的！",
+   "notes": "人殺しはイケナイわ是莉娜的招牌台词（pixiv百科词条明证、ZZ第19话劝阻普露的名场面）。原指令名不可杀人哦的哦字生硬、改为与名台词共词的不可以杀人（5格）。名台词按其孩童说理口吻译作杀人是不可以的"
+  },
+  {
+   "idn": 646,
+   "name_zh": "为何而来！",
+   "cutin_zh": "你们究竟为了什么才来到这里的！？",
+   "notes": "出典ZZ第27话前后达喀尔社交界名场面（貴方達は何のためにこのパーティにいらっしゃったのですか！？的游戏化改写）、名台词沿用现译。指令名按名称字段禁？规则去掉问号、理想形为为何而来！？"
+  },
+  {
+   "idn": 647,
+   "name_zh": "我要救哥哥",
+   "cutin_zh": "这次轮到我来救哥哥了！",
+   "detail_effect_zh": "捷多在队伍中时、HP回复50%",
+   "notes": "效果原译恢复50%漏掉了ジュドーがチームにいる時的发动条件、按char_104的译名捷多补全。哥哥称呼与char_104侧的莉娜互称对齐"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1CB4C", "zh": "我也是会出手的！"},
+  {"file": "0.bin", "record": "0x1CB68", "zh": "拜托……上！"},
+  {"file": "0.bin", "record": "0x1CB80", "zh": "啊……我也！"},
+  {"file": "0.bin", "record": "0x1CB98", "zh": "只、只能上！"},
+  {"file": "0.bin", "record": "0x1CBB0", "zh": "这样就行吧？"},
+  {"file": "0.bin", "record": "0x1CBC8", "zh": "这样下去……我也成坏人了！"},
+  {"file": "0.bin", "record": "0x1CBEC", "zh": "事到如今……只能上了！"},
+  {"file": "0.bin", "record": "0x1CC0C", "zh": "莉娜·亚西塔、上！"},
+  {"file": "0.bin", "record": "0x1CC28", "zh": "果然不行啊……对不起……"},
+  {"file": "0.bin", "record": "0x1CC4C", "zh": "啊、躲过了！"},
+  {"file": "0.bin", "record": "0x1CC64", "zh": "啊……总算……"},
+  {"file": "0.bin", "record": "0x1CC7C", "zh": "没、没事！"},
+  {"file": "0.bin", "record": "0x1CC90", "zh": "呀啊！哥、哥哥……！"},
+  {"file": "0.bin", "record": "0x1CCB0", "zh": "欺负弱女子！？"},
+  {"file": "0.bin", "record": "0x1CCCC", "zh": "不行……机体撑不住！"},
+  {"file": "0.bin", "record": "0x1CCEC", "zh": "呀啊！哥哥、救救我！"},
+  {"file": "0.bin", "record": "0x1CD0C", "zh": "呀啊！！……咦？没事？"},
+  {"file": "0.bin", "record": "0x1CD2C", "zh": "来、来了！？"},
+  {"file": "0.bin", "record": "0x1CD40", "zh": "大家快逃！这里危险！"},
+  {"file": "0.bin", "record": "0x1CD60", "zh": "不会为难你们！请老实点！"},
+  {"file": "0.bin", "record": "0x1CD84", "zh": "呀啊！哥、哥哥……！"},
+  {"file": "0.bin", "record": "0x1CDA4", "zh": "真是的！请住手！！"},
+  {"file": "1de.bin", "record": "0x6D80", "zh": "齐心协力……！！"},
+  {"file": "1de.bin", "record": "0x6D9C", "zh": "是、是！请让我也帮忙！"},
+  {"file": "1de.bin", "record": "0x6DBC", "zh": "放心吧、哥哥！我也能做到的！！"},
+  {"file": "1de.bin", "record": "0x6DE4", "zh": "是、是！请让我也帮忙！"},
+  {"file": "1de.bin", "record": "0x6E04", "zh": "是、是！请让我也帮忙！"},
+  {"file": "1de.bin", "record": "0x6E24", "zh": "是、是！请让我也帮忙！"},
+  {"file": "1de.bin", "record": "0x6E44", "zh": "是、是！请让我也帮忙！"}
+ ],
+ "notes": "兄妹称呼与char_104/char_106对齐：捷多侧称莉娜（怎能让莉娜独行）、莉娜侧称哥哥。1de合体攻击应答は、はい！私にもお手伝いさせてください！五条统一为是、是！请让我也帮忙！（保守口径19=预算19、体现她的敬语）。修复项：0x1CBEC补回JP省略号停顿（19≤20）、0x1CCCC补回被丢的机体并修掉JP没有的双叹号（17=17）、0x1CD0C修正！！！奇数叹号并补回……（16≤17）、0x1CCEC救けて改救救我且叹号数对齐JP（17≤18）、0x1CD40补回みんな=大家（18=18）、0x1CDA4/0x1CD60按ください敬语用请（15/22）。0x1CC4C的JP原文は、、てくれた！？疑为损坏记录、维持躲过了的解读。0x1CC0C与0x1CD2C实测字节=预算上限、保持原字符串不动。所有条目按2字节/汉字、1字节/、。！？…·的保守口径核算不超budget_bytes"
+}

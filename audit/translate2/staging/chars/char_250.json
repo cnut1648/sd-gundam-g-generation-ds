@@ -1,0 +1,652 @@
+{
+ "entity": "char_250",
+ "kind": "character",
+ "cids": [
+  250,
+  252
+ ],
+ "name_jp": "トリエル（ブースト）",
+ "name_zh_KEEP": "特里埃尔（增压）",
+ "cards": [
+  {
+   "cid": 250,
+   "ids": [
+    {
+     "idn": 750,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B700C",
+     "zh_name_ptr": "0x20B700C",
+     "name_jp": "………………",
+     "name_zh_current": "…………",
+     "name_zh_px": 32,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 171,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击",
+     "cutin_group": 580,
+     "cutin_jp": "………………",
+     "cutin_zh_current": "………………",
+     "name_owner": false,
+     "name_shared_with_idn": 30,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 751,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8710",
+     "zh_name_ptr": "0x20B8710",
+     "name_jp": "ーー消させない",
+     "name_zh_current": "不让你消失",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护",
+     "didx": 151,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）チームへの攻撃を全て引き愛け、そのダメージを1／4に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军",
+     "cutin_group": 581,
+     "cutin_jp": "『ーー消させない』",
+     "cutin_zh_current": "不会让你消失……",
+     "name_owner": false,
+     "name_shared_with_idn": 748,
+     "detail_owner": false,
+     "detail_owned_by": "char_122",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 752,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B871B",
+     "zh_name_ptr": "0x20B871B",
+     "name_jp": "ーーダメ",
+     "name_zh_current": "……不行",
+     "name_zh_px": 40,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋貫防無効",
+     "summary_zh_KEEP": "威↑・破防",
+     "didx": 200,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃対象の特殊防御を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·破防",
+     "cutin_group": 582,
+     "cutin_jp": "『ーーダメ』",
+     "cutin_zh_current": "……不行",
+     "name_owner": false,
+     "name_shared_with_idn": 749,
+     "detail_owner": false,
+     "detail_owned_by": "char_181",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 252,
+   "ids": [
+    {
+     "idn": 756,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B872F",
+     "zh_name_ptr": "0x20B872F",
+     "name_jp": "ーー私、見つけたから",
+     "name_zh_current": "我找到了哦",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋0回避",
+     "summary_zh_KEEP": "威↑暴・必闪",
+     "didx": 189,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加、攻撃はクリティカル化、敵の攻撃を必ず回避する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·暴击·完全回避",
+     "cutin_group": 586,
+     "cutin_jp": "『ーー私、見つけたから』",
+     "cutin_zh_current": "我找到了哦……",
+     "name_owner": false,
+     "name_shared_with_idn": 753,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 757,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B873B",
+     "zh_name_ptr": "0x20B873B",
+     "name_jp": "ーー消させない……誰も",
+     "name_zh_current": "谁也不消失",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "味方をかばう",
+     "summary_zh_KEEP": "援护・装甲↑",
+     "didx": 153,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）装甲が4増加。チームへの攻撃を全て1／4に軽減し、引き愛ける",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）掩护友军·装甲+4",
+     "cutin_group": 587,
+     "cutin_jp": "『ーー消させない……誰も』",
+     "cutin_zh_current": "不会让任何人消失……",
+     "name_owner": false,
+     "name_shared_with_idn": 754,
+     "detail_owner": false,
+     "detail_owned_by": "char_50",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 758,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B875B",
+     "zh_name_ptr": "0x20B875B",
+     "name_jp": "ーーどんなに力や思いが強くても……",
+     "name_zh_current": "力量再强也",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "痛撃＋貫防無効",
+     "summary_zh_KEEP": "威暴击破防",
+     "didx": 203,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手の特殊防御を無効化、攻撃力が40%増加、必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·破防",
+     "cutin_group": 588,
+     "cutin_jp": "『ーーどんな強い力も思いも……』",
+     "cutin_zh_current": "力再强、情再深……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_123",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x213D4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x213E8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x213FC",
+   "budget_bytes": 5,
+   "jp": "………ッ！",
+   "zh_current": "……唔！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21410",
+   "budget_bytes": 5,
+   "jp": "………ッ！",
+   "zh_current": "……唔！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21424",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21438",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2144C",
+   "budget_bytes": 5,
+   "jp": "………ッ！",
+   "zh_current": "……唔！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21460",
+   "budget_bytes": 5,
+   "jp": "………ッ！",
+   "zh_current": "……唔！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21474",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21488",
+   "budget_bytes": 3,
+   "jp": "……？",
+   "zh_current": "……？",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21498",
+   "budget_bytes": 5,
+   "jp": "！？………",
+   "zh_current": "！？………",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x214AC",
+   "budget_bytes": 6,
+   "jp": "……………？",
+   "zh_current": "……………？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x214C0",
+   "budget_bytes": 4,
+   "jp": "…ッ……",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x214D0",
+   "budget_bytes": 3,
+   "jp": "！……",
+   "zh_current": "！……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x214E0",
+   "budget_bytes": 3,
+   "jp": "ッ！！",
+   "zh_current": "！！！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x214F0",
+   "budget_bytes": 5,
+   "jp": "…ア……？",
+   "zh_current": "啊……？",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21504",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21518",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2152C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21540",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21554",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21568",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x298",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7DDC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7DF0",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7E04",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7E18",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7E2C",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7E40",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7E54",
+   "budget_bytes": 5,
+   "jp": "…ン………",
+   "zh_current": "唔……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21730",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21744",
+   "budget_bytes": 6,
+   "jp": "…………！！",
+   "zh_current": "…………！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21758",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2176C",
+   "budget_bytes": 11,
+   "jp": "…守……ミ、ンナ……",
+   "zh_current": "守护……大家……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21784",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21798",
+   "budget_bytes": 10,
+   "jp": "…戦……ワタ…シ…",
+   "zh_current": "战斗……我……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x217B0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x217C4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x217D8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x217EC",
+   "budget_bytes": 4,
+   "jp": "？………",
+   "zh_current": "？………",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x217FC",
+   "budget_bytes": 4,
+   "jp": "！………",
+   "zh_current": "！………",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2180C",
+   "budget_bytes": 4,
+   "jp": "………？",
+   "zh_current": "………？",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2181C",
+   "budget_bytes": 4,
+   "jp": "…ア……",
+   "zh_current": "啊……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2182C",
+   "budget_bytes": 4,
+   "jp": "！？……",
+   "zh_current": "！？……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2183C",
+   "budget_bytes": 3,
+   "jp": "ッ！！",
+   "zh_current": "唔！",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2184C",
+   "budget_bytes": 8,
+   "jp": "ッ！…マ…ダ……",
+   "zh_current": "！还没……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21860",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21874",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21888",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2189C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x218B0",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x218C4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F0C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F20",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F38",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F50",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F68",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F80",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F98",
+   "budget_bytes": 10,
+   "jp": "…ャ、ル……私……",
+   "zh_current": "啊……我……",
+   "zh_current_bytes": 7
+  }
+ ]
+}

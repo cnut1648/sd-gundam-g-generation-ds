@@ -147,20 +147,32 @@ def id_command(rom: GameROM, idn: int) -> dict:
 def id_details(rom: GameROM) -> list[dict]:
     """The 256-entry ID-command effect-detail pool (offtab-bounded records).
 
-    A record runs [offsets[didx], offsets[didx+1]) — the only correct boundary
-    (a find(00 00) scan both over- and under-runs; see the guide's history).
-    The console stops at the first token-aware 00 00; min(bound, terminator)
-    is correct for both the packed JP pool and a sparse rebuilt pool."""
+    A record nominally runs [offsets[didx], offsets[didx+1]) — the correct
+    boundary for the packed JP pool, whose interior 00 00 pad runs make a raw
+    find(00 00) scan under-run (see the guide's history).  The rebuilt ZH pool
+    additionally ALIASES duplicate records (offsets[didx+1] <= offsets[didx]
+    when the next slot back-references a shared record or is an empty
+    sentinel): there the next-offset bound is meaningless and the record is
+    walked exactly like the console renders it — to the first token-aware
+    standalone 00 00.  min(bound-if-forward, terminator) covers both pools;
+    a slot whose bytes strip to nothing (the 00-sentinel targets) is empty."""
     out = []
     for didx in range(L.DETAIL_OFFTAB_N - 1):
         start = u32(rom.arm9, L.DETAIL_OFFTAB + didx * 4)
         nxt = u32(rom.arm9, L.DETAIL_OFFTAB + (didx + 1) * 4)
-        if nxt <= start:            # empty slot (なし/无)
-            continue
         base = L.DETAIL_OFFTAB + start
-        bound = L.DETAIL_OFFTAB + nxt
+        if base >= len(rom.arm9):
+            continue
+        bound = L.DETAIL_OFFTAB + nxt if nxt > start else None
         term = text_codec.find_terminator(rom.arm9, base)
-        end = term if 0 <= term < bound else bound
+        if bound is not None:
+            end = term if 0 <= term < bound else bound
+        else:
+            # alias/sentinel slot: renderer semantics (terminator-only),
+            # with the JP record cap as a runaway guard
+            if term < 0 or term - base > 0x400:
+                continue
+            end = term
         if end <= base:
             continue
         rec = rom.arm9[base:end]

@@ -1,0 +1,113 @@
+{
+ "entity": "char_46",
+ "web_sources": [
+  "https://zh.moegirl.org.cn/%E5%8D%A1%E7%BC%AA%C2%B7%E6%AF%94%E4%B8%B9",
+  "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1311784793",
+  "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14220099724",
+  "https://forum.gamer.com.tw/Co.php?bsn=109&sn=487398",
+  "https://www.black-gamer.com/entry/zgundam_last_kousatu/"
+ ],
+ "name_flag": "卡缪（强化）可用、但ハイパー指最终话的NT觉醒暴走状态、而卡缪是天然NT并非强化人、（强化）易与强化人混淆。建议改为卡缪（觉醒）。参考 https://zh.moegirl.org.cn/%E5%8D%A1%E7%BC%AA%C2%B7%E6%AF%94%E4%B8%B9",
+ "ids": [
+  {
+   "idn": 138,
+   "name_zh": "别再添悲伤",
+   "cutin_zh": "不能再增添更多的悲伤了！",
+   "notes": "name与idn135共享（char_43所有）、此值仅供对齐参考；cutin与本机bark 0x52C8/0x55F4措辞统一"
+  },
+  {
+   "idn": 139,
+   "name_zh": "不能让你活",
+   "cutin_zh": "你是产生战斗意志的根源！不能让你活下去！！",
+   "notes": "name与idn136共享（另一agent所有）、此值仅供对齐参考；第47话对哈曼名台词、大陆通行译法为产生战斗意志的根源／不能让你活下去"
+  },
+  {
+   "idn": 140,
+   "name_zh": "生命是力量",
+   "cutin_zh": "生命就是力量……是支撑这个宇宙的东西！！",
+   "notes": "name与idn134共享（char_43所有）、此值仅供对齐参考；生命就是力量为萌百收录的通行译法"
+  },
+  {
+   "idn": 141,
+   "name_zh": "展现力量！",
+   "cutin_zh": "卡缪乘坐着能将力量展现出来的机体……",
+   "detail_effect_zh": "1回合内命中、回避、攻击力各提升20%、装甲提升2、并发动先制攻击",
+   "notes": "最终话中凤（村雨）亡灵之声、以第三人称谈卡缪；原文『』为引用标记、按字库规则省去"
+  },
+  {
+   "idn": 142,
+   "name_zh": "从这里消失",
+   "cutin_zh": "给我从这里消失！",
+   "detail_effect_zh": "攻击力增加40%、攻击必定暴击、并无效化对方装甲",
+   "notes": "最终话WR形态撞击西罗克的著名怒吼；原detail前缀曾误用：与対象等日文残留、此处按规则只给效果子句"
+  },
+  {
+   "idn": 143,
+   "name_zh": "你太心急了",
+   "cutin_zh": "你太心急了……所以才不行啊",
+   "detail_effect_zh": "HP完全恢复",
+   "notes": "最终话中爱玛亡灵之声的劝诫、语气用女性向的啊；原名太心急了……为6格超出5格上限、故取你太心急了与cutin完全同词；旧detail的恢复100%系JP完全回復的误改、现按原文译"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x529C", "zh": "错的是灵魂被地球重力束缚的人们！"},
+  {"file": "0.bin", "record": "0x52C8", "zh": "不能再增添更多的悲伤了啊！"},
+  {"file": "0.bin", "record": "0x52F0", "zh": "你是战意的根源！不能让你活！"},
+  {"file": "0.bin", "record": "0x5318", "zh": "哪怕拼上身躯拼上这条命……！！"},
+  {"file": "0.bin", "record": "0x533C", "zh": "给我回黑暗世界去！！"},
+  {"file": "0.bin", "record": "0x535C", "zh": "哈啊啊啊！！"},
+  {"file": "0.bin", "record": "0x5374", "zh": "你这种家伙就是人渣！不该活着！"},
+  {"file": "0.bin", "record": "0x539C", "zh": "混蛋！给我消失吧！！"},
+  {"file": "0.bin", "record": "0x53BC", "zh": "啊……光在扩散……！？"},
+  {"file": "0.bin", "record": "0x53F4", "zh": "你这……！死了那么多人！"},
+  {"file": "0.bin", "record": "0x5414", "zh": "没什么！"},
+  {"file": "0.bin", "record": "0x5428", "zh": "你让人不幸！……不能让你活！"},
+  {"file": "0.bin", "record": "0x5450", "zh": "生命就是力量！支撑着这宇宙！"},
+  {"file": "0.bin", "record": "0x5478", "zh": "我懂了！你是不该活着的人！！"},
+  {"file": "0.bin", "record": "0x54A0", "zh": "生命……怎能这样轻易失去啊！"},
+  {"file": "0.bin", "record": "0x54C8", "zh": "你不会懂……经这身体涌出的力量！！"},
+  {"file": "0.bin", "record": "0x54F4", "zh": "就这点！！"},
+  {"file": "0.bin", "record": "0x5508", "zh": "……打不中！"},
+  {"file": "0.bin", "record": "0x5520", "zh": "我们……或许能理解彼此！"},
+  {"file": "0.bin", "record": "0x5544", "zh": "可恶！到头了吗！！"},
+  {"file": "0.bin", "record": "0x5560", "zh": "有你这种人在、战争才没完！"},
+  {"file": "1dd.bin", "record": "0x1B4", "zh": "我可不是在闹着玩的啊！！"},
+  {"file": "1de.bin", "record": "0x150C", "zh": "将众人之命合一！！"},
+  {"file": "1de.bin", "record": "0x1528", "zh": "没错！不能放过那家伙！"},
+  {"file": "1de.bin", "record": "0x154C", "zh": "这世界需要克瓦特罗大尉！"},
+  {"file": "1de.bin", "record": "0x1570", "zh": "没错、发自你感觉的意志是正当的！"},
+  {"file": "1de.bin", "record": "0x159C", "zh": "凤！你不能一个人去！"},
+  {"file": "1de.bin", "record": "0x15BC", "zh": "生命是力量！对吧、爱玛！"},
+  {"file": "1de.bin", "record": "0x15E0", "zh": "没错！不能放过那家伙！"},
+  {"file": "0.bin", "record": "0x53DC", "zh": "真不长记性！"},
+  {"file": "0.bin", "record": "0x5588", "zh": "不珍视人心的世界、造来何用！"},
+  {"file": "0.bin", "record": "0x55B0", "zh": "人心是相通的！"},
+  {"file": "0.bin", "record": "0x55C8", "zh": "生命、生命就是力量！支撑这宇宙！"},
+  {"file": "0.bin", "record": "0x55F4", "zh": "不能再增添更多的悲伤了啊！"},
+  {"file": "0.bin", "record": "0x561C", "zh": "哪怕拼上身躯拼上这条命……！！"},
+  {"file": "0.bin", "record": "0x5640", "zh": "哈啊啊啊！！"},
+  {"file": "0.bin", "record": "0x5658", "zh": "我可不是在闹着玩的啊！！"},
+  {"file": "0.bin", "record": "0x5680", "zh": "哪怕拼上身躯拼上这条命……！！"},
+  {"file": "0.bin", "record": "0x56A4", "zh": "啊……光在扩散……！？"},
+  {"file": "0.bin", "record": "0x56DC", "zh": "好多人死去……这种死法、你满足吗！"},
+  {"file": "0.bin", "record": "0x5730", "zh": "你这……！死了那么多人！！"},
+  {"file": "0.bin", "record": "0x5754", "zh": "你在享受残杀吗！……这种家伙！"},
+  {"file": "0.bin", "record": "0x57A4", "zh": "啊！……试试看！"},
+  {"file": "0.bin", "record": "0x57BC", "zh": "生命……怎能这样轻易失去啊！"},
+  {"file": "0.bin", "record": "0x57E4", "zh": "你不会懂！经这……身体涌出的力量！"},
+  {"file": "0.bin", "record": "0x5810", "zh": "就这点！！"},
+  {"file": "0.bin", "record": "0x5824", "zh": "……打不中！"},
+  {"file": "0.bin", "record": "0x583C", "zh": "住手！我们本该能相互理解！"},
+  {"file": "0.bin", "record": "0x5860", "zh": "我能做的……似乎只有杀人……"},
+  {"file": "0.bin", "record": "0x5888", "zh": "对不起……"},
+  {"file": "1dd.bin", "record": "0x1DC", "zh": "身体……借给大家！！"},
+  {"file": "1de.bin", "record": "0x1604", "zh": "将众人之命合一！！"},
+  {"file": "1de.bin", "record": "0x1620", "zh": "没错！不能放过那家伙！"},
+  {"file": "1de.bin", "record": "0x1644", "zh": "这世界需要克瓦特罗大尉！"},
+  {"file": "1de.bin", "record": "0x1668", "zh": "没错、发自你感觉的意志是正当的！"},
+  {"file": "1de.bin", "record": "0x1694", "zh": "凤！你不能一个人去！"},
+  {"file": "1de.bin", "record": "0x16B4", "zh": "生命是力量！对吧、爱玛！"},
+  {"file": "1de.bin", "record": "0x16D8", "zh": "没错！不能放过那家伙！"}
+ ],
+ "notes": "人名按项目定名：凤（凤·村雨）、爱玛（爱玛·辛）、克瓦特罗。0x529C按夏亚名句通行译法补回地球（错的是灵魂被地球重力束缚的人们）。0x5374的クズ按萌百通行改人渣。0x54F4与0x5810同一JP、统一为就这点！！并消除网络梗就这。0x5318三处与1dd 0x1DC、0x55B0保持现行文本原样（按简报字节规则重算会超限、而现行实测字节在预算内、改动反而有风险）。1de.bin中0x1528/0x15E0/0x1620/0x16D8同句同译、0x150C=0x1604、0x154C=0x1644、0x1570=0x1668、0x159C=0x1694、0x15BC=0x16B4均已成对统一。idn138/139/140的name归char_43/其他agent所有、本文件所给值仅为与本卡cutin对齐的建议。"
+}

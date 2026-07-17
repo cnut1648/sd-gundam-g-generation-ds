@@ -1,0 +1,43 @@
+{
+ "entity": "char_403",
+ "web_sources": [
+  "https://toukakurahashi.web.fc2.com/words40_TurnA.html",
+  "https://bbs.nga.cn/read.php?tid=37533763",
+  "https://w.atwiki.jp/gundam-vs-gnsk/pages/1867.html",
+  "https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%A0%E3%83%BB%E3%82%AE%E3%83%B3%E3%82%AC%E3%83%8A%E3%83%A0"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 1209,
+   "name_zh": "演习两千年",
+   "cutin_zh": "为了今天、我们演习了两千年！",
+   "notes": "名台词为∀第40话金卡拉姆舰队名场面（スエッソン台词的队内通用版）、中文社区通行说法即为了今天我们演习了两千年（NGA等）。指令名与名台词共享关键词演习/两千年、替换残缺的一直在演习。detail归char_402、未输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x2B1CC", "zh": "来了！各炮座雁行阵迎击！！"},
+  {"file": "0.bin", "record": "0x2B1F0", "zh": "开火！开火！！"},
+  {"file": "0.bin", "record": "0x2B208", "zh": "各炮座摆剑式！开火！"},
+  {"file": "0.bin", "record": "0x2B228", "zh": "十字崩直捣敌阵！全员小心应战！！"},
+  {"file": "0.bin", "record": "0x2B254", "zh": "武门之力、今日示于尔等！！"},
+  {"file": "0.bin", "record": "0x2B278", "zh": "好、摆开枪之阵！冲啊！！"},
+  {"file": "0.bin", "record": "0x2B298", "zh": "拿出演习成果！！"},
+  {"file": "0.bin", "record": "0x2B2B4", "zh": "休要怯阵！就此突击！！"},
+  {"file": "0.bin", "record": "0x2B2D4", "zh": "不甘心……！"},
+  {"file": "0.bin", "record": "0x2B2EC", "zh": "打不中！"},
+  {"file": "0.bin", "record": "0x2B300", "zh": "唔……和演习差太多了……"},
+  {"file": "0.bin", "record": "0x2B320", "zh": "这点算不得损伤！"},
+  {"file": "0.bin", "record": "0x2B33C", "zh": "可恶！作战改为E小调！！"},
+  {"file": "0.bin", "record": "0x2B360", "zh": "作战又不行！？下个阵形是……"},
+  {"file": "0.bin", "record": "0x2B388", "zh": "哇啊！和、和演习差太多……！"},
+  {"file": "0.bin", "record": "0x2B3AC", "zh": "为、为何！我等作战不管用……！"},
+  {"file": "0.bin", "record": "0x2B3D4", "zh": "光束盾挡住了！好、趁现在重整阵形！"},
+  {"file": "0.bin", "record": "0x2B404", "zh": "来了！千万别被打中！！"},
+  {"file": "0.bin", "record": "0x2B424", "zh": "来了！快回避！！"},
+  {"file": "0.bin", "record": "0x2B440", "zh": "好机会！捕获那台机体！！"},
+  {"file": "0.bin", "record": "0x2B464", "zh": "这狼狈相……不能让御大将看见！"},
+  {"file": "0.bin", "record": "0x2B48C", "zh": "莫小看我等！！"}
+ ],
+ "notes": "金卡拉姆队大名（∀高达、月之武门世家）、统一武人口吻（休要/莫/我等/尔等/示于）。主要修正：1) 0x2B33C恢复被抹掉的音乐作战代号Eマイナー→E小调（与repo既有作战是E小调/作战E小调一致）；2) 恢复被抹平的阵形梗：0x2B1CC雁の陣→雁行阵（与char_326スエッソン同记法）、0x2B278槍の陣→枪之阵、0x2B360次の陣形→下个阵形；3) 0x2B228十字炮火改回技名十字崩（与既有cutin施展十字崩一致）、并补回衝く=直捣；4) 0x2B388/0x2B2D4补回JP的……语气、0x2B3AC保留なっ、なぜだ的结巴＝为、为何。御大将、光束盾沿用repo canon。全部bark按费率核算（CJK=2、、。！？…=1、Latin=2）均<=budget_bytes、多条恰满。"
+}

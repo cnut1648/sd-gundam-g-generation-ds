@@ -1,0 +1,76 @@
+{
+ "entity": "unit_196",
+ "kind": "unit",
+ "utids": [
+  196,
+  197,
+  198
+ ],
+ "name_jp": "クィン・マンサ",
+ "name_zh_current": "昆曼沙",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C8E1",
+   "jp": "ハイパー・メガ粒子砲",
+   "zh_current": "超级米加粒子炮",
+   "shared_by_n_units": 10
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218CAE8",
+   "jp": "大型ビーム・サーベル",
+   "zh_current": "大型光束军刀",
+   "shared_by_n_units": 9
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218F30C",
+   "jp": "ファンネル",
+   "zh_current": "浮游炮",
+   "shared_by_n_units": 48
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 65,
+   "record_offset": "0x504",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "ニュータイプ対応機",
+    "大型ユニット"
+   ],
+   "zh_segments_current": [
+    "新人类",
+    "巨大"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E6A",
+   "jp": "Iフィールド",
+   "zh_current": "I力场",
+   "owner": false,
+   "owned_by": "unit_4"
+  },
+  "defense": {
+   "record": 1,
+   "record_offset": "0xc",
+   "budget_bytes": 56,
+   "jp_segments": [
+    "威力450までのビーム属性の射撃攻撃を無効化し、",
+    "それを超える場合ダメージを30%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力450以下",
+    "光束射击无效",
+    "超过则减30%"
+   ],
+   "owner": false,
+   "owned_by": "unit_4"
+  }
+ }
+}

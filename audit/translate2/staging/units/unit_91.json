@@ -1,0 +1,74 @@
+{
+ "entity": "unit_91",
+ "kind": "unit",
+ "utids": [
+  91,
+  92,
+  93
+ ],
+ "name_jp": "Wガンダムゼロ（EW）／H",
+ "name_zh_current": "W高达零式／H",
+ "name_zh_px": 80,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218CB29",
+   "jp": "ツイン・バスターライフル",
+   "zh_current": "双管破坏步枪",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218ED73",
+   "jp": "マシンキャノン",
+   "zh_current": "机炮",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218CB36",
+   "jp": "ローリング・TBライフル",
+   "zh_current": "旋转破坏步枪",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 30,
+   "record_offset": "0x2e8",
+   "budget_bytes": 64,
+   "jp_segments": [
+    "ゼロ・システムフル稼働：命中回避＋10%、先制率上昇",
+    "クリティカル0回避＋5%、被ダメージ25%減少"
+   ],
+   "zh_segments_current": [
+    "零式系统试作机",
+    "新人类",
+    "暴击回避减伤"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

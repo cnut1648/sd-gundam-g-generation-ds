@@ -1,0 +1,71 @@
+{
+ "entity": "unit_193",
+ "kind": "unit",
+ "utids": [
+  193,
+  194,
+  195
+ ],
+ "name_jp": "レズン専用ギラ・ドーガ",
+ "name_zh_current": "蕾兹专用基拉·多加",
+ "name_zh_px": 108,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EE11",
+   "jp": "ビーム・マシンガン",
+   "zh_current": "光束机枪",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F00F",
+   "jp": "ビーム・ソード・アックス",
+   "zh_current": "光束剑斧",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906F3",
+   "jp": "グレネード・ランチャー",
+   "zh_current": "榴弹发射器",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 3,
+   "ptr": "0x2189A5B",
+   "jp": "シュツルム・ファウスト",
+   "zh_current": "铁拳火箭",
+   "shared_by_n_units": 15
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 64,
+   "record_offset": "0x4f4",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "レズン・シュナイダー専用機"
+   ],
+   "zh_segments_current": [
+    "蕾兹专用"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

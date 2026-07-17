@@ -1,0 +1,328 @@
+{
+ "entity": "char_232",
+ "kind": "character",
+ "cids": [
+  232
+ ],
+ "name_jp": "アウル・ニーダ",
+ "name_zh_KEEP": "奥尔·尼达",
+ "cards": [
+  {
+   "cid": 232,
+   "ids": [
+    {
+     "idn": 696,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8608",
+     "zh_name_ptr": "0x20B8608",
+     "name_jp": "じゃあ、オマエはここで死ねよ！",
+     "name_zh_current": "那就死在这",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 553,
+     "cutin_jp": "じゃあ、オマエはここで死ねよ！",
+     "cutin_zh_current": "那你就死在这里吧！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 697,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8616",
+     "zh_name_ptr": "0x20B8616",
+     "name_jp": "格好悪いってんじゃねぇ！？",
+     "name_zh_current": "太逊了吧！？",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "回避&装甲上昇",
+     "summary_zh_KEEP": "回避・装甲↑",
+     "didx": 108,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·装甲+4",
+     "cutin_group": 554,
+     "cutin_jp": "格好悪いってんじゃねえ！？そーいうの！",
+     "cutin_zh_current": "那样子也太逊了吧！？我说的就是那样！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 698,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8626",
+     "zh_name_ptr": "0x20B8626",
+     "name_jp": "言っといてやるよ！",
+     "name_zh_current": "先说再见！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑&散開封印",
+     "summary_zh_KEEP": "威力↑・封散",
+     "didx": 159,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加。チームの間接攻撃の際、相手が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%·解除封印",
+     "cutin_group": 555,
+     "cutin_jp": "言っといてやるよ！……「サヨナラ」ってなぁ！",
+     "cutin_zh_current": "我先把话放这里！……就是那句再见啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_35",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1F60C",
+   "budget_bytes": 17,
+   "jp": "ノコノコ出てきちゃってさあ！！",
+   "zh_current": "傻乎乎冲上来啊！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F62C",
+   "budget_bytes": 8,
+   "jp": "もらったーっ！！",
+   "zh_current": "拿下！！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F640",
+   "budget_bytes": 24,
+   "jp": "バラバラか生け捕りか……お前、どっちがイイ！？",
+   "zh_current": "打碎还是活捉、你选哪个！？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F664",
+   "budget_bytes": 17,
+   "jp": "その首、土産にしてやるよ！！",
+   "zh_current": "我要那颗头当奖品！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F684",
+   "budget_bytes": 13,
+   "jp": "なら……殺ってやるさ！！",
+   "zh_current": "那就……杀了你！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F6A0",
+   "budget_bytes": 11,
+   "jp": "何やってんだ、ボケ！",
+   "zh_current": "干嘛、蠢货！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F6B8",
+   "budget_bytes": 13,
+   "jp": "そーら！コイツでどうだ！！",
+   "zh_current": "看招！这招如何？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F6D4",
+   "budget_bytes": 12,
+   "jp": "ハッ！遅いっての！！",
+   "zh_current": "哈！太慢了！！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F6EC",
+   "budget_bytes": 15,
+   "jp": "だって……しょうがないじゃんよ……",
+   "zh_current": "可是没法子啊……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F708",
+   "budget_bytes": 22,
+   "jp": "はははっ！ゴメンねえ！強くてさあ！！",
+   "zh_current": "哈哈！抱歉啦、谁叫我强！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F72C",
+   "budget_bytes": 17,
+   "jp": "くそっ！なんなんだよ、コレ！？",
+   "zh_current": "可恶！这是什么！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F74C",
+   "budget_bytes": 37,
+   "jp": "そんなんでこのボクを殺ろうってえ！？……甘えんだよ、こらぁっ！！",
+   "zh_current": "就凭这点想杀我！？太天真了、混蛋！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F780",
+   "budget_bytes": 18,
+   "jp": "へえ……なんか楽しそーじゃん！",
+   "zh_current": "嘿嘿……好像挺好玩！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F7A0",
+   "budget_bytes": 28,
+   "jp": "いやー、まいったまいったマジ驚いたぜ、もお〜",
+   "zh_current": "哎呀、我服了服了、真叫我意外",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F7C8",
+   "budget_bytes": 24,
+   "jp": "っ！な、何だよコレ！？こんなの予定に無いぞ！",
+   "zh_current": "这是什么！？计划里没这个！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F7EC",
+   "budget_bytes": 12,
+   "jp": "う……うそだろ……？",
+   "zh_current": "唔……骗人吧？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F804",
+   "budget_bytes": 17,
+   "jp": "ははっ！ごくろうさまだね！！",
+   "zh_current": "哈哈！辛苦你啦！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F824",
+   "budget_bytes": 15,
+   "jp": "来るのがわかってりゃ、こんなの！",
+   "zh_current": "早知道你会来！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F840",
+   "budget_bytes": 11,
+   "jp": "来たッ！逃げるぞ！！",
+   "zh_current": "来了！快逃！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F858",
+   "budget_bytes": 21,
+   "jp": "その機体ももらってやるよ！ボクらがね！",
+   "zh_current": "那机体我们也收下了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F87C",
+   "budget_bytes": 8,
+   "jp": "ど、どうして……！？",
+   "zh_current": "为、为何……",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F890",
+   "budget_bytes": 16,
+   "jp": "お前にはやらないよ！コイツは！",
+   "zh_current": "这个可不能给你！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7AE0",
+   "budget_bytes": 10,
+   "jp": "んじゃ……やろうか？",
+   "zh_current": "那……上吧？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7AF8",
+   "budget_bytes": 12,
+   "jp": "……手伝えばいいんだろ？",
+   "zh_current": "……帮忙就行？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B10",
+   "budget_bytes": 20,
+   "jp": "ったく！仕切るのが好きなんだから……",
+   "zh_current": "真是的！就爱指挥人……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B30",
+   "budget_bytes": 19,
+   "jp": "ああ、攻撃ね、攻撃？わかってるさ！",
+   "zh_current": "啊、攻击是吧？我知道啦！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B50",
+   "budget_bytes": 12,
+   "jp": "……手伝えばいいんだろ？",
+   "zh_current": "帮忙就行了吧？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B68",
+   "budget_bytes": 12,
+   "jp": "……手伝えばいいんだろ？",
+   "zh_current": "帮忙就行了吧？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B80",
+   "budget_bytes": 12,
+   "jp": "……手伝えばいいんだろ？",
+   "zh_current": "帮忙就行了吧？",
+   "zh_current_bytes": 12
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "entity": "char_131",
+ "kind": "character",
+ "cids": [
+  131
+ ],
+ "name_jp": "チャップ・アデル",
+ "name_zh_KEEP": "查普·阿德尔",
+ "cards": [
+  {
+   "cid": 131,
+   "ids": [
+    {
+     "idn": 393,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7C30",
+     "zh_name_ptr": "0x20B7C30",
+     "name_jp": "敵を知り、己を知れば……",
+     "name_zh_current": "知己知彼……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "チーム回避上昇",
+     "summary_zh_KEEP": "队・回避↑",
+     "didx": 25,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン回避率が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）回避+20%",
+     "cutin_group": 310,
+     "cutin_jp": "敵を知り、己を知れば、百戦危うからずですよ！",
+     "cutin_zh_current": "知己知彼、就能百战不殆！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_52",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 394,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C40",
+     "zh_name_ptr": "0x218C23D",
+     "name_jp": "あきらめた方が……",
+     "name_zh_current": "不如放弃吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "強制散開",
+     "summary_zh_KEEP": "强制散开",
+     "didx": 163,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）チームの間接攻撃に対して、攻撃対象のチームを強制的に散開させる",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）强制散开",
+     "cutin_group": 311,
+     "cutin_jp": "あきらめた方がいいんじゃないですか？",
+     "cutin_zh_current": "您还是放弃为好吧？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 395,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7C4F",
+     "zh_name_ptr": "0x218C248",
+     "name_jp": "敗北という事実を……",
+     "name_zh_current": "败北的事实",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "散開封印",
+     "summary_zh_KEEP": "散开封印",
+     "didx": 156,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）チームの間接攻撃の際、攻撃対象が散開できないようにする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）解除封印",
+     "cutin_group": 312,
+     "cutin_jp": "敗北という事実を認識してください",
+     "cutin_zh_current": "请认清败北的事实！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x10DEC",
+   "budget_bytes": 23,
+   "jp": "スキを見せたのはそちらです遠慮はしませんよ！",
+   "zh_current": "露破绽的是你们、别怪我！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10E10",
+   "budget_bytes": 24,
+   "jp": "やれるとは思えませんが……やるしかないですね",
+   "zh_current": "我没多大把握、也只能拼了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10E34",
+   "budget_bytes": 15,
+   "jp": "ここから先へは行かせませんよ！",
+   "zh_current": "休想从这过去！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10E50",
+   "budget_bytes": 23,
+   "jp": "やりますよ！腕立ては食らいたくないですからね！",
+   "zh_current": "干吧！我可不想被罚！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10E74",
+   "budget_bytes": 19,
+   "jp": "手加減はできませんよ覚悟して下さい！",
+   "zh_current": "我不会留情、觉悟吧！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10E94",
+   "budget_bytes": 20,
+   "jp": "こうなったら……やるしかないですね！",
+   "zh_current": "事到如今……只能上了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10EB4",
+   "budget_bytes": 25,
+   "jp": "接近戦は不得手ですが……仕方がありませんね！",
+   "zh_current": "不擅长近身战……但没办法了！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10EDC",
+   "budget_bytes": 21,
+   "jp": "この間合いなら……これしかありません！",
+   "zh_current": "这距离……只能用这招！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F00",
+   "budget_bytes": 16,
+   "jp": "うかつでしたね……脱出します！",
+   "zh_current": "太大意了……脱出！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F1C",
+   "budget_bytes": 14,
+   "jp": "それは甘いというものです！",
+   "zh_current": "那可太天真了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F38",
+   "budget_bytes": 19,
+   "jp": "そう簡単には……くたばりませんよ！",
+   "zh_current": "没那么容易……死不了！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F58",
+   "budget_bytes": 10,
+   "jp": "……かすり傷ですね",
+   "zh_current": "只是皮外伤",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F70",
+   "budget_bytes": 19,
+   "jp": "さすがに見逃してはもらえませんか……",
+   "zh_current": "果然不肯放过我吗……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10F90",
+   "budget_bytes": 10,
+   "jp": "クッ……やりますね！",
+   "zh_current": "唔……有一套！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10FA8",
+   "budget_bytes": 19,
+   "jp": "こ、こうも火力が違うのでは……！",
+   "zh_current": "竟、竟有这等火力……！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10FC8",
+   "budget_bytes": 15,
+   "jp": "クッ……！振り切れないとは！",
+   "zh_current": "唔……！摆脱不了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x10FE4",
+   "budget_bytes": 14,
+   "jp": "そんな攻撃は無駄というものです",
+   "zh_current": "那种攻击没用的！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11000",
+   "budget_bytes": 16,
+   "jp": "おっと……！当たりませんよ！",
+   "zh_current": "哎呀……打不中的！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1101C",
+   "budget_bytes": 16,
+   "jp": "2時方向から攻撃！回避運動を！",
+   "zh_current": "2点方向有攻击！回避！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11038",
+   "budget_bytes": 22,
+   "jp": "もう諦めて大人しく捕虜になったらどうです？",
+   "zh_current": "请你放弃吧、乖乖投降！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1105C",
+   "budget_bytes": 16,
+   "jp": "これは……！うかつでしたね……",
+   "zh_current": "这是……！我大意了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11078",
+   "budget_bytes": 18,
+   "jp": "残念ですが……降伏はできません！！",
+   "zh_current": "很遗憾……不能投降！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4ED8",
+   "budget_bytes": 23,
+   "jp": "ここはどうやら全員で行くのが得索のようですね！",
+   "zh_current": "看来这里得全员一起上了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4EFC",
+   "budget_bytes": 20,
+   "jp": "わかりました！支援は任せてください！！",
+   "zh_current": "明白了！支援请交给我！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4F1C",
+   "budget_bytes": 22,
+   "jp": "やりますよ！もう腕立てはゴメンですからね！！",
+   "zh_current": "我上！我可不想再受罚了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4F40",
+   "budget_bytes": 30,
+   "jp": "少しは学習したようですねいいでしょう、支援します！！",
+   "zh_current": "你似乎学乖了点、很好、我来支援！！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4F6C",
+   "budget_bytes": 15,
+   "jp": "こちらアデル、いつでもいけますよ！",
+   "zh_current": "阿德尔、随时能上！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4F88",
+   "budget_bytes": 22,
+   "jp": "了解だ、ウラキ少尉！こちらの敵は任せておけ！",
+   "zh_current": "明白、浦木少尉！这边交给我！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4FAC",
+   "budget_bytes": 20,
+   "jp": "わかりました！支援は任せてください！！",
+   "zh_current": "明白了！支援请交给我！！",
+   "zh_current_bytes": 20
+  }
+ ]
+}

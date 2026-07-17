@@ -1,0 +1,336 @@
+{
+ "entity": "char_28",
+ "kind": "character",
+ "cids": [
+  28
+ ],
+ "name_jp": "エマ・シーン",
+ "name_zh_KEEP": "爱玛·辛",
+ "cards": [
+  {
+   "cid": 28,
+   "ids": [
+    {
+     "idn": 84,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B71C5",
+     "zh_name_ptr": "0x232910A",
+     "name_jp": "これは戦争でしょ……！",
+     "name_zh_current": "这是战争吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 52,
+     "cutin_jp": "これは戦争でしょ……恨まないで！",
+     "cutin_zh_current": "这就是战争啊……别恨我！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 85,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B71D1",
+     "zh_name_ptr": "0x23296C9",
+     "name_jp": "引き際も大事よ",
+     "name_zh_current": "适时收手",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "チーム防御力↑",
+     "summary_zh_KEEP": "队・回甲↑",
+     "didx": 117,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+20%·装甲+2",
+     "cutin_group": 53,
+     "cutin_jp": "引き際も大事よ、戦闘は",
+     "cutin_zh_current": "战斗、收手的时机也很重要",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 86,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B71E2",
+     "zh_name_ptr": "0x218873E",
+     "name_jp": "あたしの生命を吸って……",
+     "name_zh_current": "吸取我生命",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "自軍HP回復",
+     "summary_zh_KEEP": "自军HP回复",
+     "didx": 7,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）HPが25%回復する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）恢复25%",
+     "cutin_group": 54,
+     "cutin_jp": "あたしの生命を吸って……そして勝つのよ！",
+     "cutin_zh_current": "吸取我的生命……然后一定取胜！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2D4C",
+   "budget_bytes": 8,
+   "jp": "邪魔をしないで！",
+   "zh_current": "别碍事！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D60",
+   "budget_bytes": 8,
+   "jp": "落ちなさいっ！！",
+   "zh_current": "倒下吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D74",
+   "budget_bytes": 8,
+   "jp": "落ちなさいっ！！",
+   "zh_current": "倒下吧！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D88",
+   "budget_bytes": 25,
+   "jp": "私は自分が信じるように生きていたいというだけ！",
+   "zh_current": "我要活出自己的信念！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB0",
+   "budget_bytes": 20,
+   "jp": "戦う理由ならあるわ！負けられないの！",
+   "zh_current": "有战斗的理由！不能输！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DD0",
+   "budget_bytes": 13,
+   "jp": "やらせるわけにはいかない！",
+   "zh_current": "不能让你得逞！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DEC",
+   "budget_bytes": 15,
+   "jp": "シミュレーシヨンは十分のはず！いける！",
+   "zh_current": "模拟够了！能行！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E08",
+   "budget_bytes": 33,
+   "jp": "戦争とは理不尽なものだって！アナタだってわかってるでしょう！？",
+   "zh_current": "战争本就不讲理！你也明白吧！？",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E38",
+   "budget_bytes": 27,
+   "jp": "私がいなくなっても……疾しがることはなくてよ……",
+   "zh_current": "即便我离去……也不必难过……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E60",
+   "budget_bytes": 11,
+   "jp": "当たるわけないでしょ！",
+   "zh_current": "怎么可能中！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E78",
+   "budget_bytes": 17,
+   "jp": "まだやられるわけにはいかないのよ！",
+   "zh_current": "还不能被打倒！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2E98",
+   "budget_bytes": 12,
+   "jp": "バカはやめてちょうだい！",
+   "zh_current": "请别犯傻了！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2EB0",
+   "budget_bytes": 27,
+   "jp": "戦うことが地球を汚染するってなぜ、気付けないの！？",
+   "zh_current": "战斗在污染地球、你为何不懂！？",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2ED8",
+   "budget_bytes": 28,
+   "jp": "自分が何をやっているか……わかっているの、アナタは！？",
+   "zh_current": "你可知道自己在做什么！？",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F00",
+   "budget_bytes": 6,
+   "jp": "こんな……！？",
+   "zh_current": "怎会！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F14",
+   "budget_bytes": 13,
+   "jp": "ダ、ダメだわ……このままでは！",
+   "zh_current": "不行……这样下去！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F30",
+   "budget_bytes": 15,
+   "jp": "焦りすぎよ……だからいけないの",
+   "zh_current": "太心急了……不行啊",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F4C",
+   "budget_bytes": 5,
+   "jp": "そんなもの！",
+   "zh_current": "就这！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F60",
+   "budget_bytes": 13,
+   "jp": "来ます！各機散開して！！",
+   "zh_current": "来了！散开！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2F7C",
+   "budget_bytes": 25,
+   "jp": "無駄な抵抗はしないで！あなたの戦争は終わったのよ",
+   "zh_current": "别再抵抗！你的战争结束了！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FA4",
+   "budget_bytes": 27,
+   "jp": "無理をすればこうなるってわかっていたはずなのに……",
+   "zh_current": "硬来就会这样……明明早该料到……",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2FCC",
+   "budget_bytes": 16,
+   "jp": "捕虜になるつもりなんかなくってよ！",
+   "zh_current": "我才不要当俘虏！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x56C4",
+   "budget_bytes": 11,
+   "jp": "『……だいじょうぶ』",
+   "zh_current": "『……没问题』",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x90C",
+   "budget_bytes": 17,
+   "jp": "一斉攻撃で行くわ！支援をお願い！！",
+   "zh_current": "一齐攻击！请支援！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x92C",
+   "budget_bytes": 11,
+   "jp": "こちらエマ、了解です！！",
+   "zh_current": "爱玛、收到！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x944",
+   "budget_bytes": 26,
+   "jp": "カミーユ、一人で突出するのは危険よ！支援するわ！！",
+   "zh_current": "卡缪、别一人冒进！我来支援！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x96C",
+   "budget_bytes": 10,
+   "jp": "了解です、クワトロ大尉！",
+   "zh_current": "收到、大尉！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x984",
+   "budget_bytes": 11,
+   "jp": "こちらエマ、了解です！！",
+   "zh_current": "爱玛、收到！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x99C",
+   "budget_bytes": 11,
+   "jp": "こちらエマ、了解です！！",
+   "zh_current": "爱玛、收到！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x9B4",
+   "budget_bytes": 11,
+   "jp": "こちらエマ、了解です！！",
+   "zh_current": "爱玛、收到！！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

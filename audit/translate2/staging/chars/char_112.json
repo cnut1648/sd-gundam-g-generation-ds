@@ -1,0 +1,644 @@
+{
+ "entity": "char_112",
+ "kind": "character",
+ "cids": [
+  112,
+  113
+ ],
+ "name_jp": "シン・マツナガ",
+ "name_zh_KEEP": "松永真",
+ "cards": [
+  {
+   "cid": 112,
+   "ids": [
+    {
+     "idn": 336,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79DE",
+     "zh_name_ptr": "0x20B79DE",
+     "name_jp": "マツナガの家名にかけて……",
+     "name_zh_current": "以松永之名",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 253,
+     "cutin_jp": "マツナガの家名にかけて……この戦い、負けるわけにはいかない！",
+     "cutin_zh_current": "赌上松永的家名……这一战、绝不能输！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 337,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79EC",
+     "zh_name_ptr": "0x20B79EC",
+     "name_jp": "……胸に刻んでやろう！",
+     "name_zh_current": "刻进你胸口",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力&装甲上昇",
+     "summary_zh_KEEP": "威力・装甲↑",
+     "didx": 109,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·装甲+4",
+     "cutin_group": 254,
+     "cutin_jp": "ソロモンの白〜の名……貴様の胸に刻んでやろう！",
+     "cutin_zh_current": "所罗门白狼之名……刻在你胸口！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 338,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79FA",
+     "zh_name_ptr": "0x218C206",
+     "name_jp": "白狼に出会ったら……",
+     "name_zh_current": "遇上白狼……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑&ID封印",
+     "summary_zh_KEEP": "命↑・ID封",
+     "didx": 166,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%増加、攻撃が命中した相手のIDを1ターン封印する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·ID封印",
+     "cutin_group": 255,
+     "cutin_jp": "白〜に出会ったら戦わずに逃げろ！それが最良の選択だ！",
+     "cutin_zh_current": "遇白狼勿战、速逃！那才是最佳选择！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_75",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 113,
+   "ids": [
+    {
+     "idn": 339,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7A10",
+     "zh_name_ptr": "0x20B7A10",
+     "name_jp": "ターンXに戦いを挑むとは……",
+     "name_zh_current": "竟敢挑战我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 221,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "",
+     "cutin_group": 256,
+     "cutin_jp": "このターンXに戦いを挑むとは……全力で応えねばならんようだな！",
+     "cutin_zh_current": "竟敢向倒X挑战……看来得全力回应！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 340,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B79EC",
+     "zh_name_ptr": "0x20B79EC",
+     "name_jp": "……胸に刻んでやろう！",
+     "name_zh_current": "刻进你胸口",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命甲↑",
+     "didx": 110,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加、装甲が4増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%装甲+4",
+     "cutin_group": 257,
+     "cutin_jp": "ソロモンの白〜の名……貴様の胸に刻んでやろう！",
+     "cutin_zh_current": "所罗门白狼之名……刻在你胸口！",
+     "name_owner": true,
+     "name_shared_with_idn": 337,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 341,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B79FA",
+     "zh_name_ptr": "0x218C206",
+     "name_jp": "白狼に出会ったら……",
+     "name_zh_current": "遇上白狼……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑＋ID封印",
+     "summary_zh_KEEP": "命↑・ID封",
+     "didx": 166,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%増加、攻撃が命中した相手のIDを1ターン封印する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·ID封印",
+     "cutin_group": 258,
+     "cutin_jp": "白〜に出会ったら戦わずに逃げろ！それが最良の選択だ！",
+     "cutin_zh_current": "遇白狼勿战、速逃！那才是最佳选择！",
+     "name_owner": true,
+     "name_shared_with_idn": 338,
+     "detail_owner": false,
+     "detail_owned_by": "char_75",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xDD74",
+   "budget_bytes": 26,
+   "jp": "この私に戦いを挑むとは……全力でお応えしよう！",
+   "zh_current": "竟敢向我挑战……便全力奉陪",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDD9C",
+   "budget_bytes": 25,
+   "jp": "ソロモンの白〜と出会ったのが貴様の運の尽きだ！",
+   "zh_current": "遇上所罗门的白狼、算你不幸！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDDC4",
+   "budget_bytes": 23,
+   "jp": "白〜の恐ろしさ……とくと教えてしんぜよう！",
+   "zh_current": "白狼有多可怕、让你见识！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDDE8",
+   "budget_bytes": 25,
+   "jp": "ソロモンの白〜と出会ったのが貴様の運の尽きだ！",
+   "zh_current": "遇上所罗门的白狼、算你不幸！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDE10",
+   "budget_bytes": 28,
+   "jp": "この戦い、亡き同胞達に捧ぐ…………行くぞ！！",
+   "zh_current": "这一战、献给逝去的战友……上了！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDE38",
+   "budget_bytes": 27,
+   "jp": "私に負けても恥じることは無い……当然の結果だからな！",
+   "zh_current": "败给我并不可耻、本就理所当然",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDE60",
+   "budget_bytes": 28,
+   "jp": "白〜の前に立つな！自分の命が惜しいのであればな！",
+   "zh_current": "惜命的话、就别挡在白狼面前！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDE88",
+   "budget_bytes": 27,
+   "jp": "我が名の由来……その身をもって知るがいい！",
+   "zh_current": "我名号的由来……用身体体会吧！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDEB0",
+   "budget_bytes": 25,
+   "jp": "つ強い！もう一度、手合わせ願いたいものだ…",
+   "zh_current": "好强！真想再交手一次……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDED8",
+   "budget_bytes": 19,
+   "jp": "そんな腕で白〜を捕らえられるものか！",
+   "zh_current": "这点本事就想抓白狼！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDEF8",
+   "budget_bytes": 10,
+   "jp": "まだ……逝けぬ！！",
+   "zh_current": "还不能死！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDF10",
+   "budget_bytes": 21,
+   "jp": "当てて来たか？だが、その威力ではな……",
+   "zh_current": "竟打中了我？但那威力……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDF34",
+   "budget_bytes": 8,
+   "jp": "くっ……できる！",
+   "zh_current": "唔……能行！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDF48",
+   "budget_bytes": 20,
+   "jp": "やる……ッ！只者ではないようだな……",
+   "zh_current": "好身手……看来不是弱者",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDF68",
+   "budget_bytes": 15,
+   "jp": "くっ……！私としたことが！",
+   "zh_current": "唔……！我竟失手！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDF84",
+   "budget_bytes": 15,
+   "jp": "ええい……！このままでは……！",
+   "zh_current": "可恶……不妙！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDFA0",
+   "budget_bytes": 25,
+   "jp": "その程度の武器でこの私を倒せるとは思うな！！",
+   "zh_current": "就凭那种武器、休想打倒我！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDFC8",
+   "budget_bytes": 8,
+   "jp": "ほう……来るか！",
+   "zh_current": "哦……来了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDFDC",
+   "budget_bytes": 8,
+   "jp": "全機、散開せよ！",
+   "zh_current": "全机、散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xDFF0",
+   "budget_bytes": 12,
+   "jp": "その機体はいただいた！！",
+   "zh_current": "那机体、归我了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE008",
+   "budget_bytes": 17,
+   "jp": "なにっ！？こ、この私が……！？",
+   "zh_current": "什么！我竟然……！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE028",
+   "budget_bytes": 12,
+   "jp": "この私を甘く見るな！！",
+   "zh_current": "别小看我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE040",
+   "budget_bytes": 26,
+   "jp": "この私に戦いを挑むとは……全力でお応えしよう！",
+   "zh_current": "竟敢向我挑战……便全力奉陪",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE068",
+   "budget_bytes": 25,
+   "jp": "ソロモンの白〜と出会ったのが貴様の運の尽きだ！",
+   "zh_current": "遇上所罗门的白狼、算你不幸！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE090",
+   "budget_bytes": 23,
+   "jp": "白〜の恐ろしさ……とくと教えてしんぜよう！",
+   "zh_current": "白狼有多可怕、让你见识！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE0B4",
+   "budget_bytes": 25,
+   "jp": "ソロモンの白〜と出会ったのが貴様の運の尽きだ！",
+   "zh_current": "遇上所罗门的白狼、算你不幸！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE0DC",
+   "budget_bytes": 28,
+   "jp": "この戦い、亡き同胞達に捧ぐ…………行くぞ！！",
+   "zh_current": "这一战、献给逝去的战友……上了！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE104",
+   "budget_bytes": 27,
+   "jp": "私に負けても恥じることは無い……当然の結果だからな！",
+   "zh_current": "败给我并不可耻、本就理所当然",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE12C",
+   "budget_bytes": 28,
+   "jp": "白〜の前に立つな！自分の命が惜しいのであればな！",
+   "zh_current": "惜命的话、就别挡在白狼面前！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE154",
+   "budget_bytes": 27,
+   "jp": "我が名の由来……その身をもって知るがいい！",
+   "zh_current": "我名号的由来……用身体体会吧！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE17C",
+   "budget_bytes": 25,
+   "jp": "つ強い！もう一度、手合わせ願いたいものだ…",
+   "zh_current": "好强！真想再交手一次……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE1A4",
+   "budget_bytes": 19,
+   "jp": "そんな腕で白〜を捕らえられるものか！",
+   "zh_current": "这点本事就想抓白狼！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE1C4",
+   "budget_bytes": 10,
+   "jp": "まだ……逝けぬ！！",
+   "zh_current": "还不能死！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE1DC",
+   "budget_bytes": 21,
+   "jp": "当てて来たか？だが、その威力ではな……",
+   "zh_current": "竟打中了我？但那威力……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE200",
+   "budget_bytes": 8,
+   "jp": "くっ……できる！",
+   "zh_current": "唔……能行！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE214",
+   "budget_bytes": 20,
+   "jp": "やる……ッ！只者ではないようだな……",
+   "zh_current": "好身手……看来不是弱者",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE234",
+   "budget_bytes": 15,
+   "jp": "くっ……！私としたことが！",
+   "zh_current": "唔……！我竟失手！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE250",
+   "budget_bytes": 15,
+   "jp": "ええい……！このままでは……！",
+   "zh_current": "可恶……不妙！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE26C",
+   "budget_bytes": 25,
+   "jp": "その程度の武器でこの私を倒せるとは思うな！！",
+   "zh_current": "就凭那种武器、休想打倒我！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE294",
+   "budget_bytes": 8,
+   "jp": "ほう……来るか！",
+   "zh_current": "哦……来了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE2A8",
+   "budget_bytes": 8,
+   "jp": "全機、散開せよ！",
+   "zh_current": "全机、散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE2BC",
+   "budget_bytes": 12,
+   "jp": "その機体はいただいた！！",
+   "zh_current": "那机体、归我了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE2D4",
+   "budget_bytes": 17,
+   "jp": "なにっ！？こ、この私が……！？",
+   "zh_current": "什么！我竟然……！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0xE2F4",
+   "budget_bytes": 12,
+   "jp": "この私を甘く見るな！！",
+   "zh_current": "别小看我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F80",
+   "budget_bytes": 15,
+   "jp": "皆でかかるぞ！私に続け！！",
+   "zh_current": "全员上！跟我来！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3F9C",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3FB4",
+   "budget_bytes": 15,
+   "jp": "うむ！やるぞ、アナベル·ガトー！！",
+   "zh_current": "嗯！上吧、卡多！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3FD0",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3FE8",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4000",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4018",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4030",
+   "budget_bytes": 15,
+   "jp": "皆でかかるぞ！私に続け！！",
+   "zh_current": "全员上！跟我来！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x404C",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4064",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x407C",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4094",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x40AC",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x40C4",
+   "budget_bytes": 9,
+   "jp": "……手助け仕る！！",
+   "zh_current": "前来助阵！",
+   "zh_current_bytes": 7
+  }
+ ]
+}

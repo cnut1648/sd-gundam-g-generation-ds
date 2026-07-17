@@ -1,0 +1,272 @@
+{
+ "entity": "char_123",
+ "kind": "character",
+ "cids": [
+  123
+ ],
+ "name_jp": "セレイン",
+ "name_zh_KEEP": "瑟蕾因",
+ "cards": [
+  {
+   "cid": 123,
+   "ids": [
+    {
+     "idn": 369,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B1C",
+     "zh_name_ptr": "0x218C1FB",
+     "name_jp": "聞きなさい……歌声を",
+     "name_zh_current": "听这歌声吧",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "SP消去",
+     "summary_zh_KEEP": "SP消去",
+     "didx": 15,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃が命中した相手のSPを0にする",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）SP消除",
+     "cutin_group": 286,
+     "cutin_jp": "お聞きなさい……セイレーネの歌声を",
+     "cutin_zh_current": "好好听着……塞壬的歌声",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 370,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B2F",
+     "zh_name_ptr": "0x218C2E0",
+     "name_jp": "問題……ありません",
+     "name_zh_current": "毫无问题……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 287,
+     "cutin_jp": "問題……ありません",
+     "cutin_zh_current": "毫无问题……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 371,
+     "slot": 2,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7B39",
+     "zh_name_ptr": "0x218FF3B",
+     "name_jp": "マスターのために……",
+     "name_zh_current": "为艾因大人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃力大幅上昇",
+     "summary_zh_KEEP": "攻击力大升",
+     "didx": 203,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）相手の特殊防御を無効化、攻撃力が40%増加、必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击·破防",
+     "cutin_group": 288,
+     "cutin_jp": "全てはマスター·アインのために……",
+     "cutin_zh_current": "一切皆为艾因大人……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xF9DC",
+   "budget_bytes": 7,
+   "jp": "……迎撃します",
+   "zh_current": "……迎击！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xF9F0",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA00",
+   "budget_bytes": 12,
+   "jp": "マスターには指一本触れさせません",
+   "zh_current": "不准碰主人！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA18",
+   "budget_bytes": 8,
+   "jp": "ターゲット、排除します",
+   "zh_current": "目标排除！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA2C",
+   "budget_bytes": 10,
+   "jp": "アインさまのために……",
+   "zh_current": "为艾因大人……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA44",
+   "budget_bytes": 7,
+   "jp": "……排除します",
+   "zh_current": "……排除！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA58",
+   "budget_bytes": 8,
+   "jp": "逝きなさい……",
+   "zh_current": "去死吧……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA6C",
+   "budget_bytes": 10,
+   "jp": "邪魔は……させません",
+   "zh_current": "不让你碍事！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFA84",
+   "budget_bytes": 28,
+   "jp": "甘愛しましょう……これが私の定めというならば……",
+   "zh_current": "那就接受吧……若这是我的宿命",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFAAC",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFAC0",
+   "budget_bytes": 23,
+   "jp": "私はマスターをお守りする……まだ、死ねないっ！！",
+   "zh_current": "我要守护主人……还不能死！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFAE4",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFAF8",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB0C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB20",
+   "budget_bytes": 27,
+   "jp": "っ！わ、私…は……アインさまを……あううっ！！",
+   "zh_current": "！我、我要……保护艾因大人……啊！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB48",
+   "budget_bytes": 30,
+   "jp": "わた…し…は……誰なの？セレイン？セラ……誰、なのだ？",
+   "zh_current": "我……是谁？瑟蕾因？瑟拉……我、是谁？",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB74",
+   "budget_bytes": 4,
+   "jp": "無駄です",
+   "zh_current": "白费",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB84",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFB98",
+   "budget_bytes": 18,
+   "jp": "来ました！各機、散開して回避を！",
+   "zh_current": "来了！！各机散开回避！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFBB8",
+   "budget_bytes": 18,
+   "jp": "さあ……こちらに来るのです、貴方も",
+   "zh_current": "来吧……你也过来这边",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFBD8",
+   "budget_bytes": 23,
+   "jp": "仕方ありません……機体を放棄して脱出します",
+   "zh_current": "没办法……放弃机体、脱出！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xFBFC",
+   "budget_bytes": 20,
+   "jp": "私が従うのはマスター·アインただ一人！！",
+   "zh_current": "我效忠的只有艾因一人！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

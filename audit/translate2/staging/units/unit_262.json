@@ -1,0 +1,73 @@
+{
+ "entity": "unit_262",
+ "kind": "unit",
+ "utids": [
+  262,
+  263,
+  264
+ ],
+ "name_jp": "ゴッドガンダム／ハイパー",
+ "name_zh_current": "神高达／强化",
+ "name_zh_px": 68,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x232928A",
+   "jp": "ゴッドスラッシュ",
+   "zh_current": "神之斩",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218ED73",
+   "jp": "マシンキャノン",
+   "zh_current": "机炮",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218F1FD",
+   "jp": "爆熱！ゴッドフィンガー",
+   "zh_current": "爆热神指",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F226",
+   "jp": "石破天驚拳",
+   "zh_current": "石破天惊拳",
+   "shared_by_n_units": 6
+  },
+  {
+   "slot": 4,
+   "ptr": "0x2190731",
+   "jp": "超級覇王電影弾",
+   "zh_current": "超级霸王电影弹",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "defense_name": {
+   "ptr": "0x20B6EB2",
+   "jp": "分身殺法ゴッドシャドー",
+   "zh_current": "分身·神之影",
+   "owner": false,
+   "owned_by": "unit_256"
+  },
+  "defense": {
+   "record": 12,
+   "record_offset": "0x224",
+   "budget_bytes": 32,
+   "jp_segments": [
+    "全ての攻撃を40%の確率で、0に回避する"
+   ],
+   "zh_segments_current": [
+    "有40%概率",
+    "完全回避攻击"
+   ],
+   "owner": false,
+   "owned_by": "unit_256"
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "entity": "char_208",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E6%8B%89%E5%85%8B%E4%B8%9D%C2%B7%E5%85%8B%E8%8E%B1%E8%8C%B5",
+  "https://zh.moegirl.org.cn/%E6%8B%89%E5%85%8B%E4%B8%9D%C2%B7%E5%85%8B%E8%8E%B1%E8%8C%B5",
+  "https://gundam-official.cn/seed/seed/story/34/",
+  "https://gundam.fandom.com/wiki/In_the_Name_of_Justice",
+  "https://baike.baidu.com/item/%E6%8B%89%E5%85%8B%E4%B8%9D%C2%B7%E5%85%8B%E8%8E%B1%E5%9B%A0/9244612"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 624,
+   "name_zh": "你为何而战",
+   "cutin_zh": "你所坚信而为之战斗的是什么？",
+   "notes": "SEED PHASE-34剧场废墟名场面。社区通行译法为坚信而为之战斗的是什么（阿斯兰坚信而为之战斗的是什么呢）、故把相信改为坚信。名前5格、与名台词共用坚信为之战斗的关键词。"
+  },
+  {
+   "idn": 625,
+   "name_zh": "向我开枪吗",
+   "cutin_zh": "若说我是敌人、你会向我开枪吗？",
+   "notes": "同一PHASE-34场面（如果是敌人的话、你可以向我开枪。ZAFT的阿斯兰·扎拉！）。G世代取其问句形、保留社区关键词向我开枪。指令名改为向我开枪吗（5格）以保住JP的私を、且名字段不用？。"
+  },
+  {
+   "idn": 626,
+   "name_zh": "信念与力量",
+   "cutin_zh": "光凭信念、光凭力量、有些事是做不到的……所以",
+   "notes": "拉克丝把自由高达交给基拉的名台词（想いだけでも、力だけでも、だめなのです。だから…）。中文圈主流将思い译作信念（光凭信念……光凭力量都是不行的。所以……）、据此把原思念改为信念、指令名同步改为信念与力量。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x1BE44", "zh": "我们必须前行！"},
+  {"file": "0.bin", "record": "0x1BE60", "zh": "我献上和平之歌……"},
+  {"file": "0.bin", "record": "0x1BE94", "zh": "请避开座舱"},
+  {"file": "0.bin", "record": "0x1BEAC", "zh": "我献上和平之歌……"},
+  {"file": "0.bin", "record": "0x1BEC8", "zh": "……真没办法呢、请准备攻击！"},
+  {"file": "0.bin", "record": "0x1BF04", "zh": "立即停止战斗！"},
+  {"file": "0.bin", "record": "0x1BF20", "zh": "你们瞄准的是什么、真的明白吗？"},
+  {"file": "0.bin", "record": "0x1BF48", "zh": "开枪能治愈吗！？"},
+  {"file": "0.bin", "record": "0x1BF64", "zh": "中弹者没有未来……"},
+  {"file": "0.bin", "record": "0x1BF96", "zh": "该与什么战斗……战争真难呢"},
+  {"file": "0.bin", "record": "0x1BFBC", "zh": "这世界悲伤的梦太多……"},
+  {"file": "0.bin", "record": "0x1C000", "zh": "真想创造呢……没有纷争的时代"},
+  {"file": "0.bin", "record": "0x1C028", "zh": "不相信言语吗？那您亲眼所见的呢？"},
+  {"file": "0.bin", "record": "0x1C071", "zh": "哎呀……那不行呢、怎么办？"},
+  {"file": "0.bin", "record": "0x1C094", "zh": "状况似乎不太乐观呢……"},
+  {"file": "0.bin", "record": "0x1C0FC", "zh": "来了！请躲开！"},
+  {"file": "0.bin", "record": "0x1C114", "zh": "来了！请躲开！"},
+  {"file": "0.bin", "record": "0x1C12C", "zh": "我无意与你们交战"},
+  {"file": "0.bin", "record": "0x1C14C", "zh": "人、本应是无需战斗的……"},
+  {"file": "0.bin", "record": "0x1C170", "zh": "我现在还不能被抓住！"},
+  {"file": "1.bin", "record": "0x884", "zh": "请发射！！"}
+ ],
+ "notes": "全程保持拉克丝温柔而坚定的歌姬敬体（呢、请、您）。0x1C0FC与0x1C114日文完全相同、统一为来了！请躲开！。0x1C170修掉JP没有的第二个！并补全语气（我现在还不能被抓住！=19字节恰好合预算）。0x1BF04的なさい是命令语气、去掉请改为立即停止战斗！（13=预算）。0x1BE94的JP转储作コクビット、实为コクピット（驾驶舱）、译文不受影响。detail字段均归他人（char_91/char_55/char_16）、未输出。"
+}

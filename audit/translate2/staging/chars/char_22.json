@@ -1,0 +1,328 @@
+{
+ "entity": "char_22",
+ "kind": "character",
+ "cids": [
+  22
+ ],
+ "name_jp": "アルファ・A・ベイト",
+ "name_zh_KEEP": "阿尔法",
+ "cards": [
+  {
+   "cid": 22,
+   "ids": [
+    {
+     "idn": 66,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B70E1",
+     "zh_name_ptr": "0x20B70E1",
+     "name_jp": "女を口説くよりも簡単だぜ！",
+     "name_zh_current": "比泡妞简单",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "回避&威力上昇",
+     "summary_zh_KEEP": "回避・威力↑",
+     "didx": 70,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·攻击+20%",
+     "cutin_group": 40,
+     "cutin_jp": "ハッ！女を口説くよりも簡単だぜ！",
+     "cutin_zh_current": "哈！比泡妞还简单！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 67,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B70FB",
+     "zh_name_ptr": "0x23290EA",
+     "name_jp": "大人しく武器を捨てやがれ！",
+     "name_zh_current": "乖乖丢武器",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "捕獲率上昇",
+     "summary_zh_KEEP": "捕获率↑",
+     "didx": 246,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン捕縛率が通常の2倍になる",
+     "detail_zh_current": "",
+     "cutin_group": 41,
+     "cutin_jp": "大人しく武器を捨てやがれ！",
+     "cutin_zh_current": "乖乖把武器丢下！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 68,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B710F",
+     "zh_name_ptr": "0x20B710F",
+     "name_jp": "誘ったのはお前さんだぜ",
+     "name_zh_current": "是你先惹我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵命中減少",
+     "summary_zh_KEEP": "敌命中减少",
+     "didx": 22,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%",
+     "cutin_group": 42,
+     "cutin_jp": "やれやれ……誘ったのはお前さんだぜ",
+     "cutin_zh_current": "哎呀哎呀……是你先招惹我的哦",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x222C",
+   "budget_bytes": 18,
+   "jp": "へっ……！カモさんのお出ましか！",
+   "zh_current": "哼……！猎物送上门！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x224C",
+   "budget_bytes": 9,
+   "jp": "やってみるか……！",
+   "zh_current": "试试看……！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2264",
+   "budget_bytes": 22,
+   "jp": "……ったく飯食うヒマもありゃしねえ！",
+   "zh_current": "……真是的、没空休息！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2288",
+   "budget_bytes": 9,
+   "jp": "へへ、捕まえたぜ！",
+   "zh_current": "抓到你了！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22A0",
+   "budget_bytes": 17,
+   "jp": "撃墜スコアを稼がせてもらうぜ！",
+   "zh_current": "击坠分统统归我！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22C0",
+   "budget_bytes": 18,
+   "jp": "そらそら！もう、後がねえぜ！",
+   "zh_current": "看招！你没退路了！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22E0",
+   "budget_bytes": 9,
+   "jp": "へっ……そこだっ！",
+   "zh_current": "哼……在那！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x22F8",
+   "budget_bytes": 9,
+   "jp": "よーし、いただきだ！",
+   "zh_current": "好、拿下！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2310",
+   "budget_bytes": 15,
+   "jp": "やめだやめだ……ツキがねえや！",
+   "zh_current": "算了……运气真差！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x232C",
+   "budget_bytes": 16,
+   "jp": "この程度の相手なら楽なもんだ！",
+   "zh_current": "这种对手太轻松！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2348",
+   "budget_bytes": 18,
+   "jp": "こちとら不死身の第4小隊なんだよ！",
+   "zh_current": "老子不死身第四队！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2368",
+   "budget_bytes": 18,
+   "jp": "チッ……！こしゃくな野郎だぜ！",
+   "zh_current": "啧……！狂妄的家伙！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2388",
+   "budget_bytes": 6,
+   "jp": "……チクシヨウッ！",
+   "zh_current": "该死！",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x239C",
+   "budget_bytes": 11,
+   "jp": "くそ！ドジったか！？",
+   "zh_current": "可恶！搞砸了",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23B4",
+   "budget_bytes": 19,
+   "jp": "うおおッ！！何なんだ、こいつは！？",
+   "zh_current": "呜啊啊！这是什么！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23D4",
+   "budget_bytes": 7,
+   "jp": "……ったれが！",
+   "zh_current": "……可恶！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23E8",
+   "budget_bytes": 15,
+   "jp": "へっ！なめんじゃねえよ！",
+   "zh_current": "哼！别小看我！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2404",
+   "budget_bytes": 17,
+   "jp": "おっと……そんな手を食うかよ！",
+   "zh_current": "哎呀……谁会中这招！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2424",
+   "budget_bytes": 17,
+   "jp": "おいでなすったぞ！各機、散開だ！",
+   "zh_current": "敌人来了！各机散开！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2444",
+   "budget_bytes": 16,
+   "jp": "大人しくしろってんだ！こいつめ！",
+   "zh_current": "老实点！你这家伙！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2460",
+   "budget_bytes": 15,
+   "jp": "クソッ！捕まっちまったか！",
+   "zh_current": "可恶！被抓住了！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x247C",
+   "budget_bytes": 16,
+   "jp": "そういうわけにゃあいかねえんだよ！",
+   "zh_current": "可没那么便宜！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x778",
+   "budget_bytes": 23,
+   "jp": "一斉にかかるぞ！……ぬかるんじゃねえぞ！！",
+   "zh_current": "一起上吧！……可别大意了！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x79C",
+   "budget_bytes": 11,
+   "jp": "おーし！任せとけ！！",
+   "zh_current": "好！交给我！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B4",
+   "budget_bytes": 9,
+   "jp": "了解です、隊長！！",
+   "zh_current": "收到队长！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7CC",
+   "budget_bytes": 32,
+   "jp": "おう！不死身の第四小隊の力！やつらに見せてやろうぜ！！",
+   "zh_current": "嗷！让他们见识不死身第四小队之力！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7F8",
+   "budget_bytes": 27,
+   "jp": "おうよ、アデル！ケツ持ちは俺に任せて存分にやれ！！",
+   "zh_current": "阿德尔！后路交给我、放手干！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x820",
+   "budget_bytes": 7,
+   "jp": "任せろ、ウラキ！",
+   "zh_current": "交给我吧",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x834",
+   "budget_bytes": 11,
+   "jp": "おーし！任せとけ！！",
+   "zh_current": "好！交给我！！",
+   "zh_current_bytes": 10
+  }
+ ]
+}

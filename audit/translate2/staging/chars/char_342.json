@@ -1,0 +1,272 @@
+{
+ "entity": "char_342",
+ "kind": "character",
+ "cids": [
+  342
+ ],
+ "name_jp": "ヤザン・ゲーブル",
+ "name_zh_KEEP": "亚赞·盖布尔",
+ "cards": [
+  {
+   "cid": 342,
+   "ids": [
+    {
+     "idn": 1026,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C72",
+     "zh_name_ptr": "0x20B8C72",
+     "name_jp": "ギャンギャン吠えんなよ！",
+     "name_zh_current": "别狂吠了！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "敵威力減少",
+     "summary_zh_KEEP": "敌威力减少",
+     "didx": 81,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）攻击-30%",
+     "cutin_group": 688,
+     "cutin_jp": "ギャンギャン吠えんなよ！",
+     "cutin_zh_current": "别再狂吠个不停了！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_64",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1027,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C80",
+     "zh_name_ptr": "0x20B8C80",
+     "name_jp": "ここは戦場だからな！",
+     "name_zh_current": "这是战场！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 689,
+     "cutin_jp": "ここは戦場だからな！",
+     "cutin_zh_current": "这里可是战场啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1028,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C8A",
+     "zh_name_ptr": "0x20B8C8A",
+     "name_jp": "まだ、子供の間合いだな！",
+     "name_zh_current": "还嫩着呢！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "命中↑＋貫防無効",
+     "summary_zh_KEEP": "命↑・破防",
+     "didx": 196,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃対象の特殊防御を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·破防",
+     "cutin_group": 690,
+     "cutin_jp": "まだ、子供の間合いだな！",
+     "cutin_zh_current": "把控距离还嫩着呢！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x27FD4",
+   "budget_bytes": 24,
+   "jp": "ネズミがチヨロチヨロと……仕留めてやる！",
+   "zh_current": "老鼠到处乱钻……收拾掉！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27FF8",
+   "budget_bytes": 19,
+   "jp": "はっ……！やってやろうじゃねえか！",
+   "zh_current": "哈……！那就来干一场！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28018",
+   "budget_bytes": 16,
+   "jp": "戦場の恐ろしさを教えてやるよ！",
+   "zh_current": "见识战场的恐怖！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28034",
+   "budget_bytes": 23,
+   "jp": "戦場ではビビった奴から死んで行くんだよ！",
+   "zh_current": "战场上胆小的家伙先死！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28058",
+   "budget_bytes": 10,
+   "jp": "ここは戦場だからな……",
+   "zh_current": "毕竟是战场",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28070",
+   "budget_bytes": 9,
+   "jp": "……これまでだッ！",
+   "zh_current": "到此为止！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28088",
+   "budget_bytes": 19,
+   "jp": "お前も仲間のところへ送ってやるよ！",
+   "zh_current": "送你去陪你的同伴！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x280A8",
+   "budget_bytes": 23,
+   "jp": "よーし、いい子だ！……一撃で決めてやる！",
+   "zh_current": "好、乖孩子……一击解决！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x280CC",
+   "budget_bytes": 17,
+   "jp": "まさか……このマシンの弱点を？",
+   "zh_current": "难道你知道弱点？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x280EC",
+   "budget_bytes": 16,
+   "jp": "はっ！どこを狙ってやがる！",
+   "zh_current": "哈！你瞄哪呢！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28108",
+   "budget_bytes": 14,
+   "jp": "バカが……！なめるからだ！",
+   "zh_current": "蠢货……轻敌！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28124",
+   "budget_bytes": 15,
+   "jp": "チッ……！うるさいネズミだ！",
+   "zh_current": "啧……！臭老鼠！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28140",
+   "budget_bytes": 19,
+   "jp": "ハハッ！少しは骨があるようだな！",
+   "zh_current": "哈哈有点骨气嘛！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28160",
+   "budget_bytes": 20,
+   "jp": "いいカンをしてるャツだ……面白いな！",
+   "zh_current": "直觉真灵……真有趣！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28180",
+   "budget_bytes": 21,
+   "jp": "な、なんだこいつは！？この力は一体……？",
+   "zh_current": "什么家伙！？这力量……？",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x281A4",
+   "budget_bytes": 23,
+   "jp": "俺は不死身だ……！殺されたって死ぬもんか！",
+   "zh_current": "我是不死之身！杀也杀不死！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x281C8",
+   "budget_bytes": 6,
+   "jp": "バカが……！",
+   "zh_current": "蠢货……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x281DC",
+   "budget_bytes": 18,
+   "jp": "そうそううまく行くと思うなッ！！",
+   "zh_current": "别想回回都顺利！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x281FC",
+   "budget_bytes": 11,
+   "jp": "来たぞ！抜かるな！！",
+   "zh_current": "来了！小心！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28214",
+   "budget_bytes": 20,
+   "jp": "そのマシンはオレが有効に使ってやる！",
+   "zh_current": "那机体我拿来活用！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28234",
+   "budget_bytes": 19,
+   "jp": "な、なんだと！？この……オレが！？",
+   "zh_current": "什么！？我、我竟！？",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x28254",
+   "budget_bytes": 28,
+   "jp": "あんまり調子に乗ってると痛い目をみるってことだ！",
+   "zh_current": "太得意忘形的话、会吃苦头的！",
+   "zh_current_bytes": 26
+  }
+ ]
+}

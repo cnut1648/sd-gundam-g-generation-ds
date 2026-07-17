@@ -1,0 +1,368 @@
+{
+ "entity": "char_72",
+ "kind": "character",
+ "cids": [
+  72
+ ],
+ "name_jp": "コウ・ウラキ",
+ "name_zh_KEEP": "浦木宏",
+ "cards": [
+  {
+   "cid": 72,
+   "ids": [
+    {
+     "idn": 216,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B75E1",
+     "zh_name_ptr": "0x2329765",
+     "name_jp": "チャンスはこれしかない……！",
+     "name_zh_current": "机会仅一次",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 151,
+     "cutin_jp": "チャンスはこれしかない……！",
+     "cutin_zh_current": "机会只有这一次……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 217,
+     "slot": 1,
+     "target": "敌队",
+     "map_command": true,
+     "jp_name_ptr": "0x20B75EE",
+     "zh_name_ptr": "0x20B75EE",
+     "name_jp": "……突撃します！",
+     "name_zh_current": "……突击！",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋装甲無効",
+     "summary_zh_KEEP": "威甲↑・破甲",
+     "didx": 208,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、装甲が4増加攻撃対象の装甲を無効化する",
+     "detail_zh_current": "使用条件：战斗中対象：仅自身（效果）攻击+40%·装甲+4·破甲",
+     "cutin_group": 152,
+     "cutin_jp": "コウ·ウラキ……吶喊します！",
+     "cutin_zh_current": "浦木宏……突击！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 218,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7604",
+     "zh_name_ptr": "0x20B7604",
+     "name_jp": "負けられないんだぁーっ！！",
+     "name_zh_current": "我不能输啊",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 1,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复100%",
+     "cutin_group": 153,
+     "cutin_jp": "負けられないんだぁーっ！！",
+     "cutin_zh_current": "我不能输啊！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x8858",
+   "budget_bytes": 12,
+   "jp": "そうはさせるものかっ！！",
+   "zh_current": "休想得逞！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8870",
+   "budget_bytes": 12,
+   "jp": "止まれ……止まれえ！！",
+   "zh_current": "停下……停下！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8888",
+   "budget_bytes": 12,
+   "jp": "止まれ……止まれえ！！",
+   "zh_current": "站住……站住！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x88A0",
+   "budget_bytes": 19,
+   "jp": "ここを通すわけには行かないんだ！！",
+   "zh_current": "我不能让你通过这里！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x88C0",
+   "budget_bytes": 13,
+   "jp": "この戦いは……いつまで続く？",
+   "zh_current": "这仗何时才完？",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x88DC",
+   "budget_bytes": 9,
+   "jp": "うわぁぁぁーっ！！",
+   "zh_current": "啊啊啊啊！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x88F4",
+   "budget_bytes": 10,
+   "jp": "これでダウンだぁっ！！",
+   "zh_current": "这下倒了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x890C",
+   "budget_bytes": 9,
+   "jp": "負けるものかぁっ！",
+   "zh_current": "我怎能输！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8924",
+   "budget_bytes": 20,
+   "jp": "オレはどこへ……どこへ…還る……？",
+   "zh_current": "我到底……该回哪里去……？",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8944",
+   "budget_bytes": 10,
+   "jp": "邪魔をするなーっ！！",
+   "zh_current": "别碍事！！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x895C",
+   "budget_bytes": 8,
+   "jp": "むざむざやられるか！",
+   "zh_current": "怎能白挨",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8970",
+   "budget_bytes": 6,
+   "jp": "そんなもので！",
+   "zh_current": "就这！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8984",
+   "budget_bytes": 14,
+   "jp": "クッ……！こいつ……強い！",
+   "zh_current": "这家伙……好强！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x89A0",
+   "budget_bytes": 9,
+   "jp": "し、しまった……！",
+   "zh_current": "不、不妙！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x89B8",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁぁっ！",
+   "zh_current": "哇啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x89CC",
+   "budget_bytes": 16,
+   "jp": "ぐ……ッ！まだだぁーっ！！",
+   "zh_current": "唔……！！还没完！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x89E8",
+   "budget_bytes": 9,
+   "jp": "そんなものおっ！！",
+   "zh_current": "区区那种！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8A00",
+   "budget_bytes": 9,
+   "jp": "当たるものかーっ！",
+   "zh_current": "哪会中弹！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8A18",
+   "budget_bytes": 20,
+   "jp": "正面よりエネルギー反応！各機、回避運動を！",
+   "zh_current": "正面能量反应！快回避！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8A38",
+   "budget_bytes": 15,
+   "jp": "コイツ……！大人しくするんだ！",
+   "zh_current": "这家伙……老实点！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8A54",
+   "budget_bytes": 18,
+   "jp": "クッ……機体が！！くそおお！",
+   "zh_current": "唔……机体！！可恶！！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x8A74",
+   "budget_bytes": 14,
+   "jp": "破れるわけにはいかないっ！！",
+   "zh_current": "绝不能输！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1A4",
+   "budget_bytes": 22,
+   "jp": "まだだぁっ！まだ、勝負はついちゃいない！",
+   "zh_current": "还没！！胜负还没分晓！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1DC",
+   "budget_bytes": 15,
+   "jp": "クッ！機体の制御が……！！",
+   "zh_current": "唔！机体失控……！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1.bin",
+   "record": "0x20C",
+   "budget_bytes": 7,
+   "jp": "Ⅰフィールドが！？",
+   "zh_current": "I力场！？",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "1.bin",
+   "record": "0x264",
+   "budget_bytes": 13,
+   "jp": "ガ、ガトおおーーっ！！",
+   "zh_current": "卡、卡多！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1.bin",
+   "record": "0x280",
+   "budget_bytes": 20,
+   "jp": "ガトー……とどめをささずに行ったのか……",
+   "zh_current": "卡多……你不了结我吗……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2498",
+   "budget_bytes": 15,
+   "jp": "一斉攻撃でアイツをしとめるんだ！",
+   "zh_current": "一齐攻击收拾它！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x24B4",
+   "budget_bytes": 14,
+   "jp": "コウ·ウラキ！支援します！！",
+   "zh_current": "浦木宏！支援！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x24D0",
+   "budget_bytes": 15,
+   "jp": "はい！支援します、隊長！！",
+   "zh_current": "是！支援、队长！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x24EC",
+   "budget_bytes": 13,
+   "jp": "任せてください、ベイトさん！！",
+   "zh_current": "交给我、贝特！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2508",
+   "budget_bytes": 11,
+   "jp": "支援します、アデルさん！",
+   "zh_current": "支援、阿德尔",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x2520",
+   "budget_bytes": 15,
+   "jp": "よし！手を貸すぞ、ガトー！！",
+   "zh_current": "支援你、卡多！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x253C",
+   "budget_bytes": 20,
+   "jp": "攻撃するのか？わかった、支援する！！",
+   "zh_current": "要进攻？明白、我来支援！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

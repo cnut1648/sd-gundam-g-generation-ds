@@ -1,0 +1,83 @@
+{
+ "entity": "unit_85",
+ "kind": "unit",
+ "utids": [
+  85,
+  86,
+  87
+ ],
+ "name_jp": "ヴァル・ヴァロ",
+ "name_zh_current": "瓦尔·瓦罗",
+ "name_zh_px": 60,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C829",
+   "jp": "大型メガ粒子砲",
+   "zh_current": "大型米加粒子炮",
+   "shared_by_n_units": 19
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218ED40",
+   "jp": "クロー",
+   "zh_current": "利爪",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2328892",
+   "jp": "ミサイル・ポッド",
+   "zh_current": "导弹舱",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218C843",
+   "jp": "プラズマ・リーダー",
+   "zh_current": "等离子引导器",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 28,
+   "record_offset": "0x2ac",
+   "budget_bytes": 20,
+   "jp_segments": [
+    "地形適正・宇宙",
+    "大型ユニット"
+   ],
+   "zh_segments_current": [
+    "宇宙适应",
+    "巨大"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E86",
+   "jp": "ビームコート",
+   "zh_current": "光束涂层",
+   "owner": false,
+   "owned_by": "unit_46"
+  },
+  "defense": {
+   "record": 2,
+   "record_offset": "0x44",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "威力250までのビーム属性の攻撃を無効化し、",
+    "それを超える場合ダメージを20%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力250以下",
+    "光束攻击无效",
+    "超过则减20%"
+   ],
+   "owner": false,
+   "owned_by": "unit_46"
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "entity": "unit_538",
+ "kind": "unit",
+ "utids": [
+  538,
+  539,
+  540
+ ],
+ "name_jp": "量産型キュベレイ",
+ "name_zh_current": "量产型卡碧尼",
+ "name_zh_px": 72,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EFBC",
+   "jp": "ビーム・ガン",
+   "zh_current": "光束枪",
+   "shared_by_n_units": 33
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218CA2C",
+   "jp": "アクティブ・カノン",
+   "zh_current": "主动加农炮",
+   "shared_by_n_units": 3
+  },
+  {
+   "slot": 3,
+   "ptr": "0x218F30C",
+   "jp": "ファンネル",
+   "zh_current": "浮游炮",
+   "shared_by_n_units": 48
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 179,
+   "record_offset": "0xaf4",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

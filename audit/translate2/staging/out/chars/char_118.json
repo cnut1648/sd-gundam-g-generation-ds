@@ -1,0 +1,63 @@
+{
+ "entity": "char_118",
+ "web_sources": [
+  "https://wiki.biligame.com/gundam/%E7%BE%8E%E5%88%A9%E5%AE%89%E5%A4%9A%C2%B7%E5%8C%B9%E6%96%AF%E5%85%8B%E6%8B%89%E7%A6%8F%E7%89%B9",
+  "https://wiki.biligame.com/gundam/%E9%9B%B6%E5%BC%8F%E7%B3%BB%E7%BB%9F",
+  "https://wiki.biligame.com/gundam/XXXG-00W0%E9%A3%9E%E7%BF%BC%E9%9B%B6%E5%BC%8F%E9%AB%98%E8%BE%BE",
+  "https://baike.baidu.com/item/%E8%89%BE%E6%AF%94%E5%AE%89%E9%AB%98%E8%BE%BE/6500194",
+  "http://light37.web.fc2.com/wonder/gwmeigon.htm"
+ ],
+ "name_flag": "",
+ "ids": [
+  {
+   "idn": 354,
+   "name_zh": "赐我胜利！",
+   "cutin_zh": "零式啊！让我看到胜利吧！！",
+   "notes": "TV第37话名台词、社区通行译法为「零式！让我看到胜利吧」（百度百科/名言集）；名台词按此措辞。指令名5格内取核心词「胜利」。"
+  },
+  {
+   "idn": 355,
+   "name_zh": "宇宙不需要",
+   "cutin_zh": "不需要！对这个宇宙而言！！……你们这些家伙！！",
+   "notes": "TV第41话艾比安一刀两断巴尔吉要塞的名场面台词、保留日文倒装断句；名称与idn352共享、沿用共享译名。"
+  },
+  {
+   "idn": 356,
+   "name_zh": "顽强活到底",
+   "cutin_zh": "我会顽强地活到底！！比任何人都严酷、作为一名战士！",
+   "notes": "TV第49话（最终话）对希罗的告别名台词、后半句从通行字幕「比任何人都严酷、作为战士（活下去）」；名称与idn353共享、沿用共享译名。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0xECF8", "zh": "来杀者杀无赦……是这样吧、零式！"},
+  {"file": "0.bin", "record": "0xED20", "zh": "零式！赐我胜利！！"},
+  {"file": "0.bin", "record": "0xED3C", "zh": "零式！赐我胜利！！"},
+  {"file": "0.bin", "record": "0xED58", "zh": "休想逃！！"},
+  {"file": "0.bin", "record": "0xED6C", "zh": "决胜一击！！"},
+  {"file": "0.bin", "record": "0xED84", "zh": "了断吧！！"},
+  {"file": "0.bin", "record": "0xED98", "zh": "休想逃！！"},
+  {"file": "0.bin", "record": "0xEDAC", "zh": "这是为终结战斗的战斗！"},
+  {"file": "0.bin", "record": "0xEDD0", "zh": "唔！漂亮……！！"},
+  {"file": "0.bin", "record": "0xEDE8", "zh": "哼……"},
+  {"file": "0.bin", "record": "0xEDFC", "zh": "终究是血染的宿命！无意逃避！"},
+  {"file": "0.bin", "record": "0xEE24", "zh": "唔！……"},
+  {"file": "0.bin", "record": "0xEE38", "zh": "哦……！打中了……这个我！！"},
+  {"file": "0.bin", "record": "0xEE5C", "zh": "唔……！区区这点！"},
+  {"file": "0.bin", "record": "0xEE78", "zh": "我为何如此天真……！"},
+  {"file": "0.bin", "record": "0xEE98", "zh": "我还没有……承认败北！"},
+  {"file": "0.bin", "record": "0xEEB8", "zh": "这场战斗有何意义？究竟有何意义！"},
+  {"file": "0.bin", "record": "0xEEE4", "zh": "…………"},
+  {"file": "0.bin", "record": "0xEEF4", "zh": "来了！？全机、回避！"},
+  {"file": "0.bin", "record": "0xEF10", "zh": "不！他不是我该战斗的对手！"},
+  {"file": "0.bin", "record": "0xEF34", "zh": "真耻辱！"},
+  {"file": "0.bin", "record": "0xEF48", "zh": "可恶！别小看我！"},
+  {"file": "1de.bin", "record": "0x4458", "zh": "零式啊、为我指引胜利！"},
+  {"file": "1de.bin", "record": "0x447C", "zh": "很好、一同突击吧！"},
+  {"file": "1de.bin", "record": "0x44A0", "zh": "零式已经预见了胜利！"},
+  {"file": "1de.bin", "record": "0x44C8", "zh": "让你们见识战士的严酷！"},
+  {"file": "1de.bin", "record": "0x44F0", "zh": "能跟上我的速度吗？"},
+  {"file": "1de.bin", "record": "0x4518", "zh": "血染的宿命、由我来背负！"},
+  {"file": "1de.bin", "record": "0x4540", "zh": "这是为了终结战斗的一击！"}
+ ],
+ "notes": "ゼロ呼称统一为「零式」（指飞翼零式/零式系统之机、非人名「零」；人物括号名按定案保留（零））。1de.bin七条在JP ROM中是开发占位标签（チーム攻撃汎用/固定応答）、按车队惯例（参照char_55/char_64产出）填入符合ZERO状态米利亚尔特口吻的小队攻击台词、全部在预算内。0xED20/0xED3C预算仅15字节、名台词全句放不下、压缩为「零式！赐我胜利！！」（15字节整）；理想全句见idn354的cutin。0xECF8按ZERO系统「杀掉前来杀戮者」的逻辑重译并保留「そう言うのだな」的确认语气。"
+}

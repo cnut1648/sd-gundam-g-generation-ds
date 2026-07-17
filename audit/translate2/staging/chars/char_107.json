@@ -1,0 +1,644 @@
+{
+ "entity": "char_107",
+ "kind": "character",
+ "cids": [
+  107,
+  108
+ ],
+ "name_jp": "ジョニー・ライデン",
+ "name_zh_KEEP": "强尼莱汀",
+ "cards": [
+  {
+   "cid": 107,
+   "ids": [
+    {
+     "idn": 321,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7961",
+     "zh_name_ptr": "0x218C156",
+     "name_jp": "オレがジョニー・ライデンだ！",
+     "name_zh_current": "强尼莱汀",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "命中&回避上昇",
+     "summary_zh_KEEP": "命中・回避↑",
+     "didx": 24,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%",
+     "cutin_group": 238,
+     "cutin_jp": "戦場を駆ける紅い稲妻！そう、オレがジヨニー·ライデンだ！",
+     "cutin_zh_current": "纵横战场的真红闪电！没错、我就是强尼莱汀！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 322,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B796C",
+     "zh_name_ptr": "0x218FEF9",
+     "name_jp": "……誇りのために戦う！",
+     "name_zh_current": "为骄傲而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 239,
+     "cutin_jp": "祖国のためなんてカッコはつけねえ！オレは、オレの誇りのために戦う！",
+     "cutin_zh_current": "我才不会为祖国装样子！我、为了自己的骄傲而战！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 323,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7979",
+     "zh_name_ptr": "0x20B7979",
+     "name_jp": "……死んでも守りぬく！",
+     "name_zh_current": "死也要守护",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力&装甲上昇",
+     "summary_zh_KEEP": "威力・装甲↑",
+     "didx": 92,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン攻撃力が20%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）攻击+20%·装甲+2",
+     "cutin_group": 240,
+     "cutin_jp": "オレがこの宇宙で生まれてきた証……オレは死んでも守りぬく！",
+     "cutin_zh_current": "我降生于此宇宙的意义……我就算死也要守护到底！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_71",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 108,
+   "ids": [
+    {
+     "idn": 324,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7986",
+     "zh_name_ptr": "0x218C16C",
+     "name_jp": "コイツが月光蝶だ！！",
+     "name_zh_current": "这是月光蝶",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "月光蝶発動",
+     "summary_zh_KEEP": "月光蝶发动",
+     "didx": 231,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）無限ターンX搭乗時、ステージクリアまで、ハイパー化する",
+     "detail_zh_current": "使用条件：地图対象：仅自身（效果）月光蝶发动",
+     "cutin_group": 241,
+     "cutin_jp": "戦場を駆ける光の翼……そう、コイツが月光蝶だ！！",
+     "cutin_zh_current": "纵横战场的光之翼……没错、这就是月光蝶！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 325,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B796C",
+     "zh_name_ptr": "0x218FEF9",
+     "name_jp": "……誇りのために戦う！",
+     "name_zh_current": "为骄傲而战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 242,
+     "cutin_jp": "祖国のためなんてカッコはつけねえ！オレは、オレの誇りのために戦う！",
+     "cutin_zh_current": "我才不会为祖国装样子！我、为了自己的骄傲而战！",
+     "name_owner": true,
+     "name_shared_with_idn": 322,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 326,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7979",
+     "zh_name_ptr": "0x20B7979",
+     "name_jp": "……死んでも守りぬく！",
+     "name_zh_current": "死也要守护",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "威命回甲↑",
+     "didx": 94,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%攻撃力が20%増加、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%攻击+20%·装甲+2",
+     "cutin_group": 243,
+     "cutin_jp": "オレがこの宇宙で生まれてきた証……オレは死んでも守りぬく！",
+     "cutin_zh_current": "我降生于此宇宙的意义……我就算死也要守护到底！",
+     "name_owner": true,
+     "name_shared_with_idn": 323,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0xD06C",
+   "budget_bytes": 26,
+   "jp": "真紅の稲妻のスビード……なめてもらっちゃ困るぜ！",
+   "zh_current": "真红闪电的速度、别小看了！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD094",
+   "budget_bytes": 24,
+   "jp": "真紅の稲妻の実力……オマエにも教えてやるぜ！",
+   "zh_current": "让你见识真红闪电的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD0B8",
+   "budget_bytes": 23,
+   "jp": "俺と戦えるレベルかどうか確かめさせてもらうぜ！",
+   "zh_current": "你够不够格跟我打、我来试！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD0DC",
+   "budget_bytes": 24,
+   "jp": "真紅の稲妻の実力……オマエにも教えてやるぜ！",
+   "zh_current": "让你见识真红闪电的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD100",
+   "budget_bytes": 20,
+   "jp": "よそ見してると怪我じゃすまないぜ！",
+   "zh_current": "分心的话可不止受伤！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD120",
+   "budget_bytes": 24,
+   "jp": "聞いたことがあるだろう？俺がジヨニー·ライデンだ！",
+   "zh_current": "听说过吧？我就是强尼莱汀！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD144",
+   "budget_bytes": 26,
+   "jp": "この俺に出会っちまうとはアンタも運が無かったな！",
+   "zh_current": "竟然遇上我、你运气真差！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD16C",
+   "budget_bytes": 26,
+   "jp": "このオレから逃げようだなんて百年早いぜ！！",
+   "zh_current": "想从我手里逃走、还早一百年！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD194",
+   "budget_bytes": 18,
+   "jp": "やれやれ……ドジっちまったか……",
+   "zh_current": "真是的……失手了吗……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD1B4",
+   "budget_bytes": 14,
+   "jp": "腕を磨いて出直してきな！",
+   "zh_current": "练好本事再来吧！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD1D0",
+   "budget_bytes": 20,
+   "jp": "おっと……！そう簡単に落とされるか！",
+   "zh_current": "哎呀……！没那么简单！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD1F0",
+   "budget_bytes": 18,
+   "jp": "まっ、当てたことはほめてやるがな",
+   "zh_current": "嘛、能打中我值得夸奖",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD210",
+   "budget_bytes": 18,
+   "jp": "チッ……！少しはやるじゃねえか！",
+   "zh_current": "啧……！有两下子嘛！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD230",
+   "budget_bytes": 18,
+   "jp": "……くそっ！読まれてたのか！？",
+   "zh_current": "……可恶！被看穿了！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD250",
+   "budget_bytes": 16,
+   "jp": "ぐっ！ちょ、直撃か……！？",
+   "zh_current": "唔！直击了吗……！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD26C",
+   "budget_bytes": 18,
+   "jp": "この俺をここまで追い詰めるとはな……",
+   "zh_current": "竟把我逼到这地步……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD28C",
+   "budget_bytes": 20,
+   "jp": "……残念だったな！ま、気を落とすなよ",
+   "zh_current": "真遗憾啊！可别灰心！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD2AC",
+   "budget_bytes": 9,
+   "jp": "お出でなすったか！",
+   "zh_current": "你来了啊",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD2C4",
+   "budget_bytes": 16,
+   "jp": "散らばれ！デカいのが来るぞ！",
+   "zh_current": "快散开！大家伙来了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD2E0",
+   "budget_bytes": 15,
+   "jp": "そーら！もう動けねえぞ！！",
+   "zh_current": "看招！躲不掉了",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD2FC",
+   "budget_bytes": 17,
+   "jp": "くそ……！何てザマだよ……全く",
+   "zh_current": "可恶！真是狼狈……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD31C",
+   "budget_bytes": 9,
+   "jp": "……甘いんだよ！",
+   "zh_current": "……太天真！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B80",
+   "budget_bytes": 15,
+   "jp": "手え貸してもらうぜ、みんな！",
+   "zh_current": "大家、帮我一把！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3B9C",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3BB8",
+   "budget_bytes": 27,
+   "jp": "特別に手え貸してやるぜ！赤い彗星さんよ！",
+   "zh_current": "就特别帮你一把！红色彗星先生！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3BE0",
+   "budget_bytes": 19,
+   "jp": "はっ！いい顔つきじゃねえか！！",
+   "zh_current": "哈！这表情不错嘛！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C00",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C1C",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C38",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD334",
+   "budget_bytes": 26,
+   "jp": "真紅の稲妻のスビード……なめてもらっちゃ困るぜ！",
+   "zh_current": "真红闪电的速度、别小看了！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD35C",
+   "budget_bytes": 24,
+   "jp": "真紅の稲妻の実力……オマエにも教えてやるぜ！",
+   "zh_current": "让你见识真红闪电的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD380",
+   "budget_bytes": 23,
+   "jp": "俺と戦えるレベルかどうか確かめさせてもらうぜ！",
+   "zh_current": "你够不够格跟我打、我来试！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD3A4",
+   "budget_bytes": 24,
+   "jp": "真紅の稲妻の実力……オマエにも教えてやるぜ！",
+   "zh_current": "让你见识真红闪电的实力！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD3C8",
+   "budget_bytes": 20,
+   "jp": "よそ見してると怪我じゃすまないぜ！",
+   "zh_current": "分心的话可不止受伤！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD3E8",
+   "budget_bytes": 24,
+   "jp": "聞いたことがあるだろう？俺がジヨニー·ライデンだ！",
+   "zh_current": "听说过吧？我就是强尼莱汀！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD40C",
+   "budget_bytes": 26,
+   "jp": "この俺に出会っちまうとはアンタも運が無かったな！",
+   "zh_current": "竟然遇上我、你运气真差！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD434",
+   "budget_bytes": 26,
+   "jp": "このオレから逃げようだなんて百年早いぜ！！",
+   "zh_current": "想从我手里逃走、还早一百年！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD45C",
+   "budget_bytes": 18,
+   "jp": "やれやれ……ドジっちまったか……",
+   "zh_current": "真是的……失手了吗……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD47C",
+   "budget_bytes": 14,
+   "jp": "腕を磨いて出直してきな！",
+   "zh_current": "练好本事再来吧！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD498",
+   "budget_bytes": 20,
+   "jp": "おっと……！そう簡単に落とされるか！",
+   "zh_current": "哎呀……！没那么简单！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD4B8",
+   "budget_bytes": 18,
+   "jp": "まっ、当てたことはほめてやるがな",
+   "zh_current": "嘛、能打中我值得夸奖",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD4D8",
+   "budget_bytes": 18,
+   "jp": "チッ……！少しはやるじゃねえか！",
+   "zh_current": "啧……！有两下子嘛！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD4F8",
+   "budget_bytes": 18,
+   "jp": "……くそっ！読まれてたのか！？",
+   "zh_current": "……可恶！被看穿了！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD518",
+   "budget_bytes": 16,
+   "jp": "ぐっ！ちょ、直撃か……！？",
+   "zh_current": "唔！直击了吗……！？",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD534",
+   "budget_bytes": 18,
+   "jp": "この俺をここまで追い詰めるとはな……",
+   "zh_current": "竟把我逼到这地步……",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD554",
+   "budget_bytes": 20,
+   "jp": "……残念だったな！ま、気を落とすなよ",
+   "zh_current": "真遗憾啊！可别灰心！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD574",
+   "budget_bytes": 9,
+   "jp": "お出でなすったか！",
+   "zh_current": "你来了啊",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD58C",
+   "budget_bytes": 16,
+   "jp": "散らばれ！デカいのが来るぞ！",
+   "zh_current": "快散开！大家伙来了！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD5A8",
+   "budget_bytes": 15,
+   "jp": "そーら！もう動けねえぞ！！",
+   "zh_current": "看招！躲不掉了",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD5C4",
+   "budget_bytes": 17,
+   "jp": "くそ……！何てザマだよ……全く",
+   "zh_current": "可恶！真是狼狈……",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0xD5E4",
+   "budget_bytes": 9,
+   "jp": "……甘いんだよ！",
+   "zh_current": "……太天真！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C54",
+   "budget_bytes": 15,
+   "jp": "手え貸してもらうぜ、みんな！",
+   "zh_current": "大家、搭把手！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C70",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3C8C",
+   "budget_bytes": 19,
+   "jp": "はっ！いい顔つきじゃねえか！！",
+   "zh_current": "哈！这表情不错嘛！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3CAC",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3CC8",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3CE4",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D00",
+   "budget_bytes": 13,
+   "jp": "いいぜ！任せてくれ！！",
+   "zh_current": "好！交给我吧！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

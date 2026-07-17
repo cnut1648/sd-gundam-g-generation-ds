@@ -1,0 +1,332 @@
+{
+ "entity": "char_411",
+ "kind": "character",
+ "cids": [
+  411
+ ],
+ "name_jp": "ジオン士官",
+ "name_zh_KEEP": "吉翁士官",
+ "cards": [
+  {
+   "cid": 411,
+   "ids": [
+    {
+     "idn": 1233,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 763,
+     "cutin_jp": "ミノフスキー粒子散布！",
+     "cutin_zh_current": "散布米诺夫斯基粒子！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x2AB4",
+   "budget_bytes": 12,
+   "jp": "一斉発射します！",
+   "zh_current": "一齐发射！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2B88",
+   "budget_bytes": 20,
+   "jp": "……回避しました！本艦への損害なし！",
+   "zh_current": "回避成功！本舰无损！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2BD0",
+   "budget_bytes": 20,
+   "jp": "艦首部に損傷！艦の航行には影響なし！",
+   "zh_current": "舰首受损！不碍航行！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FD90",
+   "budget_bytes": 12,
+   "jp": "敵、射程に入りました！",
+   "zh_current": "敌、进入射程！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FDE0",
+   "budget_bytes": 20,
+   "jp": "敵を捕捉しました！攻撃を開始します！",
+   "zh_current": "已捕捉敌人！开始攻击！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF0C",
+   "budget_bytes": 20,
+   "jp": "こ、この威力は！まさか敵の新型……！？",
+   "zh_current": "这威力！是敌方新型！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x203AC",
+   "budget_bytes": 14,
+   "jp": "敵、射線上に乗りました！",
+   "zh_current": "敌人进入射线！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x203FC",
+   "budget_bytes": 14,
+   "jp": "敵、射程内に入りました！",
+   "zh_current": "敌、进入射程内！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20548",
+   "budget_bytes": 16,
+   "jp": "総帥！これ以上攻撃を愛けては……",
+   "zh_current": "总帅！再受攻击……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20AEC",
+   "budget_bytes": 15,
+   "jp": "発射準備整いました！",
+   "zh_current": "准备就绪！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20BC4",
+   "budget_bytes": 17,
+   "jp": "ほ……本艦はまだ戦闘可能です！",
+   "zh_current": "呼……本舰仍能战斗！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x20C50",
+   "budget_bytes": 22,
+   "jp": "左舷装甲板、損傷！直撃ではありません！",
+   "zh_current": "左舷装甲损伤！并非直击！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23C3C",
+   "budget_bytes": 11,
+   "jp": "射撃準備完了！",
+   "zh_current": "已就绪！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x23CDC",
+   "budget_bytes": 28,
+   "jp": "敵の攻撃……回避しました！本艦への命中はありません！",
+   "zh_current": "敌人攻击……已回避！本舰没有被命中！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C7B0",
+   "budget_bytes": 17,
+   "jp": "先手必勝だ！一気に片付けるぞ！",
+   "zh_current": "先手必胜！！一举拿下！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C7D0",
+   "budget_bytes": 13,
+   "jp": "撃てッ！撃てェーッ！！",
+   "zh_current": "开火！开火啊！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C7EC",
+   "budget_bytes": 15,
+   "jp": "発射用意……撃てッ！！",
+   "zh_current": "预备……开火！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C808",
+   "budget_bytes": 20,
+   "jp": "よーし！全弾、叩き込んでやれ！！",
+   "zh_current": "好！全弹、给我砸过去！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C828",
+   "budget_bytes": 19,
+   "jp": "照準合わせ……よーし、撃てえーッ！",
+   "zh_current": "瞄准……好、全体开火！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C848",
+   "budget_bytes": 19,
+   "jp": "照準合わせ……よーし、撃てえーッ！",
+   "zh_current": "瞄准……好、开火吧！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C868",
+   "budget_bytes": 20,
+   "jp": "よーし！全弾、叩き込んでやれ！！",
+   "zh_current": "好！！全弹、都砸过去！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C888",
+   "budget_bytes": 15,
+   "jp": "これより突撃を敢行する！",
+   "zh_current": "现在发起突击！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C8A4",
+   "budget_bytes": 23,
+   "jp": "こ、ここまでか……ジオン公国に栄光あれーッ！",
+   "zh_current": "到此为止了吗……吉翁万岁！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C8C8",
+   "budget_bytes": 24,
+   "jp": "よーし、いいぞ！引き続き索敵を怠るな！",
+   "zh_current": "好、很好！继续搜敌、别大意！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C8EC",
+   "budget_bytes": 25,
+   "jp": "まだ気を抜くなよ！沈むわけには行かんのだ！",
+   "zh_current": "都别松懈！！绝不能让舰沉！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C914",
+   "budget_bytes": 18,
+   "jp": "かすっただけだ！慌てず対処しろ！",
+   "zh_current": "只是擦伤！沉着应对！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C934",
+   "budget_bytes": 21,
+   "jp": "……くらったか！被害状況、報告急げ！",
+   "zh_current": "……中招了！快报告损伤！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C958",
+   "budget_bytes": 24,
+   "jp": "回避運動しつつ後退！このままではいい的だぞ！！",
+   "zh_current": "规避后退！会成活靶子！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C97C",
+   "budget_bytes": 13,
+   "jp": "クッ……！バケモノめが！！",
+   "zh_current": "唔……！这怪物！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C998",
+   "budget_bytes": 20,
+   "jp": "くっ……！覚悟を決めねばならんか……",
+   "zh_current": "唔……！该做好觉悟了……",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C9B8",
+   "budget_bytes": 21,
+   "jp": "その程度の武器でこの艦が沈められるか！",
+   "zh_current": "凭这武器岂能击沉本舰！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C9DC",
+   "budget_bytes": 11,
+   "jp": "ええい！なめるな！！",
+   "zh_current": "别小看我！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2C9F4",
+   "budget_bytes": 18,
+   "jp": "遠距離攻撃か！各員、散開して防御！",
+   "zh_current": "远程攻击吗！散开防御！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CA14",
+   "budget_bytes": 16,
+   "jp": "その機体は我らがいただいた！！",
+   "zh_current": "那机体归我们了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CA30",
+   "budget_bytes": 9,
+   "jp": "なっ、なんだと！？",
+   "zh_current": "什、什么！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2CA48",
+   "budget_bytes": 16,
+   "jp": "おのれっ！我々をなめるな！！",
+   "zh_current": "可恶！少瞧不起人！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

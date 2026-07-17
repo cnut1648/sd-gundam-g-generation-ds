@@ -1,0 +1,51 @@
+{
+ "entity": "unit_259",
+ "kind": "unit",
+ "utids": [
+  259,
+  260,
+  261
+ ],
+ "name_jp": "ゴッドガンダム",
+ "name_zh_current": "神高达",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x232928A",
+   "jp": "ゴッドスラッシュ",
+   "zh_current": "神之斩",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218ED73",
+   "jp": "マシンキャノン",
+   "zh_current": "机炮",
+   "shared_by_n_units": 18
+  },
+  {
+   "slot": 2,
+   "ptr": "0x218F1FD",
+   "jp": "爆熱！ゴッドフィンガー",
+   "zh_current": "爆热神指",
+   "shared_by_n_units": 12
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

@@ -1,0 +1,336 @@
+{
+ "entity": "char_196",
+ "kind": "character",
+ "cids": [
+  196
+ ],
+ "name_jp": "ポゥ・エイジ（泣き）",
+ "name_zh_KEEP": "波·艾吉（哭）",
+ "cards": [
+  {
+   "cid": 196,
+   "ids": [
+    {
+     "idn": 588,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8236",
+     "zh_name_ptr": "0x20B8236",
+     "name_jp": "みんなしてイジメてさ……！！",
+     "name_zh_current": "都来欺负我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 49,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 469,
+     "cutin_jp": "みんなしてイジメてさ……！！",
+     "cutin_zh_current": "你们都来欺负我……！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 589,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8244",
+     "zh_name_ptr": "0x20B8244",
+     "name_jp": "見えるもの全てを破壊する！",
+     "name_zh_current": "毁掉这一切",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 59,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%",
+     "cutin_group": 470,
+     "cutin_jp": "見えるもの全てを破壊するーっ！",
+     "cutin_zh_current": "看得见的一切都给我破坏掉！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_9",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 590,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8252",
+     "zh_name_ptr": "0x20B8252",
+     "name_jp": "本気で戦えぇぇぇーーっ！",
+     "name_zh_current": "给我认真战",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命甲减少",
+     "didx": 119,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·装甲-3",
+     "cutin_group": 471,
+     "cutin_jp": "キサマーッ！本気で戦ええええーーっ！",
+     "cutin_zh_current": "混蛋！给我认真战斗啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1A26C",
+   "budget_bytes": 13,
+   "jp": "あたしを無視するなーーっ！！",
+   "zh_current": "别无视我！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A288",
+   "budget_bytes": 13,
+   "jp": "消えてしまえええーッ！",
+   "zh_current": "给我消失！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A2A4",
+   "budget_bytes": 12,
+   "jp": "このおおおーーッ！",
+   "zh_current": "这家伙！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A2BC",
+   "budget_bytes": 20,
+   "jp": "どいつもこいつもあたしをバカにしてえ！！",
+   "zh_current": "一个个都敢小看我！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A2DC",
+   "budget_bytes": 13,
+   "jp": "消えてしまえええーっ！",
+   "zh_current": "给我消失！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A2F8",
+   "budget_bytes": 17,
+   "jp": "あたしは……あたしはあぁーーッ！！",
+   "zh_current": "我……我……啊啊啊！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A318",
+   "budget_bytes": 32,
+   "jp": "オマエを落とさなきゃあたしの面目丸つぶれなんだよおおっ！",
+   "zh_current": "不击落你、我的面子就全丢光了！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A344",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁんっ！",
+   "zh_current": "呜啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A358",
+   "budget_bytes": 21,
+   "jp": "ま、またあたしはやられるのかぁぁーー！？",
+   "zh_current": "又是我要被击落吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A37C",
+   "budget_bytes": 14,
+   "jp": "うっ、ひっく！ぐす……",
+   "zh_current": "唔、嗝！呜……",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A398",
+   "budget_bytes": 11,
+   "jp": "なめるなぁぁーーッ！！",
+   "zh_current": "别小看人！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A3B0",
+   "budget_bytes": 10,
+   "jp": "あたしをバカにしてェ！",
+   "zh_current": "敢小看我！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A3C8",
+   "budget_bytes": 18,
+   "jp": "うう……！ひっく！あうう……",
+   "zh_current": "呜呜……嗝！啊呜呜……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A3E8",
+   "budget_bytes": 17,
+   "jp": "あ、当たった？どうしてええ！？",
+   "zh_current": "打中了？为什么！？",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A408",
+   "budget_bytes": 8,
+   "jp": "うわぁぁぁーっ！",
+   "zh_current": "啊啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A41C",
+   "budget_bytes": 11,
+   "jp": "どうしてあたしばっかり……！",
+   "zh_current": "怎么总是我！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A434",
+   "budget_bytes": 25,
+   "jp": "効かないって言うのが判らないのかーーッ！！",
+   "zh_current": "都说了没用、听不懂吗！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A45C",
+   "budget_bytes": 10,
+   "jp": "そんなものおおッ！",
+   "zh_current": "区区这点！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A474",
+   "budget_bytes": 25,
+   "jp": "き、来た……！？回避運動！…散るんだよおっ！",
+   "zh_current": "来了……！？回避！快散开！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A49C",
+   "budget_bytes": 24,
+   "jp": "お、大人しくしろお！でないと…でないと……！",
+   "zh_current": "老实点！！不然的话……！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A4C0",
+   "budget_bytes": 25,
+   "jp": "ど…どうして……！！なんでこうなるんだよおおっ！",
+   "zh_current": "为什么……！怎么会变成这样！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1A4E8",
+   "budget_bytes": 9,
+   "jp": "オマエええーっ！",
+   "zh_current": "你这家伙！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x15C",
+   "budget_bytes": 15,
+   "jp": "キサマ……邪魔をしてええっ！",
+   "zh_current": "你这家伙别碍事！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x68AC",
+   "budget_bytes": 21,
+   "jp": "アイツだ！アイツをやるんだよお−っ！！",
+   "zh_current": "是他！干掉那家伙！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x68D0",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x68F4",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6918",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x693C",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6960",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6984",
+   "budget_bytes": 21,
+   "jp": "こんな私を使ってくれるんですかぁっ！？",
+   "zh_current": "您愿意用我这种人吗！？",
+   "zh_current_bytes": 17
+  }
+ ]
+}

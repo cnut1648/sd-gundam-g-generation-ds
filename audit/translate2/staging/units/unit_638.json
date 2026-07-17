@@ -1,0 +1,42 @@
+{
+ "entity": "unit_638",
+ "kind": "unit",
+ "utids": [
+  638
+ ],
+ "name_jp": "ウィルゲム",
+ "name_zh_current": "威尔盖姆",
+ "name_zh_px": 48,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C838",
+   "jp": "メガ粒子砲",
+   "zh_current": "米加粒子炮",
+   "shared_by_n_units": 77
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218BF81",
+   "jp": "CIWS",
+   "zh_current": "CIWS",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

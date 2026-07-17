@@ -1,0 +1,684 @@
+{
+ "entity": "char_13",
+ "kind": "character",
+ "cids": [
+  13,
+  14
+ ],
+ "name_jp": "アナベル・ガトー",
+ "name_zh_KEEP": "卡多",
+ "cards": [
+  {
+   "cid": 13,
+   "ids": [
+    {
+     "idn": 39,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B701F",
+     "zh_name_ptr": "0x20B701F",
+     "name_jp": "連邦の亡者をなぎ払うために！",
+     "name_zh_current": "扫荡亡者！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 22,
+     "cutin_jp": "連邦の亡者をなぎ払うために！",
+     "cutin_zh_current": "为扫荡联邦的亡者！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 40,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B703A",
+     "zh_name_ptr": "0x20B703A",
+     "name_jp": "理想を邪魔されてたまるか！",
+     "name_zh_current": "理想不容毁",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 23,
+     "cutin_jp": "貴様らのような分別のないものどもに我々の理想を邪魔されてたまるか！",
+     "cutin_zh_current": "像你们这种不明事理的家伙、岂能让你们妨碍我们的理想！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 41,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7048",
+     "zh_name_ptr": "0x20B7048",
+     "name_jp": "私を敵にするには……",
+     "name_zh_current": "想与我为敌",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌命回反减",
+     "didx": 47,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下、反応が30低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%反应-30",
+     "cutin_group": 24,
+     "cutin_jp": "私を敵にするには君はまだ未熟！",
+     "cutin_zh_current": "想与我为敌、你还太嫩！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 14,
+   "ids": [
+    {
+     "idn": 42,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B705B",
+     "zh_name_ptr": "0x20B705B",
+     "name_jp": "後世に伝えるために！！",
+     "name_zh_current": "为传于后世",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 10,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复50%",
+     "cutin_group": 25,
+     "cutin_jp": "我々の真実の戦いを後世に伝えるために！！",
+     "cutin_zh_current": "为将我们真实的战斗、传予后世！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 43,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B7068",
+     "zh_name_ptr": "0x2329729",
+     "name_jp": "もはや語るまい……",
+     "name_zh_current": "无需多言……",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 61,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%",
+     "cutin_group": 26,
+     "cutin_jp": "もはや語るまい……",
+     "cutin_zh_current": "无需多言……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 44,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7048",
+     "zh_name_ptr": "0x20B7048",
+     "name_jp": "私を敵にするには……",
+     "name_zh_current": "想与我为敌",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威回反减",
+     "didx": 47,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率と回避率が30%ずつ低下、反応が30低下する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%反应-30",
+     "cutin_group": 27,
+     "cutin_jp": "私を敵にするには君はまだ未熟！",
+     "cutin_zh_current": "想与我为敌、你还太嫩！",
+     "name_owner": true,
+     "name_shared_with_idn": 41,
+     "detail_owner": false,
+     "detail_owned_by": "char_13",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x14AC",
+   "budget_bytes": 30,
+   "jp": "意気込みは良し……だが、相手がひよっ子ではな！！",
+   "zh_current": "气势不错……可惜你还太嫩了！！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14D8",
+   "budget_bytes": 10,
+   "jp": "もはや語るまい……！",
+   "zh_current": "无需多言……",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x14F0",
+   "budget_bytes": 16,
+   "jp": "後退せんのか？……良い覚悟だ！",
+   "zh_current": "不退吗？……好胆识！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x150C",
+   "budget_bytes": 22,
+   "jp": "事を成し遂げてこそ後に続く者が生まれるのだ！",
+   "zh_current": "成就大业、才会有后继者！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1530",
+   "budget_bytes": 13,
+   "jp": "ジオン公国の栄光のために！！",
+   "zh_current": "为吉翁荣光！！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x154C",
+   "budget_bytes": 10,
+   "jp": "もはや語るまい……！",
+   "zh_current": "无需多言！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1564",
+   "budget_bytes": 13,
+   "jp": "死にたくなくばそこをどけ！",
+   "zh_current": "不想死就让开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1580",
+   "budget_bytes": 27,
+   "jp": "ジオンの崇高なる使命を邪魔だてする者には死あるのみ！",
+   "zh_current": "阻挠吉翁使命者、唯有一死！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15A8",
+   "budget_bytes": 8,
+   "jp": "くっ……無念！！",
+   "zh_current": "唔、可恨！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15BC",
+   "budget_bytes": 5,
+   "jp": "……未熟！",
+   "zh_current": "太嫩！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15D0",
+   "budget_bytes": 10,
+   "jp": "……南無三ッ！！",
+   "zh_current": "豁出去了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x15E8",
+   "budget_bytes": 22,
+   "jp": "怨恨で戦いを支える者にこの私は倒せん！",
+   "zh_current": "靠怨恨作战、打不倒我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x160C",
+   "budget_bytes": 12,
+   "jp": "小しゃくな真似を……！",
+   "zh_current": "耍小花招……！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1624",
+   "budget_bytes": 24,
+   "jp": "しょせん貴様とは価値観が異なるようだな……",
+   "zh_current": "说到底价值观不同啊……",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1648",
+   "budget_bytes": 9,
+   "jp": "だが……負けぬ！！",
+   "zh_current": "但绝不输！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1660",
+   "budget_bytes": 31,
+   "jp": "このガトーがついえようともジオン公国の栄光！ついえはしない！",
+   "zh_current": "纵使卡多倒下、吉翁荣光不灭！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x168C",
+   "budget_bytes": 25,
+   "jp": "何とたわいもない……鎧袖一触とはこのことか！",
+   "zh_current": "不堪一击……一触即溃罢了",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16B4",
+   "budget_bytes": 12,
+   "jp": "この程度の砲撃など……！",
+   "zh_current": "区区炮击……！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16CC",
+   "budget_bytes": 9,
+   "jp": "各機散開、急げ！",
+   "zh_current": "各机散开！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x16E4",
+   "budget_bytes": 24,
+   "jp": "投降するならばよし……さもなくば倒すのみ！",
+   "zh_current": "肯降便罢……否则灭了你！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1708",
+   "budget_bytes": 19,
+   "jp": "情けない……虜囚の辱めを愛けるとは！",
+   "zh_current": "可悲……竟受此等耻辱！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1728",
+   "budget_bytes": 26,
+   "jp": "祖国に捧げたこの身命！生きて虜囚の辱めは愛けぬ！",
+   "zh_current": "此命已献祖国！岂能活着受辱！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x398",
+   "budget_bytes": 22,
+   "jp": "今こそ我らの力！連邦に思い知らせるのだ！！",
+   "zh_current": "我等之力！！让联邦领教！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3BC",
+   "budget_bytes": 5,
+   "jp": "……承知！",
+   "zh_current": "收到！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3D0",
+   "budget_bytes": 13,
+   "jp": "了解だ！……君と共に！！",
+   "zh_current": "明白！与你一起！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x3EC",
+   "budget_bytes": 23,
+   "jp": "我らソロモンの志士の力！見せてやりましょう！",
+   "zh_current": "我等所罗门志士的力量！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x410",
+   "budget_bytes": 10,
+   "jp": "ふん……女狐めが！",
+   "zh_current": "哼……臭女人！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x428",
+   "budget_bytes": 20,
+   "jp": "わかった！手を貸すぞ、ワイズマン伍長！！",
+   "zh_current": "明白！助你、怀兹曼！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x448",
+   "budget_bytes": 17,
+   "jp": "ノリス殿！ご助力、仕る！！",
+   "zh_current": "诺里斯！我来助阵！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1750",
+   "budget_bytes": 14,
+   "jp": "手間取っては……大事に障る！",
+   "zh_current": "拖久了要坏事！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x176C",
+   "budget_bytes": 23,
+   "jp": "我々の真実の戦いを後世に伝えるために！！",
+   "zh_current": "为将真实之战、传诸后世！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1790",
+   "budget_bytes": 10,
+   "jp": "貴様……邪魔するな！",
+   "zh_current": "你别碍事！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17A8",
+   "budget_bytes": 16,
+   "jp": "後退せんのか？……良い覚悟だ！",
+   "zh_current": "不退吗？……好胆识！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17C4",
+   "budget_bytes": 16,
+   "jp": "後退せんのか？……良い覚悟だ！",
+   "zh_current": "不退吗？……好胆识！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x17E0",
+   "budget_bytes": 18,
+   "jp": "我々は真の解放をつかみ取るのだ！",
+   "zh_current": "我们要真正的解放！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1800",
+   "budget_bytes": 36,
+   "jp": "貴様らのような分別のないものどもに我々の理想を邪魔されてたまるか！！",
+   "zh_current": "岂容你们这些蠢货、阻挠我们的理想！！",
+   "zh_current_bytes": 32
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1830",
+   "budget_bytes": 13,
+   "jp": "死にたくなくばそこを退け！",
+   "zh_current": "不想死就让开！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x184C",
+   "budget_bytes": 10,
+   "jp": "……二度と忘れぬ！！",
+   "zh_current": "……绝不忘记",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1864",
+   "budget_bytes": 5,
+   "jp": "……未熟！",
+   "zh_current": "太嫩！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1878",
+   "budget_bytes": 10,
+   "jp": "……南無三ッ！！",
+   "zh_current": "豁出去了！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1890",
+   "budget_bytes": 13,
+   "jp": "ふっ……こしゃくな真似を！",
+   "zh_current": "哼……耍小花招！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18AC",
+   "budget_bytes": 25,
+   "jp": "ただの兵ではないのなら大局的にものを見ろ！",
+   "zh_current": "既非普通士兵、就放眼大局！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18D4",
+   "budget_bytes": 22,
+   "jp": "怨恨で戦いを支える者にこの私は倒せん！",
+   "zh_current": "靠怨恨作战、打不倒我！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x18F8",
+   "budget_bytes": 9,
+   "jp": "くっ！……不覚！！",
+   "zh_current": "唔！……失算",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1910",
+   "budget_bytes": 24,
+   "jp": "これは……散っていった者たちへの冒涜だ！",
+   "zh_current": "这是……告慰逝去之人！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1934",
+   "budget_bytes": 25,
+   "jp": "何とたわいもない……鎧袖一触とはこのことか！",
+   "zh_current": "不堪一击……一触即溃罢了",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x195C",
+   "budget_bytes": 11,
+   "jp": "ふっ……無駄なことを！",
+   "zh_current": "哼……没用的！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1974",
+   "budget_bytes": 11,
+   "jp": "各機、散開してやり過ごせ！",
+   "zh_current": "各机散开！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x198C",
+   "budget_bytes": 23,
+   "jp": "我らの勝利のため……その機体、いただくっ！！",
+   "zh_current": "为了胜利……机体我收下！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19B0",
+   "budget_bytes": 24,
+   "jp": "これは……散っていった者たちへの冒涜だ！",
+   "zh_current": "这是……告慰逝去之人！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19D4",
+   "budget_bytes": 15,
+   "jp": "生きて虜囚の辱めは愛けぬっ！！",
+   "zh_current": "岂能活着受辱！！！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "1.bin",
+   "record": "0x188",
+   "budget_bytes": 16,
+   "jp": "やるのだ！……我々の手で！！",
+   "zh_current": "动手、用我们之手！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1C8",
+   "budget_bytes": 8,
+   "jp": "ぬおおーーっ！！",
+   "zh_current": "呜哦哦！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1.bin",
+   "record": "0x1F8",
+   "budget_bytes": 7,
+   "jp": "もらったぁ！！",
+   "zh_current": "拿下了！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "1.bin",
+   "record": "0x220",
+   "budget_bytes": 14,
+   "jp": "これで終わりだな、コウ·ウラキ",
+   "zh_current": "结束了、浦木宏",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1.bin",
+   "record": "0x23A",
+   "budget_bytes": 30,
+   "jp": "腐った連邦に属さねば貴様も苦しむことは無かったろうに",
+   "zh_current": "若非身在腐败联邦、你也不必受苦",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x468",
+   "budget_bytes": 19,
+   "jp": "同胞たちよ！私に力を貸してくれ！！",
+   "zh_current": "同志们助我一臂之力！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x488",
+   "budget_bytes": 5,
+   "jp": "……承知！",
+   "zh_current": "收到！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x49C",
+   "budget_bytes": 19,
+   "jp": "いいだろう！手を貸すぞ、ウラキ！！",
+   "zh_current": "好吧！助你一把、浦木！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4BC",
+   "budget_bytes": 13,
+   "jp": "了解だ！……君と共に！！",
+   "zh_current": "收到！与你并肩",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4D8",
+   "budget_bytes": 23,
+   "jp": "我らソロモンの志士の力！見せてやりましょう！",
+   "zh_current": "我等所罗门志士之力！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x4FC",
+   "budget_bytes": 30,
+   "jp": "了解だ！共に恩重は忘れ手を携えようではないか！！",
+   "zh_current": "明白！尽弃恩仇、携手作战吧！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x528",
+   "budget_bytes": 20,
+   "jp": "わかった！手を貸すぞ、ワイズマン伍長！！",
+   "zh_current": "明白！助你、怀兹曼！！",
+   "zh_current_bytes": 18
+  }
+ ]
+}

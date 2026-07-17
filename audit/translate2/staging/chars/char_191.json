@@ -1,0 +1,272 @@
+{
+ "entity": "char_191",
+ "kind": "character",
+ "cids": [
+  191
+ ],
+ "name_jp": "ブレックス",
+ "name_zh_KEEP": "布雷克斯",
+ "cards": [
+  {
+   "cid": 191,
+   "ids": [
+    {
+     "idn": 573,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B7D1D",
+     "zh_name_ptr": "0x20B7D1D",
+     "name_jp": "ミノフスキー粒子散布！",
+     "name_zh_current": "散布粒子！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围回避↑",
+     "didx": 125,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%",
+     "cutin_group": 454,
+     "cutin_jp": "ミノフスキー粒子、散布だ！",
+     "cutin_zh_current": "米诺夫斯基粒子、散布！",
+     "name_owner": false,
+     "name_shared_with_idn": 420,
+     "detail_owner": false,
+     "detail_owned_by": "char_140",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 574,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B818F",
+     "zh_name_ptr": "0x218FFE0",
+     "name_jp": "ためらいはない！",
+     "name_zh_current": "绝不犹豫！",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 455,
+     "cutin_jp": "家族を無くした身だ……ためらいはない！",
+     "cutin_zh_current": "我也失去了家人……我绝不犹豫！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 575,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8197",
+     "zh_name_ptr": "0x20B8197",
+     "name_jp": "私には使命がある！",
+     "name_zh_current": "我有使命！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 456,
+     "cutin_jp": "私には使命がある！まだ、倒れるわけにはいかんのだ！",
+     "cutin_zh_current": "我有使命在身！现在还不能倒下！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x19430",
+   "budget_bytes": 12,
+   "jp": "チャンスだ！一気に攻めろ！",
+   "zh_current": "机会！压上去！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19448",
+   "budget_bytes": 7,
+   "jp": "直撃させろっ！",
+   "zh_current": "直击它！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1945C",
+   "budget_bytes": 7,
+   "jp": "直撃させろっ！",
+   "zh_current": "打中它！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19470",
+   "budget_bytes": 16,
+   "jp": "落とせっ！何で落とせんのだ！",
+   "zh_current": "击落！打不掉吗！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x194AC",
+   "budget_bytes": 12,
+   "jp": "一斉射撃だ！撃てっ！",
+   "zh_current": "一齐射击！开火！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x194C4",
+   "budget_bytes": 20,
+   "jp": "突撃しろっ！どの道、リスクはある！",
+   "zh_current": "突击！！哪条路都险！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x194E4",
+   "budget_bytes": 20,
+   "jp": "突撃しろっ！どの道、リスクはある！",
+   "zh_current": "突击！！哪条路都险！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19504",
+   "budget_bytes": 22,
+   "jp": "敵に接近するぞっ！総員、衝撃に備えろっ！",
+   "zh_current": "接近敌人！全员准备防冲击！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19528",
+   "budget_bytes": 20,
+   "jp": "やられたか……！止むを得んな……",
+   "zh_current": "中弹了……！无可奈何……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1956C",
+   "budget_bytes": 21,
+   "jp": "よし、よくやった！艦首を敵に向けろっ！",
+   "zh_current": "干得好！舰首对敌！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19590",
+   "budget_bytes": 22,
+   "jp": "まだ……私は、倒れるわけにはいかんのだ！",
+   "zh_current": "我还……绝不能倒下！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x195B4",
+   "budget_bytes": 18,
+   "jp": "この程度、損傷のうちに入らん！",
+   "zh_current": "这点、算不上损伤！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x195EE",
+   "budget_bytes": 18,
+   "jp": "くっ！……さすがと言うべきか！？",
+   "zh_current": "唔！……真有两下子！？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1960C",
+   "budget_bytes": 25,
+   "jp": "全速を出せんのか！？このままでは第二撃を愛けるぞ！",
+   "zh_current": "出不了全速吗！？会挨第二击的！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19653",
+   "budget_bytes": 13,
+   "jp": "機関の修理を急がせろっ！",
+   "zh_current": "快修引擎！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1966C",
+   "budget_bytes": 12,
+   "jp": "なにっ！直撃だとっ！？",
+   "zh_current": "什么！直击！？",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19684",
+   "budget_bytes": 28,
+   "jp": "すべては人間の力あってのことだと信じたいのだよ、私は！",
+   "zh_current": "我愿相信、一切皆系于人的力量！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x196AC",
+   "budget_bytes": 9,
+   "jp": "回避だ、急げっ！",
+   "zh_current": "回避、快！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x196C4",
+   "budget_bytes": 19,
+   "jp": "あんな遠くからでは当たるわけはない！",
+   "zh_current": "隔那么远打不中的！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x196E4",
+   "budget_bytes": 13,
+   "jp": "エゥーゴの戦力にさせてもらう！",
+   "zh_current": "纳入奥古战力！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19700",
+   "budget_bytes": 22,
+   "jp": "エゥーゴの指揮はまかせたぞ……シャア·アズナブル……",
+   "zh_current": "奥古就交给你了……夏亚……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x19724",
+   "budget_bytes": 10,
+   "jp": "なんと破廉恥なっ！",
+   "zh_current": "何等无耻！",
+   "zh_current_bytes": 8
+  }
+ ]
+}

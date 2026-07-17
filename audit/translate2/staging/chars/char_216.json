@@ -1,0 +1,328 @@
+{
+ "entity": "char_216",
+ "kind": "character",
+ "cids": [
+  216
+ ],
+ "name_jp": "ルー・ルカ",
+ "name_zh_KEEP": "露·露卡",
+ "cards": [
+  {
+   "cid": 216,
+   "ids": [
+    {
+     "idn": 648,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B83ED",
+     "zh_name_ptr": "0x20B83ED",
+     "name_jp": "なぐさめ役にはなりたくないの！",
+     "name_zh_current": "谁要安慰你",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "命中&威力上昇",
+     "summary_zh_KEEP": "命中・威力↑",
+     "didx": 69,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+20%",
+     "cutin_group": 508,
+     "cutin_jp": "アタシはね、おびえる男のなぐさめ役にはなりたくないの！！",
+     "cutin_zh_current": "我才不想啊、去安慰胆怯的男人！！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_1",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 649,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B83FF",
+     "zh_name_ptr": "0x20B83FF",
+     "name_jp": "あんたが死んじゃうのよ！",
+     "name_zh_current": "你会死的！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "チーム防御力↑",
+     "summary_zh_KEEP": "队・回甲↑",
+     "didx": 116,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）回避率が40%上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）回避+40%·装甲+2",
+     "cutin_group": 509,
+     "cutin_jp": "感傷におぼれてると、今度はあんたが死んじゃうのよ！",
+     "cutin_zh_current": "沉溺于感伤、这次死的就是你！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 650,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B840C",
+     "zh_name_ptr": "0x21887C2",
+     "name_jp": "戦うのよ！",
+     "name_zh_current": "战斗吧！",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 77,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が20%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+20%·攻击+20%",
+     "cutin_group": 510,
+     "cutin_jp": "戦うのよ！それが生きることに繋がるはずよ！",
+     "cutin_zh_current": "战斗吧！那才能通向生存！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_91",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1CDC0",
+   "budget_bytes": 19,
+   "jp": "女だからって……なめんじゃないの！！",
+   "zh_current": "别当我是女人好欺负！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CDE0",
+   "budget_bytes": 10,
+   "jp": "……やってみるわ！！",
+   "zh_current": "……试试看！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CDF8",
+   "budget_bytes": 29,
+   "jp": "これは戦争よ！人はもっと理不尽なことで死んでんの！",
+   "zh_current": "这是战争！人常死于更荒唐的事！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CE24",
+   "budget_bytes": 24,
+   "jp": "戦うこと……それが生きることに繋がるはずよ！",
+   "zh_current": "战斗……通往生存之路！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CE48",
+   "budget_bytes": 30,
+   "jp": "やるべきことをやるだけ！後悔するのはそれからでいいわ！",
+   "zh_current": "做该做的事！！后悔等之后再说！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CE74",
+   "budget_bytes": 9,
+   "jp": "まかせなさいって！",
+   "zh_current": "交给我吧！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CE8C",
+   "budget_bytes": 21,
+   "jp": "さぁ！！どこからでもかかってらっしゃい！",
+   "zh_current": "上！！！尽管放马过来！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CEB0",
+   "budget_bytes": 28,
+   "jp": "あたしをそこらの女と一緒にしない方がいいと思うけど！？",
+   "zh_current": "别拿我和普通女人混为一谈！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CED8",
+   "budget_bytes": 17,
+   "jp": "あぁ…っ？こりゃ、まずった……！",
+   "zh_current": "啊……？这下不妙……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CEF8",
+   "budget_bytes": 24,
+   "jp": "やれた！スゴイ！！こんな私……愛しちゃう！",
+   "zh_current": "干得好！这样的我……爱死了！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CF1C",
+   "budget_bytes": 31,
+   "jp": "あたしだってわかってるわよ……悲しみからは何も生まれないってこと",
+   "zh_current": "我也明白的……悲伤带不来什么",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CF48",
+   "budget_bytes": 11,
+   "jp": "やってくれちゃって！！",
+   "zh_current": "竟敢这样！！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CF60",
+   "budget_bytes": 24,
+   "jp": "かっこいい女がドジやるから可愛いってさ！",
+   "zh_current": "帅气女人犯蠢才可爱嘛！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CF84",
+   "budget_bytes": 18,
+   "jp": "あぁ…っ？こりゃ、まずった……！",
+   "zh_current": "啊……？这下不妙……！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CFA4",
+   "budget_bytes": 8,
+   "jp": "きゃぁぁぁっ！！",
+   "zh_current": "呀啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CFB8",
+   "budget_bytes": 28,
+   "jp": "感傷におぼれてたら今度はあたしが死んでしまう！",
+   "zh_current": "沉溺感伤的话、这回我会没命！！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1CFE0",
+   "budget_bytes": 21,
+   "jp": "そーいうのが無理だってのわかんないの！？",
+   "zh_current": "说了做不来、你不懂吗！？",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D004",
+   "budget_bytes": 9,
+   "jp": "当たるもんですか！",
+   "zh_current": "打不中的！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D01C",
+   "budget_bytes": 15,
+   "jp": "攻撃が来るわ！散開してっ！",
+   "zh_current": "敌袭！快散开！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D038",
+   "budget_bytes": 22,
+   "jp": "女々しい真似は止めて、さっさと投降しなさい！",
+   "zh_current": "别没出息了、快点投降！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D05C",
+   "budget_bytes": 23,
+   "jp": "まいったな……こんなの予定になかったのに……",
+   "zh_current": "服了……这可不在计划内……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1D080",
+   "budget_bytes": 15,
+   "jp": "女ってそんなに簡単じゃないわよ！",
+   "zh_current": "女人没那么简单！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6E64",
+   "budget_bytes": 10,
+   "jp": "行くわよ！みんな！！",
+   "zh_current": "上！各位！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6E7C",
+   "budget_bytes": 21,
+   "jp": "こちらルー·ルカ、了解！援護に回ります！",
+   "zh_current": "露·露卡收到！我去支援！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6EA0",
+   "budget_bytes": 10,
+   "jp": "こっちはOKよ、ジュドー！",
+   "zh_current": "这边OK！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6EB8",
+   "budget_bytes": 21,
+   "jp": "こちらルー·ルカ、了解！援護に回ります！",
+   "zh_current": "露·露卡收到！我去支援！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6EDC",
+   "budget_bytes": 21,
+   "jp": "こちらルー·ルカ、了解！援護に回ります！",
+   "zh_current": "露·露卡收到！我去支援！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F00",
+   "budget_bytes": 21,
+   "jp": "こちらルー·ルカ、了解！援護に回ります！",
+   "zh_current": "露·露卡收到！我去支援！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x6F24",
+   "budget_bytes": 21,
+   "jp": "こちらルー·ルカ、了解！援護に回ります！",
+   "zh_current": "露·露卡收到！我去支援！",
+   "zh_current_bytes": 20
+  }
+ ]
+}

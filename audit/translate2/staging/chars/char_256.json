@@ -1,0 +1,588 @@
+{
+ "entity": "char_256",
+ "kind": "character",
+ "cids": [
+  256,
+  366
+ ],
+ "name_jp": "ノーマ・レギオ",
+ "name_zh_KEEP": "诺玛·雷吉欧",
+ "cards": [
+  {
+   "cid": 256,
+   "ids": [
+    {
+     "idn": 768,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B87F5",
+     "zh_name_ptr": "0x20B87F5",
+     "name_jp": "焼かれなさい……メギドの火に",
+     "name_zh_current": "米吉多之火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "威力↑＋痛撃",
+     "summary_zh_KEEP": "威力↑・暴击",
+     "didx": 170,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が40%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+40%·暴击",
+     "cutin_group": 592,
+     "cutin_jp": "焼かれなさい……メギドの火に",
+     "cutin_zh_current": "燃尽吧……在米吉多之火中",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_4",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 769,
+     "slot": 1,
+     "target": "自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8806",
+     "zh_name_ptr": "0x20B8806",
+     "name_jp": "インペラトールが守ってくれる…",
+     "name_zh_current": "皇帝守护我",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 243,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）インベラトール搭乗時、HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 593,
+     "cutin_jp": "インベラトールが……私を守って……",
+     "cutin_zh_current": "皇帝啊……守护我……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 770,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8818",
+     "zh_name_ptr": "0x20B8818",
+     "name_jp": "私のこの力を、みなのために",
+     "name_zh_current": "我力为众人",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌战力减少",
+     "didx": 124,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中·回避·攻撃力が30%ずつ低下、反応が30低下、装甲が3減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·回避-30%反应-30·攻击-30%·装甲-3",
+     "cutin_group": 594,
+     "cutin_jp": "使ってみせましょう……私のこの力を、みなのために",
+     "cutin_zh_current": "就让你们见识吧……我这份力量、为了大家",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_176",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  },
+  {
+   "cid": 366,
+   "ids": [
+    {
+     "idn": 1098,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B87F5",
+     "zh_name_ptr": "0x20B87F5",
+     "name_jp": "焼かれなさい……メギドの火に",
+     "name_zh_current": "米吉多之火",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃力大幅上昇",
+     "summary_zh_KEEP": "威↑↑・暴击",
+     "didx": 174,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が60%増加、攻撃が必ずクリティカルになる",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+60%·暴击",
+     "cutin_group": 730,
+     "cutin_jp": "焼かれなさい……メギドの火に",
+     "cutin_zh_current": "燃尽吧……在米吉多之火中",
+     "name_owner": true,
+     "name_shared_with_idn": 768,
+     "detail_owner": false,
+     "detail_owned_by": "char_134",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1099,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8E4A",
+     "zh_name_ptr": "0x20B8E4A",
+     "name_jp": "全てで一つ……それがレギオン",
+     "name_zh_current": "军团为一体",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "自軍HP回復",
+     "summary_zh_KEEP": "自军HP回复",
+     "didx": 7,
+     "detail_jp": "使用条件：マップ対象：自軍全体（効果）HPが25%回復する",
+     "detail_zh_current": "使用条件、地图对象、全军（效果）恢复25%",
+     "cutin_group": 731,
+     "cutin_jp": "全てで一つ……それがレギオン",
+     "cutin_zh_current": "万众归一……此即军团",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_28",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1100,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8E59",
+     "zh_name_ptr": "0x20B8E59",
+     "name_jp": "私はアルファでありオメガ……",
+     "name_zh_current": "我是始与终",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復&防御↑",
+     "summary_zh_KEEP": "回HP・防↑",
+     "didx": 148,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが25%回復、愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复25%·伤害减轻",
+     "cutin_group": 732,
+     "cutin_jp": "私はアルファでありオメガ……無数にして一つの完全なる者",
+     "cutin_zh_current": "我即阿尔法、亦即欧米伽……无数而合一的完全存在",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x21A98",
+   "budget_bytes": 19,
+   "jp": "見なさい……私は盗人のように来る",
+   "zh_current": "看哪……我将如贼而来",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21AB8",
+   "budget_bytes": 16,
+   "jp": "この力……使うのは皆のために",
+   "zh_current": "这力量……为大家而用",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21AD4",
+   "budget_bytes": 25,
+   "jp": "砕きましょう……陶工が器を砕くように",
+   "zh_current": "粉碎吧……如同陶工碎瓦器",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21AFC",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B0C",
+   "budget_bytes": 22,
+   "jp": "私にとって戦うべきは……貴方がたなのです",
+   "zh_current": "我应当迎战的……正是你们",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B30",
+   "budget_bytes": 20,
+   "jp": "剣で殺されるべき者は剣で……",
+   "zh_current": "当死于剑者、必死于剑……",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B50",
+   "budget_bytes": 15,
+   "jp": "守ってみせましょう……皆を",
+   "zh_current": "我定会守护大家……",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B6C",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 3
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B7C",
+   "budget_bytes": 16,
+   "jp": "あ……これも、報いだと……？",
+   "zh_current": "啊……这也是、报应？",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21B98",
+   "budget_bytes": 8,
+   "jp": "……当たらない！",
+   "zh_current": "……打不中！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21BAC",
+   "budget_bytes": 25,
+   "jp": "わ、私はまだ……やらなきゃ…ならない、から……",
+   "zh_current": "我还不能……还有该做的事",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21BD4",
+   "budget_bytes": 26,
+   "jp": "その者、見れども見えず聞けども決して認めない……",
+   "zh_current": "那人、视而不见、听而不闻……",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21BFC",
+   "budget_bytes": 12,
+   "jp": "見なさい……私はすぐに来る",
+   "zh_current": "看哪……我必快来",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C14",
+   "budget_bytes": 18,
+   "jp": "答えましょう……「私はそれだ」と",
+   "zh_current": "来战吧……我即是那存在",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C34",
+   "budget_bytes": 5,
+   "jp": "あぁっ！？",
+   "zh_current": "啊！？",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C48",
+   "budget_bytes": 9,
+   "jp": "わ…私は、まだ……",
+   "zh_current": "我、我还……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C60",
+   "budget_bytes": 15,
+   "jp": "おやめなさい……無益な抵抗は",
+   "zh_current": "住手吧……无益抵抗",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C7C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "…………",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21C90",
+   "budget_bytes": 14,
+   "jp": "来る！？皆さん、回避を！！",
+   "zh_current": "来了！？大家回避！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21CAC",
+   "budget_bytes": 20,
+   "jp": "その機体……捕縛させていただきましょう",
+   "zh_current": "那机体……就由我收下吧",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21CCC",
+   "budget_bytes": 8,
+   "jp": "こ、こんな……！？",
+   "zh_current": "怎么会！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x21CE0",
+   "budget_bytes": 12,
+   "jp": "私はもう……迷わない！",
+   "zh_current": "我不再迷茫了！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7FB0",
+   "budget_bytes": 21,
+   "jp": "連続攻撃でいきます！皆さん、サボートを！！",
+   "zh_current": "用连续攻击！请大家支援！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7FD4",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7FEC",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x8004",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x801C",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x8034",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x804C",
+   "budget_bytes": 11,
+   "jp": "了解！支援します！！",
+   "zh_current": "了解！支援！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A6E4",
+   "budget_bytes": 14,
+   "jp": "来るというのですね……ですが！",
+   "zh_current": "要来了吗……可是！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A700",
+   "budget_bytes": 17,
+   "jp": "逝きなさい……裁かれし者たちよ",
+   "zh_current": "逝去吧……受裁决之人",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A720",
+   "budget_bytes": 20,
+   "jp": "全ては父であるあのお方のために……",
+   "zh_current": "这一切、皆为父亲大人……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A740",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A750",
+   "budget_bytes": 23,
+   "jp": "さあ、お逝きなさい……裁かれし者たちよ",
+   "zh_current": "来吧、上路吧……受裁决之人",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A774",
+   "budget_bytes": 33,
+   "jp": "剣で殺されるべき者よ……剣で殺して差し上げましょう",
+   "zh_current": "当死于剑下之人啊……便以利剑了结你",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A7A4",
+   "budget_bytes": 4,
+   "jp": "……",
+   "zh_current": "……",
+   "zh_current_bytes": 2
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A7B4",
+   "budget_bytes": 26,
+   "jp": "悪しき者すべてを刈りましょう……あのお方のために",
+   "zh_current": "将一切恶者尽数清除……为那位",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A7DC",
+   "budget_bytes": 12,
+   "jp": "あ……な、なぜ……？",
+   "zh_current": "啊……为何……？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A7F4",
+   "budget_bytes": 4,
+   "jp": "ふふ……",
+   "zh_current": "呵……",
+   "zh_current_bytes": 4
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A804",
+   "budget_bytes": 9,
+   "jp": "こ…この程度は！！",
+   "zh_current": "这点能耐！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A81C",
+   "budget_bytes": 31,
+   "jp": "その者、見れども見えず聞けども決して認めない……愚かですね",
+   "zh_current": "视而不见、听而不闻……愚不可及",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A848",
+   "budget_bytes": 25,
+   "jp": "答えさしあげましょう……「私はそれだ」、と",
+   "zh_current": "便陪你一战……『我即是他』",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A870",
+   "budget_bytes": 18,
+   "jp": "見なさい……私はすぐに来るでしょう",
+   "zh_current": "看哪……我必快来",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A890",
+   "budget_bytes": 12,
+   "jp": "ッ！？こ、こんな力が……",
+   "zh_current": "唔！？这力量……",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A8A8",
+   "budget_bytes": 6,
+   "jp": "ま、まだ……",
+   "zh_current": "还没……",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A8BC",
+   "budget_bytes": 31,
+   "jp": "皇帝の名を冠しているのは□達ではないのですよ？",
+   "zh_current": "败坏帝王之名的……并不是我们！！",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A8E8",
+   "budget_bytes": 9,
+   "jp": "無駄なことです……",
+   "zh_current": "没用的……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A900",
+   "budget_bytes": 9,
+   "jp": "無駄なことです……",
+   "zh_current": "没用的……",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A918",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A92C",
+   "budget_bytes": 6,
+   "jp": "………………",
+   "zh_current": "………………",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2A940",
+   "budget_bytes": 16,
+   "jp": "お前たちに……邪魔はさせません！",
+   "zh_current": "绝不让你们妨碍！！",
+   "zh_current_bytes": 16
+  }
+ ]
+}

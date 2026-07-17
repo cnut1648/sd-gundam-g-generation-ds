@@ -1,0 +1,272 @@
+{
+ "entity": "char_240",
+ "kind": "character",
+ "cids": [
+  240
+ ],
+ "name_jp": "キシリア・ザビ",
+ "name_zh_KEEP": "基西莉亚·扎比",
+ "cards": [
+  {
+   "cid": 240,
+   "ids": [
+    {
+     "idn": 720,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B867E",
+     "zh_name_ptr": "0x20B867E",
+     "name_jp": "おふざけでない！",
+     "name_zh_current": "别胡闹！",
+     "name_zh_px": 44,
+     "name_budget_px": 64,
+     "summary_jp": "敵戦闘力減少",
+     "summary_zh_KEEP": "敌威命应减",
+     "didx": 87,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、反応が30低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·反应-30攻击-30%",
+     "cutin_group": 562,
+     "cutin_jp": "おふざけでない！全く問題にならない！",
+     "cutin_zh_current": "别胡闹！根本不值一提！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_64",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 721,
+     "slot": 1,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8686",
+     "zh_name_ptr": "0x20B8686",
+     "name_jp": "意外と……甘いようで",
+     "name_zh_current": "竟如此天真",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP回復50%",
+     "summary_zh_KEEP": "HP回复50%",
+     "didx": 4,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）HPが50%回復する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）恢复50%",
+     "cutin_group": 563,
+     "cutin_jp": "意、と……甘いようで",
+     "cutin_zh_current": "意外地天真……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_16",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 722,
+     "slot": 2,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8692",
+     "zh_name_ptr": "0x20B8692",
+     "name_jp": "……勝利すればよろしい！",
+     "name_zh_current": "取胜即可！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲攻撃力↑",
+     "summary_zh_KEEP": "范围威命↑",
+     "didx": 57,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の命中率と攻撃力が20%ずつ上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）攻击+20%·命中率+20%",
+     "cutin_group": 564,
+     "cutin_jp": "男子の面子、軍の権威……それが傷つけられても、勝利すればよろしい！",
+     "cutin_zh_current": "男人的面子、军之权威……纵受损、能胜即可！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_27",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1FD4C",
+   "budget_bytes": 14,
+   "jp": "現れたか……仕留めてみせい！",
+   "zh_current": "出现了……干掉你！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FD68",
+   "budget_bytes": 26,
+   "jp": "敵の数、決して多くはない！しらみつぶしにしろ！",
+   "zh_current": "敌方数量并不多！逐个歼灭！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FDA8",
+   "budget_bytes": 11,
+   "jp": "しらみつぶしにせい！",
+   "zh_current": "彻底剿灭！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FDC0",
+   "budget_bytes": 17,
+   "jp": "敵の数……決して多くはない！！",
+   "zh_current": "敌军数量……不多！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE00",
+   "budget_bytes": 13,
+   "jp": "うむ……全て臨機応変にな！",
+   "zh_current": "嗯……随机应变！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE1C",
+   "budget_bytes": 9,
+   "jp": "しとめてみせよ！！",
+   "zh_current": "给我拿下！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE34",
+   "budget_bytes": 7,
+   "jp": "おふざけでない！",
+   "zh_current": "放肆！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE48",
+   "budget_bytes": 9,
+   "jp": "しとめてみせよ！！",
+   "zh_current": "拿下它！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE60",
+   "budget_bytes": 11,
+   "jp": "こ、このグワジンが……！？",
+   "zh_current": "格瓦金……！？",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE78",
+   "budget_bytes": 13,
+   "jp": "敵の抵抗もこれまでだな……",
+   "zh_current": "抵抗到此为止！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FE94",
+   "budget_bytes": 20,
+   "jp": "くっ……！私が失われてはジオンが……",
+   "zh_current": "唔……！我若亡、吉翁……",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FEB4",
+   "budget_bytes": 10,
+   "jp": "しょせん、こんなものか",
+   "zh_current": "不过如此！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FECC",
+   "budget_bytes": 19,
+   "jp": "動きが鈍い！……何をしているか！",
+   "zh_current": "动作迟钝！……干什么！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FEEC",
+   "budget_bytes": 19,
+   "jp": "敵の戦力……侮るわけにはいかんな",
+   "zh_current": "敌方战力……不容小觑！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF2C",
+   "budget_bytes": 21,
+   "jp": "戦闘中である！不明瞭な発言を止めい！",
+   "zh_current": "战斗中！不许胡言乱语！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF50",
+   "budget_bytes": 16,
+   "jp": "こ、これほどの力があるとは……！",
+   "zh_current": "竟有此等力量……！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF6C",
+   "budget_bytes": 19,
+   "jp": "全く話にもならん！おふざけでない！",
+   "zh_current": "不值一提！休得放肆！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FF8C",
+   "budget_bytes": 9,
+   "jp": "ふざけた真似を……！",
+   "zh_current": "竟敢放肆！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FFA4",
+   "budget_bytes": 15,
+   "jp": "そうはさせん！全機、散れ！",
+   "zh_current": "休想！全机、散开！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FFC0",
+   "budget_bytes": 19,
+   "jp": "もはや退路はない！大人しく降伏せよ！！",
+   "zh_current": "已无退路！乖乖投降！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FFE0",
+   "budget_bytes": 15,
+   "jp": "くっ……！なんという不覚！！",
+   "zh_current": "唔……！何等失策！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FFFC",
+   "budget_bytes": 14,
+   "jp": "ええい！冗談ではない！！",
+   "zh_current": "可恶！岂有此理！",
+   "zh_current_bytes": 14
+  }
+ ]
+}

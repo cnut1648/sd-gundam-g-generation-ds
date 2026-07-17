@@ -1,0 +1,272 @@
+{
+ "entity": "char_326",
+ "kind": "character",
+ "cids": [
+  326
+ ],
+ "name_jp": "スエッソン・ステロ",
+ "name_zh_KEEP": "苏埃森·斯特罗",
+ "cards": [
+  {
+   "cid": 326,
+   "ids": [
+    {
+     "idn": 978,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8AC5",
+     "zh_name_ptr": "0x218C612",
+     "name_jp": "DNAが満足しないんだよ！",
+     "name_zh_current": "DNA不满",
+     "name_zh_px": 48,
+     "name_budget_px": 64,
+     "summary_jp": "威力上昇",
+     "summary_zh_KEEP": "威力上升",
+     "didx": 67,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）攻击+20%",
+     "cutin_group": 652,
+     "cutin_jp": "オレのDNAが満足しないんだよー！",
+     "cutin_zh_current": "我的DNA无法满足啊！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 979,
+     "slot": 1,
+     "target": "自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8AD2",
+     "zh_name_ptr": "0x218C61E",
+     "name_jp": "矛を収められるか！",
+     "name_zh_current": "岂能罢手！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "戦闘力上昇",
+     "summary_zh_KEEP": "命回甲↑",
+     "didx": 90,
+     "detail_jp": "使用条件：マップ対象：自分のみ（効果）1ターン命中率と回避率が20%ずつ上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、仅自身（效果）命中率+20%·回避+20%装甲+2",
+     "cutin_group": 653,
+     "cutin_jp": "相まみえる相手がいてむざむざ矛を収められるか！",
+     "cutin_zh_current": "既有对手与我交锋岂能就此白白罢手！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 980,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8ADD",
+     "zh_name_ptr": "0x20B8ADD",
+     "name_jp": "北斗七つ星の陣、受けてみろ！",
+     "name_zh_current": "北斗七星阵",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム命中上昇",
+     "summary_zh_KEEP": "队・命中↑",
+     "didx": 20,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が40%上昇する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%",
+     "cutin_group": 654,
+     "cutin_jp": "マヒロー隊の北斗七つ星の陣愛けてみるかーっ！？",
+     "cutin_zh_current": "马希洛队的北斗七星阵敢来接下这招吗！？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x25C18",
+   "budget_bytes": 23,
+   "jp": "ははははー！そう来るのはわかっていたぞ！！",
+   "zh_current": "哈哈哈！早料到你这招！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25C3C",
+   "budget_bytes": 16,
+   "jp": "オレのDNAが沸とうするんだって！",
+   "zh_current": "我的DNA在燃烧！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25C58",
+   "budget_bytes": 17,
+   "jp": "竿の陣形でつぶしてやるーっ！",
+   "zh_current": "用阵法碾碎你！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25C78",
+   "budget_bytes": 24,
+   "jp": "よくよく抵抗してオレの敵らしく戦死しろーっ！",
+   "zh_current": "尽管顽抗吧……死得体面些！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25C9C",
+   "budget_bytes": 16,
+   "jp": "オレのDNAが沸とうするんだよ！",
+   "zh_current": "我的DNA在燃烧！！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25CB8",
+   "budget_bytes": 18,
+   "jp": "カマイタチの陣で肉薄するーっ！",
+   "zh_current": "以风刃之阵逼近！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25CD8",
+   "budget_bytes": 15,
+   "jp": "軽くどついてやろうかぁーっ！",
+   "zh_current": "让你尝点苦头！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25CF4",
+   "budget_bytes": 17,
+   "jp": "オレの体当たりをうけられるかぁー！",
+   "zh_current": "受得住我的冲撞吗！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25D14",
+   "budget_bytes": 20,
+   "jp": "のわぁぁっ！おっ、御大将おーっ！",
+   "zh_current": "哇啊啊！御、御大将！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25D34",
+   "budget_bytes": 25,
+   "jp": "オレのDNAの欲望を満足させてくれるってのかよ？",
+   "zh_current": "你能满足我DNA的渴望吗？",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25D5C",
+   "budget_bytes": 30,
+   "jp": "二千年間演習を続けてきたんだぞ！むざむざやられてたまるか！",
+   "zh_current": "我们演练了两千年！！岂会轻易输！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25D88",
+   "budget_bytes": 21,
+   "jp": "他愛ないな！かみつく気も失せるわ！",
+   "zh_current": "不堪一击！太没意思了！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25DAC",
+   "budget_bytes": 20,
+   "jp": "ええい！今度は雁の陣で行くぞ！！",
+   "zh_current": "可恶！这次换阵法上！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25DCC",
+   "budget_bytes": 34,
+   "jp": "はははは！黒歴史であればこそサムライは立つ瀬があるというもの！",
+   "zh_current": "哈哈！正因黑历史、武士才有用武之地！",
+   "zh_current_bytes": 30
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25DFC",
+   "budget_bytes": 31,
+   "jp": "そっ、そうか！わかったぞ！！乗ってる機体の違いだな！",
+   "zh_current": "原、原来如此！是机体的不同！！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25E28",
+   "budget_bytes": 29,
+   "jp": "おっ、おのれえ〜！卑しい市民兵ごときの軍がっ！！",
+   "zh_current": "可、可恶啊！一群平民杂兵！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25E54",
+   "budget_bytes": 21,
+   "jp": "ハハハ！いたぶるにはちょうどいい相手だ！",
+   "zh_current": "哈哈哈！正好拿来戏耍！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25E78",
+   "budget_bytes": 14,
+   "jp": "その手には乗るかぁーっ！！",
+   "zh_current": "我才不上当！！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25E94",
+   "budget_bytes": 25,
+   "jp": "よーし、雁の陣だ！散開して敵を叩くっ！！",
+   "zh_current": "好、摆开阵法！都散开！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25EBC",
+   "budget_bytes": 12,
+   "jp": "その機体をよこせーっ！！",
+   "zh_current": "交出那机体！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25ED4",
+   "budget_bytes": 25,
+   "jp": "なっ、何たる屈辱！！許さんぞ、お前らーっ！！",
+   "zh_current": "何、何等耻辱！绝饶不了你们！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x25EFC",
+   "budget_bytes": 12,
+   "jp": "誰が貴様らなぞにっ！！",
+   "zh_current": "岂会输你们！！",
+   "zh_current_bytes": 12
+  }
+ ]
+}

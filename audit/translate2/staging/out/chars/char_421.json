@@ -1,0 +1,49 @@
+{
+ "entity": "char_421",
+ "web_sources": [
+  "https://gundam.huijiwiki.com/wiki/%E5%B8%83%E5%85%B0%C2%B7%E5%B8%83%E5%B0%94%E8%BE%BE%E5%85%8B",
+  "https://vocus.cc/article/68b44896fd89780001a50bd4",
+  "https://srw.wiki.cre.jp/wiki/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%96%E3%83%AB%E3%82%BF%E3%83%BC%E3%82%AF"
+ ],
+ "name_flag": "ZH label 舰队司令 is WRONG for this cid. Evidence: data/jp/characters.json cid 421 name text is ティターンズ士官 (ptr 0x20B8FF3-family, name ptr 0x20B6C00), while cid 551 is the actual 艦隊司令 (ptr 0x20B6E27); data/zh/characters.json points BOTH cid 421 and cid 551 at the same ZH string ptr 0x218A146 (舰队司令), so the Titans officer inherited the fleet-commander label. Should be 提坦斯士官-class. Voice content confirms Titans identity: 我々はティターンズ barks, 宇宙人/反乱分子 contempt, and the cut-in is the Z高达 anti-spacenoid line (https://gundam.huijiwiki.com/wiki/布兰·布尔达克).",
+ "ids": [
+  {
+   "idn": 1263,
+   "name_zh": "待在宇宙吧",
+   "cutin_zh": "宇宙人待在宇宙不就好了吗！",
+   "notes": "名台词出典：Z高达中驾驶阿锡玛的布兰·布尔达克名言「宇宙人は宇宙にいればよかったんだよ！」、中文社区通行译法为宇宙人待在宇宙不就好了吗（见huijiwiki/vocus）。本作把它配给泛用提坦斯士官、贴合其宇宙居民歧视思想。指令名由旧译 回宇宙去吧 改为 待在宇宙吧 以直接复用名台词关键词 待在宇宙。detail由char_402负责、故不输出。"
+  }
+ ],
+ "barks": [
+  {"file": "0.bin", "record": "0x25AF4", "zh": "这、这是……敌人的新兵器！？"},
+  {"file": "0.bin", "record": "0x25B34", "zh": "阁下……！请准许后退！"},
+  {"file": "0.bin", "record": "0x29CD9", "zh": "是！这就发射！"},
+  {"file": "0.bin", "record": "0x29D40", "zh": "发射准备已完毕！"},
+  {"file": "0.bin", "record": "0x29EDD", "zh": "是！我、我会妥善处理！"},
+  {"file": "0.bin", "record": "0x29EFC", "zh": "不妙！被直击！？"},
+  {"file": "0.bin", "record": "0x29F38", "zh": "啊、理事！"},
+  {"file": "0.bin", "record": "0x2E0A0", "zh": "反叛分子！休想接近本舰！！"},
+  {"file": "0.bin", "record": "0x2E0C4", "zh": "臭宇宙人"},
+  {"file": "0.bin", "record": "0x2E0D8", "zh": "全弹齐射！！"},
+  {"file": "0.bin", "record": "0x2E0F0", "zh": "击落反叛分子！！"},
+  {"file": "0.bin", "record": "0x2E10C", "zh": "一架也别放回去！！"},
+  {"file": "0.bin", "record": "0x2E128", "zh": "凭那点装备也想赢提坦斯！！"},
+  {"file": "0.bin", "record": "0x2E14C", "zh": "、准备！……好、给我击落！！"},
+  {"file": "0.bin", "record": "0x2E170", "zh": "迅速击沉它！"},
+  {"file": "0.bin", "record": "0x2E188", "zh": "不可能……被直击！？哇啊啊！"},
+  {"file": "0.bin", "record": "0x2E1AC", "zh": "垂死挣扎！"},
+  {"file": "0.bin", "record": "0x2E1C4", "zh": "我们是提坦斯！别小看人！"},
+  {"file": "0.bin", "record": "0x2E1E8", "zh": "别高兴得太早！"},
+  {"file": "0.bin", "record": "0x2E204", "zh": "可恶！反叛分子太猖狂！！"},
+  {"file": "0.bin", "record": "0x2E228", "zh": "可恶！烦人的家伙！！"},
+  {"file": "0.bin", "record": "0x2E248", "zh": "什么！？怎么可能……！！"},
+  {"file": "0.bin", "record": "0x2E268", "zh": "不、不妙！支援！快支援……！"},
+  {"file": "0.bin", "record": "0x2E28C", "zh": "提坦斯！！"},
+  {"file": "0.bin", "record": "0x2E2A4", "zh": "敌袭！回避、回避！！"},
+  {"file": "0.bin", "record": "0x2E2C4", "zh": "远程来袭！快散开！！"},
+  {"file": "0.bin", "record": "0x2E2E4", "zh": "死心吧、投降！饶你们一命！"},
+  {"file": "0.bin", "record": "0x2E308", "zh": "唔！竟、竟受此屈辱！？"},
+  {"file": "0.bin", "record": "0x2E328", "zh": "小看提坦斯！！"}
+ ],
+ "notes": "共享声库(voiceset 172)含SEED联合侧台词：0x29F38 ア、アズラエル理事！！指SEED的穆尔塔·阿兹拉尔理事、预算8字节装不下人名、译为 啊、理事！(8/8、理想为 阿兹拉尔理事！)。0x2E14C 行首的顿号按JP原结构保留。按简报成本模型压线处理的记录：0x2E0C4 宇宙人どもめ！！预算8只够 臭宇宙人(理想 臭宇宙人！)；0x2E28C 我々はティターンズである！预算9只够 提坦斯！！(理想 我们可是提坦斯！)；0x29EFC 丢失结巴(理想 不、不妙！被直击！？)；0x25B34 丢失 か、閣下 结巴(理想 阁、阁下……！请准许后退！)；0x29EDD 保留结巴改单叹号(理想 是！我、我会妥善处理！！)。0x2E308 JP 愛ける 为 受ける 的ROM原文异体/讹字、按 受 翻译。"
+}

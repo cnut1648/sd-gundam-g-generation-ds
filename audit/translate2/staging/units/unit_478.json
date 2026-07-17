@@ -1,0 +1,88 @@
+{
+ "entity": "unit_478",
+ "kind": "unit",
+ "utids": [
+  478,
+  479,
+  480
+ ],
+ "name_jp": "フリーダム／SEED",
+ "name_zh_current": "自由／SEED",
+ "name_zh_px": 64,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2189A2C",
+   "jp": "クスィフィアス",
+   "zh_current": "旗鱼",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 3,
+   "ptr": "0x232912B",
+   "jp": "バラエーナ",
+   "zh_current": "鲸鱼",
+   "shared_by_n_units": 12
+  },
+  {
+   "slot": 4,
+   "ptr": "0x2189A49",
+   "jp": "全弾発射",
+   "zh_current": "全弹发射",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 159,
+   "record_offset": "0x990",
+   "budget_bytes": 44,
+   "jp_segments": [
+    "ニュートロンジャマーキャンセラー（核動力搭載）",
+    "全弾発射：周囲3マス内の敵を攻撃（最大5チーム）"
+   ],
+   "zh_segments_current": [
+    "中子干扰消除",
+    "范围攻击"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6E94",
+   "jp": "フェイズシフト装甲",
+   "zh_current": "相位转移装甲",
+   "owner": false,
+   "owned_by": "unit_79"
+  },
+  "defense": {
+   "record": 3,
+   "record_offset": "0x78",
+   "budget_bytes": 36,
+   "jp_segments": [
+    "威力900までの実弾属性の攻撃を無効化する"
+   ],
+   "zh_segments_current": [
+    "威力900以下",
+    "实弹攻击无效"
+   ],
+   "owner": false,
+   "owned_by": "unit_79"
+  }
+ }
+}

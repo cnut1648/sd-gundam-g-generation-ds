@@ -1,0 +1,328 @@
+{
+ "entity": "char_234",
+ "kind": "character",
+ "cids": [
+  234
+ ],
+ "name_jp": "スティング",
+ "name_zh_KEEP": "斯汀",
+ "cards": [
+  {
+   "cid": 234,
+   "ids": [
+    {
+     "idn": 702,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B863B",
+     "zh_name_ptr": "0x20B863B",
+     "name_jp": "バカの演出……じゃねえの？",
+     "name_zh_current": "蠢货的演出",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "敵攻撃力減少",
+     "summary_zh_KEEP": "敌威命减少",
+     "didx": 83,
+     "detail_jp": "使用条件：戦闘中対象：敵チーム全体（効果）命中率が30%低下、攻撃力が30%減少する",
+     "detail_zh_current": "使用条件、战斗中对象、敌队（效果）命中率-30%·攻击-30%",
+     "cutin_group": 556,
+     "cutin_jp": "浮かれてるバカの演出……じゃねーの？",
+     "cutin_zh_current": "得意忘形的蠢货在演戏……不是吗？",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_60",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 703,
+     "slot": 1,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B864A",
+     "zh_name_ptr": "0x20B864A",
+     "name_jp": "今度こそ首もらおうぜ！",
+     "name_zh_current": "这次取首级",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム攻撃力↑",
+     "summary_zh_KEEP": "队・威命↑",
+     "didx": 76,
+     "detail_jp": "使用条件：戦闘中対象：チーム全体（効果）命中率が40%上昇、攻撃力が20%増加する",
+     "detail_zh_current": "使用条件、战斗中对象、全队（效果）命中率+40%·攻击+20%",
+     "cutin_group": 557,
+     "cutin_jp": "今度こそ首もらおうぜ！",
+     "cutin_zh_current": "这次一定取你首级！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 704,
+     "slot": 2,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8658",
+     "zh_name_ptr": "0x20B8658",
+     "name_jp": "……負けは許されねぇ",
+     "name_zh_current": "绝不许失败",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "チーム戦闘力↑",
+     "summary_zh_KEEP": "队・命回甲↑",
+     "didx": 99,
+     "detail_jp": "使用条件：マップ対象：チーム全体（効果）1ターン命中率と回避率が20%ずつ上昇、装甲が2増加する",
+     "detail_zh_current": "使用条件、地图对象、全队（效果）命中率+20%·回避+20%装甲+2",
+     "cutin_group": 558,
+     "cutin_jp": "ファントムベインに負けは許されねえ…",
+     "cutin_zh_current": "幻痛绝不许失败……",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x1F8AC",
+   "budget_bytes": 9,
+   "jp": "やらせるかよっ！！",
+   "zh_current": "休想得逞！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F8C4",
+   "budget_bytes": 6,
+   "jp": "そこだっ！！",
+   "zh_current": "在那！！",
+   "zh_current_bytes": 6
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F8D8",
+   "budget_bytes": 15,
+   "jp": "まずはお前からつぶしてやるっ！",
+   "zh_current": "先把你碾碎！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F8F4",
+   "budget_bytes": 27,
+   "jp": "ようは殺れるか殺られるか…………それだけだろう！？",
+   "zh_current": "总之、不是杀就是被杀……对吧！？",
+   "zh_current_bytes": 27
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F91C",
+   "budget_bytes": 15,
+   "jp": "そら！見せてみろ、力を！！",
+   "zh_current": "看招！拿出实力！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F938",
+   "budget_bytes": 21,
+   "jp": "追撃されても面倒だ……一気に片付ける！",
+   "zh_current": "被追太烦、一举拿下！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F95C",
+   "budget_bytes": 9,
+   "jp": "来させるかよっ！！",
+   "zh_current": "别想过来！！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F974",
+   "budget_bytes": 11,
+   "jp": "コイツで仕舞いだ！！",
+   "zh_current": "用这招收尾！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F98C",
+   "budget_bytes": 20,
+   "jp": "くそっ！どうなってやがるんだ……！？",
+   "zh_current": "可恶！这是怎么回事！？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F9AC",
+   "budget_bytes": 9,
+   "jp": "……やれやれだぜ",
+   "zh_current": "……真累啊",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F9C4",
+   "budget_bytes": 21,
+   "jp": "勝てなきゃ負けなんだよ……俺たちはな",
+   "zh_current": "赢不了就是输……我们啊",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1F9E8",
+   "budget_bytes": 25,
+   "jp": "なんにせよ、面白いことにはなりそうだな……え？",
+   "zh_current": "总之啊、看来有好戏看了……",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA10",
+   "budget_bytes": 21,
+   "jp": "冗談じゃないぜ！こんなところでドタバタと！",
+   "zh_current": "开什么玩笑！在这胡闹！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA34",
+   "budget_bytes": 17,
+   "jp": "なんだって言うンだよ！お前は！！",
+   "zh_current": "你到底想说啥啊！",
+   "zh_current_bytes": 15
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA54",
+   "budget_bytes": 11,
+   "jp": "っ！あんなモノ……！！",
+   "zh_current": "那种玩意……！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA6C",
+   "budget_bytes": 12,
+   "jp": "こっ、こいつら……強い！！",
+   "zh_current": "好强的家伙！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA84",
+   "budget_bytes": 9,
+   "jp": "へえ……それで？",
+   "zh_current": "嘿……然后？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FA9C",
+   "budget_bytes": 5,
+   "jp": "ハッ……！",
+   "zh_current": "哈……！",
+   "zh_current_bytes": 5
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FAB0",
+   "budget_bytes": 25,
+   "jp": "来たぞ、散開して回避行動！遅れるんじゃねーぞ！",
+   "zh_current": "来了、散开回避！别落后！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FAD8",
+   "budget_bytes": 15,
+   "jp": "ついでにその機体ももらってやるよ！",
+   "zh_current": "那机体也归我了！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FAF4",
+   "budget_bytes": 23,
+   "jp": "なっ！？お、おい！冗談じゃねえ……！！",
+   "zh_current": "啥！？喂、别开玩笑了！！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x1FB18",
+   "budget_bytes": 12,
+   "jp": "誰がお前らなんぞにっ！！",
+   "zh_current": "岂会输你们！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7B98",
+   "budget_bytes": 10,
+   "jp": "仕掛けるぞ、お前ら！！",
+   "zh_current": "上吧、各位！！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7BB0",
+   "budget_bytes": 11,
+   "jp": "サボートだな！？了解！！",
+   "zh_current": "支援！？了解！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7BC8",
+   "budget_bytes": 17,
+   "jp": "よし！お前はフロントで行け！！",
+   "zh_current": "好！你去打前锋！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7BE8",
+   "budget_bytes": 18,
+   "jp": "お前……やる事、わかってんのか？",
+   "zh_current": "你……懂该做什么吧？",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C08",
+   "budget_bytes": 11,
+   "jp": "サボートだな！？了解！！",
+   "zh_current": "支援！？了解！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C20",
+   "budget_bytes": 11,
+   "jp": "サボートだな！？了解！！",
+   "zh_current": "支援！？了解！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "1de.bin",
+   "record": "0x7C38",
+   "budget_bytes": 11,
+   "jp": "サボートだな！？了解！！",
+   "zh_current": "支援！？了解！",
+   "zh_current_bytes": 11
+  }
+ ]
+}

@@ -1,0 +1,280 @@
+{
+ "entity": "char_339",
+ "kind": "character",
+ "cids": [
+  339
+ ],
+ "name_jp": "マシュマー（H）",
+ "name_zh_KEEP": "玛修曼（H）",
+ "cards": [
+  {
+   "cid": 339,
+   "ids": [
+    {
+     "idn": 1017,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C3D",
+     "zh_name_ptr": "0x20B8C3D",
+     "name_jp": "そげとれるまで戦う！",
+     "name_zh_current": "战至骨肉尽",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "HP0回復",
+     "summary_zh_KEEP": "HP全回复",
+     "didx": 8,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）HPが完全回復する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）恢复100%",
+     "cutin_group": 682,
+     "cutin_jp": "このマシュマーセロ……己の肉が骨からそげとれるまで戦う！",
+     "cutin_zh_current": "我玛修曼·塞罗……誓战至骨肉削尽！",
+     "name_owner": true,
+     "name_shared_with_idn": null,
+     "detail_owner": false,
+     "detail_owned_by": "char_43",
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1018,
+     "slot": 1,
+     "target": "",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8C28",
+     "zh_name_ptr": "0x20B8C28",
+     "name_jp": "……この戦、勝てるぞ！",
+     "name_zh_current": "此战能赢！",
+     "name_zh_px": 56,
+     "name_budget_px": 64,
+     "summary_jp": "ダメージ軽減",
+     "summary_zh_KEEP": "伤害减轻",
+     "didx": 149,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）回避率が40%上昇、装甲が4増加愛けるダメージを1／3に軽減する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）回避+40%·装甲+4伤害减轻",
+     "cutin_group": 683,
+     "cutin_jp": "力を感じる……この戦、勝てるぞ！はははははっ！！",
+     "cutin_zh_current": "我感受到力量了……此战能赢！哈哈哈哈哈！！",
+     "name_owner": false,
+     "name_shared_with_idn": 1015,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    },
+    {
+     "idn": 1019,
+     "slot": 2,
+     "target": "",
+     "map_command": false,
+     "jp_name_ptr": "0x20B8C35",
+     "zh_name_ptr": "0x219462D",
+     "name_jp": "子供だましが！",
+     "name_zh_current": "小孩子把戏",
+     "name_zh_px": 60,
+     "name_budget_px": 64,
+     "summary_jp": "攻撃↑＋貫防無効",
+     "summary_zh_KEEP": "威命↑・破防",
+     "didx": 199,
+     "detail_jp": "使用条件：戦闘中対象：自分のみ（効果）命中率が20%上昇、攻撃力が40%増加、相手の特殊防御を無効化する",
+     "detail_zh_current": "使用条件、战斗中对象、仅自身（效果）命中率+20%·攻击+40%破防",
+     "cutin_group": 684,
+     "cutin_jp": "子供……だましがぁぁぁーっ！",
+     "cutin_zh_current": "区区骗小孩的把戏！",
+     "name_owner": false,
+     "name_shared_with_idn": 1016,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x27814",
+   "budget_bytes": 24,
+   "jp": "向かってくるか！ハマーンさまに逆らう愚か者め！！",
+   "zh_current": "敢冲过来！敢逆哈曼大人！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27838",
+   "budget_bytes": 8,
+   "jp": "てやぁぁぁぁ！！",
+   "zh_current": "喝啊啊！！",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2784C",
+   "budget_bytes": 20,
+   "jp": "ハハハハ！見える！見えるぞーっ！！",
+   "zh_current": "哈哈！我看见了！！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2786C",
+   "budget_bytes": 16,
+   "jp": "ハマーンさまの敵！どこだぁーっ！",
+   "zh_current": "哈曼大人的敌人！！",
+   "zh_current_bytes": 13
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27888",
+   "budget_bytes": 12,
+   "jp": "落ちろおおおーっ！",
+   "zh_current": "给我坠落吧！",
+   "zh_current_bytes": 10
+  },
+  {
+   "file": "0.bin",
+   "record": "0x278A0",
+   "budget_bytes": 29,
+   "jp": "今日、この日を！ネオ·ジオン最良の日としてくれる！",
+   "zh_current": "今天将成为新吉翁最好的一天！",
+   "zh_current_bytes": 25
+  },
+  {
+   "file": "0.bin",
+   "record": "0x278CC",
+   "budget_bytes": 11,
+   "jp": "うおおおおーっ！",
+   "zh_current": "呜哦哦哦！",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x278E4",
+   "budget_bytes": 27,
+   "jp": "ハマーン様を困らせる敵め！許さんぞおおーっ！！",
+   "zh_current": "为难哈曼大人、绝不饶你们！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2790C",
+   "budget_bytes": 14,
+   "jp": "！…ハマーンさま、バンザーイ！！",
+   "zh_current": "哈曼大人万岁！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27928",
+   "budget_bytes": 21,
+   "jp": "おのれっ！貴様もハマーンさまに逆らうか！！",
+   "zh_current": "该死！！你也敢逆大人！！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2794C",
+   "budget_bytes": 32,
+   "jp": "ハマーン様が見ておられるのだ！負けられん…負けられんのだーっ！！",
+   "zh_current": "大人在看着我！！不能输……绝不能输！！",
+   "zh_current_bytes": 29
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27978",
+   "budget_bytes": 18,
+   "jp": "おのれっ！ハマーンさまに逆らうか！！",
+   "zh_current": "该死！！敢违抗大人！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27998",
+   "budget_bytes": 24,
+   "jp": "ぬうっ、貴様か！貴様もハマーンさまの敵だな！！",
+   "zh_current": "唔、是你！你也是大人的敌人！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x279BC",
+   "budget_bytes": 29,
+   "jp": "ええい、そこにもいるのか！ハマーンさまを困らせる敵め！！",
+   "zh_current": "可恶、那边也有大人的敌人！！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x279E8",
+   "budget_bytes": 24,
+   "jp": "ハハハハハハ！たかがこれしきのことでえっ！！",
+   "zh_current": "哈哈哈！区区这点小事！！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27A0C",
+   "budget_bytes": 22,
+   "jp": "このマシュマー·セロ……決してやられはせんっ！！",
+   "zh_current": "我玛修曼……绝不会倒下！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27A30",
+   "budget_bytes": 14,
+   "jp": "そんな……攻撃などおーっ！！",
+   "zh_current": "这种攻击算什么！",
+   "zh_current_bytes": 14
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27A4C",
+   "budget_bytes": 13,
+   "jp": "この私をなめるなぁーっ！！",
+   "zh_current": "竟敢小看我！！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27A68",
+   "budget_bytes": 11,
+   "jp": "その程度の腕かっ！？",
+   "zh_current": "这点本事！？",
+   "zh_current_bytes": 8
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27A80",
+   "budget_bytes": 19,
+   "jp": "ハマーン様への手土産にしてくれるわぁっ！",
+   "zh_current": "献给哈曼大人的礼物！！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27AA0",
+   "budget_bytes": 20,
+   "jp": "む、無念……！お許しくださいハマーンさま……",
+   "zh_current": "不甘心……哈曼大人恕罪",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x27AC0",
+   "budget_bytes": 22,
+   "jp": "このマシュマー·セロ！なめてもらっては困る！",
+   "zh_current": "玛修曼·塞罗！别小看我！",
+   "zh_current_bytes": 20
+  },
+  {
+   "file": "1dd.bin",
+   "record": "0x178",
+   "budget_bytes": 23,
+   "jp": "このマシュマー·セロ……決してやられはせんっ！！！",
+   "zh_current": "我玛修曼·塞罗绝不会败！！",
+   "zh_current_bytes": 22
+  }
+ ]
+}

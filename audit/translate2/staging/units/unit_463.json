@@ -1,0 +1,64 @@
+{
+ "entity": "unit_463",
+ "kind": "unit",
+ "utids": [
+  463,
+  464,
+  465
+ ],
+ "name_jp": "百式改",
+ "name_zh_current": "百式改",
+ "name_zh_px": 36,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218EAAA",
+   "jp": "ビーム・ライフル",
+   "zh_current": "光束步枪",
+   "shared_by_n_units": 195
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218E864",
+   "jp": "ビーム・サーベル",
+   "zh_current": "光束军刀",
+   "shared_by_n_units": 315
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21899D1",
+   "jp": "ビーム・ガトリングガン",
+   "zh_current": "光束加特林",
+   "shared_by_n_units": 3
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 154,
+   "record_offset": "0x958",
+   "budget_bytes": 16,
+   "jp_segments": [
+    "フルアーマーシステム装着可能"
+   ],
+   "zh_segments_current": [
+    "全装甲系统"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense": {
+   "record": 0,
+   "record_offset": "0x0",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "貫通防御なし"
+   ],
+   "zh_segments_current": [
+    "无貫通防御"
+   ],
+   "owner": false,
+   "owned_by": "unit_1"
+  }
+ }
+}

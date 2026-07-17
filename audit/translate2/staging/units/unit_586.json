@@ -1,0 +1,83 @@
+{
+ "entity": "unit_586",
+ "kind": "unit",
+ "utids": [
+  586,
+  587,
+  588
+ ],
+ "name_jp": "センチュリオ・コンスラーレ",
+ "name_zh_current": "百夫长·执政官",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x2189C61",
+   "jp": "ランチャー・ジェミナス",
+   "zh_current": "双子发射器",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 1,
+   "ptr": "0x2189C6C",
+   "jp": "ブレード・ルミナリウム",
+   "zh_current": "光辉之刃",
+   "shared_by_n_units": 24
+  },
+  {
+   "slot": 2,
+   "ptr": "0x2189C84",
+   "jp": "フィールド・インペリウム",
+   "zh_current": "屏障领域",
+   "shared_by_n_units": 15
+  },
+  {
+   "slot": 3,
+   "ptr": "0x2189C9C",
+   "jp": "デウス・エクス・マキナ",
+   "zh_current": "机械之神",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 195,
+   "record_offset": "0xbb8",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "自動修復900被ダメージ40%減小",
+    "デウス・エクス・マキナ：広域破壊攻撃"
+   ],
+   "zh_segments_current": [
+    "自愈900减伤",
+    "机械降神"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EE7",
+   "jp": "レルム・D",
+   "zh_current": "雷尔姆·D",
+   "owner": false,
+   "owned_by": "unit_574"
+  },
+  "defense": {
+   "record": 18,
+   "record_offset": "0x334",
+   "budget_bytes": 48,
+   "jp_segments": [
+    "威力300までの攻撃を無効化し、",
+    "それを超える場合ダメージを20%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力300以下",
+    "攻击无效",
+    "超过则减20%"
+   ],
+   "owner": true,
+   "owned_by": null
+  }
+ }
+}

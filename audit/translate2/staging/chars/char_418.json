@@ -1,0 +1,284 @@
+{
+ "entity": "char_418",
+ "kind": "character",
+ "cids": [
+  418
+ ],
+ "name_jp": "DCエリート士官",
+ "name_zh_KEEP": "DC精英士官",
+ "cards": [
+  {
+   "cid": 418,
+   "ids": [
+    {
+     "idn": 1254,
+     "slot": 0,
+     "target": "仅自身",
+     "map_command": true,
+     "jp_name_ptr": "0x20B8FE8",
+     "zh_name_ptr": "0x20B8FE8",
+     "name_jp": "ディアナさまのために！！",
+     "name_zh_current": "为迪安娜！！",
+     "name_zh_px": 64,
+     "name_budget_px": 64,
+     "summary_jp": "指揮範囲回避↑",
+     "summary_zh_KEEP": "范围威回↑",
+     "didx": 126,
+     "detail_jp": "使用条件：マップ対象：指揮範囲全体（効果）1ターン自分を除く仲間の回避率が10%と攻撃力が20%上昇する",
+     "detail_zh_current": "使用条件、地图对象、指挥范围（效果）回避+10%·攻击+20%",
+     "cutin_group": 784,
+     "cutin_jp": "ディアナさまのために！！",
+     "cutin_zh_current": "为了迪安娜大人！！",
+     "name_owner": false,
+     "name_shared_with_idn": 1251,
+     "detail_owner": true,
+     "detail_owned_by": null,
+     "cutin_owner": true,
+     "cutin_owned_by": null
+    }
+   ]
+  }
+ ],
+ "barks": [
+  {
+   "file": "0.bin",
+   "record": "0x11571",
+   "budget_bytes": 16,
+   "jp": "はっ……！射撃、開始します！",
+   "zh_current": "是！开始射击！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11618",
+   "budget_bytes": 23,
+   "jp": "機関部から火災発生！出力低下！これ以上は……！",
+   "zh_current": "机舱起火！出力下降、危险！！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11664",
+   "budget_bytes": 24,
+   "jp": "敵の攻撃は全て回避成功！射程外に出ました！",
+   "zh_current": "敌方攻击全部回避！已出射程！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x116D4",
+   "budget_bytes": 17,
+   "jp": "右舷、被弾！損傷は軽微です！！",
+   "zh_current": "右舷中弹！损伤轻微！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11718",
+   "budget_bytes": 20,
+   "jp": "敵弾、命中しました！損傷度B！",
+   "zh_current": "敌弹命中！损伤确认中！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x117C4",
+   "budget_bytes": 9,
+   "jp": "攻撃、回避します！",
+   "zh_current": "回避攻击！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x117DC",
+   "budget_bytes": 9,
+   "jp": "攻撃、回避します！",
+   "zh_current": "回避攻击！！",
+   "zh_current_bytes": 7
+  },
+  {
+   "file": "0.bin",
+   "record": "0x11A58",
+   "budget_bytes": 19,
+   "jp": "第8ブロック被弾！損傷は軽微です！",
+   "zh_current": "8区被弹！损伤轻微！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D8FC",
+   "budget_bytes": 19,
+   "jp": "来たぞ！接近される前にしとめろ！！",
+   "zh_current": "来了！趁靠近前干掉它！",
+   "zh_current_bytes": 17
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D91C",
+   "budget_bytes": 11,
+   "jp": "ディアナさまの為にっ！！",
+   "zh_current": "为迪安娜大人！",
+   "zh_current_bytes": 11
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D934",
+   "budget_bytes": 30,
+   "jp": "よし、各砲座、一斉射撃開始だ！……撃てえーっ！！",
+   "zh_current": "好、各炮位、开始齐射！……给我开火！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D960",
+   "budget_bytes": 21,
+   "jp": "敵は動きが速いぞ！よく狙っていけ！",
+   "zh_current": "敌人速度很快！好好瞄准！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D984",
+   "budget_bytes": 23,
+   "jp": "一撃で落すつもりでいけ！……よし、発射だ！",
+   "zh_current": "一击放倒它！……好、发射！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D9A8",
+   "budget_bytes": 15,
+   "jp": "突撃をかけるぞ！機関全速！",
+   "zh_current": "突击！全速前进！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D9C4",
+   "budget_bytes": 24,
+   "jp": "艦首にエネルギーを集中！接近戦でカタをつけるぞ！！",
+   "zh_current": "能量集中到舰首！近战了结！！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2D9E8",
+   "budget_bytes": 21,
+   "jp": "ビームホイール出力全開！一気に突破する！",
+   "zh_current": "光束轮出力全开！一举突破！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DA0C",
+   "budget_bytes": 20,
+   "jp": "くっ！限界か！？総員、退艦しろっ！！",
+   "zh_current": "到极限了！？全员弃舰！",
+   "zh_current_bytes": 18
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DA2C",
+   "budget_bytes": 25,
+   "jp": "このまま抗戦を続行する！！火線を切らすなよ！",
+   "zh_current": "继续抗战下去！别让火力中断！",
+   "zh_current_bytes": 23
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DA54",
+   "budget_bytes": 23,
+   "jp": "よーし、そうだ！何としても踏みとどまれ！！",
+   "zh_current": "很好！无论如何都要守住！！",
+   "zh_current_bytes": 22
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DA78",
+   "budget_bytes": 22,
+   "jp": "敵の圧力は低下している！このまま押し切れ！",
+   "zh_current": "敌方压力减弱了！乘胜压上！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DA9C",
+   "budget_bytes": 27,
+   "jp": "このままでは良い的だぞ！！対空砲火、切らすな！",
+   "zh_current": "会成活靶子的！对空炮火别停！",
+   "zh_current_bytes": 26
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DAC4",
+   "budget_bytes": 26,
+   "jp": "回避運動は続けろ！一瞬たりとも足を止めるな！！",
+   "zh_current": "继续回避机动！一刻也别停！",
+   "zh_current_bytes": 21
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DAEC",
+   "budget_bytes": 12,
+   "jp": "くうっ！直撃とは！！",
+   "zh_current": "唔！竟被直击！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB04",
+   "budget_bytes": 28,
+   "jp": "ディアナさまのためにもここは何としても踏みとどまるのだ！",
+   "zh_current": "为了迪安娜大人、也要死守此地！",
+   "zh_current_bytes": 24
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB2C",
+   "budget_bytes": 12,
+   "jp": "残エネルギーチェック、急げよ！",
+   "zh_current": "查剩余能量！！",
+   "zh_current_bytes": 12
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB44",
+   "budget_bytes": 11,
+   "jp": "正気か！？そんな攻撃で！",
+   "zh_current": "凭这攻击！？",
+   "zh_current_bytes": 9
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB5C",
+   "budget_bytes": 21,
+   "jp": "あんな攻撃に当たったら、笑いものだぞ！",
+   "zh_current": "中了那种攻击可有得受！",
+   "zh_current_bytes": 19
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DB80",
+   "budget_bytes": 17,
+   "jp": "聞こえているか？大人しく降伏しろ！",
+   "zh_current": "听得见吗？快投降！",
+   "zh_current_bytes": 16
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DBA0",
+   "budget_bytes": 30,
+   "jp": "まずいな……！ムーンレィスの技術が野蛮人どもの手に渡るのは……",
+   "zh_current": "月之民的技术、竟落入野蛮人之手！",
+   "zh_current_bytes": 28
+  },
+  {
+   "file": "0.bin",
+   "record": "0x2DBCC",
+   "budget_bytes": 24,
+   "jp": "冗談はよせ！文明の遅れた貴様らになど捕まるか",
+   "zh_current": "少来同情！岂会被野蛮人抓住！",
+   "zh_current_bytes": 23
+  }
+ ]
+}

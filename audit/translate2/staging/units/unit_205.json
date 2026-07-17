@@ -1,0 +1,74 @@
+{
+ "entity": "unit_205",
+ "kind": "unit",
+ "utids": [
+  205,
+  206,
+  207
+ ],
+ "name_jp": "クロスボーンガンダムX1改",
+ "name_zh_current": "海盗高达X1改",
+ "name_zh_px": 84,
+ "name_budget_px": 144,
+ "weapons": [
+  {
+   "slot": 0,
+   "ptr": "0x218C8F0",
+   "jp": "ザンバスター",
+   "zh_current": "斩刀破坏枪",
+   "shared_by_n_units": 21
+  },
+  {
+   "slot": 1,
+   "ptr": "0x218F064",
+   "jp": "ビーム・ザンバー",
+   "zh_current": "光束斩刀",
+   "shared_by_n_units": 21
+  },
+  {
+   "slot": 2,
+   "ptr": "0x21906FE",
+   "jp": "スクリュー・ウェッブ",
+   "zh_current": "螺旋钢鞭",
+   "shared_by_n_units": 6
+  }
+ ],
+ "specials": {
+  "ability": {
+   "family": 68,
+   "record_offset": "0x52c",
+   "budget_bytes": 12,
+   "jp_segments": [
+    "ニュータイプ対応機"
+   ],
+   "zh_segments_current": [
+    "新人类"
+   ],
+   "owner": true,
+   "owned_by": null
+  },
+  "defense_name": {
+   "ptr": "0x20B6EA4",
+   "jp": "ABCマント",
+   "zh_current": "ABC披风",
+   "owner": false,
+   "owned_by": "unit_199"
+  },
+  "defense": {
+   "record": 14,
+   "record_offset": "0x270",
+   "budget_bytes": 52,
+   "jp_segments": [
+    "威力350までのビーム属性の攻撃を無効化し、",
+    "それを超える場合ダメージを20%軽減する"
+   ],
+   "zh_segments_current": [
+    "威力350以下",
+    "光束攻击无效",
+    "超过则减20%"
+   ],
+   "owner": false,
+   "owned_by": "unit_199"
+  }
+ }
+}
