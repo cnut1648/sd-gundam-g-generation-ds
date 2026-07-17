@@ -1,0 +1,900 @@
+{
+ "_generated": {
+  "tool": "build/extract_data_from_game.py",
+  "schema": 1,
+  "rom_sha1": "12443b91297a57bcd2ace8da989c26ae635a79fd",
+  "note": "machine-generated JP ground truth; regenerate, never edit"
+ },
+ "file": "_STGTR3.bin",
+ "size": 19788,
+ "descriptors": [
+  {
+   "index": 71,
+   "record": "0x1763CC",
+   "file": "_STGTR3.bin",
+   "label": "TR3",
+   "title": "チュートリアル{01}3",
+   "brief_off": null
+  }
+ ],
+ "briefing": [],
+ "blocks": [
+  {
+   "off": "0x109E",
+   "len": 26,
+   "text": "今回の作戦は連邦パトロール艦隊の{00}迎撃が目的である！",
+   "scene": 2,
+   "order": 0,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x10B8",
+   "len": 39,
+   "text": "先ほどの演習で学んだ成果を発揮すれば{00}苦戦するような敵ではないはずだ！",
+   "scene": 2,
+   "order": 1,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x10DF",
+   "len": 16,
+   "text": "では、総員戦闘開始せよ！！",
+   "scene": 2,
+   "order": 2,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1110",
+   "len": 17,
+   "text": "{01}{01}{01}『勝利条件と敗北条件』",
+   "scene": 2,
+   "order": 3,
+   "branch": true
+  },
+  {
+   "off": "0x1128",
+   "len": 28,
+   "text": "セレクトボタンを押すと表示される{00}『ゲームコマンド』で、",
+   "scene": 2,
+   "order": 4,
+   "branch": true
+  },
+  {
+   "off": "0x1144",
+   "len": 35,
+   "text": "『勝利条件』を選択すると、ステージの{00}勝利条件と敗北条件が確認できます",
+   "scene": 2,
+   "order": 5,
+   "branch": true
+  },
+  {
+   "off": "0x1167",
+   "len": 24,
+   "text": "このステージでの勝利条件は{00}「敵軍の全滅」",
+   "scene": 2,
+   "order": 6,
+   "branch": true
+  },
+  {
+   "off": "0x117F",
+   "len": 19,
+   "text": "敗北条件は「デトローフの撃破」です",
+   "scene": 2,
+   "order": 7,
+   "branch": true
+  },
+  {
+   "off": "0x1192",
+   "len": 29,
+   "text": "デトローフのザンジバルが撃破されない{00}よう、敵軍を撃破しましょう",
+   "scene": 2,
+   "order": 8,
+   "branch": true
+  },
+  {
+   "off": "0x3BBE",
+   "len": 13,
+   "text": "う、うわぁぁぁっ！！",
+   "scene": 2,
+   "order": 9,
+   "branch": true,
+   "speaker": 139
+  },
+  {
+   "off": "0x3BFA",
+   "len": 7,
+   "text": "デトローフ！！",
+   "scene": 2,
+   "order": 10,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x3C26",
+   "len": 24,
+   "text": "くっ……！{00}旗艦を撃破されてしまっては……",
+   "scene": 2,
+   "order": 11,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x11D0",
+   "len": 17,
+   "text": "{01}{01}{01}『補給と回復について』",
+   "scene": 2,
+   "order": 12,
+   "branch": true
+  },
+  {
+   "off": "0x11E8",
+   "len": 22,
+   "text": "ユニットの愛けたダメージや{00}消費した弾数は……",
+   "scene": 2,
+   "order": 13,
+   "branch": true
+  },
+  {
+   "off": "0x11FE",
+   "len": 28,
+   "text": "戦艦に搭載しておくことで{00}回復させることができます",
+   "scene": 2,
+   "order": 14,
+   "branch": true
+  },
+  {
+   "off": "0x123B",
+   "len": 14,
+   "text": "{01}{01}『指揮と指揮範囲』",
+   "scene": 2,
+   "order": 15,
+   "branch": true
+  },
+  {
+   "off": "0x1250",
+   "len": 29,
+   "text": "戦艦の艦長は『指揮能力』という{00}能力を持っており…",
+   "scene": 2,
+   "order": 16,
+   "branch": true
+  },
+  {
+   "off": "0x126D",
+   "len": 37,
+   "text": "能力レベルに応じて、戦艦の周囲に{00}指揮効果を及ぼすことができます",
+   "scene": 2,
+   "order": 17,
+   "branch": true
+  },
+  {
+   "off": "0x1292",
+   "len": 32,
+   "text": "この指揮効果の及ぶ範囲内で{00}戦闘を行うことにより……",
+   "scene": 2,
+   "order": 18,
+   "branch": true
+  },
+  {
+   "off": "0x12B2",
+   "len": 36,
+   "text": "戦闘に参加したユニットは命中と回避に{00}能力レベルに応じたボーナスを得ます",
+   "scene": 2,
+   "order": 19,
+   "branch": true
+  },
+  {
+   "off": "0x12D6",
+   "len": 37,
+   "text": "また、一部の『IDコマンド』には{00}指揮範囲内全てに影響するものもあり、",
+   "scene": 2,
+   "order": 20,
+   "branch": true
+  },
+  {
+   "off": "0x12FB",
+   "len": 37,
+   "text": "艦長の指揮範囲内で戦うことで{00}より有利に戦闘を進めることができます",
+   "scene": 2,
+   "order": 21,
+   "branch": true
+  },
+  {
+   "off": "0x133E",
+   "len": 16,
+   "text": "敵部隊の撃退に成功しました！",
+   "scene": 2,
+   "order": 22,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1369",
+   "len": 12,
+   "text": "よし、よくやった！",
+   "scene": 2,
+   "order": 23,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1375",
+   "len": 23,
+   "text": "この分ならこの先の戦いも{00}心配はいらんな",
+   "scene": 2,
+   "order": 24,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x138C",
+   "len": 10,
+   "text": "総員、撤収だ！",
+   "scene": 2,
+   "order": 25,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x425E",
+   "len": 22,
+   "text": "シャア大佐！{00}補給部隊が到着しました！！",
+   "scene": 2,
+   "order": 26,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x428F",
+   "len": 10,
+   "text": "……補給部隊？",
+   "scene": 2,
+   "order": 27,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x42BA",
+   "len": 36,
+   "text": "第300戦隊のシャア大佐ですな{00}グラナダからの補給物資であります",
+   "scene": 2,
+   "order": 28,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x42F9",
+   "len": 22,
+   "text": "グラナダ……{00}ということは、キシリア閣下から？",
+   "scene": 2,
+   "order": 29,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x432E",
+   "len": 30,
+   "text": "いえ……これは開発部および{00}参謀本部からの援助であります",
+   "scene": 2,
+   "order": 30,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x434C",
+   "len": 39,
+   "text": "系統図を100%にし、また前作より{00}健闘を続けてきた貴隊に対する…",
+   "scene": 2,
+   "order": 31,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4373",
+   "len": 21,
+   "text": "両部局からの感謝の気持ちであります",
+   "scene": 2,
+   "order": 32,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x43A3",
+   "len": 22,
+   "text": "……そうか{00}では、ありがたく愛け取っておこう",
+   "scene": 2,
+   "order": 33,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x43D4",
+   "len": 6,
+   "text": "はっ！",
+   "scene": 2,
+   "order": 34,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x43DA",
+   "len": 34,
+   "text": "参謀部からはクリアランスパーツ、2点{00}およびカスタムパーツ、8点",
+   "scene": 2,
+   "order": 35,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x43FC",
+   "len": 24,
+   "text": "高機動スラスター、5点{00}高性能ビーム兵装、5点",
+   "scene": 2,
+   "order": 36,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4414",
+   "len": 15,
+   "text": "計20点の改造パーツを",
+   "scene": 2,
+   "order": 37,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4423",
+   "len": 33,
+   "text": "また、開発部からは全変換パーツを{00}各1点ずつであります",
+   "scene": 2,
+   "order": 38,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4444",
+   "len": 18,
+   "text": "これからの戦局にお役立てください",
+   "scene": 2,
+   "order": 39,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x457A",
+   "len": 24,
+   "text": "いえ……{00}これは開発部からの援助であります",
+   "scene": 2,
+   "order": 40,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4592",
+   "len": 36,
+   "text": "系統図を100%にし、我が軍の{00}MS開発に貢献した貴隊への…",
+   "scene": 2,
+   "order": 41,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x45B6",
+   "len": 19,
+   "text": "開発部からの感謝の気持ちであります",
+   "scene": 2,
+   "order": 42,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x45E4",
+   "len": 22,
+   "text": "……そうか{00}では、ありがたく愛け取っておこう",
+   "scene": 2,
+   "order": 43,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x4615",
+   "len": 32,
+   "text": "では、変換パーツ全種{00}各1点ずつをお愛け取りください",
+   "scene": 2,
+   "order": 44,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4476",
+   "len": 25,
+   "text": "いえ……これは参謀本部からの{00}援助であります",
+   "scene": 2,
+   "order": 45,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x448F",
+   "len": 39,
+   "text": "前作より健闘を続けてきた貴隊に対する{00}本部からの感謝の気持ちであります",
+   "scene": 2,
+   "order": 46,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x44D1",
+   "len": 22,
+   "text": "……そうか{00}では、ありがたく愛け取っておこう",
+   "scene": 2,
+   "order": 47,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x4502",
+   "len": 15,
+   "text": "はっ！{00}では、以下の……",
+   "scene": 2,
+   "order": 48,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4511",
+   "len": 26,
+   "text": "クリアランスパーツ、2点{00}カスタムパーツ、8点",
+   "scene": 2,
+   "order": 49,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x452B",
+   "len": 24,
+   "text": "高機動スラスター、5点{00}高性能ビーム兵装、5点",
+   "scene": 2,
+   "order": 50,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x4543",
+   "len": 24,
+   "text": "計20点の改造パーツを{00}お愛け取りください",
+   "scene": 2,
+   "order": 51,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x13B4",
+   "len": 27,
+   "text": "先ほどの戦いぶり、さすがは{00}海兵隊だな……見事だった",
+   "scene": 2,
+   "order": 52,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x13EA",
+   "len": 32,
+   "text": "そういうシャア大佐こそ、{00}さすがは「赤い彗星」ってもんですよ",
+   "scene": 2,
+   "order": 53,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x140A",
+   "len": 30,
+   "text": "この分なら木馬の追撃も{00}そう難しいことじゃないでしょう",
+   "scene": 2,
+   "order": 54,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1443",
+   "len": 28,
+   "text": "いや……木馬の戦力は{00}並の部隊とは比較にならない",
+   "scene": 2,
+   "order": 55,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x145F",
+   "len": 28,
+   "text": "やはりここは、{00}入念に準備を整えておくべきだろう",
+   "scene": 2,
+   "order": 56,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1496",
+   "len": 15,
+   "text": "というと……サイド6へ？",
+   "scene": 2,
+   "order": 57,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x14C0",
+   "len": 37,
+   "text": "演習や連邦軍との遭遇で多少遅れたが{00}元々戦力を補充するつもりではあった",
+   "scene": 2,
+   "order": 58,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x14E5",
+   "len": 31,
+   "text": "とりあえずは予定通りサイド6へ向かい{00}フラナガンのNTたちと合流する",
+   "scene": 2,
+   "order": 59,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1504",
+   "len": 18,
+   "text": "シーマ中佐もそれでかまわないな？",
+   "scene": 2,
+   "order": 60,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1531",
+   "len": 25,
+   "text": "ええ、シャア大佐の判断なら{00}信用できますからね",
+   "scene": 2,
+   "order": 61,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1554",
+   "len": 16,
+   "text": "デトローフ！{00}進路をサイド6へ！",
+   "scene": 2,
+   "order": 62,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x157F",
+   "len": 14,
+   "text": "へい！……了解でさ！！",
+   "scene": 2,
+   "order": 63,
+   "branch": true,
+   "speaker": 139
+  },
+  {
+   "off": "0x3A82",
+   "len": 22,
+   "text": "なるほど！{00}シャアが木馬を撃ち損じたか！！",
+   "scene": 2,
+   "order": 64,
+   "branch": true,
+   "speaker": 511
+  },
+  {
+   "off": "0x3AB3",
+   "len": 23,
+   "text": "木馬はサイド6方面へ{00}逃走したもようです",
+   "scene": 2,
+   "order": 65,
+   "branch": true,
+   "speaker": 411
+  },
+  {
+   "off": "0x3AE5",
+   "len": 11,
+   "text": "なんとも好都合だな！",
+   "scene": 2,
+   "order": 66,
+   "branch": true,
+   "speaker": 511
+  },
+  {
+   "off": "0x3AF0",
+   "len": 20,
+   "text": "よし！{00}ただちに艦隊を発進させろ！",
+   "scene": 2,
+   "order": 67,
+   "branch": true,
+   "speaker": 511
+  },
+  {
+   "off": "0x3B04",
+   "len": 28,
+   "text": "シャアの見ている前で{00}木馬を討ち取ってくれる！！",
+   "scene": 2,
+   "order": 68,
+   "branch": true,
+   "speaker": 511
+  },
+  {
+   "off": "0x1724",
+   "len": 25,
+   "text": "{00}Mつイン、{00}{01}！き{00}M類ど、{00}{01}！そ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x1C0C",
+   "len": 12,
+   "text": "聴、、き聴、！",
+   "reachable": false
+  },
+  {
+   "off": "0x2E46",
+   "len": 7,
+   "text": "{01}·{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x2E51",
+   "len": 78,
+   "text": "{01}·{01}！{01}{00}M…深刻、{00}{01}？{F0:4095}Sあ{01}·{00}Sエ{01}·{01}？{F0:4095}Sメ{01}·、？ップ？{F0:4095}Sモ{01}·、？ップ？{F0:4095}S来{01}·{01}？{F0:4095}Sい{01}·{01}？{F0:4095}Sう{01}·、Sデ！",
+   "reachable": false
+  },
+  {
+   "off": "0x2ED3",
+   "len": 36,
+   "text": "{SLOT:3346}、{00}、？{F0:4095}Sテ{01}··？忠勇？ガマ？ップ？{F0:4095}Sセ{01}·{00}Sタ！",
+   "reachable": false
+  },
+  {
+   "off": "0x38EF",
+   "len": 10,
+   "text": "{01}な、！{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x3909",
+   "len": 7,
+   "text": "{01}な、？",
+   "reachable": false
+  },
+  {
+   "off": "0x3CBA",
+   "len": 13,
+   "text": "これまでの戦い、ご苦労",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3CC7",
+   "len": 32,
+   "text": "この「宇宙世紀ルート」を最後まで{00}遊んでくれて感謝する",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3CE7",
+   "len": 31,
+   "text": "なお、ロンド·ベル隊の戦いは{00}ここでひとまず終了するが……",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3D06",
+   "len": 37,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続きを楽しんで欲しい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3D2B",
+   "len": 39,
+   "text": "また、本ルートを最後まで遊んでくれた{00}君には特別ステージも用意されている",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3D52",
+   "len": 33,
+   "text": "我々とは別に戦いを続けていた{00}アークエンジェル隊との特別演習だ",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3D73",
+   "len": 37,
+   "text": "彼らと戦い、君が育ててきた部隊の{00}強さを確かめてみるのも良いだろう",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3D98",
+   "len": 37,
+   "text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3DBD",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3DE1",
+   "len": 21,
+   "text": "この先も最後まで{00}じっくり楽しんでほしい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x3E5A",
+   "len": 31,
+   "text": "ここまで私のような頼りない艦長に{00}付き合ってくれて、ありがとう",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3E79",
+   "len": 30,
+   "text": "この「平成ガンダムルート」は{00}ここで終了となります",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3E97",
+   "len": 26,
+   "text": "もっとも、私たちプリベンターの{00}戦いは終わったけど……",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3EB1",
+   "len": 38,
+   "text": "…ゲーム自体はまだ続けることも可能よ{00}この後も引き続きゲームを楽しんでね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3ED7",
+   "len": 36,
+   "text": "最後までこのルートを遊んでくれた君に{00}新しいステージも用意されているわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3EFB",
+   "len": 27,
+   "text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3F16",
+   "len": 19,
+   "text": "…ロンド·ベル隊との特別演習よ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3F29",
+   "len": 38,
+   "text": "フリーバトルで「特別演習」を選ぶと{00}彼らと戦うことができるわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3F4F",
+   "len": 14,
+   "text": "ぜひ、挑戦してみてね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3F5D",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x3F81",
+   "len": 28,
+   "text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x4002",
+   "len": 16,
+   "text": "ドミニオン艦長{00}ナタル·バジルール中佐だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4012",
+   "len": 34,
+   "text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4034",
+   "len": 34,
+   "text": "貴君の協力により、ついに我々は{00}最後まで戦い抜くことができた",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4056",
+   "len": 22,
+   "text": "この「ライバル·ルート」は{00}ここで終了だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x406C",
+   "len": 25,
+   "text": "もっとも、我々ドミニオン隊の戦いは{00}ここで終了したが……",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4085",
+   "len": 36,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続き楽しんで欲しい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x40A9",
+   "len": 43,
+   "text": "フリーバトルはこの後も続けられるし、{00}また、「特別演習」を選ぶことで…",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x40D4",
+   "len": 30,
+   "text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x40F2",
+   "len": 37,
+   "text": "貴君ならばきっと、彼らとの戦いにも{00}勝利をおさめられると私は信じている",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4117",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x413B",
+   "len": 16,
+   "text": "この後も貴君の健闘を祈る",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x4711",
+   "len": 7,
+   "text": "2な、{01}",
+   "reachable": false
+  }
+ ]
+}

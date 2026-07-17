@@ -1,0 +1,2545 @@
+{
+ "_generated": {
+  "tool": "build/extract_data_from_game.py",
+  "schema": 1,
+  "rom_sha1": "12443b91297a57bcd2ace8da989c26ae635a79fd",
+  "note": "machine-generated JP ground truth; regenerate, never edit"
+ },
+ "file": "_STGSP2A.bin",
+ "size": 37628,
+ "descriptors": [
+  {
+   "index": 76,
+   "record": "0x1764D0",
+   "file": "_STGSP2A.bin",
+   "label": "Sp2a",
+   "title": "メビウスの輪から",
+   "brief_off": "0x1A019D"
+  }
+ ],
+ "briefing": [
+  {
+   "off": "0x1A01D8",
+   "len": 33,
+   "text": "現在、ネオ·ジオンは連邦政府との{00}会談を進めているようだが……",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A01F9",
+   "len": 33,
+   "text": "これはシャアの偽装であり、{00}再び戦闘をしかけてくる可能性が高い",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A021A",
+   "len": 32,
+   "text": "そこで我々はネオ·ジオンの{00}投降先であるルナ2宙域に待機し……",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A023A",
+   "len": 36,
+   "text": "万一、シャアの投降が偽装であった場合{00}直ちに駆けつけられるよう準備を進める",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A0272",
+   "len": 26,
+   "text": "おそらくシャアは連邦との対決を{00}あきらめてはいないはずだ",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A028C",
+   "len": 18,
+   "text": "奴は必ず何らかの行動に出る！",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  },
+  {
+   "off": "0x1A029E",
+   "len": 33,
+   "text": "それを阻止するためにも、{00}戦いの準備は怠らないでいてほしい",
+   "briefing": true,
+   "descs": [
+    76
+   ]
+  }
+ ],
+ "blocks": [
+  {
+   "off": "0x1556",
+   "len": 19,
+   "text": "見えました！{00}ネオ·ジオン艦隊です",
+   "scene": 2,
+   "order": 0,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x1584",
+   "len": 23,
+   "text": "掉で進入するはずでは{00}なかったのかね？",
+   "scene": 2,
+   "order": 1,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x15B6",
+   "len": 17,
+   "text": "数は合っているようですが……",
+   "scene": 2,
+   "order": 2,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x15C7",
+   "len": 23,
+   "text": "あ、いえ！{00}情報より一隻多いようです！",
+   "scene": 2,
+   "order": 3,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x15F9",
+   "len": 12,
+   "text": "シャアは正直なんだよ",
+   "scene": 2,
+   "order": 4,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x1605",
+   "len": 41,
+   "text": "彼は連邦が本気を出せばネオ·ジオンを{00}百回はせん滅できることを知っている",
+   "scene": 2,
+   "order": 5,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x162E",
+   "len": 28,
+   "text": "だから、こうして和を請おうとしている{00}賢明な判断だ",
+   "scene": 2,
+   "order": 6,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x1665",
+   "len": 7,
+   "text": "はあ……",
+   "scene": 2,
+   "order": 7,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x1691",
+   "len": 27,
+   "text": "連邦の奴ら、{00}完全に油断しきってるようだな……",
+   "scene": 2,
+   "order": 8,
+   "branch": true,
+   "speaker": 433
+  },
+  {
+   "off": "0x16AC",
+   "len": 27,
+   "text": "よし！{01}ダミーを破棄！{00}ただちに攻撃に移れ！！",
+   "scene": 2,
+   "order": 9,
+   "branch": true,
+   "speaker": 433
+  },
+  {
+   "off": "0x16EC",
+   "len": 15,
+   "text": "さ、参請次官どの！！",
+   "scene": 2,
+   "order": 10,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x1716",
+   "len": 9,
+   "text": "モビルスーツだと！？",
+   "scene": 2,
+   "order": 11,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x1744",
+   "len": 12,
+   "text": "バ、バカな……！！",
+   "scene": 2,
+   "order": 12,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x1750",
+   "len": 14,
+   "text": "これでは、条約違反……",
+   "scene": 2,
+   "order": 13,
+   "branch": true,
+   "speaker": 530
+  },
+  {
+   "off": "0x1783",
+   "len": 14,
+   "text": "敵戦力、沈黙しました！！",
+   "scene": 2,
+   "order": 14,
+   "branch": true,
+   "speaker": 439
+  },
+  {
+   "off": "0x17B6",
+   "len": 20,
+   "text": "よし！{00}MS部隊はこのままルナ2を……",
+   "scene": 2,
+   "order": 15,
+   "branch": true,
+   "speaker": 433
+  },
+  {
+   "off": "0x17FC",
+   "len": 16,
+   "text": "なにっ、ロンド·ベルだと！？",
+   "scene": 2,
+   "order": 16,
+   "branch": true,
+   "speaker": 433
+  },
+  {
+   "off": "0x1831",
+   "len": 17,
+   "text": "やはり投降は偽りだったか！！",
+   "scene": 2,
+   "order": 17,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1842",
+   "len": 27,
+   "text": "全艦、第1種戦闘配置！{00}ネオ·ジオン艦隊を迎撃せよ！！",
+   "scene": 2,
+   "order": 18,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1882",
+   "len": 13,
+   "text": "そうはさせるかよ！！",
+   "scene": 2,
+   "order": 19,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x18C1",
+   "len": 10,
+   "text": "ギュネイ·ガス！？",
+   "scene": 2,
+   "order": 20,
+   "branch": true,
+   "speaker": 433
+  },
+  {
+   "off": "0x18F0",
+   "len": 29,
+   "text": "ャツらさえ倒せばこの作戦は{00}勝ったも同然だ！",
+   "scene": 2,
+   "order": 21,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x190D",
+   "len": 15,
+   "text": "むざむざ勝機を見過ごせるか！！",
+   "scene": 2,
+   "order": 22,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x194E",
+   "len": 20,
+   "text": "ちっ！{00}これだから強化人間は……！！",
+   "scene": 2,
+   "order": 23,
+   "branch": true,
+   "speaker": 354
+  },
+  {
+   "off": "0x1962",
+   "len": 18,
+   "text": "……ギュネイ隊のフォローにつくぞ！",
+   "scene": 2,
+   "order": 24,
+   "branch": true,
+   "speaker": 354
+  },
+  {
+   "off": "0x1999",
+   "len": 18,
+   "text": "敵MS、向かってくるようです！",
+   "scene": 2,
+   "order": 25,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x19C6",
+   "len": 26,
+   "text": "向かってくるなら好都合だ！{00}このまま戦闘に突入する！",
+   "scene": 2,
+   "order": 26,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x19E0",
+   "len": 14,
+   "text": "全艦、戦闘開始せよ！！",
+   "scene": 2,
+   "order": 27,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x7FB2",
+   "len": 26,
+   "text": "……いかん！{00}この艦をやられてしまっては……！",
+   "scene": 2,
+   "order": 28,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1A4C",
+   "len": 12,
+   "text": "戦いが始まった……",
+   "scene": 2,
+   "order": 29,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x1A58",
+   "len": 19,
+   "text": "アムロも{00}やっぱり戦ってるのかな……？",
+   "scene": 2,
+   "order": 30,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x1A93",
+   "len": 15,
+   "text": "そこにいるのは誰だ！？",
+   "scene": 2,
+   "order": 31,
+   "branch": true,
+   "speaker": 524
+  },
+  {
+   "off": "0x1AEF",
+   "len": 15,
+   "text": "っ！？{00}お、お前……！！",
+   "scene": 2,
+   "order": 32,
+   "branch": true,
+   "speaker": 502
+  },
+  {
+   "off": "0x1B19",
+   "len": 12,
+   "text": "見つかっちゃった！？",
+   "scene": 2,
+   "order": 33,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x1B3C",
+   "len": 18,
+   "text": "なにっ！？{00}クェス·パラャだと！？",
+   "scene": 2,
+   "order": 34,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1B69",
+   "len": 20,
+   "text": "どうやら貨物ブロックに{00}隕れていたようです",
+   "scene": 2,
+   "order": 35,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x1B7D",
+   "len": 27,
+   "text": "あの子、アムロ大尉に気があった{00}みたいですからね……",
+   "scene": 2,
+   "order": 36,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x1BB3",
+   "len": 27,
+   "text": "そんなことはどうでもいい！{00}戦闘中なんだぞ、今は！",
+   "scene": 2,
+   "order": 37,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1BE9",
+   "len": 23,
+   "text": "っ！{01}は、はい……！{00}で、あのお嬢さんは……",
+   "scene": 2,
+   "order": 38,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x1C1B",
+   "len": 33,
+   "text": "戦闘が終わるまではどうにもできん{00}どこか適当な部屋に案内しておけ！",
+   "scene": 2,
+   "order": 39,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1C57",
+   "len": 12,
+   "text": "……り、了解です！",
+   "scene": 2,
+   "order": 40,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x1C7E",
+   "len": 9,
+   "text": "全く……！！",
+   "scene": 2,
+   "order": 41,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1C9E",
+   "len": 11,
+   "text": "やったか……！？",
+   "scene": 2,
+   "order": 42,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x1CC4",
+   "len": 13,
+   "text": "いや……シャアがいない",
+   "scene": 2,
+   "order": 43,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1CEC",
+   "len": 30,
+   "text": "ネオ·ジオン軍の数も{00}前に戦ったより少ないようですが……",
+   "scene": 2,
+   "order": 44,
+   "branch": true,
+   "speaker": 192
+  },
+  {
+   "off": "0x1D25",
+   "len": 14,
+   "text": "何か裏でもあるのか？",
+   "scene": 2,
+   "order": 45,
+   "branch": true
+  },
+  {
+   "off": "0x1D58",
+   "len": 26,
+   "text": "お前たちなんかに{00}いいようにさせてたまるか！！",
+   "scene": 2,
+   "order": 46,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x1D97",
+   "len": 12,
+   "text": "あいつ……さっきの！？",
+   "scene": 2,
+   "order": 47,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1DC8",
+   "len": 25,
+   "text": "こうなったら{00}ロンド·ベルの旗艦だけでも……！",
+   "scene": 2,
+   "order": 48,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x1E06",
+   "len": 10,
+   "text": "……させるか！",
+   "scene": 2,
+   "order": 49,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1E42",
+   "len": 15,
+   "text": "彼は私の大事な部下だ……",
+   "scene": 2,
+   "order": 50,
+   "branch": true,
+   "speaker": 524
+  },
+  {
+   "off": "0x1E76",
+   "len": 19,
+   "text": "ここでやらせるわけにはいかんな！",
+   "scene": 2,
+   "order": 51,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x1EA4",
+   "len": 8,
+   "text": "……シャア！",
+   "scene": 2,
+   "order": 52,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1EC7",
+   "len": 9,
+   "text": "大佐……！？",
+   "scene": 2,
+   "order": 53,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x1EEB",
+   "len": 27,
+   "text": "作戦は成功だ、ギュネイ{00}アクシズは既に我らのものとなった",
+   "scene": 2,
+   "order": 54,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x1F06",
+   "len": 19,
+   "text": "これ以上の戦闘は無用だ……引くぞ！",
+   "scene": 2,
+   "order": 55,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x1F34",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 56,
+   "branch": true,
+   "speaker": 313
+  },
+  {
+   "off": "0x1F62",
+   "len": 13,
+   "text": "シャア……逃がすか！！",
+   "scene": 2,
+   "order": 57,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1F94",
+   "len": 31,
+   "text": "シャア！{01}俺たちと一緒に戦った男が{00}なんで地球つぶしを！？",
+   "scene": 2,
+   "order": 58,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x1FE9",
+   "len": 41,
+   "text": "地球に残っている連中は地球を汚染する{00}だけの重力に魂を縛られた人々だ！",
+   "scene": 2,
+   "order": 59,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2041",
+   "len": 27,
+   "text": "地球は人間のエゴ全部を{00}飲み込めはしないのだ！",
+   "scene": 2,
+   "order": 60,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2066",
+   "len": 17,
+   "text": "それをわかるんだよ、アムロ！！",
+   "scene": 2,
+   "order": 61,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x20A6",
+   "len": 10,
+   "text": "くっ……何を！",
+   "scene": 2,
+   "order": 62,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x20BA",
+   "len": 22,
+   "text": "人間の知恵は{00}そんなもんだって乗り越えられる！",
+   "scene": 2,
+   "order": 63,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x20FF",
+   "len": 26,
+   "text": "ならば今すぐ{00}愚民どもに英知を授けて見せろ！",
+   "scene": 2,
+   "order": 64,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2148",
+   "len": 10,
+   "text": "そんなものっ！！",
+   "scene": 2,
+   "order": 65,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2181",
+   "len": 13,
+   "text": "終わりだ……シャア！！",
+   "scene": 2,
+   "order": 66,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x21BD",
+   "len": 10,
+   "text": "……なにっ！？",
+   "scene": 2,
+   "order": 67,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x21F6",
+   "len": 8,
+   "text": "くっ……！",
+   "scene": 2,
+   "order": 68,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x21FE",
+   "len": 39,
+   "text": "誰かが人類の業を背負って地球に対し{00}しょく罪をせねばならんのだ！",
+   "scene": 2,
+   "order": 69,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2225",
+   "len": 18,
+   "text": "貴様にはなぜそれがわからん！",
+   "scene": 2,
+   "order": 70,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2252",
+   "len": 34,
+   "text": "貴方はただ、自分の野心をそうして{00}正当化しようとしているだけだわ！",
+   "scene": 2,
+   "order": 71,
+   "branch": true,
+   "speaker": 115
+  },
+  {
+   "off": "0x228F",
+   "len": 9,
+   "text": "アルテイシア……！？",
+   "scene": 2,
+   "order": 72,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x7FFE",
+   "len": 33,
+   "text": "それじゃ、地球を救うことには{00}ならないんだよ、クワトロさん！！",
+   "scene": 2,
+   "order": 73,
+   "branch": true,
+   "speaker": 105
+  },
+  {
+   "off": "0x8046",
+   "len": 31,
+   "text": "こんな風に悲しみだけが広がってく{00}戦いを起こして……！！",
+   "scene": 2,
+   "order": 74,
+   "branch": true,
+   "speaker": 45
+  },
+  {
+   "off": "0x8080",
+   "len": 28,
+   "text": "今のアナタはシロッコやクルーゼと{00}同じだ！{01}シャア·アズナブル！",
+   "scene": 2,
+   "order": 75,
+   "branch": true,
+   "speaker": 45
+  },
+  {
+   "off": "0x80B7",
+   "len": 10,
+   "text": "カミーユ、ジュドー！？",
+   "scene": 2,
+   "order": 76,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x22BD",
+   "len": 14,
+   "text": "終わりだな、シャア……！",
+   "scene": 2,
+   "order": 77,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x22F0",
+   "len": 8,
+   "text": "くっ……！",
+   "scene": 2,
+   "order": 78,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x231D",
+   "len": 10,
+   "text": "……なんだ！？",
+   "scene": 2,
+   "order": 79,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x234C",
+   "len": 31,
+   "text": "アンタたち、よってたかって……{00}ちょっと、セコいんじゃない！？",
+   "scene": 2,
+   "order": 80,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x2386",
+   "len": 7,
+   "text": "クェス！？",
+   "scene": 2,
+   "order": 81,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x23B2",
+   "len": 7,
+   "text": "クェス！！",
+   "scene": 2,
+   "order": 82,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x23B9",
+   "len": 25,
+   "text": "キミは自分が何をしてるか{00}わかってるのか！？",
+   "scene": 2,
+   "order": 83,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x23ED",
+   "len": 12,
+   "text": "わかってるわよ！！",
+   "scene": 2,
+   "order": 84,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x23F9",
+   "len": 30,
+   "text": "シャアは本気で地球のこと{00}心配してるの、わからないの！？",
+   "scene": 2,
+   "order": 85,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x2432",
+   "len": 7,
+   "text": "クェス！！",
+   "scene": 2,
+   "order": 86,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2454",
+   "len": 17,
+   "text": "アムロ！{00}アナタがそんなだから……！",
+   "scene": 2,
+   "order": 87,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x248A",
+   "len": 8,
+   "text": "君は……？",
+   "scene": 2,
+   "order": 88,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x24AD",
+   "len": 7,
+   "text": "……クェス",
+   "scene": 2,
+   "order": 89,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x24B4",
+   "len": 9,
+   "text": "クェス·エアよ",
+   "scene": 2,
+   "order": 90,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x24BD",
+   "len": 25,
+   "text": "シャア大佐、アナタのことは{00}私が守ってあげる！",
+   "scene": 2,
+   "order": 91,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x24F1",
+   "len": 14,
+   "text": "……では、私と来るか？",
+   "scene": 2,
+   "order": 92,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x251A",
+   "len": 24,
+   "text": "ラー·カイラムには{00}イャな女がいるんだ……",
+   "scene": 2,
+   "order": 93,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x2532",
+   "len": 16,
+   "text": "……だからあそこにはいられない",
+   "scene": 2,
+   "order": 94,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x2567",
+   "len": 9,
+   "text": "……クェス！？",
+   "scene": 2,
+   "order": 95,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x258B",
+   "len": 18,
+   "text": "……茶番はここまでだ、アムロ",
+   "scene": 2,
+   "order": 96,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x25B8",
+   "len": 11,
+   "text": "シャア……貴様！？",
+   "scene": 2,
+   "order": 97,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x25DE",
+   "len": 27,
+   "text": "私と決着をつける気があるなら{00}アクシズまで来るがいい",
+   "scene": 2,
+   "order": 98,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x25F9",
+   "len": 19,
+   "text": "私は本気で地球潰しをかける……",
+   "scene": 2,
+   "order": 99,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x260C",
+   "len": 34,
+   "text": "貴様たちが私を認めぬというのなら{00}それを防いでみせるのだな！",
+   "scene": 2,
+   "order": 100,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x2653",
+   "len": 9,
+   "text": "シャア……！！",
+   "scene": 2,
+   "order": 101,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2681",
+   "len": 14,
+   "text": "……やられたな、シャアに",
+   "scene": 2,
+   "order": 102,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x268F",
+   "len": 33,
+   "text": "さっき確認したがルナ2の核貯蔵庫は{00}すっかりカラになってるそうだ",
+   "scene": 2,
+   "order": 103,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x26CB",
+   "len": 20,
+   "text": "シャアが持ち去ったということか……",
+   "scene": 2,
+   "order": 104,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x26DF",
+   "len": 29,
+   "text": "ネオ·ジオンは核とともにアクシズを{00}地球に落下させるつもりか",
+   "scene": 2,
+   "order": 105,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x2717",
+   "len": 16,
+   "text": "アクシズを地球に落とす、か……",
+   "scene": 2,
+   "order": 106,
+   "branch": true,
+   "speaker": 517
+  },
+  {
+   "off": "0x2742",
+   "len": 21,
+   "text": "アクシズの核パルスエンジンは{00}まだ生きている",
+   "scene": 2,
+   "order": 107,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2757",
+   "len": 36,
+   "text": "シャアが確実に核の月を起こそうと{00}いうならアクシズそのものを使うはずだ",
+   "scene": 2,
+   "order": 108,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2796",
+   "len": 16,
+   "text": "だが、連邦の他の部隊は？",
+   "scene": 2,
+   "order": 109,
+   "branch": true,
+   "speaker": 517
+  },
+  {
+   "off": "0x27A6",
+   "len": 28,
+   "text": "それだけの騒ぎになれば{00}さすがに連邦軍が動くだろう？",
+   "scene": 2,
+   "order": 110,
+   "branch": true,
+   "speaker": 517
+  },
+  {
+   "off": "0x27DD",
+   "len": 28,
+   "text": "コロニー駐留艦隊はコロニーの{00}暴動を恐れて動けないのが現状だ",
+   "scene": 2,
+   "order": 111,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x2814",
+   "len": 31,
+   "text": "それじゃあ、まるでコロニーが{00}シャアに味方してるみたいじゃないか！",
+   "scene": 2,
+   "order": 112,
+   "branch": true
+  },
+  {
+   "off": "0x284E",
+   "len": 22,
+   "text": "……ディアナカウンターも{00}動くに動けんだろうな",
+   "scene": 2,
+   "order": 113,
+   "branch": true,
+   "speaker": 173
+  },
+  {
+   "off": "0x2864",
+   "len": 33,
+   "text": "勝手に部隊を動かせばディアナさまの{00}お立場を悪くすることになる",
+   "scene": 2,
+   "order": 114,
+   "branch": true,
+   "speaker": 173
+  },
+  {
+   "off": "0x28A0",
+   "len": 27,
+   "text": "となると、今動けるのは{00}我々だけということか……",
+   "scene": 2,
+   "order": 115,
+   "branch": true,
+   "speaker": 517
+  },
+  {
+   "off": "0x28D6",
+   "len": 38,
+   "text": "援軍はあてにできないし、仮にあっても{00}合流するだけの時間の余裕はない",
+   "scene": 2,
+   "order": 116,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x291D",
+   "len": 34,
+   "text": "それに、ディアナ女王に連邦政府の{00}失敗を押し付けるわけにもいかない……",
+   "scene": 2,
+   "order": 117,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x293F",
+   "len": 28,
+   "text": "今ある戦力でシャアを止める{00}作戦を立てるべきだろう",
+   "scene": 2,
+   "order": 118,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x2980",
+   "len": 29,
+   "text": "となると、手立ては艦隊攻撃しか{00}ないというところかな？",
+   "scene": 2,
+   "order": 119,
+   "branch": true,
+   "speaker": 517
+  },
+  {
+   "off": "0x29B8",
+   "len": 33,
+   "text": "外からの破壊が無理なら{00}内側から壊すっていう手もある",
+   "scene": 2,
+   "order": 120,
+   "branch": true
+  },
+  {
+   "off": "0x29FA",
+   "len": 25,
+   "text": "では、第一に核パルスエンジンの{00}破壊を目指し……",
+   "scene": 2,
+   "order": 121,
+   "branch": true,
+   "speaker": 192
+  },
+  {
+   "off": "0x2A13",
+   "len": 26,
+   "text": "それが無理なら内部から破壊すると{00}いう作戦ですね",
+   "scene": 2,
+   "order": 122,
+   "branch": true,
+   "speaker": 192
+  },
+  {
+   "off": "0x2A52",
+   "len": 20,
+   "text": "それしか手はないようだな……よし！",
+   "scene": 2,
+   "order": 123,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x2A66",
+   "len": 25,
+   "text": "では、敵が準備を整える前に{00}ケリをつけるぞ！",
+   "scene": 2,
+   "order": 124,
+   "branch": true,
+   "speaker": 185
+  },
+  {
+   "off": "0x2DEB",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 125,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2E0F",
+   "len": 7,
+   "text": "アムロ……",
+   "scene": 2,
+   "order": 126,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2E31",
+   "len": 21,
+   "text": "チェーンか{00}どうしたんだ、そんな心配そうに？",
+   "scene": 2,
+   "order": 127,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2E61",
+   "len": 14,
+   "text": "アムロのことが心配なんです",
+   "scene": 2,
+   "order": 128,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2E8A",
+   "len": 30,
+   "text": "大丈夫さ、νガンダムは{00}チェーンが調整してくれたのだろう？",
+   "scene": 2,
+   "order": 129,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2EC3",
+   "len": 7,
+   "text": "ええ……",
+   "scene": 2,
+   "order": 130,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2ECA",
+   "len": 13,
+   "text": "ただ、サイコフレームが……",
+   "scene": 2,
+   "order": 131,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2EF2",
+   "len": 8,
+   "text": "サイコフレーム？",
+   "scene": 2,
+   "order": 132,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2F15",
+   "len": 34,
+   "text": "あれと大尉のサイコミュが共振して{00}未知の機能が引き出されるって……",
+   "scene": 2,
+   "order": 133,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2F52",
+   "len": 20,
+   "text": "オクトバーの話か？{01}そりゃないよ",
+   "scene": 2,
+   "order": 134,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x2F81",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 135,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2FD7",
+   "len": 12,
+   "text": "え？{01}サイコフレームが？",
+   "scene": 2,
+   "order": 136,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x2FFE",
+   "len": 27,
+   "text": "どうも、アナハイムから出てきた{00}技術じゃないようなのです",
+   "scene": 2,
+   "order": 137,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x3034",
+   "len": 11,
+   "text": "でも、どこから……",
+   "scene": 2,
+   "order": 138,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x305A",
+   "len": 17,
+   "text": "断定はできませんが、おそらく……",
+   "scene": 2,
+   "order": 139,
+   "branch": true,
+   "speaker": 448
+  },
+  {
+   "off": "0x30CD",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 140,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x30F1",
+   "len": 18,
+   "text": "チェーンは何も心配することないんだ",
+   "scene": 2,
+   "order": 141,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x311E",
+   "len": 7,
+   "text": "アムロ……",
+   "scene": 2,
+   "order": 142,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x3140",
+   "len": 33,
+   "text": "νガンダムはボクが基礎設計をして{00}君が整備をしてる……",
+   "scene": 2,
+   "order": 143,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x3161",
+   "len": 12,
+   "text": "……必ず勝てるさ",
+   "scene": 2,
+   "order": 144,
+   "branch": true,
+   "speaker": 19
+  },
+  {
+   "off": "0x3188",
+   "len": 16,
+   "text": "ええ……そうですよね、アムロ",
+   "scene": 2,
+   "order": 145,
+   "branch": true,
+   "speaker": 132
+  },
+  {
+   "off": "0x31AF",
+   "len": 8,
+   "text": "……大佐！",
+   "scene": 2,
+   "order": 146,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x31D2",
+   "len": 14,
+   "text": "ん……クェスか、どうした？",
+   "scene": 2,
+   "order": 147,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x31FB",
+   "len": 21,
+   "text": "アタシ、ララァの{00}身代わりなんですか！？",
+   "scene": 2,
+   "order": 148,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x322B",
+   "len": 8,
+   "text": "クェス……！",
+   "scene": 2,
+   "order": 149,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x324E",
+   "len": 23,
+   "text": "アタシ、大佐のこと{00}愛しているんですよ！？",
+   "scene": 2,
+   "order": 150,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x3265",
+   "len": 7,
+   "text": "だから……",
+   "scene": 2,
+   "order": 151,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x3287",
+   "len": 10,
+   "text": "困ったな……",
+   "scene": 2,
+   "order": 152,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x32AC",
+   "len": 7,
+   "text": "なぜ！？",
+   "scene": 2,
+   "order": 153,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x32B3",
+   "len": 25,
+   "text": "アタシは大佐のためだったら{00}死ぬことだってできるわ！",
+   "scene": 2,
+   "order": 154,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x32E7",
+   "len": 8,
+   "text": "……そうか",
+   "scene": 2,
+   "order": 155,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x32EF",
+   "len": 15,
+   "text": "なら、私はララァを忘れよう",
+   "scene": 2,
+   "order": 156,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x3319",
+   "len": 8,
+   "text": "あはっ♪",
+   "scene": 2,
+   "order": 157,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x3321",
+   "len": 27,
+   "text": "なら、私はアルパで大佐のこと{00}守ってあげるわ！",
+   "scene": 2,
+   "order": 158,
+   "branch": true,
+   "speaker": 315
+  },
+  {
+   "off": "0x3357",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 159,
+   "branch": true,
+   "speaker": 96
+  },
+  {
+   "off": "0x80E6",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 160,
+   "branch": true,
+   "speaker": 162
+  },
+  {
+   "off": "0x80EF",
+   "len": 7,
+   "text": "シャア……",
+   "scene": 2,
+   "order": 161,
+   "branch": true,
+   "speaker": 162
+  },
+  {
+   "off": "0x8154",
+   "len": 16,
+   "text": "私と共に来てほしい、ハマーン",
+   "scene": 2,
+   "order": 162,
+   "branch": true,
+   "speaker": 95
+  },
+  {
+   "off": "0x81C2",
+   "len": 22,
+   "text": "私がそばにいる{00}だから、安心してくれハマーン",
+   "scene": 2,
+   "order": 163,
+   "branch": true,
+   "speaker": 93
+  },
+  {
+   "off": "0x8233",
+   "len": 37,
+   "text": "貴方がまたいなくなって、私は貴方への{00}思いを振り切れたと思っていた……",
+   "scene": 2,
+   "order": 164,
+   "branch": true,
+   "speaker": 162
+  },
+  {
+   "off": "0x8258",
+   "len": 13,
+   "text": "なのに、私はまだ……",
+   "scene": 2,
+   "order": 165,
+   "branch": true,
+   "speaker": 162
+  },
+  {
+   "off": "0x8265",
+   "len": 7,
+   "text": "シャア……",
+   "scene": 2,
+   "order": 166,
+   "branch": true,
+   "speaker": 162
+  },
+  {
+   "off": "0x8286",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 167,
+   "branch": true,
+   "speaker": 166
+  },
+  {
+   "off": "0x828F",
+   "len": 7,
+   "text": "シャア……",
+   "scene": 2,
+   "order": 168,
+   "branch": true,
+   "speaker": 166
+  },
+  {
+   "off": "0x82F4",
+   "len": 16,
+   "text": "私と共に来てほしい、ハマーン",
+   "scene": 2,
+   "order": 169,
+   "branch": true,
+   "speaker": 95
+  },
+  {
+   "off": "0x8362",
+   "len": 22,
+   "text": "私がそばにいる{00}だから、安心してくれハマーン",
+   "scene": 2,
+   "order": 170,
+   "branch": true,
+   "speaker": 93
+  },
+  {
+   "off": "0x83D3",
+   "len": 37,
+   "text": "貴方がまたいなくなって、私は貴方への{00}思いを振り切れたと思っていた……",
+   "scene": 2,
+   "order": 171,
+   "branch": true,
+   "speaker": 166
+  },
+  {
+   "off": "0x83F8",
+   "len": 13,
+   "text": "なのに、私はまだ……",
+   "scene": 2,
+   "order": 172,
+   "branch": true,
+   "speaker": 166
+  },
+  {
+   "off": "0x8405",
+   "len": 7,
+   "text": "シャア……",
+   "scene": 2,
+   "order": 173,
+   "branch": true,
+   "speaker": 166
+  },
+  {
+   "off": "0x13A9",
+   "len": 8,
+   "text": "·ん容{01}",
+   "scene": 5,
+   "order": 174
+  },
+  {
+   "off": "0x14CA",
+   "len": 117,
+   "text": "{00}ゃ{00}う{00}る{00}の{00}行{00}『{00}き{00}じ{00}！{00}M{00}思{00}{01}{01}て{00}{01}{01}サ{00}{01}{01}つ{00}{01}{01}Sぁあいうえおかダチッツテ{01}デ、トドナ。ネハバパ·々ビベブミメちっつぞラてリずン下がー我とぬ開』官きの間ばは機貴カ近軍見まむ向行みすじせね国そやよ佐士死死",
+   "reachable": false
+  },
+  {
+   "off": "0x14F1",
+   "len": 78,
+   "text": "あいうえおかダチッツテ{01}デ、トドナ。ネハバパ·々ビベブミメちっつぞラてリずン下がー我とぬ開』官きの間ばは機貴カ近軍見まむ向行みすじせね国そやよ佐士死死",
+   "reachable": false,
+   "priming": true
+  },
+  {
+   "off": "0x2A96",
+   "len": 8,
+   "text": "なんだ！？",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2AC0",
+   "len": 24,
+   "text": "……艦長！{00}進路上に艦船1！{01}ザフトです！！",
+   "reachable": false,
+   "speaker": 140
+  },
+  {
+   "off": "0x2AF3",
+   "len": 9,
+   "text": "ザフトだと！？",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2B13",
+   "len": 14,
+   "text": "お忙しいところを申し訳ない",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2B21",
+   "len": 19,
+   "text": "プラント請長の{00}ギルバート·デュランダルです",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2B55",
+   "len": 12,
+   "text": "ブライト·ノア大佐です",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2B61",
+   "len": 17,
+   "text": "それで、ご用というのは……",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2B97",
+   "len": 27,
+   "text": "皆さんはシャアのネオ·ジオンを{00}止めに行かれるとか……",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2BB2",
+   "len": 32,
+   "text": "それで、私たちプラントも貴方がたに{00}援助をしたいと考えています",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2BED",
+   "len": 21,
+   "text": "それは…、ありがたい申し出ですが{00}なぜ……？",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2C1D",
+   "len": 28,
+   "text": "そちらには我々プラントにとって{00}重要な方々が同行しています",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2C39",
+   "len": 30,
+   "text": "貴隊の安全は私どもにとっても重要な{00}懸案事項なのです",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2C72",
+   "len": 15,
+   "text": "それは、ラクス……ですか？",
+   "reachable": false,
+   "speaker": 9
+  },
+  {
+   "off": "0x2CA2",
+   "len": 9,
+   "text": "それと、君も",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2CAB",
+   "len": 34,
+   "text": "いや、ロンド·ベル自体が{00}重要人物の集まりといって差し支えない",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2CCD",
+   "len": 33,
+   "text": "可能ならザフトを動かしてでも{00}守るべき存在なのだ、君たちは",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2D13",
+   "len": 9,
+   "text": "………………",
+   "reachable": false,
+   "speaker": 9
+  },
+  {
+   "off": "0x2D37",
+   "len": 34,
+   "text": "ですが、連邦との条約がある以上、{00}我々も表立って軍は動かせません",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2D59",
+   "len": 31,
+   "text": "代わりに戦力となるMSを{00}貴方がたに提供させていただきたい",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x2D93",
+   "len": 10,
+   "text": "MS……ですか",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x2DB8",
+   "len": 28,
+   "text": "ZGMF−X23S、セイバーガンダム{00}我々ザフトの最新型MSです",
+   "reachable": false,
+   "speaker": 507
+  },
+  {
+   "off": "0x402B",
+   "len": 17,
+   "text": "いな、{01}{01}！！{00}々MSおな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4080",
+   "len": 59,
+   "text": "いな、{01}{01}！！{00}々！{01}{00}！ろ{00}Mナいな、{00}、！、{00}？！{00}？？{00}？々{00}M部とな、{00}·？々{00}Mボえな、{00}{01}Mボいな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4126",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x41BF",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x4200",
+   "len": 40,
+   "text": "いな、{01}{01}！！{00}々！く{00}Mテぞな、{00}{01}！{01}{00}！ネ{00}Mナいな、{00}、M闘ずな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4651",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x46B3",
+   "len": 38,
+   "text": "いな、{01}{01}！！{00}々！{01}{00}！れ{00}Mナいな、{00}、！、{00}！む{00}？！{00}？？{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x473C",
+   "len": 49,
+   "text": "いな、{01}{01}！！{00}々！{01}{00}！ろ{00}Mナいな、{00}、！、{00}？！{00}？？{00}？）{00}Mねえな、{00}·Mボいな、",
+   "reachable": false
+  },
+  {
+   "off": "0x47BC",
+   "len": 63,
+   "text": "いな、{01}{01}！！{00}々？）{00}M全うな、{00}{01}？！{00}？？{00}！{01}{00}！{01}{00}！ア{00}Mロちな、{01}？！）{00}々！そ{00}Mテぞな、{00}{01}Mゥ{SLOT:3602}、",
+   "reachable": false
+  },
+  {
+   "off": "0x4CF1",
+   "len": 14,
+   "text": "な、！{01}{00}！。{00}S、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D06",
+   "len": 11,
+   "text": "な、、あぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D0B",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D13",
+   "len": 9,
+   "text": "な、！{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D23",
+   "len": 11,
+   "text": "な、、なぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D28",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D30",
+   "len": 13,
+   "text": "な、MおIな、{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D40",
+   "len": 18,
+   "text": "な、、ンぁな、MエIな、{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D45",
+   "len": 13,
+   "text": "な、MエIな、{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D55",
+   "len": 13,
+   "text": "な、、ンぁな、S·！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D5A",
+   "len": 8,
+   "text": "な、S·！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D69",
+   "len": 15,
+   "text": "な、、ボぁな、M@々な、",
+   "reachable": false
+  },
+  {
+   "off": "0x4D6E",
+   "len": 10,
+   "text": "な、M@々な、",
+   "reachable": false
+  },
+  {
+   "off": "0x4D82",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D8A",
+   "len": 14,
+   "text": "な、{01}·{00}！ー{00}S{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D9F",
+   "len": 11,
+   "text": "な、、出ぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DA4",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DC1",
+   "len": 11,
+   "text": "な、、邦ぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DC6",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DDE",
+   "len": 11,
+   "text": "な、、峰な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4EFA",
+   "len": 133,
+   "text": "な、{01}{00}Mにあな、{01}{00}{01}{00}·{01}？{F0:4095}S！、Sいな、{01}·{01}？{F0:4095}S々、こいな、{01}·、？ップ？{F0:4095}Sー、といな、{01}·。？ガマ？ップ？{F0:4095}S…、ょいな、{01}·{01}？{F0:4095}S（{01}·{01}？{F0:4095}S）{01}·{00}S『{01}·{01}？{F0:4095}S』{01}·、？ップ？{F0:4095}S1{01}·、？ップ？{F0:4095}S2{01}·{00}S3！",
+   "reachable": false
+  },
+  {
+   "off": "0x5309",
+   "len": 7,
+   "text": "かな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x5C78",
+   "len": 39,
+   "text": "いな、{01}{01}！、{00}々？、{00}？{01}{00}M。じな、{00}、{01}·。？{F0:4095}Mしじな、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x5EA6",
+   "len": 7,
+   "text": "{01}·{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x5EB1",
+   "len": 78,
+   "text": "{01}·{01}！{01}{00}Mテぞな、{00}{01}？{F0:4095}Sあ{01}·{00}Sエ{01}·{01}？{F0:4095}Sメ{01}·、？ップ？{F0:4095}Sモ{01}·、？ップ？{F0:4095}S来{01}·{01}？{F0:4095}Sい{01}·{01}？{F0:4095}Sう{01}·、Sデ！",
+   "reachable": false
+  },
+  {
+   "off": "0x6456",
+   "len": 19,
+   "text": "いな、{01}{01}？{01}{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6543",
+   "len": 19,
+   "text": "いな、{01}{01}？{01}{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x659B",
+   "len": 19,
+   "text": "いな、{01}{01}？{01}{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x69E6",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6A21",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6AF0",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6B37",
+   "len": 21,
+   "text": "いな、{01}{01}ー！、{00}々？{01}{00}！{01}{00}2！",
+   "reachable": false
+  },
+  {
+   "off": "0x6BB6",
+   "len": 29,
+   "text": "いな、{01}{01}！。{00}々？ガマ？ップ？{F0:4095}M私うな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x6C27",
+   "len": 22,
+   "text": "いな、{01}{01}！。{00}々？ガラ？。{00}？、{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6C72",
+   "len": 29,
+   "text": "いな、{01}{01}！、{00}々？、{00}？{01}{00}？{F0:4095}M後ふな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x6CB0",
+   "len": 22,
+   "text": "いな、{01}{01}！·{00}々？ガマ？·{00}？。{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6E4E",
+   "len": 19,
+   "text": "いな、{01}{01}？。{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6EA3",
+   "len": 29,
+   "text": "いな、{01}{01}！？{00}々？。{00}？、{00}？{01}{00}M私うな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x6EF5",
+   "len": 40,
+   "text": "いな、{01}{01}！？{00}々？{F0:4095}Sい？ガマ？{F0:4095}M少くな、{00}、？忠勇？？{00}？·{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x6F6B",
+   "len": 29,
+   "text": "いな、{01}{01}！？{00}々？。{00}？、{00}？{01}{00}M私うな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x6FDA",
+   "len": 35,
+   "text": "いな、{01}{01}！？{00}々？ガマ？{F0:4095}M少くな、{00}、？忠勇？？{00}？·{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x705A",
+   "len": 36,
+   "text": "いな、{01}{01}？ップM散くな、{01}{01}Mーいな、{01}{01}？{F0:4095}M『カな、{01}·！",
+   "reachable": false
+  },
+  {
+   "off": "0x7103",
+   "len": 80,
+   "text": "いな、{01}{01}？ップM散くな、{01}{01}Mーいな、{01}{01}Mほどな、{01}、！{01}{00}々？ガマ？{01}{00}Mぁいな、{01}{01}？{01}{00}Mーいな、{01}{01}？{F0:4095}Mなげな、{00}·！{01}{00}Mとおな、{00}{01}{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x71CE",
+   "len": 42,
+   "text": "いな、{01}{01}！{01}{00}々！、{00}！ニ{00}Mナいな、{00}、！2{00}Mテぞな、{00}{01}！·{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x7226",
+   "len": 59,
+   "text": "いな、{01}{01}！、{00}々？ップ！ニ{00}Mナいな、{00}、！2{00}Mテぞな、{00}{01}？ガマ？、{00}？{01}{00}！I{00}Mむせな、{00}·Mザせな、",
+   "reachable": false
+  },
+  {
+   "off": "0x7343",
+   "len": 27,
+   "text": "いな、{01}{01}？·{00}Mーいな、{01}{01}M@しな、{01}。I！",
+   "reachable": false
+  },
+  {
+   "off": "0x736D",
+   "len": 43,
+   "text": "いな、{01}{01}？·{00}Mーいな、{01}{01}Mほどな、{01}、！·{00}々？·{00}？{F0:4095}M少くな、{00}、？",
+   "reachable": false
+  },
+  {
+   "off": "0x7599",
+   "len": 20,
+   "text": "いな、{01}{01}…！{01}{00}々？ップ？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x75DC",
+   "len": 16,
+   "text": "いな、{01}{01}！{01}{00}々？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x7609",
+   "len": 16,
+   "text": "いな、{01}{01}！{01}{00}々？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x76DB",
+   "len": 20,
+   "text": "いな、{01}{01}？{01}{00}Mぁいな、{01}{01}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x76E5",
+   "len": 10,
+   "text": "いな、{01}{01}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x7802",
+   "len": 54,
+   "text": "いな、{01}{01}！、{00}々？、{00}？{01}{00}？{F0:4095}Mエこな、{00}。？{F0:4095}Mエウな、{00}{01}、サめな、？{F0:4095}Mィけな、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x7C66",
+   "len": 36,
+   "text": "いな、{01}{01}！、{00}々！{01}{00}！れ{00}Mナいな、{00}、！こ{00}Mトけな、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x7D03",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x7DA3",
+   "len": 36,
+   "text": "いな、{01}{01}！、{00}々！{01}{00}！れ{00}Mナいな、{00}、！3{00}Mトけな、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x7E40",
+   "len": 9,
+   "text": "いな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8472",
+   "len": 13,
+   "text": "これまでの戦い、ご苦労",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x847F",
+   "len": 32,
+   "text": "この「宇宙世紀ルート」を最後まで{00}遊んでくれて感謝する",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x849F",
+   "len": 31,
+   "text": "なお、ロンド·ベル隊の戦いは{00}ここでひとまず終了するが……",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x84BE",
+   "len": 37,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続きを楽しんで欲しい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x84E3",
+   "len": 39,
+   "text": "また、本ルートを最後まで遊んでくれた{00}君には特別ステージも用意されている",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x850A",
+   "len": 33,
+   "text": "我々とは別に戦いを続けていた{00}アークエンジェル隊との特別演習だ",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x852B",
+   "len": 37,
+   "text": "彼らと戦い、君が育ててきた部隊の{00}強さを確かめてみるのも良いだろう",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8550",
+   "len": 37,
+   "text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8575",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8599",
+   "len": 21,
+   "text": "この先も最後まで{00}じっくり楽しんでほしい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8612",
+   "len": 31,
+   "text": "ここまで私のような頼りない艦長に{00}付き合ってくれて、ありがとう",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8631",
+   "len": 30,
+   "text": "この「平成ガンダムルート」は{00}ここで終了となります",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x864F",
+   "len": 26,
+   "text": "もっとも、私たちプリベンターの{00}戦いは終わったけど……",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8669",
+   "len": 38,
+   "text": "…ゲーム自体はまだ続けることも可能よ{00}この後も引き続きゲームを楽しんでね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x868F",
+   "len": 36,
+   "text": "最後までこのルートを遊んでくれた君に{00}新しいステージも用意されているわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x86B3",
+   "len": 27,
+   "text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x86CE",
+   "len": 19,
+   "text": "…ロンド·ベル隊との特別演習よ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x86E1",
+   "len": 38,
+   "text": "フリーバトルで「特別演習」を選ぶと{00}彼らと戦うことができるわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8707",
+   "len": 14,
+   "text": "ぜひ、挑戦してみてね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8715",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8739",
+   "len": 28,
+   "text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x87BA",
+   "len": 16,
+   "text": "ドミニオン艦長{00}ナタル·バジルール中佐だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x87CA",
+   "len": 34,
+   "text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x87EC",
+   "len": 34,
+   "text": "貴君の協力により、ついに我々は{00}最後まで戦い抜くことができた",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x880E",
+   "len": 22,
+   "text": "この「ライバル·ルート」は{00}ここで終了だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x8824",
+   "len": 25,
+   "text": "もっとも、我々ドミニオン隊の戦いは{00}ここで終了したが……",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x883D",
+   "len": 36,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続き楽しんで欲しい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x8861",
+   "len": 43,
+   "text": "フリーバトルはこの後も続けられるし、{00}また、「特別演習」を選ぶことで…",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x888C",
+   "len": 30,
+   "text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x88AA",
+   "len": 37,
+   "text": "貴君ならばきっと、彼らとの戦いにも{00}勝利をおさめられると私は信じている",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x88CF",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x88F3",
+   "len": 16,
+   "text": "この後も貴君の健闘を祈る",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x89E0",
+   "len": 27,
+   "text": "いな、{01}{01}？·{00}Mーいな、{01}{01}M@しな、{01}。I！",
+   "reachable": false
+  },
+  {
+   "off": "0x8A0A",
+   "len": 43,
+   "text": "いな、{01}{01}？·{00}Mーいな、{01}{01}Mほどな、{01}、！·{00}々？·{00}？{F0:4095}M少くな、{00}、？",
+   "reachable": false
+  },
+  {
+   "off": "0x8A9C",
+   "len": 20,
+   "text": "いな、{01}{01}？ップMぁいな、{01}{01}2！",
+   "reachable": false
+  },
+  {
+   "off": "0x8BB0",
+   "len": 20,
+   "text": "いな、{01}{01}？ップMぁいな、{01}{01}』！",
+   "reachable": false
+  },
+  {
+   "off": "0x8D22",
+   "len": 29,
+   "text": "いな、{01}{01}！、{00}々？、{00}？{01}{00}？{F0:4095}M後ふな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x8D60",
+   "len": 22,
+   "text": "いな、{01}{01}！·{00}々？ガマ？·{00}？。{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8DB8",
+   "len": 66,
+   "text": "いな、{01}{01}！。{00}々？ガマ？ップMほどな、{01}、！{01}{00}々？{01}{00}？{F0:4095}M少くな、{00}、？忠勇？{01}{00}Mぁいな、{01}{01}？{01}{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8E3C",
+   "len": 13,
+   "text": "いな、{01}{01}！！{00}々！",
+   "reachable": false
+  },
+  {
+   "off": "0x8F67",
+   "len": 19,
+   "text": "いな、{01}{01}？{01}{00}Mーいな、{01}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8FAE",
+   "len": 32,
+   "text": "いな、{01}{01}！{01}{00}々？ップ！ニ{00}Mナいな、{00}、？ガマ？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8FF0",
+   "len": 19,
+   "text": "いな、{01}{01}！{01}{00}々！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x903C",
+   "len": 32,
+   "text": "いな、{01}{01}！{01}{00}々！{01}{00}！テ{00}Mナいな、{00}、！、{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x9187",
+   "len": 21,
+   "text": "いな、{01}{01}ー！。{00}々？ップ！{01}{00}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x91BC",
+   "len": 21,
+   "text": "いな、{01}{01}…！。{00}々？ップ！、{00}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x91F5",
+   "len": 21,
+   "text": "いな、{01}{01}…！。{00}々？ップ！！{00}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x920C",
+   "len": 55,
+   "text": "クな、、ばクな、！{01}{00}？{F0:4095}Mーいな、{01}{01}…！、{00}々？·{00}？{F0:4095}Mぁいな、{01}{01}…！。{00}々？ップ！。{00}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x926A",
+   "len": 22,
+   "text": "いな、{01}{01}ーー！。{00}々？ップ！？{00}D！",
+   "reachable": false
+  },
+  {
+   "off": "0x92A7",
+   "len": 45,
+   "text": "いな、{01}{01}ーー！。{00}々？。{00}？、{00}Mさいな、{01}、！{01}{00}々？。{00}？、{00}Mほどな、{01}、！",
+   "reachable": false
+  }
+ ]
+}

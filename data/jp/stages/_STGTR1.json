@@ -1,0 +1,1308 @@
+{
+ "_generated": {
+  "tool": "build/extract_data_from_game.py",
+  "schema": 1,
+  "rom_sha1": "12443b91297a57bcd2ace8da989c26ae635a79fd",
+  "note": "machine-generated JP ground truth; regenerate, never edit"
+ },
+ "file": "_STGTR1.bin",
+ "size": 25772,
+ "descriptors": [
+  {
+   "index": 69,
+   "record": "0x176364",
+   "file": "_STGTR1.bin",
+   "label": "TR1",
+   "title": "チュートリアル{01}1",
+   "brief_off": null
+  }
+ ],
+ "briefing": [],
+ "blocks": [
+  {
+   "off": "0x10FA",
+   "len": 8,
+   "text": "さてと……",
+   "scene": 2,
+   "order": 0,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1102",
+   "len": 28,
+   "text": "じゃあ、まずはアンタらの腕を{00}見せてもらうとしようか",
+   "scene": 2,
+   "order": 1,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x114A",
+   "len": 21,
+   "text": "とりあえずはコイツらの{00}相手をしてもらおうか",
+   "scene": 2,
+   "order": 2,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x115F",
+   "len": 25,
+   "text": "自動操縦の無人機くらいは{00}簡単に倒せるだろ？",
+   "scene": 2,
+   "order": 3,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x119D",
+   "len": 7,
+   "text": "了解した",
+   "scene": 2,
+   "order": 4,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x11A4",
+   "len": 30,
+   "text": "……では、アボリー、ロベルト！{00}まずは君たちが手本を見せてやれ",
+   "scene": 2,
+   "order": 5,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x11E7",
+   "len": 11,
+   "text": "了解です、大佐！",
+   "scene": 2,
+   "order": 6,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1217",
+   "len": 33,
+   "text": "じゃあ、まずはさっきの戦闘で見せた{00}手本のおさらいと行こうか！",
+   "scene": 2,
+   "order": 7,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x1238",
+   "len": 18,
+   "text": "まずは「チーム」についてだ！",
+   "scene": 2,
+   "order": 8,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x1276",
+   "len": 32,
+   "text": "こうやって、同じマスに複数の{00}ユニットがいる状態が『チーム』だ！",
+   "scene": 2,
+   "order": 9,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x12B8",
+   "len": 15,
+   "text": "{01}{01}{01}{01}『チーム』について",
+   "scene": 2,
+   "order": 10,
+   "branch": true
+  },
+  {
+   "off": "0x12C7",
+   "len": 33,
+   "text": "複数のユニットを同じマスに配置した{00}状態を『チーム』と呼びます",
+   "scene": 2,
+   "order": 11,
+   "branch": true
+  },
+  {
+   "off": "0x12E8",
+   "len": 37,
+   "text": "『チーム』は最大3機までで、配置した{00}ユニットが同時に行動や戦闘を行えます",
+   "scene": 2,
+   "order": 12,
+   "branch": true
+  },
+  {
+   "off": "0x130D",
+   "len": 35,
+   "text": "また『チーム攻撃』を選ぶことで{00}敵全体への攻撃も可能になります",
+   "scene": 2,
+   "order": 13,
+   "branch": true
+  },
+  {
+   "off": "0x1355",
+   "len": 28,
+   "text": "こうすれば一回の戦闘に{00}複数のユニットが参加できる！！",
+   "scene": 2,
+   "order": 14,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x1371",
+   "len": 13,
+   "text": "いいか、見てろ……！",
+   "scene": 2,
+   "order": 15,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x1574",
+   "len": 7,
+   "text": "そこだ！",
+   "scene": 2,
+   "order": 16,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x13A3",
+   "len": 20,
+   "text": "戦闘はこの『チーム』で戦うのが基本だ",
+   "scene": 2,
+   "order": 17,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x13DC",
+   "len": 16,
+   "text": "じゃあ、次は攻撃の方法……",
+   "scene": 2,
+   "order": 18,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x13EC",
+   "len": 22,
+   "text": "『近接』と『射撃』の違いについてだ！",
+   "scene": 2,
+   "order": 19,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1424",
+   "len": 18,
+   "text": "{01}{01}『近接』と『射撃』の違い",
+   "scene": 2,
+   "order": 20,
+   "branch": true
+  },
+  {
+   "off": "0x1436",
+   "len": 37,
+   "text": "『近接』は弾数がなく、命中率も高い{00}かわりに攻撃が遅くなります",
+   "scene": 2,
+   "order": 21,
+   "branch": true
+  },
+  {
+   "off": "0x145B",
+   "len": 39,
+   "text": "たとえ先に仕掛けても相手が『射撃』を{00}選んでいると先に攻撃されてしまいます",
+   "scene": 2,
+   "order": 22,
+   "branch": true
+  },
+  {
+   "off": "0x1482",
+   "len": 38,
+   "text": "一方、『射撃』は攻撃が早く威力も高い{00}のですが、弾数に制限を愛けます",
+   "scene": 2,
+   "order": 23,
+   "branch": true
+  },
+  {
+   "off": "0x15A3",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 24,
+   "branch": true,
+   "speaker": 454
+  },
+  {
+   "off": "0x15D4",
+   "len": 18,
+   "text": "今、ザクが選んだのが『近接』",
+   "scene": 2,
+   "order": 25,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x15F0",
+   "len": 35,
+   "text": "命中率やクリティカル率が高く、{00}何度でも使えるのが特徴だ",
+   "scene": 2,
+   "order": 26,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x161D",
+   "len": 7,
+   "text": "ただし……",
+   "scene": 2,
+   "order": 27,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x164C",
+   "len": 34,
+   "text": "相手が『射撃』を選んだ場合、{00}先に攻撃されるのが弱点だ！",
+   "scene": 2,
+   "order": 28,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1696",
+   "len": 28,
+   "text": "……と、こんな風に{00}『射撃』の方が先に当たるわけだ",
+   "scene": 2,
+   "order": 29,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x14C6",
+   "len": 15,
+   "text": "戦闘の基本はこんなもんだな",
+   "scene": 2,
+   "order": 30,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x14D5",
+   "len": 28,
+   "text": "後は実際に戦闘をして{00}確かめてもらうことにしようか！",
+   "scene": 2,
+   "order": 31,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1516",
+   "len": 18,
+   "text": "じゃあ、お手並み拝見ってとこだね",
+   "scene": 2,
+   "order": 32,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1528",
+   "len": 39,
+   "text": "コイツは『近接』攻撃しか使わないから{00}それをうまく利用して倒してみな！",
+   "scene": 2,
+   "order": 33,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x16E8",
+   "len": 25,
+   "text": "そうじゃないだろう！{00}もう一回、やり直しだ！！",
+   "scene": 2,
+   "order": 34,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1DC0",
+   "len": 17,
+   "text": "む……どうした？{00}アボリー、ロベルト？",
+   "scene": 2,
+   "order": 35,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1DEC",
+   "len": 15,
+   "text": "す…すみません、大佐……",
+   "scene": 2,
+   "order": 36,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1E16",
+   "len": 23,
+   "text": "もう一度やらせてください！{00}今度こそは……",
+   "scene": 2,
+   "order": 37,
+   "branch": true,
+   "speaker": 226
+  },
+  {
+   "off": "0x1E48",
+   "len": 13,
+   "text": "ったく、しょうがないね……",
+   "scene": 2,
+   "order": 38,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1E55",
+   "len": 23,
+   "text": "じゃあ、もう一回チャンスを{00}あげようじゃないか",
+   "scene": 2,
+   "order": 39,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1726",
+   "len": 26,
+   "text": "なるほど、基本のあたりは{00}きっちりとおさえてるようだねえ",
+   "scene": 2,
+   "order": 40,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1740",
+   "len": 32,
+   "text": "けど、戦いってのは楽に勝てるような{00}相手ばっかりじゃあないよ",
+   "scene": 2,
+   "order": 41,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1785",
+   "len": 27,
+   "text": "たとえば、こいつはザクなんかより{00}装甲や火力は上……",
+   "scene": 2,
+   "order": 42,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x17A0",
+   "len": 29,
+   "text": "動かしてるのもAIなんかじゃなくて{00}海兵隊の腕利きさね",
+   "scene": 2,
+   "order": 43,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x17BD",
+   "len": 18,
+   "text": "さて、こういうのを相手にどう戦う？",
+   "scene": 2,
+   "order": 44,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x17F4",
+   "len": 21,
+   "text": "そういう相手には{00}『IDコマンド』が有効だな",
+   "scene": 2,
+   "order": 45,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x182B",
+   "len": 13,
+   "text": "{01}{01}{01}{01}『IDコマンド』",
+   "scene": 2,
+   "order": 46,
+   "branch": true
+  },
+  {
+   "off": "0x1838",
+   "len": 34,
+   "text": "各キャラクターは『IDコマンド』と{00}呼ばれる特殊能力を持っています",
+   "scene": 2,
+   "order": 47,
+   "branch": true
+  },
+  {
+   "off": "0x185A",
+   "len": 27,
+   "text": "戦闘時には、この『IDコマンド』を{00}使用することで、",
+   "scene": 2,
+   "order": 48,
+   "branch": true
+  },
+  {
+   "off": "0x1875",
+   "len": 31,
+   "text": "より多くのダメージを与えるなどの{00}効果を愛けることができます",
+   "scene": 2,
+   "order": 49,
+   "branch": true
+  },
+  {
+   "off": "0x18B9",
+   "len": 20,
+   "text": "ではアボリー、{00}手本を見せてやってくれ",
+   "scene": 2,
+   "order": 50,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x18E8",
+   "len": 8,
+   "text": "了解です！",
+   "scene": 2,
+   "order": 51,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1915",
+   "len": 19,
+   "text": "俺が持ってる『IDコマンド』は……",
+   "scene": 2,
+   "order": 52,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1946",
+   "len": 11,
+   "text": "……こんな感じだ！",
+   "scene": 2,
+   "order": 53,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1951",
+   "len": 9,
+   "text": "この内……",
+   "scene": 2,
+   "order": 54,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x195A",
+   "len": 33,
+   "text": "「……いけるか！？」には{00}ダメージと命中を増やす効果がある！",
+   "scene": 2,
+   "order": 55,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x19A0",
+   "len": 24,
+   "text": "とりあえず、コイツを使って{00}あのMSを倒すぞ！",
+   "scene": 2,
+   "order": 56,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x19DD",
+   "len": 32,
+   "text": "武器選択画面で『IDコマンド』に{00}カーソルを合わせて決定すると…",
+   "scene": 2,
+   "order": 57,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x19FD",
+   "len": 18,
+   "text": "この『IDコマンド選択画面』に来る",
+   "scene": 2,
+   "order": 58,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1A0F",
+   "len": 30,
+   "text": "ここで使いたい『IDコマンド』を{00}選択して「決定」だ！",
+   "scene": 2,
+   "order": 59,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1A44",
+   "len": 35,
+   "text": "こんな風に『IDコマンド』を使えば{00}強敵との戦いも有利に進められる",
+   "scene": 2,
+   "order": 60,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1A67",
+   "len": 26,
+   "text": "ただし、ひとつ気をつけなくては{00}ならないことがある",
+   "scene": 2,
+   "order": 61,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1A81",
+   "len": 32,
+   "text": "それは、『IDコマンド』の使用には{00}『SP』が必要ということだ",
+   "scene": 2,
+   "order": 62,
+   "branch": true,
+   "speaker": 16
+  },
+  {
+   "off": "0x1AC3",
+   "len": 15,
+   "text": "{01}{01}{01}{01}『SPについて』",
+   "scene": 2,
+   "order": 63,
+   "branch": true
+  },
+  {
+   "off": "0x1AD2",
+   "len": 35,
+   "text": "各キャラクターは精神力を表わす{00}『SP』という値を持っています",
+   "scene": 2,
+   "order": 64,
+   "branch": true
+  },
+  {
+   "off": "0x1AF5",
+   "len": 15,
+   "text": "『IDコマンド』を使用すると、",
+   "scene": 2,
+   "order": 65,
+   "branch": true
+  },
+  {
+   "off": "0x1B04",
+   "len": 24,
+   "text": "コマンドごとに決められた『SP』を{00}消費します",
+   "scene": 2,
+   "order": 66,
+   "branch": true
+  },
+  {
+   "off": "0x1B1C",
+   "len": 27,
+   "text": "強力なコマンドほど消費する『SP』は{00}大きくなります",
+   "scene": 2,
+   "order": 67,
+   "branch": true
+  },
+  {
+   "off": "0x1B37",
+   "len": 17,
+   "text": "{01}{01}{01}{01}{01}『SPの増減』",
+   "scene": 2,
+   "order": 68,
+   "branch": true
+  },
+  {
+   "off": "0x1B48",
+   "len": 33,
+   "text": "各キャラクターは『初期SP値』という{00}数値を持っていて、",
+   "scene": 2,
+   "order": 69,
+   "branch": true
+  },
+  {
+   "off": "0x1B69",
+   "len": 27,
+   "text": "これがステージ開始時に持っている{00}『SP』となります",
+   "scene": 2,
+   "order": 70,
+   "branch": true
+  },
+  {
+   "off": "0x1B84",
+   "len": 36,
+   "text": "以後、『SP』はターンが経過するごと{00}に一定値ずつ上昇していきます",
+   "scene": 2,
+   "order": 71,
+   "branch": true
+  },
+  {
+   "off": "0x1BA8",
+   "len": 32,
+   "text": "また、敵を撃破したり特定のイベントを{00}起こすことでも上昇します",
+   "scene": 2,
+   "order": 72,
+   "branch": true
+  },
+  {
+   "off": "0x1BE6",
+   "len": 33,
+   "text": "ステージの始めは『SP』も少なくて{00}強力なコマンドは使えないが……",
+   "scene": 2,
+   "order": 73,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C07",
+   "len": 32,
+   "text": "ターンの経過や、敵をたくさん墜とす{00}ことで『SP』を溜めれば、",
+   "scene": 2,
+   "order": 74,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C27",
+   "len": 28,
+   "text": "強力な『IDコマンド』を使うことが{00}できるようになる",
+   "scene": 2,
+   "order": 75,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C43",
+   "len": 27,
+   "text": "序盤から効果の小さなコマンドを{00}こまめに使うか、",
+   "scene": 2,
+   "order": 76,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C5E",
+   "len": 35,
+   "text": "あるいは時間をかけて『SP』を溜め、{00}強力なコマンドで勝負を決めるか……",
+   "scene": 2,
+   "order": 77,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C81",
+   "len": 26,
+   "text": "『SP』をどうコントロールするかは{00}戦闘の重要な要素だ",
+   "scene": 2,
+   "order": 78,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1CA5",
+   "len": 35,
+   "text": "では、この『IDコマンド』を使った{00}戦闘を実践してみることにしよう",
+   "scene": 2,
+   "order": 79,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1CED",
+   "len": 15,
+   "text": "敵は強力なMSが2体……",
+   "scene": 2,
+   "order": 80,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1CFC",
+   "len": 27,
+   "text": "これを『チーム』や『IDコマンド』を{00}活用して撃破する",
+   "scene": 2,
+   "order": 81,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1D17",
+   "len": 29,
+   "text": "アボリー、ロベルト、シーマ中佐に{00}お前たちの腕を見せてやれ！",
+   "scene": 2,
+   "order": 82,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1E91",
+   "len": 12,
+   "text": "どうかね、シーマ中佐？",
+   "scene": 2,
+   "order": 83,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1E9D",
+   "len": 20,
+   "text": "我々の実力は理解してもらえたかな？",
+   "scene": 2,
+   "order": 84,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1EDD",
+   "len": 28,
+   "text": "まだ、これくらいじゃあ、{00}背中を預ける気にはなれないね",
+   "scene": 2,
+   "order": 85,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1EF9",
+   "len": 23,
+   "text": "戦いには他にもいろんな{00}要素があるんだ",
+   "scene": 2,
+   "order": 86,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1F10",
+   "len": 33,
+   "text": "そいつらに、どう対応するかってのも{00}見せてもらわないとねえ……",
+   "scene": 2,
+   "order": 87,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1F4C",
+   "len": 31,
+   "text": "では、いったん休憩を挟んで{00}演習続行ということにしよう",
+   "scene": 2,
+   "order": 88,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1F6B",
+   "len": 16,
+   "text": "シーマ中佐もそれでいいかな？",
+   "scene": 2,
+   "order": 89,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1F96",
+   "len": 12,
+   "text": "ああ、かまわないよ",
+   "scene": 2,
+   "order": 90,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1FC7",
+   "len": 8,
+   "text": "シャア大佐！",
+   "scene": 2,
+   "order": 91,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1FCF",
+   "len": 31,
+   "text": "シーマ中佐からそろそろ演習を{00}再開したいとの連絡がありました！",
+   "scene": 2,
+   "order": 92,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x2009",
+   "len": 8,
+   "text": "……そうか",
+   "scene": 2,
+   "order": 93,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x2011",
+   "len": 31,
+   "text": "では、こちらも出撃する部隊を{00}『編成』しておく必要があるな",
+   "scene": 2,
+   "order": 94,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x2063",
+   "len": 15,
+   "text": "{01}{01}{01}{01}{01}『編成と出撃』",
+   "scene": 2,
+   "order": 95,
+   "branch": true
+  },
+  {
+   "off": "0x2072",
+   "len": 35,
+   "text": "ステージにユニットを出撃させるには{00}予め『編成』を行わなければなりません",
+   "scene": 2,
+   "order": 96,
+   "branch": true
+  },
+  {
+   "off": "0x2095",
+   "len": 22,
+   "text": "バックステージメニューで『編成』を{00}選択すると……",
+   "scene": 2,
+   "order": 97,
+   "branch": true
+  },
+  {
+   "off": "0x20AE",
+   "len": 17,
+   "text": "この『編成』画面に切り替わります",
+   "scene": 2,
+   "order": 98,
+   "branch": true
+  },
+  {
+   "off": "0x20BF",
+   "len": 31,
+   "text": "ここで出撃させたいユニットを{00}戦艦に搭載し、パイロットを配属します",
+   "scene": 2,
+   "order": 99,
+   "branch": true
+  },
+  {
+   "off": "0x20DE",
+   "len": 28,
+   "text": "『編成』が終了したら{00}次は実際の『出撃』となります",
+   "scene": 2,
+   "order": 100,
+   "branch": true
+  },
+  {
+   "off": "0x20FA",
+   "len": 25,
+   "text": "バックステージの『作戦』で{00}『進撃』を選択すると……",
+   "scene": 2,
+   "order": 101,
+   "branch": true
+  },
+  {
+   "off": "0x2116",
+   "len": 17,
+   "text": "この『出撃』画面に切り替わります",
+   "scene": 2,
+   "order": 102,
+   "branch": true
+  },
+  {
+   "off": "0x2127",
+   "len": 29,
+   "text": "ここで『Aボタン』を押せば{00}次ステージへと進みます",
+   "scene": 2,
+   "order": 103,
+   "branch": true
+  },
+  {
+   "off": "0x215B",
+   "len": 21,
+   "text": "母艦の方はもう用意できていますので、",
+   "scene": 2,
+   "order": 104,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x2170",
+   "len": 22,
+   "text": "後はユニットとパイロットを{00}戦艦に配属してください",
+   "scene": 2,
+   "order": 105,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x21A1",
+   "len": 9,
+   "text": "了解だ、マリガン",
+   "scene": 2,
+   "order": 106,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x10D5",
+   "len": 45,
+   "text": "あいうえおかダチッツテ{01}タ{00}·{00}！ア{00}Mめ』な、{00}{01}！し{00}M{SLOT:2283}な、{00}{01}ぁさてと……",
+   "reachable": false,
+   "priming": true
+  },
+  {
+   "off": "0x1D59",
+   "len": 14,
+   "text": "こいつは……いけるか！？",
+   "reachable": false,
+   "speaker": 16
+  },
+  {
+   "off": "0x1D8F",
+   "len": 9,
+   "text": "行けえっ！",
+   "reachable": false,
+   "speaker": 16
+  },
+  {
+   "off": "0x23D4",
+   "len": 8,
+   "text": "な、{00}。？",
+   "reachable": false
+  },
+  {
+   "off": "0x2FE0",
+   "len": 25,
+   "text": "{00}M生1な、{00}{01}！き{00}Mナ姑息、{00}{01}！そ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3023",
+   "len": 15,
+   "text": "{00}M生1な、{00}{01}！そ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x305C",
+   "len": 15,
+   "text": "{00}M生1な、{00}{01}！そ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3E11",
+   "len": 112,
+   "text": "！な、{01}·{01}？{F0:4095}Sだ、さ！な、{01}·、？ップ？{F0:4095}Sち{01}·{01}？{F0:4095}Sめ、ふ！な、{01}·、？ップ？{F0:4095}S中{01}·、？ップ？{F0:4095}S長{01}·。？ガマ？ップ？{F0:4095}Sも{01}·{01}？{F0:4095}Sっ、ト！な、{01}·、？ップ？{F0:4095}Sつ{01}·{01}？{F0:4095}Sゃ！",
+   "reachable": false
+  },
+  {
+   "off": "0x45CE",
+   "len": 7,
+   "text": "{01}·{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x45D9",
+   "len": 78,
+   "text": "{01}·{01}！{01}{00}M間3な、{00}{01}？{F0:4095}Sあ{01}·{00}Sエ{01}·{01}？{F0:4095}Sメ{01}·、？ップ？{F0:4095}Sモ{01}·、？ップ？{F0:4095}S来{01}·{01}？{F0:4095}Sい{01}·{01}？{F0:4095}Sう{01}·、Sデ！",
+   "reachable": false
+  },
+  {
+   "off": "0x4A0C",
+   "len": 12,
+   "text": "Iな、、きIな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D2C",
+   "len": 14,
+   "text": "な、、じあな、？{F0:4095}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D41",
+   "len": 21,
+   "text": "な、、コぁな、？{F0:4095}M官{00}な、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D59",
+   "len": 9,
+   "text": "な、！{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D70",
+   "len": 40,
+   "text": "な、、我ぁな、？ップM官{00}な、{01}{01}！{01}{00}々、機ぁな、！{01}{00}！{01}{00}々？ガマ！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D9F",
+   "len": 47,
+   "text": "な、、前ぁな、？ガマM官{00}な、{01}{01}！、{00}々、長ぁな、！{01}{00}！、{00}々！{01}{00}M間3な、{00}{01}？",
+   "reachable": false
+  },
+  {
+   "off": "0x4DD4",
+   "len": 14,
+   "text": "な、、锡な、？{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DE5",
+   "len": 11,
+   "text": "な、、锡な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DF3",
+   "len": 14,
+   "text": "な、、『あな、？、{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4E21",
+   "len": 6,
+   "text": "な、{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x510F",
+   "len": 11,
+   "text": "な、{00}。？{F0:4095}！",
+   "reachable": false
+  },
+  {
+   "off": "0x5D96",
+   "len": 13,
+   "text": "これまでの戦い、ご苦労",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5DA3",
+   "len": 32,
+   "text": "この「宇宙世紀ルート」を最後まで{00}遊んでくれて感謝する",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5DC3",
+   "len": 31,
+   "text": "なお、ロンド·ベル隊の戦いは{00}ここでひとまず終了するが……",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5DE2",
+   "len": 37,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続きを楽しんで欲しい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5E07",
+   "len": 39,
+   "text": "また、本ルートを最後まで遊んでくれた{00}君には特別ステージも用意されている",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5E2E",
+   "len": 33,
+   "text": "我々とは別に戦いを続けていた{00}アークエンジェル隊との特別演習だ",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5E4F",
+   "len": 37,
+   "text": "彼らと戦い、君が育ててきた部隊の{00}強さを確かめてみるのも良いだろう",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5E74",
+   "len": 37,
+   "text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5E99",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5EBD",
+   "len": 21,
+   "text": "この先も最後まで{00}じっくり楽しんでほしい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x5F36",
+   "len": 31,
+   "text": "ここまで私のような頼りない艦長に{00}付き合ってくれて、ありがとう",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5F55",
+   "len": 30,
+   "text": "この「平成ガンダムルート」は{00}ここで終了となります",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5F73",
+   "len": 26,
+   "text": "もっとも、私たちプリベンターの{00}戦いは終わったけど……",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5F8D",
+   "len": 38,
+   "text": "…ゲーム自体はまだ続けることも可能よ{00}この後も引き続きゲームを楽しんでね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5FB3",
+   "len": 36,
+   "text": "最後までこのルートを遊んでくれた君に{00}新しいステージも用意されているわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5FD7",
+   "len": 27,
+   "text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x5FF2",
+   "len": 19,
+   "text": "…ロンド·ベル隊との特別演習よ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x6005",
+   "len": 38,
+   "text": "フリーバトルで「特別演習」を選ぶと{00}彼らと戦うことができるわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x602B",
+   "len": 14,
+   "text": "ぜひ、挑戦してみてね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x6039",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x605D",
+   "len": 28,
+   "text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x60DE",
+   "len": 16,
+   "text": "ドミニオン艦長{00}ナタル·バジルール中佐だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x60EE",
+   "len": 34,
+   "text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6110",
+   "len": 34,
+   "text": "貴君の協力により、ついに我々は{00}最後まで戦い抜くことができた",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6132",
+   "len": 22,
+   "text": "この「ライバル·ルート」は{00}ここで終了だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6148",
+   "len": 25,
+   "text": "もっとも、我々ドミニオン隊の戦いは{00}ここで終了したが……",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6161",
+   "len": 36,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続き楽しんで欲しい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6185",
+   "len": 43,
+   "text": "フリーバトルはこの後も続けられるし、{00}また、「特別演習」を選ぶことで…",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x61B0",
+   "len": 30,
+   "text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x61CE",
+   "len": 37,
+   "text": "貴君ならばきっと、彼らとの戦いにも{00}勝利をおさめられると私は信じている",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x61F3",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x6217",
+   "len": 16,
+   "text": "この後も貴君の健闘を祈る",
+   "reachable": false,
+   "speaker": 156
+  }
+ ]
+}
