@@ -254,9 +254,10 @@ def special_records(rom: GameROM) -> dict:
     """Global 1df (special-ability) / 1e0 (special-defense) records with their
     00 03-delimited display segments."""
     out = {}
-    for key, offtab, fname in (("ability", L.OFFTAB_A, L.SPECIAL_ABILITY_FILE),
-                               ("defense", L.OFFTAB_D, L.SPECIAL_DEFENSE_FILE)):
-        data, recs = _offtab_records(rom, offtab, fname)
+    for key, offtab, fname, cap in (
+            ("ability", L.OFFTAB_A, L.SPECIAL_ABILITY_FILE, 512),
+            ("defense", L.OFFTAB_D, L.SPECIAL_DEFENSE_FILE, L.OFFTAB_D_WORDS)):
+        data, recs = _offtab_records(rom, offtab, fname, count_hint=cap)
         items = []
         for k, o0, o1 in recs:
             segs = []
