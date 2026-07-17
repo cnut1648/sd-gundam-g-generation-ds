@@ -343,6 +343,21 @@ def _clean_cutin(body: bytes) -> bytes:
     return _strip_line_bullets(body.rstrip(b"\x00"))
 
 
+def _has_macro(data: bytes) -> bool:
+    """Token-aware scan for a 0xF0xx dictionary macro (a 2-byte glyph token's
+    LOW byte can be >= 0xF0 — a naive byte scan false-positives on those)."""
+    i, n = 0, len(data)
+    while i < n:
+        b = data[i]
+        if b >= 0xF0 and i + 1 < n:
+            return True
+        if b >= 0xE0 and i + 1 < n:
+            i += 2
+            continue
+        i += 1
+    return False
+
+
 # ===========================================================================
 # JP structure (the extract-dump conventions) + ZH pairing from the built ROM
 # ===========================================================================
@@ -686,6 +701,25 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
         chars.append(entry)
     data["chars"] = chars
 
+    # ---- 1b'. dialogue-only NPCs: char-DB records with a real name but NO ID
+    # command AND NO bark (operators, soldiers, broadcasters, one-line NPCs).
+    # They can't appear on the quote cards (nothing to quote), which is exactly
+    # why the card cid list is non-contiguous and stops at the last quoted cid;
+    # list them compactly so the tab is complete.  Their names still drive the
+    # story-dialogue speaker labels.
+    char_cids = {c["cid"] for c in chars}
+    npcs = []
+    for cid in range(L.CHARDB_COUNT):
+        if cid in char_cids:
+            continue
+        rec = L.CHARDB + cid * L.CHARDB_STRIDE
+        zn = zh.cstr(u32(zh.arm9, rec + L.PILOT_NAME_FIELD))
+        if _dummy_name(zn):
+            continue
+        jn = jp.cstr(u32(jp.arm9, rec + L.PILOT_NAME_FIELD))
+        npcs.append({"cid": cid, "nm": name_fld(jn, zn)})
+    data["npcs"] = npcs
+
     # ---- 1c. units: name, weapons, specials ----------------------------------
     ju = {u["utid"]: u for u in W.units(jp)}
     zu = {u["utid"]: u for u in W.units(zh)}
@@ -825,10 +859,11 @@ def _bios_section(jp: GameROM, zh: GameROM, kind: str, names: dict) -> list[dict
 def _parts_section(jp: GameROM, zh: GameROM) -> list[dict]:
     """改造部件: part NAME (b6e) paired 1:1 with its CAPTION (b6f) by index.
     Both sides read the record layout the RESPECTIVE ROM's offset table
-    declares (the ZH build repacked b6e and patched the arm9 table).  The
-    caption bank's JP macros resolve through a parts-local runtime dict the
-    image does not carry, so JP captions are omitted; the ZH caption renders
-    true."""
+    declares (the ZH build repacked b6e and patched the arm9 table).  JP names
+    AND captions index a parts-local runtime dict the image does not carry, so
+    macro-bearing JP fields are dropped (never expanded through the dialogue
+    dict); JP captions are omitted.  Names and captions are run through
+    _strip_line_bullets so the per-line page controls don't draw stray 。/▼."""
     jparts = {p["index"]: p for p in W.parts(jp)}
     zparts = {p["index"]: p for p in W.parts(zh)}
     jfe, zfe = jp.file(L.PART_NAME_FILE), zh.file(L.PART_NAME_FILE)
@@ -842,7 +877,14 @@ def _parts_section(jp: GameROM, zh: GameROM) -> list[dict]:
         zp = zparts[i]
         jp_p = jparts.get(i)
         jb = _rd(jfe, jp_p["name"]) if jp_p else b""
-        zb = _rd(zfe, zp["name"])
+        # JP part names/captions index a PARTS-LOCAL runtime dict the image does
+        # not carry; expanding those 0xF0xx macros through the static dialogue
+        # dict prints unrelated payloads (人同士マネ / 散らツらマゥ garbage), so a
+        # macro-bearing JP name is dropped (the ZH side is repacked literals).
+        if _has_macro(jb):
+            jb = b""
+        jb = _strip_line_bullets(jb)
+        zb = _strip_line_bullets(_rd(zfe, zp["name"]))
         nzt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
         core = nzt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a")
         for _ph in ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a"):
@@ -856,7 +898,10 @@ def _parts_section(jp: GameROM, zh: GameROM) -> list[dict]:
               "zb": pack_glyphs(zh, zb, "stage", zh.expand, True) if zb else "",
               "jb": pack_glyphs(jp, jb, "stage", jp.expand, True) if jb else ""}
         if "caption" in zp:
-            czb = _rd(zfc, zp["caption"])
+            # strip the per-line page-control skeleton (00 03 …) the text VM
+            # consumes before the blitter — otherwise every wrapped line draws a
+            # spurious 。 and the trailing 00 03 pad rows render as empty ▼ lines
+            czb = _strip_line_bullets(_rd(zfc, zp["caption"]))
             it["cap"] = {"zt": decode_text(zh, czb, "stage", zh.expand, True) if czb else "",
                          "jt": "",
                          "zb": pack_glyphs(zh, czb, "stage", zh.expand, True) if czb else "",
@@ -1054,6 +1099,7 @@ function nameHeader(nm,nmA){
   return h;
 }
 // -- Units tab card --
+function buildNpc(bd,c){bd.appendChild(nameHeader(c.nm));}
 function buildUnit(bd,u){
   bd.appendChild(nameHeader(u.nm,u.nmA));
   if(u.weapons&&u.weapons.length){var s=sect(bd,'\u6b66\u5668 Weapons');u.weapons.forEach(function(w){s.appendChild(field(w,1,2));});}
@@ -1128,8 +1174,13 @@ function initTabs(){
   vi.innerHTML='<h2 class="sec">\u89d2\u8272 \u00b7 ID\u6307\u4ee4 \u00b7 \u540d\u53f0\u8bcd \u00b7 \u6218\u6597\u558a\u8bdd <span class="muted" style="font-size:13px">'+GG.chars.length+' \u540d</span></h2>'+
     '<p class="gg-intro">\u7531\u811a\u672c\u4ece\u6e38\u620f\u89d2\u8272\u6570\u7ec4\uff08char-DB 0xDCF18\uff09\u53cd\u89e3\u3001\u6309\u6e38\u620f\u6e32\u67d3\u7ba1\u7ebf\u8fd8\u539f\u3002\u6bcf\u683c\u663e\u793a<b>\u4e2d\u6587\u6587\u672c\uff08\u5927\uff09\uff0b\u65e5\u6587\u6587\u672c\uff08\u5c0f\uff09\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff1b\u9f20\u6807\u60ac\u505c\u4f4d\u56fe\u53ef\u770b<b>\u65e5\u6587\u4f4d\u56fe</b>\u5bf9\u7167\u3002\u6bcf\u5f20\u5361\u7247\u5168\u5c55\u5f00\uff0c\u6218\u6597\u558a\u8bdd\u9ed8\u8ba4\u6298\u53e0\u3002</p>'+
     '<div class="gg-search"><input id="ggidq" placeholder="\u6309\u5e8f\u53f7\u7b5b\u9009\u2026"></div>'+
-    '<div id="ggidgrid" class="ggrid"></div>';
+    '<div id="ggidgrid" class="ggrid"></div>'+
+    ((GG.npcs&&GG.npcs.length)?('<h3 class="sec" style="font-size:15px;margin-top:22px">\u5bf9\u8bddNPC\uff08\u4ec5\u5267\u60c5\u53f0\u8bcd\u00b7\u65e0ID\u6307\u4ee4/\u558a\u8bdd\uff09 <span class="muted" style="font-size:12px">'+GG.npcs.length+'</span></h3>'+
+      '<p class="gg-intro">\u8fd9\u4e9b\u89d2\u8272\u5728 char-DB \u4e2d\u6709\u6b63\u5f0f\u59d3\u540d\uff0c\u4f46\u6ca1\u6709 ID \u6307\u4ee4\u3001\u4e5f\u6ca1\u6709\u6218\u6597\u558a\u8bdd\uff08\u64cd\u4f5c\u5458\u3001\u58eb\u5175\u3001\u5e7f\u64ad\u7b49\uff09\uff0c\u6545\u4e0d\u51fa\u73b0\u5728\u4e0a\u65b9\u5361\u7247\u2014\u2014\u8fd9\u6b63\u662f\u5e8f\u53f7\u4e0d\u8fde\u7eed\u3001\u4e14\u6b62\u4e8e\u6700\u540e\u4e00\u4e2a\u6709\u558a\u8bdd\u89d2\u8272\u7684\u539f\u56e0\u3002\u5176\u59d3\u540d\u4ecd\u7528\u4f5c\u5267\u60c5\u5bf9\u8bdd\u7684\u8bf4\u8bdd\u4eba\u6807\u7b7e\u3002</p>'+
+      '<div class="gg-search"><input id="ggnpcq" placeholder="\u6309\u5e8f\u53f7\u7b5b\u9009\u2026"></div>'+
+      '<div id="ggnpcgrid" class="ggrid"></div>'):'');
   grid('#ggidgrid',GG.chars,function(c){return '#'+c.cid;},buildChar);
+  if(GG.npcs&&GG.npcs.length)grid('#ggnpcgrid',GG.npcs,function(c){return '#'+c.cid;},buildNpc);
   var vu=addView('ggunits');
   vu.innerHTML='<h2 class="sec">\u673a\u4f53 \u00b7 \u6b66\u5668 \u00b7 \u7279\u6b8a\u80fd\u529b <span class="muted" style="font-size:13px">'+GG.units.length+' \u53f0</span></h2>'+
     '<p class="gg-intro">\u7531\u811a\u672c\u4ece\u673a\u4f53\u4e3b\u8868\uff080xB94BC\uff09\u53cd\u89e3\u3002\u6bcf\u5f20\u5361\u7247\u5168\u5c55\u5f00\uff1a\u673a\u4f53\u540d\u3001\u5404\u6b66\u5668\u3001\u5404\u7279\u6b8a\u80fd\u529b/\u9632\u5fa1\uff0c\u5747<b>\u4e2d\u6587\u6587\u672c\uff0b\u65e5\u6587\u6587\u672c\uff0b\u4e2d\u6587\u4f4d\u56fe</b>\uff0c\u60ac\u505c\u4f4d\u56fe\u770b\u65e5\u6587\u4f4d\u56fe\u3002</p>'+
@@ -1148,6 +1199,7 @@ function initTabs(){
     lib.forEach(function(sec,si){grid('#ggenc'+si,sec.items,function(it){return '#'+it.ix;},function(bd,it){buildLibItem(bd,it,sec);});});
   }
   wireFilter('#ggidq','#ggidgrid');wireFilter('#ggunitq','#ggunitgrid');
+  if(GG.npcs&&GG.npcs.length)wireFilter('#ggnpcq','#ggnpcgrid');
 }
 // -- Route tab: weave dialogue (speakers + badges) + briefing per stage --
 function badge(txt,cls){var b=document.createElement('span');b.className='gbadge '+cls;b.textContent=txt;return b;}
