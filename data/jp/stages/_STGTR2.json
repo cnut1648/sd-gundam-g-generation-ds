@@ -1,0 +1,1215 @@
+{
+ "_generated": {
+  "tool": "build/extract_data_from_game.py",
+  "schema": 1,
+  "rom_sha1": "12443b91297a57bcd2ace8da989c26ae635a79fd",
+  "note": "machine-generated JP ground truth; regenerate, never edit"
+ },
+ "file": "_STGTR2.bin",
+ "size": 25340,
+ "descriptors": [
+  {
+   "index": 70,
+   "record": "0x176398",
+   "file": "_STGTR2.bin",
+   "label": "TR2",
+   "title": "チュートリアル{01}2",
+   "brief_off": null
+  }
+ ],
+ "briefing": [],
+ "blocks": [
+  {
+   "off": "0x1152",
+   "len": 13,
+   "text": "では、そろそろ始めようか",
+   "scene": 2,
+   "order": 0,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x115F",
+   "len": 27,
+   "text": "で、シーマ中佐{00}今度は何をやって見せればいいかね？",
+   "scene": 2,
+   "order": 1,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x119F",
+   "len": 30,
+   "text": "さっきは戦闘って言っても{00}一機ずつの戦いだったからね……",
+   "scene": 2,
+   "order": 2,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x11BD",
+   "len": 29,
+   "text": "本物の戦闘じゃあ敵だって{00}『チーム』を組んでることもある",
+   "scene": 2,
+   "order": 3,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x11DA",
+   "len": 26,
+   "text": "そういう相手とどう戦うかを{00}まずは見せてもらおうか",
+   "scene": 2,
+   "order": 4,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1219",
+   "len": 9,
+   "text": "……了解した",
+   "scene": 2,
+   "order": 5,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x122C",
+   "len": 6,
+   "text": "マリガン！",
+   "scene": 2,
+   "order": 6,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x124D",
+   "len": 6,
+   "text": "はっ！",
+   "scene": 2,
+   "order": 7,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1278",
+   "len": 37,
+   "text": "『チーム』を組んだ敵と正面から戦えば{00}こちらもかなりの被害を愛けるだろう",
+   "scene": 2,
+   "order": 8,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x129D",
+   "len": 26,
+   "text": "ならば！{00}敵の『チーム』を崩してしまえばいい！",
+   "scene": 2,
+   "order": 9,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x12DC",
+   "len": 31,
+   "text": "敵の『チーム』を崩すぞ！{00}マリガン！{01}メガ粒子砲発射だ！！",
+   "scene": 2,
+   "order": 10,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x132A",
+   "len": 21,
+   "text": "了解！{00}メガ粒子砲、発射します！！",
+   "scene": 2,
+   "order": 11,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x136E",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 12,
+   "branch": true,
+   "speaker": 454
+  },
+  {
+   "off": "0x139C",
+   "len": 16,
+   "text": "{01}{01}{01}{01}『間接攻撃と散開』",
+   "scene": 2,
+   "order": 13,
+   "branch": true
+  },
+  {
+   "off": "0x13AC",
+   "len": 15,
+   "text": "戦艦など一部のユニットは……",
+   "scene": 2,
+   "order": 14,
+   "branch": true
+  },
+  {
+   "off": "0x13BB",
+   "len": 36,
+   "text": "離れたマスへの攻撃を行える{00}『間接』という攻撃方法を持っています",
+   "scene": 2,
+   "order": 15,
+   "branch": true
+  },
+  {
+   "off": "0x13DF",
+   "len": 35,
+   "text": "『間接』で攻撃を行った場合、{00}相手は『反撃』や『回避』を行えず、",
+   "scene": 2,
+   "order": 16,
+   "branch": true
+  },
+  {
+   "off": "0x1402",
+   "len": 27,
+   "text": "代わりに『散開』というコマンドを{00}行うことができます",
+   "scene": 2,
+   "order": 17,
+   "branch": true
+  },
+  {
+   "off": "0x141D",
+   "len": 33,
+   "text": "『散開』は周囲に空いたマスがある{00}場合に選べるコマンドで、",
+   "scene": 2,
+   "order": 18,
+   "branch": true
+  },
+  {
+   "off": "0x143E",
+   "len": 32,
+   "text": "実行すると『チーム』が解除される{00}代わりに攻撃を必ず回避します",
+   "scene": 2,
+   "order": 19,
+   "branch": true
+  },
+  {
+   "off": "0x1483",
+   "len": 36,
+   "text": "敵が『チーム』を組んでいる場合、{00}『間接』で崩していくのが基本だ",
+   "scene": 2,
+   "order": 20,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x14CC",
+   "len": 14,
+   "text": "わかってるようだねえ",
+   "scene": 2,
+   "order": 21,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x14DA",
+   "len": 36,
+   "text": "じゃ、今度は実際に『間接』を使った{00}戦闘をやってもらうとしようか",
+   "scene": 2,
+   "order": 22,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1515",
+   "len": 31,
+   "text": "こっちは『チーム』を組んだMSと{00}『間接』の使える戦艦だ",
+   "scene": 2,
+   "order": 23,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1534",
+   "len": 31,
+   "text": "『間接』や『散開』をうまく使って{00}こっちを倒してみな！",
+   "scene": 2,
+   "order": 24,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x15BB",
+   "len": 14,
+   "text": "へえ……やるじゃないか",
+   "scene": 2,
+   "order": 25,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x15E4",
+   "len": 19,
+   "text": "我々の腕前は認めてもらえたかな？",
+   "scene": 2,
+   "order": 26,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1612",
+   "len": 26,
+   "text": "ああ、そうだね{00}アタシらの背中を預けるには十分さ",
+   "scene": 2,
+   "order": 27,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x162C",
+   "len": 30,
+   "text": "アタシ以下、海兵隊全員、{00}アンタの指揮下に入らせてもらうよ",
+   "scene": 2,
+   "order": 28,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1665",
+   "len": 19,
+   "text": "こちらこそよろしくお願いする、{00}シーマ中佐",
+   "scene": 2,
+   "order": 29,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1678",
+   "len": 12,
+   "text": "だが、その前に……",
+   "scene": 2,
+   "order": 30,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x169F",
+   "len": 10,
+   "text": "ん、なんだい？",
+   "scene": 2,
+   "order": 31,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x16C4",
+   "len": 34,
+   "text": "せっかくの機会だ、今のうちに{00}『捕縛』について確認しておこうと思う",
+   "scene": 2,
+   "order": 32,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x16E6",
+   "len": 19,
+   "text": "講釈を頼めるかな、シーマ中佐",
+   "scene": 2,
+   "order": 33,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1714",
+   "len": 11,
+   "text": "ああ、了解だよ！",
+   "scene": 2,
+   "order": 34,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1744",
+   "len": 20,
+   "text": "『捕縛』っていうのは名前の通り……",
+   "scene": 2,
+   "order": 35,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1758",
+   "len": 25,
+   "text": "敵のユニットを捕まえて{00}自分のものにしちまうコマンドだ",
+   "scene": 2,
+   "order": 36,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1771",
+   "len": 30,
+   "text": "まず、アタシらが手本を見せるから{00}よーく、見てるんだよ！",
+   "scene": 2,
+   "order": 37,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x17AA",
+   "len": 14,
+   "text": "{01}{01}{01}{01}『ユニットの捕縛』",
+   "scene": 2,
+   "order": 38,
+   "branch": true
+  },
+  {
+   "off": "0x17B8",
+   "len": 30,
+   "text": "戦艦や、一部のユニットを除く{00}敵ユニットは『捕縛』が可能です",
+   "scene": 2,
+   "order": 39,
+   "branch": true
+  },
+  {
+   "off": "0x17D6",
+   "len": 30,
+   "text": "ダメージを愛けたユニットの周囲を{00}三機以上のユニットで囲むと……",
+   "scene": 2,
+   "order": 40,
+   "branch": true
+  },
+  {
+   "off": "0x1808",
+   "len": 20,
+   "text": "メニューに『捕縛』コマンドが{00}表示されます",
+   "scene": 2,
+   "order": 41,
+   "branch": true
+  },
+  {
+   "off": "0x181C",
+   "len": 38,
+   "text": "ここで『捕縛』を選び、実行することで{00}敵ユニットを捕らえることができます",
+   "scene": 2,
+   "order": 42,
+   "branch": true
+  },
+  {
+   "off": "0x1860",
+   "len": 14,
+   "text": "よーし、捕縛するぞ！！",
+   "scene": 2,
+   "order": 43,
+   "branch": true,
+   "speaker": 415
+  },
+  {
+   "off": "0x1893",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 44,
+   "branch": true,
+   "speaker": 454
+  },
+  {
+   "off": "0x18B7",
+   "len": 12,
+   "text": "これは失敗した場合",
+   "scene": 2,
+   "order": 45,
+   "branch": true
+  },
+  {
+   "off": "0x18C3",
+   "len": 30,
+   "text": "『捕縛』に失敗すると、自分と相手の{00}両方がダメージを愛けます",
+   "scene": 2,
+   "order": 46,
+   "branch": true
+  },
+  {
+   "off": "0x18F5",
+   "len": 15,
+   "text": "『捕縛』の成功率は……",
+   "scene": 2,
+   "order": 47,
+   "branch": true
+  },
+  {
+   "off": "0x1904",
+   "len": 40,
+   "text": "相手のHPが低いほど、また、周りを{00}囲むユニットが多いほど高くなります",
+   "scene": 2,
+   "order": 48,
+   "branch": true
+  },
+  {
+   "off": "0x1940",
+   "len": 32,
+   "text": "例えば三機で囲んだ場合、{00}成功率はこのようになりますが……",
+   "scene": 2,
+   "order": 49,
+   "branch": true
+  },
+  {
+   "off": "0x1974",
+   "len": 28,
+   "text": "囲むユニットを多くすれば{00}このように成功率が上昇します",
+   "scene": 2,
+   "order": 50,
+   "branch": true
+  },
+  {
+   "off": "0x1990",
+   "len": 29,
+   "text": "では、この状態でもう一度{00}『捕縛』を行ってみましょう",
+   "scene": 2,
+   "order": 51,
+   "branch": true
+  },
+  {
+   "off": "0x19BA",
+   "len": 12,
+   "text": "今度は捕縛成功です",
+   "scene": 2,
+   "order": 52,
+   "branch": true
+  },
+  {
+   "off": "0x19C6",
+   "len": 34,
+   "text": "捕らえたユニットは自軍のものとなり、{00}ステージクリア後から使う事ができます",
+   "scene": 2,
+   "order": 53,
+   "branch": true
+  },
+  {
+   "off": "0x1A06",
+   "len": 14,
+   "text": "と、まあ、こんなもんだね",
+   "scene": 2,
+   "order": 54,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1A14",
+   "len": 28,
+   "text": "後は実際にユニットの『捕縛』を{00}やってもらうとしようか",
+   "scene": 2,
+   "order": 55,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1A47",
+   "len": 13,
+   "text": "こいつが捕縛用のターゲットだ",
+   "scene": 2,
+   "order": 56,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1A54",
+   "len": 8,
+   "text": "これを……",
+   "scene": 2,
+   "order": 57,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1A81",
+   "len": 18,
+   "text": "ここにいるこいつらで捕縛してみな！",
+   "scene": 2,
+   "order": 58,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1B2F",
+   "len": 9,
+   "text": "よし、上出来だ",
+   "scene": 2,
+   "order": 59,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1B38",
+   "len": 26,
+   "text": "ここで演習は終了とする{00}各員、母艦に帰投せよ！",
+   "scene": 2,
+   "order": 60,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1B70",
+   "len": 9,
+   "text": "……シャア大佐",
+   "scene": 2,
+   "order": 61,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1B94",
+   "len": 11,
+   "text": "ん、どうしたマリガン？",
+   "scene": 2,
+   "order": 62,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1BBA",
+   "len": 37,
+   "text": "先ほどの演習で捕縛したMSですが、{00}シーマ中佐からこちらで使うようにと…",
+   "scene": 2,
+   "order": 63,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1BFA",
+   "len": 8,
+   "text": "……そうか",
+   "scene": 2,
+   "order": 64,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C02",
+   "len": 30,
+   "text": "捕縛したのは確か、リック·ドムと{00}高機動型ザクだったな",
+   "scene": 2,
+   "order": 65,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C20",
+   "len": 36,
+   "text": "そのまま使うのも良いが、{00}『改造』に使うのも悪くないかもしれん",
+   "scene": 2,
+   "order": 66,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1C70",
+   "len": 15,
+   "text": "{01}{01}{01}{01}{01}『分解と改造』",
+   "scene": 2,
+   "order": 67,
+   "branch": true
+  },
+  {
+   "off": "0x1C7F",
+   "len": 32,
+   "text": "ゲーム中に登場するユニットの多くは{00}『分解』や『改造』が行えます",
+   "scene": 2,
+   "order": 68,
+   "branch": true
+  },
+  {
+   "off": "0x1C9F",
+   "len": 28,
+   "text": "『分解』はユニットを分解して{00}『パーツ』を取り出すコマンド",
+   "scene": 2,
+   "order": 69,
+   "branch": true
+  },
+  {
+   "off": "0x1CBB",
+   "len": 33,
+   "text": "『改造』は機体と『パーツ』を合わせ、{00}新たなユニットを作るコマンドです",
+   "scene": 2,
+   "order": 70,
+   "branch": true
+  },
+  {
+   "off": "0x1CDC",
+   "len": 23,
+   "text": "バックステージのメニューで{00}『MS開発』を選択し、",
+   "scene": 2,
+   "order": 71,
+   "branch": true
+  },
+  {
+   "off": "0x1CF3",
+   "len": 20,
+   "text": "『格納庫』を選ぶと、この……",
+   "scene": 2,
+   "order": 72,
+   "branch": true
+  },
+  {
+   "off": "0x1D0A",
+   "len": 18,
+   "text": "『格納庫』画面へと移行します",
+   "scene": 2,
+   "order": 73,
+   "branch": true
+  },
+  {
+   "off": "0x1D1C",
+   "len": 19,
+   "text": "ここで『分解』コマンドを選択すれば、",
+   "scene": 2,
+   "order": 74,
+   "branch": true
+  },
+  {
+   "off": "0x1D2F",
+   "len": 32,
+   "text": "先ほど捕縛した機体を分解し{00}『パーツ』を得ることができます",
+   "scene": 2,
+   "order": 75,
+   "branch": true
+  },
+  {
+   "off": "0x1D5C",
+   "len": 20,
+   "text": "ひとつ注意しなければならないのは……",
+   "scene": 2,
+   "order": 76,
+   "branch": true
+  },
+  {
+   "off": "0x1D70",
+   "len": 28,
+   "text": "『分解』したユニットは失われて{00}しまうということです",
+   "scene": 2,
+   "order": 77,
+   "branch": true
+  },
+  {
+   "off": "0x1D8C",
+   "len": 35,
+   "text": "『分解』したユニットを元に戻すことは{00}できないので注意が必要です",
+   "scene": 2,
+   "order": 78,
+   "branch": true
+  },
+  {
+   "off": "0x1DAF",
+   "len": 19,
+   "text": "こうして得られた『パーツ』は……",
+   "scene": 2,
+   "order": 79,
+   "branch": true
+  },
+  {
+   "off": "0x1DCF",
+   "len": 29,
+   "text": "『改造』コマンドで新たなユニットを{00}開発する素材となります",
+   "scene": 2,
+   "order": 80,
+   "branch": true
+  },
+  {
+   "off": "0x1DEC",
+   "len": 18,
+   "text": "『改造』で新たに作り出したユニットは",
+   "scene": 2,
+   "order": 81,
+   "branch": true
+  },
+  {
+   "off": "0x1DFE",
+   "len": 35,
+   "text": "『MS開発』メニューの下にある{00}『系統図』で確認することができます",
+   "scene": 2,
+   "order": 82,
+   "branch": true
+  },
+  {
+   "off": "0x1E21",
+   "len": 17,
+   "text": "また、『改造』とは別に……",
+   "scene": 2,
+   "order": 83,
+   "branch": true
+  },
+  {
+   "off": "0x1E32",
+   "len": 27,
+   "text": "『強化』でユニットの能力を{00}上昇させることも可能です",
+   "scene": 2,
+   "order": 84,
+   "branch": true
+  },
+  {
+   "off": "0x1E4D",
+   "len": 33,
+   "text": "こちらの場合は補給ボイントを消費し{00}最大2段階までの強化が行えます",
+   "scene": 2,
+   "order": 85,
+   "branch": true
+  },
+  {
+   "off": "0x1E6E",
+   "len": 33,
+   "text": "これら『改造』や『強化』などを{00}活用し、部隊を増強することで、",
+   "scene": 2,
+   "order": 86,
+   "branch": true
+  },
+  {
+   "off": "0x1E8F",
+   "len": 29,
+   "text": "この先のステージをより楽に{00}進んでいくことができます",
+   "scene": 2,
+   "order": 87,
+   "branch": true
+  },
+  {
+   "off": "0x1EC0",
+   "len": 34,
+   "text": "高機動型ザクを『分解』して得られる{00}『高機動スラスター』を用いれば、",
+   "scene": 2,
+   "order": 88,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1EE2",
+   "len": 30,
+   "text": "『改造』でドム·バインニヒツを{00}入手することができる",
+   "scene": 2,
+   "order": 89,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1F00",
+   "len": 28,
+   "text": "この先を戦っていく上で{00}役にたつ戦力となるだろう",
+   "scene": 2,
+   "order": 90,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1F33",
+   "len": 10,
+   "text": "ん……なんだ？",
+   "scene": 2,
+   "order": 91,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1F58",
+   "len": 19,
+   "text": "シャア大佐！{00}レーダーに反応です！！",
+   "scene": 2,
+   "order": 92,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1F6B",
+   "len": 28,
+   "text": "連邦のパトロール艦隊が{00}こちらへと接近してきているもよう！",
+   "scene": 2,
+   "order": 93,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1FA2",
+   "len": 32,
+   "text": "パトロール艦隊か……演習の成果を{00}試すには都合の良い相手だな",
+   "scene": 2,
+   "order": 94,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1FC2",
+   "len": 19,
+   "text": "よし、マリガン！{00}シーマ中佐に連絡を！",
+   "scene": 2,
+   "order": 95,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1FD5",
+   "len": 30,
+   "text": "我々はこれより全隊をもって{00}連邦のパトロール艦隊を迎え撃つ！",
+   "scene": 2,
+   "order": 96,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x200E",
+   "len": 16,
+   "text": "はっ！{00}了解であります！！",
+   "scene": 2,
+   "order": 97,
+   "branch": true,
+   "speaker": 198
+  },
+  {
+   "off": "0x1578",
+   "len": 19,
+   "text": "くっ……{00}演習とはいえ、無様だな",
+   "scene": 2,
+   "order": 98,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x158B",
+   "len": 25,
+   "text": "すまない、シーマ中佐{00}もういちどやり直させてくれ",
+   "scene": 2,
+   "order": 99,
+   "branch": true,
+   "speaker": 91
+  },
+  {
+   "off": "0x1AB8",
+   "len": 13,
+   "text": "そうじゃないだろう！",
+   "scene": 2,
+   "order": 100,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1AC5",
+   "len": 16,
+   "text": "もういっかい、やり直しだよ！",
+   "scene": 2,
+   "order": 101,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x1AFA",
+   "len": 16,
+   "text": "今度はうまくやるんだよ！！",
+   "scene": 2,
+   "order": 102,
+   "branch": true,
+   "speaker": 78
+  },
+  {
+   "off": "0x112D",
+   "len": 15,
+   "text": "あいうえおかダチッツテ{01}",
+   "reachable": false,
+   "priming": true
+  },
+  {
+   "off": "0x2618",
+   "len": 12,
+   "text": "な、{00}？M貴キツ、",
+   "reachable": false
+  },
+  {
+   "off": "0x2B65",
+   "len": 25,
+   "text": "{00}M時『な、{00}{01}！き{00}Mスキツ、{00}{01}！そ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x2C7A",
+   "len": 29,
+   "text": "{00}M時『な、{00}{01}！、{00}！ト{00}M下キツ、{00}、M貴キツ、",
+   "reachable": false
+  },
+  {
+   "off": "0x3276",
+   "len": 15,
+   "text": "カメラ、！セ{00}！！{00}S、！",
+   "reachable": false
+  },
+  {
+   "off": "0x3298",
+   "len": 12,
+   "text": "カメラ、！{01}{00}Sド！",
+   "reachable": false
+  },
+  {
+   "off": "0x32B7",
+   "len": 14,
+   "text": "カメラ、M来重要、{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3309",
+   "len": 7,
+   "text": "カメラ、！",
+   "reachable": false
+  },
+  {
+   "off": "0x3311",
+   "len": 15,
+   "text": "カメラ、{01}·{00}！。{00}S{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x430A",
+   "len": 7,
+   "text": "）な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x43C2",
+   "len": 7,
+   "text": "{01}·{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x43CD",
+   "len": 78,
+   "text": "{01}·{01}！{01}{00}Mン1な、{00}{01}？{F0:4095}Sあ{01}·{00}Sエ{01}·{01}？{F0:4095}Sメ{01}·、？ップ？{F0:4095}Sモ{01}·、？ップ？{F0:4095}S来{01}·{01}？{F0:4095}Sい{01}·{01}？{F0:4095}Sう{01}·、Sデ！",
+   "reachable": false
+  },
+  {
+   "off": "0x4CFE",
+   "len": 25,
+   "text": "な、、』ぁな、！{01}{00}！ップ々？{F0:4095}！お{00}』！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D1A",
+   "len": 25,
+   "text": "な、、ぞぁな、！え{00}！{F0:4095}々？ップ！お{00}』！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D36",
+   "len": 24,
+   "text": "な、、よぁな、！え{00}！ップ々？ップ？{F0:4095}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D65",
+   "len": 6,
+   "text": "な、{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x4D90",
+   "len": 27,
+   "text": "な、、射ぁな、？超兵器？忠勇？{F0:4095}Mドそな、{01}。！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DB9",
+   "len": 34,
+   "text": "な、、目ぁな、？超兵器？忠勇？ップMドそな、{01}。！{01}{00}々？ガマ！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DE2",
+   "len": 34,
+   "text": "な、、回頭な、？超兵器？忠勇？ガマMドそな、{01}。！、{00}々？超兵器！",
+   "reachable": false
+  },
+  {
+   "off": "0x590E",
+   "len": 13,
+   "text": "これまでの戦い、ご苦労",
+   "reachable": false
+  },
+  {
+   "off": "0x591B",
+   "len": 32,
+   "text": "この「宇宙世紀ルート」を最後まで{00}遊んでくれて感謝する",
+   "reachable": false
+  },
+  {
+   "off": "0x593B",
+   "len": 31,
+   "text": "なお、ロンド·ベル隊の戦いは{00}ここでひとまず終了するが……",
+   "reachable": false
+  },
+  {
+   "off": "0x595A",
+   "len": 37,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続きを楽しんで欲しい",
+   "reachable": false
+  },
+  {
+   "off": "0x597F",
+   "len": 39,
+   "text": "また、本ルートを最後まで遊んでくれた{00}君には特別ステージも用意されている",
+   "reachable": false
+  },
+  {
+   "off": "0x59A6",
+   "len": 33,
+   "text": "我々とは別に戦いを続けていた{00}アークエンジェル隊との特別演習だ",
+   "reachable": false
+  },
+  {
+   "off": "0x59C7",
+   "len": 37,
+   "text": "彼らと戦い、君が育ててきた部隊の{00}強さを確かめてみるのも良いだろう",
+   "reachable": false
+  },
+  {
+   "off": "0x59EC",
+   "len": 37,
+   "text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
+   "reachable": false
+  },
+  {
+   "off": "0x5A11",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false
+  },
+  {
+   "off": "0x5A35",
+   "len": 21,
+   "text": "この先も最後まで{00}じっくり楽しんでほしい",
+   "reachable": false
+  },
+  {
+   "off": "0x5AAE",
+   "len": 31,
+   "text": "ここまで私のような頼りない艦長に{00}付き合ってくれて、ありがとう",
+   "reachable": false
+  },
+  {
+   "off": "0x5ACD",
+   "len": 30,
+   "text": "この「平成ガンダムルート」は{00}ここで終了となります",
+   "reachable": false
+  },
+  {
+   "off": "0x5AEB",
+   "len": 26,
+   "text": "もっとも、私たちプリベンターの{00}戦いは終わったけど……",
+   "reachable": false
+  },
+  {
+   "off": "0x5B05",
+   "len": 38,
+   "text": "…ゲーム自体はまだ続けることも可能よ{00}この後も引き続きゲームを楽しんでね",
+   "reachable": false
+  },
+  {
+   "off": "0x5B2B",
+   "len": 36,
+   "text": "最後までこのルートを遊んでくれた君に{00}新しいステージも用意されているわ",
+   "reachable": false
+  },
+  {
+   "off": "0x5B4F",
+   "len": 27,
+   "text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
+   "reachable": false
+  },
+  {
+   "off": "0x5B6A",
+   "len": 19,
+   "text": "…ロンド·ベル隊との特別演習よ",
+   "reachable": false
+  },
+  {
+   "off": "0x5B7D",
+   "len": 38,
+   "text": "フリーバトルで「特別演習」を選ぶと{00}彼らと戦うことができるわ",
+   "reachable": false
+  },
+  {
+   "off": "0x5BA3",
+   "len": 14,
+   "text": "ぜひ、挑戦してみてね",
+   "reachable": false
+  },
+  {
+   "off": "0x5BB1",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false
+  },
+  {
+   "off": "0x5BD5",
+   "len": 28,
+   "text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
+   "reachable": false
+  },
+  {
+   "off": "0x5C56",
+   "len": 16,
+   "text": "ドミニオン艦長{00}ナタル·バジルール中佐だ",
+   "reachable": false
+  },
+  {
+   "off": "0x5C66",
+   "len": 34,
+   "text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
+   "reachable": false
+  },
+  {
+   "off": "0x5C88",
+   "len": 34,
+   "text": "貴君の協力により、ついに我々は{00}最後まで戦い抜くことができた",
+   "reachable": false
+  },
+  {
+   "off": "0x5CAA",
+   "len": 22,
+   "text": "この「ライバル·ルート」は{00}ここで終了だ",
+   "reachable": false
+  },
+  {
+   "off": "0x5CC0",
+   "len": 25,
+   "text": "もっとも、我々ドミニオン隊の戦いは{00}ここで終了したが……",
+   "reachable": false
+  },
+  {
+   "off": "0x5CD9",
+   "len": 36,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続き楽しんで欲しい",
+   "reachable": false
+  },
+  {
+   "off": "0x5CFD",
+   "len": 43,
+   "text": "フリーバトルはこの後も続けられるし、{00}また、「特別演習」を選ぶことで…",
+   "reachable": false
+  },
+  {
+   "off": "0x5D28",
+   "len": 30,
+   "text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
+   "reachable": false
+  },
+  {
+   "off": "0x5D46",
+   "len": 37,
+   "text": "貴君ならばきっと、彼らとの戦いにも{00}勝利をおさめられると私は信じている",
+   "reachable": false
+  },
+  {
+   "off": "0x5D6B",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false
+  },
+  {
+   "off": "0x5D8F",
+   "len": 16,
+   "text": "この後も貴君の健闘を祈る",
+   "reachable": false
+  }
+ ]
+}

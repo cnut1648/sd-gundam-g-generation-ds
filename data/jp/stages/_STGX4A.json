@@ -1,0 +1,2572 @@
+{
+ "_generated": {
+  "tool": "build/extract_data_from_game.py",
+  "schema": 1,
+  "rom_sha1": "12443b91297a57bcd2ace8da989c26ae635a79fd",
+  "note": "machine-generated JP ground truth; regenerate, never edit"
+ },
+ "file": "_STGX4A.bin",
+ "size": 39904,
+ "descriptors": [
+  {
+   "index": 61,
+   "record": "0x1761C4",
+   "file": "_STGX4A.bin",
+   "label": "X4a",
+   "title": "モノアイガンダムズ",
+   "brief_off": "0x19A705"
+  }
+ ],
+ "briefing": [
+  {
+   "off": "0x19A754",
+   "len": 31,
+   "text": "本部からエゥーゴの別働隊が敵部隊と{00}交戦中との情報が入りました",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A773",
+   "len": 27,
+   "text": "こちらの部隊もまた、{00}我々と同様敵新型機を奪取し、",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A78E",
+   "len": 25,
+   "text": "その帰路、ティターンズの{00}追撃を愛けたもようです",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A7CF",
+   "len": 25,
+   "text": "別働隊とはいえ友軍の危機を{00}放置してはおけない",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A7E8",
+   "len": 29,
+   "text": "今回の作戦は、この友軍部隊の救援が{00}主な目的となる",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A805",
+   "len": 20,
+   "text": "……トーレス{00}敵部隊について説明してくれ",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A841",
+   "len": 7,
+   "text": "……はい",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A848",
+   "len": 37,
+   "text": "現在、友軍部隊を襲撃中の敵部隊は……{00}グリプス防衛に配置されたMS部隊です",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A86D",
+   "len": 28,
+   "text": "主力はハイ·ザックと呼ばれる{00}量産型MSで……",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A889",
+   "len": 26,
+   "text": "これに若干の改良型や高性能機が{00}同行しています",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A8CB",
+   "len": 30,
+   "text": "敵戦力はこの前グリプスで戦った{00}奴らとほぼ同じと考えていい",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A8E9",
+   "len": 24,
+   "text": "ただし、戦いなれた相手とはいえ{00}油断は禁物だ",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  },
+  {
+   "off": "0x19A901",
+   "len": 35,
+   "text": "味方部隊の命もかかってるからな{00}慎重に事をすすめてくれよ！",
+   "briefing": true,
+   "descs": [
+    61
+   ]
+  }
+ ],
+ "blocks": [
+  {
+   "off": "0x13AE",
+   "len": 11,
+   "text": "うわぁぁぁっ！！",
+   "scene": 2,
+   "order": 0,
+   "branch": true
+  },
+  {
+   "off": "0x13E8",
+   "len": 15,
+   "text": "気をつけろっ！{00}来たぞ！",
+   "scene": 2,
+   "order": 1,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x141C",
+   "len": 15,
+   "text": "邪魔なんだよ……キミたち",
+   "scene": 2,
+   "order": 2,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1442",
+   "len": 21,
+   "text": "これで侵入者は{00}あらかた片付いた……",
+   "scene": 2,
+   "order": 3,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1457",
+   "len": 20,
+   "text": "あとはキミだけだよ{00}……シグ·ウェドナー",
+   "scene": 2,
+   "order": 4,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1486",
+   "len": 9,
+   "text": "……ちっ！！",
+   "scene": 2,
+   "order": 5,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x14B4",
+   "len": 11,
+   "text": "アイン·レヴィっ！！",
+   "scene": 2,
+   "order": 6,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x14EE",
+   "len": 28,
+   "text": "やだなあ、何をそんなに怒ってるんです{00}シグ·ウェドナー？",
+   "scene": 2,
+   "order": 7,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1514",
+   "len": 31,
+   "text": "君たちがそのシスクードを{00}盗らなければこうはならなかったのに",
+   "scene": 2,
+   "order": 8,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1562",
+   "len": 11,
+   "text": "なぜだ、アイン……",
+   "scene": 2,
+   "order": 9,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1577",
+   "len": 32,
+   "text": "なぜ、俺たちを連邦に売った！？{00}そのせいでセラは……！！",
+   "scene": 2,
+   "order": 10,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x15BC",
+   "len": 27,
+   "text": "ふうん、仲間を殺されたことは{00}どうでもいいの？",
+   "scene": 2,
+   "order": 11,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x15E1",
+   "len": 14,
+   "text": "冷たい人だなあ、キミは",
+   "scene": 2,
+   "order": 12,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1614",
+   "len": 13,
+   "text": "答えろ！{01}アインっ！！",
+   "scene": 2,
+   "order": 13,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1646",
+   "len": 12,
+   "text": "困った人だな……",
+   "scene": 2,
+   "order": 14,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x165C",
+   "len": 34,
+   "text": "たかだか人形ひとつ壊したくらいで{00}そんなに頭に血を上らせて……",
+   "scene": 2,
+   "order": 15,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x16AD",
+   "len": 10,
+   "text": "……貴様っ！！",
+   "scene": 2,
+   "order": 16,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x16E6",
+   "len": 28,
+   "text": "やれやれ……これじゃあ{00}ゆっくり話もできないじゃないか",
+   "scene": 2,
+   "order": 17,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x170C",
+   "len": 24,
+   "text": "まあ、そんなに戦いたいんなら{00}いいけどね……",
+   "scene": 2,
+   "order": 18,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1753",
+   "len": 17,
+   "text": "付き合ってあげるよ、キミに！！",
+   "scene": 2,
+   "order": 19,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1793",
+   "len": 12,
+   "text": "ちっ……その程度！",
+   "scene": 2,
+   "order": 20,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x179F",
+   "len": 20,
+   "text": "セラの仇、取らせてもらうぞ！！",
+   "scene": 2,
+   "order": 21,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x17D8",
+   "len": 17,
+   "text": "クソッ！{00}こんな…ところで……！！",
+   "scene": 2,
+   "order": 22,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1818",
+   "len": 12,
+   "text": "きゃぁぁぁぁっ！！",
+   "scene": 2,
+   "order": 23,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x82F2",
+   "len": 20,
+   "text": "うおっ！{00}しっ、しまった……！！",
+   "scene": 2,
+   "order": 24,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x1B50",
+   "len": 8,
+   "text": "っ……！！",
+   "scene": 2,
+   "order": 25,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1B84",
+   "len": 15,
+   "text": "これで終わりだ、アイン！！",
+   "scene": 2,
+   "order": 26,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1BD2",
+   "len": 9,
+   "text": "『マスター！！』",
+   "scene": 2,
+   "order": 27,
+   "branch": true
+  },
+  {
+   "off": "0x1C00",
+   "len": 13,
+   "text": "ご無事ですか、マスター",
+   "scene": 2,
+   "order": 28,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1C28",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 29,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1C4C",
+   "len": 8,
+   "text": "……マスター？",
+   "scene": 2,
+   "order": 30,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1C6F",
+   "len": 28,
+   "text": "勝手な真似を……！{00}誰がこんなことをしろと言った？",
+   "scene": 2,
+   "order": 31,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1CA6",
+   "len": 13,
+   "text": "マスターが危険でしたので",
+   "scene": 2,
+   "order": 32,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1CE5",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 33,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1D0F",
+   "len": 8,
+   "text": "な……！？",
+   "scene": 2,
+   "order": 34,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1D38",
+   "len": 8,
+   "text": "まさか……！",
+   "scene": 2,
+   "order": 35,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1D65",
+   "len": 18,
+   "text": "セラ！！{00}セラなのか、君は！？",
+   "scene": 2,
+   "order": 36,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1D98",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 37,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1DA1",
+   "len": 17,
+   "text": "……いいえ{00}私はセレイン·イクスベリ……",
+   "scene": 2,
+   "order": 38,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1DD7",
+   "len": 14,
+   "text": "マスター·アインにお仕えする者",
+   "scene": 2,
+   "order": 39,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1DFC",
+   "len": 28,
+   "text": "やめてくれ、セラ！！{00}俺のことがわからないのか！？",
+   "scene": 2,
+   "order": 40,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1E47",
+   "len": 21,
+   "text": "マスターに危害を加える者……{00}排除します",
+   "scene": 2,
+   "order": 41,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1E8B",
+   "len": 12,
+   "text": "やめろ！{01}セレイン！！",
+   "scene": 2,
+   "order": 42,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1EC3",
+   "len": 10,
+   "text": "っ！{01}マスター！？",
+   "scene": 2,
+   "order": 43,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1EFC",
+   "len": 7,
+   "text": "マスター……",
+   "scene": 2,
+   "order": 44,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1F1E",
+   "len": 26,
+   "text": "言ったはずだよ……ボクは{00}勝手な真似をするなと",
+   "scene": 2,
+   "order": 45,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1F53",
+   "len": 28,
+   "text": "ですが、あのままでは{00}マスターが危険になると判断して……",
+   "scene": 2,
+   "order": 46,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x1F8A",
+   "len": 26,
+   "text": "判断……？{00}誰がお前に判断しろなんて言った！？",
+   "scene": 2,
+   "order": 47,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1FA4",
+   "len": 25,
+   "text": "お前は下がってサボートに{00}専念してればいいんだ！",
+   "scene": 2,
+   "order": 48,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x1FD8",
+   "len": 9,
+   "text": "……了解です",
+   "scene": 2,
+   "order": 49,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x2006",
+   "len": 29,
+   "text": "ふふ……どうだい、シグ{00}かつての恋人と再会した気分は？",
+   "scene": 2,
+   "order": 50,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x203E",
+   "len": 21,
+   "text": "アイン……！{00}貴様、セラに何をした！？",
+   "scene": 2,
+   "order": 51,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x206E",
+   "len": 36,
+   "text": "おや……嬉しくないのかい、シグ？{00}昔の恋人が生きていたというのに",
+   "scene": 2,
+   "order": 52,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x20AD",
+   "len": 19,
+   "text": "俺は何をしたと聞いてるんだ！！",
+   "scene": 2,
+   "order": 53,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x20DB",
+   "len": 31,
+   "text": "アレには、アレにふさわしい姿に{00}なってもらっただけのことさ",
+   "scene": 2,
+   "order": 54,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x20FA",
+   "len": 27,
+   "text": "……言っただろう、さっきも？{00}アレはただの人形だって",
+   "scene": 2,
+   "order": 55,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2130",
+   "len": 9,
+   "text": "……なっ！？",
+   "scene": 2,
+   "order": 56,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2154",
+   "len": 9,
+   "text": "……人形！？",
+   "scene": 2,
+   "order": 57,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x2178",
+   "len": 33,
+   "text": "アレには心も意思も必要ない{00}ただ、機能さえあればそれでいい",
+   "scene": 2,
+   "order": 58,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2199",
+   "len": 17,
+   "text": "……そう！{00}こんな風にね！！",
+   "scene": 2,
+   "order": 59,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x21CF",
+   "len": 8,
+   "text": "……っ！？",
+   "scene": 2,
+   "order": 60,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x21F2",
+   "len": 14,
+   "text": "気をつけて、シグ中尉！",
+   "scene": 2,
+   "order": 61,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x222C",
+   "len": 28,
+   "text": "セレイン·イクスベリという道具を{00}使って初めて可能になる……",
+   "scene": 2,
+   "order": 62,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2248",
+   "len": 18,
+   "text": "これが、デスパーダのもう一つの力だ！",
+   "scene": 2,
+   "order": 63,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x227F",
+   "len": 13,
+   "text": "くっ！{00}迎撃を……！",
+   "scene": 2,
+   "order": 64,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x22BB",
+   "len": 11,
+   "text": "……遅いよ！！",
+   "scene": 2,
+   "order": 65,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x22F5",
+   "len": 8,
+   "text": "なにっ！？",
+   "scene": 2,
+   "order": 66,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x232C",
+   "len": 22,
+   "text": "ふふ……{00}さっきとは立場が逆になったね",
+   "scene": 2,
+   "order": 67,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x235D",
+   "len": 24,
+   "text": "……どういうことだ？{00}ャツの反応速度がいきなり……",
+   "scene": 2,
+   "order": 68,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2390",
+   "len": 33,
+   "text": "兄弟機といっても所詮シスクードは{00}オールドタイプでも使える汎用型……",
+   "scene": 2,
+   "order": 69,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x23B1",
+   "len": 31,
+   "text": "ニュータイプ専用に開発された{00}デスパーダとは機能が格段に違うのさ",
+   "scene": 2,
+   "order": 70,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x23D0",
+   "len": 18,
+   "text": "さて……{00}これでさよならだね、シグ",
+   "scene": 2,
+   "order": 71,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x23E2",
+   "len": 25,
+   "text": "あの女への幻想を抱いたまま{00}逝くといい！",
+   "scene": 2,
+   "order": 72,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2427",
+   "len": 25,
+   "text": "……シグ中尉！！{00}私が援護するから下がって！",
+   "scene": 2,
+   "order": 73,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x245B",
+   "len": 26,
+   "text": "いや……まだだ！{00}俺はこの手でャツを倒す！！",
+   "scene": 2,
+   "order": 74,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2490",
+   "len": 26,
+   "text": "そのダメージで無茶よ！{00}冷静になって、シグ中尉！！",
+   "scene": 2,
+   "order": 75,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x24C5",
+   "len": 23,
+   "text": "お前に何がわかる！！{00}ャツはセラを……！",
+   "scene": 2,
+   "order": 76,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2515",
+   "len": 12,
+   "text": "……わかるわよ！！",
+   "scene": 2,
+   "order": 77,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x2521",
+   "len": 26,
+   "text": "セラさんのことなら{00}私だって、知ってるもの！！",
+   "scene": 2,
+   "order": 78,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x253B",
+   "len": 25,
+   "text": "シグが彼女のことを{00}好きだったってことも！！",
+   "scene": 2,
+   "order": 79,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x256F",
+   "len": 8,
+   "text": "……っ！？",
+   "scene": 2,
+   "order": 80,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2592",
+   "len": 16,
+   "text": "忘れてしまったの、シグ！？",
+   "scene": 2,
+   "order": 81,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x265D",
+   "len": 18,
+   "text": "君は……！{00}まさか、ミアンなのか？",
+   "scene": 2,
+   "order": 82,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2694",
+   "len": 18,
+   "text": "……覚えてくれてたんだね、シグ",
+   "scene": 2,
+   "order": 83,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x26CB",
+   "len": 26,
+   "text": "まさか、ブラード隊長の{00}娘さんまで現れるとはね……",
+   "scene": 2,
+   "order": 84,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x26E5",
+   "len": 17,
+   "text": "これじゃあ本当に同窓会だ",
+   "scene": 2,
+   "order": 85,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2711",
+   "len": 24,
+   "text": "アイン·レヴィ……{00}アナタにシグは倒させないわ",
+   "scene": 2,
+   "order": 86,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x2744",
+   "len": 12,
+   "text": "ミアン！{00}俺は……！",
+   "scene": 2,
+   "order": 87,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x276B",
+   "len": 30,
+   "text": "……お願い、シグ{00}今だけでいいから私の言うことを聞いて",
+   "scene": 2,
+   "order": 88,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x2789",
+   "len": 32,
+   "text": "ここで倒れてしまったら{00}何にもならないでしょう？{01}だから……",
+   "scene": 2,
+   "order": 89,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x27C4",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 90,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x27CD",
+   "len": 12,
+   "text": "……わかった、ミアン",
+   "scene": 2,
+   "order": 91,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x27D9",
+   "len": 33,
+   "text": "ここは大人しく退く……それでいいな？{00}脱出ボイントを指示してくれ",
+   "scene": 2,
+   "order": 92,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x281F",
+   "len": 27,
+   "text": "こっちに……！{00}ここまで逃げ切れれば……なんとか！",
+   "scene": 2,
+   "order": 93,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x283A",
+   "len": 31,
+   "text": "味方の戦艦が近くまで来てるって{00}さっき通信があったから……",
+   "scene": 2,
+   "order": 94,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x2874",
+   "len": 8,
+   "text": "……了解だ",
+   "scene": 2,
+   "order": 95,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x28D2",
+   "len": 14,
+   "text": "じゃあ行こう！{01}シグ！！",
+   "scene": 2,
+   "order": 96,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x28A1",
+   "len": 19,
+   "text": "後は貴様だけだ！{00}アイン·レヴィ！！",
+   "scene": 2,
+   "order": 97,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1853",
+   "len": 9,
+   "text": "……なんだ？",
+   "scene": 2,
+   "order": 98,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1881",
+   "len": 17,
+   "text": "い、いた……{00}ようやく味方が……",
+   "scene": 2,
+   "order": 99,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x18AD",
+   "len": 11,
+   "text": "別働隊の生き残りか？",
+   "scene": 2,
+   "order": 100,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x18D3",
+   "len": 9,
+   "text": "あっ、はい！",
+   "scene": 2,
+   "order": 101,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x18DC",
+   "len": 22,
+   "text": "突入隊のシグ·ウェドナー中尉ですね{00}私は……",
+   "scene": 2,
+   "order": 102,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x190D",
+   "len": 26,
+   "text": "……自己紹介をしている{00}ヒマがあったら下がれ！",
+   "scene": 2,
+   "order": 103,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1942",
+   "len": 7,
+   "text": "……へ？",
+   "scene": 2,
+   "order": 104,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1964",
+   "len": 25,
+   "text": "後退しろと言ってるんだ{00}早く行け……死ぬぞ",
+   "scene": 2,
+   "order": 105,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1998",
+   "len": 28,
+   "text": "ちょ、ちょっとまってください！{00}下がれって……中尉は！？",
+   "scene": 2,
+   "order": 106,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x19CF",
+   "len": 11,
+   "text": "俺はャツを倒す",
+   "scene": 2,
+   "order": 107,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x19F5",
+   "len": 22,
+   "text": "そんなの無茶よ！{00}だって、敵があんなに……！",
+   "scene": 2,
+   "order": 108,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1A26",
+   "len": 11,
+   "text": "大した数じゃない",
+   "scene": 2,
+   "order": 109,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1A6A",
+   "len": 10,
+   "text": "あっ、ちょっと！？",
+   "scene": 2,
+   "order": 110,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1A74",
+   "len": 8,
+   "text": "……もう！",
+   "scene": 2,
+   "order": 111,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1AA1",
+   "len": 20,
+   "text": "……俺は{00}下がれと言ったはずだが？",
+   "scene": 2,
+   "order": 112,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1AD0",
+   "len": 32,
+   "text": "シグ中尉一人を置いて{00}逃げられるわけないじゃないですか！",
+   "scene": 2,
+   "order": 113,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1AF0",
+   "len": 13,
+   "text": "私も一緒に戦います！",
+   "scene": 2,
+   "order": 114,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x1B18",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 115,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1B21",
+   "len": 10,
+   "text": "……好きにしろ",
+   "scene": 2,
+   "order": 116,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x28FE",
+   "len": 23,
+   "text": "こちらアーガマのヘンケン中佐だ！{00}そちらは無事か！？",
+   "scene": 2,
+   "order": 117,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x293A",
+   "len": 26,
+   "text": "こちらシグ·ウェドナー中尉{00}現在、敵の追撃を愛けている",
+   "scene": 2,
+   "order": 118,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x296F",
+   "len": 12,
+   "text": "シグ·ウェドナーだと！？",
+   "scene": 2,
+   "order": 119,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2996",
+   "len": 11,
+   "text": "……シャア大佐！？",
+   "scene": 2,
+   "order": 120,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x29C6",
+   "len": 17,
+   "text": "まさか、邪魔が入るとはね……",
+   "scene": 2,
+   "order": 121,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x29D7",
+   "len": 24,
+   "text": "ま、今日のところはいいや{00}……退くよ、セレイン",
+   "scene": 2,
+   "order": 122,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2A0A",
+   "len": 9,
+   "text": "イエス……マスター",
+   "scene": 2,
+   "order": 123,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x2A38",
+   "len": 9,
+   "text": "……アイン！？",
+   "scene": 2,
+   "order": 124,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2A66",
+   "len": 22,
+   "text": "今日のところは{00}顔見せというところかな？",
+   "scene": 2,
+   "order": 125,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2A7C",
+   "len": 26,
+   "text": "キミたちの相手は{00}彼らにしてもらうことにしよう",
+   "scene": 2,
+   "order": 126,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2ABB",
+   "len": 26,
+   "text": "生き延びてたらまた会おう、シグ{00}……それじゃあ",
+   "scene": 2,
+   "order": 127,
+   "branch": true,
+   "speaker": 5
+  },
+  {
+   "off": "0x2AFA",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 128,
+   "branch": true,
+   "speaker": 123
+  },
+  {
+   "off": "0x2B28",
+   "len": 7,
+   "text": "アイン……",
+   "scene": 2,
+   "order": 129,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2B54",
+   "len": 23,
+   "text": "シグ·ウェドナー……{00}まさか君がエゥーゴにいたとはな",
+   "scene": 2,
+   "order": 130,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2B6B",
+   "len": 12,
+   "text": "それにあのモビルスーツ……",
+   "scene": 2,
+   "order": 131,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2B77",
+   "len": 23,
+   "text": "アインというのは{00}あのアイン·レヴィのことか？",
+   "scene": 2,
+   "order": 132,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2BA9",
+   "len": 19,
+   "text": "……ああ{00}ャツはセラの……仇だ",
+   "scene": 2,
+   "order": 133,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2BD7",
+   "len": 9,
+   "text": "……なに！？",
+   "scene": 2,
+   "order": 134,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2C05",
+   "len": 25,
+   "text": "クワトロ大尉！{00}昔話は後だ！{01}敵が迫っている！",
+   "scene": 2,
+   "order": 135,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2C39",
+   "len": 12,
+   "text": "む……そうだったな",
+   "scene": 2,
+   "order": 136,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2C4F",
+   "len": 15,
+   "text": "シグ中尉はまだ戦えるか？",
+   "scene": 2,
+   "order": 137,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2C79",
+   "len": 12,
+   "text": "ああ、俺なら大丈夫だ",
+   "scene": 2,
+   "order": 138,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2CA0",
+   "len": 13,
+   "text": "では、敵を迎え撃つ！",
+   "scene": 2,
+   "order": 139,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2CAD",
+   "len": 17,
+   "text": "ヘンケン艦長！{00}モビルスーツ隊の発進を！",
+   "scene": 2,
+   "order": 140,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2CD9",
+   "len": 11,
+   "text": "おう、了解だ！！",
+   "scene": 2,
+   "order": 141,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2CEE",
+   "len": 25,
+   "text": "全機、ただちに発進！{00}ティターンズのMSを迎え撃て！",
+   "scene": 2,
+   "order": 142,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2D2C",
+   "len": 14,
+   "text": "敵部隊、反応ありません！",
+   "scene": 2,
+   "order": 143,
+   "branch": true,
+   "speaker": 140
+  },
+  {
+   "off": "0x2D55",
+   "len": 21,
+   "text": "よし！{00}新手が来ないうちに引き上げるぞ！",
+   "scene": 2,
+   "order": 144,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2D6A",
+   "len": 11,
+   "text": "全部隊、撤収だ！",
+   "scene": 2,
+   "order": 145,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x882A",
+   "len": 11,
+   "text": "シグ·ウェドナー……か",
+   "scene": 2,
+   "order": 146,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2D9A",
+   "len": 13,
+   "text": "エゥーゴ本部からの通達だ",
+   "scene": 2,
+   "order": 147,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2DA7",
+   "len": 33,
+   "text": "シグ·ウェドナー中尉はアーガマに合流{00}以後、行動を共にせよとのことだ",
+   "scene": 2,
+   "order": 148,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2DE3",
+   "len": 24,
+   "text": "例のシグ中尉が奪取したという{00}新型機は？",
+   "scene": 2,
+   "order": 149,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2E16",
+   "len": 15,
+   "text": "運用はこちらに任せるそうだ",
+   "scene": 2,
+   "order": 150,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2E25",
+   "len": 32,
+   "text": "ガンダムmkⅡもあるし、{00}性能評価にはちょうどいいだろう",
+   "scene": 2,
+   "order": 151,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2E4F",
+   "len": 15,
+   "text": "シグ中尉もそれでいいな？",
+   "scene": 2,
+   "order": 152,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x2E79",
+   "len": 10,
+   "text": "……異存はない",
+   "scene": 2,
+   "order": 153,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2E83",
+   "len": 25,
+   "text": "あの新型と行動を共にできるなら{00}かえって好都合だ",
+   "scene": 2,
+   "order": 154,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2EB7",
+   "len": 8,
+   "text": "シグ中尉？",
+   "scene": 2,
+   "order": 155,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2EDA",
+   "len": 25,
+   "text": "あのシスクードとかいうMSには{00}アインも関わっていた",
+   "scene": 2,
+   "order": 156,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2EF3",
+   "len": 25,
+   "text": "奴は必ず、あのMSを取り返しに{00}現れるはずだ",
+   "scene": 2,
+   "order": 157,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2F27",
+   "len": 9,
+   "text": "……シグ中尉",
+   "scene": 2,
+   "order": 158,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2F30",
+   "len": 25,
+   "text": "以前の君たちに{00}何があったかはわからぬが……",
+   "scene": 2,
+   "order": 159,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2F64",
+   "len": 18,
+   "text": "……知らないなら黙っててくれ",
+   "scene": 2,
+   "order": 160,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2F76",
+   "len": 16,
+   "text": "これは俺と奴の間の問題だ",
+   "scene": 2,
+   "order": 161,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2FA1",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 162,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2FAA",
+   "len": 34,
+   "text": "……先ほどの白いMSに乗っていた{00}パイロットが関係しているのか？",
+   "scene": 2,
+   "order": 163,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x2FE7",
+   "len": 18,
+   "text": "……今は昔話をする気分じゃない",
+   "scene": 2,
+   "order": 164,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x2FF9",
+   "len": 25,
+   "text": "用はそれだけか？{00}だったら、部屋に戻らせてもらうぞ",
+   "scene": 2,
+   "order": 165,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x3073",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 166,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x307C",
+   "len": 24,
+   "text": "なんともまあ……{00}扱いにくい男だな、彼は",
+   "scene": 2,
+   "order": 167,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x30AF",
+   "len": 8,
+   "text": "昔話……か",
+   "scene": 2,
+   "order": 168,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x30D2",
+   "len": 8,
+   "text": "……うん？",
+   "scene": 2,
+   "order": 169,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x30F5",
+   "len": 21,
+   "text": "……セレイン·イクスベリ{00}彼のパートナーだった女性だ",
+   "scene": 2,
+   "order": 170,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x3125",
+   "len": 11,
+   "text": "それが……何か？",
+   "scene": 2,
+   "order": 171,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x314B",
+   "len": 27,
+   "text": "あの白いMSのパイロットも{00}セレインと呼ばれていた……",
+   "scene": 2,
+   "order": 172,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x3166",
+   "len": 29,
+   "text": "それも含めて彼は“昔話\"と{00}言ったのだろうか？",
+   "scene": 2,
+   "order": 173,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x3183",
+   "len": 13,
+   "text": "だとしたら、彼は……",
+   "scene": 2,
+   "order": 174,
+   "branch": true,
+   "speaker": 94
+  },
+  {
+   "off": "0x31AB",
+   "len": 10,
+   "text": "……クワトロ大尉？",
+   "scene": 2,
+   "order": 175,
+   "branch": true,
+   "speaker": 194
+  },
+  {
+   "off": "0x31E9",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 176,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x321E",
+   "len": 11,
+   "text": "あ、シグ……中尉",
+   "scene": 2,
+   "order": 177,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x3244",
+   "len": 10,
+   "text": "……ミアン、君か",
+   "scene": 2,
+   "order": 178,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x3269",
+   "len": 22,
+   "text": "えっと、あの、その……{00}久しぶり……だね？",
+   "scene": 2,
+   "order": 179,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x329A",
+   "len": 27,
+   "text": "さっきの戦闘から{00}大して時間もたってないはずだが？",
+   "scene": 2,
+   "order": 180,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x32D0",
+   "len": 11,
+   "text": "そうじゃなくて！",
+   "scene": 2,
+   "order": 181,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x32DB",
+   "len": 24,
+   "text": "戦争終わってから{00}しばらくだったねってこと！！",
+   "scene": 2,
+   "order": 182,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x330E",
+   "len": 14,
+   "text": "……そうかもしれないな",
+   "scene": 2,
+   "order": 183,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x3337",
+   "len": 11,
+   "text": "あのさ、シグ……",
+   "scene": 2,
+   "order": 184,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x3342",
+   "len": 31,
+   "text": "わたし、シグやアインたちの間に{00}何があったか知らないけど……",
+   "scene": 2,
+   "order": 185,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x337C",
+   "len": 17,
+   "text": "……知らないならその方がいい",
+   "scene": 2,
+   "order": 186,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x33A8",
+   "len": 26,
+   "text": "で、でも！{00}シグ、そんなに辛そうな顔して……",
+   "scene": 2,
+   "order": 187,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x33DD",
+   "len": 20,
+   "text": "……だったら、{00}一人にしてくれないか？",
+   "scene": 2,
+   "order": 188,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x33F1",
+   "len": 21,
+   "text": "昔の知り合いの顔を見るのは堪える",
+   "scene": 2,
+   "order": 189,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x3421",
+   "len": 6,
+   "text": "あ……",
+   "scene": 2,
+   "order": 190,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x3427",
+   "len": 13,
+   "text": "ご、ごめん……なさい",
+   "scene": 2,
+   "order": 191,
+   "branch": true,
+   "speaker": 202
+  },
+  {
+   "off": "0x347E",
+   "len": 9,
+   "text": "………………",
+   "scene": 2,
+   "order": 192,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x34AF",
+   "len": 22,
+   "text": "くそっ！{00}何をやってるんだ、俺は……！",
+   "scene": 2,
+   "order": 193,
+   "branch": true,
+   "speaker": 87
+  },
+  {
+   "off": "0x1358",
+   "len": 97,
+   "text": "{00}ゃ{00}3{00}だ{00}ェ{00}>{00}死{00}{01}{01}官{00}{01}{01}艦{00}{01}{01}艦{00}{01}{01}Sぁあいうえおかダチッツテ{01}デ、トドナ。ネハバパ·々ビベブミメちっつぞて·{00}！機{01}M中たな、{00}{01}！国{00}Mツぞな、{00}{01}ぁうわぁぁぁっ！！",
+   "reachable": false
+  },
+  {
+   "off": "0x1375",
+   "len": 68,
+   "text": "あいうえおかダチッツテ{01}デ、トドナ。ネハバパ·々ビベブミメちっつぞて·{00}！機{01}M中たな、{00}{01}！国{00}Mツぞな、{00}{01}ぁうわぁぁぁっ！！",
+   "reachable": false,
+   "priming": true
+  },
+  {
+   "off": "0x1A38",
+   "len": 13,
+   "text": "がな、{00}、M@たな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3034",
+   "len": 36,
+   "text": "がな、{00}、！く{00}MDつな、{00}{01}！{01}{00}！縛{00}Mぁがな、{00}、Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x304B",
+   "len": 13,
+   "text": "がな、{00}、Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x31BF",
+   "len": 51,
+   "text": "がな、{00}、！そ{00}！ず{00}！ガ{00}M掴な、{00}。！ガ{00}M中たな、{00}{01}！ず{00}Mツぞな、{00}{01}ぁ………………",
+   "reachable": false
+  },
+  {
+   "off": "0x3456",
+   "len": 13,
+   "text": "がな、{00}、Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x348E",
+   "len": 13,
+   "text": "がな、{00}、Mナだな、",
+   "reachable": false
+  },
+  {
+   "off": "0x35F0",
+   "len": 23,
+   "text": "がな、{00}、！2{00}MDつな、{00}{01}Mオレな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3688",
+   "len": 52,
+   "text": "がな、{00}、！、{00}！？{00}！（{00}M避かな、{01}、！！{00}！』{00}M避かな、{01}、！、{00}M当ぬな、{00}·M！<ど、",
+   "reachable": false
+  },
+  {
+   "off": "0x388C",
+   "len": 42,
+   "text": "がな、{00}、！、{00}！？{00}！…{00}！き{00}M連じな、{00}·！そ{00}Mよだな、{00}{01}M射もな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3941",
+   "len": 13,
+   "text": "がな、{00}、Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3A18",
+   "len": 12,
+   "text": "がな、{00}、！、{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3A81",
+   "len": 32,
+   "text": "がな、{00}、！、{00}！·{00}！』{00}！、{00}M連じな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3C0F",
+   "len": 89,
+   "text": "がな、{00}、！、{00}！（{00}！！{00}Mラなな、{01}、！』{00}！·{00}M避かな、{01}、！ろ{00}M先のな、{01}·！{01}{00}々！、{00}？{01}{00}M私とな、{00}、？{01}{00}Mげくな、{00}{01}？{01}{00}Mセきな、{00}{01}Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3CB2",
+   "len": 52,
+   "text": "がな、{00}、！·{00}！き{00}！ろ{00}M3ばな、{00}。！·{00}！き{00}Mはぞな、{00}、！そ{00}MDつな、{00}{01}M我高、",
+   "reachable": false
+  },
+  {
+   "off": "0x3D04",
+   "len": 12,
+   "text": "がな、{00}、！·{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3DCD",
+   "len": 32,
+   "text": "がな、{00}、！S{00}！{01}{00}Mサぞな、{00}、！せ{00}M{SLOT:3324}な、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x3E24",
+   "len": 46,
+   "text": "がな、{00}、！、{00}Mちとな、{01}{01}！{01}{00}々！ど{00}MDつな、{00}{01}！{01}{00}！ろ{00}Mぁがな、{00}、！",
+   "reachable": false
+  },
+  {
+   "off": "0x3E49",
+   "len": 9,
+   "text": "がな、{00}、！",
+   "reachable": false
+  },
+  {
+   "off": "0x3F6A",
+   "len": 52,
+   "text": "がな、{00}、！·{00}！き{00}！せ{00}M3ばな、{00}。！そ{00}MDつな、{00}{01}！{01}{00}！ク{00}Mぁがな、{00}、Mナだな、",
+   "reachable": false
+  },
+  {
+   "off": "0x3F91",
+   "len": 13,
+   "text": "がな、{00}、Mナだな、",
+   "reachable": false
+  },
+  {
+   "off": "0x40E1",
+   "len": 29,
+   "text": "がな、{00}、！、{00}！、{00}！せ{00}M3ばな、{00}。Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4155",
+   "len": 39,
+   "text": "がな、{00}、！·{00}！き{00}！、{00}M3ばな、{00}。！S{00}Mよだな、{00}{01}Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x41BC",
+   "len": 13,
+   "text": "がな、{00}、M中ちな、",
+   "reachable": false
+  },
+  {
+   "off": "0x42E4",
+   "len": 41,
+   "text": "がな、{00}、！·{00}！き{00}！ろ{00}M3ばな、{00}。！{01}{00}！ェ{00}Mぁがな、{00}、！·{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4301",
+   "len": 12,
+   "text": "がな、{00}、！·{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4401",
+   "len": 52,
+   "text": "がな、{00}、！·{00}！、{00}！き{00}M3ばな、{00}。！く{00}MDつな、{00}{01}！{01}{00}！リ{00}Mぁがな、{00}、Mナだな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4428",
+   "len": 13,
+   "text": "がな、{00}、Mナだな、",
+   "reachable": false
+  },
+  {
+   "off": "0x448F",
+   "len": 52,
+   "text": "がな、{00}、！{01}{00}！々{00}！I{00}Mラなな、{01}、！ー{00}！あ{00}M避かな、{01}、！よ{00}M当ぬな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x44CA",
+   "len": 15,
+   "text": "がな、{00}、！、{00}！よ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x44F4",
+   "len": 15,
+   "text": "がな、{00}、！、{00}！よ{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4557",
+   "len": 64,
+   "text": "がな、{00}、！、{00}！·{00}！·{00}！、{00}M回はな、{00}·！{01}{00}！れ{00}Mぁがな、{00}、！、{00}！·{00}！？{00}！せ{00}M回はな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4577",
+   "len": 32,
+   "text": "がな、{00}、！、{00}！·{00}！？{00}！せ{00}M回はな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x4661",
+   "len": 15,
+   "text": "がな、{00}、？、{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x46D8",
+   "len": 15,
+   "text": "がな、{00}、！、{00}！{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4710",
+   "len": 15,
+   "text": "がな、{00}、！、{00}！{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4CFA",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D02",
+   "len": 14,
+   "text": "な、！{01}{00}！。{00}S、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D17",
+   "len": 11,
+   "text": "な、、せぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D1C",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D24",
+   "len": 16,
+   "text": "な、！よ{00}Mじじな、{01}{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D3B",
+   "len": 11,
+   "text": "な、、わぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D40",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D48",
+   "len": 8,
+   "text": "な、S·！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D57",
+   "len": 15,
+   "text": "な、、チぁな、M隊。な、",
+   "reachable": false
+  },
+  {
+   "off": "0x4D5C",
+   "len": 10,
+   "text": "な、M隊。な、",
+   "reachable": false
+  },
+  {
+   "off": "0x4D70",
+   "len": 14,
+   "text": "な、{01}·{00}！{01}{00}S{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D85",
+   "len": 11,
+   "text": "な、、球ぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4D8A",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DA7",
+   "len": 11,
+   "text": "な、、接ぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DAC",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DC4",
+   "len": 11,
+   "text": "な、、木ぁな、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DC9",
+   "len": 6,
+   "text": "な、！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DE1",
+   "len": 18,
+   "text": "な、、ずあな、Mん3な、{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x4DF6",
+   "len": 13,
+   "text": "な、、ずあな、S·！",
+   "reachable": false
+  },
+  {
+   "off": "0x5361",
+   "len": 27,
+   "text": "な、{01}{00}Mてあな、{01}{00}M後いな、{01}{00}！！{00}S。！",
+   "reachable": false
+  },
+  {
+   "off": "0x634E",
+   "len": 7,
+   "text": "{01}·{01}！",
+   "reachable": false
+  },
+  {
+   "off": "0x6359",
+   "len": 78,
+   "text": "{01}·{01}！{01}{00}MDつな、{00}{01}？{F0:4095}Sあ{01}·{00}Sエ{01}·{01}？{F0:4095}Sメ{01}·、？ップ？{F0:4095}Sモ{01}·、？ップ？{F0:4095}S来{01}·{01}？{F0:4095}Sい{01}·{01}？{F0:4095}Sう{01}·、Sデ！",
+   "reachable": false
+  },
+  {
+   "off": "0x75A7",
+   "len": 25,
+   "text": "がな、{00}、！2{00}MDつな、{00}{01}！·{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x75F1",
+   "len": 25,
+   "text": "がな、{00}、！2{00}MDつな、{00}{01}！·{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x7621",
+   "len": 38,
+   "text": "がな、{00}、！、{00}？ップ？{F0:4095}！1{00}M渋な、{00}·！S{00}MDつな、{00}{01}{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x7651",
+   "len": 38,
+   "text": "がな、{00}、！、{00}？ップ？{F0:4095}！1{00}M渋な、{00}·！S{00}MDつな、{00}{01}{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x76AB",
+   "len": 15,
+   "text": "がな、{00}、！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x76D5",
+   "len": 15,
+   "text": "がな、{00}、！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x772B",
+   "len": 25,
+   "text": "がな、{00}、！（{00}MDつな、{00}{01}！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x775F",
+   "len": 25,
+   "text": "がな、{00}、！（{00}MDつな、{00}{01}！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x77B1",
+   "len": 90,
+   "text": "がな、{00}、？{F0:4095}Mをしな、{01}{01}M射グな、{00}{01}？{F0:4095}M本だな、{00}{01}{01}{00}·。！{01}{00}！ツ{00}Mぁがな、{00}、？{F0:4095}M行きな、{01}{01}M射グな、{00}{01}？{F0:4095}Mセきな、{00}{01}！S{00}MDつな、{00}{01}{01}",
+   "reachable": false
+  },
+  {
+   "off": "0x7869",
+   "len": 15,
+   "text": "がな、{00}、！{01}{00}？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x8196",
+   "len": 8,
+   "text": "{00}？{F0:4095}！",
+   "reachable": false
+  },
+  {
+   "off": "0x81B3",
+   "len": 32,
+   "text": "がな、{00}、！{01}{00}！！{00}！ぁ{00}？ップMlな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x81EE",
+   "len": 32,
+   "text": "がな、{00}、！、{00}！！{00}！ぁ{00}？{F0:4095}Mlな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x821D",
+   "len": 5,
+   "text": "{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x8247",
+   "len": 32,
+   "text": "がな、{00}、！{01}{00}！！{00}！ぁ{00}？ップMlな、{00}·Mげがな、",
+   "reachable": false
+  },
+  {
+   "off": "0x8382",
+   "len": 13,
+   "text": "これまでの戦い、ご苦労",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x838F",
+   "len": 32,
+   "text": "この「宇宙世紀ルート」を最後まで{00}遊んでくれて感謝する",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x83AF",
+   "len": 31,
+   "text": "なお、ロンド·ベル隊の戦いは{00}ここでひとまず終了するが……",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x83CE",
+   "len": 37,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続きを楽しんで欲しい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x83F3",
+   "len": 39,
+   "text": "また、本ルートを最後まで遊んでくれた{00}君には特別ステージも用意されている",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x841A",
+   "len": 33,
+   "text": "我々とは別に戦いを続けていた{00}アークエンジェル隊との特別演習だ",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x843B",
+   "len": 37,
+   "text": "彼らと戦い、君が育ててきた部隊の{00}強さを確かめてみるのも良いだろう",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8460",
+   "len": 37,
+   "text": "フリーバトルで「特殊演習」を{00}選ぶことで彼らと戦うことができる",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8485",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x84A9",
+   "len": 21,
+   "text": "この先も最後まで{00}じっくり楽しんでほしい",
+   "reachable": false,
+   "speaker": 185
+  },
+  {
+   "off": "0x8522",
+   "len": 31,
+   "text": "ここまで私のような頼りない艦長に{00}付き合ってくれて、ありがとう",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8541",
+   "len": 30,
+   "text": "この「平成ガンダムルート」は{00}ここで終了となります",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x855F",
+   "len": 26,
+   "text": "もっとも、私たちプリベンターの{00}戦いは終わったけど……",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8579",
+   "len": 38,
+   "text": "…ゲーム自体はまだ続けることも可能よ{00}この後も引き続きゲームを楽しんでね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x859F",
+   "len": 36,
+   "text": "最後までこのルートを遊んでくれた君に{00}新しいステージも用意されているわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x85C3",
+   "len": 27,
+   "text": "私たちとは別にティターンズや{00}ネオ·ジオンと戦っていた…",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x85DE",
+   "len": 19,
+   "text": "…ロンド·ベル隊との特別演習よ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x85F1",
+   "len": 38,
+   "text": "フリーバトルで「特別演習」を選ぶと{00}彼らと戦うことができるわ",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8617",
+   "len": 14,
+   "text": "ぜひ、挑戦してみてね",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8625",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x8649",
+   "len": 28,
+   "text": "『フリーバトルの戦火！{00}{01}駆け抜けろ、アークエンジェル！！』",
+   "reachable": false,
+   "speaker": 200
+  },
+  {
+   "off": "0x86CA",
+   "len": 16,
+   "text": "ドミニオン艦長{00}ナタル·バジルール中佐だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x86DA",
+   "len": 34,
+   "text": "まずは、ここまでの貴君の{00}見事な采配に敬意を表したい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x86FC",
+   "len": 34,
+   "text": "貴君の協力により、ついに我々は{00}最後まで戦い抜くことができた",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x871E",
+   "len": 22,
+   "text": "この「ライバル·ルート」は{00}ここで終了だ",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x8734",
+   "len": 25,
+   "text": "もっとも、我々ドミニオン隊の戦いは{00}ここで終了したが……",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x874D",
+   "len": 36,
+   "text": "ゲーム自体はまだ続けることが可能だ{00}この後も引き続き楽しんで欲しい",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x8771",
+   "len": 43,
+   "text": "フリーバトルはこの後も続けられるし、{00}また、「特別演習」を選ぶことで…",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x879C",
+   "len": 30,
+   "text": "ロンド·ベル、プリベンターとの{00}合同演習を行うこともできる",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x87BA",
+   "len": 37,
+   "text": "貴君ならばきっと、彼らとの戦いにも{00}勝利をおさめられると私は信じている",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x87DF",
+   "len": 36,
+   "text": "…では、「SDガンダム{00}{01}{01}{01}{01}{01}GジェネレーシヨンDS」",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x8803",
+   "len": 16,
+   "text": "この後も貴君の健闘を祈る",
+   "reachable": false,
+   "speaker": 156
+  },
+  {
+   "off": "0x906D",
+   "len": 12,
+   "text": "がな、{00}、！{01}{00}！",
+   "reachable": false
+  },
+  {
+   "off": "0x928B",
+   "len": 15,
+   "text": "がな、{00}、？ガマ？{01}{00}？",
+   "reachable": false
+  },
+  {
+   "off": "0x9A7D",
+   "len": 15,
+   "text": "がな、{00}、！、{00}？{01}{00}？",
+   "reachable": false
+  }
+ ]
+}

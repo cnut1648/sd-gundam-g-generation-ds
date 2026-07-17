@@ -1,5 +1,5 @@
 {
- "_about": "renderB 8x16 UI font charset (arm9 0x02133F14, 32B/slot). Identified by 4 subagent teams with word-level proof from the JP ROM. On trampoline surfaces one-byte tokens and 2-byte tokens with slot<2196 render THESE glyphs, not the atlas. See docs/TEXT_SYSTEM.md.",
+ "_about": "renderB 8x16 UI font charset (arm9 0x02133F14, 32B/slot). Identified by 4 subagent teams with word-level proof from the JP ROM. On trampoline surfaces one-byte tokens and 2-byte tokens with slot<2196 render THESE glyphs, not the atlas. See docs/TEXT_SYSTEM.md. || Slots >= 224 (kind 'ident'): the kanji-band identities, produced by the one-shot VLM contact-sheet identification of every renderB glyph appearing in JP names (rendered from the JP ROM bank at 0x133F14, 32 B/glyph, cross-checked against the shipped translations). kind='ident' deliberately carries no linguistic class: the coverage gates' kana-leak detection keys on kind=='kana' and these entries must not change gate behavior.",
  "slots": {
   "0": {
    "char": null,
@@ -928,6 +928,2670 @@
    "char": "ち",
    "kind": "kana",
    "note": "the hiragana SKIPPED from the renderB hira band (0x09-0x40 has no ち), displaced to last slot; JP dict words: たち(1edf), こちら(15df39), こっち, そちら, うち, ちゃん, ちょっと"
+  },
+  "225": {
+   "char": "0",
+   "kind": "ident"
+  },
+  "226": {
+   "char": "4",
+   "kind": "ident"
+  },
+  "227": {
+   "char": "5",
+   "kind": "ident"
+  },
+  "228": {
+   "char": "6",
+   "kind": "ident"
+  },
+  "229": {
+   "char": "7",
+   "kind": "ident"
+  },
+  "230": {
+   "char": "8",
+   "kind": "ident"
+  },
+  "231": {
+   "char": "9",
+   "kind": "ident"
+  },
+  "232": {
+   "char": "A",
+   "kind": "ident"
+  },
+  "233": {
+   "char": "B",
+   "kind": "ident"
+  },
+  "234": {
+   "char": "C",
+   "kind": "ident"
+  },
+  "235": {
+   "char": "E",
+   "kind": "ident"
+  },
+  "236": {
+   "char": "F",
+   "kind": "ident"
+  },
+  "237": {
+   "char": "G",
+   "kind": "ident"
+  },
+  "238": {
+   "char": "H",
+   "kind": "ident"
+  },
+  "239": {
+   "char": "J",
+   "kind": "ident"
+  },
+  "240": {
+   "char": "K",
+   "kind": "ident"
+  },
+  "241": {
+   "char": "L",
+   "kind": "ident"
+  },
+  "242": {
+   "char": "N",
+   "kind": "ident"
+  },
+  "243": {
+   "char": "O",
+   "kind": "ident"
+  },
+  "244": {
+   "char": "P",
+   "kind": "ident"
+  },
+  "246": {
+   "char": "R",
+   "kind": "ident"
+  },
+  "247": {
+   "char": "T",
+   "kind": "ident"
+  },
+  "249": {
+   "char": "V",
+   "kind": "ident"
+  },
+  "250": {
+   "char": "W",
+   "kind": "ident"
+  },
+  "251": {
+   "char": "X",
+   "kind": "ident"
+  },
+  "253": {
+   "char": "Z",
+   "kind": "ident"
+  },
+  "254": {
+   "char": "a",
+   "kind": "ident"
+  },
+  "255": {
+   "char": "b",
+   "kind": "ident"
+  },
+  "258": {
+   "char": "e",
+   "kind": "ident"
+  },
+  "259": {
+   "char": "f",
+   "kind": "ident"
+  },
+  "264": {
+   "char": "k",
+   "kind": "ident"
+  },
+  "268": {
+   "char": "o",
+   "kind": "ident"
+  },
+  "269": {
+   "char": "p",
+   "kind": "ident"
+  },
+  "271": {
+   "char": "r",
+   "kind": "ident"
+  },
+  "273": {
+   "char": "t",
+   "kind": "ident"
+  },
+  "277": {
+   "char": "x",
+   "kind": "ident"
+  },
+  "280": {
+   "char": "ぃ",
+   "kind": "ident"
+  },
+  "281": {
+   "char": "ぅ",
+   "kind": "ident"
+  },
+  "282": {
+   "char": "ぇ",
+   "kind": "ident"
+  },
+  "283": {
+   "char": "ぉ",
+   "kind": "ident"
+  },
+  "284": {
+   "char": "ぎ",
+   "kind": "ident"
+  },
+  "285": {
+   "char": "ぐ",
+   "kind": "ident"
+  },
+  "286": {
+   "char": "ご",
+   "kind": "ident"
+  },
+  "287": {
+   "char": "ざ",
+   "kind": "ident"
+  },
+  "288": {
+   "char": "ぜ",
+   "kind": "ident"
+  },
+  "290": {
+   "char": "づ",
+   "kind": "ident"
+  },
+  "291": {
+   "char": "ぱ",
+   "kind": "ident"
+  },
+  "292": {
+   "char": "ひ",
+   "kind": "ident"
+  },
+  "293": {
+   "char": "び",
+   "kind": "ident"
+  },
+  "294": {
+   "char": "ぴ",
+   "kind": "ident"
+  },
+  "295": {
+   "char": "ぶ",
+   "kind": "ident"
+  },
+  "296": {
+   "char": "ぷ",
+   "kind": "ident"
+  },
+  "297": {
+   "char": "べ",
+   "kind": "ident"
+  },
+  "299": {
+   "char": "ぼ",
+   "kind": "ident"
+  },
+  "301": {
+   "char": "ゅ",
+   "kind": "ident"
+  },
+  "302": {
+   "char": "ゆ",
+   "kind": "ident"
+  },
+  "303": {
+   "char": "ァ",
+   "kind": "ident"
+  },
+  "304": {
+   "char": "ォ",
+   "kind": "ident"
+  },
+  "305": {
+   "char": "ケ",
+   "kind": "ident"
+  },
+  "306": {
+   "char": "ゲ",
+   "kind": "ident"
+  },
+  "307": {
+   "char": "ゼ",
+   "kind": "ident"
+  },
+  "308": {
+   "char": "ソ",
+   "kind": "ident"
+  },
+  "309": {
+   "char": "ゾ",
+   "kind": "ident"
+  },
+  "313": {
+   "char": "ノ",
+   "kind": "ident"
+  },
+  "314": {
+   "char": "ヒ",
+   "kind": "ident"
+  },
+  "315": {
+   "char": "ピ",
+   "kind": "ident"
+  },
+  "316": {
+   "char": "ヘ",
+   "kind": "ident"
+  },
+  "317": {
+   "char": "ペ",
+   "kind": "ident"
+  },
+  "318": {
+   "char": "ホ",
+   "kind": "ident"
+  },
+  "319": {
+   "char": "ポ",
+   "kind": "ident"
+  },
+  "320": {
+   "char": "ヤ",
+   "kind": "ident"
+  },
+  "321": {
+   "char": "ユ",
+   "kind": "ident"
+  },
+  "322": {
+   "char": "ョ",
+   "kind": "ident"
+  },
+  "323": {
+   "char": "ヨ",
+   "kind": "ident"
+  },
+  "324": {
+   "char": "ワ",
+   "kind": "ident"
+  },
+  "326": {
+   "char": "ヴ",
+   "kind": "ident"
+  },
+  "329": {
+   "char": "ー",
+   "kind": "ident"
+  },
+  "331": {
+   "char": "／",
+   "kind": "ident"
+  },
+  "332": {
+   "char": "〜",
+   "kind": "ident"
+  },
+  "337": {
+   "char": "＋",
+   "kind": "ident"
+  },
+  "338": {
+   "char": "ー",
+   "kind": "ident"
+  },
+  "339": {
+   "char": "&",
+   "kind": "ident"
+  },
+  "349": {
+   "char": "悪",
+   "kind": "ident"
+  },
+  "350": {
+   "char": "臨",
+   "kind": "ident"
+  },
+  "351": {
+   "char": "圧",
+   "kind": "ident"
+  },
+  "353": {
+   "char": "安",
+   "kind": "ident"
+  },
+  "355": {
+   "char": "以",
+   "kind": "ident"
+  },
+  "359": {
+   "char": "囲",
+   "kind": "ident"
+  },
+  "360": {
+   "char": "威",
+   "kind": "ident"
+  },
+  "361": {
+   "char": "意",
+   "kind": "ident"
+  },
+  "363": {
+   "char": "為",
+   "kind": "ident"
+  },
+  "365": {
+   "char": "移",
+   "kind": "ident"
+  },
+  "366": {
+   "char": "違",
+   "kind": "ident"
+  },
+  "369": {
+   "char": "域",
+   "kind": "ident"
+  },
+  "370": {
+   "char": "育",
+   "kind": "ident"
+  },
+  "373": {
+   "char": "印",
+   "kind": "ident"
+  },
+  "374": {
+   "char": "員",
+   "kind": "ident"
+  },
+  "375": {
+   "char": "因",
+   "kind": "ident"
+  },
+  "376": {
+   "char": "引",
+   "kind": "ident"
+  },
+  "379": {
+   "char": "隠",
+   "kind": "ident"
+  },
+  "381": {
+   "char": "宇",
+   "kind": "ident"
+  },
+  "384": {
+   "char": "噂",
+   "kind": "ident"
+  },
+  "385": {
+   "char": "運",
+   "kind": "ident"
+  },
+  "386": {
+   "char": "影",
+   "kind": "ident"
+  },
+  "388": {
+   "char": "栄",
+   "kind": "ident"
+  },
+  "390": {
+   "char": "英",
+   "kind": "ident"
+  },
+  "391": {
+   "char": "衛",
+   "kind": "ident"
+  },
+  "393": {
+   "char": "越",
+   "kind": "ident"
+  },
+  "395": {
+   "char": "怨",
+   "kind": "ident"
+  },
+  "401": {
+   "char": "汚",
+   "kind": "ident"
+  },
+  "405": {
+   "char": "応",
+   "kind": "ident"
+  },
+  "407": {
+   "char": "王",
+   "kind": "ident"
+  },
+  "410": {
+   "char": "屋",
+   "kind": "ident"
+  },
+  "411": {
+   "char": "憶",
+   "kind": "ident"
+  },
+  "417": {
+   "char": "化",
+   "kind": "ident"
+  },
+  "419": {
+   "char": "償",
+   "kind": "ident"
+  },
+  "420": {
+   "char": "加",
+   "kind": "ident"
+  },
+  "421": {
+   "char": "可",
+   "kind": "ident"
+  },
+  "423": {
+   "char": "家",
+   "kind": "ident"
+  },
+  "426": {
+   "char": "果",
+   "kind": "ident"
+  },
+  "428": {
+   "char": "歌",
+   "kind": "ident"
+  },
+  "429": {
+   "char": "火",
+   "kind": "ident"
+  },
+  "430": {
+   "char": "稼",
+   "kind": "ident"
+  },
+  "434": {
+   "char": "逃",
+   "kind": "ident"
+  },
+  "437": {
+   "char": "介",
+   "kind": "ident"
+  },
+  "438": {
+   "char": "会",
+   "kind": "ident"
+  },
+  "439": {
+   "char": "解",
+   "kind": "ident"
+  },
+  "440": {
+   "char": "壊",
+   "kind": "ident"
+  },
+  "441": {
+   "char": "快",
+   "kind": "ident"
+  },
+  "445": {
+   "char": "改",
+   "kind": "ident"
+  },
+  "446": {
+   "char": "海",
+   "kind": "ident"
+  },
+  "447": {
+   "char": "界",
+   "kind": "ident"
+  },
+  "451": {
+   "char": "外",
+   "kind": "ident"
+  },
+  "454": {
+   "char": "概",
+   "kind": "ident"
+  },
+  "459": {
+   "char": "拡",
+   "kind": "ident"
+  },
+  "460": {
+   "char": "格",
+   "kind": "ident"
+  },
+  "461": {
+   "char": "核",
+   "kind": "ident"
+  },
+  "462": {
+   "char": "確",
+   "kind": "ident"
+  },
+  "468": {
+   "char": "楽",
+   "kind": "ident"
+  },
+  "469": {
+   "char": "掛",
+   "kind": "ident"
+  },
+  "477": {
+   "char": "寒",
+   "kind": "ident"
+  },
+  "482": {
+   "char": "感",
+   "kind": "ident"
+  },
+  "483": {
+   "char": "慣",
+   "kind": "ident"
+  },
+  "489": {
+   "char": "甘",
+   "kind": "ident"
+  },
+  "490": {
+   "char": "簡",
+   "kind": "ident"
+  },
+  "496": {
+   "char": "関",
+   "kind": "ident"
+  },
+  "497": {
+   "char": "丸",
+   "kind": "ident"
+  },
+  "501": {
+   "char": "眼",
+   "kind": "ident"
+  },
+  "506": {
+   "char": "危",
+   "kind": "ident"
+  },
+  "508": {
+   "char": "器",
+   "kind": "ident"
+  },
+  "509": {
+   "char": "基",
+   "kind": "ident"
+  },
+  "510": {
+   "char": "奇",
+   "kind": "ident"
+  },
+  "515": {
+   "char": "忌",
+   "kind": "ident"
+  },
+  "516": {
+   "char": "揮",
+   "kind": "ident"
+  },
+  "517": {
+   "char": "旗",
+   "kind": "ident"
+  },
+  "519": {
+   "char": "期",
+   "kind": "ident"
+  },
+  "521": {
+   "char": "帰",
+   "kind": "ident"
+  },
+  "525": {
+   "char": "記",
+   "kind": "ident"
+  },
+  "527": {
+   "char": "輝",
+   "kind": "ident"
+  },
+  "529": {
+   "char": "騎",
+   "kind": "ident"
+  },
+  "531": {
+   "char": "機",
+   "kind": "ident"
+  },
+  "535": {
+   "char": "犠",
+   "kind": "ident"
+  },
+  "537": {
+   "char": "義",
+   "kind": "ident"
+  },
+  "538": {
+   "char": "議",
+   "kind": "ident"
+  },
+  "539": {
+   "char": "詰",
+   "kind": "ident"
+  },
+  "544": {
+   "char": "逆",
+   "kind": "ident"
+  },
+  "547": {
+   "char": "休",
+   "kind": "ident"
+  },
+  "550": {
+   "char": "急",
+   "kind": "ident"
+  },
+  "551": {
+   "char": "救",
+   "kind": "ident"
+  },
+  "554": {
+   "char": "泣",
+   "kind": "ident"
+  },
+  "555": {
+   "char": "究",
+   "kind": "ident"
+  },
+  "556": {
+   "char": "級",
+   "kind": "ident"
+  },
+  "560": {
+   "char": "去",
+   "kind": "ident"
+  },
+  "565": {
+   "char": "許",
+   "kind": "ident"
+  },
+  "568": {
+   "char": "供",
+   "kind": "ident"
+  },
+  "569": {
+   "char": "共",
+   "kind": "ident"
+  },
+  "573": {
+   "char": "境",
+   "kind": "ident"
+  },
+  "574": {
+   "char": "強",
+   "kind": "ident"
+  },
+  "577": {
+   "char": "教",
+   "kind": "ident"
+  },
+  "582": {
+   "char": "胸",
+   "kind": "ident"
+  },
+  "585": {
+   "char": "郷",
+   "kind": "ident"
+  },
+  "586": {
+   "char": "鏡",
+   "kind": "ident"
+  },
+  "588": {
+   "char": "驚",
+   "kind": "ident"
+  },
+  "590": {
+   "char": "罪",
+   "kind": "ident"
+  },
+  "599": {
+   "char": "金",
+   "kind": "ident"
+  },
+  "602": {
+   "char": "駆",
+   "kind": "ident"
+  },
+  "603": {
+   "char": "具",
+   "kind": "ident"
+  },
+  "604": {
+   "char": "愚",
+   "kind": "ident"
+  },
+  "606": {
+   "char": "空",
+   "kind": "ident"
+  },
+  "611": {
+   "char": "繰",
+   "kind": "ident"
+  },
+  "614": {
+   "char": "係",
+   "kind": "ident"
+  },
+  "617": {
+   "char": "兄",
+   "kind": "ident"
+  },
+  "618": {
+   "char": "型",
+   "kind": "ident"
+  },
+  "619": {
+   "char": "形",
+   "kind": "ident"
+  },
+  "628": {
+   "char": "継",
+   "kind": "ident"
+  },
+  "630": {
+   "char": "軽",
+   "kind": "ident"
+  },
+  "631": {
+   "char": "芸",
+   "kind": "ident"
+  },
+  "633": {
+   "char": "劇",
+   "kind": "ident"
+  },
+  "634": {
+   "char": "激",
+   "kind": "ident"
+  },
+  "636": {
+   "char": "決",
+   "kind": "ident"
+  },
+  "639": {
+   "char": "結",
+   "kind": "ident"
+  },
+  "640": {
+   "char": "血",
+   "kind": "ident"
+  },
+  "641": {
+   "char": "月",
+   "kind": "ident"
+  },
+  "644": {
+   "char": "剣",
+   "kind": "ident"
+  },
+  "645": {
+   "char": "圏",
+   "kind": "ident"
+  },
+  "651": {
+   "char": "拳",
+   "kind": "ident"
+  },
+  "655": {
+   "char": "犬",
+   "kind": "ident"
+  },
+  "657": {
+   "char": "研",
+   "kind": "ident"
+  },
+  "662": {
+   "char": "険",
+   "kind": "ident"
+  },
+  "664": {
+   "char": "元",
+   "kind": "ident"
+  },
+  "669": {
+   "char": "減",
+   "kind": "ident"
+  },
+  "671": {
+   "char": "揮",
+   "kind": "ident"
+  },
+  "673": {
+   "char": "限",
+   "kind": "ident"
+  },
+  "674": {
+   "char": "個",
+   "kind": "ident"
+  },
+  "675": {
+   "char": "呼",
+   "kind": "ident"
+  },
+  "677": {
+   "char": "己",
+   "kind": "ident"
+  },
+  "678": {
+   "char": "故",
+   "kind": "ident"
+  },
+  "679": {
+   "char": "潮",
+   "kind": "ident"
+  },
+  "682": {
+   "char": "誇",
+   "kind": "ident"
+  },
+  "684": {
+   "char": "御",
+   "kind": "ident"
+  },
+  "686": {
+   "char": "語",
+   "kind": "ident"
+  },
+  "688": {
+   "char": "護",
+   "kind": "ident"
+  },
+  "690": {
+   "char": "光",
+   "kind": "ident"
+  },
+  "691": {
+   "char": "帰",
+   "kind": "ident"
+  },
+  "693": {
+   "char": "効",
+   "kind": "ident"
+  },
+  "695": {
+   "char": "口",
+   "kind": "ident"
+  },
+  "696": {
+   "char": "好",
+   "kind": "ident"
+  },
+  "701": {
+   "char": "広",
+   "kind": "ident"
+  },
+  "704": {
+   "char": "慌",
+   "kind": "ident"
+  },
+  "705": {
+   "char": "抗",
+   "kind": "ident"
+  },
+  "707": {
+   "char": "更",
+   "kind": "ident"
+  },
+  "709": {
+   "char": "構",
+   "kind": "ident"
+  },
+  "712": {
+   "char": "甲",
+   "kind": "ident"
+  },
+  "714": {
+   "char": "考",
+   "kind": "ident"
+  },
+  "718": {
+   "char": "降",
+   "kind": "ident"
+  },
+  "719": {
+   "char": "高",
+   "kind": "ident"
+  },
+  "720": {
+   "char": "号",
+   "kind": "ident"
+  },
+  "724": {
+   "char": "刻",
+   "kind": "ident"
+  },
+  "725": {
+   "char": "告",
+   "kind": "ident"
+  },
+  "727": {
+   "char": "黒",
+   "kind": "ident"
+  },
+  "730": {
+   "char": "込",
+   "kind": "ident"
+  },
+  "732": {
+   "char": "焦",
+   "kind": "ident"
+  },
+  "737": {
+   "char": "魂",
+   "kind": "ident"
+  },
+  "741": {
+   "char": "座",
+   "kind": "ident"
+  },
+  "742": {
+   "char": "指",
+   "kind": "ident"
+  },
+  "743": {
+   "char": "最",
+   "kind": "ident"
+  },
+  "745": {
+   "char": "塞",
+   "kind": "ident"
+  },
+  "748": {
+   "char": "済",
+   "kind": "ident"
+  },
+  "751": {
+   "char": "裁",
+   "kind": "ident"
+  },
+  "752": {
+   "char": "載",
+   "kind": "ident"
+  },
+  "753": {
+   "char": "際",
+   "kind": "ident"
+  },
+  "755": {
+   "char": "罪",
+   "kind": "ident"
+  },
+  "758": {
+   "char": "作",
+   "kind": "ident"
+  },
+  "761": {
+   "char": "索",
+   "kind": "ident"
+  },
+  "762": {
+   "char": "索",
+   "kind": "ident"
+  },
+  "765": {
+   "char": "殺",
+   "kind": "ident"
+  },
+  "771": {
+   "char": "産",
+   "kind": "ident"
+  },
+  "774": {
+   "char": "斬",
+   "kind": "ident"
+  },
+  "775": {
+   "char": "惨",
+   "kind": "ident"
+  },
+  "776": {
+   "char": "仕",
+   "kind": "ident"
+  },
+  "777": {
+   "char": "使",
+   "kind": "ident"
+  },
+  "779": {
+   "char": "司",
+   "kind": "ident"
+  },
+  "780": {
+   "char": "史",
+   "kind": "ident"
+  },
+  "785": {
+   "char": "子",
+   "kind": "ident"
+  },
+  "787": {
+   "char": "市",
+   "kind": "ident"
+  },
+  "789": {
+   "char": "志",
+   "kind": "ident"
+  },
+  "790": {
+   "char": "指",
+   "kind": "ident"
+  },
+  "791": {
+   "char": "支",
+   "kind": "ident"
+  },
+  "792": {
+   "char": "止",
+   "kind": "ident"
+  },
+  "794": {
+   "char": "視",
+   "kind": "ident"
+  },
+  "796": {
+   "char": "試",
+   "kind": "ident"
+  },
+  "797": {
+   "char": "資",
+   "kind": "ident"
+  },
+  "800": {
+   "char": "字",
+   "kind": "ident"
+  },
+  "802": {
+   "char": "持",
+   "kind": "ident"
+  },
+  "803": {
+   "char": "次",
+   "kind": "ident"
+  },
+  "804": {
+   "char": "治",
+   "kind": "ident"
+  },
+  "805": {
+   "char": "示",
+   "kind": "ident"
+  },
+  "807": {
+   "char": "式",
+   "kind": "ident"
+  },
+  "808": {
+   "char": "失",
+   "kind": "ident"
+  },
+  "809": {
+   "char": "質",
+   "kind": "ident"
+  },
+  "810": {
+   "char": "実",
+   "kind": "ident"
+  },
+  "811": {
+   "char": "捨",
+   "kind": "ident"
+  },
+  "813": {
+   "char": "還",
+   "kind": "ident"
+  },
+  "814": {
+   "char": "車",
+   "kind": "ident"
+  },
+  "817": {
+   "char": "邪",
+   "kind": "ident"
+  },
+  "818": {
+   "char": "借",
+   "kind": "ident"
+  },
+  "822": {
+   "char": "弱",
+   "kind": "ident"
+  },
+  "823": {
+   "char": "主",
+   "kind": "ident"
+  },
+  "824": {
+   "char": "取",
+   "kind": "ident"
+  },
+  "825": {
+   "char": "守",
+   "kind": "ident"
+  },
+  "826": {
+   "char": "通",
+   "kind": "ident"
+  },
+  "828": {
+   "char": "括",
+   "kind": "ident"
+  },
+  "831": {
+   "char": "首",
+   "kind": "ident"
+  },
+  "832": {
+   "char": "受",
+   "kind": "ident"
+  },
+  "833": {
+   "char": "呪",
+   "kind": "ident"
+  },
+  "836": {
+   "char": "収",
+   "kind": "ident"
+  },
+  "837": {
+   "char": "周",
+   "kind": "ident"
+  },
+  "838": {
+   "char": "修",
+   "kind": "ident"
+  },
+  "840": {
+   "char": "終",
+   "kind": "ident"
+  },
+  "842": {
+   "char": "襲",
+   "kind": "ident"
+  },
+  "843": {
+   "char": "讐",
+   "kind": "ident"
+  },
+  "845": {
+   "char": "集",
+   "kind": "ident"
+  },
+  "847": {
+   "char": "満",
+   "kind": "ident"
+  },
+  "848": {
+   "char": "十",
+   "kind": "ident"
+  },
+  "851": {
+   "char": "縦",
+   "kind": "ident"
+  },
+  "852": {
+   "char": "重",
+   "kind": "ident"
+  },
+  "853": {
+   "char": "銃",
+   "kind": "ident"
+  },
+  "854": {
+   "char": "宿",
+   "kind": "ident"
+  },
+  "855": {
+   "char": "祝",
+   "kind": "ident"
+  },
+  "857": {
+   "char": "粛",
+   "kind": "ident"
+  },
+  "858": {
+   "char": "熟",
+   "kind": "ident"
+  },
+  "864": {
+   "char": "盾",
+   "kind": "ident"
+  },
+  "868": {
+   "char": "初",
+   "kind": "ident"
+  },
+  "869": {
+   "char": "所",
+   "kind": "ident"
+  },
+  "873": {
+   "char": "助",
+   "kind": "ident"
+  },
+  "874": {
+   "char": "序",
+   "kind": "ident"
+  },
+  "875": {
+   "char": "除",
+   "kind": "ident"
+  },
+  "878": {
+   "char": "勝",
+   "kind": "ident"
+  },
+  "882": {
+   "char": "将",
+   "kind": "ident"
+  },
+  "883": {
+   "char": "小",
+   "kind": "ident"
+  },
+  "888": {
+   "char": "昇",
+   "kind": "ident"
+  },
+  "889": {
+   "char": "消",
+   "kind": "ident"
+  },
+  "891": {
+   "char": "焼",
+   "kind": "ident"
+  },
+  "894": {
+   "char": "秒",
+   "kind": "ident"
+  },
+  "896": {
+   "char": "来",
+   "kind": "ident"
+  },
+  "901": {
+   "char": "乗",
+   "kind": "ident"
+  },
+  "904": {
+   "char": "場",
+   "kind": "ident"
+  },
+  "906": {
+   "char": "情",
+   "kind": "ident"
+  },
+  "909": {
+   "char": "現",
+   "kind": "ident"
+  },
+  "915": {
+   "char": "食",
+   "kind": "ident"
+  },
+  "919": {
+   "char": "信",
+   "kind": "ident"
+  },
+  "922": {
+   "char": "心",
+   "kind": "ident"
+  },
+  "924": {
+   "char": "戦",
+   "kind": "ident"
+  },
+  "925": {
+   "char": "新",
+   "kind": "ident"
+  },
+  "928": {
+   "char": "申",
+   "kind": "ident"
+  },
+  "929": {
+   "char": "真",
+   "kind": "ident"
+  },
+  "930": {
+   "char": "神",
+   "kind": "ident"
+  },
+  "931": {
+   "char": "親",
+   "kind": "ident"
+  },
+  "932": {
+   "char": "身",
+   "kind": "ident"
+  },
+  "934": {
+   "char": "進",
+   "kind": "ident"
+  },
+  "935": {
+   "char": "震",
+   "kind": "ident"
+  },
+  "941": {
+   "char": "帥",
+   "kind": "ident"
+  },
+  "943": {
+   "char": "水",
+   "kind": "ident"
+  },
+  "944": {
+   "char": "遂",
+   "kind": "ident"
+  },
+  "945": {
+   "char": "酔",
+   "kind": "ident"
+  },
+  "948": {
+   "char": "数",
+   "kind": "ident"
+  },
+  "949": {
+   "char": "世",
+   "kind": "ident"
+  },
+  "952": {
+   "char": "制",
+   "kind": "ident"
+  },
+  "954": {
+   "char": "性",
+   "kind": "ident"
+  },
+  "955": {
+   "char": "成",
+   "kind": "ident"
+  },
+  "956": {
+   "char": "政",
+   "kind": "ident"
+  },
+  "958": {
+   "char": "正",
+   "kind": "ident"
+  },
+  "959": {
+   "char": "清",
+   "kind": "ident"
+  },
+  "960": {
+   "char": "牲",
+   "kind": "ident"
+  },
+  "961": {
+   "char": "精",
+   "kind": "ident"
+  },
+  "962": {
+   "char": "皇",
+   "kind": "ident"
+  },
+  "963": {
+   "char": "声",
+   "kind": "ident"
+  },
+  "974": {
+   "char": "石",
+   "kind": "ident"
+  },
+  "978": {
+   "char": "切",
+   "kind": "ident"
+  },
+  "981": {
+   "char": "説",
+   "kind": "ident"
+  },
+  "983": {
+   "char": "絶",
+   "kind": "ident"
+  },
+  "988": {
+   "char": "専",
+   "kind": "ident"
+  },
+  "991": {
+   "char": "洗",
+   "kind": "ident"
+  },
+  "994": {
+   "char": "線",
+   "kind": "ident"
+  },
+  "995": {
+   "char": "船",
+   "kind": "ident"
+  },
+  "1000": {
+   "char": "善",
+   "kind": "ident"
+  },
+  "1001": {
+   "char": "然",
+   "kind": "ident"
+  },
+  "1002": {
+   "char": "狙",
+   "kind": "ident"
+  },
+  "1004": {
+   "char": "祖",
+   "kind": "ident"
+  },
+  "1005": {
+   "char": "素",
+   "kind": "ident"
+  },
+  "1011": {
+   "char": "則",
+   "kind": "ident"
+  },
+  "1013": {
+   "char": "想",
+   "kind": "ident"
+  },
+  "1014": {
+   "char": "掃",
+   "kind": "ident"
+  },
+  "1015": {
+   "char": "操",
+   "kind": "ident"
+  },
+  "1016": {
+   "char": "早",
+   "kind": "ident"
+  },
+  "1018": {
+   "char": "争",
+   "kind": "ident"
+  },
+  "1019": {
+   "char": "相",
+   "kind": "ident"
+  },
+  "1020": {
+   "char": "総",
+   "kind": "ident"
+  },
+  "1022": {
+   "char": "装",
+   "kind": "ident"
+  },
+  "1027": {
+   "char": "増",
+   "kind": "ident"
+  },
+  "1028": {
+   "char": "憎",
+   "kind": "ident"
+  },
+  "1030": {
+   "char": "造",
+   "kind": "ident"
+  },
+  "1034": {
+   "char": "束",
+   "kind": "ident"
+  },
+  "1036": {
+   "char": "足",
+   "kind": "ident"
+  },
+  "1037": {
+   "char": "速",
+   "kind": "ident"
+  },
+  "1039": {
+   "char": "属",
+   "kind": "ident"
+  },
+  "1040": {
+   "char": "賊",
+   "kind": "ident"
+  },
+  "1042": {
+   "char": "続",
+   "kind": "ident"
+  },
+  "1045": {
+   "char": "損",
+   "kind": "ident"
+  },
+  "1052": {
+   "char": "駄",
+   "kind": "ident"
+  },
+  "1053": {
+   "char": "対",
+   "kind": "ident"
+  },
+  "1056": {
+   "char": "待",
+   "kind": "ident"
+  },
+  "1057": {
+   "char": "象",
+   "kind": "ident"
+  },
+  "1058": {
+   "char": "貸",
+   "kind": "ident"
+  },
+  "1060": {
+   "char": "代",
+   "kind": "ident"
+  },
+  "1062": {
+   "char": "第",
+   "kind": "ident"
+  },
+  "1063": {
+   "char": "題",
+   "kind": "ident"
+  },
+  "1064": {
+   "char": "拓",
+   "kind": "ident"
+  },
+  "1066": {
+   "char": "叩",
+   "kind": "ident"
+  },
+  "1067": {
+   "char": "達",
+   "kind": "ident"
+  },
+  "1068": {
+   "char": "奪",
+   "kind": "ident"
+  },
+  "1069": {
+   "char": "脱",
+   "kind": "ident"
+  },
+  "1071": {
+   "char": "誰",
+   "kind": "ident"
+  },
+  "1072": {
+   "char": "単",
+   "kind": "ident"
+  },
+  "1076": {
+   "char": "胆",
+   "kind": "ident"
+  },
+  "1077": {
+   "char": "団",
+   "kind": "ident"
+  },
+  "1078": {
+   "char": "弾",
+   "kind": "ident"
+  },
+  "1079": {
+   "char": "断",
+   "kind": "ident"
+  },
+  "1082": {
+   "char": "男",
+   "kind": "ident"
+  },
+  "1085": {
+   "char": "知",
+   "kind": "ident"
+  },
+  "1090": {
+   "char": "汚",
+   "kind": "ident"
+  },
+  "1094": {
+   "char": "秩",
+   "kind": "ident"
+  },
+  "1095": {
+   "char": "茶",
+   "kind": "ident"
+  },
+  "1096": {
+   "char": "着",
+   "kind": "ident"
+  },
+  "1097": {
+   "char": "仲",
+   "kind": "ident"
+  },
+  "1098": {
+   "char": "宙",
+   "kind": "ident"
+  },
+  "1110": {
+   "char": "蝶",
+   "kind": "ident"
+  },
+  "1112": {
+   "char": "超",
+   "kind": "ident"
+  },
+  "1116": {
+   "char": "沈",
+   "kind": "ident"
+  },
+  "1120": {
+   "char": "追",
+   "kind": "ident"
+  },
+  "1121": {
+   "char": "痛",
+   "kind": "ident"
+  },
+  "1124": {
+   "char": "低",
+   "kind": "ident"
+  },
+  "1128": {
+   "char": "底",
+   "kind": "ident"
+  },
+  "1130": {
+   "char": "抵",
+   "kind": "ident"
+  },
+  "1132": {
+   "char": "程",
+   "kind": "ident"
+  },
+  "1134": {
+   "char": "的",
+   "kind": "ident"
+  },
+  "1135": {
+   "char": "適",
+   "kind": "ident"
+  },
+  "1137": {
+   "char": "徹",
+   "kind": "ident"
+  },
+  "1140": {
+   "char": "天",
+   "kind": "ident"
+  },
+  "1141": {
+   "char": "展",
+   "kind": "ident"
+  },
+  "1142": {
+   "char": "添",
+   "kind": "ident"
+  },
+  "1144": {
+   "char": "点",
+   "kind": "ident"
+  },
+  "1145": {
+   "char": "伝",
+   "kind": "ident"
+  },
+  "1148": {
+   "char": "電",
+   "kind": "ident"
+  },
+  "1149": {
+   "char": "吐",
+   "kind": "ident"
+  },
+  "1154": {
+   "char": "都",
+   "kind": "ident"
+  },
+  "1155": {
+   "char": "度",
+   "kind": "ident"
+  },
+  "1156": {
+   "char": "土",
+   "kind": "ident"
+  },
+  "1157": {
+   "char": "者",
+   "kind": "ident"
+  },
+  "1158": {
+   "char": "怒",
+   "kind": "ident"
+  },
+  "1159": {
+   "char": "倒",
+   "kind": "ident"
+  },
+  "1162": {
+   "char": "刀",
+   "kind": "ident"
+  },
+  "1167": {
+   "char": "搭",
+   "kind": "ident"
+  },
+  "1168": {
+   "char": "東",
+   "kind": "ident"
+  },
+  "1170": {
+   "char": "灯",
+   "kind": "ident"
+  },
+  "1173": {
+   "char": "統",
+   "kind": "ident"
+  },
+  "1176": {
+   "char": "踏",
+   "kind": "ident"
+  },
+  "1177": {
+   "char": "逃",
+   "kind": "ident"
+  },
+  "1178": {
+   "char": "頭",
+   "kind": "ident"
+  },
+  "1179": {
+   "char": "働",
+   "kind": "ident"
+  },
+  "1180": {
+   "char": "同",
+   "kind": "ident"
+  },
+  "1182": {
+   "char": "導",
+   "kind": "ident"
+  },
+  "1185": {
+   "char": "道",
+   "kind": "ident"
+  },
+  "1186": {
+   "char": "得",
+   "kind": "ident"
+  },
+  "1187": {
+   "char": "貫",
+   "kind": "ident"
+  },
+  "1189": {
+   "char": "独",
+   "kind": "ident"
+  },
+  "1190": {
+   "char": "読",
+   "kind": "ident"
+  },
+  "1191": {
+   "char": "突",
+   "kind": "ident"
+  },
+  "1192": {
+   "char": "届",
+   "kind": "ident"
+  },
+  "1195": {
+   "char": "内",
+   "kind": "ident"
+  },
+  "1196": {
+   "char": "謀",
+   "kind": "ident"
+  },
+  "1201": {
+   "char": "二",
+   "kind": "ident"
+  },
+  "1202": {
+   "char": "肉",
+   "kind": "ident"
+  },
+  "1205": {
+   "char": "入",
+   "kind": "ident"
+  },
+  "1208": {
+   "char": "認",
+   "kind": "ident"
+  },
+  "1210": {
+   "char": "熱",
+   "kind": "ident"
+  },
+  "1211": {
+   "char": "年",
+   "kind": "ident"
+  },
+  "1212": {
+   "char": "念",
+   "kind": "ident"
+  },
+  "1213": {
+   "char": "燃",
+   "kind": "ident"
+  },
+  "1214": {
+   "char": "能",
+   "kind": "ident"
+  },
+  "1218": {
+   "char": "波",
+   "kind": "ident"
+  },
+  "1219": {
+   "char": "派",
+   "kind": "ident"
+  },
+  "1224": {
+   "char": "敗",
+   "kind": "ident"
+  },
+  "1226": {
+   "char": "背",
+   "kind": "ident"
+  },
+  "1227": {
+   "char": "配",
+   "kind": "ident"
+  },
+  "1235": {
+   "char": "白",
+   "kind": "ident"
+  },
+  "1236": {
+   "char": "薄",
+   "kind": "ident"
+  },
+  "1242": {
+   "char": "抜",
+   "kind": "ident"
+  },
+  "1244": {
+   "char": "悟",
+   "kind": "ident"
+  },
+  "1245": {
+   "char": "半",
+   "kind": "ident"
+  },
+  "1246": {
+   "char": "反",
+   "kind": "ident"
+  },
+  "1252": {
+   "char": "範",
+   "kind": "ident"
+  },
+  "1255": {
+   "char": "番",
+   "kind": "ident"
+  },
+  "1258": {
+   "char": "悲",
+   "kind": "ident"
+  },
+  "1265": {
+   "char": "被",
+   "kind": "ident"
+  },
+  "1266": {
+   "char": "非",
+   "kind": "ident"
+  },
+  "1275": {
+   "char": "必",
+   "kind": "ident"
+  },
+  "1278": {
+   "char": "百",
+   "kind": "ident"
+  },
+  "1279": {
+   "char": "標",
+   "kind": "ident"
+  },
+  "1281": {
+   "char": "発",
+   "kind": "ident"
+  },
+  "1286": {
+   "char": "不",
+   "kind": "ident"
+  },
+  "1287": {
+   "char": "付",
+   "kind": "ident"
+  },
+  "1290": {
+   "char": "府",
+   "kind": "ident"
+  },
+  "1295": {
+   "char": "父",
+   "kind": "ident"
+  },
+  "1298": {
+   "char": "負",
+   "kind": "ident"
+  },
+  "1300": {
+   "char": "武",
+   "kind": "ident"
+  },
+  "1302": {
+   "char": "封",
+   "kind": "ident"
+  },
+  "1304": {
+   "char": "伏",
+   "kind": "ident"
+  },
+  "1305": {
+   "char": "復",
+   "kind": "ident"
+  },
+  "1306": {
+   "char": "幅",
+   "kind": "ident"
+  },
+  "1307": {
+   "char": "福",
+   "kind": "ident"
+  },
+  "1310": {
+   "char": "払",
+   "kind": "ident"
+  },
+  "1315": {
+   "char": "聞",
+   "kind": "ident"
+  },
+  "1317": {
+   "char": "柄",
+   "kind": "ident"
+  },
+  "1318": {
+   "char": "並",
+   "kind": "ident"
+  },
+  "1323": {
+   "char": "別",
+   "kind": "ident"
+  },
+  "1324": {
+   "char": "変",
+   "kind": "ident"
+  },
+  "1326": {
+   "char": "編",
+   "kind": "ident"
+  },
+  "1327": {
+   "char": "辺",
+   "kind": "ident"
+  },
+  "1328": {
+   "char": "返",
+   "kind": "ident"
+  },
+  "1337": {
+   "char": "報",
+   "kind": "ident"
+  },
+  "1340": {
+   "char": "崩",
+   "kind": "ident"
+  },
+  "1342": {
+   "char": "放",
+   "kind": "ident"
+  },
+  "1343": {
+   "char": "法",
+   "kind": "ident"
+  },
+  "1344": {
+   "char": "砲",
+   "kind": "ident"
+  },
+  "1345": {
+   "char": "胞",
+   "kind": "ident"
+  },
+  "1347": {
+   "char": "亡",
+   "kind": "ident"
+  },
+  "1350": {
+   "char": "忘",
+   "kind": "ident"
+  },
+  "1352": {
+   "char": "望",
+   "kind": "ident"
+  },
+  "1353": {
+   "char": "棒",
+   "kind": "ident"
+  },
+  "1355": {
+   "char": "防",
+   "kind": "ident"
+  },
+  "1356": {
+   "char": "北",
+   "kind": "ident"
+  },
+  "1357": {
+   "char": "僕",
+   "kind": "ident"
+  },
+  "1359": {
+   "char": "魔",
+   "kind": "ident"
+  },
+  "1362": {
+   "char": "幕",
+   "kind": "ident"
+  },
+  "1364": {
+   "char": "抹",
+   "kind": "ident"
+  },
+  "1365": {
+   "char": "末",
+   "kind": "ident"
+  },
+  "1366": {
+   "char": "慢",
+   "kind": "ident"
+  },
+  "1367": {
+   "char": "満",
+   "kind": "ident"
+  },
+  "1369": {
+   "char": "味",
+   "kind": "ident"
+  },
+  "1370": {
+   "char": "未",
+   "kind": "ident"
+  },
+  "1375": {
+   "char": "民",
+   "kind": "ident"
+  },
+  "1376": {
+   "char": "眠",
+   "kind": "ident"
+  },
+  "1377": {
+   "char": "務",
+   "kind": "ident"
+  },
+  "1378": {
+   "char": "夢",
+   "kind": "ident"
+  },
+  "1379": {
+   "char": "矛",
+   "kind": "ident"
+  },
+  "1381": {
+   "char": "名",
+   "kind": "ident"
+  },
+  "1382": {
+   "char": "命",
+   "kind": "ident"
+  },
+  "1383": {
+   "char": "明",
+   "kind": "ident"
+  },
+  "1385": {
+   "char": "迷",
+   "kind": "ident"
+  },
+  "1386": {
+   "char": "鳴",
+   "kind": "ident"
+  },
+  "1387": {
+   "char": "滅",
+   "kind": "ident"
+  },
+  "1389": {
+   "char": "面",
+   "kind": "ident"
+  },
+  "1395": {
+   "char": "黙",
+   "kind": "ident"
+  },
+  "1397": {
+   "char": "戻",
+   "kind": "ident"
+  },
+  "1399": {
+   "char": "問",
+   "kind": "ident"
+  },
+  "1401": {
+   "char": "門",
+   "kind": "ident"
+  },
+  "1403": {
+   "char": "野",
+   "kind": "ident"
+  },
+  "1407": {
+   "char": "弾",
+   "kind": "ident"
+  },
+  "1410": {
+   "char": "愉",
+   "kind": "ident"
+  },
+  "1417": {
+   "char": "友",
+   "kind": "ident"
+  },
+  "1418": {
+   "char": "有",
+   "kind": "ident"
+  },
+  "1419": {
+   "char": "由",
+   "kind": "ident"
+  },
+  "1421": {
+   "char": "誘",
+   "kind": "ident"
+  },
+  "1422": {
+   "char": "遊",
+   "kind": "ident"
+  },
+  "1425": {
+   "char": "余",
+   "kind": "ident"
+  },
+  "1426": {
+   "char": "与",
+   "kind": "ident"
+  },
+  "1427": {
+   "char": "誉",
+   "kind": "ident"
+  },
+  "1432": {
+   "char": "揺",
+   "kind": "ident"
+  },
+  "1435": {
+   "char": "要",
+   "kind": "ident"
+  },
+  "1439": {
+   "char": "欲",
+   "kind": "ident"
+  },
+  "1440": {
+   "char": "翼",
+   "kind": "ident"
+  },
+  "1442": {
+   "char": "頼",
+   "kind": "ident"
+  },
+  "1444": {
+   "char": "落",
+   "kind": "ident"
+  },
+  "1445": {
+   "char": "乱",
+   "kind": "ident"
+  },
+  "1446": {
+   "char": "覧",
+   "kind": "ident"
+  },
+  "1447": {
+   "char": "利",
+   "kind": "ident"
+  },
+  "1448": {
+   "char": "理",
+   "kind": "ident"
+  },
+  "1449": {
+   "char": "裏",
+   "kind": "ident"
+  },
+  "1452": {
+   "char": "率",
+   "kind": "ident"
+  },
+  "1453": {
+   "char": "立",
+   "kind": "ident"
+  },
+  "1455": {
+   "char": "流",
+   "kind": "ident"
+  },
+  "1457": {
+   "char": "粒",
+   "kind": "ident"
+  },
+  "1462": {
+   "char": "西",
+   "kind": "ident"
+  },
+  "1464": {
+   "char": "良",
+   "kind": "ident"
+  },
+  "1465": {
+   "char": "量",
+   "kind": "ident"
+  },
+  "1469": {
+   "char": "輪",
+   "kind": "ident"
+  },
+  "1471": {
+   "char": "類",
+   "kind": "ident"
+  },
+  "1472": {
+   "char": "令",
+   "kind": "ident"
+  },
+  "1475": {
+   "char": "礼",
+   "kind": "ident"
+  },
+  "1477": {
+   "char": "霊",
+   "kind": "ident"
+  },
+  "1478": {
+   "char": "麗",
+   "kind": "ident"
+  },
+  "1479": {
+   "char": "歴",
+   "kind": "ident"
+  },
+  "1483": {
+   "char": "裂",
+   "kind": "ident"
+  },
+  "1484": {
+   "char": "完",
+   "kind": "ident"
+  },
+  "1485": {
+   "char": "練",
+   "kind": "ident"
+  },
+  "1486": {
+   "char": "路",
+   "kind": "ident"
+  },
+  "1489": {
+   "char": "狼",
+   "kind": "ident"
+  },
+  "1494": {
+   "char": "和",
+   "kind": "ident"
+  },
+  "1500": {
+   "char": "腕",
+   "kind": "ident"
+  },
+  "1511": {
+   "char": "炸",
+   "kind": "ident"
+  },
+  "1518": {
+   "char": "贖",
+   "kind": "ident"
+  },
+  "1530": {
+   "char": "鋭",
+   "kind": "ident"
+  },
+  "1552": {
+   "char": "警",
+   "kind": "ident"
+  },
+  "1554": {
+   "char": "古",
+   "kind": "ident"
+  },
+  "1559": {
+   "char": "幸",
+   "kind": "ident"
+  },
+  "1566": {
+   "char": "査",
+   "kind": "ident"
+  },
+  "1567": {
+   "char": "細",
+   "kind": "ident"
+  },
+  "1577": {
+   "char": "識",
+   "kind": "ident"
+  },
+  "1584": {
+   "char": "純",
+   "kind": "ident"
+  },
+  "1587": {
+   "char": "焦",
+   "kind": "ident"
+  },
+  "1588": {
+   "char": "衝",
+   "kind": "ident"
+  },
+  "1592": {
+   "char": "陣",
+   "kind": "ident"
+  },
+  "1593": {
+   "char": "粋",
+   "kind": "ident"
+  },
+  "1601": {
+   "char": "跡",
+   "kind": "ident"
+  },
+  "1602": {
+   "char": "節",
+   "kind": "ident"
+  },
+  "1613": {
+   "char": "側",
+   "kind": "ident"
+  },
+  "1622": {
+   "char": "掴",
+   "kind": "ident"
+  },
+  "1623": {
+   "char": "艇",
+   "kind": "ident"
+  },
+  "1631": {
+   "char": "納",
+   "kind": "ident"
+  },
+  "1632": {
+   "char": "覇",
+   "kind": "ident"
+  },
+  "1635": {
+   "char": "爆",
+   "kind": "ident"
+  },
+  "1656": {
+   "char": "役",
+   "kind": "ident"
+  },
+  "1693": {
+   "char": "械",
+   "kind": "ident"
+  },
+  "1700": {
+   "char": "吸",
+   "kind": "ident"
+  },
+  "1705": {
+   "char": "欠",
+   "kind": "ident"
+  },
+  "1713": {
+   "char": "獄",
+   "kind": "ident"
+  },
+  "1717": {
+   "char": "寂",
+   "kind": "ident"
+  },
+  "1720": {
+   "char": "瞬",
+   "kind": "ident"
+  },
+  "1734": {
+   "char": "挑",
+   "kind": "ident"
+  },
+  "1748": {
+   "char": "牌",
+   "kind": "ident"
+  },
+  "1757": {
+   "char": "布",
+   "kind": "ident"
+  },
+  "1764": {
+   "char": "妄",
+   "kind": "ident"
+  },
+  "1775": {
+   "char": "突",
+   "kind": "ident"
+  },
+  "1777": {
+   "char": "撃",
+   "kind": "ident"
+  },
+  "1785": {
+   "char": "逅",
+   "kind": "ident"
+  },
+  "1786": {
+   "char": "邂",
+   "kind": "ident"
+  },
+  "1788": {
+   "char": "習",
+   "kind": "ident"
+  },
+  "1805": {
+   "char": "演",
+   "kind": "ident"
+  },
+  "1806": {
+   "char": "桶",
+   "kind": "ident"
+  },
+  "1809": {
+   "char": "棺",
+   "kind": "ident"
+  },
+  "1821": {
+   "char": "腰",
+   "kind": "ident"
+  },
+  "1840": {
+   "char": "盛",
+   "kind": "ident"
+  },
+  "1841": {
+   "char": "逝",
+   "kind": "ident"
+  },
+  "1907": {
+   "char": "七",
+   "kind": "ident"
+  },
+  "1924": {
+   "char": "斗",
+   "kind": "ident"
+  },
+  "1989": {
+   "char": "旋",
+   "kind": "ident"
+  },
+  "2008": {
+   "char": "：",
+   "kind": "ident"
+  },
+  "2009": {
+   "char": "α",
+   "kind": "ident"
+  },
+  "2010": {
+   "char": "β",
+   "kind": "ident"
+  },
+  "2012": {
+   "char": "ν",
+   "kind": "ident"
+  },
+  "2015": {
+   "char": "Ⅰ",
+   "kind": "ident"
+  },
+  "2017": {
+   "char": "Ⅲ",
+   "kind": "ident"
+  },
+  "2019": {
+   "char": "Ⅴ",
+   "kind": "ident"
+  },
+  "2020": {
+   "char": "∀",
+   "kind": "ident"
+  },
+  "2022": {
+   "char": "%",
+   "kind": "ident"
+  },
+  "2029": {
+   "char": "→",
+   "kind": "ident"
+  },
+  "2034": {
+   "char": "↑",
+   "kind": "ident"
+  },
+  "2046": {
+   "char": "♪",
+   "kind": "ident"
+  },
+  "2052": {
+   "char": "吠",
+   "kind": "ident"
+  },
+  "2055": {
+   "char": "嵐",
+   "kind": "ident"
+  },
+  "2056": {
+   "char": "螺",
+   "kind": "ident"
+  },
+  "2076": {
+   "char": "闇",
+   "kind": "ident"
+  },
+  "2077": {
+   "char": "益",
+   "kind": "ident"
+  },
+  "2078": {
+   "char": "塩",
+   "kind": "ident"
+  },
+  "2080": {
+   "char": "招",
+   "kind": "ident"
+  },
+  "2081": {
+   "char": "胎",
+   "kind": "ident"
+  },
+  "2082": {
+   "char": "歪",
+   "kind": "ident"
+  },
+  "2084": {
+   "char": "扉",
+   "kind": "ident"
+  },
+  "2085": {
+   "char": "湧",
+   "kind": "ident"
+  },
+  "2086": {
+   "char": "溶",
+   "kind": "ident"
+  },
+  "2088": {
+   "char": "緑",
+   "kind": "ident"
+  },
+  "2089": {
+   "char": "嘲",
+   "kind": "ident"
+  },
+  "2090": {
+   "char": "甦",
+   "kind": "ident"
+  },
+  "2091": {
+   "char": "蛉",
+   "kind": "ident"
+  },
+  "2092": {
+   "char": "蜻",
+   "kind": "ident"
   }
  }
 }
