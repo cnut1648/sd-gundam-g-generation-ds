@@ -54,6 +54,12 @@ original is a known-good oracle, giving 0-false-positive checks):
   record's* real JP name (catches right-string-wrong-record mis-keying).
 * **Coverage ratchets**: translated-fraction floors (chars displaced, kana remaining) that
   only ever rise, captured only from fully-gated builds.
+* **Architecture contracts**: `extraction_fresh` — the committed `data/jp/` ground-truth
+  dump must equal a fresh run of the canonical extractor over the pinned JP ROM;
+  `zh_reconciliation` — every `data/zh` translation key must map onto an extracted JP
+  record AND the extractor's universe must cover this suite's own independent JP-ROM
+  scan (both directions of `build/reconcile_extraction.py`; a gap = extractor bug, fix
+  extraction rather than dropping the record).
 
 Design rules for gates, learned the hard way:
 * **Every gate ships with a RED→GREEN self-test** against a preserved known-bad artifact —

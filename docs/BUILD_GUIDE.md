@@ -17,8 +17,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 * Input: the Japanese cartridge dump, sha1 `12443b91297a57bcd2ace8da989c26ae635a79fd`.
 * Output: `sd-gundam-g-generation-zh.nds`, 30,324,584 B, sha1
-  `ef8a816fd4970e14c16a19c662929b3b4d292bf2`; with `--pad32m` also the 32 MiB 0xFF-padded
-  image (sha1 `b988e658a96cc20ec7b020c3c1019afc1d4f0106`).
+  `b5746ddab4c70588817fd46e6086728d1751fab6`; with `--pad32m` also the 32 MiB 0xFF-padded
+  image (sha1 `b455da580161bb80c153484c66a653b2894c4db4`). (`data/manifest.json` is the
+  authoritative record of all three hashes.)
 * The build is a **single deterministic pass** (~5 s). Every component is verified against
   `data/manifest.json`; the final ROM hash is verified last. `--skip-verify` downgrades
   hash mismatches to warnings — the mode you use while editing translations.
@@ -26,9 +27,14 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Then verify:
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (32)
 .venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot
 ```
+
+The JP side of every translation key is browsable in `data/jp/` — the committed
+dump of `build/extract_data_from_game.py` (the single extraction path; the
+`extraction_fresh` gate keeps it honest, `build/reconcile_extraction.py` proves
+the mapping complete in both directions).
 
 ## 2. What the build does, in order
 
@@ -40,13 +46,14 @@ Starting from the Japanese arm9 image (1,797,560 B):
 
 1. **Validate input** — ModuleParams words, list layout, expected size (§3 of
    `ROM_STRUCTURE.md`). A wrong or already-built image is rejected.
-2. **Bake semantic tables** (each from its `data/names/` or `data/ui/` file):
+2. **Bake semantic tables** (from `data/zh/units.json`, `zh/characters.json`,
+   `zh/ui.json`; geometry from `utils/extract/layout.py`):
    unit names → master table `0xB94BC`; weapon names → the 6 sub-records per unit;
    pilot names → character DB `0xDCF18`; ID-command names/summaries/details → table
    `0xEC994` + detail offset table `0xF9048`; ability strings + their 583 pointer sites;
    parts-name offsets `0x16B474`; UI label literal sites; the text-macro dictionary at
    `0x12D770` (offset repoints + re-encoded entries).
-3. **Write string pools** (`data/arenas/`): in-place pools (battle names, detail pool,
+3. **Write string pools** (`data/zh/placements/` + `zh/event_text.json`): in-place pools (battle names, detail pool,
    menu descriptors, resident caves), the 1,267 event/briefing text blocks in
    `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload payloads.
 4. **Apply code patches** (`data/patches/code_patches.json`, 36 entries): render-path
@@ -64,7 +71,7 @@ image size). The builder handles this internally.
 
 ### Phase 2 — stage dialogue (`utils/stage_text.py`)
 
-For each of the 101 `_STG*.bin` files (data in `data/dialogue/stages/<name>.json`):
+For each of the 101 `_STG*.bin` files (data in `data/zh/stages/<name>.json`):
 
 1. **Splice** all byte-range edits (translated `0x15 … 00 00` dialogue blocks, plus
    `script`-kind ranges) and inserts (alignment padding) in original-file coordinates.
@@ -94,12 +101,11 @@ see `ROM_STRUCTURE.md` §1). The 12-byte nitrocode footer rides along as `arm9Po
 The canonical build inputs are **encoded payloads** (`zh_hex` / `payload_hex`); the
 `zh`/`zh_text` fields are the human-readable view. That means:
 
-* **Text-table entries that re-encode at build time** (`data/files/*` banks, most name
-  tables): edit the `zh` text, rebuild with `--skip-verify`, run `test/run_static.py`.
+* **Text-table entries that re-encode at build time** (`data/zh/files/*` banks): edit the `zh` text, rebuild with `--skip-verify`, run `test/run_static.py`.
   The text must encode (all chars must exist in the glyph atlas — the codec raises on
   unknown chars) and fit the recorded size budget (builders assert).
-* **Entries with canonical hex** (`data/dialogue/stages/*.json` dialogue edits,
-  `data/arenas/*`): re-encode the new text with `utils/text_codec.encode()` (stage
+* **Entries with canonical hex** (`data/zh/stages/*.json` dialogue edits,
+  `data/zh/placements/*`): re-encode the new text with `utils/text_codec.encode()` (stage
   dialogue convention: prefer the Chinese-region atlas slot for any char that has one —
   see `TEXT_SYSTEM.md`), keep length ≤ the recorded replacement length (pad with trailing
   `0x00`), keep the block terminator clean, and update both `zh_text` and `zh_hex`.
