@@ -115,7 +115,8 @@
    "text": "{01}{01}{01}{01}『チーム』について",
    "scene": 2,
    "order": 10,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x12C7",
@@ -123,7 +124,8 @@
    "text": "複数のユニットを同じマスに配置した{00}状態を『チーム』と呼びます",
    "scene": 2,
    "order": 11,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x12E8",
@@ -131,7 +133,8 @@
    "text": "『チーム』は最大3機までで、配置した{00}ユニットが同時に行動や戦闘を行えます",
    "scene": 2,
    "order": 12,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x130D",
@@ -139,7 +142,8 @@
    "text": "また『チーム攻撃』を選ぶことで{00}敵全体への攻撃も可能になります",
    "scene": 2,
    "order": 13,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1355",
@@ -201,7 +205,8 @@
    "text": "{01}{01}『近接』と『射撃』の違い",
    "scene": 2,
    "order": 20,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1436",
@@ -209,7 +214,8 @@
    "text": "『近接』は弾数がなく、命中率も高い{00}かわりに攻撃が遅くなります",
    "scene": 2,
    "order": 21,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x145B",
@@ -217,7 +223,8 @@
    "text": "たとえ先に仕掛けても相手が『射撃』を{00}選んでいると先に攻撃されてしまいます",
    "scene": 2,
    "order": 22,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1482",
@@ -225,7 +232,8 @@
    "text": "一方、『射撃』は攻撃が早く威力も高い{00}のですが、弾数に制限を愛けます",
    "scene": 2,
    "order": 23,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x15A3",
@@ -431,7 +439,8 @@
    "text": "{01}{01}{01}{01}『IDコマンド』",
    "scene": 2,
    "order": 46,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1838",
@@ -439,7 +448,8 @@
    "text": "各キャラクターは『IDコマンド』と{00}呼ばれる特殊能力を持っています",
    "scene": 2,
    "order": 47,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x185A",
@@ -447,7 +457,8 @@
    "text": "戦闘時には、この『IDコマンド』を{00}使用することで、",
    "scene": 2,
    "order": 48,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1875",
@@ -455,7 +466,8 @@
    "text": "より多くのダメージを与えるなどの{00}効果を愛けることができます",
    "scene": 2,
    "order": 49,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x18B9",
@@ -580,7 +592,8 @@
    "text": "{01}{01}{01}{01}『SPについて』",
    "scene": 2,
    "order": 63,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1AD2",
@@ -588,7 +601,8 @@
    "text": "各キャラクターは精神力を表わす{00}『SP』という値を持っています",
    "scene": 2,
    "order": 64,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1AF5",
@@ -596,7 +610,8 @@
    "text": "『IDコマンド』を使用すると、",
    "scene": 2,
    "order": 65,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B04",
@@ -604,7 +619,8 @@
    "text": "コマンドごとに決められた『SP』を{00}消費します",
    "scene": 2,
    "order": 66,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B1C",
@@ -612,7 +628,8 @@
    "text": "強力なコマンドほど消費する『SP』は{00}大きくなります",
    "scene": 2,
    "order": 67,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B37",
@@ -620,7 +637,8 @@
    "text": "{01}{01}{01}{01}{01}『SPの増減』",
    "scene": 2,
    "order": 68,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B48",
@@ -628,7 +646,8 @@
    "text": "各キャラクターは『初期SP値』という{00}数値を持っていて、",
    "scene": 2,
    "order": 69,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B69",
@@ -636,7 +655,8 @@
    "text": "これがステージ開始時に持っている{00}『SP』となります",
    "scene": 2,
    "order": 70,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1B84",
@@ -644,7 +664,8 @@
    "text": "以後、『SP』はターンが経過するごと{00}に一定値ずつ上昇していきます",
    "scene": 2,
    "order": 71,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1BA8",
@@ -652,7 +673,8 @@
    "text": "また、敵を撃破したり特定のイベントを{00}起こすことでも上昇します",
    "scene": 2,
    "order": 72,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x1BE6",
@@ -858,7 +880,8 @@
    "text": "{01}{01}{01}{01}{01}『編成と出撃』",
    "scene": 2,
    "order": 95,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x2072",
@@ -866,7 +889,8 @@
    "text": "ステージにユニットを出撃させるには{00}予め『編成』を行わなければなりません",
    "scene": 2,
    "order": 96,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x2095",
@@ -874,7 +898,8 @@
    "text": "バックステージメニューで『編成』を{00}選択すると……",
    "scene": 2,
    "order": 97,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x20AE",
@@ -882,7 +907,8 @@
    "text": "この『編成』画面に切り替わります",
    "scene": 2,
    "order": 98,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x20BF",
@@ -890,7 +916,8 @@
    "text": "ここで出撃させたいユニットを{00}戦艦に搭載し、パイロットを配属します",
    "scene": 2,
    "order": 99,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x20DE",
@@ -898,7 +925,8 @@
    "text": "『編成』が終了したら{00}次は実際の『出撃』となります",
    "scene": 2,
    "order": 100,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x20FA",
@@ -906,7 +934,8 @@
    "text": "バックステージの『作戦』で{00}『進撃』を選択すると……",
    "scene": 2,
    "order": 101,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x2116",
@@ -914,7 +943,8 @@
    "text": "この『出撃』画面に切り替わります",
    "scene": 2,
    "order": 102,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x2127",
@@ -922,7 +952,8 @@
    "text": "ここで『Aボタン』を押せば{00}次ステージへと進みます",
    "scene": 2,
    "order": 103,
-   "branch": true
+   "branch": true,
+   "narration": true
   },
   {
    "off": "0x215B",
@@ -956,7 +987,8 @@
    "len": 45,
    "text": "あいうえおかダチッツテ{01}タ{00}·{00}！ア{00}Mめ』な、{00}{01}！し{00}M{SLOT:2283}な、{00}{01}ぁさてと……",
    "reachable": false,
-   "priming": true
+   "priming": true,
+   "narration": true
   },
   {
    "off": "0x1D59",
