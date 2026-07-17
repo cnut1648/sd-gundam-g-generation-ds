@@ -26,6 +26,10 @@ import json
 import sys
 from pathlib import Path
 
+# NOTE: this one-time migration was APPLIED before the extractor refactor; it
+# is kept as evidence only and is pinned to the PRE-refactor build_guide API
+# (extract_units/extract_pilots and module-level table constants no longer
+# exist — the canonical extraction now lives in utils/extract/).  Do not run.
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "build"))
 import build_guide as G  # noqa: E402
