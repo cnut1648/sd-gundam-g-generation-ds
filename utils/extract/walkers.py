@@ -654,6 +654,8 @@ def stage_blocks(rom: GameROM, fname: str,
         m = meta.get(hex(off)) or meta.get(str(off)) or {}
         if m.get("sp", -1) >= 0:
             entry["speaker"] = m["sp"]
+        if m.get("narration"):
+            entry["narration"] = True
         if m.get("choice"):
             entry["choice"] = True
         out.append(entry)
