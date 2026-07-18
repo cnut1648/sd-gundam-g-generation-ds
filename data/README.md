@@ -24,6 +24,10 @@ themselves live in the arenas (below).
 | `parts.json` | `index` | u32 start-offset table for the parts name bank (file `b6e`) |
 
 ### ui/
+* `stage_titles.json` — reviewed Chinese content for all 101 chapter-title
+  records (`+0x04` prefix and `+0x08` title pointers).  It is intentionally
+  encoding-neutral: no glyph, payload, relocation, or ROM-writer choice is
+  implied by this translation manifest.
 * `labels.json` — menu/status/info label pointer sites, grouped per
   (original string → translated string); `sites` lists every literal word.
 * `dictionary.json` — the text-macro dictionary (F-token expansions: dialogue

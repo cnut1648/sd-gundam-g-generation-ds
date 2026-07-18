@@ -82,6 +82,10 @@ Entries carry `jp`, `zh`, plus either in-place `payload_hex` or a `ptr` into an 
 
 ## ui/
 
+* `stage_titles.json` — content-only review data for the 101 ARM9 stage-title
+  records.  Each entry binds a stage file and record id to the original
+  prefix/title pointers plus `jp`/`zh` text.  Encoded bytes and relocation
+  policy are deliberately deferred to the eventual implementation.
 * `labels.json` — label strings with every literal pointer `site` that references them.
 * `dictionary.json` — the text-macro dictionary at `0x12D770`: repointed offset-table
   slots + re-encoded entry strings (`{index, jp, zh, payload_hex}`).
