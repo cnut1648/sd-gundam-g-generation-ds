@@ -104,7 +104,13 @@ def check_identities():
     def feed(payload, surface, where):
         oracle.expand = jp.expand if surface == "stage" else jp.expand_sys
         for slot, font in oracle.glyph_stream(payload, surface):
-            if slot >= 224 and font == "A" and slot not in ident:
+            # Only real JP atlas glyphs need an identity: slots 224..2195.  A
+            # slot >= JP_ATLAS_SLOTS on the JP ROM points past the 2196-slot
+            # atlas -- the junk-band decode of an out-of-range 0xE0xx token in a
+            # priming/index blob or a false 0x15, not a drawn glyph, so it is
+            # not an identity gap.  (In-range garbage is excluded upstream by
+            # skipping reachable:False records.)
+            if 224 <= slot < L.JP_ATLAS_SLOTS and font == "A" and slot not in ident:
                 seen.setdefault(slot, where)
     for b in W.barks(jp):
         feed(jp.file(b["file"])[int(b["body"], 16):int(b["end"], 16)],
@@ -126,6 +132,53 @@ def check_identities():
         for k in ("name", "summary"):
             if (i.get(k) or {}).get("ptr"):
                 feed(jp.cstr(int(i[k]["ptr"], 16)), "bank", f"idn{idn}")
+
+    # -- narrative surfaces (what phases 2-3 translate FROM) ----------------
+    # Character/unit bios, library weapon names, hangar part names, every
+    # reachable stage dialogue block and every non-spurious event-text /
+    # briefing block: all render renderA-direct ("stage").  These were NOT in
+    # the original scan, so unidentified glyphs here decoded as {SLOT:n} in
+    # data/jp without failing the gate.  Records the extractor marks
+    # reachable:False (non-VM-reached stage blocks; spurious 0x15 event blocks,
+    # where the >=2196 junk-band tokens live) are skipped: they are not real
+    # drawn text.
+    for kind, bfile in (("char", L.CHAR_BIO_FILE), ("unit", L.UNIT_BIO_FILE)):
+        data = jp.file(bfile)
+        for b in W.bios(jp, kind):
+            o = int(b["off"], 16)
+            feed(data[o:o + b["size"]].rstrip(b"\x00"), "stage",
+                 f"{kind}bio#{b['index']}")
+    wdata = jp.file(L.WEAPON_LIST_FILE)
+    for w in W.weapon_list(jp):
+        o = int(w["off"], 16)
+        feed(wdata[o:o + w["len"]], "stage", f"weapon@{w['off']}")
+    for p in W.parts(jp):
+        nm = p["name"]
+        o = int(nm["off"], 16)
+        feed(jp.file(nm["file"])[o:o + nm["size"]].rstrip(b"\x00"),
+             "stage", f"part#{p['index']}")
+    for e in W.event_text_blocks(jp):
+        if e.get("reachable") is False:
+            continue
+        o = int(e["off"], 16)
+        feed(bytes(jp.arm9[o:o + e["len"]]), "stage", f"event@{e['off']}")
+    seen_files = set()
+    for d in W.stage_descriptors(jp):
+        fn = d["file"]
+        if fn:
+            tp = struct.unpack_from("<I", jp.arm9,
+                                    int(d["record"], 16) + L.STAGE_DESC_TITLE)[0]
+            feed(jp.cstr(tp), "bank", f"title[{d['label']}]")
+        if not fn or fn in seen_files:
+            continue
+        seen_files.add(fn)
+        fdata = jp.file(fn)
+        for blk in W.stage_blocks(jp, fn):
+            if blk.get("reachable") is False:
+                continue
+            o = int(blk["off"], 16)
+            feed(fdata[o:o + blk["len"]], "stage", f"{fn}@{blk['off']}")
+
     return [f"unidentified atlas slot {s} used at {w}"
             for s, w in sorted(seen.items()) if s not in GAP_ALLOWLIST]
 
