@@ -89,6 +89,21 @@ Entries carry `jp`, `zh`, plus either in-place `payload_hex` or a `ptr` into an 
   resource size word; **must be regenerated together with `files/battle/cutin_quotes.json`**.
 * `resource_offsets.json` — offset words pinning other rebuilt files (`1da`, `1df`).
 
+### Encoding-neutral gallery content
+
+`ev_gallery.json`, `library_titles.json`, and `library_biographies.json` are reviewed
+translation manifests for future gallery integration. They are intentionally not build
+inputs yet and contain no `*_hex`, payload, glyph, font, relocation, or writer fields.
+
+* `ev_gallery.json`: `titles` contains all 54 catalogue records; `replay_text_gaps`
+  contains only the 30 records absent from `arenas/event_text_blocks.json`.
+* `library_titles.json`: `series` stores 28 canonical work-title translations;
+  `entries` links all 513 gallery records to a `char_id` or `utid`, the corresponding
+  ref name, a logical biography id, and a series key.
+* `library_biographies.json`: `entries` contains only the 404 missing biographies.
+  The 109 translations already present under `files/library/` stay authoritative and
+  are not duplicated.
+
 ## arenas/
 
 Encoded string storage, `{offset, text, payload_hex}` per entry (offsets are file

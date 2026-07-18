@@ -33,6 +33,19 @@ themselves live in the arenas (below).
   quote resource (file `1dc`) plus the resource-size word; must match the
   rebuilt file.
 * `resource_offsets.json` — other offset words tied to rebuilt data files.
+* `ev_gallery.json` — encoding-neutral reviewed content for all 54 EV catalogue
+  titles plus the 30 replay-text records not already present in
+  `arenas/event_text_blocks.json`.
+* `library_titles.json` — encoding-neutral character/unit gallery title map:
+  513 record identities use the existing ref names by `char_id` / `utid`, plus
+  28 reviewed work/series translations.
+* `library_biographies.json` — encoding-neutral Chinese prose for the 404
+  character/unit biography records not already translated by
+  `files/library/{character_bios,unit_bios}.json`.
+
+The three gallery manifests above are content-review data. They deliberately
+carry no encoded payload, glyph slot, font choice, relocation target, or ROM
+writer decision, and the current builder does not consume them.
 
 ### arenas/
 Encoded string storage: `{offset, text, payload_hex}` entries.

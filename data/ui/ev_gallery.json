@@ -1,0 +1,604 @@
+{
+ "_about": "Reviewed Chinese content for the EV gallery: all 54 catalogue titles and only the 30 replay blocks not already represented in ref-project v1.1. This manifest is encoding-neutral and contains no payload, font, glyph, relocation, or writer decision.",
+ "_review": {
+  "title_count": 54,
+  "replay_source_block_count": 276,
+  "replay_blocks_already_in_ref": 246,
+  "replay_gap_count": 30,
+  "status": "reviewed",
+  "overlap_policy": "Translations already present in data/arenas/event_text_blocks.json remain authoritative and are not duplicated.",
+  "terminology": "Titles and replay gaps follow ref names and punctuation, including 特里埃尔, 穆, 阿尔玛雅, 杜加奇, 诺里斯, 玛雅, 蕾兹 and 扎比涅."
+ },
+ "titles": [
+  {
+   "event_no": 1,
+   "group": 2,
+   "bit": 1,
+   "jp": "シーマの悪夢",
+   "zh": "西玛的噩梦"
+  },
+  {
+   "event_no": 2,
+   "group": 2,
+   "bit": 2,
+   "jp": "一年戦争",
+   "zh": "一年战争"
+  },
+  {
+   "event_no": 3,
+   "group": 2,
+   "bit": 3,
+   "jp": "セラの死",
+   "zh": "瑟拉之死"
+  },
+  {
+   "event_no": 4,
+   "group": 2,
+   "bit": 4,
+   "jp": "ソロモンの悪夢",
+   "zh": "所罗门的噩梦"
+  },
+  {
+   "event_no": 5,
+   "group": 2,
+   "bit": 5,
+   "jp": "ハマーン立つ",
+   "zh": "哈曼崛起"
+  },
+  {
+   "event_no": 6,
+   "group": 2,
+   "bit": 6,
+   "jp": "戦乱の時代へ",
+   "zh": "迈向战乱时代"
+  },
+  {
+   "event_no": 7,
+   "group": 2,
+   "bit": 7,
+   "jp": "ザビ家の公女",
+   "zh": "扎比家的公主"
+  },
+  {
+   "event_no": 8,
+   "group": 2,
+   "bit": 8,
+   "jp": "衝撃の黒歴史（宇宙世紀発）",
+   "zh": "冲击的黑历史（宇宙世纪）"
+  },
+  {
+   "event_no": 9,
+   "group": 2,
+   "bit": 17,
+   "jp": "衝撃の黒歴史（平成ガンダム発）",
+   "zh": "冲击的黑历史（平成高达）"
+  },
+  {
+   "event_no": 10,
+   "group": 2,
+   "bit": 9,
+   "jp": "フォウの死",
+   "zh": "凤之死"
+  },
+  {
+   "event_no": 11,
+   "group": 2,
+   "bit": 10,
+   "jp": "ジェネシス",
+   "zh": "创世纪"
+  },
+  {
+   "event_no": 12,
+   "group": 2,
+   "bit": 11,
+   "jp": "囚われのトリエル（宇宙世紀発）",
+   "zh": "被囚禁的特里埃尔（宇宙世纪）"
+  },
+  {
+   "event_no": 13,
+   "group": 2,
+   "bit": 12,
+   "jp": "囚われのトリエル（平成ガンダム発）",
+   "zh": "被囚禁的特里埃尔（平成高达）"
+  },
+  {
+   "event_no": 14,
+   "group": 2,
+   "bit": 13,
+   "jp": "フレイの死",
+   "zh": "芙蕾之死"
+  },
+  {
+   "event_no": 15,
+   "group": 2,
+   "bit": 14,
+   "jp": "手を携えて",
+   "zh": "携手同行"
+  },
+  {
+   "event_no": 16,
+   "group": 2,
+   "bit": 15,
+   "jp": "おやすみディアナ",
+   "zh": "晚安、迪安娜"
+  },
+  {
+   "event_no": 17,
+   "group": 2,
+   "bit": 16,
+   "jp": "集う光",
+   "zh": "汇聚之光"
+  },
+  {
+   "event_no": 18,
+   "group": 0,
+   "bit": 0,
+   "jp": "ラストシューティング",
+   "zh": "最后射击"
+  },
+  {
+   "event_no": 19,
+   "group": 0,
+   "bit": 1,
+   "jp": "スターダストメモリー",
+   "zh": "星尘回忆"
+  },
+  {
+   "event_no": 20,
+   "group": 0,
+   "bit": 2,
+   "jp": "女王様もえもえ対決",
+   "zh": "女王大人萌系对决"
+  },
+  {
+   "event_no": 21,
+   "group": 0,
+   "bit": 4,
+   "jp": "黄金の秋",
+   "zh": "黄金之秋"
+  },
+  {
+   "event_no": 22,
+   "group": 0,
+   "bit": 5,
+   "jp": "カテジナの最期",
+   "zh": "卡迪珍娜的最后"
+  },
+  {
+   "event_no": 23,
+   "group": 0,
+   "bit": 6,
+   "jp": "石破ラブラブ天驚拳",
+   "zh": "石破 Love Love 天惊拳"
+  },
+  {
+   "event_no": 24,
+   "group": 0,
+   "bit": 7,
+   "jp": "フラガの死",
+   "zh": "穆之死"
+  },
+  {
+   "event_no": 25,
+   "group": 0,
+   "bit": 8,
+   "jp": "ナタルの最期",
+   "zh": "娜塔尔的最后"
+  },
+  {
+   "event_no": 26,
+   "group": 0,
+   "bit": 9,
+   "jp": "ヒイロvs．",
+   "zh": "希罗 vs 三小强"
+  },
+  {
+   "event_no": 27,
+   "group": 0,
+   "bit": 10,
+   "jp": "アークエンジェルvs．ドミニオン",
+   "zh": "大天使号 vs 主天使号"
+  },
+  {
+   "event_no": 28,
+   "group": 0,
+   "bit": 11,
+   "jp": "女達の戦い（アルマイヤー）",
+   "zh": "女人们的战斗（阿尔玛雅）"
+  },
+  {
+   "event_no": 29,
+   "group": 0,
+   "bit": 12,
+   "jp": "女達の戦い（ソレイユ）",
+   "zh": "女人们的战斗（太阳号）"
+  },
+  {
+   "event_no": 30,
+   "group": 0,
+   "bit": 13,
+   "jp": "ドゥガチの最期",
+   "zh": "杜加奇的最后"
+  },
+  {
+   "event_no": 31,
+   "group": 1,
+   "bit": 1,
+   "jp": "ドズルの最期",
+   "zh": "多兹鲁的最后"
+  },
+  {
+   "event_no": 32,
+   "group": 1,
+   "bit": 2,
+   "jp": "ノリスの最期",
+   "zh": "诺里斯的最后"
+  },
+  {
+   "event_no": 33,
+   "group": 1,
+   "bit": 3,
+   "jp": "ララァの死",
+   "zh": "拉拉之死"
+  },
+  {
+   "event_no": 34,
+   "group": 1,
+   "bit": 4,
+   "jp": "ポケットの中の戦争",
+   "zh": "口袋里的战争"
+  },
+  {
+   "event_no": 35,
+   "group": 1,
+   "bit": 5,
+   "jp": "ギニアスの最期",
+   "zh": "基尼亚斯的最后"
+  },
+  {
+   "event_no": 36,
+   "group": 1,
+   "bit": 6,
+   "jp": "プルの死",
+   "zh": "普露之死"
+  },
+  {
+   "event_no": 37,
+   "group": 1,
+   "bit": 7,
+   "jp": "ジュドーの怒り",
+   "zh": "捷多的愤怒"
+  },
+  {
+   "event_no": 38,
+   "group": 1,
+   "bit": 8,
+   "jp": "新たな力",
+   "zh": "新的力量"
+  },
+  {
+   "event_no": 39,
+   "group": 1,
+   "bit": 11,
+   "jp": "マウアーの死",
+   "zh": "玛雅之死"
+  },
+  {
+   "event_no": 40,
+   "group": 1,
+   "bit": 12,
+   "jp": "アインの最期",
+   "zh": "艾因的最后"
+  },
+  {
+   "event_no": 41,
+   "group": 1,
+   "bit": 13,
+   "jp": "女として",
+   "zh": "作为女人"
+  },
+  {
+   "event_no": 42,
+   "group": 1,
+   "bit": 14,
+   "jp": "Z発動",
+   "zh": "Z 发动"
+  },
+  {
+   "event_no": 43,
+   "group": 1,
+   "bit": 15,
+   "jp": "ジェリドの最期",
+   "zh": "捷利特的最后"
+  },
+  {
+   "event_no": 44,
+   "group": 1,
+   "bit": 16,
+   "jp": "戦士、再び",
+   "zh": "战士、再次"
+  },
+  {
+   "event_no": 45,
+   "group": 1,
+   "bit": 17,
+   "jp": "レズンの最期",
+   "zh": "蕾兹的最后"
+  },
+  {
+   "event_no": 46,
+   "group": 1,
+   "bit": 21,
+   "jp": "3G強襲",
+   "zh": "3G 强袭"
+  },
+  {
+   "event_no": 47,
+   "group": 1,
+   "bit": 22,
+   "jp": "フィンガー対決",
+   "zh": "手指对决"
+  },
+  {
+   "event_no": 48,
+   "group": 1,
+   "bit": 23,
+   "jp": "東方不敗の最期",
+   "zh": "东方不败的最后"
+  },
+  {
+   "event_no": 49,
+   "group": 1,
+   "bit": 24,
+   "jp": "ミリアルドの最期",
+   "zh": "米利亚尔特的最后"
+  },
+  {
+   "event_no": 50,
+   "group": 1,
+   "bit": 25,
+   "jp": "クルーゼの最期",
+   "zh": "克鲁泽的最后"
+  },
+  {
+   "event_no": 51,
+   "group": 1,
+   "bit": 18,
+   "jp": "ビヨンド・ザ・タイム",
+   "zh": "Beyond the Time"
+  },
+  {
+   "event_no": 52,
+   "group": 1,
+   "bit": 19,
+   "jp": "キンケドゥ死す",
+   "zh": "金凯度之死"
+  },
+  {
+   "event_no": 53,
+   "group": 1,
+   "bit": 20,
+   "jp": "ザビーネの最期",
+   "zh": "扎比涅的最后"
+  },
+  {
+   "event_no": 54,
+   "group": 1,
+   "bit": 26,
+   "jp": "黒歴史の勝利者",
+   "zh": "黑历史的胜利者"
+  }
+ ],
+ "replay_text_gaps": [
+  {
+   "record_id": "EVBTXT_1A4A16",
+   "event_no": 32,
+   "event_title_jp": "ノリスの最期",
+   "jp": "………………",
+   "zh": "……"
+  },
+  {
+   "record_id": "EVBTXT_1A5005",
+   "event_no": 33,
+   "event_title_jp": "ララァの死",
+   "jp": "っ！？",
+   "zh": "唔！？"
+  },
+  {
+   "record_id": "EVBTXT_1ACE6A",
+   "event_no": 34,
+   "event_title_jp": "ポケットの中の戦争",
+   "jp": "さあ、来い！\n戦い方を教えてやる！",
+   "zh": "来吧、放马过来！我来教教你该怎么打仗！"
+  },
+  {
+   "record_id": "EVBTXT_1ACEAE",
+   "event_no": 34,
+   "event_title_jp": "ポケットの中の戦争",
+   "jp": "やるしかない……！",
+   "zh": "只能拼了……！"
+  },
+  {
+   "record_id": "EVBTXT_1ACF2A",
+   "event_no": 34,
+   "event_title_jp": "ポケットの中の戦争",
+   "jp": "コイツはお返しだ！",
+   "zh": "这是回敬你的！"
+  },
+  {
+   "record_id": "EVBTXT_1ACF66",
+   "event_no": 34,
+   "event_title_jp": "ポケットの中の戦争",
+   "jp": "あぁっ！？",
+   "zh": "啊啊！？"
+  },
+  {
+   "record_id": "EVBTXT_1A5A1D",
+   "event_no": 35,
+   "event_title_jp": "ギニアスの最期",
+   "jp": "…………",
+   "zh": "……"
+  },
+  {
+   "record_id": "EVBTXT_1A5AEE",
+   "event_no": 35,
+   "event_title_jp": "ギニアスの最期",
+   "jp": "……っ！？",
+   "zh": "……！？"
+  },
+  {
+   "record_id": "EVBTXT_1A88D6",
+   "event_no": 39,
+   "event_title_jp": "マウアーの死",
+   "jp": "……っ！！",
+   "zh": "……！！"
+  },
+  {
+   "record_id": "EVBTXT_1A8B97",
+   "event_no": 39,
+   "event_title_jp": "マウアーの死",
+   "jp": "マウアぁぁぁーーーっ！！",
+   "zh": "玛雅啊啊啊啊！！"
+  },
+  {
+   "record_id": "EVBTXT_1AD2DE",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "このボクをバカにしたなぁっ！",
+   "zh": "竟敢小看我！"
+  },
+  {
+   "record_id": "EVBTXT_1AD2F9",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "ただのオールドタイプが！\nなんの力も持たない一般人がぁぁ！！",
+   "zh": "区区一个旧人类！毫无力量的普通人、竟敢……！！"
+  },
+  {
+   "record_id": "EVBTXT_1AD34A",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "……シグ！",
+   "zh": "……西格！"
+  },
+  {
+   "record_id": "EVBTXT_1AD3BA",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "効かんっ！！",
+   "zh": "对我没用！！"
+  },
+  {
+   "record_id": "EVBTXT_1AD3F6",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "いけぇぇっ！！",
+   "zh": "上啊！！"
+  },
+  {
+   "record_id": "EVBTXT_1AD471",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "シグっ！",
+   "zh": "西格！"
+  },
+  {
+   "record_id": "EVBTXT_1AD4D6",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "終わりだ、アイン・レヴィ！",
+   "zh": "结束了、艾因·雷维！"
+  },
+  {
+   "record_id": "EVBTXT_1AD52A",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "どうしてボクが……！！",
+   "zh": "为什么会是我……！！"
+  },
+  {
+   "record_id": "EVBTXT_1AD55B",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "どんなに優れた力を持っていようと……",
+   "zh": "无论力量多么强大……"
+  },
+  {
+   "record_id": "EVBTXT_1AD57A",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "扱う者が怒りに囚われていては\nその力の半分も発揮できない",
+   "zh": "若使用者被怒火支配、连那份力量的一半都发挥不出"
+  },
+  {
+   "record_id": "EVBTXT_1AD5A4",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "キサマの敗因は、\nキサマ自身の心の弱さだ！",
+   "zh": "你的败因、就在于你自己内心的软弱！"
+  },
+  {
+   "record_id": "EVBTXT_1AD5E1",
+   "event_no": 40,
+   "event_title_jp": "アインの最期",
+   "jp": "……っ！！",
+   "zh": "……！！"
+  },
+  {
+   "record_id": "EVBTXT_1A91CA",
+   "event_no": 41,
+   "event_title_jp": "女として",
+   "jp": "……っ！！",
+   "zh": "……！！"
+  },
+  {
+   "record_id": "EVBTXT_1A99D8",
+   "event_no": 42,
+   "event_title_jp": "Z発動",
+   "jp": "っ！？",
+   "zh": "唔！？"
+  },
+  {
+   "record_id": "EVBTXT_1AA92E",
+   "event_no": 44,
+   "event_title_jp": "戦士、再び",
+   "jp": "………………",
+   "zh": "……"
+  },
+  {
+   "record_id": "EVBTXT_1A66CA",
+   "event_no": 46,
+   "event_title_jp": "3G強襲",
+   "jp": "あぁっ！？",
+   "zh": "啊啊！？"
+  },
+  {
+   "record_id": "EVBTXT_1AD6EE",
+   "event_no": 48,
+   "event_title_jp": "東方不敗の最期",
+   "jp": "………………",
+   "zh": "……"
+  },
+  {
+   "record_id": "EVBTXT_1AD733",
+   "event_no": 48,
+   "event_title_jp": "東方不敗の最期",
+   "jp": "そうだ……",
+   "zh": "对……"
+  },
+  {
+   "record_id": "EVBTXT_1AD745",
+   "event_no": 48,
+   "event_title_jp": "東方不敗の最期",
+   "jp": "今こそお前は……\n本当のキング・オブ・ハート……",
+   "zh": "如今、你才是……真正的红心之王……"
+  },
+  {
+   "record_id": "EVBTXT_1AC446",
+   "event_no": 53,
+   "event_title_jp": "ザビーネの最期",
+   "jp": "ダメだろおおお、キンケドゥゥ！！\n死んでなきゃぁぁぁ！！",
+   "zh": "不行啊、金凯度！！你必须给我死透了才行啊！！"
+  }
+ ]
+}
