@@ -21,7 +21,7 @@ from utils import text_codec
 
 from . import layout as L
 from .gamerom import GameROM, u16, u32
-from .identities import decode_text, glyph_count
+from .identities import decode_text, glyph_count, glyph_stream
 
 
 # ---------------------------------------------------------------------------
@@ -516,10 +516,21 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
             i += 1
             continue
         payload = a[i + 1:t]
-        is_brief = (L.BRIEF_LO <= i < L.BRIEF_HI and not has_ptr(payload)
+        # A false 0x15 landing inside event bytecode is not real display text:
+        # it either embeds an event code pointer (0x13/0x16 -> event RAM) or
+        # would draw an atlas slot >= 2196 (the JP atlas has only 2196 slots).
+        # Mark such blocks reachable:False, exactly like the stage-block walker
+        # marks non-VM-reached blocks, so the dump stays honest while every
+        # downstream consumer (gates, phase-2/3 exporters) can skip them.
+        spurious = has_ptr(payload) or any(
+            s >= L.TRAMPOLINE_SPLIT
+            for s, _ in glyph_stream(rom, payload, "stage"))
+        is_brief = (not spurious and L.BRIEF_LO <= i < L.BRIEF_HI
                     and glyph_count(rom, payload, "stage") >= 3)
         entry = {"off": _hex(i), "len": t + 2 - i,
                  "text": decode_text(rom, a[i:t + 2], "stage", rom.expand, True)}
+        if spurious:
+            entry["reachable"] = False
         if is_brief:
             entry["briefing"] = True
             ks = descs_of(i)
