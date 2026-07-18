@@ -27,23 +27,24 @@ What you read and what to translate:
 
 * `descriptors[0].title` — the mission title string. Translate it.
 * `briefing[]` — `{off, text}` pre-battle mission lines. Translate every one.
-* `blocks[]` — dialogue blocks `{off, text, speaker, ...}`. **Translate a block
-  if it has real `text`**, which is exactly:
-  - every block with a `scene`/`order` (the VM-reached, in-play-order dialogue); AND
-  - `reachable:false` blocks that are genuine coherent lines — these are the
-    ending / epilogue text the static analysis can't reach but the game DOES show
-    (e.g. 「この『宇宙世紀ルート』を最後まで遊んでくれて感謝する」). Translate them.
-* **SKIP** a block when it is any of: `"garbage": true` (non-text bytes, text is
-  emptied), `"priming": true` (あいうえお… glyph-warmup rows), or an obvious
-  non-text scan fragment (a short kana/punctuation/stray-Latin smear like
-  「な、M目貴重、」 / 「な、！」 — not a real sentence). When in doubt, a real line
-  reads as fluent Japanese; noise does not.
+* `blocks[]` — dialogue blocks `{off, text, speaker, ...}`. **Translate exactly
+  the offsets in the `TRANSLATE_OFFSETS` list you are given for this stage** —
+  that list is the authoritative set of real in-game display lines (it is derived
+  from the pixel-verified v1.1 line set plus the VM-reached blocks, so it is
+  immune to the extractor's fallible reachability guess). For each listed `off`,
+  read that block's `text` and translate it.
+* Do **NOT** decide inclusion from the `reachable` field. `reachable:false` does
+  NOT mean "not shown in-game" — it only means the extractor's static VM walk did
+  not reach that block. Many `reachable:false` blocks ARE shown (endings/
+  epilogues, dynamically-dispatched scenes); others are non-text scan noise. Your
+  `TRANSLATE_OFFSETS` list already separates the two, so you never guess.
 * Blocks may also carry `"narration": true` and `"choice": true` (see below).
 
-You will NOT encounter `{SLOT:n}` / `{B:n}` / `{F0:n}` / `□` in any text you
-translate — real records are 100% clean. If one ever appears, STOP and report it
-(the extractor regressed); do not guess. `{00}` / `{01}` are layout/structure
-markers (see §3), not garbage.
+A line you are asked to translate should read as fluent Japanese. If a listed
+block's `text` instead looks like a non-text smear or shows `{SLOT:n}` /
+`{B:n}` / `{F0:n}` / `□`, do NOT translate it — flag that `off` in `notes` and
+skip it (it means the offset list or the decoder needs a fix). `{00}` / `{01}`
+are layout/structure markers (see §3), not garbage.
 
 ## 1. Voice & sources (mandatory)
 
@@ -146,15 +147,14 @@ builds, and do NOT copy the JP text back — only your Chinese, keyed by the exa
 ```
 
 * Key every entry by its exact `off` from `data/jp/stages/<stage>.json`, same
-  order. Include the title, EVERY `briefing[]` line, and every `blocks[]` line
-  you translated per §0 (VM-reached lines + coherent `reachable:false` endings);
-  skip only `garbage`/`priming`/noise. Never add, merge or reorder records.
+  order. Include the title, EVERY `briefing[]` line, and exactly the `blocks[]`
+  lines in your `TRANSLATE_OFFSETS` list. Never add, merge or reorder records.
 
 ## 6. Final self-check before writing
 
 1. JSON parses; `stage` matches; you output ONLY this stage; no JP copied back.
-2. Every translated `off` present, in original order; `garbage`/`priming`/noise
-   skipped; coherent `reachable:false` endings INCLUDED.
+2. Every `off` in `TRANSLATE_OFFSETS` present, in original order; nothing outside
+   it added; inclusion never decided from the `reachable` field.
 3. No manual `{00}`/`{01}` except in `『…』{00}『…』` choices and `{01}` splits.
 4. Every character / unit / weapon / system name equals the phase-1 `terms.md`
    value (speakers resolved via cid); no romaji, no invented variant.
