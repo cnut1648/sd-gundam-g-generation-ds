@@ -87,6 +87,16 @@ the short mainland form; 希罗·尤尔 (moegirl page title — the 尤伊 forms
 annotation-only); 零式系统 not MD零式系统 (pool budget); 高达Mk20号机 stays (104px
 budget); 特里尔（增压）-class width compromises are recorded per-record.
 
+**Burst-variant pilot names (width rulings, 2026-07):** char-DB names render 12px/cell
+on plates whose JP design assumed 8px, so every burst-mode name was condensed to
+≤6 cells (TEXT_SYSTEM §6 pilot cap; ≤7 hard).  The recorded forms: SEED觉醒 states
+use the X觉醒 pattern — 基拉觉醒 / 阿斯兰觉醒 / 卡嘉莉觉醒 / 拉克丝觉醒 / 真觉醒
+(consistent with the SEED觉醒 ID-ability; the fullwidth （SEED） forms at 8-9 cells
+overlapped the battle-plate LV badge); 希罗（零式）(drops 尤尔, keeps the 零式
+ruling above); 米利亚尔特零; 多蒙（明镜）(明镜止水 at 8 cells collided with the
+badge — the idiom stays full in dialogue/bio text); 特里埃尔增压.  Pilot names stay
+pure ZH-band (LESSONS A12) — fullwidth （） only, never renderB one-byte parens.
+
 **ID skills & 名台词 (binding style):** a cut-in quote is ALWAYS the full famous
 line in mainland-community wording (websearch 萌娘百科/biligame/百度百科); the skill
 NAME may be condensed but only into a natural phrase sharing the quote's key terms,

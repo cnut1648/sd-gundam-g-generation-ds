@@ -81,6 +81,15 @@ in encyclopedia data files — edit the pool the screen actually reads.
 
 ## 4. Gameplay-relevant engine facts
 
+* **Combat hit-reaction presentation (owner-reported as "unit disappears on 暴击"):**
+  the floating-HP-bar/no-sprite frames during battle animations are the stock JP
+  hit-reaction, NOT a translation defect.  On damage — especially critical-class
+  hits — the victim sprite blinks out and is knocked away while its anchored HP bar
+  and the damage number stay drawn; it returns a moment later if alive, or is removed
+  together with its bar on destruction (撃破!!).  Verified by a frame-by-frame A/B of
+  the same battle on the unmodified JP ROM (same save, same volley): identical
+  floating-bar frames at the identical moment.  MEPE/分身-class specials (F91, God
+  Gundam 明镜止水) are additionally *designed* vanish/afterimage effects.
 * One stage resident at a time in the fixed buffer `0x0232C800` (79,872 B cap per stage).
 * The dialogue/event system is a bytecode VM (dispatcher `0x0209EBAC`; cutscene/ending
   driver with its own jump-table VM @ ctx `0x0227CD0C`). Mid-stage demos and endings are
