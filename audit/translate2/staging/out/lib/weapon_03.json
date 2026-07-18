@@ -1,0 +1,42 @@
+{
+ "kind": "weapon_list",
+ "batch": "03",
+ "web_sources": [
+  "https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%B3%E3%83%97%E3%83%95%E3%82%A1%E3%83%BC",
+  "https://www.gundam-c.com/manual/mechanic/pocket/kampfer.html",
+  "https://gundam.fandom.com/wiki/MSN-04_Sazabi",
+  "https://dic.pixiv.net/a/%E3%83%93%E3%83%BC%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%95%E3%83%AB"
+ ],
+ "items": [
+  {"off": "0x4BD", "name_zh": "对空光束"},
+  {"off": "0x4C4", "name_zh": "有线头部光束"},
+  {"off": "0x4CE", "name_zh": "可变米加粒子炮"},
+  {"off": "0x4DE", "name_zh": "子浮游炮"},
+  {"off": "0x4E7", "name_zh": "母浮游炮"},
+  {"off": "0x4EF", "name_zh": "双联光束爪"},
+  {"off": "0x4FA", "name_zh": "盾光束军刀"},
+  {"off": "0x502", "name_zh": "轨道加农炮"},
+  {"off": "0x508", "name_zh": "狙击"},
+  {"off": "0x50C", "name_zh": "机枪"},
+  {"off": "0x511", "name_zh": "指节盾"},
+  {"off": "0x518", "name_zh": "散弹枪"},
+  {"off": "0x520", "name_zh": "链式地雷"},
+  {"off": "0x527", "name_zh": "巨型火箭炮"},
+  {"off": "0x531", "name_zh": "导弹"},
+  {"off": "0x534", "name_zh": "火箭发射器"},
+  {"off": "0x53F", "name_zh": "扎古机枪"},
+  {"off": "0x547", "name_zh": "热能斧"},
+  {"off": "0x551", "name_zh": "扎古火箭炮"},
+  {"off": "0x557", "name_zh": "神之斩"},
+  {"off": "0x55F", "name_zh": "爆热神指"},
+  {"off": "0x569", "name_zh": "超级霸王电影弹"},
+  {"off": "0x578", "name_zh": "石破天惊拳"},
+  {"off": "0x57B", "name_zh": "双联加特林机枪"},
+  {"off": "0x586", "name_zh": "扩散米加粒子炮"},
+  {"off": "0x590", "name_zh": "反射浮游炮"},
+  {"off": "0x59B", "name_zh": "火箭炮"},
+  {"off": "0x59E", "name_zh": "光束散弹步枪"},
+  {"off": "0x5AB", "name_zh": "光束战斧"}
+ ],
+ "notes": "27/29 names taken verbatim from terms.md §武器名 (validator-normalized ·→・). The two exceptions are ROM spellings with a full-size ヨ where terms.md uses small ョ, so they have no byte-exact terms key: 0x518 'シヨットガン' = ショットガン (Kämpfer MS-18E's ZUX-197 shotgun, confirmed via ja.wikipedia + gundam-c.com; used the terms.md value 散弹枪 verbatim) and 0x59E 'ビーム・シヨットライフル' = ビーム・ショットライフル (Sazabi MSN-04's beam shot rifle, confirmed via gundam.fandom + pixiv dic; used the terms.md value 光束散弹步枪 verbatim). No genuinely new names in this batch."
+}

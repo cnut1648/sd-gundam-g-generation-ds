@@ -1,0 +1,41 @@
+{
+ "kind": "weapon_list",
+ "batch": "01",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/MA-06_Val_Walo",
+  "https://gundam.fandom.com/ja/wiki/MA-06_%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%AD",
+  "https://gundam.wiki.cre.jp/wiki/%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%AD"
+ ],
+ "items": [
+  {"off": "0x2D5", "name_zh": "高能米加加农炮"},
+  {"off": "0x2DE", "name_zh": "超级米加发射器"},
+  {"off": "0x2E8", "name_zh": "突击"},
+  {"off": "0x2EB", "name_zh": "有线米加臂炮"},
+  {"off": "0x2F5", "name_zh": "浮游炮"},
+  {"off": "0x2FA", "name_zh": "新·超级火箭炮"},
+  {"off": "0x302", "name_zh": "飞翼浮游炮"},
+  {"off": "0x30A", "name_zh": "大型米加粒子炮"},
+  {"off": "0x313", "name_zh": "米加粒子炮"},
+  {"off": "0x31A", "name_zh": "加特林枪"},
+  {"off": "0x322", "name_zh": "斯库拉加农炮"},
+  {"off": "0x327", "name_zh": "有线爪"},
+  {"off": "0x32C", "name_zh": "导弹舱"},
+  {"off": "0x332", "name_zh": "等离子引导器"},
+  {"off": "0x33C", "name_zh": "双管破坏步枪"},
+  {"off": "0x349", "name_zh": "机炮"},
+  {"off": "0x34E", "name_zh": "旋转破坏步枪"},
+  {"off": "0x35D", "name_zh": "光束加农炮"},
+  {"off": "0x363", "name_zh": "大型导弹"},
+  {"off": "0x368", "name_zh": "破甲者"},
+  {"off": "0x371", "name_zh": "浮游炮"},
+  {"off": "0x375", "name_zh": "光束机枪"},
+  {"off": "0x37D", "name_zh": "机炮"},
+  {"off": "0x382", "name_zh": "指节破坏炮"},
+  {"off": "0x38B", "name_zh": "光束加农炮"},
+  {"off": "0x390", "name_zh": "光束加农炮"},
+  {"off": "0x398", "name_zh": "武装舱"},
+  {"off": "0x3A2", "name_zh": "大型光束步枪"},
+  {"off": "0x3AC", "name_zh": "光束薙刀"}
+ ],
+ "notes": "28/29 names taken verbatim from terms.md §武器名 (validator-normalized ·→・). The one exception: 0x327 'クロ−' ends in U+2212 (minus sign, a ROM typo for the long-vowel bar ー), so it has no exact terms.md key; terms.md's クロー entry is dual-valued (有线爪 / 利爪). Positional evidence pins 0x327 to ヴァル・ヴァロ (Val Walo): the library list follows unit first-appearance order and 0x327 sits in the run スキュラ(0x322, イージス)→クロ−→ミサイル・ポッド(0x32C)→プラズマ・リーダー(0x332), the latter two being Val Walo weapons; phase 1 (data/zh/units.json ptr 0x232944A) translated Val Walo's クロー as 有线爪, so used 有线爪 here. The 利爪 branch (バウンドドッグ/ビグロ/レイダーガンダム, ptr 0x218994E) corresponds to the second library クロー at 0x755 (a different batch). Val Walo's flexible wire-guided claw arms confirmed via Gundam wikis (see web_sources)."
+}

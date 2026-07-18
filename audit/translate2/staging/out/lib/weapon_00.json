@@ -1,0 +1,42 @@
+{
+ "kind": "weapon_list",
+ "batch": "00",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/RX-78GP03_Gundam_%22Dendrobium%22",
+  "https://baike.baidu.com/item/GP03D%E7%9F%B3%E6%96%9B%E5%85%B0/6001405",
+  "https://wiki.biligame.com/gundam/RX-78GP03D%E9%AB%98%E8%BE%BE%E8%AF%95%E4%BD%9C3%E5%8F%B7%E6%9C%BA%EF%BC%88%E7%9F%B3%E6%96%9B%E5%85%B0%EF%BC%89",
+  "https://gundam.wiki.cre.jp/wiki/%E3%82%B3%E3%82%A6%E3%83%BB%E3%82%A6%E3%83%A9%E3%82%AD"
+ ],
+ "items": [
+  {"off": "0x1D2", "name_zh": "高达流星锤"},
+  {"off": "0x1DC", "name_zh": "光束步枪"},
+  {"off": "0x1E4", "name_zh": "多用途发射井"},
+  {"off": "0x1F1", "name_zh": "月光蝶"},
+  {"off": "0x1F6", "name_zh": "可动光束加农炮"},
+  {"off": "0x203", "name_zh": "线控炮"},
+  {"off": "0x208", "name_zh": "反射线控炮"},
+  {"off": "0x214", "name_zh": "光束智能枪"},
+  {"off": "0x21E", "name_zh": "VSBR"},
+  {"off": "0x225", "name_zh": "MEPE攻击"},
+  {"off": "0x22F", "name_zh": "火神炮"},
+  {"off": "0x234", "name_zh": "原子火箭炮"},
+  {"off": "0x23D", "name_zh": "折叠式火箭炮"},
+  {"off": "0x248", "name_zh": "集装导弹"},
+  {"off": "0x250", "name_zh": "大型光束军刀"},
+  {"off": "0x258", "name_zh": "米加光束炮"},
+  {"off": "0x260", "name_zh": "微型导弹"},
+  {"off": "0x268", "name_zh": "爆导索"},
+  {"off": "0x26F", "name_zh": "呐喊"},
+  {"off": "0x274", "name_zh": "刺刀型光束步枪"},
+  {"off": "0x282", "name_zh": "3连导弹舱"},
+  {"off": "0x28A", "name_zh": "多用途发射器"},
+  {"off": "0x295", "name_zh": "米加光束步枪"},
+  {"off": "0x2A0", "name_zh": "喷射光束荚舱"},
+  {"off": "0x2AB", "name_zh": "米加光束加农炮"},
+  {"off": "0x2B4", "name_zh": "光之翼"},
+  {"off": "0x2BA", "name_zh": "双管光束步枪"},
+  {"off": "0x2C5", "name_zh": "高能光束军刀"},
+  {"off": "0x2CD", "name_zh": "导弹发射器"}
+ ],
+ "notes": "27/29条在terms.md§武器名有原词、逐字沿用。两条无phase-1词条：(1) 0x268 爆導策=GP03石斛兰的爆導索（英文官名Demolition Chain）在本作图鉴内的用字变体（策/索同音さく）、系同一武器（图鉴武器序列0x248-0x268与utid25-27 GP03武装表逐项对应）、译名沿用terms.md及data/zh/units.json既有的爆导索以保持全局一致（来源：gundam.fandom GP03页、百度百科GP03D石斛兰、biligame高达wiki）；(2) 0x26F 吶喊=GP03浦木宏突击技（名台词コウ・ウラキ……吶喊します！）、吶为呐的异体、简体规范作呐喊、并与phase-1 cut-in定案浦木宏……呐喊！（data/zh/files/battle/cutin_quotes.json、char_72裁定）保持一致。建议将爆導策→爆导索、吶喊→呐喊并入terms.md。校验器缺口报告：0x1F1 月光蝶按terms.md被锁定为逐字月光蝶（中日同形、brief§1既定术语）、但check_p23.py的kana_check将zh==jp判为untranslated、与terms强制检查构成死锁（任何其他字符串又会触发terms mismatch）、属同形词条假阳性；同类terms行还有金棒(0x696)与CIWS(0x927)、将影响后续批次；建议orchestrator在check_weapons中当j in terms且zh==terms[j]时跳过kana_check的identity判定。本文件名称本身无误。"
+}

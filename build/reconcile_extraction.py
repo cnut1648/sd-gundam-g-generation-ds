@@ -208,21 +208,45 @@ def main() -> int:
     # ---- 5. library / hangar banks --------------------------------------------
     for kind, rel in (("char", "zh/files/library/character_bios.json"),
                       ("unit", "zh/files/library/unit_bios.json")):
-        recs = {int(b["off"], 16): b["size"] for b in W.bios(rom, kind)}
+        bios = W.bios(rom, kind)
         d = _j(rel)
         total = matched = 0
         notes = []
-        for e in d["edits"]:
-            total += 1
-            off = int(e["offset"], 16)
-            # an edit may keep a few trailing structure bytes outside its
-            # budget, so its size may be smaller than the full record slot
-            if off in recs and e["size"] <= recs[off]:
-                matched += 1
-            elif off in recs:
-                notes.append(f"{d['file']}@{e['offset']}: size {e['size']} > record {recs[off]}")
-            else:
-                notes.append(f"{d['file']}@{e['offset']}: not a bio record start")
+        if d.get("format") == "bio_bank":
+            # full-bank layout: every record is keyed by bio INDEX; a zh
+            # record matches iff the extractor sees that index; a passthrough
+            # record must reproduce the extractor's off/size exactly.
+            by_index = {b["index"]: b for b in bios}
+            known = set(by_index) | {91}      # index 91: ownerless orphan record
+            for r in d["records"]:
+                total += 1
+                k = r["index"]
+                if "zh" in r or "zh_hex" in r:
+                    if k in known:
+                        matched += 1
+                    else:
+                        notes.append(f"{d['file']} record {k}: no extracted bio")
+                else:
+                    b = by_index.get(k)
+                    if b and int(b["off"], 16) == int(r["jp_off"], 16) \
+                         and b["size"] == r["jp_len"]:
+                        matched += 1
+                    else:
+                        notes.append(f"{d['file']} record {k}: passthrough "
+                                     "geometry differs from extraction")
+        else:
+            recs = {int(b["off"], 16): b["size"] for b in bios}
+            for e in d["edits"]:
+                total += 1
+                off = int(e["offset"], 16)
+                # an edit may keep a few trailing structure bytes outside its
+                # budget, so its size may be smaller than the full record slot
+                if off in recs and e["size"] <= recs[off]:
+                    matched += 1
+                elif off in recs:
+                    notes.append(f"{d['file']}@{e['offset']}: size {e['size']} > record {recs[off]}")
+                else:
+                    notes.append(f"{d['file']}@{e['offset']}: not a bio record start")
         rep.add(f"{kind} bios ({d['file']})", total, matched, notes)
 
     wl = {int(r["off"], 16) for r in W.weapon_list(rom)}

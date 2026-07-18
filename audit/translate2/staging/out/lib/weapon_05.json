@@ -1,0 +1,127 @@
+{
+ "kind": "weapon_list",
+ "batch": "05",
+ "web_sources": [
+  "https://gundam.fandom.com/wiki/NRX-055_Baund_Doc",
+  "https://gundam.wiki.cre.jp/wiki/%E3%83%90%E3%82%A6%E3%83%B3%E3%83%89%E3%83%BB%E3%83%89%E3%83%83%E3%82%AF"
+ ],
+ "items": [
+  {
+   "off": "0x6BD",
+   "name_zh": "灵能炮"
+  },
+  {
+   "off": "0x6C5",
+   "name_zh": "突击浮游炮"
+  },
+  {
+   "off": "0x6D0",
+   "name_zh": "米加发射器"
+  },
+  {
+   "off": "0x6D8",
+   "name_zh": "多佛炮"
+  },
+  {
+   "off": "0x6DF",
+   "name_zh": "米加加农炮"
+  },
+  {
+   "off": "0x6E5",
+   "name_zh": "热能刀"
+  },
+  {
+   "off": "0x6EE",
+   "name_zh": "大型热能剑"
+  },
+  {
+   "off": "0x6F8",
+   "name_zh": "拉凯登火箭炮"
+  },
+  {
+   "off": "0x702",
+   "name_zh": "热能军刀"
+  },
+  {
+   "off": "0x70A",
+   "name_zh": "三翼旋刃"
+  },
+  {
+   "off": "0x712",
+   "name_zh": "手枪"
+  },
+  {
+   "off": "0x718",
+   "name_zh": "有线爪臂"
+  },
+  {
+   "off": "0x721",
+   "name_zh": "大型导弹发射器"
+  },
+  {
+   "off": "0x72B",
+   "name_zh": "米加加农炮"
+  },
+  {
+   "off": "0x735",
+   "name_zh": "扎古机枪改"
+  },
+  {
+   "off": "0x73F",
+   "name_zh": "狙击光束炮"
+  },
+  {
+   "off": "0x74B",
+   "name_zh": "盾米加粒子炮"
+  },
+  {
+   "off": "0x755",
+   "name_zh": "利爪"
+  },
+  {
+   "off": "0x759",
+   "name_zh": "双联光束枪"
+  },
+  {
+   "off": "0x761",
+   "name_zh": "利刃导弹"
+  },
+  {
+   "off": "0x76A",
+   "name_zh": "海蛇"
+  },
+  {
+   "off": "0x770",
+   "name_zh": "有线光束炮"
+  },
+  {
+   "off": "0x777",
+   "name_zh": "对空米加粒子炮"
+  },
+  {
+   "off": "0x782",
+   "name_zh": "对空导弹"
+  },
+  {
+   "off": "0x789",
+   "name_zh": "黏土火箭炮"
+  },
+  {
+   "off": "0x790",
+   "name_zh": "光束加特林"
+  },
+  {
+   "off": "0x79B",
+   "name_zh": "炸裂栓"
+  },
+  {
+   "off": "0x7A3",
+   "name_zh": "艾克札恩铁道炮"
+  },
+  {
+   "off": "0x7AA",
+   "name_zh": "尼德霍格重镰"
+  }
+ ],
+ "notes": "28/29条在terms.md§武器名有唯一对应词条、逐字沿用（JP的·按校验器规则视同・）。唯一例外：0x755 クロー在terms.md为双值行「有线爪 / 利爪」（make_terms.py把phase-1的两个分支用「 / 」并列）、必须按机体分支取值。归属证据：图鉴武器表按机体初登场顺序排列、0x74B シールド・メガ粒子砲（バウ、utid430-435）→0x755 クロー→0x759 2連ビーム・ガン（パラス・アテネ、utid442-444）、夹在中间的正是バウンドドッグ（utid436-438）；phase-1 data/zh/units.json把バウンドドッグ/ビグロ/レイダーガンダム共用的クロー名池串（ptr 0x20B631D）一律译为利爪（units[435-437]/[456-458]/[546-548]）、而有线爪分支属于ヴァル・ヴァロ的线控爪（名池0xB5BBB、对应图鉴0x327、batch 01已按有线爪输出并在其notes预告0x755归利爪分支）。バウンドドッグ大型爪臂武装经wiki核实（见web_sources）。故0x755=利爪。校验器缺口报告（与batch 00的月光蝶死锁同类）：check_p23.py的_terms_weapons把双值行当单一字符串、对0x755任何输出都无法PASS——利爪（或有线爪）触发terms逐字不等、而字面值「有线爪 / 利爪」中的空格与/在stage面不可编码、触发charset错误；建议orchestrator让check_weapons把terms值按「 / 」拆分后任一匹配即过（本文件当前唯一FAIL行即0x755、其余28条全部PASS-clean）。"
+}

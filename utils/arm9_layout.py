@@ -222,6 +222,35 @@ def _apply_cutin_offsets(img: _Image, data_dir: Path):
     img.put_u32(L.CUTIN_RESOURCE_SIZE_WORD, pos, "cut-in resource size")
 
 
+def _apply_bio_offsets(img: _Image, data_dir: Path):
+    """Write both encyclopedia bio offset tables DERIVED from the bio banks.
+
+    Mirrors _apply_cutin_offsets: data/zh/files/library/{character,unit}_bios.json
+    (format "bio_bank") define every record's emitted length; the arm9 tables
+    (u32[N]+sentinel at layout.CHAR_BIO_OFFTAB / UNIT_BIO_OFFTAB) plus each
+    bank's resource-size word are recomputed here so record growth can never
+    desynchronize table and bank."""
+    from . import data_files
+
+    for rel, offtab, count, size_word, what in (
+            ("zh/files/library/character_bios.json", L.CHAR_BIO_OFFTAB,
+             L.CHAR_BIO_N, L.CHAR_BIO_SIZE_WORD, "char bio"),
+            ("zh/files/library/unit_bios.json", L.UNIT_BIO_OFFTAB,
+             L.UNIT_BIO_N, L.UNIT_BIO_SIZE_WORD, "unit bio")):
+        table = json.loads((data_dir / rel).read_text(encoding="utf-8"))
+        if table.get("format") != "bio_bank":
+            continue                      # legacy in-place layout: JP table stands
+        lens = data_files.bio_record_lengths(table)
+        if len(lens) != count:
+            raise ValueError(f"{rel}: {len(lens)} records, table holds {count}")
+        pos = 0
+        for k, n in enumerate(lens):
+            img.put_u32(offtab + 4 * k, pos, f"{what} offset {k}")
+            pos += n
+        img.put_u32(offtab + 4 * count, pos, f"{what} offset sentinel")
+        img.put_u32(size_word, pos, f"{what} resource size")
+
+
 def _apply_ui(img: _Image, data_dir: Path):
     d = _load(data_dir, "zh/ui.json")
     _apply_sites(img, d["labels"], "label")
@@ -340,6 +369,7 @@ def build_arm9(jp_arm9: bytes, data_dir: Path | str | None = None,
     _apply_characters(img, data_dir)
     _apply_parts(img, data_dir)
     _apply_cutin_offsets(img, data_dir)
+    _apply_bio_offsets(img, data_dir)
     _apply_ui(img, data_dir)
     _apply_placements(img, data_dir)
     _apply_event_blocks(img, data_dir)

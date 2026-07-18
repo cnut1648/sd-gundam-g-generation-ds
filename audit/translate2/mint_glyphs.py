@@ -165,17 +165,24 @@ def _mark_pairs(buf: bytes, marked: set):
             marked.add(((b << 8) | buf[i + 1]) - 0xE000 + 224)
 
 
-def jp_band_census(data_used_tokens: set):
-    from lib_apply import open_roms
+def jp_band_census(data_used_tokens: set, exclude_files: tuple = ()):
+    """Candidate-ROM token scan per AGENTS.md §G: the proof universe is
+    data/** hex (in data_used_tokens) + the BUILT ZH ROM's text surfaces.
+    ``exclude_files`` lists banks the pending apply replaces wholesale (their
+    residual JP text vanishes from the candidate ROM), e.g. the library bio
+    banks — their kana-heavy JP prose is what pins most JP-band cells."""
     import utils.extract.layout as L
-    jp, _zh = open_roms()
+    from utils.extract.gamerom import GameROM
+    jp = GameROM(str(REPO / "sd-gundam-g-generation-zh.nds"))
     cm = json.loads((REPO / "data/charmap.json").read_text())
     marked: set = set(data_used_tokens)
     # every text-bearing NitroFS file (incl. all 101 stage scripts)
     from utils import rom as romlib
-    nds = romlib.load_rom(str(REPO / "0098 - SD Gundam G Generation DS (Japan).nds"))
+    nds = romlib.load_rom(str(REPO / "sd-gundam-g-generation-zh.nds"))
     stage_files = [n for n in nds.filenames.files if n.startswith("_STG")]
     for fn in TEXT_FILES + stage_files:
+        if fn in exclude_files:
+            continue
         _mark_pairs(jp.file(fn), marked)
     # arm9 text bands: JP string pools, inline story text, both dictionaries,
     # the UI dictionary region (0x12D770..renderB font) and post-dict labels
@@ -230,17 +237,32 @@ def mint(dry=False):
     cands = [s for s in cands if ok_slot(s)]
     # stage-only overflow tier: token-free JP-band cells (never encodable on
     # bank surfaces by construction — slot_of(surface="bank") refuses < 2196)
-    jb = [c["slot"] for c in jp_band_census(cen["data_used_tokens"])]
+    # this apply replaces the three library banks wholesale; their residual
+    # JP text is not part of the candidate ROM (bio_apply rewrites every byte)
+    jb = [c["slot"] for c in jp_band_census(
+        cen["data_used_tokens"], exclude_files=("324.bin", "c4b.bin", "31e.bin"))]
     jb = [s for s in jb if ok_slot(s)]
-    # promotions: demanded chars whose ZH-band slot_chars_extra identity is
-    # bitmap-verified — register as encodable, no repaint (charmap comment's
-    # sanctioned promotion path).  向@4257 crop-verified this campaign.
+    # promotions: demanded chars whose atlas identity is already EXACTLY the
+    # demanded character — register as encodable, no repaint.  Identity-true
+    # reuse cannot garble: any other referent of the token renders the same
+    # glyph it always did.  Sources: slot_chars_extra (decode-only bitmap
+    # identities) and jp_slot_chars (original JP identities whose unicode char
+    # equals the demanded simplified char, e.g. 香/柏/墨).  0x00-low tokens
+    # remain unusable as encode targets.
     PROMOTE = {"向": 4257}
+    extra_ids = {v: int(k) for k, v in cm.get("slot_chars_extra", {}).items()}
+    jp_ids2 = {v: int(k) for k, v in cm.get("jp_slot_chars", {}).items()}
     promoted = []
-    for ch, slot in PROMOTE.items():
-        if any(c == ch for c, _ in demand) and ch not in cm["two_byte_zh"]:
-            if cm.get("slot_chars_extra", {}).get(str(slot)) == ch:
-                promoted.append((ch, slot))
+    for ch, (n, surf) in demand:
+        if ch in cm["two_byte_zh"]:
+            continue
+        slot = PROMOTE.get(ch, extra_ids.get(ch, jp_ids2.get(ch)))
+        if slot is None or not ok_slot(slot):
+            continue
+        ident = (cm.get("slot_chars_extra", {}).get(str(slot))
+                 or cm.get("jp_slot_chars", {}).get(str(slot)))
+        if ident == ch:
+            promoted.append((ch, slot))
     plan, fails = [], []
     for ch, (n, surf) in demand:
         if ch in cm["two_byte_zh"] or any(ch == pc for pc, _ in promoted):
