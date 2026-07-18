@@ -146,6 +146,40 @@ def _build_table(table: dict, jp: bytes) -> bytes:
     return bytes(buf)
 
 
+def bio_record_lengths(table: dict, jp_len_only: bool = True) -> list[int]:
+    """Emitted length of every bio-bank record, in index order (4-aligned).
+
+    Shared between the file builder below and utils.arm9_layout's offset-table
+    applier so the arm9 tables can never desynchronize from the bank bytes
+    (the cut-in lesson).  zh records: encoded length rounded up to 4;
+    passthrough records: the original JP slice length (already 4-aligned)."""
+    out = []
+    for rec in table["records"]:
+        if "zh" in rec or "zh_hex" in rec:
+            n = len(_record_bytes(rec))
+            out.append(n + (-n % 4))
+        else:
+            out.append(int(rec["jp_len"]))
+    return out
+
+
+def _build_bio_bank(table: dict, jp: bytes) -> bytes:
+    """Encyclopedia bio bank: full rebuild, records concatenated in index
+    order.  Translated records are re-encoded prose (grown freely — the arm9
+    offset table is derived from this same JSON at build time); untranslated
+    records are carved verbatim from the Japanese original at jp_off/jp_len."""
+    out = bytearray()
+    lens = bio_record_lengths(table)
+    for rec, want in zip(table["records"], lens):
+        if "zh" in rec or "zh_hex" in rec:
+            payload = _record_bytes(rec)
+            out += payload + b"\x00" * (want - len(payload))
+        else:
+            off = int(rec["jp_off"], 16)
+            out += jp[off:off + int(rec["jp_len"])]
+    return bytes(out)
+
+
 def _build_graphics(table: dict, jp: bytes) -> bytes:
     """Raw-tile repaint: replace annotated regions, asserting the original bytes."""
     buf = bytearray(jp)
@@ -168,6 +202,7 @@ _BUILDERS = {
     "cutin_groups": _build_cutin_groups,
     "table": _build_table,
     "graphics": _build_graphics,
+    "bio_bank": _build_bio_bank,
 }
 
 

@@ -121,6 +121,11 @@ CHAR_BIO_OFFTAB = 0x191FA0       # u32[274]+sentinel -> 324.bin records
 UNIT_BIO_OFFTAB = 0x191BDC       # u32[239]+sentinel -> c4b.bin records
 CHAR_BIO_N, UNIT_BIO_N = 274, 239
 CHAR_BIO_FILE, UNIT_BIO_FILE = "324.bin", "c4b.bin"
+# per-bank resource-size words (loader allocation size, like the cut-in
+# bank's CUTIN_RESOURCE_SIZE_WORD): the only u32s in arm9 equal to each
+# bank's byte length, alongside the offset-table sentinels
+CHAR_BIO_SIZE_WORD = 0x16C964    # u32 == len(324.bin)
+UNIT_BIO_SIZE_WORD = 0x16EE00    # u32 == len(c4b.bin)
 WEAPON_LIST_FILE = "31e.bin"     # encyclopedia weapon-name list (00-separated)
 PART_NAME_OFFTAB = 0x16B474      # u32[41] -> b6e.bin (40 parts + sentinel)
 PART_CAP_OFFTAB = 0x16B518      # u32[41] -> b6f.bin
