@@ -183,7 +183,7 @@ Measured field budgets (px unless noted):
 | ID-command detail box | ~76 px (≈6 hanzi + margin) |
 | ID-command box titles | ≤6 hanzi (≤72 px) |
 | speaker nameplate | 7 glyphs hard |
-| **pilot names (char-DB), all surfaces** | **≤84 px (7 cells) hard cap; ≤72 px (6 cells) fully clean.** The binding fields: battle focus/formation plates (name pen x=51, fixed LV badge x=132 → ~81 px; an exactly-7-cell name touches the badge by 3 px — accepted residual), the 编成 detail-plate window (88 px, see below), the roster list (name x=8, LV badge x=96 → 88 px), the speaker plate (84 px). Gate: `glyph_width` |
+| **pilot names (char-DB), all surfaces** | **≤84 px (7 cells) cap for new names; ≤72 px (6 cells) fully clean.** The binding fields: battle focus/formation plates (name pen x=51, fixed LV badge x=132 → ~81 px; an exactly-7-cell name touches the badge by 3 px — accepted residual), the 编成 detail-plate window (88 px, see below), the roster list (name x=8, LV badge x=96 → 88 px), the speaker plate (84 px). The 12 burst-variant records keep their full 96–108 px JP-faithful names by owner ruling (narrow-paren glyphs; per-record ratchets in `PILOT_WIDTH_ALLOW`). Gate: `glyph_width`. Pilot-name parens = the minted ZH-band narrow-paren cells (never one-byte 0x7D/0x7E — A12) |
 | 编成 detail-plate name window | **88 px** (11 tiles; widened from the JP-design 80 px — the JP max name was exactly 80 px — via the clamp-cave budget) |
 | BackStage weapon-name field | 104 px (was 80 px; widened by a 1-byte field patch, scoped to names ≥14 cells natural width) |
 | unit-list carried-name field | 6 glyphs (longer names clamp; trailing cells blanked) |
