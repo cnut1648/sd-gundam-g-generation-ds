@@ -59,6 +59,8 @@ Encoded string storage: `{offset, text, payload_hex}` entries.
 * `atlas12.bin` — the 12×12 glyph atlas autoload payload (4320 slots × 36 B,
   2 bpp): original glyphs in slots 0–2195, added Chinese glyphs from 2196.
   Copied to RAM 0x023027A0 at boot. `charmap.json` maps characters to slots.
+* `font/README.md` — Fusion Pixel 的上游链接、固定版本、覆盖率、复现命令与
+  缺字 fallback；`font/FUSION_PIXEL_OFL.txt` 保留字体许可证全文。
 
 ## Other components
 * `charmap.json` — character ↔ glyph-slot tables used by `utils/text_codec.py`.

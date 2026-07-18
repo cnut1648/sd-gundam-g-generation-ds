@@ -50,14 +50,21 @@ Two fixed-cell fonts; **rendered width = glyph count × advance** (no proportion
 Japanese glyphs (the JP in-image atlas had exactly 2,196); slots **2196–4319** are the added
 Chinese glyphs. The charmap (char ↔ slot, in the build data) is the single source of truth
 for encoding; slot bitmaps in the ROM are the single source of truth for decoding (see
-`LESSONS_LEARNED.md` D1). Added glyphs are rasterized from **WenQuanYi Bitmap Song 12px**
-(`/usr/share/fonts/X11/misc/wenquanyi_9pt.pcf`, monochrome, 11x11 design box at the cell
-origin) and carry the original Japanese raster grammar: stroke pixels = value 1, plus a
-bottom-right L-shadow (value 2) equal to the stroke dilated one pixel right/down/down-right
-(rule verified on 2194/2194 original glyphs). The atlas regeneration procedure (WQY raster + shadow grammar; historically `audit/tools/regen_atlas_v6.py`) regenerates
-the atlas deterministically; the `glyph_style_uniformity` static gate enforces the grammar
-on every slot. Keep that recipe for any new glyph or the weight/baseline mismatch is
-visible on screen.
+`LESSONS_LEARNED.md` D1). Every added glyph carries the original Japanese raster grammar:
+stroke pixels = value 1, plus a bottom-right L-shadow (value 2) equal to the stroke dilated
+one pixel right/down/down-right (rule verified on 2194/2194 original glyphs). The
+`glyph_style_uniformity` static gate enforces this grammar on every slot.
+
+The v1.1 atlas used **WenQuanYi Bitmap Song** (`wenquanyi_9pt.pcf`: a 9-point strike whose
+actual game cell is 12px, with an 11px ink box). The current CJK cells are regenerated from
+[Fusion Pixel Font](https://github.com/TakWolf/fusion-pixel-font), release
+`2026.05.07`, `fusion-pixel-12px-proportional-zh_hans.ttf` (SHA-256
+`7dda18bac79c841a9a545c45b3c2d9d00f1cbbca3217fd8d291dd27298932bbb`). Fusion
+provides native 12px Simplified-Chinese pixel outlines; the game ignores proportional
+advance metadata and keeps its fixed 12px cells. It covers 2084/2085 registered CJK
+characters; `赝` retains the prior WQY cell, and all non-CJK special cells are preserved.
+The deterministic helper is `build/regenerate_fusion_atlas.py`; attribution and OFL 1.1
+are in `data/font/README.md` and `data/font/FUSION_PIXEL_OFL.txt`.
 
 **Render dispatch**: the drawer (`0x02013220`) picks renderA or renderB per string context
 (ctx+0x64 bit0). The renderB glyph fetch routes through the **trampoline** at `0x0211A2A0`

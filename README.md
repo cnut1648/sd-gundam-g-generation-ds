@@ -57,6 +57,15 @@
   </tr>
 </table>
 
+### 当前字体方案
+
+当前构建进一步采用
+[Fusion Pixel Font（缝合像素字体）](https://github.com/TakWolf/fusion-pixel-font)
+`12px proportional zh_hans` 重绘中文字模。它是面向泛中日韩字符的开源像素字体，
+提供原生 12px 简体中文字形，使用 SIL OFL 1.1；本项目的 2,085 个 CJK 字符中
+覆盖 2,084 个，唯一缺字「赝」保留 WQY 字模。版本、SHA-256、许可证与复现方法
+见 [`data/font/README.md`](data/font/README.md)。
+
 ## 目录结构
 
 ```
@@ -86,12 +95,12 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 4091bca23c8a90b3cb9a044ab70e09f2bae94fa0  (MATCHES the shipped translation)
+[build] final ROM sha1 726b54515a99907c2c75961c17fbbde0a03f7ed7  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,324,584 bytes)
 ```
 
 追加 `--pad32m 路径` 可同时输出补齐到 32 MiB 的镜像（部分烧录卡要求 2 的幂
-大小；sha1 `ed791e18a38a5064a06a9db2b0850bcf4f708c22`）。
+大小；sha1 `85d51ac18da14a78301c3ea43dad51e618879a47`）。
 
 输入必须是 sha1 为 `12443b91297a57bcd2ace8da989c26ae635a79fd`（33,554,432
 字节）的日版卡带镜像——构建会校验它以及 `data/manifest.json` 中记录的每个

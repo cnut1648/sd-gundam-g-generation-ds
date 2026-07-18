@@ -15,7 +15,8 @@ passed every other gate (that is how progress gets locked in).
 | `names_baseline.json` | `gate_unit_weapon_names`, `gate_id_command_names` | *Ratchet.* Floors for translated unit/weapon name counts and ID-command name/summary/detail counts, plus the play-test squad records that must render Chinese. |
 | `title.png` | `test/live/test_boot_render.py` | Golden title-screen window capture (256x403 melonDS window). The title art is untouched by the translation, so this golden is stable; a corrupted boot scores far above the compare threshold. Verified against the shipped ROM on this rig. |
 | `join_choice_template.png` | live grinds | Template of the ally-JOIN choice box in the first stage — the navigation anchor the combat grind uses to answer the choice deterministically. |
-| `dialogue_scene.png`, `info.png` | `test/live/test_boot_smoke.py` | *Not shipped pre-captured.* First-run captures: created by `test_boot_smoke.py --update-golden` (and `--full --update-golden` for the info page) on a rig whose input preflight passes, then committed. The boot smoke SKIPs the compare (with a loud message) while they are absent. |
+| `dialogue_scene.png` | `test/live/test_boot_smoke.py`, `test/test_render_oracle_parity.py` | Live first-dialogue framebuffer for the current font. The Fusion baseline was captured from the built ROM with DeSmuME and placed in the harness's 256×403 window geometry; oracle-vs-live stroke IoU is 0.970. A melonDS rig can replace it with `--update-golden`. |
+| `info.png` | `test/live/test_boot_smoke.py --full` | Optional first-run info-page capture. The boot smoke SKIPs this comparison (with a loud message) while it is absent. |
 
 ## Regeneration
 
