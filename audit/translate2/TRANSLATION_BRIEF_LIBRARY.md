@@ -10,11 +10,12 @@ range of the weapon list) — of the DS game **SDガンダム ジージェネレ
 
 You translate ONLY from the Japanese **text** in `data/jp/`. Do NOT open, render,
 or reason about any picture: no ROM pixels, no font atlas, no emulator, no
-screenshots, no `攻略.html`, no `.png`. The JP text in `data/jp/` has been
-decoder-audited to match the game pixel-for-pixel and swept 100% clean of
-undecoded garbage, so the text alone is authoritative and complete. Reading the
-JP string and the terminology table is the entire input; anything visual is
-out of scope and forbidden.
+screenshots, no `攻略.html`, no `.png`. The JP text has been decoder-audited to
+match the game pixel-for-pixel, and the library records you read (character
+bios, unit bios, weapon names) are verified free of undecoded markers, so the
+text alone is authoritative and complete. Reading the JP string and the
+terminology table is the entire input; anything visual is out of scope and
+forbidden.
 
 ## 0. Read the JP straight from data/jp — it is the single source of truth
 
@@ -30,12 +31,12 @@ Open the source file directly and find YOUR record; do not copy the JP anywhere.
   `"reachable": false` (that is the file's glyph-priming blob, not a name).
 
 This JP is the **verified decode** of the cartridge — a full decoder audit
-confirmed every glyph against the game's pixels and a whole-folder sweep removed
-all undecoded garbage, so the text is exactly what appears in-game. Translate it
-directly. You will NOT see any `{SLOT:n}` / `{B:n}` / `{F0:n}` / `□` — they no
-longer exist in real records; if one somehow appears, STOP and report it (it
-means the extractor regressed) rather than guessing. `{00}` / `{01}` are
-layout/structure markers (see §3), not garbage.
+confirmed every glyph against the game's pixels, and every bio + weapon-name
+record you translate is verified to carry no undecoded markers, so the text is
+exactly what appears in-game. Translate it directly. You will NOT see any
+`{SLOT:n}` / `{B:n}` / `{F0:n}` / `□` in a bio or weapon name; if one somehow
+appears, STOP and report it (it means the extractor regressed) rather than
+guessing. `{00}` / `{01}` are layout/structure markers (see §3), not garbage.
 
 ## 1. Voice & sources (mandatory)
 
