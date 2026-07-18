@@ -1,10 +1,10 @@
 {
- "_about": "Documented code patches applied to the code binary (everything that is not translated data): render-path detours and their cave bodies, decoder hooks for the briefing system, and two gameplay tweaks. The builder asserts old_hex before writing new_hex. The autoload/font relocation words (module params, font pointer, heap floor) are computed by utils/arm9_layout.py, not listed here.",
+ "_about": "Documented code patches applied to the code binary (everything that is not translated data): render-path detours and their cave bodies, decoder hooks for the briefing system, and two gameplay tweaks. The builder asserts old_hex before writing new_hex. The autoload/font relocation words (module params, font pointer, heap floor) are computed by utils/arm9_layout.py, not listed here. _paved_ref_allowlist maps JP-image literal offsets that still reference paved donor strings to proof they are dead readers (compiled-out printf 0x020A3ECC arg pools); gate patch_literal_safety enforces it.",
  "entries": [
   {
    "file_offset": "0x12C4A",
    "old_hex": "688ac01dc710",
-   "new_hex": "a1f1eaf8c046",
+   "new_hex": "09f1eafac046",
    "what": "tile-copy clamp trampoline (BG char-tile over-advance)",
    "why": "12px glyphs overflow the 10-tile-per-row name field of the 8px UI; the copy helper is detoured to a cave that clamps the tile-row budget so a wide name cannot alias the neighbouring name's tiles (ghost fragments)."
   },
@@ -137,9 +137,9 @@
   {
    "file_offset": "0x4A340",
    "old_hex": "207e0228",
-   "new_hex": "69f19cfd",
+   "new_hex": "d1f09cff",
    "what": "roster detail auto-populate trampoline",
-   "why": "the unit/character list detail panel is an empty template until a unit is inspected; the detour populates the highlighted entry's panel while browsing."
+   "why": "the unit/character list detail panel is an empty template until a unit is inspected; the detour populates the highlighted entry's panel while browsing; body relocated with the 0x1B3E22 cave (see the relocated-cave entry)."
   },
   {
    "file_offset": "0x4A66A",
@@ -175,6 +175,13 @@
    "new_hex": "688a0730e96d090d682905d1e9880a2902db582800db50207047",
    "what": "engine-A tile-copy clamp cave",
    "why": "row-budget clamp body for the engine-A copy helper (called from 0x1359A), gated on the info-box context."
+  },
+  {
+   "file_offset": "0x11C222",
+   "old_hex": "95555595555595555595555595555595555595555595555595555595555595aaaaaa0000000000000000000000000000000000000000002500002500002600002900000a0000000000000000000000000000000000000000000000000000940000940000a80000000000000000000000002500002500002a00000000000000002500002500002a00000000000000000000000000000000000000000000555595aaaaaa0000000000000000000000000000000000900000a400002900400a00900200a400002900400a00900200a400002900000a0000000000000000000000000000540900a926240a582900a00a0000000000000000000000000040920090a600509600509600a0",
+   "new_hex": "688a0730c710e96d134a914221d1a988072903d10e2f19db0d271ae0152905d1e9881039012911d80a2712e011290dd012290bd0012909d003290bd00b2905d0082906d1e988052903db59e00a2f00dd0a27704743e000f0200600b52078012802d0022809d033e0607e002830d1207e01282dd1022020762ae0607e002824d1207e012824d1012000210a1c0b1cfaf656f8201c1a3082f776fc0420a076201c1a3082f7acfc012000210a1c0b1cfaf664f8207908490a78904203d00870201c2df7a7fe0220207602e00249ff200870207e022800bdfcc21102ffff0000e9880c2908d00e2906d0102904d0142902d0162900d003e01a2f00dd1a27704789e70b2f00dd0b277047",
+   "what": "tile-copy clamp + roster auto-populate + special-box exemption caves (relocated into the dead in-image atlas)",
+   "why": "one combined cave: [+0x00] the 0x12C4A row-budget clamp body (map 0x0620F000, affinity/list contexts; tile_x==3 and tile_x==8&&tile_y>=5 branch into the exemption block), [+0x5A] the 0x4A340 roster browse auto-populate body (scratch byte +0xDA, roster-nav scratch +0xDB, both init 0xFF), [+0xDE] the special-box row exemption block (rows 0xC/0xE/0x10/0x14/0x16 of the SPECIAL DEFENSE/ABILITY boxes cap r7 at 0x1A, tile_x==8 path caps at 0x0B, other rows fall back into the clamp chain at +0x14). Relocated here from the 0x1B3E22/0x1B4040 dev-string spans: that band is NOT fully dead - it holds the live-referenced OBJ-text number-format strings 'D4' @0x021B3E90 and '/D4' @0x021B3E94 (literal pools 0x23640/0x23648/0x240A8/0x240B0) that the in-battle focus plate passes to 0x02013BE0 to draw HP cur/max; paving them blanked every focus-plate HP readout (ISSUE 6). The in-image 12x12 atlas is truly dead in the translated build (its base literal 0x1315C is repointed to the relocated atlas), so the bodies live here, 12 B clear of the 0x11C1FC cave."
   },
   {
    "file_offset": "0x18F480",
@@ -214,9 +221,9 @@
   {
    "file_offset": "0x1B3664",
    "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c96f6fffd10bd00f8330264d02702",
+   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c96f6fffd10bdfdc2110264d02702",
    "what": "roster navigation cave",
-   "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state."
+   "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state. Its last-cursor-row scratch byte lives at 0x0211C2FD (tail pad of the relocated clamp/populate cave, init 0xFF): the original scratch 0x0233F800 sat INSIDE the stage load buffer [0x0232C800,0x02340000) where _STG98 reaches offset 0x13000 (press-A abort class), and its interim home 0x021B3EFD was vacated when the 0x1B3E22 cave was relocated off the live 'D4'/'/D4' format strings."
   },
   {
    "file_offset": "0x1B3B00",
@@ -224,13 +231,6 @@
    "new_hex": "b7290dd18920000104306b8b834203daab8b834200da16e042218901143110e09a2910d16b8b032b0dd1ab8b9a2b0ad1eb8b892000010430834204db412189010731024b1847024b1847c046aba21102cda21102",
    "what": "12x12 trampoline support cave",
    "why": "overflow helpers for the 12x12-on-8x16 trampoline (special-cases a few slots and jumps back into the trampoline body)."
-  },
-  {
-   "file_offset": "0x1B3E22",
-   "old_hex": "82ea91d682a63a25640a0000000091e097f195cf8d5889e696ca82a982e794b282af82e90a00914991f0834c83838393835a838b0a0089ba89e696ca8d58905682500a00000089ba89e696ca8d58905682510a0000004d656e755f5461697265747375282920456e642e0a000000443400002f4434008ba492ca89ba81468374838a815b836f8367838b0a0000008ba492ca89ba81468df593478145894692880a008ba492ca89ba81468df593478145926e8fe30a008ba492ca89ba8146814881488148814881480a008ba492ca89ba81468e9f82cc835a836283568387",
-   "new_hex": "688a0730c710e96d134a914221d1a988072903d10e2f19db0d271ae0152906d1e988102901d0112910d10a2711e011290cd012290ad0012908d00329ead00b2904d0082905d1e988052902db0a2f00dd0a277047c04600f0200600b52078012802d0022809d033e0607e002830d1207e01282dd1022020762ae0607e002824d1207e012824d1012000210a1c0b1c62f656fa201c1a30eaf676fe0420a076201c1a30eaf6acfe012000210a1c0b1c62f664fa207908490a78904203d00870201c96f6a7f80220207602e00249ff200870207e022800bdfc3e1b02ff000000",
-   "what": "tile-copy clamp + roster auto-populate caves",
-   "why": "the row-budget clamp body (called from 0x12C4A, gated on the affinity/list contexts) plus the roster browse auto-populate body (called from 0x4A340: draws the browse template and edge-calls the inspect routine)."
   },
   {
    "file_offset": "0x1B3F0C",
@@ -253,5 +253,16 @@
    "what": "menu OBJ-text palette cave",
    "why": "if the text style's LUT[3] is transparent, copy LUT[2] into it, then replay the clobbered instructions (called from 0x13C06)."
   }
- ]
+ ],
+ "_paved_ref_allowlist": {
+  "0x23B34": "printf arg pool ('共通下：拠点…' @0x021B3F0C, paved by the 0x1B3F0C cave): ldr r0 @0x238A0 feeds only the compiled-out debug printf 0x020A3ECC",
+  "0x23D74": "printf arg pool (@0x021B3F30): ldr r0 @0x23B7E -> 0x020A3ECC (compiled-out)",
+  "0x23DA0": "printf arg pool (@0x021B3F50): ldr r0 @0x23D66 -> 0x020A3ECC (compiled-out)",
+  "0x24438": "printf arg pool ('MenuSub_CsrFree1…' @0x021B3FC8, paved by the 0x1B3FC4 cave): ldr r0 @0x240BE -> 0x020A3ECC (compiled-out)",
+  "0x2444C": "printf arg pool (@0x021B3FE4): ldr r0 @0x24116 -> 0x020A3ECC (compiled-out)",
+  "0x24454": "printf arg pool (@0x021B3FF8): ldr r0 @0x24168 -> 0x020A3ECC (compiled-out)",
+  "0x2445C": "printf arg pool (@0x021B4004): ldr r0 @0x241DC -> 0x020A3ECC (compiled-out)",
+  "0x24460": "printf arg pool (@0x021B4018): ldr r0 @0x241EE -> 0x020A3ECC (compiled-out)",
+  "0x24464": "printf arg pool (@0x021B4028): ldr r0 @0x24200 -> 0x020A3ECC (compiled-out)"
+ }
 }
