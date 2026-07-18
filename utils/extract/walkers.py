@@ -431,9 +431,17 @@ def weapon_list(rom: GameROM) -> list[dict]:
 
 def parts(rom: GameROM) -> list[dict]:
     """Hangar parts: name (b6e) + caption (b6f), paired 1:1 by part index via
-    the two parallel arm9 offset tables.  Caption 0xF0xx macros resolve through
-    a parts-local runtime dictionary the ROM image does not carry, so captions
-    keep their {F0:n} escapes (loss-aware) instead of a wrong expansion."""
+    the two parallel arm9 offset tables (b6f carries a leading non-offset word,
+    handled by ``_offtab_records``).
+
+    Parts render on the TRAMPOLINE (the hangar list/detail 8x16 UI path — the
+    caption-compose renderer is even code-patched for this, see
+    data/patches/code_patches.json "parts-caption pad-clip"): slots < 2196 draw
+    from the renderB 8x16 font and 0xF0xx macros resolve through the SYSTEM
+    dictionary (DICT_SYS).  Decoding on the ``bank`` surface with ``expand_sys``
+    yields the true text (e.g. ザク系変換パーツ / ジュピトリス製MS); the earlier
+    ``stage``/DICT_TEXT decode produced garble and the false belief that a
+    "parts-local runtime dictionary" existed outside the ROM."""
     nd, nrecs = _offtab_records(rom, L.PART_NAME_OFFTAB, L.PART_NAME_FILE,
                                 L.PART_COUNT + 1)
     cd, crecs = _offtab_records(rom, L.PART_CAP_OFFTAB, L.PART_CAP_FILE,
@@ -445,13 +453,13 @@ def parts(rom: GameROM) -> list[dict]:
         item = {"index": k,
                 "name": {"file": L.PART_NAME_FILE, "off": _hex(o0), "size": o1 - o0,
                          "len": len(name_raw),
-                         "text": decode_text(rom, name_raw, "stage", rom.expand)}}
+                         "text": decode_text(rom, name_raw, "bank", rom.expand_sys)}}
         if k in crec_by_k:
             c0, c1 = crec_by_k[k]
             cap_raw = cd[c0:c1].rstrip(b"\x00")
             item["caption"] = {"file": L.PART_CAP_FILE, "off": _hex(c0),
                                "size": c1 - c0, "len": len(cap_raw),
-                               "text": decode_text(rom, cap_raw, "stage", None)}
+                               "text": decode_text(rom, cap_raw, "bank", rom.expand_sys)}
         out.append(item)
     return out
 
