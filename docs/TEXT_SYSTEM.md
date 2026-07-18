@@ -83,6 +83,12 @@ consequences:
 (→ `0x023027A0`), renderB font base `0x1321C` (must stay `0x02133F14`), decoder branch
 `0x1322C` (must stay `11 d1`).
 
+The dialogue speaker-nameplate is a renderA-direct exception with its own anchor. Style
+immediate `0x2BCA6` selects the 12×12 path; instruction `0x2BCE8` supplies `penY=3`.
+Both changes are required: style 3 makes Chinese readable, while the +3px anchor aligns
+the 12px glyph baseline inside the plate's 16px line box. Dialogue-body positioning uses
+different call sites and is unaffected.
+
 **The definitive per-surface table** (established empirically — on-screen garble
 reproduction + shipped-byte analysis; enforced by `bank_onebyte_regression` and
 `offline_coverage` gates, modeled by `test/render_oracle.py`):

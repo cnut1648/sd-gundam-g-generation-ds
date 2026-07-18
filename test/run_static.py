@@ -476,6 +476,9 @@ def reachable_display_blocks(d: bytes):
 ROMCTRL_OFF, ROMCTRL_EXPECT = 0x60, bytes.fromhex("57664100")
 UI_DISPATCH_OFF, UI_DISPATCH_ORIG, UI_DISPATCH_NOP = 0x1322C, bytes([0x11, 0xD1]), bytes([0xC0, 0x46])
 NAMEPLATE_IMM_OFF, NAMEPLATE_IMM_ORIG, NAMEPLATE_IMM_FIX = 0x2BCA6, 0x02, 0x03
+NAMEPLATE_Y_OFF = 0x2BCE8
+NAMEPLATE_Y_ORIG = bytes.fromhex("0a1c")          # adds r2,r1,#0 (r1 was cleared)
+NAMEPLATE_Y_FIX = bytes.fromhex("0322")           # movs r2,#3
 UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
@@ -595,14 +598,21 @@ def gate_ui_text_dispatch(rep, ctx):
 
 
 def gate_nameplate_render_path(rep, ctx):
-    """The dialogue speaker-nameplate immediate at 0x2BCA6 must be the original
-    (0x02, 8x16 path) or the readable-ZH fix (0x03, routes the plate to the 12x12
-    dialogue font).  Any other value = stray corruption at a patched code site."""
-    got = ctx["a9"][NAMEPLATE_IMM_OFF]
-    ok = got in (NAMEPLATE_IMM_ORIG, NAMEPLATE_IMM_FIX)
-    which = "12x12 dialogue-font plate (fix)" if got == NAMEPLATE_IMM_FIX else \
-            "original 8x16 plate" if got == NAMEPLATE_IMM_ORIG else "UNEXPECTED"
-    rep.add("nameplate_render_path", ok, f"0x2BCA6={got:#04x} -> {which}")
+    """The JP nameplate must use style 2 at penY+0; the translated build must
+    select the readable 12x12 path (style 3) and compensate its top anchor by
+    +3px.  Checking the pair prevents a future style-only patch from restoring
+    the visibly high speaker names."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    jp_style = aj[NAMEPLATE_IMM_OFF]
+    zh_style = az[NAMEPLATE_IMM_OFF]
+    jp_y = aj[NAMEPLATE_Y_OFF:NAMEPLATE_Y_OFF + 2]
+    zh_y = az[NAMEPLATE_Y_OFF:NAMEPLATE_Y_OFF + 2]
+    ok = (jp_style == NAMEPLATE_IMM_ORIG and jp_y == NAMEPLATE_Y_ORIG
+          and zh_style == NAMEPLATE_IMM_FIX and zh_y == NAMEPLATE_Y_FIX)
+    rep.add("nameplate_render_path", ok,
+            f"JP style={jp_style:#04x},penY={jp_y.hex()}; "
+            f"ZH style={zh_style:#04x},penY={zh_y.hex()} "
+            f"(want style={NAMEPLATE_IMM_FIX:#04x},penY=+3)")
 
 
 def gate_ui_font_atlas_dispatch(rep, ctx):
@@ -2315,6 +2325,9 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
 
     expect_fail("NOP the UI text dispatch (the garble regression)",
                 ["ui_text_dispatch"], lambda c: mut_a9(c, UI_DISPATCH_OFF, UI_DISPATCH_NOP))
+    expect_fail("restore the dialogue speaker nameplate to penY+0",
+                ["nameplate_render_path"],
+                lambda c: mut_a9(c, NAMEPLATE_Y_OFF, NAMEPLATE_Y_ORIG))
     expect_fail("flip a byte inside the dialogue dictionary",
                 ["dialogue_dict_frozen"],
                 lambda c: mut_a9(c, PRIMARY_DICT_OFF + 0x40,

@@ -626,6 +626,11 @@ label strings must embed ZH-band digit tokens (NT等级N, 指挥N; there is NO r
 digit append — the digits are baked in the five 指揮レベル strings). The offline
 oracle mirrors the +3 anchor so screenshots and oracle renders agree by construction.
 
+The dialogue speaker-nameplate does not pass through that trampoline. Switching its
+style at `0x2BCA6` made Chinese readable but left the plate's independent penY at zero,
+so names overlapped the top border and appeared 3px too high. Patch `0x2BCE8` separately
+to `movs r2,#3`; do not move the shared dialogue-body renderer.
+
 ### G5. Growing pooled strings: ledger-mediated relocation, three arenas
 Order: ui-bank heap-safe gaps → resident-cave zero runs → ledger-vacated spans
 (old homes of relocated strings; provably dead = no table ptr and no arm9 word

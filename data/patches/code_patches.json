@@ -86,6 +86,13 @@
    "why": "the speaker-nameplate descriptor init only set style bit 1; setting bits 0+1 routes nameplates through the 12x12 glyph path so CJK speaker names render."
   },
   {
+   "file_offset": "0x2BCE8",
+   "old_hex": "0a1c",
+   "new_hex": "0322",
+   "what": "dialogue nameplate penY 0->3",
+   "why": "the nameplate was switched to the 12x12 dialogue font but kept the original top anchor; moving only this plate's penY down 3px aligns its glyph baseline with the 16px UI line box without changing dialogue-body text."
+  },
+  {
    "file_offset": "0x326A2",
    "old_hex": "032d00d1",
    "new_hex": "012d00d3",
