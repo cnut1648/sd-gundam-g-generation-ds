@@ -15,9 +15,19 @@ are REAL units; the old (CHARDB-MASTER)//stride bound dropped 268 of them).
 """
 from __future__ import annotations
 
+import re
 import sys
 
 from utils import text_codec
+
+# A decoded string still carrying these escapes hit bytes that are not real
+# text: {SLOT:n} = out-of-atlas slot, {F0:n} = out-of-range macro, {B:n} =
+# unidentified renderB slot.  Every REAL record decodes without them (the
+# decoder's identity registries are complete for in-use glyphs), so their
+# presence marks a byte-range the walkers mis-read as text (a false linear/
+# candidate hit) — flagged `garbage` and emptied so data/jp carries no
+# undecoded garbage.
+_UNDECODED = re.compile(r"\{SLOT:\d+\}|\{F0:\d+\}|\{B:\d+\}")
 
 from . import layout as L
 from .gamerom import GameROM, u16, u32
@@ -420,11 +430,14 @@ def weapon_list(rom: GameROM) -> list[dict]:
     out = []
     for s, ln in text_runs(data):
         run = data[s:s + ln]
-        entry = {"off": _hex(s), "len": ln,
-                 "text": decode_text(rom, run, "stage", rom.expand)}
+        text = decode_text(rom, run, "stage", rom.expand)
+        entry = {"off": _hex(s), "len": ln, "text": text}
         if any(slot >= L.TRAMPOLINE_SPLIT
                for slot, _ in glyph_stream(rom, run, "stage")):
             entry["reachable"] = False
+            if _UNDECODED.search(text):
+                entry["garbage"] = True
+                entry["text"] = ""
         out.append(entry)
     return out
 
@@ -546,10 +559,13 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
             for s, _ in glyph_stream(rom, payload, "stage"))
         is_brief = (not spurious and L.BRIEF_LO <= i < L.BRIEF_HI
                     and glyph_count(rom, payload, "stage") >= 3)
-        entry = {"off": _hex(i), "len": t + 2 - i,
-                 "text": decode_text(rom, a[i:t + 2], "stage", rom.expand, True)}
+        text = decode_text(rom, a[i:t + 2], "stage", rom.expand, True)
+        entry = {"off": _hex(i), "len": t + 2 - i, "text": text}
         if spurious:
             entry["reachable"] = False
+            if _UNDECODED.search(text):
+                entry["garbage"] = True
+                entry["text"] = ""
         if is_brief:
             entry["briefing"] = True
             ks = descs_of(i)
@@ -703,13 +719,16 @@ def stage_blocks(rom: GameROM, fname: str,
     out = []
     for off, end, scene, order_i, branch in blocks:
         raw = d[off:end]
-        entry = {"off": _hex(off), "len": end - off,
-                 "text": decode_text(rom, raw, "stage", rom.expand, True)}
+        text = decode_text(rom, raw, "stage", rom.expand, True)
+        entry = {"off": _hex(off), "len": end - off, "text": text}
         if scene >= 0:
             entry["scene"] = scene
             entry["order"] = order_i
         else:
             entry["reachable"] = False
+            if _UNDECODED.search(text):   # false linear/candidate hit on non-text bytes
+                entry["garbage"] = True
+                entry["text"] = ""
         if branch:
             entry["branch"] = True
         if _is_priming_row(raw):
@@ -799,8 +818,11 @@ def pointer_strings(rom: GameROM) -> list[dict]:
         raw = _plausible_string(rom, off)
         if raw is None:
             continue
+        stage_dec = decode_text(rom, raw, "stage", rom.expand)
+        if _UNDECODED.search(stage_dec):   # wrong-surface comparison hit non-text bytes
+            stage_dec = ""
         out.append({"ptr": _hex(v), "off": _hex(off), "len": len(raw),
                     "text": decode_text(rom, raw, "bank", rom.expand_sys),
-                    "text_stage": decode_text(rom, raw, "stage", rom.expand),
+                    "text_stage": stage_dec,
                     "sites": [_hex(s) for s in by_target[v]]})
     return out
