@@ -526,6 +526,16 @@ SPEAKER_PLATE_CELLS = 7          # dialogue speaker nameplate field (7 glyph cel
 # name on the battle plates is a recorded, accepted residual; 8 cells = 96px is
 # the owner-visible overlap class — 多蒙（明镜止水）'s ） printed ON the badge).
 PILOT_NAME_BUDGET_PX = 84
+# OWNER RULING 2026-07-18 (F9): the burst-variant records keep their full
+# JP-faithful names (阿斯兰（SEED）, 多蒙（明镜止水), …) with the minted
+# narrow-paren glyphs instead of being shortened; their 12px-cell overhang into
+# the battle-plate badge/digit area is accepted (thin paren strokes make it
+# minor).  Each entry is a per-record WIDTH RATCHET (may never grow further).
+PILOT_WIDTH_ALLOW = {
+    10: 108, 40: 108, 176: 108, 209: 108,           # 9-cell （SEED）/（零式）
+    55: 96, 56: 96, 118: 96, 148: 96, 149: 96,      # 8-cell forms
+    150: 96, 250: 96, 252: 96,
+}
 # Runtime-heap windows inside the relocated data bank: a display-string pointer that
 # lands here renders live heap garbage on fresh boot (proven by RAM captures).
 # One contiguous window: the stage load buffer reaches 0x0233FBF7 (largest _STG)
@@ -1540,7 +1550,7 @@ def gate_glyph_width(rep, ctx):
         fz = _ram_to_file(az, pz)
         jw = _slots_width(_decode_render_slots(aj, fj, exp_sys_j)) if fj is not None else 0
         zw = _slots_width(_decode_render_slots(az, fz, exp_sys_z)) if fz is not None else 0
-        bound = max(PILOT_NAME_BUDGET_PX, jw)
+        bound = max(PILOT_WIDTH_ALLOW.get(r, PILOT_NAME_BUDGET_PX), jw)
         if zw > bound:
             viol.append((f"pilot-name#{r}", bound, zw))
     if viol:
