@@ -39,6 +39,9 @@ in-game failure the gate protects against.
   unit_weapon_names           unit/weapon name garbage or coverage regression
   id_command_names            ID-command name/summary/detail garbage or coverage loss
   name_pointer_band           the 出击/deploy HARD-FREEZE from a unit/pilot name ptr >= 0x02190000
+  effect_line_stops           special-box record bleed (duplicate/phantom ability lines)
+  bio_line_geometry           half-empty library bio boxes (JP-inherited premature breaks)
+  patch_literal_safety        cave scratch in the stage buffer / caves paving live JP data
 
 Options:
   --jp PATH             the Japanese source ROM (default: the copy in the repo root)
@@ -496,7 +499,7 @@ UI_DICT_OFF = 0x12D770                           # UI dictionary (renderB path)
 PRIMARY_DICT_OFF = 0x1444B4                      # dialogue dictionary (renderA path)
 PRIMARY_DICT_BAND = (0x1444B4, 0x14AC34)         # overlaps the UI font glyph array!
 CHAR_DB_OFF, CHAR_DB_STRIDE = 0xDCF18, 0x48      # pilot record table, +0x04 = name ptr
-CHAR_DB_BASE_COUNT, CHAR_DB_FULL_COUNT = 256, 562
+CHAR_DB_BASE_COUNT, CHAR_DB_FULL_COUNT = 256, 563
 MASTER_TABLE_OFF, MASTER_STRIDE, MASTER_MAX = 0xB94BC, 0xD8, 945
 MASTER_NAME_OFF, MASTER_WPN_OFF, MASTER_WPN_STRIDE, MASTER_WPN_N = 0x00, 0x2C, 0x1C, 6
 ID_CMD_TABLE_OFF, ID_CMD_REC = 0xEC994, 0x24
@@ -515,10 +518,52 @@ ID_EFFECT_BUDGET_PX = 76         # ID-command effect summary line in the box bod
 ABILITY_NAME_BUDGET_PX = 76      # ID-ability name cell
 UNIT_NAME_BUDGET_PX = 144        # widest unit-name context (status/database field)
 SPEAKER_PLATE_CELLS = 7          # dialogue speaker nameplate field (7 glyph cells)
+# Pilot-name pixel cap across EVERY surface a char-DB name reaches: the battle
+# focus/formation plates fit ~81px before the fixed LV badge (pen x=51, badge
+# x=132), the 编成 detail-plate name window is 88px (widened from the JP 80px by
+# the clamp-cave budget patch), the dialogue speaker plate is 7 cells (84px).
+# 7 cells = 84px is the enforced ceiling (the 3px badge-touch of an exactly-7-cell
+# name on the battle plates is a recorded, accepted residual; 8 cells = 96px is
+# the owner-visible overlap class — 多蒙（明镜止水）'s ） printed ON the badge).
+PILOT_NAME_BUDGET_PX = 84
 # Runtime-heap windows inside the relocated data bank: a display-string pointer that
 # lands here renders live heap garbage on fresh boot (proven by RAM captures).
-HEAP_CLOBBER_WINDOWS = ((0x0232C800, 0x02338000), (0x02340000, 0x023489AC))
+# One contiguous window: the stage load buffer reaches 0x0233FBF7 (largest _STG)
+# and the work buffer runs to arena-lo 0x023489AC — there is no safe gap between.
+HEAP_CLOBBER_WINDOWS = ((0x0232C800, 0x023489AC),)
 ID_TITLE_DANGER = (0x0232C800, 0x023489AC)
+# The stage/work-buffer band that no PATCH-CAVE literal may target as scratch
+# storage: a cave writing state into [stage-buffer, arena-lo) corrupts whatever
+# stage file / work data is resident there (the _STG98 @0x13000 press-A freeze).
+CAVE_SCRATCH_FORBIDDEN = (0x0232C800, 0x023489AC)
+
+# Special-ability (1df) / special-defense (1e0) banks: record offset tables in
+# arm9 and the drawers' line grammar.  The drawers (0x02055AB4 / 0x02055BD8)
+# fetch line k by scanning BYTE-wise for the k-th `00 03` stop with NO record-end
+# check, so a record that ships fewer stops than the drawer draws lines makes the
+# next record's first segment render inside this record's box (the "NT对应机 /
+# NT对应机" duplicate + phantom-effect class).  JP topology: 2 stops per 1df
+# record, 3 per 1e0 record.  Each line is drawn via 0x02012EFC with a 26-glyph
+# budget into the box (26 renderB tiles = 208px, the widest JP line).
+EFFECT_OFFTAB_A, EFFECT_OFFTAB_D = 0x1781A4, 0x178134
+EFFECT_ABILITY_FILE, EFFECT_DEFENSE_FILE = "1df.bin", "1e0.bin"
+EFFECT_STOPS_ABILITY, EFFECT_STOPS_DEFENSE = 2, 3
+EFFECT_OFFTAB_D_WORDS = (EFFECT_OFFTAB_A - EFFECT_OFFTAB_D) // 4
+EFFECT_LINE_GLYPH_BUDGET = 26
+EFFECT_LINE_PX_BUDGET = 208
+
+# Library bio banks (324.bin character / c4b.bin unit): explicit line grammar
+# rendered verbatim by the profile viewer.  Box geometry measured from the JP
+# corpus (5,449 lines: max 18 cells, indented quote-continuations max 17, max 6
+# lines/page) and pixel-verified on screen.  A record whose lines break earlier
+# than the box needs (the JP-inherited phase-1 break positions) wastes half the
+# box — the owner-reported "bad linebreak" class.
+BIO_CHAR_OFFTAB, BIO_UNIT_OFFTAB = 0x191FA0, 0x191BDC
+BIO_CHAR_N, BIO_UNIT_N = 274, 239
+BIO_CHAR_FILE, BIO_UNIT_FILE = "324.bin", "c4b.bin"
+BIO_LINE_CELLS, BIO_INDENT_CELLS, BIO_PAGE_LINES = 18, 17, 6
+BIO_NO_LINE_START = set("、。！？…）』」·")   # never start a display line with these
+BIO_NO_LINE_END = set("「『（")               # never break right after an opener
 
 BATTLE_VOICE_FILES = ("0.bin", "1.bin", "1dd.bin", "1de.bin", "c4f.bin")
 INLINE_DIALOGUE_LO, INLINE_DIALOGUE_HI = 0x198712, 0x1AD536   # code-embedded 0x15 blocks
@@ -527,7 +572,14 @@ INLINE_DIALOGUE_LO, INLINE_DIALOGUE_HI = 0x198712, 0x1AD536   # code-embedded 0x
 JP_STRINGS_LO, JP_STRINGS_HI = 0x020B0000, 0x021B6DB8
 # Legitimate homes for a RELOCATED string pointer in a translated build:
 RESIDENT_POOL_LO, RESIDENT_POOL_HI = 0x02180000, 0x021A0000
-RELOC_BANK_LO, RELOC_BANK_HI = 0x02300000, 0x02400000
+# The autoload banks accept relocated pointers ONLY in their always-live spans:
+# pool A's durable FRONT [0x02328720, 0x0232C800) (everything above is overlaid
+# by the stage/work buffers at runtime) and pool B above arena-hi.  The former
+# wide acceptance band [0x02300000, 0x02400000) would have passed a repoint into
+# the stage buffer / heap / BSS — bands where strings render live garbage or
+# freeze (LESSONS C1); narrowing it makes the repoint rule a real invariant.
+RELOC_POOL_A_FRONT = (0x02328720, 0x0232C800)
+RELOC_POOL_B = (0x023E7000, 0x02400000)
 RELOC_PTR_SCAN_HI = 0x155B14
 
 # Name-pointer reader band (deploy/nameplate freeze class): unit-name
@@ -558,7 +610,8 @@ def _pointer_repoint_ok(aj: bytes, az: bytes, word_off: int) -> bool:
         return False
     return (JP_STRINGS_LO <= wz < JP_STRINGS_HI
             or RESIDENT_POOL_LO <= wz < RESIDENT_POOL_HI
-            or RELOC_BANK_LO <= wz < RELOC_BANK_HI)
+            or RELOC_POOL_A_FRONT[0] <= wz < RELOC_POOL_A_FRONT[1]
+            or RELOC_POOL_B[0] <= wz < RELOC_POOL_B[1])
 
 
 # =============================================================================
@@ -770,14 +823,28 @@ def gate_relocated_pointer_sanity(rep, ctx):
     must replace a JP word that pointed into the string/data section.  A relocated
     name pointer written into the wrong record field (an off-by-N) is a valid
     pointer that static text checks cannot see — but the engine dereferences the
-    field as data and hard-freezes mid-stage.  JP-anchored, zero false positives."""
+    field as data and hard-freezes mid-stage.  JP-anchored, zero false positives.
+    Scans the WHOLE resident image (the panel/menu pointer tables at 0x1B5xxx
+    live above the old 0x155B14 horizon); words inside the annotated patch
+    regions are exempt (patch instruction encodings are not table pointers)."""
     aj, az = ctx["jp_a9"], ctx["a9"]
-    n = min(len(aj), len(az), RELOC_PTR_SCAN_HI)
+    spec = json.loads((GOLDEN / "arm9_allowed_regions.json").read_text())
+    regions = sorted((int(r["lo"], 16), int(r["hi"], 16)) for r in spec["regions"])
+    starts = [lo for lo, _ in regions]
+    ends = [hi for _, hi in regions]
+
+    def in_patch_region(x):
+        i = bisect.bisect_right(starts, x) - 1
+        return i >= 0 and x < ends[i]
+
+    n = min(len(aj), len(az), APPEND_TAIL_OFF)
     bad = []
     for o in range(0, n - 3, 4):
         wz = struct.unpack_from("<I", az, o)[0]
         if RESIDENT_POOL_LO <= wz < RESIDENT_POOL_HI:
             wj = struct.unpack_from("<I", aj, o)[0]
+            if wj == wz or in_patch_region(o):
+                continue
             if not (JP_STRINGS_LO <= wj < JP_STRINGS_HI):
                 bad.append((o, wj, wz))
     if bad:
@@ -1434,10 +1501,14 @@ def gate_glyph_width(rep, ctx):
     """A rendered line WIDER than its field blanks or freezes (the classic NDS
     fan-translation killer: it is glyph WIDTH, not byte length).  Every re-encoded
     UI-dictionary entry must render no wider than the JP it replaced; every
-    re-pointed pilot name must fit max(JP width, the pilot's katakana name width,
-    the 7-cell speaker-plate field).  Stage dialogue is exempt here (its blocks
-    are re-framed, not in-place) — the box discipline for those lives in the
-    stage gates + the live/VLM tier."""
+    re-pointed pilot name must fit the TRUE per-surface budgets at the TRUE render
+    advance (a translated pilot name is pure ZH-band = 12px/glyph, while the JP it
+    replaced advanced 8px — pricing ZH at 8px let 96-108px names ship against
+    80-84px fields: the 艾帕·西纳普斯 plate clip / 多蒙（明镜止水） badge-overlap
+    class).  Pilot-name F-refs index the SYSTEM dictionary (0x1444B4), not the UI
+    dictionary — expanding via the wrong dict mis-measures every macro'd JP name.
+    Stage dialogue is exempt here (its blocks are re-framed, not in-place) — the
+    box discipline for those lives in the stage gates + the live/VLM tier."""
     aj, az = ctx["jp_a9"], ctx["a9"]
     exp_j = _make_dict_expander(aj, UI_DICT_OFF)
     exp_z = _make_dict_expander(az, UI_DICT_OFF)
@@ -1452,7 +1523,8 @@ def gate_glyph_width(rep, ctx):
         zw = _rendered_width(z, RENDER_B_ADVANCE, exp_z)
         if zw > jw:
             viol.append((f"ui-dict#{k}", jw, zw))
-    kat = ctx["speaker_cells"]
+    exp_sys_j = _fref_off_expander(aj, PRIMARY_DICT_OFF)
+    exp_sys_z = _fref_off_expander(az, PRIMARY_DICT_OFF)
     for r in range(CHAR_DB_FULL_COUNT):
         rec = CHAR_DB_OFF + r * CHAR_DB_STRIDE + 4
         if rec + 4 > min(len(aj), len(az)):
@@ -1464,10 +1536,11 @@ def gate_glyph_width(rep, ctx):
         if j is None or z is None or (pj == pz and j == z):
             continue
         checked += 1
-        jw = _rendered_width(j, RENDER_B_ADVANCE, exp_j)
-        zw = _rendered_width(z, RENDER_B_ADVANCE, exp_z)
-        bound = max(jw, kat.get(r, 0) * RENDER_B_ADVANCE,
-                    SPEAKER_PLATE_CELLS * RENDER_B_ADVANCE if r >= CHAR_DB_BASE_COUNT else 0)
+        fj = _ram_to_file(aj, pj)
+        fz = _ram_to_file(az, pz)
+        jw = _slots_width(_decode_render_slots(aj, fj, exp_sys_j)) if fj is not None else 0
+        zw = _slots_width(_decode_render_slots(az, fz, exp_sys_z)) if fz is not None else 0
+        bound = max(PILOT_NAME_BUDGET_PX, jw)
         if zw > bound:
             viol.append((f"pilot-name#{r}", bound, zw))
     if viol:
@@ -1477,8 +1550,8 @@ def gate_glyph_width(rep, ctx):
                 f"(blank/freeze risk): {shown}")
     else:
         rep.add("glyph_width", True,
-                f"all {checked} re-encoded UI-dict entries + pilot names fit their JP/katakana/"
-                f"plate field bounds")
+                f"all {checked} re-encoded UI-dict entries + pilot names fit their JP/plate "
+                f"field bounds (pilot cap {PILOT_NAME_BUDGET_PX}px at true advance)")
 
 
 def _fref_off_expander(a9: bytes, base: int):
@@ -2203,6 +2276,8 @@ def build_context(rom_path: Path, jp_path: Path):
 
     allow_spec = json.loads((GOLDEN / "dialogue_jp_allowlist.json").read_text())
     speaker_spec = json.loads((GOLDEN / "speaker_name_cells.json").read_text())
+    patches_spec = json.loads(
+        (REPO / "data" / "patches" / "code_patches.json").read_text())
     return {
         "raw": raw, "cand": cand, "jp": jp, "a9": a9, "jp_a9": jp_a9,
         "cand_file": cand_file, "jp_file": jp_file,
@@ -2213,6 +2288,7 @@ def build_context(rom_path: Path, jp_path: Path):
         "atlas_slots": _atlas_slot_count(a9),
         "dialogue_jp_allow": set(allow_spec["allow"].keys()),
         "speaker_cells": {int(k): v for k, v in speaker_spec["cells"].items()},
+        "patches_spec": patches_spec,
     }
 
 
@@ -2359,6 +2435,383 @@ def gate_name_pointer_band(rep, ctx):
                 f"resolve < 0x02190000 (deploy/nameplate-safe)")
 
 
+# =============================================================================
+# effect-bank stop topology (1df/1e0) — the record-bleed / duplicate-line class
+# =============================================================================
+def _bank_offtab_records(a9: bytes, offtab: int, data: bytes, count_hint: int):
+    """Port of the extractor's offset-table walk (utils/extract/walkers.py):
+    index 0 may be a non-offset word (the +1 the game's own readers use)."""
+    first = 1 if (struct.unpack_from("<I", a9, offtab)[0]
+                  > struct.unpack_from("<I", a9, offtab + 4)[0]) else 0
+    vals = []
+    for k in range(first, count_hint):
+        if offtab + 4 * k + 4 > len(a9):
+            break
+        v = struct.unpack_from("<I", a9, offtab + 4 * k)[0]
+        if v > len(data):
+            break
+        vals.append(v)
+    recs = []
+    for k in range(len(vals) - 1):
+        o0, o1 = vals[k], vals[k + 1]
+        if o1 <= o0:
+            o1 = len(data)
+        recs.append((k, o0, o1))
+    return recs
+
+
+def _bank_line_slots(seg: bytes, a9: bytes, exp_sys):
+    """Decode one drawn line of a trampoline bank record into (slot, is_atlas)
+    glyphs, expanding DICT_SYS macros the way the drawer's decoder does."""
+    out = []
+    i = 0
+    while i < len(seg):
+        b = seg[i]
+        if b == 0x00:
+            break                               # drawer stops at a standalone 00
+        if b < 0xE0:
+            out.append((b, False))
+            i += 1
+        elif b < 0xF0:
+            if i + 1 >= len(seg):
+                break
+            slot = ((b << 8) | seg[i + 1]) - SLOT_DEBIAS
+            out.append((slot, slot >= ZH_SLOT_MIN))
+            i += 2
+        else:
+            if i + 1 >= len(seg):
+                break
+            idx = ((b << 8) | seg[i + 1]) - 0xF000
+            sub = exp_sys(idx)
+            if sub is not None:
+                out += _decode_render_slots(a9, PRIMARY_DICT_OFF + sub, exp_sys)
+            i += 2
+    return out
+
+
+def gate_effect_line_stops(rep, ctx):
+    """The special-ability/defense drawers draw a FIXED number of lines by
+    scanning byte-wise for `00 03` stops with no record-end check: a re-encoded
+    record that drops a trailing empty-line separator makes the drawer walk into
+    the NEXT record (duplicate "NT对应机/NT对应机" lines, phantom abilities the
+    unit does not have).  JP-anchored: every record must keep at least
+    min(JP's stop count, the drawer's line count) stops; and every re-encoded
+    line must fit the drawer's 26-glyph / 208px line budget."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    exp_j = _fref_off_expander(aj, PRIMARY_DICT_OFF)
+    exp_z = _fref_off_expander(az, PRIMARY_DICT_OFF)
+    problems, nrec, nlines = [], 0, 0
+    for fname, offtab, need, hint in (
+            (EFFECT_ABILITY_FILE, EFFECT_OFFTAB_A, EFFECT_STOPS_ABILITY, 512),
+            (EFFECT_DEFENSE_FILE, EFFECT_OFFTAB_D, EFFECT_STOPS_DEFENSE,
+             EFFECT_OFFTAB_D_WORDS)):
+        dz = ctx["cand_file"](fname)
+        dj = ctx["jp_file"](fname)
+        if dz is None or dj is None:
+            problems.append(f"{fname}: missing from ROM")
+            continue
+        for k, o0, o1 in _bank_offtab_records(az, offtab, dz, hint):
+            nrec += 1
+            zrec = dz[o0:o1]
+            # JP record span via the JP offtab (same table geometry)
+            jrecs = {kk: (a, b) for kk, a, b in
+                     _bank_offtab_records(aj, offtab, dj, hint)}
+            ja, jb = jrecs.get(k, (o0, o1))
+            jrec = dj[ja:jb]
+            stops_z = zrec.count(b"\x00\x03")
+            stops_j = jrec.count(b"\x00\x03")
+            if stops_z < min(stops_j, need):
+                problems.append(
+                    f"{fname} rec#{k} [{o0:#x},{o1:#x}): {stops_z} `00 03` stop(s) "
+                    f"< required {min(stops_j, need)} (JP has {stops_j}) — the drawer "
+                    f"bleeds into the next record")
+            if zrec == jrec:
+                continue                          # pristine JP record: inherits JP fit
+            for part in zrec.split(b"\x00\x03"):
+                part = part.strip(b"\x00")
+                if not part:
+                    continue
+                slots = _bank_line_slots(part, az, exp_z)
+                nlines += 1
+                w = _slots_width(slots)
+                if len(slots) > EFFECT_LINE_GLYPH_BUDGET or w > EFFECT_LINE_PX_BUDGET:
+                    problems.append(
+                        f"{fname} rec#{k}: line {len(slots)} glyphs / {w}px exceeds the "
+                        f"drawer budget ({EFFECT_LINE_GLYPH_BUDGET} glyphs / "
+                        f"{EFFECT_LINE_PX_BUDGET}px)")
+    if problems:
+        rep.add("effect_line_stops", False,
+                f"{len(problems)} special-box record defect(s): " + "; ".join(problems[:8]))
+    else:
+        rep.add("effect_line_stops", True,
+                f"{nrec} special ability/defense records keep the drawer's stop topology; "
+                f"{nlines} re-encoded lines within 26 glyphs / 208px")
+
+
+# =============================================================================
+# library bio line geometry — the half-empty-box "bad linebreak" class
+# =============================================================================
+def _bio_parse_record(data: bytes, o0: int, o1: int):
+    """Parse one bio record into pages of (cells, indent) lines following the
+    viewer grammar: text | 00 01 = end | 00 04 [01] = continuation [indented] |
+    00 07 = page break.  Glyphs count one cell each (renderA 12px surface)."""
+    pages, lines = [], []
+    cur, indent = 0, False
+    i = o0
+    while i < o1:
+        b = data[i]
+        if b == 0x00:
+            nxt = data[i + 1] if i + 1 < o1 else 0x01
+            if nxt in (0x01, 0x00):             # terminator / trailing pad
+                if cur:
+                    lines.append((cur, indent))
+                break
+            lines.append((cur, indent))
+            cur, indent = 0, False
+            if nxt == 0x04:
+                i += 2
+                if i < o1 and data[i] == 0x01:
+                    indent = True
+                    i += 1
+            elif nxt == 0x07:
+                pages.append(lines)
+                lines = []
+                i += 2
+            else:                               # bare 00 + text: plain break
+                i += 1
+        elif b < 0xE0:
+            cur += 1
+            i += 1
+        else:                                    # 2-byte glyph token / F-ref
+            cur += 1
+            i += 2
+    else:
+        if cur:
+            lines.append((cur, indent))
+    if lines:
+        pages.append(lines)
+    return pages
+
+
+def _bio_line_chars(data: bytes, o0: int, o1: int, cm):
+    """The record's lines as decoded char lists (for break-quality checks);
+    None for glyphs without a charmap identity."""
+    lines, cur = [], []
+    i = o0
+    while i < o1:
+        b = data[i]
+        if b == 0x00:
+            nxt = data[i + 1] if i + 1 < o1 else 0x01
+            if nxt in (0x01, 0x00):
+                if cur:
+                    lines.append(cur)
+                break
+            lines.append(cur)
+            cur = []
+            if nxt == 0x04:
+                i += 2
+                if i < o1 and data[i] == 0x01:
+                    i += 1
+            elif nxt == 0x07:
+                i += 2
+            else:
+                i += 1
+        elif b < 0xE0:
+            cur.append(cm.sb_rev.get(b))
+            i += 1
+        else:
+            slot = ((b << 8) | data[i + 1]) - SLOT_DEBIAS
+            cur.append(cm.zh_rev.get(slot) if slot >= ZH_SLOT_MIN
+                       else cm.jp_slots.get(slot))
+            i += 2
+    else:
+        if cur:
+            lines.append(cur)
+    return lines
+
+
+def gate_bio_line_geometry(rep, ctx):
+    """Library bios carry EXPLICIT line breaks the viewer renders verbatim.  The
+    box fits 18 cells/line (17 on indented quote continuations) x 6 lines/page;
+    a record whose breaks land far short of that renders a half-empty box (the
+    owner-reported Scirocco class: 9/6/12/10/11/2-cell lines in an 18-cell box).
+    Enforced: (a) grammar/geometry — every line <= 18/17 cells, <= 6 lines/page;
+    (b) a fill ratchet — each page uses no more lines than a greedy fill-then-wrap
+    of its own content (JP-inherited premature breaks cannot re-ship)."""
+    az = ctx["a9"]
+    cm = ctx["cm"]
+    problems, nrec, npages = [], 0, 0
+    for fname, offtab, cnt in ((BIO_CHAR_FILE, BIO_CHAR_OFFTAB, BIO_CHAR_N),
+                               (BIO_UNIT_FILE, BIO_UNIT_OFFTAB, BIO_UNIT_N)):
+        data = ctx["cand_file"](fname)
+        if data is None:
+            problems.append(f"{fname}: missing from ROM")
+            continue
+        offs = [struct.unpack_from("<I", az, offtab + 4 * k)[0] for k in range(cnt + 1)]
+        for k in range(cnt):
+            o0, o1 = offs[k], offs[k + 1]
+            if not (0 <= o0 < o1 <= len(data)):
+                problems.append(f"{fname} rec#{k}: bad offsets [{o0:#x},{o1:#x})")
+                continue
+            nrec += 1
+            pages = _bio_parse_record(data, o0, o1)
+            chars = _bio_line_chars(data, o0, o1, cm)
+            li = 0
+            for pi, page in enumerate(pages):
+                npages += 1
+                if len(page) > BIO_PAGE_LINES:
+                    problems.append(f"{fname} rec#{k} page{pi}: {len(page)} lines > "
+                                    f"{BIO_PAGE_LINES}")
+                # (a) geometry
+                for cells, indent in page:
+                    lim = BIO_INDENT_CELLS if indent else BIO_LINE_CELLS
+                    if cells > lim:
+                        problems.append(f"{fname} rec#{k} page{pi}: line {cells} cells "
+                                        f"> {lim}")
+                # (b) fill ratchet: the authored reflow typesets a page as an
+                # optional QUOTE block (first line + its {01}-indented
+                # continuations, all capped at 17 cells) followed by a PROSE
+                # block (18 cells).  Within each block, line count must equal a
+                # greedy fill-then-wrap of the block's own text (with the break-
+                # quality rules the reflow obeys) — more lines = the premature-
+                # break class.
+                page_chars = []
+                for cells, _ in page:
+                    page_chars.append(chars[li] if li < len(chars) else [])
+                    li += 1
+                q_end = 0
+                if page_chars and page_chars[0] and page_chars[0][0] == "「":
+                    q_end = 1
+                    while q_end < len(page) and page[q_end][1]:      # indented
+                        q_end += 1
+                for blk, lim in ((page_chars[:q_end], BIO_INDENT_CELLS),
+                                 (page_chars[q_end:], BIO_LINE_CELLS)):
+                    flat = [c for ln in blk for c in ln]
+                    if not flat:
+                        continue
+                    greedy, j, n = 0, 0, len(flat)
+                    while j < n:
+                        greedy += 1
+                        cur = 0
+                        while j < n and cur < lim:
+                            cur += 1
+                            j += 1
+                        if j < n and cur > 1 and flat[j] is not None \
+                                and flat[j] in BIO_NO_LINE_START:
+                            j -= 1               # give the no-start char its line
+                            cur -= 1
+                        if j < n and cur > 1 and flat[j - 1] is not None \
+                                and flat[j - 1] in BIO_NO_LINE_END:
+                            j -= 1               # never end a line on an opener
+                    if len(blk) > greedy:
+                        problems.append(
+                            f"{fname} rec#{k} page{pi}: {len(blk)} lines for "
+                            f"block content a fill-then-wrap fits in {greedy} "
+                            f"(premature breaks)")
+    if problems:
+        rep.add("bio_line_geometry", False,
+                f"{len(problems)} bio layout defect(s) across {nrec} records: "
+                + "; ".join(problems[:6]))
+    else:
+        rep.add("bio_line_geometry", True,
+                f"{nrec} bios / {npages} pages: all lines <= 18/17 cells, <= 6 "
+                f"lines/page, every page greedily filled")
+
+
+# =============================================================================
+# patch cave literal safety — scratch-in-buffer + paved-referenced-bytes classes
+# =============================================================================
+def gate_patch_literal_safety(rep, ctx):
+    """Two freeze/corruption classes born from code caves:
+    (1) a cave LITERAL targeting the stage/work-buffer band [0x0232C800,
+        0x023489AC) — cave scratch state written there corrupts whatever stage
+        script / work data is resident (the _STG98 offset-0x13000 press-A abort:
+        the roster cave's cursor byte at 0x0233F800 landed on a reachable script
+        opcode);
+    (2) a cave BODY paving JP bytes that live code still references — the donor
+        span was not actually dead (the "D4"/"/D4" OBJ-text number-format strings
+        at 0x1B3E90/0x1B3E94 were paved by a cave: every focus-plate HP readout
+        silently vanished).
+    Every literal word of every patch is scanned for (1); every patch >12 bytes
+    over non-zero JP bytes is scanned for JP-image literal references into its
+    span for (2).  A referencing word the ZH build itself RETARGETED (e.g. the
+    atlas base literal repointed off the paved in-image atlas) is not a live
+    reference; remaining referencers must be on the documented allowlist of
+    provably-dead readers (argument pools of the compiled-out debug printf
+    0x020A3ECC)."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    spec = ctx["patches_spec"]
+    entries = spec["entries"]
+    problems = []
+    spans = []
+    for e in entries:
+        off = int(e["file_offset"], 16)
+        new = bytes.fromhex(e["new_hex"])
+        spans.append((off, off + len(new), e.get("what", "?")))
+    # entries must not overlap each other
+    s2 = sorted(spans)
+    for a, b in zip(s2, s2[1:]):
+        if b[0] < a[1]:
+            problems.append(f"patch overlap: [{a[0]:#x},{a[1]:#x}) '{a[2]}' vs "
+                            f"[{b[0]:#x},{b[1]:#x}) '{b[2]}'")
+    # (1) forbidden-band literals
+    for off, hi, what in spans:
+        new = None
+        for e in entries:
+            if int(e["file_offset"], 16) == off:
+                new = bytes.fromhex(e["new_hex"])
+                break
+        for i in range(len(new) - 3):
+            pos = off + i
+            if pos % 4:
+                continue
+            v = struct.unpack_from("<I", new, i)[0]
+            if CAVE_SCRATCH_FORBIDDEN[0] <= v < CAVE_SCRATCH_FORBIDDEN[1]:
+                rel = v - 0x0232C800
+                problems.append(
+                    f"'{what}' @{off:#x}+{i:#x}: literal {v:#010x} targets the stage/"
+                    f"work buffer (stage offset {rel:#x}) — cave scratch there corrupts "
+                    f"loaded scripts")
+    # (2) paved-referenced-bytes
+    allow = {int(k, 16): v for k, v in
+             spec.get("_paved_ref_allowlist", {}).items()}
+    paved = []
+    for off, hi, what in spans:
+        jp = aj[off:hi]
+        if hi - off > 12 and any(jp):
+            paved.append((RAM_BASE + off, RAM_BASE + hi, off, what))
+    if paved:
+        patch_windows = sorted((lo, hi) for lo, hi, _ in spans)
+        pw_starts = [lo for lo, _ in patch_windows]
+        pw_ends = [hi for _, hi in patch_windows]
+
+        def in_patch(x):
+            i = bisect.bisect_right(pw_starts, x) - 1
+            return i >= 0 and x < pw_ends[i]
+
+        for o in range(0, min(len(aj), len(az), APPEND_TAIL_OFF) - 3, 4):
+            if in_patch(o):
+                continue                      # refs from replaced bytes are gone
+            v = struct.unpack_from("<I", aj, o)[0]
+            for lo, hi, foff, what in paved:
+                if lo <= v < hi:
+                    if struct.unpack_from("<I", az, o)[0] != v:
+                        break                 # the build retargeted this referencer
+                    if allow.get(o) is not None:
+                        break
+                    problems.append(
+                        f"'{what}' paves {v:#010x}, still referenced by the JP image "
+                        f"@{o:#x} — the donor bytes are NOT dead (D4-string class)")
+                    break
+    if problems:
+        rep.add("patch_literal_safety", False,
+                f"{len(problems)} unsafe patch construction(s): " + "; ".join(problems[:6]))
+    else:
+        rep.add("patch_literal_safety", True,
+                f"{len(entries)} patches: no stage/work-buffer literals, no overlaps, "
+                f"every paved donor span reference-free (or allowlisted dead)")
+
+
 GATES = [
     gate_audio_header,
     gate_ui_text_dispatch,
@@ -2389,6 +2842,9 @@ GATES = [
     gate_pool_trampoline_tokens,
     gate_cutin_offset_table,
     gate_idcmd_detail_integrity,
+    gate_effect_line_stops,
+    gate_bio_line_geometry,
+    gate_patch_literal_safety,
     gate_offline_coverage,
     gate_extraction_fresh,
     gate_zh_reconciliation,
@@ -2485,6 +2941,80 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["name_pointer_band"],
                 lambda c: mut_a9(c, CHAR_DB_OFF + 419 * CHAR_DB_STRIDE + 4,
                                  struct.pack("<I", 0x0232873E)))
+
+    def mut_file(ctx, fname, corrupt):
+        real = ctx["cand_file"]
+
+        def cand_file(name, _real=real):
+            d = _real(name)
+            if name == fname and d is not None:
+                return corrupt(bytearray(d))
+            return d
+        ctx["cand_file"] = cand_file
+
+    def strip_1df_stops(d):
+        # remove every `00 03` stop from the first sizeable record: the drawer
+        # then walks into the next record (the NT对应机 duplicate class)
+        i = d.find(b"\x00\x03")
+        while i != -1:
+            d[i + 1] = 0x00
+            i = d.find(b"\x00\x03", i + 1)
+            if i > 0x100:
+                break
+        return bytes(d)
+    expect_fail("strip the `00 03` stops from special-ability records",
+                ["effect_line_stops"],
+                lambda c: mut_file(c, EFFECT_ABILITY_FILE, strip_1df_stops))
+
+    def merge_bio_lines(ctx):
+        # merge two adjacent full prose lines into one over-wide line (>18 cells)
+        az = ctx["a9"]
+        d = bytearray(ctx["cand_file"](BIO_CHAR_FILE))
+        o0 = struct.unpack_from("<I", az, BIO_CHAR_OFFTAB)[0]
+        o1 = struct.unpack_from("<I", az, BIO_CHAR_OFFTAB + 4)[0]
+        i, cells = o0, 0
+        while i < o1 - 1:
+            b = d[i]
+            if b == 0x00 and d[i + 1] == 0x04 and cells >= 10:
+                d[i:i + 2] = b"\xe7\xe9"      # replace the break with a glyph
+                break
+            if b == 0x00:
+                cells = 0
+                i += 2
+            elif b < 0xE0:
+                cells += 1
+                i += 1
+            else:
+                cells += 1
+                i += 2
+        blob = bytes(d)
+        real = ctx["cand_file"]
+
+        def cand_file(name, _real=real):
+            return blob if name == BIO_CHAR_FILE else _real(name)
+        ctx["cand_file"] = cand_file
+    expect_fail("merge two bio lines into an over-wide line (break grammar damage)",
+                ["bio_line_geometry"], merge_bio_lines)
+
+    def mut_patch_scratch(ctx):
+        import copy as _copy
+        spec = _copy.deepcopy(ctx["patches_spec"])
+        e = max(spec["entries"], key=lambda x: len(x["new_hex"]))
+        pad = (4 - (int(e["file_offset"], 16) + len(e["new_hex"]) // 2) % 4) % 4
+        e["new_hex"] += "00" * pad + "00f83302"      # literal 0x0233F800
+        ctx["patches_spec"] = spec
+    expect_fail("cave literal targeting the stage buffer (the _STG98 scratch byte)",
+                ["patch_literal_safety"], mut_patch_scratch)
+
+    def mut_patch_paved(ctx):
+        import copy as _copy
+        spec = _copy.deepcopy(ctx["patches_spec"])
+        spec["entries"].append({
+            "file_offset": "0x1B3E90", "old_hex": "", "new_hex": "aa" * 16,
+            "what": "self-test fake cave over the OBJ-text D4 format strings"})
+        ctx["patches_spec"] = spec
+    expect_fail("cave paving JP bytes that live code references (the D4 class)",
+                ["patch_literal_safety"], mut_patch_paved)
 
     def mut_stg(ctx, corrupt):
         real = ctx["cand_file"]
