@@ -35,6 +35,7 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `ui_text_dispatch` | the unit-info/ID screen garble — a NOP at the UI decoder branch renders every UI string as raw glyphs |
 | `nameplate_render_path` | illegible 8px speaker nameplates / stray bytes at the patched render-path site |
 | `ui_font_atlas_dispatch` | 8px-mush Chinese on the UI-font path — the ZH→atlas trampoline must be intact (or absent) |
+| `glyph_row_clip` | issue #2 lower-left first-glyph loss — the Profile and MS-development-tree row-stride contexts must stay exactly scoped |
 | `code_image_parity` | ANY unexplained code/data byte change vs the JP source (the combat-breakage class); allow-list + pointer-repoint rule, forbidden bands can never be allow-listed |
 | `dialogue_dict_frozen` | the battle-entry freeze — the dialogue compression dictionary physically overlaps the UI font and must stay byte-identical to JP |
 | `font_relocation` | boot crash / unreadable text from a malformed font autoload or an unraised heap floor |
@@ -55,11 +56,12 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `unit_weapon_names` | unit/weapon name garbage (out-of-atlas tokens) or translated-count regression |
 | `id_command_names` | ID-command name/summary/detail garbage, squad records reverting to Japanese, coverage regression |
 
-`--self-test` mutates a copy of the ROM under test in seven targeted ways
+`--self-test` mutates a copy of the ROM under test in targeted ways
 (garble NOP, dictionary flip, combat-code flip, VM corruption, heap-window
-pointer, stage CFG corruption, bark gap stray) and requires the matching gate
-to go RED, then runs the translation gates on the JP ROM and requires them RED
-— the guard for the guards.
+pointer, stage CFG corruption, glyph-style damage, bark gap stray, issue #2
+row-clip-cave damage) and requires the matching gate to go RED, then runs the
+translation gates on the JP ROM and requires them RED — the guard for the
+guards.
 
 ## 2. Live tier — `test/live/`
 
@@ -75,6 +77,12 @@ JIT off, software renderer, the 12-button keyboard map, optional gdb stub).
 
 # interactive boot smoke (~2 min; +--full ~4 min drives to the unit-info page)
 .venv/bin/python test/live/test_boot_smoke.py <rom> [--full] [--update-golden]
+
+# issue #2 row-clip regression (~2 min): all three report images — Extra/Profile
+# character+unit lists (entry + category redraw), then save slot 3 ->
+# MS Development -> System Tree (entry + selection move); native pixel probes
+# fail when the first glyph's lower strip is overwritten by the 13-tile row alias
+.venv/bin/python test/live/test_issue2_row_clip.py <rom> [--sav test/fixtures/newgame_plus.sav]
 
 # dialogue-advance freeze grind (~4 min): New Game -> 150 A-presses through the
 # first stage incl. the JOIN choice; FAIL on a frozen window under input

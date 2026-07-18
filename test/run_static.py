@@ -18,6 +18,7 @@ in-game failure the gate protects against.
   ui_text_dispatch            the unit-info/ID screen 乱码 (garble) regression
   nameplate_render_path       illegible 8px speaker nameplates / stray code at the patch
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
+  glyph_row_clip              issue #2 lower-left glyph loss on Profile/development-tree rows
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
   font_relocation             boot crash / unreadable text from a bad font relocation
@@ -480,6 +481,14 @@ UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
 UI_FONT_CAVE_OFF, UI_FONT_CAVE_SIG = 0x11A2A0, bytes.fromhex("89231b01")
+GLYPH_ROW_CLIP_OFF = 0x12FE6
+GLYPH_ROW_CLIP_FIX = bytes.fromhex("a0f1b5fd")    # bl -> scoped row-stride cave
+GLYPH_ROW_CLIP_CAVE_OFF = 0x1B3B54
+GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
+    "c46d104dac4211d00f4dac4202d00f4dac4214d14468002c11d104890d2c"
+    "0ed14489022c0bd1047c032c08d1448a6418e4080589ac4202d3f0bc08bc"
+    "184787b0041c70470098000600e0000600f80006"
+)
 
 DIALOGUE_FONT_PTR_OFF = 0x1315C                  # renderA atlas base pointer literal
 FONT_RAM_RELOCATED = 0x023027A0
@@ -622,6 +631,41 @@ def gate_ui_font_atlas_dispatch(rep, ctx):
     else:
         rep.add("ui_font_atlas_dispatch", False,
                 f"0x131D8={got.hex()} != stock {UI_FONT_INJ_ORIG.hex()} / fix {UI_FONT_INJ_FIX.hex()}")
+
+
+def gate_glyph_row_clip(rep, ctx):
+    """Issue #2's three affected screens must keep the scoped row-stride cave.
+
+    The hook clips the pre-existing management context plus the exact 13x2
+    Profile and MS-development-tree contexts.  A missing literal or relaxed
+    gate brings back lower-left first-glyph loss or risks clipping unrelated
+    text surfaces, so both the branch and complete cave body are pinned.
+    """
+    a9 = ctx["a9"]
+    hook = a9[GLYPH_ROW_CLIP_OFF:GLYPH_ROW_CLIP_OFF + len(GLYPH_ROW_CLIP_FIX)]
+    cave = a9[
+        GLYPH_ROW_CLIP_CAVE_OFF:
+        GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE)
+    ]
+    ok = hook == GLYPH_ROW_CLIP_FIX and cave == GLYPH_ROW_CLIP_CAVE
+    if hook != GLYPH_ROW_CLIP_FIX:
+        detail = (
+            f"0x12FE6={hook.hex()} != scoped clip branch "
+            f"{GLYPH_ROW_CLIP_FIX.hex()}"
+        )
+    elif cave != GLYPH_ROW_CLIP_CAVE:
+        first = next(
+            (i for i, (got, want) in enumerate(zip(cave, GLYPH_ROW_CLIP_CAVE))
+             if got != want),
+            min(len(cave), len(GLYPH_ROW_CLIP_CAVE)),
+        )
+        detail = f"row-clip cave differs at 0x{GLYPH_ROW_CLIP_CAVE_OFF + first:X}"
+    else:
+        detail = (
+            "management + exact Profile 0x0600F800 and development-tree "
+            "0x0600E000 13x2 contexts pinned"
+        )
+    rep.add("glyph_row_clip", ok, detail)
 
 
 def gate_code_image_parity(rep, ctx):
@@ -2219,6 +2263,7 @@ GATES = [
     gate_ui_text_dispatch,
     gate_nameplate_render_path,
     gate_ui_font_atlas_dispatch,
+    gate_glyph_row_clip,
     gate_code_image_parity,
     gate_dialogue_dict_frozen,
     gate_font_relocation,
@@ -2315,6 +2360,13 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
 
     expect_fail("NOP the UI text dispatch (the garble regression)",
                 ["ui_text_dispatch"], lambda c: mut_a9(c, UI_DISPATCH_OFF, UI_DISPATCH_NOP))
+    expect_fail("flip a byte in the scoped issue #2 row-clip cave",
+                ["glyph_row_clip"],
+                lambda c: mut_a9(
+                    c,
+                    GLYPH_ROW_CLIP_CAVE_OFF + 1,
+                    bytes([c["a9"][GLYPH_ROW_CLIP_CAVE_OFF + 1] ^ 0x01]),
+                ))
     expect_fail("flip a byte inside the dialogue dictionary",
                 ["dialogue_dict_frozen"],
                 lambda c: mut_a9(c, PRIMARY_DICT_OFF + 0x40,

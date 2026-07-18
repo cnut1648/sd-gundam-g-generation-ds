@@ -18,9 +18,9 @@
   {
    "file_offset": "0x12FE6",
    "old_hex": "87b0041c",
-   "new_hex": "a0f107fb",
-   "what": "management-list occluder clip trampoline",
-   "why": "the shared glyph rasterizer is detoured to a cave that clips tile writes past the list-row stride for the management list background only, removing a text occluder band next to wide 12px rows."
+   "new_hex": "a0f1b5fd",
+   "what": "scoped glyph row-stride clip trampoline",
+   "why": "the shared glyph rasterizer is detoured to a cave that rejects 12px pixel writes after the destination tile column reaches the audited 8px row stride. The cave keeps the existing management-list fix and adds exact Profile-list and MS-development-tree contexts."
   },
   {
    "file_offset": "0x131D8",
@@ -198,13 +198,6 @@
    "why": "re-dispatches control type 6 and un-consumes a >= 0xE0 token high byte for the bark formatter veneer at 0x6588E."
   },
   {
-   "file_offset": "0x1B35F8",
-   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000",
-   "new_hex": "c46d074dac4231d1448a6418e4080589ac4202d3f0bc08bc184787b0041c704700980006",
-   "what": "management-list occluder clip cave",
-   "why": "early-returns the rasterizer write when the destination tile column exceeds the row stride, only for the management-list background context."
-  },
-  {
    "file_offset": "0x1B3620",
    "old_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
    "new_hex": "02b4e86d0b49884210d1a88813280dd1e88a0949884209d30849884206d8688a482803d902bc288ba442704702bc288b8442704700e0000637010000af010000",
@@ -224,6 +217,13 @@
    "new_hex": "b7290dd18920000104306b8b834203daab8b834200da16e042218901143110e09a2910d16b8b032b0dd1ab8b9a2b0ad1eb8b892000010430834204db412189010731024b1847024b1847c046aba21102cda21102",
    "what": "12x12 trampoline support cave",
    "why": "overflow helpers for the 12x12-on-8x16 trampoline (special-cases a few slots and jumps back into the trampoline body)."
+  },
+  {
+   "file_offset": "0x1B3B54",
+   "old_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "new_hex": "c46d104dac4211d00f4dac4202d00f4dac4214d14468002c11d104890d2c0ed14489022c0bd1047c032c08d1448a6418e4080589ac4202d3f0bc08bc184787b0041c70470098000600e0000600f80006",
+   "what": "scoped glyph row-stride clip cave",
+   "why": "keeps the existing map=0x06009800 management-list fix and admits only map=0x0600E000 (MS development system tree) or map=0x0600F800 (character/unit Profile lists) with origin=(0,0), stride=13, height=2 and style=3. Matching contexts early-return only when (penX+localX)>>3 reaches the row stride; every other draw replays the original rasterizer entry."
   },
   {
    "file_offset": "0x1B3E22",

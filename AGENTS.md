@@ -84,7 +84,7 @@ Two fonts, one byte grammar (see `docs/TEXT_SYSTEM.md`):
 
 `build/build.py` from a clean tree (strict manifest verify; refresh via
 `build/refresh_manifest.py` after intended data changes), then:
-1. `test/run_static.py <rom>` — ALL 29 gates, including the ratchets
+1. `test/run_static.py <rom>` — ALL 30 gates, including the ratchets
    (`translation_coverage`, `unit_weapon_names`, `id_command_names`,
    `bank_onebyte_regression`) and `pool_trampoline_tokens` (zero JP-band 2-byte
    tokens in any referenced name-pool string);
@@ -93,8 +93,9 @@ Two fonts, one byte grammar (see `docs/TEXT_SYSTEM.md`):
    by `test/test_render_oracle_parity.py`); zero new algorithmic findings;
 3. `test/live/test_boot_smoke.py <rom>` — live boot + golden dialogue (×2 for release);
 4. for text-surface changes: a live screenshot of the affected surface
-   (`test/live/drive_id_page.py` for ID/ability pages), or an oracle render when the
-   surface is not reachable by harness navigation.
+   (`test/live/drive_id_page.py` for ID/ability pages;
+   `test/live/test_issue2_row_clip.py` for the Profile/development-tree row clip),
+   or an oracle render when the surface is not reachable by harness navigation.
 The deliverable must be byte-reproducible, and `README.md`'s expected sha1s (main +
 pad32m) must match the actual build output — they are the user's verification anchor.
 Scaled judgment (glyph identity, naturalness) fans out to subagent fleets over

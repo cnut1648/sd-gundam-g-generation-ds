@@ -192,7 +192,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | engine-B generic text helper | `0x12EFC` | `0x02012EFC(ctx,Xpx,Ypx,str,[sp]=count)`; init veneer `0x02012F75 → 0x02013D64(ctx,mapbase)` |
 | engine-B char-tile copy helper | `0x12C40` | `0x02012C40` — advances tile cursor by `r7=(penPx+7)>>3` @ `0x12C4A`; tilemap last-writer `strh` @ `0x02012CCC`. The r7-over-advance is the ghost/aliasing bug family |
 | engine-A copy helper / twin | `0x13590` / `0x136A8` | weapon-name top-screen path; char base `0x06000000`, map `0x0601F000` |
-| glyph plot rasterizer | `0x12FE4` | `0x02012FE4` (trampoline point `0x12FE6`); DTCM 2-row tile ctx `0x027C29D0`, stride8=13, row1[col0] aliases row0[col13] |
+| glyph plot rasterizer | `0x12FE4` | `0x02012FE4` (trampoline point `0x12FE6`); 2-row tile contexts with stride8=13 alias row1[col0] to row0[col13]. The scoped cave covers management map `0x06009800` plus exact `(origin=0,0, stride=13, height=2, style=3)` contexts for Profile map `0x0600F800` and MS-development-tree map `0x0600E000` |
 | scratch buffer for text compose | — | `0x02022854` (0x800 B); memcpy `0x0200D834`, memset `0x0200D85C` |
 | engine-B BG2 (info panels) | — | char base `0x06200000`, map base `0x0620F000`; BackStage list map base `0x06009800`; fixed ID-page cells `0x0620F1B0/B2` |
 | panel compose scratches | — | 1db → `0x027C37D4`; 1da → `0x027C36F4`; defense compose `0x027C37F0`; per-panel scratch `0x0227D5A0` (dispatch `0x0209EBAC`) |
@@ -264,7 +264,7 @@ fall into these classes (each must be reproducible by the build):
    * engine-B r7 clamp trampoline @ `0x12C4A` → cave `0x1B3E22+` (affinity ghost / roster
      aliasing / info-panel strays; ctx-signature-gated);
    * engine-A clamp trampoline @ `0x1359A` → cave `0x11C1FC`;
-   * plot clip trampoline @ `0x12FE6` → cave `0x1B35F8` (list first-glyph bottom-strip clip);
+   * plot clip trampoline @ `0x12FE6` → cave `0x1B3B54` (scoped row-stride clip for the management list, Profile lists and MS development system tree);
    * squad-panel ghost blank @ `0x12CCC` → cave `0x1B3FC4` (length-aware conditional);
    * browse auto-populate @ `0x0204A340` → cave `0x1B3E7C`;
    * 一覧 portrait decode-on-change @ `0x4A66A` → cave `0x1B3670`;
