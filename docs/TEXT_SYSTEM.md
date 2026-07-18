@@ -183,8 +183,12 @@ Measured field budgets (px unless noted):
 | ID-command detail box | ~76 px (≈6 hanzi + margin) |
 | ID-command box titles | ≤6 hanzi (≤72 px) |
 | speaker nameplate | 7 glyphs hard |
+| **pilot names (char-DB), all surfaces** | **≤84 px (7 cells) hard cap; ≤72 px (6 cells) fully clean.** The binding fields: battle focus/formation plates (name pen x=51, fixed LV badge x=132 → ~81 px; an exactly-7-cell name touches the badge by 3 px — accepted residual), the 编成 detail-plate window (88 px, see below), the roster list (name x=8, LV badge x=96 → 88 px), the speaker plate (84 px). Gate: `glyph_width` |
+| 编成 detail-plate name window | **88 px** (11 tiles; widened from the JP-design 80 px — the JP max name was exactly 80 px — via the clamp-cave budget) |
 | BackStage weapon-name field | 104 px (was 80 px; widened by a 1-byte field patch, scoped to names ≥14 cells natural width) |
 | unit-list carried-name field | 6 glyphs (longer names clamp; trailing cells blanked) |
+| special ability/defense box (1df/1e0) | lines pre-broken by `00 03` stops (2 lines/record in 1df, 3 in 1e0 — trailing stops are the drawer's empty lines, NEVER pad them away, see LESSONS D8); ≤26 glyphs / 208 px per line (drawer buffer + JP max) |
+| library bio box (324/c4b) | **18 cells/line** (17 on `{00}·{01}` indented quote continuations) × **6 lines/page**; explicit break grammar (`00 04` continuation, `00 04 01` indent, `00 07` page, `00 01` end); fill-then-wrap, no no-start punct at a line head, no line ending on an opener. Gate: `bio_line_geometry` |
 | parts/caption viewer | fixed 5-line window; ≥3 trailing blank lines needed or the next record bleeds in |
 | barks | byte-length-locked in place + sub-line framing (§5) |
 

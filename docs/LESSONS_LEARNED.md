@@ -341,6 +341,21 @@ Three related process failures during full-pipeline rebuilds:
   collision before ROM corruption.
 * **Guard (new pipeline):** single-pass build with ONE authoritative grow manifest.
 
+### B13. B6 recurred on the library bios via applier precedence ("kept-committed" shadowing)
+* **Believed:** the bio banks were fully modernized — the phase-2 fleet had produced flat
+  full retranslations for every record and the applier reflowed them to the measured
+  18/17-cell × 6-line box.
+* **Broken by:** an owner screenshot of a half-empty profile box (9/6/12/10/11/2-cell
+  lines).  109 early "phase-1" records — in-place byte-fitted edits that kept the JP
+  originals' break positions AND abridged wording — were silently preserved by the
+  applier's *kept-committed-over-staged* precedence branch, shadowing their finished
+  phase-2 retranslations for months.
+* **Truth:** B6 all over again (JP layout structure ≠ ZH layout structure), plus a
+  process trap: when a migration produces a better source for records that already have
+  a committed form, "keep committed" defaults leave the WORST records permanently frozen.
+* **Guard:** gate `bio_line_geometry` (18/17-cell, ≤6 lines/page, greedy-fill ratchet —
+  a premature-break record cannot re-ship regardless of which pipeline produced it).
+
 ---
 
 ## C. Memory safety (heap, caves, buffers)
@@ -385,6 +400,41 @@ The affinity/nameplate name readers accept only the resident name arena (`0x0218
 render blank on high-RAM pointers; the ID-command/master-table readers happily follow
 autoload-pool pointers. Before relocating any string, identify its **reader** and prove the
 destination range is accepted (live probe with one record first).
+
+### C6. "Dead" donor bytes may be live data — audit references before paving (the D4 bug)
+* **Believed:** the dead SJIS dev-string band (`0x1B3E22..0x1B6DA0`) was pure never-read
+  donor space; caves could pave any of it.
+* **Broken by:** every in-battle focus-plate HP readout silently rendered EMPTY for
+  multiple releases.  The paved span contained the OBJ-text **number-format strings**
+  `"D4"`/`"/D4"` (`0x1B3E90/0x1B3E94`) — referenced from live literal pools
+  (`0x23640/0x23648/0x240A8/0x240B0`) and passed to the OBJ-text drawer `0x02013BE0`
+  by the plate composers.  With the format string paved by cave code, the parser found
+  no directive and drew nothing: no garble, no crash, just missing digits — invisible
+  to every parity/pointer gate (the cave region was allow-listed).
+* **Truth:** "dead" is a *reference-count* property, not a *content* property.  Debug
+  strings for a compiled-out printf are dead; format strings mixed into the same band
+  are not.  Isolating the cause took a full live component bisection (patches-only
+  build still failed → single-entry builds → the cave body itself).
+* **Guard:** gate `patch_literal_safety` — any patch that paves non-zero JP bytes must
+  have zero un-retargeted JP-image literal references into its span (documented
+  allowlist only for referencers proven dead, e.g. argument pools of the compiled-out
+  debug printf `0x020A3ECC`).
+
+### C7. Cave scratch state must live in the resident image, never in buffer bands
+* **Believed:** a single scratch byte for a cave (last roster cursor row) could be
+  parked at an arbitrary quiet RAM address (`0x0233F800`).
+* **Broken by (latent):** `0x0233F800` is stage-buffer offset `0x13000`, and two grown
+  stage files exceed `0x13000` — in `_STG98` that offset is a REACHABLE script position
+  (the story-all-clear dialogue's press-A advance point).  Browse the roster (cave
+  writes the row byte into the loaded script), enter the stage, finish the dialogue:
+  row values 0x02/0x13/0x16 become a wild GOTO/CALL → data abort at the most
+  celebratory moment of the game.  Static gates cannot see it (the ROM byte is clean;
+  the corruption happens at runtime).
+* **Truth:** the only safe homes for cave-written state are bytes the build itself
+  owns inside the resident arm9 image (cave-body tails, the dead-string band verified
+  per C6, existing cave-global precedent `0x18F47C/0x18F4CC`).
+* **Guard:** gate `patch_literal_safety` forbids any patch literal targeting
+  `[0x0232C800, 0x023489AC)` (stage + work buffer up to arena-lo).
 
 ---
 
@@ -446,6 +496,21 @@ dict-compressed byte budget), two scream onomatopoeia, a few UI micro-fragments,
 squad sub-menu (custom compressed tile codec) stay Japanese **by decision**, recorded in an
 allowlist the untranslated-text gate honors. Everything else must be ZH — "mostly done" is
 not a state the gates accept.
+
+### D8. Empty-segment separators are load-bearing (the NT对应机/NT对应机 bleed)
+* **Believed:** when a re-encoded special-ability/defense record (`1df`/`1e0`) had fewer
+  display lines than its slot, padding the freed tail with `0x00` was the natural filler.
+* **Broken by:** the drawers (`0x02055AB4`/`0x02055BD8`) draw a FIXED 2/3 lines by
+  scanning byte-wise for the k-th `00 03` stop **with no record-end check** — a record
+  that ships fewer stops than the drawer draws lines makes line k render the NEXT
+  record's first segment: duplicate "NT对应机/NT对应机" lines, and units showing
+  abilities/defenses they do not have (79 records shipped this way).
+* **Truth:** JP's trailing `00 03` pairs after the content are not padding — they are
+  the *empty lines* the drawer will draw.  The JP stop topology (2 per 1df record,
+  3 per 1e0 record) is part of the record contract, exactly like bark sub-line framing
+  (§5 barks) and non-final `0x09` segment padding (B5).
+* **Guard:** gate `effect_line_stops` (JP-anchored stop counts + the drawer's 26-glyph
+  /208px line budget on every re-encoded line).
 
 ---
 
@@ -579,6 +644,21 @@ the CURRENT ROM (an intermediate corpus carried stale speaker labels from an old
 and "keep as-is" calls (PLANT stays Latin, 穆 for Mu, keeping Japanese rank suffixes 大佐…)
 came from the owner, are recorded, and are excluded from gates via allowlists — so the
 gates stay 100%-green *and* honest.
+
+### F10. A width gate that prices ZH at the JP advance measures nothing (F1 recurrence)
+* **Believed:** `gate_glyph_width` protected pilot names — it compared ZH vs JP widths.
+* **Broken by:** owner screenshots of 艾帕·西纳普斯 clipped on the 编成 plate and
+  多蒙（明镜止水）'s `）` printed over the battle-plate LV badge.  The gate priced BOTH
+  sides at 8 px/glyph (translated names are pure ZH-band = **12 px**) and expanded JP
+  F-refs via the WRONG dictionary (`0x12D770`; pilot names macro through the system
+  dict `0x1444B4`) — it had degenerated to a cell-count compare, so 96–108 px names
+  passed against 80–84 px fields.  Two of the four surfaces (roster list 88 px, 编成
+  plate 80 px window) had never been measured at all.
+* **Truth:** width checks must use the true per-surface advance and the true dictionary,
+  against MEASURED field budgets (TEXT_SYSTEM §6), not against a same-unit JP compare.
+* **Guard:** `gate_glyph_width` now decodes render slots (12 px ZH-band / 8 px renderB,
+  DICT_SYS expansion) and enforces the 84 px pilot-name cap; the budgets are documented
+  in TEXT_SYSTEM §6.  Meta-lesson = F1: re-audit what a green gate actually measures.
 
 ---
 
