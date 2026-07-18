@@ -11,9 +11,15 @@ Pipeline per bio record (324.bin chars / c4b.bin units):
 
 Gap chars (not yet in charmap) are assumed 2-byte tokens for fit purposes;
 the mint step registers them before the real encode.  --dry-run reports
-per-record fit and the demand census; --write emits the three JSON tables
-(gaps-only merge: committed edits are kept verbatim).
-"""
+per-record fit and the demand census; --write emits the three JSON tables.
+
+Precedence (phase-2 reflow rerun): a record already applied FROM STAGING
+(src == its staging filename) is kept byte-identical; a record still marked
+"phase1-edit" (the 109 in-place phase-1 slot-fit edits, whose line breaks
+copied the JP positions and render half-width — the premature-break class)
+is REBUILT from its staged phase-2 retranslation (staged-over-committed).
+Should a phase-1 record ever lack a staged text, its committed prose is
+reflowed instead (markers stripped, DP re-flowed; src "phase2-reflow")."""
 from __future__ import annotations
 
 import argparse
@@ -30,6 +36,8 @@ sys.path.insert(0, str(HERE))
 
 from utils import text_codec  # noqa: E402
 from lib_apply import BREAK_AFTER, NO_LINE_START  # noqa: E402
+
+NO_LINE_END = "「『（"    # JP bios never orphan an opening bracket at line end
 
 
 def reflow(text: str, max_cells: int, max_lines: int):
@@ -49,6 +57,8 @@ def reflow(text: str, max_cells: int, max_lines: int):
             continue
         for j in range(i + 1, min(i + max_cells, n) + 1):
             if j < n and text[j] in NO_LINE_START:
+                continue
+            if j < n and text[j - 1] in NO_LINE_END:
                 continue
             lines, npunct, pen = best[i]
             bonus = 1 if (j == n or text[j - 1] in BREAK_AFTER) else 0
@@ -92,13 +102,19 @@ def enc_len(text: str, gap: set[str]) -> int:
 
 
 def split_quote(par: str):
-    """Split a leading 「…」 quote off a paragraph; returns (quote, rest)."""
+    """Split a leading 「…」 quote off a paragraph; returns (quote, rest).
+
+    Any punctuation immediately after 」 that must not START a line (、。…)
+    stays attached to the quote span, so the rest never opens with it."""
     if not par.startswith("「"):
         return None, par
     i = par.find("」")
     if i < 0:
         return None, par
-    return par[: i + 1], par[i + 1:]
+    j = i + 1
+    while j < len(par) and par[j] in NO_LINE_START:
+        j += 1
+    return par[:j], par[j:]
 
 
 def build_record(paragraphs: list[str], jp_pages: int):
@@ -209,6 +225,16 @@ def jp_geometry():
     return geo
 
 
+MARKER = re.compile(r"\{00\}·\{01\}|\{00\}·|\{00\}々|\{00\}\{01\}|\{00\}|\{01\}")
+
+
+def committed_paragraphs(zh: str) -> list[str]:
+    """Committed record -> flat prose paragraphs (one per {00}々 page),
+    line-break markers stripped — the phase-1 fallback reflow input."""
+    body = zh.removesuffix("{00}{01}")
+    return [MARKER.sub("", page) for page in body.split("{00}々") if MARKER.sub("", page)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true",
@@ -217,6 +243,11 @@ def main():
 
     staged = staged_texts()
     geo = jp_geometry()
+    jp = jp_bio_index()
+    jp_pages_by = {(b["file"], b["index"]):
+                   b["text"].removesuffix("{00}{01}").count("{00}々") + 1
+                   for b in jp.values()}
+    jp_pages_by[("324.bin", 91)] = 1
     gap: set[str] = set()
     stats = Counter()
 
@@ -224,18 +255,41 @@ def main():
             ("324.bin", "character_bios.json", 274, "Character encyclopedia (図鑑) biography bank"),
             ("c4b.bin", "unit_bios.json", 239, "Unit encyclopedia (図鑑) biography bank")):
         old = json.loads((LIB / rel).read_text())
-        by_off = {int(e["offset"], 16): e for e in old.get("edits", [])}
+        by_idx = {r["index"]: r for r in old.get("records", [])}
         records = []
         for k in range(count):
             off, size = geo[fname][k]
-            committed = by_off.get(off)
-            if committed is not None:
-                records.append({"index": k, "zh": committed["zh"],
-                                "src": "phase1-edit"})
-                stats[f"{fname} kept-committed"] += 1
+            committed = by_idx.get(k)
+            if committed is not None and "zh" in committed \
+                    and committed.get("src") != "phase1-edit":
+                # staged-era record: already applied from staging — byte-kept
+                records.append(dict(committed))
+                stats[f"{fname} kept-staged-era"] += 1
+            elif committed is not None and "zh" in committed \
+                    and (fname, k) in staged:
+                # phase-1 slot-fit edit shadowing a staged retranslation:
+                # the staged text wins (this is the premature-break fix)
+                text, src, flags = staged[(fname, k)]
+                record_bytes_len(text, gap)
+                records.append({"index": k, "zh": text, "src": src})
+                stats[f"{fname} staged-over-phase1"] += 1
+                if flags:
+                    stats[f"{fname} flagged"] += 1
+                    print(f"  flag {src}: {'; '.join(flags)}")
+            elif committed is not None and "zh" in committed:
+                # phase-1 edit without a staged text: re-flow its own prose
+                paras = committed_paragraphs(committed["zh"])
+                pages, flags = build_record(paras, jp_pages_by.get((fname, k),
+                                                                   len(paras)))
+                text = render_text(pages)
+                record_bytes_len(text, gap)
+                records.append({"index": k, "zh": text, "src": "phase2-reflow"})
+                stats[f"{fname} reflowed-committed"] += 1
+                print(f"  NOTE {fname} idx {k}: no staged text — committed "
+                      f"phase-1 prose reflowed{'; ' + '; '.join(flags) if flags else ''}")
             elif (fname, k) in staged:
                 text, src, flags = staged[(fname, k)]
-                nbytes = record_bytes_len(text, gap)
+                record_bytes_len(text, gap)
                 records.append({"index": k, "zh": text, "src": src})
                 stats[f"{fname} staged"] += 1
                 if flags:
