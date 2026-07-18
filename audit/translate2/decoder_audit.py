@@ -150,6 +150,8 @@ def check_identities():
                  f"{kind}bio#{b['index']}")
     wdata = jp.file(L.WEAPON_LIST_FILE)
     for w in W.weapon_list(jp):
+        if w.get("reachable") is False:      # glyph-priming blob at 0x0
+            continue
         o = int(w["off"], 16)
         feed(wdata[o:o + w["len"]], "stage", f"weapon@{w['off']}")
     for p in W.parts(jp):

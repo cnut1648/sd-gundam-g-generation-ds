@@ -411,11 +411,22 @@ def bios(rom: GameROM, kind: str) -> list[dict]:
 
 
 def weapon_list(rom: GameROM) -> list[dict]:
-    """31e.bin — the encyclopedia weapon-name list (00-separated names)."""
+    """31e.bin — the encyclopedia weapon-name list (00-separated names).  The
+    file opens with a glyph-priming/index blob (a systematic kana/kanji table,
+    not a real name) that draws out-of-atlas slots (>= 2196); mark it
+    reachable:False like the stage/event walkers so downstream (gates, the
+    phase-2 exporter) skips it while the dump stays honest."""
     data = rom.file(L.WEAPON_LIST_FILE)
-    return [{"off": _hex(s), "len": ln,
-             "text": decode_text(rom, data[s:s + ln], "stage", rom.expand)}
-            for s, ln in text_runs(data)]
+    out = []
+    for s, ln in text_runs(data):
+        run = data[s:s + ln]
+        entry = {"off": _hex(s), "len": ln,
+                 "text": decode_text(rom, run, "stage", rom.expand)}
+        if any(slot >= L.TRAMPOLINE_SPLIT
+               for slot, _ in glyph_stream(rom, run, "stage")):
+            entry["reachable"] = False
+        out.append(entry)
+    return out
 
 
 def parts(rom: GameROM) -> list[dict]:
