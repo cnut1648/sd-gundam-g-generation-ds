@@ -882,3 +882,37 @@ Guards: `RESIDENT_LIVE_ZERO_BANDS` now fences the FULL BtlS_Crea table
 2026-07-12 rows (strings re-homed without updating them) are now explicitly
 RETIRED — a stale ledger row is a future double-allocation, mark rows
 retired/moved in the same commit that re-homes their strings.
+
+### G11. "Dead" bark rows are a LIVENESS claim about the whole cid domain — enumerate every writer (fifth and sixth instances)
+The freezeproof write-map audit (agent W, 2026-07-19, /tmp/freezeproof/W)
+classified EVERY byte the build writes into the resident image and found the
+"row is dead-by-evidence" prior for bark id-map holes broken twice more, both
+missed by every earlier audit because the cid enumeration was incomplete:
+* **row 511 (コンスコン)** — `_STG01`'s setup records deploy cid 511 (the max
+  cid any stage record produces; the bark map physically extends to row 571 =
+  `0x190870`, so row 511 is addressable), yet 12 v1.1-era pilot-arena strings
+  (杰刚/吉翁号/西斯库德/浮游炮/吉姆…) squatted its cells: the first bark event
+  from Conscon's slot would have fed string bytes to the rank fetch;
+* **row 238** — the char-DB record is literally 欠番 (dummy name, voiceset 0),
+  but the **97-pair roster init map @ `0x192DA8` assigns cid 238 to roster
+  slot 91** (loop `0x0200F108` → the same `strh 0x0200F744` that feeds the
+  bark row cache).  "欠番 ⇒ never deployable" is FALSE — 欠番 status must be
+  cross-checked against every cid source, per cid.
+Truth: a bark-map row is dead iff its cid appears in NO writer of the
+per-char state cid field — and that domain has SIX enumerable sources (all
+11 BL callers of `0x0200F744` traced): stage setup records, per-stage
+header[0x14] roster-availability tables, the roster init map, the story-swap
+table @ `0x118F58`, the BtlS_Crea demo table, and event-VM native 0x80
+(`set_pilot_cid`, zero static call sites; residual ceiling = bounded bark
+garble, not a freeze: u16 rank keeps the offtab read in mapped RAM, len is
+u8-truncated, the record parser is header-checked).  Both rows were vacated
+into the 欠番 pair-row core `[0x187AD7,0x187B6D)` (rows 177/178 — verified
+absent from ALL six sources), 4 reference-free orphan duplicates deleted
+(0 referrers by data-scan AND whole-image aligned+unaligned word scan).
+Guard: gate `bark_map_row_liveness` — image-level, recomputes the cid domain
+from the candidate ROM's own stage files + arm9 tables every run, forbids
+(a) any low-half change to a JP-nonzero cell, (b) any squat on cols 1..22 of
+a deployable-cid row, (c) any diff in knock/BtlS_Crea/dev-grid-live/roster
+bands; red-tested for all four classes in `--self-test`.  The audit's write
+map + per-byte classification (writemap.json / adjudication.json, zero
+UNKNOWN bytes) is the reusable no-freeze evidence base.
