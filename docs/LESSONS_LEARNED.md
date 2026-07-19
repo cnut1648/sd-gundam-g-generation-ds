@@ -174,6 +174,51 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   must be **pure ZH-band**.  All 49 re-encoded in place; gate `pool_trampoline_tokens`
   now enforces pilot names contain no one-byte/F-ref/JP-band glyphs at all.
 
+### A13. A "width cap" patched on the wrong row family is dead arithmetic (the 编成 plate 80px clip)
+* **Believed:** the 编成 detail-plate name clip at 80px was governed by the BG
+  tile-copy clamp cave (0x11C222) — its `tile_x==8 && tile_y>=5 → cap 11` branch
+  was shipped as "the 88px widen".
+* **Why it seemed right:** the cave demonstrably clamps rows of the same map
+  (0x0620F000), and 11 tiles = 88px matched the desired budget.
+* **Disproven by:** A/B ROMs toggling the cap 10↔11 produced **byte-identical
+  frames**; forcing 11 on all tile_x==8 rows garbled the STATS rows while the
+  name row never changed.  OBJ-VRAM + OAM dumps then found the name pixels in
+  engine-B **OBJ tiles 0x83..0x96** behind 32+32+16px sprites — the plate name
+  is **OBJ text**, drawn by 0x2014470 with a width-in-tiles argument; the BG
+  rows the clamp touches are the digit caches and stat labels.
+* **Truth:** that plate's name budget lives in TWO code immediates that must
+  stay EQUAL: the widget create (`movs r2,#N` @0x54BE0 — OAM sprite arrangement,
+  tile block, commit chunking) and the redraw render (`movs r1,#N` @0x5487E —
+  compose scratch stride).  Patching only one interleaves the tile columns
+  (stride-10 scratch read as 11-tile rows).  N=11 → 88px; the sprite arranger
+  and commit chunker generalize to 4+4+2+1 tiles (32+32+16+8px sprites) and the
+  neighbouring OBJ tiles 0x97/0x98 are free on every state of that page.
+* **Guard:** the two immediates are one logical patch (documented in both
+  entries of code_patches.json); live A/B graft proof with a full-frame pixel
+  diff (only the widened-name pixels may differ).  Meta-lesson: before widening
+  any "field", locate the surface's ACTUAL render path (BG compose vs OBJ text)
+  — a budget patch that survives an A/B pixel-diff unchanged is patching the
+  wrong path.
+
+### A14. Narrow glyph advance = advance patch + ink-left-of-advance repaint, in ALL width models
+* **Believed:** minting narrow-paren glyphs (half-cell ink) was enough to make
+  （SEED）-style names look right; and later, that changing only the trampoline
+  pen advance would be enough to make them fit.
+* **Truth:** a glyph is narrow only if BOTH move together: (1) the trampoline
+  advance-select cave (0x11A362 ext: slots 4156/4253 → 6px, 4222/4223/4214 →
+  8px; the delta rides r7 across the blit because the drawer's epilogue pops
+  the caller's r7) and (2) the cell's ink repainted LEFT of the new advance
+  (`(` ink cols 8–10 → 2–4; S/E → cols 0–6; D → cols 0–7), or the ink of one
+  glyph lands under its neighbour's box.  The blitter writes per-pixel nibbles
+  (no opaque 12px rectangle), so overlapping boxes composite — but ink past the
+  advance still looks wrong on screen.  And every WIDTH MODEL must adopt the
+  same per-slot advances in the same commit — `run_static` gates, the render
+  oracle, and the 攻略.html JS — or the preview, the gates and the live game
+  disagree about what fits (the owner-reported html≠game class).
+* **Guard:** `TRAMPOLINE_SLOT_ADVANCE` exists in exactly three mirrored homes
+  (oracle / run_static / build_guide JS) all documented against the cave entry;
+  bank-surface oracle-vs-live stroke IoU 1.0 verified on the 阿斯兰(SEED) plate.
+
 ---
 
 ## B. Data growth, pointers, alignment
