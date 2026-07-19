@@ -2828,7 +2828,13 @@ def gate_placement_span_safety(rep, ctx):
     (2) a placement into JP-zero space must not begin ON the previous string's
         NUL terminator (B10/the gFIX black-screen: allocations must preserve
         the preceding terminator — JP byte immediately before a zero-space
-        placement must be 0x00 too, i.e. the run's own framing survives)."""
+        placement must be 0x00 too, i.e. the run's own framing survives);
+    (3) no two arm9 head writers may overlap at byte level (placement entries
+        across all pools + event blocks + patches): the relocation ledger
+        marks ~100 historical spans 'vacated' whose old annotation entries
+        still write bytes — a future allocator trusting a vacated span would
+        silently double-write it, and the builder's put_hex has no overlap
+        assertion (freezeproof audit W, 2026-07-19)."""
     aj = ctx["jp_a9"]
     p = REPO / "data" / "zh" / "placements" / "resident_caves.json"
     entries = json.loads(p.read_text())["entries"]
@@ -2850,13 +2856,38 @@ def gate_placement_span_safety(rep, ctx):
                 problems.append(
                     f"@{e['offset']} begins on a non-zero JP byte boundary "
                     f"(previous terminator not preserved)")
+    # (3) byte-level overlap across every arm9 head writer
+    spans = []
+    for e in entries:
+        spans.append((RESIDENT_CAVES_BASE + int(e["offset"], 16),
+                      len(e["payload_hex"]) // 2, f"caves@{e['offset']}"))
+    for rel, base_key in (("battle_name_pool", "file_offset"),
+                          ("idcmd_detail_pool", "file_offset"),
+                          ("post_dict_labels", "file_offset")):
+        doc = json.loads((REPO / "data" / "zh" / "placements" / f"{rel}.json").read_text())
+        b = int(doc["file_offset"], 16)
+        for e in doc["entries"]:
+            spans.append((b + int(e["offset"], 16), len(e["payload_hex"]) // 2,
+                          f"{rel}@{e['offset']}"))
+    ev = json.loads((REPO / "data" / "zh" / "event_text.json").read_text())
+    for e in ev["entries"]:
+        spans.append((int(e["offset"], 16), e["length"], f"event@{e['offset']}"))
+    for e in ctx["patches_spec"]["entries"]:
+        spans.append((int(e["file_offset"], 16), len(e["new_hex"]) // 2,
+                      f"patch@{e['file_offset']}"))
+    spans.sort()
+    for (alo, aln, awhat), (blo, bln, bwhat) in zip(spans, spans[1:]):
+        if blo < alo + aln:
+            problems.append(f"writer overlap: {awhat}+{aln} overlaps {bwhat} "
+                            f"(double-written bytes @0x{blo:X})")
     if problems:
         rep.add("placement_span_safety", False,
                 f"{len(problems)} unsafe placement span(s): " + "; ".join(problems[:6]))
     else:
         rep.add("placement_span_safety", True,
                 f"{len(entries)} resident-cave placements: {zero_placed} zero-space "
-                f"relocations, none on live-zero bands, terminators preserved")
+                f"relocations, none on live-zero bands, terminators preserved; "
+                f"{len(spans)} head-writer spans overlap-free")
 
 
 # =============================================================================
@@ -3293,6 +3324,17 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     except AssertionError as e:
         print(f"    *** TEETH MISSING: {e} ***")
         rc = 1
+
+    def mut_placement_overlap(ctx):
+        import copy as _copy
+        spec = _copy.deepcopy(ctx["patches_spec"])
+        # a patch body colliding with an existing cave placement byte
+        spec["entries"].append({
+            "file_offset": "0x186C78", "old_hex": "", "new_hex": "aa",
+            "what": "self-test overlap with the cid-137 cave entry"})
+        ctx["patches_spec"] = spec
+    expect_fail("two writers claim the same head byte (vacated-span reuse class)",
+                ["placement_span_safety"], mut_placement_overlap)
 
     expect_fail("squat a JP-zero bark cell of a DEPLOYABLE cid (row 511 col 2 — the "
                 "Conscon class)",
