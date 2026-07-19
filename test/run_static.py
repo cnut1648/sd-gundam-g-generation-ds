@@ -559,9 +559,24 @@ CAVE_SCRATCH_FORBIDDEN = (0x0232C800, 0x023489AC)
 # knock-away beat (sprite + クリティカル/暴击 popup + damage number, all
 # sprite-anchored) rendered off-screen — the owner's "hit by 暴击, no special
 # effect, unit just gone" bug.
+# The BtlS_Crea band covers the FULL table [0x190BFC,0x19175C) — 14 records x
+# 0xD0 (sole base literal @file 0x7E2A0, end literal @0x7EAD8, group bounds
+# u8[5] {0,4,8,11,14} @0x1B618C: title idle cycles ALL 14 records), not just
+# the [0x190C14,0x191400) sub-band the 49 v1.2 strings sat on — records 10..13
+# and the rec-0 head are equally live "empty deployment slot" zeros (fleet
+# errata R8/R9/R10, 2026-07-19).
+# The develop/family grid (stride 0x20 @0x192F30, accessor 0x0202D294, row =
+# master-table field +0x04) is live wherever a row id is unit-referenced: rows
+# 0..180 and 201..250.  Row 180 = the Qubeley lineage (utids 175/176/177) —
+# three shipped v1.2 strings paved its cols 2..15 until the develop-UI readers
+# (cols 12/13/14 read unconditionally once the row is queried) were one owned
+# Qubeley away from consuming string bytes as variant utids.  Only the proven
+# id-hole interior rows 181..200 = [0x1945D0,0x194850) stay allocatable.
 RESIDENT_LIVE_ZERO_BANDS = (
     (0x190870, 0x190C00, "battle knock-anim geometry / fn-ptr tables"),
-    (0x190C14, 0x191400, "BtlS_Crea attract-demo deployment table"),
+    (0x190BFC, 0x19175C, "BtlS_Crea attract-demo deployment table (full 14-record extent)"),
+    (0x192F30, 0x1945D0, "develop/family grid rows 0..180 (row 180 = Qubeley lineage)"),
+    (0x194850, 0x194E90, "develop/family grid rows 201..250 (unit-referenced)"),
 )
 RESIDENT_CAVES_BASE = 0x186000       # resident_caves.json offsets are relative to this
 
