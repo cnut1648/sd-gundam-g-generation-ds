@@ -916,3 +916,42 @@ a deployable-cid row, (c) any diff in knock/BtlS_Crea/dev-grid-live/roster
 bands; red-tested for all four classes in `--self-test`.  The audit's write
 map + per-byte classification (writemap.json / adjudication.json, zero
 UNKNOWN bytes) is the reusable no-freeze evidence base.
+
+### G12. CODE caves obey the same liveness law as strings — and "JP zeros" in patch space bit us too (seventh instance)
+Agent B's live sweep (2026-07-19, /tmp/freezeproof/B) found 23 utids
+(610–630, 670–671) hard-aborting (data abort → `pc=FFFF0108`, the v1.1 freeze
+phenotype) on the hangar 処分 **detail-panel render**, ZH-only.  Root cause
+(agent W): four render-fix **code caves** were parked on JP-zero runs at
+`0x1B35F8/0x1B3620/0x1B3664/0x1B3B00` — which are the **予備-family sentinel
+rows of the LIVE unit resource-id table** `u32[256 fams × 7] @0x021B1FA8`
+(reader `0x02011E48`: `id = base + 7*fam(utid)`; value → resource-pack word
+via `0x0201F678`, whose `ldr u32[0x0216BCD4 + val*4]` aborts on a wild id).
+Rendering any fam-204..210/250..252 unit's detail panel read cave CODE BYTES
+as resource ids.  The old `patch_literal_safety` paved-donor check only
+audited JP-NONZERO donor spans — zero-space caves were assumed free, the
+exact C8/G10/G11 fallacy in patch space.  Truth: cave donors need the same
+owner-table adjudication as string placements; reachability ≠ obtainability
+(utids 610–630 are 予備 with dev-row 0 and zero acquisition references, yet
+their PANEL RENDER is one save-poke away and the failure is a hard freeze).
+Fix: caves block-relocated into the dead in-image atlas (`0x11C330..0x11C444`;
+internal pc-relative branches preserved by keeping block layout, the one
+external BL re-encoded, 3 veneer BLs + 1 literal re-aimed); the table is
+byte-exact JP again and gate-pinned (`bark_map_row_liveness` rule 5,
+red-tested).  Empirical close: B's 23 minimal repros re-run green on the
+fixed build; positive control (old ROM) still aborts.
+Related finding, same subsystem (B FAIL#2, adjudicated NOT-A-ZH-BUG): the
+BtlS_Crea demo loader has a FIXED 0x10000-byte resource-pool budget (cursor
+base ptr @`0x021B1E1C`, budget literal @file `0x7EAF8`); its overflow check
+feeds only the compiled-out printf `0x020A3ECC` and then keeps going with
+wild pack pointers (`0x0200E79A/AA` aborts).  Hand-poked 6-unit×2-team demo
+records of unusual units exceed it **on BOTH ROMs**: W's controlled twins
+(byte-identical poked pairs, same script, same battery, same runner) abort
+batch-for-batch on JP exactly as on ZH — B's original "JP twin clean"
+verdicts were VACUOUS because those JP runs never left the title screen
+within their 14,000-frame window (screenshot-proven), a lesson about
+adjudication controls: **a clean control run must be shown to REACH the
+surface under test**.  Retail bound: the demo table is gate-pinned byte-exact
+JP; the natural table's pool usage is < 0x8000 (half budget — budget-bisect
+probe, demo confirmed on-screen) on the ZH build; real stages use the stage
+loader (98/101 proven live by agent S).  Treat the 0x10000 budget as a hard
+constraint if the demo table is ever legitimately edited.
