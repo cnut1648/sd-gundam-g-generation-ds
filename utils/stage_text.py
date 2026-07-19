@@ -38,6 +38,20 @@ Data model (data/zh/stages/<name>.json, one per stage file):
 `build_stage_file` applies all edits/inserts in one pass and relocates every
 genuine pointer. The pointer classifier below is the subtle part; its rules
 are documented on `pointer_offsets`.
+
+Layout independence (the BUG-1 lesson — a mixed edit's baked pointer):
+some edited ranges are not pure dialogue: they carry live event bytecode with
+absolute ``13``/``16`` operands (fork/call targets). Replacement bytes MUST
+carry those operands as the JP ORIGINAL bytes; `apply_edits` relocates them
+exactly like pointers outside edits. A replacement that instead bakes an
+absolute in-buffer value froze the file layout of its authoring day into the
+data — the first later size change anywhere before the target silently made
+the operand land mid-instruction (the `_STG20A` replay-branch soft-lock: two
+fork operands baked at the pre-grow shift entered a wait-handler 23 bytes
+early and parked the event VM forever). `apply_edits` therefore REFUSES any
+in-edit genuine-pointer window whose bytes are neither the JP originals nor
+out-of-buffer (an intentional bytecode rewrite is expressed by dropping the
+operand entirely, never by re-baking it).
 """
 from __future__ import annotations
 
@@ -159,6 +173,64 @@ def pointer_offsets(data: bytes,
     return sorted(taken)
 
 
+def edit_window_sources(p: int, edits: list[tuple[int, int, bytes]]):
+    """Byte provenance of the 4-byte window at original offset ``p`` against
+    ``edits``: a list of 4 sources, each ``("jp", q)`` (original byte at q,
+    outside every edit) or ``("edit", k, r)`` (replacement byte r of edit k).
+    Returns None when no byte of the window lies inside a replaced range."""
+    srcs, touch = [], False
+    for i in range(4):
+        q = p + i
+        hit = None
+        for k, (off, old_len, _new) in enumerate(edits):
+            if old_len > 0 and off <= q < off + old_len:
+                hit = ("edit", k, q - off)
+                break
+        if hit is None:
+            srcs.append(("jp", q))
+        else:
+            srcs.append(hit)
+            touch = True
+    return srcs if touch else None
+
+
+def _anchor_displacement(data: bytes, out: bytearray, edits, shift, target: int,
+                         masked: list[int]) -> int:
+    """A relocated operand's target lies INSIDE an edited range: the target
+    instruction's displacement within the replacement cannot be derived from
+    lengths alone (the rewrite may shuffle bytes around it). Anchor-match the
+    JP target signature against the built bytes near the length-preserving
+    position, masking every selected pointer window (their operand bytes are
+    legitimately rewritten). The match must be UNIQUE; anything else is an
+    unsupported bytecode restructure and fails the build."""
+    for off, old_len, new in edits:
+        if old_len > 0 and off <= target < off + old_len:
+            break
+    else:
+        raise AssertionError(f"anchor target 0x{target:x} not inside any edit")
+    sig_len = 12
+    sig = data[target:target + sig_len]
+    mask_rel = set()
+    for m in masked:
+        for q in range(m, m + 4):
+            if target <= q < target + sig_len:
+                mask_rel.add(q - target)
+    base_built = off + shift(off) + (target - off)
+    hits = []
+    for d in range(-4, 5):
+        pos = base_built + d
+        if pos < 0 or pos + sig_len > len(out):
+            continue
+        if all(i in mask_rel or out[pos + i] == sig[i] for i in range(sig_len)):
+            hits.append(d)
+    if len(hits) != 1:
+        raise AssertionError(
+            f"operand target 0x{target:x} inside a rewritten edit: anchor match "
+            f"{'ambiguous ' + str(hits) if hits else 'not found'} — restructure "
+            f"the edit so the target instruction keeps a unique 12-byte context")
+    return hits[0]
+
+
 def apply_edits(data: bytes, edits: list[tuple[int, int, bytes]]) -> bytes:
     """Splice byte-range replacements and relocate every genuine pointer.
 
@@ -167,7 +239,23 @@ def apply_edits(data: bytes, edits: list[tuple[int, int, bytes]]) -> bytes:
     delta shifts all later bytes; a pointer at original offset P targeting
     original offset T is rewritten at its shifted position to the shifted
     target — where ``shift(x)`` accumulates the deltas of all edits whose
-    replaced range ends at/before x."""
+    replaced range ends at/before x.
+
+    Pointer windows are relocated in two passes:
+
+      1. windows fully OUTSIDE every replaced range — read from the original
+         bytes, rewritten in place at their shifted position (as always);
+      2. windows touching a replaced range (live bytecode operands inside a
+         mixed dialogue edit, or straddling its boundary). The replacement
+         must carry the JP ORIGINAL operand bytes — the pass rewrites them to
+         the shifted target, so the data stays layout-independent. A window
+         whose replacement bytes assemble to an out-of-buffer value is an
+         intentional bytecode rewrite (the operand is gone) and ships
+         verbatim; an in-buffer value that differs from the JP bytes is a
+         BAKED LAYOUT (the `_STG20A` soft-lock class) and fails the build.
+
+    Operand targets that themselves lie inside a replaced range are placed by
+    unique signature anchoring (see `_anchor_displacement`)."""
     prev_end = 0
     for off, old_len, _new in edits:
         if off < prev_end:
@@ -180,8 +268,9 @@ def apply_edits(data: bytes, edits: list[tuple[int, int, bytes]]) -> bytes:
     for off, old_len, _new in edits:
         for k in range(off, off + old_len):
             exclude[k] = 1
-    pointers = [(o, struct.unpack_from("<I", data, o)[0])
-                for o in pointer_offsets(data, payload_mask(data), exclude)]
+    payload = payload_mask(data)
+    outside = [(o, struct.unpack_from("<I", data, o)[0])
+               for o in pointer_offsets(data, payload, exclude)]
 
     deltas = [(off + old_len, len(new) - old_len) for off, old_len, new in edits]
 
@@ -196,13 +285,78 @@ def apply_edits(data: bytes, edits: list[tuple[int, int, bytes]]) -> bytes:
         pos = off + old_len
     out += data[pos:]
 
-    for p, value in pointers:
-        target = value - STAGE_RAM_BASE
-        new_value = STAGE_RAM_BASE + target + shift(target)
+    # pass 2 windows: the full (no-exclude) scan minus the outside set
+    all_sel = pointer_offsets(data, payload, None)
+    outside_set = {p for p, _ in outside}
+    occupied = bytearray(len(data) + 4)
+    for q, _v in outside:
+        occupied[q] = occupied[q + 1] = occupied[q + 2] = occupied[q + 3] = 1
+    inedit = []
+    for p in all_sel:
+        if p in outside_set:
+            continue
+        srcs = edit_window_sources(p, edits)
+        if srcs is None:
+            continue            # dropped by exclude for another reason: skip
+        # the two passes must never write overlapping bytes (shadow-set skew
+        # between the exclude/no-exclude scans would corrupt an operand)
+        if occupied[p] or occupied[p + 1] or occupied[p + 2] or occupied[p + 3]:
+            raise AssertionError(
+                f"in-edit pointer window 0x{p:x} overlaps an outside window "
+                f"— scan shadow skew, refusing to relocate both")
+        inedit.append((p, srcs))
+
+    def check_in_file(p: int, new_value: int) -> int:
         if not (STAGE_RAM_BASE <= new_value < STAGE_RAM_BASE + len(out)):
             raise AssertionError(
                 f"pointer at 0x{p:x} relocates out of file: 0x{new_value:08x}")
+        return new_value
+
+    for p, value in outside:
+        target = value - STAGE_RAM_BASE
+        new_value = check_in_file(p, STAGE_RAM_BASE + target + shift(target))
         struct.pack_into("<I", out, p + shift(p), new_value)
+
+    for p, srcs in inedit:
+        rep = bytearray()
+        mappable = True
+        for s in srcs:
+            if s[0] == "jp":
+                rep.append(data[s[1]])
+            else:
+                _, k, r = s
+                new = edits[k][2]
+                if r >= len(new):
+                    mappable = False
+                    break
+                rep.append(new[r])
+        jp_bytes = data[p:p + 4]
+        if mappable and bytes(rep) == jp_bytes:
+            # canonical form: JP operand bytes in the replacement -> relocate
+            s0 = srcs[0]
+            if s0[0] == "jp":
+                built_pos = s0[1] + shift(s0[1])
+            else:
+                _, k, r = s0
+                off = edits[k][0]
+                built_pos = off + shift(off) + r
+            value = struct.unpack_from("<I", jp_bytes, 0)[0]
+            target = value - STAGE_RAM_BASE
+            if 0 <= target < len(data) and exclude[target]:
+                d = _anchor_displacement(data, out, edits, shift, target, all_sel)
+                new_value = STAGE_RAM_BASE + target + shift(target) + d
+            else:
+                new_value = STAGE_RAM_BASE + target + shift(target)
+            struct.pack_into("<I", out, built_pos, check_in_file(p, new_value))
+            continue
+        assembled = struct.unpack_from("<I", bytes(rep), 0)[0] if mappable else None
+        if (assembled is not None
+                and STAGE_RAM_BASE <= assembled < STAGE_RAM_BASE + STAGE_BUFFER_SIZE):
+            raise AssertionError(
+                f"edit at window 0x{p:x} bakes an absolute pointer "
+                f"0x{assembled:08x} (JP bytes {jp_bytes.hex()}) — replacements "
+                f"must carry the JP operand bytes; the builder relocates them")
+        # otherwise: deliberate bytecode rewrite (operand dropped) — verbatim
     return bytes(out)
 
 
