@@ -436,6 +436,37 @@ destination range is accepted (live probe with one record first).
 * **Guard:** gate `patch_literal_safety` forbids any patch literal targeting
   `[0x0232C800, 0x023489AC)` (stage + work buffer up to arena-lo).
 
+### C8. Zero-valued LIVE tables — "all zeros in JP" does not mean free (the 暴击-vanish bug)
+* **Believed:** a run of zero bytes in the resident arm9, not covered by any
+  known table, was free space for relocated strings (the v1.2 `fleet-v12:idname`
+  batch planted three ID-skill names at `0x19095D/0x190979/0x190999`).
+* **Broken by:** the owner's hardest bug report — units hit by a critical (暴击)
+  "just vanish" with no knockback and no effect popup.  A 20-agent clean-room
+  fleet (10 ZH + 10 JP, headless instrumented emulator, deterministic replays)
+  isolated it: the "free" zeros were the **battle-scene knock-anim geometry
+  tables** — s16 flight vectors (`0x190930..0x190967`, consumer `0x0206A6E4`)
+  and s8 shake deltas (`0x190968..0x1909A7`, consumers `0x02069D8C/DB8`) whose
+  JP values are legitimately (0,0).  String bytes there became flight vectors
+  that flung the crit-survivor's sprite **~20,000 px off-screen**; the hit
+  counter, クリティカル/暴击 popup and damage number are sprite-anchored, so
+  the whole reaction beat rendered off-screen.  Only crit-survivors spawn the
+  flight object — hence "only on 暴击, only sometimes".  The unit record was
+  never touched: purely presentation, invisible to every text/pointer gate.
+* **Truth:** free space is a *reference/consumer* property, never a *content*
+  property (C6's data twin).  A zero span is dead only if no consumer's index
+  range can reach it.  Fix = relocate the strings into the declared free run
+  (NUL-preserving — B10: the first attempt started ON the previous string's
+  terminator and black-screened), restore the cells to JP zeros.
+* **Guard:** gate `placement_span_safety` (no placement may intersect the known
+  live-zero bands; zero-space placements must preserve the preceding
+  terminator), plus a consumer-audit of every zero-space placement band.
+* **Meta:** the isolation followed F5 verbatim — deterministic repro, 26
+  one-variable graft replays (which *exonerated* the plausible suspects: the
+  暴击 label, the name pool, every cart bank), RAM algebra matching the
+  corrupted sprite position exactly, and a state-spliced fix proof.  The
+  owner's insistence against two wrong "normal behavior" verdicts is what kept
+  the investigation honest: **an owner report outranks a green gate wall.**
+
 ---
 
 ## D. Encoding, decoding & translation data
