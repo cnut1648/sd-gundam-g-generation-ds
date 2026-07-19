@@ -7017,6 +7017,28 @@
      "ram": "0x218A263"
     }
    ]
+  },
+  {
+   "date": "2026-07-19",
+   "fix": "uifix:pilot-name cid176 rename 希罗·尤尔(零式)->希罗(零式)",
+   "ids": [
+    "cid176"
+   ],
+   "text": "希罗(零式)",
+   "pool": "data/zh/placements/resident_caves.json",
+   "offset": "0x46D5",
+   "ram": "0x218A6D5",
+   "bytes": 13,
+   "reserved": 13,
+   "vacated": [
+    {
+     "pool": "data/zh/placements/resident_caves.json",
+     "offset": "0x46E2",
+     "span": 6,
+     "ram": "0x218A6E2",
+     "note": "tail of the old 18B+NUL frame, now NUL padding; single char-DB pointer (rec176 @0xE009C) unchanged"
+    }
+   ]
   }
  ]
 }
