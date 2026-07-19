@@ -113,6 +113,21 @@ def renderb_rows(rom: GameROM, slot: int):
     return rows
 
 
+# slot-conditional trampoline advances (the ZH build's 0x11A362 advance-select
+# cave: narrow parens 6px, Latin burst letters 8px).  JP renders (rom_kind
+# 'jp') keep the flat 12px — the JP ROM has no such cave.  Mirrors
+# test/render_oracle.py TRAMPOLINE_SLOT_ADVANCE and the JS ADV table below.
+TRAMPOLINE_SLOT_ADVANCE = {4156: 6, 4253: 6, 4222: 8, 4223: 8, 4214: 8}
+
+
+def _glyph_advance(slot: int, font: str, surface: str, rom_kind: str) -> int:
+    if font != "A":
+        return 8
+    if surface == "bank" and rom_kind == "zh":
+        return TRAMPOLINE_SLOT_ADVANCE.get(slot, 12)
+    return 12
+
+
 def render_line(jp: GameROM, zh: GameROM, data: bytes, surface: str, rom_kind: str,
                 scale: int = 3, expander=None):
     """Render a byte stream to a PIL image EXACTLY as the game draws it.
@@ -126,19 +141,21 @@ def render_line(jp: GameROM, zh: GameROM, data: bytes, surface: str, rom_kind: s
     rom = zh if rom_kind == "zh" else jp
     glyphs = list(glyph_stream(rom, data, surface, expander))
     H = 16
-    W = max(1, sum(12 if f == "A" else 8 for _s, f in glyphs))
+    W = max(1, sum(_glyph_advance(s, f, surface, rom_kind) for s, f in glyphs))
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     px = img.load()
     x0 = 0
     for slot, font in glyphs:
         if font == "A":
-            rows, w = atlas_rows(rom, slot), 12
+            rows, w = atlas_rows(rom, slot), _glyph_advance(slot, font, surface, rom_kind)
             yoff = 3 if surface == "bank" else 1
         else:
             rows, w = renderb_rows(rom, slot), 8
             yoff = 0
         for y, row in enumerate(rows):
             for x, v in enumerate(row):
+                if x0 + x >= W:
+                    continue
                 if v == STROKE:
                     px[x0 + x, yoff + y] = (240, 244, 250, 255)
                 elif v == SHADOW and px[x0 + x, yoff + y][3] == 0:
@@ -1107,14 +1124,20 @@ function injectSpriteCSS(){
 }
 function b64u16(s){var bin=atob(s),a=new Uint16Array(bin.length>>1);for(var i=0;i<a.length;i++)a[i]=bin.charCodeAt(i*2)|(bin.charCodeAt(i*2+1)<<8);return a;}
 // surface: 0=stage(renderA-direct, baseline +1) 1=bank(trampoline, +3); rom: 0=jp 1=zh
+// Slot-conditional trampoline advances (the ZH 0x11A362 advance-select cave):
+// narrow parens 4156/4253 = 6px, Latin burst letters 4222/4223/4214 = 8px.
+// Must mirror test/render_oracle.py TRAMPOLINE_SLOT_ADVANCE — html == live.
+var TRAMP_ADV={4156:6,4253:6,4222:8,4223:8,4214:8};
 function drawSeg(g,surface,rom,scale){   // g = one line's u16 glyphs (no BREAK)
   scale=scale||2;
   var seg=document.createElement('span');seg.className='gseg';seg.style.height=(16*scale)+'px';
   for(var i=0;i<g.length;i++){var v=g[i];
     var font=(v>=0x8000)?1:0,slot=v&0x7FFF,key=font?'rb':(rom?'zh':'jp'),sh=GG.sheets[key];
     var cw=sh.cw,ch=sh.ch,cols=sh.cols,sx=(slot%cols)*cw,sy=((slot/cols)|0)*ch,yoff=font?0:(surface?3:1);
+    var adv=(!font&&surface&&rom&&TRAMP_ADV[slot])?TRAMP_ADV[slot]:cw;
     var gi=document.createElement('i');gi.className='ggs '+(font?'gg-rb':(rom?'gg-zh':'gg-jp'));
     gi.style.width=(cw*scale)+'px';gi.style.height=(ch*scale)+'px';gi.style.marginTop=(yoff*scale)+'px';
+    if(adv!==cw)gi.style.marginRight=((adv-cw)*scale)+'px'; // ink sits left of the advance; sheets are transparent so overlaps composite
     gi.style.backgroundPosition='-'+(sx*scale)+'px -'+(sy*scale)+'px';
     gi.style.backgroundSize=(cols*cw*scale)+'px auto';
     seg.appendChild(gi);
