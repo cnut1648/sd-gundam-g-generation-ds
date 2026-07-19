@@ -9,6 +9,10 @@ emulator, so every line of translated text can be verified at scale:
   * trampoline surfaces ("bank"): slot >= 2196 from the atlas; slot < 2196
     from the renderB 8x16 UI font inside arm9 (RAM 0x02133F14), 8px advance —
     the dispatch installed by the translation (docs/TEXT_SYSTEM.md §3).
+    Atlas advance is slot-conditional (the cave's advance-select extension
+    @0x11A362): narrow parens 4156/4253 = 6px, Latin burst letters
+    4222/4223/4214 = 8px, everything else 12px (TRAMPOLINE_SLOT_ADVANCE —
+    must mirror data/patches/code_patches.json entry 0x11A2A0 exactly).
   * 0xF0xx dictionary macros expand via the arm9 dictionary at 0x1444B4.
 
 The oracle is validated against live-emulator captures by glyph-mask IoU
@@ -34,6 +38,8 @@ ATLAS_PATH = REPO / "data" / "font" / "atlas12.bin"
 RENDERB_RAM = 0x02133F14
 PRIMARY_DICT = 0x1444B4
 TRAMPOLINE_SPLIT = 2196
+# slot-conditional atlas advances on trampoline surfaces (cave ext @0x11A362)
+TRAMPOLINE_SLOT_ADVANCE = {4156: 6, 4253: 6, 4222: 8, 4223: 8, 4214: 8}
 
 STROKE, SHADOW = 1, 2
 
@@ -103,19 +109,33 @@ class Oracle:
             else:
                 yield slot, "A"
 
+    # -- advance model (must mirror the 0x11A2A0 cave + its 0x11A362 ext) ------
+    @staticmethod
+    def glyph_advance(slot: int, font: str, surface: str) -> int:
+        """Pen advance for one glyph.  renderB = 8; atlas = 12 except the
+        slot-conditional narrow cells on trampoline ('bank') surfaces."""
+        if font != "A":
+            return 8
+        if surface == "bank":
+            return TRAMPOLINE_SLOT_ADVANCE.get(slot, 12)
+        return 12
+
     # -- rasterize a line -----------------------------------------------------
     def render_line(self, data: bytes, surface: str, scale: int = 1):
         """Render to a PIL image (white stroke / dark shadow on green)."""
         from PIL import Image
         glyphs = list(self.glyph_stream(data, surface))
         H = 16
-        W = max(1, sum(12 if f == "A" else 8 for _s, f in glyphs))
+        W = max(1, sum(self.glyph_advance(s, f, surface) for s, f in glyphs))
         img = Image.new("RGB", (W, H), (0, 90, 0))
         px = img.load()
         x0 = 0
         for slot, font in glyphs:
             if font == "A":
-                rows, w = self.atlas_glyph(slot), 12
+                # advance is slot-conditional on trampoline surfaces; the cell
+                # blit stays 12px wide (ink sits left of the advance by design),
+                # so overlapping cell boxes composite ink-only.
+                rows, w = self.atlas_glyph(slot), self.glyph_advance(slot, font, surface)
                 # trampoline surfaces: the 0x11A2A0 cave draws atlas glyphs at
                 # penY+3 so 12x12 ink (rows 0..11) bottom-aligns with renderB
                 # ink (rows 2..14); stage keeps the plain anchor.
@@ -125,6 +145,8 @@ class Oracle:
                 yoff = 0                                  # 16px cell
             for y, row in enumerate(rows):
                 for x, v in enumerate(row):
+                    if x0 + x >= W:
+                        continue
                     if v == STROKE:
                         px[x0 + x, yoff + y] = (255, 255, 255)
                     elif v == SHADOW and px[x0 + x, yoff + y] == (0, 90, 0):
