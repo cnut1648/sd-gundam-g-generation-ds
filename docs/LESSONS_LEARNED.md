@@ -803,3 +803,37 @@ the JP↔ZH bytemap from an all-WIDE ZH ROM, else a partially-narrowed build pol
 the keys. Verify with 32/32 gates + coverage (0) + a live before/after oracle sheet
 (the E-band letter identities lean on the VLM-identified `kind: "ident"` entries in
 `data/renderb_charset.json` — eyeball them).
+
+### G10. Candidate free-space lists must be edge-audited at cell granularity ("zero-in-JP ≠ free", third and fourth instances)
+The BtlS_Crea relocation fleet (10 clean-room agents, 2026-07-19,
+/tmp/reloc_fleet) unanimously approved moving the 49 attract-demo-table
+squatters, but broke the CANDIDATE LIST itself in four places — all on span
+EDGES, none in the interiors the applied plan actually used:
+* **B1 lo `0x183DBD` / C1 lo `0x18409D` are off-by-one INTO live bark-map
+  cells**: each is byte 1 (the consumed LOW half — the sole accessor
+  `0x020646F4` u16-truncates every u32 cell, so bytes 2–3 are dead but bytes
+  0–1 are live) of the k=22 cell of a real, voiced, attract-demo-deployed
+  character (cid 6 ev22 rank 0x9A; cid 14 = アナベル・ガトー ev22 rank 0xF2;
+  map = u32[471×23] @ `0x02183B3C`, key `cid*23+event`).  A string planted at
+  the listed span start corrupts a real bark rank.  Safe starts are byte 2 of
+  the edge cell (B1 → `0x183DBE+`, C1 → `0x1840A0`) — and a placement must
+  never write the trailing word (next row's k0 cell) either.
+* **A2's listed edges `0x1945B3` / `0x194852` each trespass on live
+  develop-grid rows** (row 180 col-1 high byte = the Qubeley family anchor;
+  row 201 col 0): the dead space is ONLY the id-hole interior rows 181..200 =
+  `[0x1945D0,0x194850)`.  Three v1.1-era strings shipped ON row 180's cells
+  2..15 (col 12 read back as a plausible utid 0x38) — the develop-UI readers
+  consume cols 12/13/14 unconditionally once a Qubeley-family unit is owned;
+  rescued 2026-07-19 into 欠番 bark-row core tails.
+Truth (extends C8): a candidate span is not an interval, it is a claim about
+an OWNING TABLE — adjudicate per-row/per-cell against the owner's accessor
+(u16 masks, row strides, id domains), and audit BOTH edges: every error the
+fleet found sat exactly on a span boundary.  "All zeros in JP" plus "inside a
+documented free run" is still not dead — knock-anim (C8), BtlS_Crea, dev-row
+180 and the bark-map low halves are four instances of the same class.
+Guards: `RESIDENT_LIVE_ZERO_BANDS` now fences the FULL BtlS_Crea table
+`[0x190BFC,0x19175C)` and the develop grid outside its id-hole
+(`[0x192F30,0x1945D0)`, `[0x194850,0x194E90)`); ledger hygiene: 50 superseded
+2026-07-12 rows (strings re-homed without updating them) are now explicitly
+RETIRED — a stale ledger row is a future double-allocation, mark rows
+retired/moved in the same commit that re-homes their strings.
