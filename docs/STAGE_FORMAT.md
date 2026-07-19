@@ -104,10 +104,25 @@ Additional rules:
   zero bytes AT the table and relocate pointers ≥ `t` — greedy ascending, recomputing as
   earlier inserts shift later tables. The inserted bytes are dead space; every dialogue
   block re-decodes identically.
+* **Operands INSIDE a replaced range** (the BUG-1 `_STG20A` lesson): some edits replace
+  MIXED regions — dialogue payload plus live event bytecode with absolute `13`/`16`
+  operands. The replacement (`zh_hex`) must carry those operands as the **JP original
+  bytes**; the builder relocates them like every other pointer (a target that itself
+  falls inside another rewritten edit is placed by unique 12-byte signature anchoring).
+  Baking an already-relocated value freezes one historical layout into the data: the
+  first later size change upstream of the target re-lands the operand mid-instruction —
+  the `_STG20A` replay branch then forked its dialogue-pump sub-VM 23 bytes short of its
+  entry and parked forever on a wait op (input-dead empty dialogue box); `_STG10B`
+  shipped the same class at −4 for two sessions' fork pairs. `apply_edits` now REFUSES
+  in-buffer baked values (an intentional bytecode rewrite is expressed by dropping the
+  operand — its window assembles out-of-buffer — never by re-baking it), and the
+  `stage_operand_relocation` gate re-derives every operand's landing site from the JP
+  signature on every candidate ROM.
 * **Verification obligations** (all byte-level, off the final image): every non-grown block
   decodes byte-identically at its shifted offset; every grown block decodes to its intended
-  text; every in-range pointer resolves in-range; all five header tables 4-aligned; choice
-  blocks/combat scripts byte-identical; file ≤ cap.
+  text; every in-range pointer resolves in-range (including operands inside replaced
+  ranges, which must land on their JP-signature targets); all five header tables
+  4-aligned; choice blocks/combat scripts byte-identical; file ≤ cap.
 
 ## 5. Failure modes this design guards against (quick index)
 
@@ -116,6 +131,7 @@ Additional rules:
 | stage black-screens at load | pointers not relocated after a size change | §4 relocation |
 | stage black-screens at load, all pointers valid | header table misaligned → rotated `ldr` | §2/§4 alignment |
 | mid-stage hang at a cutscene, no wild PC | event CALL corrupted by a false `0x15` block | §3 CFG reachability + JP CFG-isomorphism |
+| input-dead EMPTY dialogue box mid-scene, CPU healthy, one save-context only | operand INSIDE a replaced range baked for a stale layout → fork/call enters its routine mid-stream, VM parks on an unsatisfiable wait | §4 in-edit operands + `stage_operand_relocation` gate |
 | ending cutscene black screen | arm9 jump-table pointer overwritten by text | script-pointer integrity (`13 <ptr>` valid in JP stays valid) |
 | a block loses its later segments | 0x00 padding in a non-final segment | TEXT_SYSTEM §4 padding |
 | choices merge onto one line / choice breaks | choice block rewritten | §3 choice protection |

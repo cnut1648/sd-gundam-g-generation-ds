@@ -955,3 +955,37 @@ JP; the natural table's pool usage is < 0x8000 (half budget — budget-bisect
 probe, demo confirmed on-screen) on the ZH build; real stages use the stage
 loader (98/101 proven live by agent S).  Treat the 0x10000 budget as a hard
 constraint if the demo table is ever legitimately edited.
+
+### G13. A replaced range is not a pointer-free zone — baked operands freeze ONE layout into the data (BUG-1, the _STG20A replay soft-lock)
+Agent S's all-stages sweep (2026-07-19, /tmp/freezeproof/S) found `_STG20A`
+input-deadlocking on an EMPTY dialogue box at the 4th advance — only when the
+session is the save's own current/replayed card (`rec046.byte1:=0x2D` warp);
+forward-context clean on both ROMs, JP control plays through byte-identical
+inputs.  Root cause: stage edits replace whole byte ranges, and the builder's
+pointer relocation EXCLUDED replaced ranges ("the replacement carries its own
+already-correct values").  But some edits are MIXED — dialogue payload plus
+live event bytecode: `_STG20A`'s `0x1780+181` edit contains two `13`-operand
+forks (`FORK file+0xD3A4/file+0xD24C`, the dialogue-pump/wait sub-VMs of the
+replay branch) whose absolute operands the zh_hex had BAKED at the layout of
+their authoring day (shift +0xFAC).  The PLANT re-encode grew two earlier
+blocks (+23 B): the real targets moved to +0xFC3, the baked operands didn't,
+the forks entered their routines 23 bytes short (one hit an immediate exit,
+one spawned a wait-loop VM at file+0xE15D), and the main VM parked forever on
+the `05 ff ff` wait at file+0xE171 — CPU healthy, buttons dead.  Why S-wave
+context only: the fork pair lives in bytecode that only the replay-branch
+scene program executes; and why the gates were blind: the operands sit inside
+a LEXICAL `15..00 00` span, so the CFG walkers skip them as display payload.
+The corpus audit found the same class already SHIPPED at −4 in `_STG10B`
+(two fork pairs, latent since v1.1 — the S sweep's contexts never executed
+that branch).  Fixes at source: (1) `apply_edits` now relocates operand
+windows inside/straddling replaced ranges and REFUSES in-buffer baked values
+(zh_hex must carry the JP operand bytes; migration
+`audit/tools/migrate_stage_operands.py` normalized 1,102 windows across 49
+stages — built output changed ONLY at the 6 defective operands); (2) new
+image-level gate `stage_operand_relocation` re-derives every operand's
+landing site from the JP 12-byte signature (shift-corrected, mask-aware) on
+every candidate ROM — it flags exactly the 6 stale operands on the old build
+and is red-tested by re-baking one 0x17 short.  The general law: **data may
+carry only translation decisions, never layout** — any absolute value inside
+a replacement is a bug waiting for the first upstream size change ("works
+today" just means "the layouts happen to agree today").
