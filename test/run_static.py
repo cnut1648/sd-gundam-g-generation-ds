@@ -511,6 +511,14 @@ DEAD_BANK_DELTA = 0x0214BA00                     # relocated data bank: RAM = fi
 DEAD_BANK_RAM_LO = 0x02300000
 
 RENDER_A_ADVANCE, RENDER_B_ADVANCE = 12, 8       # fixed-cell advances (12x12 / 8x16)
+# Slot-conditional trampoline advances (the 0x11A2A0 cave's advance-select
+# extension @0x11A362): on every trampoline surface the narrow-paren cells
+# advance 6px and the Latin burst letters 8px; all other atlas slots keep 12px.
+# renderA-direct surfaces (stage text, the 0x2BCA6 speaker plate) always 12px.
+# Mirrored by test/render_oracle.py and the 攻略.html JS renderer — the four
+# models must agree or preview/gate/live disagree.
+TRAMPOLINE_SLOT_ADVANCE = {4156: 6, 4253: 6,          # ( )  narrow parens
+                           4222: 8, 4223: 8, 4214: 8}  # S E D burst letters
 FREF_MAX_DEPTH = 8
 
 # On-screen field pixel budgets (measured against the real engine):
@@ -521,21 +529,22 @@ UNIT_NAME_BUDGET_PX = 144        # widest unit-name context (status/database fie
 SPEAKER_PLATE_CELLS = 7          # dialogue speaker nameplate field (7 glyph cells)
 # Pilot-name pixel cap across EVERY surface a char-DB name reaches: the battle
 # focus/formation plates fit ~81px before the fixed LV badge (pen x=51, badge
-# x=132), the 编成 detail-plate name window is 88px (widened from the JP 80px by
-# the clamp-cave budget patch), the dialogue speaker plate is 7 cells (84px).
-# 7 cells = 84px is the enforced ceiling (the 3px badge-touch of an exactly-7-cell
-# name on the battle plates is a recorded, accepted residual; 8 cells = 96px is
-# the owner-visible overlap class — 多蒙（明镜止水）'s ） printed ON the badge).
+# x=132), the 编成 detail-plate name window is 88px (REALLY widened from the JP
+# 80px: the two width-immediate patches @0x54BE0/0x5487E grow the OBJ-text name
+# widget from 10 to 11 tiles), the roster list fits 88px (name x=8, LV badge
+# x=96), the dialogue speaker plate is 7 cells (84px).  7 cells = 84px is the
+# enforced ceiling (the 3px badge-touch of an exactly-7-cell name on the battle
+# plates is a recorded, accepted residual).  Widths are priced at the TRUE
+# trampoline advance incl. TRAMPOLINE_SLOT_ADVANCE (6px narrow parens, 8px
+# S/E/D burst letters — the 0x11A362 advance-select cave), which brings every
+# burst-variant name to <=84px: 阿斯兰(SEED)=80, 多蒙(明镜止水)=84, 基拉(SEED)=68.
 PILOT_NAME_BUDGET_PX = 84
-# OWNER RULING 2026-07-18 (F9): the burst-variant records keep their full
-# JP-faithful names (阿斯兰（SEED）, 多蒙（明镜止水), …) with the minted
-# narrow-paren glyphs instead of being shortened; their 12px-cell overhang into
-# the battle-plate badge/digit area is accepted (thin paren strokes make it
-# minor).  Each entry is a per-record WIDTH RATCHET (may never grow further).
+# OWNER RULING 2026-07-18 (F9) kept the full JP-faithful burst names; the
+# 2026-07-19 advance fixes (6px parens / 8px letters) shrank every ratchet
+# entry to <= PILOT_NAME_BUDGET_PX except cid 176 (希罗·尤尔(零式) = 8 hanzi +
+# 2 narrow parens = 96px).  Each entry is a WIDTH RATCHET (may never grow).
 PILOT_WIDTH_ALLOW = {
-    10: 108, 40: 108, 176: 108, 209: 108,           # 9-cell （SEED）/（零式）
-    55: 96, 56: 96, 118: 96, 148: 96, 149: 96,      # 8-cell forms
-    150: 96, 250: 96, 252: 96,
+    176: 96,
 }
 # Runtime-heap windows inside the relocated data bank: a display-string pointer that
 # lands here renders live heap garbage on fresh boot (proven by RAM captures).
@@ -1640,7 +1649,10 @@ def _decode_render_slots(a9: bytes, foff: int, expander, depth=0):
 
 
 def _slots_width(slots):
-    return sum(RENDER_A_ADVANCE if at else RENDER_B_ADVANCE for _, at in slots)
+    """Rendered width on a TRAMPOLINE surface (where every pool/name string
+    lives): atlas glyphs 12px except the slot-conditional narrow cells."""
+    return sum(TRAMPOLINE_SLOT_ADVANCE.get(s, RENDER_A_ADVANCE) if at
+               else RENDER_B_ADVANCE for s, at in slots)
 
 
 def _ram_to_file(a9: bytes, ptr: int):
