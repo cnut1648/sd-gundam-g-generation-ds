@@ -588,6 +588,48 @@ RESIDENT_LIVE_ZERO_BANDS = (
 )
 RESIDENT_CAVES_BASE = 0x186000       # resident_caves.json offsets are relative to this
 
+# The bark id-map (battle-voice index): u32[572 rows x 23 cols] at 0x183B3C..
+# 0x190870 — THE structure under every resident-cave "zero run" below the knock
+# band (the 446-cave arena, the pilot arena, the ID-ability run, A1).  Sole
+# consumer chain (single base literal @file 0x64700): 0x020646F4 returns
+# u16(cell) — bytes 2..3 of every cell are architecturally dead; id = row*23+col
+# (muls #0x17 @0x020650B4) where row = the battle slot's pilot cid
+# (u16[0x02289F92 + 0x34*charslot] -> 0x0227DCF2[slot]).  A cell is therefore
+# LIVE iff its row's cid can occupy a battle slot.  The cid writers — ALL
+# eleven BL callers of the state.cid strh 0x0200F744 traced (freezeproof audit
+# W, 2026-07-19) — draw from these enumerable sources: stage setup records
+# (cid @+4 of the 0x14-stride records @+0x1C of every _STG file), the 97-pair
+# roster init map u16[(slot,cid)] @0x192DA8 (loop 0x0200F108; includes the
+# 欠番-named cid 238 at slot 91!), the BtlS_Crea demo table (cid @sub+4), the
+# story-swap table u16[70 recs x 0x1C] @0x118F58 (slot,+4 old-cid,+6 new-cid;
+# consumers 0x02099A5A/0x02099F7E), the per-stage roster-availability table at
+# stage header[0x14] (101 recs x 0x24 = 3 story-variant sub-records x 0xC, cid
+# @sub+0; walkers 0x0202DB08.. / 0x0202E890), and event-VM native 0x80 =
+# 0x020301F8 set_pilot_cid(pop,pop) (no static push/push/call site in any
+# shipped script; residual ceiling = bounded bark garble: rank<=0xFFFF ->
+# offtab read <=0x021BC8C8 mapped RAM, len u8<=255, header-checked parser).
+# Col 0 is dead for EVERY row: all five bark call sites pass col in 2..0x16
+# and col 0 is zero in all 571 JP rows.  Deployable rows are enforced
+# byte-exact by gate bark_map_row_liveness; the two rows this audit found
+# squatted (238 roster / 511 コンスコン _STG01) were vacated into the 欠番
+# pair-row core [0x187AD7,0x187B6D) (rows 177/178).
+BARK_MAP_OFF = 0x183B3C
+BARK_MAP_END = 0x190870              # knock-anim band starts here
+BARK_COLS = 23
+ROSTER_MAP_OFF = 0x192DA8            # 97 x (u16 slot, u16 cid) roster init pairs
+ROSTER_MAP_N = 97
+BTLS_CREA_OFF, BTLS_CREA_RECS, BTLS_CREA_STRIDE = 0x190BFC, 14, 0xD0
+STG_SETUP_BASE, STG_SETUP_STRIDE, STG_SETUP_CID = 0x1C, 0x14, 4
+STORY_SWAP_OFF, STORY_SWAP_N, STORY_SWAP_STRIDE = 0x118F58, 70, 0x1C
+STG_BUFFER_RAM = 0x0232C800
+DEVGRID_OFF, DEVGRID_END, DEVGRID_HOLE = 0x192F30, 0x194E90, (0x1945D0, 0x194850)
+# [0x19175C,0x192F30): between the BtlS_Crea table and the develop grid sit the
+# bio offset tables (rebuilt by the build) and JP data/code-ptr tables (incl.
+# the stage-script handler table @0x192C58 and the roster map) — only the bio
+# offtab windows may differ from JP.
+BIO_OFFTAB_WINDOWS = ((0x191BDC, 0x191BDC + 240 * 4, "unit bio offtab + sentinel"),
+                      (0x191FA0, 0x191FA0 + 275 * 4, "char bio offtab + sentinel"))
+
 # Special-ability (1df) / special-defense (1e0) banks: record offset tables in
 # arm9 and the drawers' line grammar.  The drawers (0x02055AB4 / 0x02055BD8)
 # fetch line k by scanning BYTE-wise for the k-th `00 03` stop with NO record-end
@@ -2818,6 +2860,136 @@ def gate_placement_span_safety(rep, ctx):
 
 
 # =============================================================================
+# bark-map row liveness — every byte of the structured resident band, image-level
+# =============================================================================
+def _deployable_cids(ctx) -> set:
+    """The complete enumerable pilot-cid domain of the CANDIDATE ROM: every cid
+    a battle slot can carry = stage setup records + per-stage header[0x14]
+    roster-availability tables (both from the candidate's own stage files) +
+    the roster init map + the story-swap table + the attract-demo deployment
+    table (from the candidate arm9).  The only non-enumerable writer is
+    event-VM native 0x80 (set_pilot_cid from script stream values — zero
+    static call sites in the shipped scripts; see the BARK_MAP_OFF comment
+    for its bounded-garble ceiling)."""
+    az = ctx["a9"]
+    D = set()
+    for name in ctx["stg_names"]:
+        d = ctx["cand_file"](name)
+        if not d or len(d) < 0x1C:
+            continue
+        n = struct.unpack_from("<I", d, 0)[0]
+        for k in range(n):
+            o = STG_SETUP_BASE + k * STG_SETUP_STRIDE
+            if o + STG_SETUP_STRIDE > len(d):
+                break
+            D.add(struct.unpack_from("<H", d, o + STG_SETUP_CID)[0])
+        t14 = struct.unpack_from("<I", d, 0x14)[0] - STG_BUFFER_RAM
+        t18 = struct.unpack_from("<I", d, 0x18)[0] - STG_BUFFER_RAM
+        if 0 <= t14 < t18 <= len(d):
+            for k in range((t18 - t14) // 0x24):
+                for s in range(3):
+                    D.add(struct.unpack_from("<H", d, t14 + k * 0x24 + s * 0xC)[0])
+    for k in range(ROSTER_MAP_N):
+        D.add(struct.unpack_from("<H", az, ROSTER_MAP_OFF + k * 4 + 2)[0])
+    for k in range(STORY_SWAP_N):
+        o = STORY_SWAP_OFF + k * STORY_SWAP_STRIDE
+        for f in (4, 6):
+            D.add(struct.unpack_from("<H", az, o + f)[0])
+    for r in range(BTLS_CREA_RECS):
+        base = BTLS_CREA_OFF + r * BTLS_CREA_STRIDE + 4
+        for s in range(6):
+            c = struct.unpack_from("<H", az, base + s * 0x22 + 4)[0]
+            if c:
+                D.add(c)
+    D.discard(0)
+    return D
+
+
+def gate_bark_map_row_liveness(rep, ctx):
+    """Image-level liveness contract for the STRUCTURED resident band
+    [0x183B3C,0x194E90) — the surface that produced the 卡碧尼 deploy freeze,
+    the 暴击-vanish, the title-demo hang and the dev-grid corruption classes.
+    JP-anchored, per-cell (LESSONS C8/G10; freezeproof audit W 2026-07-19):
+
+    1. bark id-map [0x183B3C,0x190870): for every u32 cell, the CONSUMED u16
+       (bytes 0..1; accessor 0x020646F4 truncates) must be byte-exact JP when
+       (a) the JP value is nonzero (real bark rank of a real character), or
+       (b) the cell's row cid is DEPLOYABLE in this very ROM (stage setup
+       records + roster map + demo table — a squatted deployable row feeds
+       string bytes to the bark fetch the first time that character acts,
+       the exact class found on rows 238/511).  JP-zero cells of
+       non-deployable rows are the sanctioned cave space; col-0 cells are
+       dead for every row (all call sites pass col 2..0x16; col 0 zero in
+       all 571 JP rows).  Cell high halves are free (u16 truncation).
+    2. [0x190870,0x19175C) knock-anim + BtlS_Crea: byte-exact JP (image-level
+       — placements, event blocks AND patches; placement_span_safety only sees
+       placements).
+    3. [0x19175C,0x192F30): byte-exact JP outside the two rebuilt bio offset
+       tables (the roster map — an input to rule 1 — lives here).
+    4. develop grid [0x192F30,0x194E90): byte-exact JP outside the id-hole
+       interior [0x1945D0,0x194850), and no master record's +0x04 dev-row id
+       may point into the hole (re-derived from the candidate image)."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    problems = []
+    D = _deployable_cids(ctx)
+    # rule 1: bark map cells
+    ncells = (BARK_MAP_END - BARK_MAP_OFF) // 4
+    squat_cells = live_pres = 0
+    for cell in range(ncells):
+        o = BARK_MAP_OFF + cell * 4
+        if aj[o:o + 2] == az[o:o + 2]:
+            continue
+        row, col = divmod(cell, BARK_COLS)
+        jp_u16 = struct.unpack_from("<H", aj, o)[0]
+        if jp_u16 != 0:
+            problems.append(f"bark cell row {row} col {col} @0x{o:X}: LIVE JP rank "
+                            f"{jp_u16:#x} low-half overwritten -> wrong bark record")
+        elif row in D and col != 0:
+            problems.append(f"bark cell row {row} col {col} @0x{o:X}: JP-zero cell of "
+                            f"DEPLOYABLE cid {row} squatted (freeze/garble class; "
+                            f"vacate like rows 238/511)")
+        else:
+            squat_cells += 1
+    # rule 2: knock + BtlS_Crea byte-exact
+    for lo, hi, what in ((0x190870, 0x190C00, "knock-anim geometry"),
+                         (0x190BFC, 0x19175C, "BtlS_Crea demo table")):
+        n = sum(1 for i in range(lo, hi) if aj[i] != az[i])
+        if n:
+            problems.append(f"{what} [{lo:#x},{hi:#x}): {n} byte(s) differ from JP")
+    # rule 3: inter-table band
+    win = sorted(BIO_OFFTAB_WINDOWS)
+    for i in range(0x19175C, DEVGRID_OFF):
+        if aj[i] != az[i] and not any(lo <= i < hi for lo, hi, _ in win):
+            problems.append(f"inter-table band byte @0x{i:X} differs outside the bio "
+                            f"offtabs (roster map / handler tables live here)")
+            break
+    # rule 4: develop grid
+    for i in range(DEVGRID_OFF, DEVGRID_END):
+        if aj[i] != az[i] and not (DEVGRID_HOLE[0] <= i < DEVGRID_HOLE[1]):
+            problems.append(f"develop-grid byte @0x{i:X} differs outside the id-hole "
+                            f"interior [{DEVGRID_HOLE[0]:#x},{DEVGRID_HOLE[1]:#x})")
+            break
+    rowdom = set()
+    for u in range(MASTER_MAX):
+        ro = MASTER_TABLE_OFF + u * MASTER_STRIDE + 4
+        if ro + 2 <= len(az):
+            rowdom.add(struct.unpack_from("<H", az, ro)[0])
+    hole_rows = sorted(r for r in rowdom if 181 <= r <= 200)
+    if hole_rows:
+        problems.append(f"master +0x04 dev-row id(s) {hole_rows} point into the "
+                        f"id-hole 181..200 — the hole is no longer dead")
+    if problems:
+        rep.add("bark_map_row_liveness", False,
+                f"{len(problems)} liveness violation(s) in the structured resident band: "
+                + "; ".join(problems[:6]))
+    else:
+        rep.add("bark_map_row_liveness", True,
+                f"bark map: {len(D)} deployable cids clean, {squat_cells} JP-zero cells of "
+                f"non-deployable rows in cave use, 0 consumed-u16 overwrites; knock/BtlS_Crea "
+                f"byte-exact; dev grid diffs confined to the id-hole")
+
+
+# =============================================================================
 # patch cave literal safety — scratch-in-buffer + paved-referenced-bytes classes
 # =============================================================================
 def gate_patch_literal_safety(rep, ctx):
@@ -2944,6 +3116,7 @@ GATES = [
     gate_effect_line_stops,
     gate_bio_line_geometry,
     gate_placement_span_safety,
+    gate_bark_map_row_liveness,
     gate_patch_literal_safety,
     gate_offline_coverage,
     gate_extraction_fresh,
@@ -3120,6 +3293,22 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     except AssertionError as e:
         print(f"    *** TEETH MISSING: {e} ***")
         rc = 1
+
+    expect_fail("squat a JP-zero bark cell of a DEPLOYABLE cid (row 511 col 2 — the "
+                "Conscon class)",
+                ["bark_map_row_liveness"],
+                lambda c: mut_a9(c, BARK_MAP_OFF + (511 * BARK_COLS + 2) * 4,
+                                 bytes.fromhex("e7d9e823")))
+    expect_fail("overwrite the consumed low half of a LIVE bark rank cell",
+                ["bark_map_row_liveness"],
+                lambda c: mut_a9(c, BARK_MAP_OFF + (14 * BARK_COLS + 22) * 4,
+                                 bytes.fromhex("41e9")))
+    expect_fail("plant a string byte inside the BtlS_Crea demo table (title-hang class)",
+                ["bark_map_row_liveness"],
+                lambda c: mut_a9(c, 0x191500, b"\xe7\xd9"))
+    expect_fail("plant a string byte on a live develop-grid row (dev-UI corruption class)",
+                ["bark_map_row_liveness"],
+                lambda c: mut_a9(c, DEVGRID_OFF + 100 * 0x20 + 4, b"\xe7\xd9"))
 
     def mut_patch_scratch(ctx):
         import copy as _copy
