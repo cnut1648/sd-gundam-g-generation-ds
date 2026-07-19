@@ -73,6 +73,30 @@ FONT_PTR_LITERAL = 0x1315C    # glyph renderer's atlas base
 ARENA_LO_LITERAL = 0xA48F8    # default heap floor
 ARENA_ALIGN = 0x100
 
+# Four live pointer literals feed the same current/max-HP format strings to the
+# formatted tile drawer at 0x02013BE0.  JP stored those strings at 0x021B3E90/94,
+# inside the developer-string band later reused by the 0x1B3E22 code cave.  Keep
+# one resident copy in the last 8 bytes of the retired in-image 12x12 atlas and
+# repoint every caller; fixing only the reaction-panel pair at 0x240A8/0x240B0
+# leaves the earlier unit-panel path broken.  The live atlas was already moved
+# to 0x023027A0; no literal to the retired base 0x0211A2A0 remains.
+HP_FORMAT_CURRENT_JP_RAM = 0x021B3E90
+HP_FORMAT_MAX_JP_RAM = 0x021B3E94
+HP_FORMAT_RAM = 0x0212D768
+HP_FORMATS = b"D4\x00\x00/D4\x00"
+HP_FORMAT_CURRENT_REL = 0
+HP_FORMAT_MAX_REL = 4
+HP_FORMAT_PTR_SITES = (
+    (0x23640, HP_FORMAT_CURRENT_JP_RAM, HP_FORMAT_CURRENT_REL,
+     "unit-panel current-HP format pointer"),
+    (0x23648, HP_FORMAT_MAX_JP_RAM, HP_FORMAT_MAX_REL,
+     "unit-panel max-HP format pointer"),
+    (0x240A8, HP_FORMAT_CURRENT_JP_RAM, HP_FORMAT_CURRENT_REL,
+     "reaction-panel current-HP format pointer"),
+    (0x240B0, HP_FORMAT_MAX_JP_RAM, HP_FORMAT_MAX_REL,
+     "reaction-panel max-HP format pointer"),
+)
+
 FONT_RAM = 0x023027A0         # == BSS-clear end == original heap floor
 ITCM_ENTRY = (0x01FF8000, 0x520, 0)
 DTCM_ENTRY = (0x027C0000, 0x020, 0)
@@ -343,6 +367,14 @@ def _validate_input(jp: bytes):
     want_list = struct.pack("<6I", *ITCM_ENTRY, *DTCM_ENTRY)
     if jp[LIST_OFF:LIST_OFF + 0x18] != want_list:
         raise ValueError("original 2-entry autoload list not found at 0x1B6DA0")
+    hp_format_off = HP_FORMAT_CURRENT_JP_RAM - RAM_BASE
+    if jp[hp_format_off:hp_format_off + len(HP_FORMATS)] != HP_FORMATS:
+        raise ValueError("original current/max HP formats D4 and /D4 not found")
+    for ptr_off, jp_target, _rel, what in HP_FORMAT_PTR_SITES:
+        got = struct.unpack_from("<I", jp, ptr_off)[0]
+        if got != jp_target:
+            raise ValueError(f"not the original Japanese code binary: {what} at "
+                             f"{ptr_off:#x} is {got:#010x}, expected {jp_target:#010x}")
 
 
 def build_arm9(jp_arm9: bytes, data_dir: Path | str | None = None,
@@ -409,6 +441,8 @@ def build_arm9(jp_arm9: bytes, data_dir: Path | str | None = None,
     img.put_u32(MP_LIST_END, list_start + len(autoload_list), "autoload list end")
     img.put_u32(FONT_PTR_LITERAL, FONT_RAM, "renderer atlas base")
     img.put_u32(ARENA_LO_LITERAL, heap_floor, "heap floor")
+    for ptr_off, jp_target, rel, what in HP_FORMAT_PTR_SITES:
+        img.put_u32(ptr_off, HP_FORMAT_RAM + rel, what, expect_old=jp_target)
 
     out = bytes(img.buf) + font + ui_bank + brief_bank + autoload_list
 

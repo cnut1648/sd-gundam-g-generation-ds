@@ -19,6 +19,7 @@ in-game failure the gate protects against.
   nameplate_render_path       illegible 8px speaker nameplates / stray code at the patch
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
+  hp_format_pointers          blank current/max HP numbers after a code cave consumed D4,/D4
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
   font_relocation             boot crash / unreadable text from a bad font relocation
   relocated_pointer_sanity    the off-by-N name-relocation pointer → mid-stage data abort
@@ -486,6 +487,7 @@ FONT_RAM_RELOCATED = 0x023027A0
 FONT_RAM_ORIGINAL = 0x0211A2A0
 UI_FONT_PTR_OFF = 0x1321C                        # renderB 8x16 font base pointer literal
 MP_LIST_START_OFF, MP_LIST_END_OFF = 0xB0C, 0xB10
+MP_AUTOLOAD_SRC_OFF = 0xB14
 ARENA_LO_OFF = 0xA48F8
 APPEND_TAIL_OFF = 0x1B6DA0                       # relocated payloads append from here
 GLYPH_CELL = 36
@@ -529,6 +531,19 @@ RESIDENT_POOL_LO, RESIDENT_POOL_HI = 0x02180000, 0x021A0000
 RELOC_BANK_LO, RELOC_BANK_HI = 0x02300000, 0x02400000
 RELOC_PTR_SCAN_HI = 0x155B14
 
+# Both the unit-panel builder at 0x02023264 and the enemy-reaction builder use
+# the same JP D4 and /D4 format strings.  The 0x1B3E22 cave overwrites those
+# strings, so all four pointer literals must resolve to the reserved final
+# 8 bytes of the retired in-image 12x12 atlas.
+HP_FORMAT_CURRENT_RAM = 0x0212D768
+HP_FORMAT_MAX_RAM = 0x0212D76C
+HP_FORMAT_PTRS = (
+    (0x23640, HP_FORMAT_CURRENT_RAM, b"D4\x00"),
+    (0x23648, HP_FORMAT_MAX_RAM, b"/D4\x00"),
+    (0x240A8, HP_FORMAT_CURRENT_RAM, b"D4\x00"),
+    (0x240B0, HP_FORMAT_MAX_RAM, b"/D4\x00"),
+)
+
 
 def _pointer_repoint_ok(aj: bytes, az: bytes, word_off: int) -> bool:
     """The pointer-repoint rule: a 4-aligned word may differ from the JP source iff
@@ -545,6 +560,28 @@ def _pointer_repoint_ok(aj: bytes, az: bytes, word_off: int) -> bool:
     return (JP_STRINGS_LO <= wz < JP_STRINGS_HI
             or RESIDENT_POOL_LO <= wz < RESIDENT_POOL_HI
             or RELOC_BANK_LO <= wz < RELOC_BANK_HI)
+
+
+def _runtime_ram_to_file(a9: bytes, ptr: int) -> int | None:
+    """Resolve a resident or autoload destination RAM pointer to ARM9 bytes."""
+    if RAM_BASE <= ptr < RAM_BASE + min(len(a9), APPEND_TAIL_OFF):
+        return ptr - RAM_BASE
+    ls = struct.unpack_from("<I", a9, MP_LIST_START_OFF)[0]
+    le = struct.unpack_from("<I", a9, MP_LIST_END_OFF)[0]
+    list_off = ls - RAM_BASE
+    if le < ls or (le - ls) % 12 or not (0 <= list_off <= len(a9)):
+        return None
+    source_off = struct.unpack_from("<I", a9, MP_AUTOLOAD_SRC_OFF)[0] - RAM_BASE
+    for index in range((le - ls) // 12):
+        entry_off = list_off + index * 12
+        if entry_off + 12 > len(a9):
+            return None
+        ram, size, _bss = struct.unpack_from("<III", a9, entry_off)
+        if ram <= ptr < ram + size:
+            file_off = source_off + (ptr - ram)
+            return file_off if 0 <= file_off < len(a9) else None
+        source_off += size
+    return None
 
 
 # =============================================================================
@@ -680,6 +717,43 @@ def gate_code_image_parity(rep, ctx):
                 f"all head diffs vs JP are inside {len(regions)} annotated regions "
                 f"+ {repoints} pointer-repoint words; appended tail from 0x{APPEND_TAIL_OFF:X} "
                 f"({len(az) - APPEND_TAIL_OFF} B) validated by font_relocation")
+
+
+def gate_hp_format_pointers(rep, ctx):
+    """Every live current/max-HP format pointer must resolve to D4 or /D4.
+
+    JP stored both strings inside a developer-string band consumed by the
+    0x1B3E22 code cave.  The formatter still receives the correct numeric HP,
+    but draws no digits when a caller continues to target the cave body.
+    """
+    a9 = ctx["a9"]
+    problems = []
+    resolved = []
+    for ptr_off, expected_ptr, expected in HP_FORMAT_PTRS:
+        ptr = struct.unpack_from("<I", a9, ptr_off)[0]
+        if ptr != expected_ptr:
+            problems.append(
+                f"pointer @0x{ptr_off:X} is {ptr:#010x}, expected retired-atlas "
+                f"target {expected_ptr:#010x}")
+            continue
+        file_off = _runtime_ram_to_file(a9, ptr)
+        if file_off is None:
+            problems.append(
+                f"pointer @0x{ptr_off:X} -> {ptr:#010x} is not resident/autoload data")
+            continue
+        got = a9[file_off:file_off + len(expected)]
+        if got != expected:
+            problems.append(
+                f"pointer @0x{ptr_off:X} -> {ptr:#010x} reads "
+                f"{got.hex()} not {expected.hex()}")
+            continue
+        resolved.append((ptr_off, ptr))
+    if problems:
+        rep.add("hp_format_pointers", False, "; ".join(problems))
+    else:
+        rep.add("hp_format_pointers", True,
+                "all four current/max HP pointers resolve: "
+                + ", ".join(f"0x{off:X}->{ptr:#010x}" for off, ptr in resolved))
 
 
 def gate_dialogue_dict_frozen(rep, ctx):
@@ -2220,6 +2294,7 @@ GATES = [
     gate_nameplate_render_path,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
+    gate_hp_format_pointers,
     gate_dialogue_dict_frozen,
     gate_font_relocation,
     gate_relocated_pointer_sanity,
@@ -2322,6 +2397,22 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("flip a byte of combat code (outside every allowed region)",
                 ["code_image_parity"],
                 lambda c: mut_a9(c, 0x40000, bytes([c["a9"][0x40000] ^ 0xFF])))
+
+    def corrupt_hp_format(ctx):
+        ptr = struct.unpack_from("<I", ctx["a9"], HP_FORMAT_PTRS[0][0])[0]
+        file_off = _runtime_ram_to_file(ctx["a9"], ptr)
+        if file_off is None:
+            raise AssertionError("HP format pointer did not resolve")
+        mut_a9(ctx, file_off, b"X")
+
+    expect_fail("corrupt the shared current-HP format string",
+                ["hp_format_pointers"], corrupt_hp_format)
+
+    def restore_hp_pointer_to_consumed_donor(ctx):
+        mut_a9(ctx, HP_FORMAT_PTRS[0][0], struct.pack("<I", 0x021B3E90))
+
+    expect_fail("restore one HP pointer to the code-cave donor",
+                ["hp_format_pointers"], restore_hp_pointer_to_consumed_donor)
     expect_fail("corrupt the stage-VM dispatch code",
                 ["stage_script_integrity", "code_image_parity"],
                 lambda c: mut_a9(c, VM_REGION[0] + 8, b"\x00\x00"))

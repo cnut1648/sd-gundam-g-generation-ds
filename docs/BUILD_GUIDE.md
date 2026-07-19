@@ -49,9 +49,12 @@ Starting from the Japanese arm9 image (1,797,560 B):
 3. **Write string pools** (`data/arenas/`): in-place pools (battle names, detail pool,
    menu descriptors, resident caves), the 1,267 event/briefing text blocks in
    `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload payloads.
-4. **Apply code patches** (`data/patches/code_patches.json`, 36 entries): render-path
-   trampolines + caves, decoder hooks, one-byte fixes, gameplay threshold tweaks. Every
-   patch asserts its recorded `old_hex` before writing — a shifted base fails loudly.
+4. **Apply code/data patches** (`data/patches/code_patches.json` and
+   `data/patches/raw_regions.json`): render-path trampolines + caves, decoder hooks,
+   one-byte fixes, gameplay threshold tweaks. Every patch asserts its recorded `old_hex`
+   before writing — a shifted base fails loudly. The final 8 bytes of the retired in-image
+   12×12 atlas preserve `D4`/`/D4`; all four HP callers are repointed there
+   (`0x23640/48`, `0x240A8/B0`).
 5. **Append the autoload tail**: 12×12 glyph atlas (`data/font/atlas12.bin`, `0x25F80` B)
    + pool A (`0x2028C` B) + pool B (`0x98FC` B) + the new 5-entry autoload list; patch
    ModuleParams (`0xB0C/0xB10`), the renderer atlas pointer (`0x1315C` → `0x023027A0`)

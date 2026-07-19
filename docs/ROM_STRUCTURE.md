@@ -167,6 +167,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | glyph-atlas autoload payload | `0x1B6DA0` | → RAM `0x023027A0`, `0x25F80` B (4,320 × 36) |
 | pool A autoload payload | `0x1DCD20` | → RAM `0x02328720`, `0x2028C` B |
 | pool B autoload payload | `0x1FCFAC` | → RAM `0x023E7000`, `0x98FC` B |
+| retired-atlas HP formats | `0x12D768` | resident RAM `0x0212D768`, `D4\0\0/D4\0`; four pointer literals at `0x23640/48`, `0x240A8/B0` |
 | new autoload list | `0x2068A8` | 5 × 12 B; arm9 image ends `0x2068E4` |
 
 ### 4.2 Text decode / render engine
@@ -182,7 +183,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | **renderer atlas pointer** | **`0x1315C`** | JP `0x0211A2A0` → ZH **`0x023027A0`** (THE relocation literal) |
 | renderB font-base literal | `0x1321C` | `0x02133F14` — must stay the in-image font (a historic relocation to `0x02326E00` garbled all JP UI kanji) |
 | decoder-bypass branch | `0x1322C` | must be `11 d1` (`bne`); NOP `c0 46` forces all UI text down the raw path ⇒ global garble |
-| in-image JP atlas (dead after relocation) | `0x11A2A0..0x12D770` | 2,196 slots × 36 B; reusable cave space in the translated build |
+| in-image JP atlas (dead after relocation) | `0x11A2A0..0x12D770` | 2,196 slots × 36 B; reusable resident cave space. Its final 8 bytes `0x12D768..0x12D770` preserve the HP formats, outside the executable caves at `0x11A2A0` and `0x11C1FC`. |
 | alt (name) dictionary | `0x12D770..0x133F14` | `0x0212D770` — canonical pilot/unit/name macro store (e.g. `F0BC`=アムロ); ジオン entry 12 @ `0x212F777`, 連邦 entry 30; ザンジバル entry 1832 @ file `0x13162D` |
 | renderB 8×16 UI font | `0x133F14` | `0x02133F14`, 32 B/glyph |
 | primary dictionary | `0x1444B4..0x14AC34` | `0x021444B4` — dialogue/data macro store. **Clobbering it freezes combat** — treat as read-only |
@@ -213,7 +214,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | ID-ability getter | — | `0x02098DC8`; character table has **501 entries** — out-of-table charIDs must clamp to 0 (无ID能力); bounds-check cave @ `0x18F600` |
 | pilot name arena | `0x18E47E..0x18F47E` | the ONLY store the affinity/nameplate readers accept (they reject high-RAM pointers) |
 | resident cave runs (proven zero in JP) | — | `[0x18F615, 0x18F821)` ID-ability names; `[0x190030, 0x190870)` + `[0x1945B3, 0x194852)` relocated summaries/details; pool regions `(0x18BBE2, 0x18BDB4)`, `[0x18BF7A, 0x18CB5C)`; relocated-name band `[0x02180000, 0x021A0000)` |
-| dead SJIS dev strings | `0x1B3E22..0x1B6DA0` | never-displayed debug text up to the payload boundary — the classic code-cave donor (`0x1B3670`, `0x1B3E7C`, `0x1B3FC4`, `0x1B3E40`…) |
+| mostly-dead SJIS dev strings | `0x1B3E22..0x1B6DA0` | classic code-cave donor, but **not wholly dead**: `0x1B3E90/94` are live `D4` and `/D4` HP formats used by two panel builders through four pointer literals. The builder preserves them in the retired atlas tail and repoints every caller before the `0x1B3E22` cave consumes their original bytes. |
 | parts NAME offset table | `0x16B474` | count `0x2A` @ `0x16B470`; offtab[0..39] `0x16B474..0x16B510`; sentinel [40]=`0x1A0` @ `0x16B514`; accessor `0x0200F90C` = `base[(idx+1)]`; `b6e.bin` loads at RAM `0x02377C38`, `ptr = 0x02377C38 + offtab[idx]` |
 | parts CAPTION offset table | `0x16B518` | same `[count][offsets]` shape; accessor `0x0200F900` (b6f descriptions) |
 | cut-in (1dc) offset table | `0x16EEA8` | 943 × u32 record offsets; sentinel @ `0x16FD60`; 1dc byte-size ref @ `0x16C444` (= `0x6F24` in the shipped ROM). Growing 1dc REQUIRES rewriting all three |
@@ -253,7 +254,8 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 The head of arm9 (< `0x1B6DA0`) differs from JP in ~79k bytes across ~3.8–10k regions. They
 fall into these classes (each must be reproducible by the build):
 
-1. **Patched literals** — atlas ptr `0x1315C`, arena-lo `0xA48F8`, ModuleParams `0xB0C/0xB10`.
+1. **Patched literals** — atlas ptr `0x1315C`, arena-lo `0xA48F8`, ModuleParams `0xB0C/0xB10`,
+   and HP-format pointers `0x23640/48`, `0x240A8/B0`.
 2. **Translated data pools in place** — char-DB names, master-table names, ID-command
    names/summaries, detail pool, label arenas, alt-dict entries, briefing table.
 3. **Repointed pointer words** — table entries retargeted at relocated strings (resident

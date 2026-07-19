@@ -230,7 +230,7 @@
    "old_hex": "82ea91d682a63a25640a0000000091e097f195cf8d5889e696ca82a982e794b282af82e90a00914991f0834c83838393835a838b0a0089ba89e696ca8d58905682500a00000089ba89e696ca8d58905682510a0000004d656e755f5461697265747375282920456e642e0a000000443400002f4434008ba492ca89ba81468374838a815b836f8367838b0a0000008ba492ca89ba81468df593478145894692880a008ba492ca89ba81468df593478145926e8fe30a008ba492ca89ba8146814881488148814881480a008ba492ca89ba81468e9f82cc835a836283568387",
    "new_hex": "688a0730c710e96d134a914221d1a988072903d10e2f19db0d271ae0152906d1e988102901d0112910d10a2711e011290cd012290ad0012908d00329ead00b2904d0082905d1e988052902db0a2f00dd0a277047c04600f0200600b52078012802d0022809d033e0607e002830d1207e01282dd1022020762ae0607e002824d1207e012824d1012000210a1c0b1c62f656fa201c1a30eaf676fe0420a076201c1a30eaf6acfe012000210a1c0b1c62f664fa207908490a78904203d00870201c96f6a7f80220207602e00249ff200870207e022800bdfc3e1b02ff000000",
    "what": "tile-copy clamp + roster auto-populate caves",
-   "why": "the row-budget clamp body (called from 0x12C4A, gated on the affinity/list contexts) plus the roster browse auto-populate body (called from 0x4A340: draws the browse template and edge-calls the inspect routine)."
+   "why": "the row-budget clamp body (called from 0x12C4A, gated on the affinity/list contexts) plus the roster browse auto-populate body (called from 0x4A340: draws the browse template and edge-calls the inspect routine). This span also consumes JP's still-live D4 and /D4 HP formats at 0x1B3E90/94; data/patches/raw_regions.json preserves them in the retired in-image atlas tail and utils/arm9_layout.py repoints all four callers at 0x23640/48 and 0x240A8/B0."
   },
   {
    "file_offset": "0x1B3F0C",

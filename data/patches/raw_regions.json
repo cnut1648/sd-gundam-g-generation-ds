@@ -1,4 +1,12 @@
 {
  "_about": "Residual byte regions not covered by the semantic tables (annotated by neighbourhood). The builder writes new_hex at file_offset after asserting old_hex.",
- "entries": []
+ "entries": [
+  {
+   "file_offset": "0x12D768",
+   "old_hex": "6a2650929aa0a2a0",
+   "new_hex": "443400002f443400",
+   "what": "preserved current/max HP format strings in retired atlas tail",
+   "why": "the live 12x12 atlas is relocated to 0x023027A0, leaving the original in-image atlas retired. Its final 8 bytes are resident below BSS, outside stage/heap memory, do not overlap the two atlas code caves, and had no remaining consumer before this reservation. Four HP callers are repointed here by utils/arm9_layout.py."
+  }
+ ]
 }
