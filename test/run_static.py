@@ -623,6 +623,17 @@ STG_SETUP_BASE, STG_SETUP_STRIDE, STG_SETUP_CID = 0x1C, 0x14, 4
 STORY_SWAP_OFF, STORY_SWAP_N, STORY_SWAP_STRIDE = 0x118F58, 70, 0x1C
 STG_BUFFER_RAM = 0x0232C800
 DEVGRID_OFF, DEVGRID_END, DEVGRID_HOLE = 0x192F30, 0x194E90, (0x1945D0, 0x194850)
+# The unit resource-id table: u32[256 fams x 7] at 0x1B1FA8..0x1B3BA8 (reader
+# 0x02011E48: id = base + 7*fam, fam = (utid-1)/3+1 for utid <= 631 else
+# utid-420; value -> resource-pack word u32[0x0216BCD4 + val*4] via 0x0201F678,
+# whose wild-address ldr is THE hangar-処分/battle-load abort site).  JP-ZERO
+# rows = 予備-family sentinels (fams 204..210, 250..252) that the panel/battle
+# loaders still READ for those units — four render-fix caves parked there
+# turned cave code bytes into wild resource ids (agent B FAIL#1: utids 610-630/
+# 670-671 detail-render data abort @0x0201F67C; relocated into the dead atlas
+# 2026-07-19).  Beyond fam 255 the JP image holds dev strings (a JP-latent
+# overread zone for utids > 675, which never reach the panel).
+RES_ID_TABLE = (0x1B1FA8, 0x1B3BA8)
 # [0x19175C,0x192F30): between the BtlS_Crea table and the develop grid sit the
 # bio offset tables (rebuilt by the build) and JP data/code-ptr tables (incl.
 # the stage-script handler table @0x192C58 and the roster map) — only the bio
@@ -2959,7 +2970,11 @@ def gate_bark_map_row_liveness(rep, ctx):
        tables (the roster map — an input to rule 1 — lives here).
     4. develop grid [0x192F30,0x194E90): byte-exact JP outside the id-hole
        interior [0x1945D0,0x194850), and no master record's +0x04 dev-row id
-       may point into the hole (re-derived from the candidate image)."""
+       may point into the hole (re-derived from the candidate image).
+    5. unit resource-id table [0x1B1FA8,0x1B3BA8): byte-exact JP — its JP-zero
+       予備-family rows are LIVE sentinels read by the hangar detail panel and
+       the battle loader (agent B FAIL#1: caves parked there made utids
+       610-630/670-671 hard-abort on the 処分 detail render)."""
     aj, az = ctx["jp_a9"], ctx["a9"]
     problems = []
     D = _deployable_cids(ctx)
@@ -3009,6 +3024,14 @@ def gate_bark_map_row_liveness(rep, ctx):
     if hole_rows:
         problems.append(f"master +0x04 dev-row id(s) {hole_rows} point into the "
                         f"id-hole 181..200 — the hole is no longer dead")
+    # rule 5: unit resource-id table byte-exact (JP-zero rows are live sentinels)
+    lo, hi = RES_ID_TABLE
+    n = sum(1 for i in range(lo, hi) if aj[i] != az[i])
+    if n:
+        first = next(i for i in range(lo, hi) if aj[i] != az[i])
+        problems.append(f"unit resource-id table [{lo:#x},{hi:#x}): {n} byte(s) "
+                        f"differ from JP (first @0x{first:X}, fam {(first-lo)//28}) "
+                        f"— 処分-detail/battle-load abort class (B FAIL#1)")
     if problems:
         rep.add("bark_map_row_liveness", False,
                 f"{len(problems)} liveness violation(s) in the structured resident band: "
@@ -3351,6 +3374,10 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("plant a string byte on a live develop-grid row (dev-UI corruption class)",
                 ["bark_map_row_liveness"],
                 lambda c: mut_a9(c, DEVGRID_OFF + 100 * 0x20 + 4, b"\xe7\xd9"))
+    expect_fail("park a cave on the unit resource-id table's 予備 sentinel rows "
+                "(the utid-613 処分-detail abort, B FAIL#1)",
+                ["bark_map_row_liveness"],
+                lambda c: mut_a9(c, RES_ID_TABLE[0] + 204 * 28, b"\x10\xb5\x04\x1c"))
 
     def mut_patch_scratch(ctx):
         import copy as _copy
