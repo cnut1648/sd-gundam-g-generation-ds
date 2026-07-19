@@ -143,6 +143,13 @@ STAGE_DESC_TITLE = 0x10          # u32 -> stage title
 STAGE_DESC_BRIEF = 0x14          # u32 -> briefing region start (RAM)
 STAGE_DESC_FILE = 0x24           # u32 -> "_STGxx.bin" ASCII file name
 BRIEF_LO, BRIEF_HI = 0x198555, 0x1A626B   # briefing (作戦内容) record region
+BRIEF_MAX_GAP = 0x800            # per-stage briefings form ONE contiguous span
+                                 # from BRIEF_LO to the last descriptor's briefing
+                                 # end (real inter-briefing gaps are < 0x200); a gap
+                                 # larger than this past the final descriptor start
+                                 # marks the story-digest / gallery cutscenes
+                                 # (『宇宙世紀0079…』 recap et al.) that render like
+                                 # briefings but own no descriptor — not briefings.
 EVENT_TEXT_LO, EVENT_TEXT_HI = 0x198555, 0x1AD536   # full inline story-text region
                                  # (briefings + route/event blocks; the committed
                                  # event_text edits span 0x1985A4..0x1AD516)

@@ -561,6 +561,7 @@ CAVE_SCRATCH_FORBIDDEN = (0x0232C800, 0x023489AC)
 # effect, unit just gone" bug.
 RESIDENT_LIVE_ZERO_BANDS = (
     (0x190870, 0x190C00, "battle knock-anim geometry / fn-ptr tables"),
+    (0x190C14, 0x191400, "BtlS_Crea attract-demo deployment table"),
 )
 RESIDENT_CAVES_BASE = 0x186000       # resident_caves.json offsets are relative to this
 
