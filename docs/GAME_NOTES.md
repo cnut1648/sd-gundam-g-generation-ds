@@ -90,16 +90,6 @@ in encyclopedia data files — edit the pool the screen actually reads.
   the same battle on the unmodified JP ROM (same save, same volley): identical
   floating-bar frames at the identical moment.  MEPE/分身-class specials (F91, God
   Gundam 明镜止水) are additionally *designed* vanish/afterimage effects.
-* **Map-skill kills remove the unit outright (owner savestate forensics, 2026-07-19):**
-  a map-AoE ID skill (e.g. ν高达's) that lands a lethal hit deletes the victim from
-  the map AND from 部隊一覧 after a brief explosion + knock-streak — easy to read as
-  a "vanish" when the unit entered the fight already damaged (the investigated case:
-  高达X at 2267/3700 HP; the identical replay where the skill MISSED left it alive at
-  exactly 2267).  Combat math is byte-identical to JP in every shipped build (efftab
-  0xEBC25, ID-command records, ability parameters, master stats except the documented
-  Eternal capacity byte), so kill odds cannot diverge from the JP cartridge.  The true
-  render-bug signature — should it ever appear — is a unit gone from the map while
-  still listed alive in 部隊一覧.
 * One stage resident at a time in the fixed buffer `0x0232C800` (79,872 B cap per stage).
 * The dialogue/event system is a bytecode VM (dispatcher `0x0209EBAC`; cutscene/ending
   driver with its own jump-table VM @ ctx `0x0227CD0C`). Mid-stage demos and endings are
