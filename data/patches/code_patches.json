@@ -18,7 +18,7 @@
   {
    "file_offset": "0x12FE6",
    "old_hex": "87b0041c",
-   "new_hex": "a0f107fb",
+   "new_hex": "09f1a3f9",
    "what": "management-list occluder clip trampoline",
    "why": "the shared glyph rasterizer is detoured to a cave that clips tile writes past the list-row stride for the management list background only, removing a text occluder band next to wide 12px rows."
   },
@@ -32,7 +32,7 @@
   {
    "file_offset": "0x1326E",
    "old_hex": "288b8442",
-   "new_hex": "a0f1d7f9",
+   "new_hex": "09f173f8",
    "what": "parts-caption pad-clip trampoline",
    "why": "multi-line 12px caption lines end past the 80px strip the 8px engine allocates; the cell-pad loop is stopped at the strip boundary so captions keep the original tile budget (no ghost echo right of the box)."
   },
@@ -144,7 +144,7 @@
   {
    "file_offset": "0x4A66A",
    "old_hex": "fff719fe",
-   "new_hex": "69f101f8",
+   "new_hex": "d1f09dfe",
    "what": "roster navigation portrait trampoline",
    "why": "companion detour that refreshes the portrait/detail state when the roster cursor moves, so the auto-populated panel tracks navigation."
   },
@@ -179,7 +179,7 @@
   {
    "file_offset": "0x11A2A0",
    "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090000260000980000a00000000000000000000000000000000000000000000000940000690200490200960200a80000000000000000000000000000002500002500002a00000000000000000000000000000000409500906a02904002a0400200400200900200a400002400002800002400002400002800002400002400002400002400002400002400002400002400002800002400002400002800",
-   "new_hex": "89231b01043399421fdb281c00f059f8688ac0196882034b184748011618024b184700000d320102dd3101029a29f4d16b8b9a2bf1d1ab8b8920000104308342ebdb412189010731dfe72b8b032b06d16b8b582b03d1ab8bdc2b00d105e021e0090000260000980000a0eb8b792bddd101a0015dd1e70000889c00000000000000940000690200490200960200a80000000000000000000000000000002500002500002a004b1847013b1b0200b5ab8a0333ab82f8f6d8feab8a033bab8208bc184700b504270c4b994200d1063f6133994200d1063f1f3b994200d1043f0133994200d1043f093b994200d1043ffff7ddff00bdc046c0463c100000",
+   "new_hex": "89231b01043399421fdb281c00f059f8688ac0196882034b184748011618024b184700000d320102dd3101029a29f4d16b8b9a2bf1d1ab8b8920000104308342ebdb412189010731dfe72b8b032b06d16b8b582b03d1ab8bdc2b00d105e021e0090000260000980000a0eb8b792bddd101a0015dd1e70000889c00000000000000940000690200490200960200a80000000000000000000000000000002500002500002a004b1847f1c3110200b5ab8a0333ab82f8f6d8feab8a033bab8208bc184700b504270c4b994200d1063f6133994200d1063f1f3b994200d1043f0133994200d1043f093b994200d1043ffff7ddff00bdc046c0463c100000",
    "what": "12x12-on-8x16 trampoline cave (+3px baseline anchor; slot-conditional advance)",
    "why": "code cave in the dead in-image 12x12 atlas (the live atlas is relocated to RAM): renders glyph slots >= 2196 from the relocated atlas and advances the pen 12px; called from the 8x16 blit injection at 0x131D8. The atlas call is routed through a penY wrapper (cave tail +0xAC) that draws 12x12 glyphs at ctx.penY+3 and restores penY after: renderB ink sits on rows 2..14 of the 16px line box while the 12x12 cell inks rows 0..11, so an unbiased blit floats 3px above the renderB baseline (user-visible on every trampoline list row); +3 bottom-aligns ink (11+3=14) and cannot clip (14 < 16). renderA/stage surfaces are unaffected (their 0x2013108 call at 0x1323E is not detoured). Advance-select extension (cave tail +0xC2, @0x11A362): the pen adjustment after the atlas blit is slot-conditional — narrow-paren slots 4156 '(' / 4253 ')' get -2 (net 6px with the loop's +8), Latin burst-letter slots 4222 'S' / 4223 'E' / 4214 'D' get 0 (net 8px), every other atlas slot keeps +4 (net 12px).  r7 carries the delta across the blit (callee-saved by 0x2013108's push; the jump-back target 0x201320d pops the caller's r7), so battle plates / roster / ID pages / all trampoline pools render JP-shaped narrow parens and Latin-pitch SEED letters.  renderA-direct surfaces (stage text, the 0x2BCA6 speaker plate) are untouched (their 0x2013108 call is not detoured)."
   },
@@ -219,31 +219,31 @@
    "why": "re-dispatches control type 6 and un-consumes a >= 0xE0 token high byte for the bark formatter veneer at 0x6588E."
   },
   {
-   "file_offset": "0x1B35F8",
-   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000",
+   "file_offset": "0x11C330",
+   "old_hex": "00000000000000000000000000000000650900650900a60900690a008a02000000000000",
    "new_hex": "c46d074dac4231d1448a6418e4080589ac4202d3f0bc08bc184787b0041c704700980006",
-   "what": "management-list occluder clip cave",
+   "what": "management-list occluder clip cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 処分-detail abort — into the dead in-image atlas)",
    "why": "early-returns the rasterizer write when the destination tile column exceeds the row stride, only for the management-list background context."
   },
   {
-   "file_offset": "0x1B3620",
-   "old_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "file_offset": "0x11C358",
+   "old_hex": "00000000000000000000000000502500902a00900000900000900000900000900000900000900000900000502500a02a540900a8090000090000090000090000",
    "new_hex": "02b4e86d0b49884210d1a88813280dd1e88a0949884209d30849884206d8688a482803d902bc288ba442704702bc288b8442704700e0000637010000af010000",
-   "what": "parts-caption pad-clip cave",
+   "what": "parts-caption pad-clip cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 処分-detail abort — into the dead in-image atlas)",
    "why": "stops the 8px pad-cell loop at the 80px caption strip boundary (caption compose context only); every other context falls through byte-identical."
   },
   {
-   "file_offset": "0x1B3664",
-   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c96f6fffd10bdfdc2110264d02702",
-   "what": "roster navigation cave",
+   "file_offset": "0x11C39C",
+   "old_hex": "00000900000900000900540900a80a0000502500902a00900000900000900000900000900000900000900000a0000000000000000000000000000009000009000009000009000009",
+   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c2df763ff10bdfdc2110264d02702",
+   "what": "roster navigation cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 処分-detail abort — into the dead in-image atlas)",
    "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state. Its last-cursor-row scratch byte lives at 0x0211C2FD (tail pad of the relocated clamp/populate cave, init 0xFF): the original scratch 0x0233F800 sat INSIDE the stage load buffer [0x0232C800,0x02340000) where _STG98 reaches offset 0x13000 (press-A abort class), and its interim home 0x021B3EFD was vacated when the 0x1B3E22 cave was relocated off the live 'D4'/'/D4' format strings."
   },
   {
-   "file_offset": "0x1B3B00",
-   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "file_offset": "0x11C3F0",
+   "old_hex": "00a80a00000000002400002400002400002400545525a8a62a002400002400002400002800000000000000000000000000000000000000545525a8aa2a0000000000000000000000000000000000002400249800",
    "new_hex": "b7290dd18920000104306b8b834203daab8b834200da16e042218901143110e09a2910d16b8b032b0dd1ab8b9a2b0ad1eb8b892000010430834204db412189010731024b1847024b1847c046aba21102cda21102",
-   "what": "12x12 trampoline support cave",
+   "what": "12x12 trampoline support cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 — into the dead in-image atlas)",
    "why": "overflow helpers for the 12x12-on-8x16 trampoline (special-cases a few slots and jumps back into the trampoline body)."
   },
   {
