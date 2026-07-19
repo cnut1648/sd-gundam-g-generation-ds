@@ -445,6 +445,67 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
     return out
 
 
+def extract_events(jp: GameROM, zh: GameROM) -> list[dict]:
+    """Off-guide event text: every REACHABLE, NON-briefing inline story block
+    in the arm9 event region (0x198555..0x1AD536).  These are the route-ending
+    speeches, the 特殊/特别演习 unlock text and the ending-cutscene climax
+    dialogue — they render in-game (owner saves prove it) but are not
+    briefing-flagged, so nothing surfaced them for review.  That blind spot is
+    exactly how term drift slipped in on this surface alone (隆德·贝尔→罗德·
+    贝尔, 加洛德→卡罗德, 特殊演習→特别演习) while the stage/briefing copies of
+    the same lines stayed correct.
+
+    ZH is decoded the way the GAME consumes each block, chosen DETERMINISTICALLY
+    (not by a decode-richness guess — that mis-fired on short inline lines whose
+    bytes coincidentally formed a pool-B word): a relocated record opens ``0x15``
+    then a 4-byte pool-B pointer, while an inline record opens with 2-byte ZH/JP
+    tokens (high byte 0xE0..0xEF) that can never form a 0x023Exxxx word — so the
+    opener alone splits them.  Pointer records are followed to their
+    briefing-bank blobs; inline records decode in place (this also surfaces
+    still-JP blocks verbatim, so untranslated event text stays visible)."""
+    lo, hi = _pool_b_bounds(zh)
+
+    def is_ptr_script(b: bytes) -> bool:
+        i = 1 if b[:1] == b"\x15" else 0
+        return i + 4 <= len(b) and lo <= struct.unpack_from("<I", b, i)[0] < hi
+
+    _PUNCT = "\u3000 \n\t\u3001\u3002\uff01\uff1f\u2026\u2025\u30fb\u00b7\u300c\u300d\u300e\u300f\uff08\uff09()"
+
+    def cjk(s: str) -> int:
+        return sum('\u4e00' <= c <= '\u9fff' for c in s)
+
+    def kana(s: str) -> bool:
+        return any('\u3040' <= c <= '\u30ff' for c in s)
+
+    def core(s: str) -> str:                 # real text left after page/punctuation
+        return "".join(c for c in s.replace("\u25bc", "") if c not in _PUNCT)
+
+    events = []
+    for e in W.event_text_blocks(jp):
+        if e.get("briefing") or e.get("reachable") is False:
+            continue
+        off, ln = int(e["off"], 16), e["len"]
+        jb = _read_span(jp, off, ln)
+        zblk = _read_span(zh, off, ln)
+        if is_ptr_script(zblk):                       # relocated -> follow pool-B pointers
+            zsrc = b"\x00".join(_brief_zh_blobs(zh, zblk, lo, hi))
+        else:                                         # translated (or still-JP) in place
+            zsrc = zblk
+        zt = decode_text(zh, zsrc, "stage", zh.expand, True) if zsrc else ""
+        # keep real reviewable text: translated CJK lines, or still-JP dialogue
+        # (kana + real length) — drop VM-noise stubs (the repeated 2-char お、).
+        if not (cjk(zt) >= 2 or (kana(zt) and len(core(zt)) >= 4)):
+            continue
+        events.append({
+            "off": e["off"],
+            "jt": decode_text(jp, jb, "stage", jp.expand, True),
+            "jb": pack_glyphs(jp, jb, "stage", jp.expand, True),
+            "zt": zt,
+            "zb": pack_glyphs(zh, zsrc, "stage", zh.expand, True) if zsrc else "",
+        })
+    return events
+
+
 def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
     """Extract every reviewed surface from BOTH ROMs and pack for the browser.
 
@@ -815,6 +876,8 @@ def build_gamedata(jp: GameROM, zh: GameROM) -> dict:
 
     # ---- briefings (作战内容), per stage descriptor, into the Route tab -------
     data["briefings"] = extract_briefings_by_stage(jp, zh)
+    # ---- off-guide event text (route endings / 特别演习 / cutscene climax) ----
+    data["events"] = extract_events(jp, zh)
     # ---- encyclopedia (資料館 library + hangar bios / part names) ------------
     data["library"] = extract_bios(jp, zh)
     return data
@@ -1297,6 +1360,12 @@ function addShared(){
   c.body._fill=function(){GG.shared.forEach(function(ln){c.body.appendChild(field(ln,0,2,null,null,true));});};
   var wrap=document.createElement('div');wrap.className='ggwrap';wrap.appendChild(c.wrap);host.appendChild(wrap);
 }
+function addEvents(){
+  if(!GG.events||!GG.events.length)return;var host=$('#view-stages');if(!host)return;
+  var c=collBlock('\u5267\u60c5\u4e8b\u4ef6 / \u7ed3\u5c40 / \u5267\u60c5\u56de\u987e\uff08\u6e38\u620f\u5185\u4e8b\u4ef6\u6587\u672c \u00b7 \u542b\u7ed3\u5c40\u4e0e\u300e\u5b87\u5b99\u4e16\u7eaa0079\u2026\u300f\u53f2\u8bd7\u56de\u987e \u00b7 \u672a\u968f\u5173\u5361\u7b80\u62a5\u663e\u793a\uff09',GG.events.length+' \u6bb5');
+  c.body._fill=function(){GG.events.forEach(function(ln){c.body.appendChild(field(ln,0,2,null,null,true));});};
+  var wrap=document.createElement('div');wrap.className='ggwrap';wrap.appendChild(c.wrap);host.appendChild(wrap);
+}
 function addExtras(){
   if(!extraStages.length)return;var host=$('#view-stages');if(!host)return;
   var sec=document.createElement('div');sec.className='ggwrap';
@@ -1312,7 +1381,7 @@ function addToggle(){
 }
 function start(){window.GG=GG;indexStages();injectSpriteCSS();
   // Build the whole UI up front (tabs appear instantly).
-  initTabs();weaveStage();addShared();addExtras();addToggle();
+  initTabs();weaveStage();addShared();addEvents();addExtras();addToggle();
   // Hook the base page's showView so each tab switch deterministically builds its
   // grids (fixes "tabs sometimes don't load until refresh").
   var _sv=window.showView;
