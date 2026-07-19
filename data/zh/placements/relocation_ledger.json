@@ -1045,8 +1045,8 @@
    ],
    "text": "绝不能败！",
    "pool": "data/arenas/resident_caves.json",
-   "offset": "0xE5B4",
-   "ram": "0x21945B4",
+   "offset": "0xCC4",
+   "ram": "0x2186CC4",
    "bytes": 10,
    "reserved": 11,
    "vacated": [
@@ -1057,7 +1057,8 @@
      "span": 9,
      "ram": "0x218C538"
     }
-   ]
+   ],
+   "note": "MOVED 2026-07-19: original span = LIVE develop/family grid row 180 (Qubeley lineage utids 175-177; develop-UI readers consume cols 12/13/14) — fleet errata R8/R9; new home = free tail of a pure-欠番 bark-rank row core (same C-span class as the detail records)"
   },
   {
    "date": "2026-07-12",
@@ -1067,8 +1068,8 @@
    ],
    "text": "宇宙归市民",
    "pool": "data/arenas/resident_caves.json",
-   "offset": "0xE5BF",
-   "ram": "0x21945BF",
+   "offset": "0xF48",
+   "ram": "0x2186F48",
    "bytes": 10,
    "reserved": 11,
    "vacated": [
@@ -1080,7 +1081,8 @@
      "ram": "0x218C558",
      "reused_by": "chunk_204.json:[1051]"
     }
-   ]
+   ],
+   "note": "MOVED 2026-07-19: original span = LIVE develop/family grid row 180 (Qubeley lineage utids 175-177; develop-UI readers consume cols 12/13/14) — fleet errata R8/R9; new home = free tail of a pure-欠番 bark-rank row core (same C-span class as the detail records)"
   },
   {
    "date": "2026-07-12",
@@ -1088,10 +1090,10 @@
    "ids": [
     907
    ],
-   "text": "多活一阵子",
+   "text": "多活几年",
    "pool": "data/arenas/resident_caves.json",
-   "offset": "0xE5CA",
-   "ram": "0x21945CA",
+   "offset": "0x13F4",
+   "ram": "0x21873F4",
    "bytes": 10,
    "reserved": 11,
    "vacated": [
@@ -1101,7 +1103,8 @@
      "span": 9,
      "ram": "0x20B8854"
     }
-   ]
+   ],
+   "note": "MOVED 2026-07-19: original span = LIVE develop/family grid row 180 (Qubeley lineage utids 175-177; develop-UI readers consume cols 12/13/14) — fleet errata R8/R9; new home = free tail of a pure-欠番 bark-rank row core (same C-span class as the detail records)"
   },
   {
    "date": "2026-07-12",
@@ -1637,7 +1640,8 @@
    "ram": "0x21946DD",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '胡索·艾{SLOT:2764}' left in place"
+   "vacated": "master-name '胡索·艾{SLOT:2764}' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1649,7 +1653,8 @@
    "ram": "0x21946E8",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '艾{SLOT:2915}·迪拉兹' left in place"
+   "vacated": "master-name '艾{SLOT:2915}·迪拉兹' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1661,7 +1666,8 @@
    "ram": "0x21946F5",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '{SLOT:2204}利特·梅萨' left in place"
+   "vacated": "master-name '{SLOT:2204}利特·梅萨' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1673,7 +1679,8 @@
    "ram": "0x2194702",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place"
+   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1685,7 +1692,8 @@
    "ram": "0x219470F",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place"
+   "vacated": "master-name '{SLOT:2204}多·亚西塔' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1697,7 +1705,8 @@
    "ram": "0x219471C",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '{SLOT:2204}多（强化）' left in place"
+   "vacated": "master-name '{SLOT:2204}多（强化）' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1709,7 +1718,8 @@
    "ram": "0x2194729",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name '多蒙(明镜止水)' left in place"
+   "vacated": "master-name '多蒙(明镜止水)' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1721,7 +1731,8 @@
    "ram": "0x219473A",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '{SLOT:2558}·村雨' left in place"
+   "vacated": "master-name '{SLOT:2558}·村雨' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1733,7 +1744,8 @@
    "ram": "0x2194743",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '{SLOT:2558}·村雨' left in place"
+   "vacated": "master-name '{SLOT:2558}·村雨' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1745,7 +1757,8 @@
    "ram": "0x219474C",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place"
+   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1757,7 +1770,8 @@
    "ram": "0x2194759",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place"
+   "vacated": "master-name '蕾{SLOT:2286}亚·朗德' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1769,7 +1783,8 @@
    "ram": "0x2194766",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name '真（SEED）' left in place"
+   "vacated": "master-name '真（SEED）' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1781,7 +1796,8 @@
    "ram": "0x2194775",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '杜卡奇克隆' left in place"
+   "vacated": "master-name '杜卡奇克隆' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1793,7 +1809,8 @@
    "ram": "0x2194780",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name '格雷米·普露2' left in place"
+   "vacated": "master-name '格雷米·普露2' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1805,7 +1822,8 @@
    "ram": "0x219478F",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '巴斯克·奥姆' left in place"
+   "vacated": "master-name '巴斯克·奥姆' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1817,7 +1835,8 @@
    "ram": "0x219479C",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '贝纳黛特' left in place"
+   "vacated": "master-name '贝纳黛特' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1841,7 +1860,8 @@
    "ram": "0x21947A7",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '雷吉恩' left in place"
+   "vacated": "master-name '雷吉恩' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1903,7 +1923,8 @@
    "ram": "0x21947E5",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '吉恩老兵' left in place"
+   "vacated": "master-name '吉恩老兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1915,7 +1936,8 @@
    "ram": "0x21947EE",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '吉恩海兵' left in place"
+   "vacated": "master-name '吉恩海兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1927,7 +1949,8 @@
    "ram": "0x21947F7",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '提坦斯支援兵' left in place"
+   "vacated": "master-name '提坦斯支援兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1939,7 +1962,8 @@
    "ram": "0x2194804",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '新吉恩士官' left in place"
+   "vacated": "master-name '新吉恩士官' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1951,7 +1975,8 @@
    "ram": "0x219480F",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name '新吉恩高级士官' left in place"
+   "vacated": "master-name '新吉恩高级士官' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1963,7 +1988,8 @@
    "ram": "0x219481E",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '新吉恩兵' left in place"
+   "vacated": "master-name '新吉恩兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1975,7 +2001,8 @@
    "ram": "0x2194827",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '新吉恩骑士' left in place"
+   "vacated": "master-name '新吉恩骑士' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1987,7 +2014,8 @@
    "ram": "0x2194832",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '新吉恩强化兵' left in place"
+   "vacated": "master-name '新吉恩强化兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -1999,7 +2027,8 @@
    "ram": "0x219483F",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '特列斯派兵' left in place"
+   "vacated": "master-name '特列斯派兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; bytes not occupied by any current entry, span is ledger-vacated space again (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2299,7 +2328,8 @@
    "ram": "0x219054E",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '吉恩老兵' left in place"
+   "vacated": "master-name '吉恩老兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2311,7 +2341,8 @@
    "ram": "0x2190557",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '新吉恩士官' left in place"
+   "vacated": "master-name '新吉恩士官' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2323,7 +2354,8 @@
    "ram": "0x2190562",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '新吉恩兵' left in place"
+   "vacated": "master-name '新吉恩兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2335,7 +2367,8 @@
    "ram": "0x219056B",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '新吉恩强化兵' left in place"
+   "vacated": "master-name '新吉恩强化兵' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2347,7 +2380,8 @@
    "ram": "0x2190578",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '吉恩高官' left in place"
+   "vacated": "master-name '吉恩高官' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2359,7 +2393,8 @@
    "ram": "0x2190581",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '迪基姆·巴顿' left in place"
+   "vacated": "master-name '迪基姆·巴顿' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2371,7 +2406,8 @@
    "ram": "0x219058E",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '莎克蒂·卡琳' left in place"
+   "vacated": "master-name '莎克蒂·卡琳' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2383,7 +2419,8 @@
    "ram": "0x219059B",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '格雷米高官' left in place"
+   "vacated": "master-name '格雷米高官' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2395,7 +2432,8 @@
    "ram": "0x21905A8",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name '克罗特' left in place"
+   "vacated": "master-name '克罗特' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2407,7 +2445,8 @@
    "ram": "0x21905B7",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name '特里尔（增压）' left in place"
+   "vacated": "master-name '特里尔（增压）' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2419,7 +2458,8 @@
    "ram": "0x21905C8",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '新阿伽玛' left in place"
+   "vacated": "master-name '新阿伽玛' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2431,7 +2471,8 @@
    "ram": "0x21905D3",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '雅克特多加' left in place"
+   "vacated": "master-name '雅克特多加' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2443,7 +2484,8 @@
    "ram": "0x21905E0",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name 'ゲ翼型强袭高达' left in place"
+   "vacated": "master-name 'ゲ翼型强袭高达' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2455,7 +2497,8 @@
    "ram": "0x21905EF",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name 'ゲ翼型强袭／下降' left in place"
+   "vacated": "master-name 'ゲ翼型强袭／下降' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2467,7 +2510,8 @@
    "ram": "0x2190600",
    "bytes": 14,
    "reserved": 15,
-   "vacated": "master-name '{SLOT:2541}盾高达／下降' left in place"
+   "vacated": "master-name '{SLOT:2541}盾高达／下降' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2479,7 +2523,8 @@
    "ram": "0x219060F",
    "bytes": 8,
    "reserved": 9,
-   "vacated": "master-name '灾难高达' left in place"
+   "vacated": "master-name '灾难高达' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2491,7 +2536,8 @@
    "ram": "0x2190618",
    "bytes": 12,
    "reserved": 13,
-   "vacated": "master-name '高扎古改' left in place"
+   "vacated": "master-name '高扎古改' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2503,7 +2549,8 @@
    "ram": "0x2190625",
    "bytes": 10,
    "reserved": 11,
-   "vacated": "master-name '核心推进机' left in place"
+   "vacated": "master-name '核心推进机' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2515,7 +2562,8 @@
    "ram": "0x2190630",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name 'MC高达（破坏）' left in place"
+   "vacated": "master-name 'MC高达（破坏）' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2527,7 +2575,8 @@
    "ram": "0x2190641",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name '赛克艾恩／重装1' left in place"
+   "vacated": "master-name '赛克艾恩／重装1' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2539,7 +2588,8 @@
    "ram": "0x2190652",
    "bytes": 16,
    "reserved": 17,
-   "vacated": "master-name '赛克艾恩／重装2' left in place"
+   "vacated": "master-name '赛克艾恩／重装2' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2551,7 +2601,8 @@
    "ram": "0x2190663",
    "bytes": 22,
    "reserved": 23,
-   "vacated": "master-name '卡{SLOT:2222}尼／普露兹机' left in place"
+   "vacated": "master-name '卡{SLOT:2222}尼／普露兹机' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2563,7 +2614,8 @@
    "ram": "0x219067A",
    "bytes": 20,
    "reserved": 21,
-   "vacated": "master-name '卡{SLOT:2222}尼／普露机' left in place"
+   "vacated": "master-name '卡{SLOT:2222}尼／普露机' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
@@ -2575,7 +2627,8 @@
    "ram": "0x219068F",
    "bytes": 18,
    "reserved": 19,
-   "vacated": "master-name '蕾兹专用基拉多加' left in place"
+   "vacated": "master-name '蕾兹专用基拉多加' left in place",
+   "note": "RETIRED 2026-07-19: superseded allocation — string re-homed by a later pass without updating this row; its old bytes are since RE-OCCUPIED by current resident_caves entries (not free) (fleet errata R9-6e/R10-G5)"
   },
   {
    "date": "2026-07-12",
