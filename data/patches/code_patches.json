@@ -149,6 +149,20 @@
    "why": "companion detour that refreshes the portrait/detail state when the roster cursor moves, so the auto-populated panel tracks navigation."
   },
   {
+   "file_offset": "0x5487E",
+   "old_hex": "0a21",
+   "new_hex": "0b21",
+   "what": "编成 detail-plate name render width 10 -> 11 tiles",
+   "why": "the pilot-name row of the 编成/一览 detail plate is OBJ text: the redraw callback renders the char-DB name via 0x2014470(mode 1, width r1 in 8px tiles, tile base 0x83, pal 15).  The JP design width is 10 tiles = 80px (the JP max name is exactly 80px), which mid-glyph-clips 7-cell (84px) translated names (艾帕·西纳普斯 lost 斯's right half).  11 tiles = 88px fits every <=84px name.  Must match the widget create width at 0x54BE0 (same value feeds the scratch stride and the commit chunker; a mismatch interleaves the tile columns)."
+  },
+  {
+   "file_offset": "0x54BE0",
+   "old_hex": "0a22",
+   "new_hex": "0b22",
+   "what": "编成 detail-plate name widget width 10 -> 11 tiles",
+   "why": "companion of 0x5487E: the page-open widget create (0x2014358: width r2, tile 0x83, x=64 y=8) allocates the OBJ sprite arrangement and tile block for the plate name row.  Width 11 makes the arranger emit 32+32+16+8px sprites per half-row (x=64..152) and the commit chunker copy 4+4+2+1 tiles into OBJ tiles 0x83..0x98 — 0x97/0x98 verified free on every OAM state of this page (the next allocation starts at 0x0C8-band and the portrait stops at 0x52).  Proven live: 艾帕·西纳普斯 renders complete, frame diff vs the 80px build is exactly the 斯-completion pixels."
+  },
+  {
    "file_offset": "0x6588E",
    "old_hex": "062800d0",
    "new_hex": "2af1c1fb",
@@ -164,10 +178,10 @@
   },
   {
    "file_offset": "0x11A2A0",
-   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090000260000980000a00000000000000000000000000000000000000000000000940000690200490200960200a80000000000000000000000000000002500002500002a00000000000000000000000000000000409500906a02904002a040020040",
-   "new_hex": "89231b01043399421fdb281c00f04ef8688a04306882034b184748011618024b184700000d320102dd3101029a29f4d16b8b9a2bf1d1ab8b8920000104308342ebdb412189010731dfe72b8b032b06d16b8b582b03d1ab8bdc2b00d105e021e0090000260000980000a0eb8b792bddd101a0015dd1e70000889c00000000000000940000690200490200960200a80000000000000000000000000000002500002500002a004b1847013b1b0200b5ab8a0333ab82f8f6d8feab8a033bab8208bc1847",
-   "what": "12x12-on-8x16 trampoline cave (+3px baseline anchor)",
-   "why": "code cave in the dead in-image 12x12 atlas (the live atlas is relocated to RAM): renders glyph slots >= 2196 from the relocated atlas and advances the pen 12px; called from the 8x16 blit injection at 0x131D8. The atlas call is routed through a penY wrapper (cave tail +0xAC) that draws 12x12 glyphs at ctx.penY+3 and restores penY after: renderB ink sits on rows 2..14 of the 16px line box while the 12x12 cell inks rows 0..11, so an unbiased blit floats 3px above the renderB baseline (user-visible on every trampoline list row); +3 bottom-aligns ink (11+3=14) and cannot clip (14 < 16). renderA/stage surfaces are unaffected (their 0x2013108 call at 0x1323E is not detoured)."
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090000260000980000a00000000000000000000000000000000000000000000000940000690200490200960200a80000000000000000000000000000002500002500002a00000000000000000000000000000000409500906a02904002a0400200400200900200a400002400002800002400002400002800002400002400002400002400002400002400002400002400002800002400002400002800",
+   "new_hex": "89231b01043399421fdb281c00f059f8688ac0196882034b184748011618024b184700000d320102dd3101029a29f4d16b8b9a2bf1d1ab8b8920000104308342ebdb412189010731dfe72b8b032b06d16b8b582b03d1ab8bdc2b00d105e021e0090000260000980000a0eb8b792bddd101a0015dd1e70000889c00000000000000940000690200490200960200a80000000000000000000000000000002500002500002a004b1847013b1b0200b5ab8a0333ab82f8f6d8feab8a033bab8208bc184700b504270c4b994200d1063f6133994200d1063f1f3b994200d1043f0133994200d1043f093b994200d1043ffff7ddff00bdc046c0463c100000",
+   "what": "12x12-on-8x16 trampoline cave (+3px baseline anchor; slot-conditional advance)",
+   "why": "code cave in the dead in-image 12x12 atlas (the live atlas is relocated to RAM): renders glyph slots >= 2196 from the relocated atlas and advances the pen 12px; called from the 8x16 blit injection at 0x131D8. The atlas call is routed through a penY wrapper (cave tail +0xAC) that draws 12x12 glyphs at ctx.penY+3 and restores penY after: renderB ink sits on rows 2..14 of the 16px line box while the 12x12 cell inks rows 0..11, so an unbiased blit floats 3px above the renderB baseline (user-visible on every trampoline list row); +3 bottom-aligns ink (11+3=14) and cannot clip (14 < 16). renderA/stage surfaces are unaffected (their 0x2013108 call at 0x1323E is not detoured). Advance-select extension (cave tail +0xC2, @0x11A362): the pen adjustment after the atlas blit is slot-conditional — narrow-paren slots 4156 '(' / 4253 ')' get -2 (net 6px with the loop's +8), Latin burst-letter slots 4222 'S' / 4223 'E' / 4214 'D' get 0 (net 8px), every other atlas slot keeps +4 (net 12px).  r7 carries the delta across the blit (callee-saved by 0x2013108's push; the jump-back target 0x201320d pops the caller's r7), so battle plates / roster / ID pages / all trampoline pools render JP-shaped narrow parens and Latin-pitch SEED letters.  renderA-direct surfaces (stage text, the 0x2BCA6 speaker plate) are untouched (their 0x2013108 call is not detoured)."
   },
   {
    "file_offset": "0x11C1FC",
