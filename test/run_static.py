@@ -540,12 +540,11 @@ SPEAKER_PLATE_CELLS = 7          # dialogue speaker nameplate field (7 glyph cel
 # burst-variant name to <=84px: 阿斯兰(SEED)=80, 多蒙(明镜止水)=84, 基拉(SEED)=68.
 PILOT_NAME_BUDGET_PX = 84
 # OWNER RULING 2026-07-18 (F9) kept the full JP-faithful burst names; the
-# 2026-07-19 advance fixes (6px parens / 8px letters) shrank every ratchet
-# entry to <= PILOT_NAME_BUDGET_PX except cid 176 (希罗·尤尔(零式) = 8 hanzi +
-# 2 narrow parens = 96px).  Each entry is a WIDTH RATCHET (may never grow).
-PILOT_WIDTH_ALLOW = {
-    176: 96,
-}
+# 2026-07-19 advance fixes (6px parens / 8px letters) + the cid176 rename
+# (希罗·尤尔(零式) -> 希罗(零式), 60px) shrank every former ratchet entry to
+# <= PILOT_NAME_BUDGET_PX, so the per-record allow-list is EMPTY.  Add entries
+# back only with an owner ruling; each is a WIDTH RATCHET (may never grow).
+PILOT_WIDTH_ALLOW = {}
 # Runtime-heap windows inside the relocated data bank: a display-string pointer that
 # lands here renders live heap garbage on fresh boot (proven by RAM captures).
 # One contiguous window: the stage load buffer reaches 0x0233FBF7 (largest _STG)
