@@ -496,7 +496,12 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
     """All inline story-text blocks in the arm9 event region: ``0x15 <payload>
     00 00``, token-aware.  Briefing blocks (text-only blocks inside the
     briefing sub-region) are flagged and attributed to the descriptor whose
-    +0x14 start is the greatest one <= the block offset."""
+    +0x14 start is the greatest one <= the block offset.  Per-stage briefings
+    form ONE contiguous span anchored at the descriptor brief-offsets; blocks
+    after a large gap past the FINAL descriptor start are the story-digest /
+    gallery cutscenes (they render like briefings but own no descriptor), so
+    they stay plain reachable event blocks — not briefings (else the last
+    descriptor, SP7S, swallows the whole trailing digest — 『宇宙世紀0079…』)."""
     a = rom.arm9
     by_start: dict[int, list[int]] = {}
     for k in range(L.STAGE_DESC_N):
@@ -504,6 +509,7 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
         if L.BRIEF_LO <= so < L.BRIEF_HI:
             by_start.setdefault(so, []).append(k)
     start_list = sorted(by_start)
+    last_start = start_list[-1] if start_list else L.BRIEF_HI
 
     def descs_of(off: int) -> list[int]:
         """ALL descriptors owning the greatest briefing start <= off — several
@@ -526,6 +532,8 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
 
     out = []
     i = L.EVENT_TEXT_LO
+    run_end = None            # end of the last per-stage briefing block seen
+    briefings_done = False    # latched once the digest gap past last_start is crossed
     while i < L.EVENT_TEXT_HI - 1:
         if a[i] != 0x15:
             i += 1
@@ -546,11 +554,20 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
             for s, _ in glyph_stream(rom, payload, "stage"))
         is_brief = (not spurious and L.BRIEF_LO <= i < L.BRIEF_HI
                     and glyph_count(rom, payload, "stage") >= 3)
+        # per-stage briefings are one contiguous span; once we are past the final
+        # descriptor start and hit a gap wider than any real inter-briefing gap,
+        # the rest of the region is story-digest cutscenes, not briefings.
+        if (is_brief and not briefings_done and run_end is not None
+                and i > last_start and i - run_end > L.BRIEF_MAX_GAP):
+            briefings_done = True
+        if briefings_done:
+            is_brief = False
         entry = {"off": _hex(i), "len": t + 2 - i,
                  "text": decode_text(rom, a[i:t + 2], "stage", rom.expand, True)}
         if spurious:
             entry["reachable"] = False
         if is_brief:
+            run_end = t + 2
             entry["briefing"] = True
             ks = descs_of(i)
             if ks:
