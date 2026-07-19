@@ -87,12 +87,12 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 3deb4ef4bd49dd1c5ab3a46739a8afa55b62e2c7  (MATCHES the shipped translation)
+[build] final ROM sha1 2da1cf2dd12d4f59e135b0d9fb0418df3dd24e56  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,359,400 bytes)
 ```
 
 追加 `--pad32m 路径` 可同时输出补齐到 32 MiB 的镜像（部分烧录卡要求 2 的幂
-大小；sha1 `645ba0dc7a6b1fe2b67d16d34eca24721403f6e4`）。
+大小；sha1 `51ebe7ee25e4fc8c5231f56c9d6b61d318e94eba`）。
 
 输入必须是 sha1 为 `12443b91297a57bcd2ace8da989c26ae635a79fd`（33,554,432
 字节）的日版卡带镜像——构建会校验它以及 `data/manifest.json` 中记录的每个
@@ -199,8 +199,8 @@ python3 -m venv .venv
 
 ### 译文审校页签（由游戏本体反解生成）
 
-`攻略.html` 另含 **ID/名台词 · 机体/武器 · 作战简报** 三个页签，以及在「关卡」
-页签每关追加的**剧情对话**——这些内容并非人工撰写，而是由
+`攻略.html` 另含 **ID/名台词 · 机体/武器 · 资料库 · 剧情/结局** 等页签，以及在「关卡」
+页签每关追加的**作战简报**与**剧情对话**——这些内容并非人工撰写，而是由
 `build/build_guide.py` 从 **游戏 ROM 本体** 直接反解、并按游戏的两套字体渲染管线
 （12×12 图集 renderA / 8×16 界面字体 renderB）**逐字素还原**，日文原文与中文实机
 渲染并列，用于**离线核对翻译质量**（能直接暴露编码/串字问题，而非复述我们的源
