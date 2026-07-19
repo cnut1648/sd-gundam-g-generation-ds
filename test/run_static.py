@@ -29,6 +29,7 @@ in-game failure the gate protects against.
   stage_script_integrity      the press-A / mid-stage event freezes (dialogue VM desync)
   inline_dialogue_blocks      overrun of code-embedded dialogue blocks (cutscene abort)
   event_script_pointers       the ending/cutscene black screen (clobbered jump pointer)
+  stage_operand_relocation    the replay-branch soft-lock from a stale in-edit fork operand
   battle_voice_structure      in-combat crash/garble from broken bark record framing
   bark_framing                the garbled-bark class (stray byte in a sub-line gap)
   untranslated_dialogue       Japanese story dialogue shipping in a "translated" build
@@ -1236,6 +1237,190 @@ def gate_event_script_pointers(rep, ctx):
     else:
         rep.add("event_script_pointers", True,
                 "every JP-valid inline event jump pointer still resolves to valid RAM")
+
+
+# ---- stage operand relocation (the _STG20A replay soft-lock class) -----------
+def _stage_lexical_payload(d: bytes) -> bytearray:
+    """1 for every byte inside a LEXICAL `0x15 .. 00 00` payload (builder-
+    faithful: every 0x15 opens a block, no glyph requirement) — mirrors
+    utils/stage_text.payload_mask so the gate scans the same window universe
+    the builder relocates."""
+    mask = bytearray(len(d))
+    i, n = 0, len(d)
+    while i < n - 1:
+        if d[i] == 0x15:
+            t = token_term(d, i + 1)
+            if t < 0:
+                i += 1
+                continue
+            for k in range(i + 1, min(t, n)):
+                mask[k] = 1
+            i = t + 2
+        else:
+            i += 1
+    return mask
+
+
+def _stage_ptr_windows(d: bytes, payload: bytearray) -> list:
+    """Builder-faithful genuine-pointer scan (mirrors
+    utils/stage_text.pointer_offsets with no exclude mask): 4-byte LE values
+    into [STG_BASE, STG_BASE+len), preceding byte < 0xE0, priority
+    13/16 > 02 > rest (payload-masked), chosen non-overlapping."""
+    end = STG_BASE + len(d)
+    candidates = []
+    hi = struct.pack("<I", STG_BASE)[3:4]      # 0x02 — fast prefilter on byte 3
+    pos = d.find(hi, 4)
+    while pos != -1:
+        o = pos - 3
+        if 1 <= o < len(d) - 3:
+            v = struct.unpack_from("<I", d, o)[0]
+            if STG_BASE <= v < end and d[o - 1] < 0xE0:
+                prev = d[o - 1]
+                pri = 0 if prev in (0x13, 0x16) else (1 if prev == 0x02 else 2)
+                if not (pri == 2 and (payload[o] or payload[o + 3])):
+                    candidates.append((pri, o))
+        pos = d.find(hi, pos + 1)
+    candidates.sort()
+    occupied = bytearray(len(d))
+    taken = []
+    for _pri, o in candidates:
+        if occupied[o] or occupied[o + 1] or occupied[o + 2] or occupied[o + 3]:
+            continue
+        taken.append(o)
+        occupied[o] = occupied[o + 1] = occupied[o + 2] = occupied[o + 3] = 1
+    return sorted(taken)
+
+
+def gate_stage_operand_relocation(rep, ctx):
+    """Event-VM fork/call operands must LAND ON the instruction they targeted
+    in the JP original — in every stage file, including operands whose bytes
+    live INSIDE a translated (replaced) region.  A replaced region that bakes
+    an operand for one historical layout goes stale the first time any earlier
+    block changes size: the operand then enters the target routine mid-stream
+    and the VM parks on a wait that never satisfies (the `_STG20A`
+    replay-branch input-deadlock: two fork operands baked at the pre-grow
+    shift landed 23 bytes short; `_STG10B` shipped the same class at -4).
+
+    Image-level check, recomputed per run: for every genuine JP pointer window
+    (the builder's own scan), the candidate's operand value must point at
+    bytes matching the JP target's 12-byte signature (relative comparison,
+    masking nested operand windows and translated ranges).  Deliberate
+    bytecode rewrites (operand dropped, value out-of-buffer in the data) are
+    exempt; a dangling in-buffer operand over a mismatched signature FAILs."""
+    stages_dir = REPO / "data" / "zh" / "stages"
+    bad, checked, exempt = [], 0, 0
+    for fn in ctx["stg_names"]:
+        dj = ctx["jp_file"](fn)
+        dz = ctx["cand_file"](fn)
+        if dj is None or dz is None:
+            continue
+        spec_path = stages_dir / (Path(fn).stem + ".json")
+        edits = []
+        if spec_path.exists():
+            spec = json.loads(spec_path.read_text(encoding="utf-8"))
+            for e in spec.get("edits", []):
+                edits.append((int(e["jp_offset"], 16), e["jp_len"],
+                              bytes.fromhex(e["zh_hex"])))
+            for ins in spec.get("inserts", []):
+                edits.append((int(ins["jp_offset"], 16), 0,
+                              bytes.fromhex(ins["hex"])))
+            edits.sort()
+        ends = [off + ln for off, ln, nb in edits]
+        cum = []
+        acc = 0
+        for off, ln, nb in edits:
+            acc += len(nb) - ln
+            cum.append(acc)
+
+        def shift(pos):
+            i = bisect.bisect_right(ends, pos)
+            return cum[i - 1] if i else 0
+
+        exclude = bytearray(len(dj))
+        owner = [None] * len(dj)
+        for k, (off, ln, _nb) in enumerate(edits):
+            for q in range(off, off + ln):
+                exclude[q] = 1
+                owner[q] = k
+        payload = _stage_lexical_payload(dj)
+        sel = _stage_ptr_windows(dj, payload)
+        selspan = bytearray(len(dj) + 4)
+        for w in sel:
+            selspan[w] = selspan[w + 1] = selspan[w + 2] = selspan[w + 3] = 1
+
+        def edit_at(q):
+            return owner[q] if q < len(dj) else None
+
+        for p in sel:
+            jpv = struct.unpack_from("<I", dj, p)[0]
+            t = jpv - STG_BASE
+            # window position + data-intent bytes in the candidate
+            touch, wb = False, bytearray()
+            for i in range(4):
+                q = p + i
+                k = edit_at(q)
+                if k is None:
+                    wb.append(dj[q])
+                else:
+                    touch = True
+                    off, ln, nb = edits[k]
+                    r = q - off
+                    if r >= len(nb):
+                        wb = None
+                        break
+                    wb.append(nb[r])
+            if wb is None:
+                continue                      # replacement shorter than window
+            k0 = edit_at(p)
+            if k0 is None:
+                bp = p + shift(p)
+            else:
+                off0 = edits[k0][0]
+                bp = off0 + shift(off0) + (p - off0)
+            if bp + 4 > len(dz):
+                bad.append((fn, p, "window past candidate end"))
+                continue
+            v = struct.unpack_from("<I", dz, bp)[0]
+            intent = struct.unpack_from("<I", bytes(wb), 0)[0]
+            if touch and not (STG_BASE <= intent < STG_BASE + STG_BUFFER):
+                exempt += 1                   # deliberate rewrite: ships verbatim
+                continue
+            if not (STG_BASE <= v < STG_BASE + len(dz)):
+                bad.append((fn, p, f"operand 0x{v:08X} out of buffer"))
+                continue
+            # signature check: candidate bytes at the operand's destination
+            # must match the JP target's stream (rel mask: translated ranges
+            # + nested operand windows; rel offsets are shift-corrected so a
+            # grown block INSIDE the signature window cannot skew them)
+            K = 12
+            good = unmasked = 0
+            for i in range(K):
+                q = t + i
+                if q >= len(dj) or exclude[q] or selspan[q]:
+                    continue
+                unmasked += 1
+                ci = v - STG_BASE + i + (shift(q) - shift(t))
+                if 0 <= ci < len(dz) and dz[ci] == dj[q]:
+                    good += 1
+            if unmasked < 4:
+                exempt += 1                   # data-owned target region
+                continue
+            checked += 1
+            if good != unmasked:
+                bad.append((fn, p,
+                            f"operand -> 0x{v:08X} misses JP target file+0x{t:X} "
+                            f"({good}/{unmasked} signature bytes)"))
+    if bad:
+        fn0, p0, why0 = bad[0]
+        rep.add("stage_operand_relocation", False,
+                f"{len(bad)} stale/dangling event operand(s) — VM enters the "
+                f"routine mid-stream = replay soft-lock class (e.g. {fn0} "
+                f"window@0x{p0:X}: {why0})")
+    else:
+        rep.add("stage_operand_relocation", True,
+                f"{checked} event operands land on their JP-signature targets "
+                f"across {len(ctx['stg_names'])} stage files ({exempt} "
+                f"data-owned/rewritten exempt)")
 
 
 def _bv_headers_terms(oj: bytes):
@@ -3153,6 +3338,7 @@ GATES = [
     gate_stage_script_integrity,
     gate_inline_dialogue_blocks,
     gate_event_script_pointers,
+    gate_stage_operand_relocation,
     gate_battle_voice_structure,
     gate_bark_framing,
     gate_untranslated_dialogue,
@@ -3292,6 +3478,19 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("strip the `00 03` stops from special-ability records",
                 ["effect_line_stops"],
                 lambda c: mut_file(c, EFFECT_ABILITY_FILE, strip_1df_stops))
+
+    def bake_stale_operand(d):
+        # re-create BUG-1 byte-exactly: the _STG20A replay-branch fork operand
+        # re-baked 0x17 short (the pre-PLANT layout) — enters the wait handler
+        # mid-stream, event VM parks forever on an empty dialogue box
+        pat = b"\x13" + struct.pack("<I", 0x0233AB67)
+        i = bytes(d).find(pat)
+        assert i != -1, "self-test anchor: _STG20A fork operand not found"
+        struct.pack_into("<I", d, i + 1, 0x0233AB67 - 0x17)
+        return bytes(d)
+    expect_fail("re-bake a _STG20A fork operand 0x17 short (the BUG-1 soft-lock)",
+                ["stage_operand_relocation"],
+                lambda c: mut_file(c, "_STG20A.bin", bake_stale_operand))
 
     def merge_bio_lines(ctx):
         # merge two adjacent full prose lines into one over-wide line (>18 cells)
