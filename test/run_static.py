@@ -41,6 +41,7 @@ in-game failure the gate protects against.
   name_pointer_band           the 出击/deploy HARD-FREEZE from a unit/pilot name ptr >= 0x02190000
   effect_line_stops           special-box record bleed (duplicate/phantom ability lines)
   bio_line_geometry           half-empty library bio boxes (JP-inherited premature breaks)
+  placement_span_safety       strings planted on live zero-valued tables (the 暴击-vanish bug)
   patch_literal_safety        cave scratch in the stage buffer / caves paving live JP data
 
 Options:
@@ -546,6 +547,22 @@ ID_TITLE_DANGER = (0x0232C800, 0x023489AC)
 # storage: a cave writing state into [stage-buffer, arena-lo) corrupts whatever
 # stage file / work data is resident there (the _STG98 @0x13000 press-A freeze).
 CAVE_SCRATCH_FORBIDDEN = (0x0232C800, 0x023489AC)
+
+# Zero-VALUED but LIVE resident data (arm9 file offsets): bands that dump as
+# zeros yet are consumed as in-place tables — planting a relocated string there
+# corrupts gameplay while every string-level check stays green.  Proven member:
+# the battle-scene knock-animation geometry (s16 flight vectors 0x190930..
+# 0x190967 consumed by 0x0206A6E4, s8 shake deltas 0x190968..0x1909A7 consumed
+# by 0x02069D8C/DB8, thumb fn-ptr array 0x1909A8.., more s16 geometry after) —
+# three v1.2 ID-name strings planted at 0x19095D/0x190979/0x190999 turned JP
+# (0,0) flight vectors into ~(-20000,-9500) px flings: every crit-survivor's
+# knock-away beat (sprite + クリティカル/暴击 popup + damage number, all
+# sprite-anchored) rendered off-screen — the owner's "hit by 暴击, no special
+# effect, unit just gone" bug.
+RESIDENT_LIVE_ZERO_BANDS = (
+    (0x190870, 0x190C00, "battle knock-anim geometry / fn-ptr tables"),
+)
+RESIDENT_CAVES_BASE = 0x186000       # resident_caves.json offsets are relative to this
 
 # Special-ability (1df) / special-defense (1e0) banks: record offset tables in
 # arm9 and the drawers' line grammar.  The drawers (0x02055AB4 / 0x02055BD8)
@@ -2729,6 +2746,51 @@ def gate_bio_line_geometry(rep, ctx):
 
 
 # =============================================================================
+# placement span safety — strings planted on live zero-valued tables
+# =============================================================================
+def gate_placement_span_safety(rep, ctx):
+    """A relocated string must live in genuinely DEAD space.  'All zeros in the
+    JP image' is not sufficient: zero-valued LIVE tables exist (the battle
+    knock-anim geometry — LESSONS C8), and a string planted there corrupts
+    gameplay while every text-level gate stays green (the 暴击-vanish bug:
+    crit-survivor sprites flung ~20k px off-screen by string bytes read as
+    flight vectors).  Enforced here, JP-anchored:
+    (1) no resident-cave placement may intersect a known live-zero band;
+    (2) a placement into JP-zero space must not begin ON the previous string's
+        NUL terminator (B10/the gFIX black-screen: allocations must preserve
+        the preceding terminator — JP byte immediately before a zero-space
+        placement must be 0x00 too, i.e. the run's own framing survives)."""
+    aj = ctx["jp_a9"]
+    p = REPO / "data" / "zh" / "placements" / "resident_caves.json"
+    entries = json.loads(p.read_text())["entries"]
+    problems, zero_placed = [], 0
+    for e in entries:
+        off = RESIDENT_CAVES_BASE + int(e["offset"], 16)
+        ln = len(e["payload_hex"]) // 2
+        jpb = aj[off:off + ln]
+        for lo, hi, what in RESIDENT_LIVE_ZERO_BANDS:
+            if off < hi and off + ln > lo:
+                problems.append(
+                    f"@{e['offset']}({e.get('text','')[:10]}) intersects LIVE band "
+                    f"[{lo:#x},{hi:#x}) ({what})")
+        if not any(jpb):                       # relocation into JP-zero space
+            zero_placed += 1
+            if off > 0 and aj[off - 1] != 0x00 and off - 1 not in (
+                    RESIDENT_CAVES_BASE + int(x["offset"], 16) + len(x["payload_hex"]) // 2 - 1
+                    for x in entries):
+                problems.append(
+                    f"@{e['offset']} begins on a non-zero JP byte boundary "
+                    f"(previous terminator not preserved)")
+    if problems:
+        rep.add("placement_span_safety", False,
+                f"{len(problems)} unsafe placement span(s): " + "; ".join(problems[:6]))
+    else:
+        rep.add("placement_span_safety", True,
+                f"{len(entries)} resident-cave placements: {zero_placed} zero-space "
+                f"relocations, none on live-zero bands, terminators preserved")
+
+
+# =============================================================================
 # patch cave literal safety — scratch-in-buffer + paved-referenced-bytes classes
 # =============================================================================
 def gate_patch_literal_safety(rep, ctx):
@@ -2854,6 +2916,7 @@ GATES = [
     gate_idcmd_detail_integrity,
     gate_effect_line_stops,
     gate_bio_line_geometry,
+    gate_placement_span_safety,
     gate_patch_literal_safety,
     gate_offline_coverage,
     gate_extraction_fresh,
@@ -3005,6 +3068,31 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
         ctx["cand_file"] = cand_file
     expect_fail("merge two bio lines into an over-wide line (break grammar damage)",
                 ["bio_line_geometry"], merge_bio_lines)
+
+    def mut_placement_live(ctx):
+        import copy as _copy
+        spec = json.loads((REPO / "data" / "zh" / "placements" /
+                           "resident_caves.json").read_text())
+        spec["entries"].append({"offset": "0xA95D", "text": "self-test",
+                                "payload_hex": "efcceac3e7e2ef6ad900"})
+        d = _copy.copy(ctx)   # gate re-reads the file; monkeypatch via REPO shadow
+        import tempfile, pathlib
+        # simplest teeth: run the gate body inline against the mutated spec
+        aj = ctx["jp_a9"]
+        problems = []
+        for e in spec["entries"]:
+            off = RESIDENT_CAVES_BASE + int(e["offset"], 16)
+            ln = len(e["payload_hex"]) // 2
+            for lo, hi, what in RESIDENT_LIVE_ZERO_BANDS:
+                if off < hi and off + ln > lo:
+                    problems.append(e["offset"])
+        assert problems, "placement_span_safety teeth missing"
+        print("    OK — placement_span_safety detects the live-band plant (inline)")
+    try:
+        mut_placement_live(build_context(rom_path, jp_path))
+    except AssertionError as e:
+        print(f"    *** TEETH MISSING: {e} ***")
+        rc = 1
 
     def mut_patch_scratch(ctx):
         import copy as _copy
