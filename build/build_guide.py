@@ -922,17 +922,26 @@ def _bio_name_map(jp: GameROM, zh: GameROM):
 
 
 def _bios_section(jp: GameROM, zh: GameROM, kind: str, names: dict) -> list[dict]:
-    """One bio section (char or unit): records from the extractor's offset-table
-    walk, bytes re-read from BOTH ROMs (in-place bank: same offsets)."""
-    recs = W.bios(jp, kind)
-    fname = recs[0]["file"] if recs else ""
-    jf = jp.file(fname) if recs else b""
-    zf = zh.file(fname) if recs else b""
+    """One bio section (char or unit): each record read from its OWN ROM's
+    offset table and paired by bio-index.  The ZH bio bank is a full rebuild
+    with grown/re-encoded prose and its own arm9-derived offset table
+    (utils.arm9_layout._apply_bio_offsets), so it is NOT an in-place bank: the
+    JP and ZH record sizes differ.  Slicing ZH bytes at JP offsets drifts every
+    record past the first, bleeding each record's tail into the next card (the
+    library-tab overlap).  Read jt/jb from the JP slice, zt/zb from the ZH
+    slice, and pair by index."""
+    jrecs = W.bios(jp, kind)
+    zrecs = {r["index"]: r for r in W.bios(zh, kind)}
+    fname = jrecs[0]["file"] if jrecs else ""
+    jf = jp.file(fname) if jrecs else b""
+    zf = zh.file(fname) if jrecs else b""
     items = []
-    for r in recs:
+    for r in jrecs:
         off, sz = int(r["off"], 16), r["size"]
         jb = _strip_line_bullets(bytes(jf[off:off + sz]))
-        zb = _strip_line_bullets(bytes(zf[off:off + sz]))
+        zr = zrecs.get(r["index"])
+        zoff, zsz = (int(zr["off"], 16), zr["size"]) if zr else (0, 0)
+        zb = _strip_line_bullets(bytes(zf[zoff:zoff + zsz])) if zr else b""
         zt = decode_text(zh, zb, "stage", zh.expand, True) if zb else ""
         core = zt.replace("\u25bc", "").strip("\u3000 \u3001\u3002\u30fb\u00b7.:\uff1a\uff0f/~\u301c\u201c\u201d'\"-<>")
         for _ph in ("\u4e88\u5099", "\u9884\u5907", "\u6b20\u756a"):   # 予備/预备/欠番
@@ -1398,7 +1407,8 @@ function addExtras(){
   sec.appendChild(g);host.appendChild(sec);
 }
 function addToggle(){
-  var b=document.createElement('button');b.id='gg-bmptoggle';b.textContent='\u9690\u85cf\u4f4d\u56fe';
+  document.body.classList.add('gg-nobmp');            // in-game bitmaps hidden by default
+  var b=document.createElement('button');b.id='gg-bmptoggle';b.textContent='\u663e\u793a\u4f4d\u56fe';
   b.addEventListener('click',function(){var off=document.body.classList.toggle('gg-nobmp');b.textContent=off?'\u663e\u793a\u4f4d\u56fe':'\u9690\u85cf\u4f4d\u56fe';});
   document.body.appendChild(b);
 }
