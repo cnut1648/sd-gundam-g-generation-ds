@@ -33,7 +33,8 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 |---|---|
 | `audio_header` | broken music/SFX — the sound-data streaming header word must stay retail |
 | `ui_text_dispatch` | the unit-info/ID screen garble — a NOP at the UI decoder branch renders every UI string as raw glyphs |
-| `nameplate_render_path` | illegible 8px speaker nameplates / stray bytes at the patched render-path site |
+| `nameplate_render_path` | illegible or vertically misaligned speaker names — the two-tile descriptor must retain the 12x12 path and +3px baseline |
+| `dialogue_nameplate_geometry` | clipped 8th/9th speaker-name glyphs, body-tile overlap, wrong-green frame extensions, or an unbalanced enlarged stack frame |
 | `ui_font_atlas_dispatch` | 8px-mush Chinese on the UI-font path — the ZH→atlas trampoline must be intact (or absent) |
 | `code_image_parity` | ANY unexplained code/data byte change vs the JP source (the combat-breakage class); allow-list + pointer-repoint rule, forbidden bands can never be allow-listed |
 | `unit_icon_bank_frozen` | corrupted Turn A / unit thumbnails — all 250 24×24 4bpp slots must remain byte-identical to JP |
