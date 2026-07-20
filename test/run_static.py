@@ -45,6 +45,8 @@ in-game failure the gate protects against.
   bio_line_geometry           half-empty library bio boxes (JP-inherited premature breaks)
   placement_span_safety       strings planted on live zero-valued tables (the 暴击-vanish bug)
   patch_literal_safety        cave scratch in the stage buffer / caves paving live JP data
+                              (audits code_patches.json AND raw_regions.json writers)
+  hp_format_liveness          blank battle HP readouts (the ISSUE-6 "D4"/"/D4" paving class)
 
 Options:
   --jp PATH             the Japanese source ROM (default: the copy in the repo root)
@@ -2630,6 +2632,8 @@ def build_context(rom_path: Path, jp_path: Path):
     speaker_spec = json.loads((GOLDEN / "speaker_name_cells.json").read_text())
     patches_spec = json.loads(
         (REPO / "data" / "patches" / "code_patches.json").read_text())
+    raw_regions_spec = json.loads(
+        (REPO / "data" / "patches" / "raw_regions.json").read_text())
     return {
         "raw": raw, "cand": cand, "jp": jp, "a9": a9, "jp_a9": jp_a9,
         "cand_file": cand_file, "jp_file": jp_file,
@@ -2641,6 +2645,7 @@ def build_context(rom_path: Path, jp_path: Path):
         "dialogue_jp_allow": set(allow_spec["allow"].keys()),
         "speaker_cells": {int(k): v for k, v in speaker_spec["cells"].items()},
         "patches_spec": patches_spec,
+        "raw_regions_spec": raw_regions_spec,
     }
 
 
@@ -3131,6 +3136,9 @@ def gate_placement_span_safety(rep, ctx):
     for e in ctx["patches_spec"]["entries"]:
         spans.append((int(e["file_offset"], 16), len(e["new_hex"]) // 2,
                       f"patch@{e['file_offset']}"))
+    for e in ctx["raw_regions_spec"]["entries"]:
+        spans.append((int(e["file_offset"], 16), len(e["new_hex"]) // 2,
+                      f"raw_region@{e['file_offset']}"))
     spans.sort()
     for (alo, aln, awhat), (blo, bln, bwhat) in zip(spans, spans[1:]):
         if blo < alo + aln:
@@ -3308,10 +3316,17 @@ def gate_patch_literal_safety(rep, ctx):
     atlas base literal repointed off the paved in-image atlas) is not a live
     reference; remaining referencers must be on the documented allowlist of
     provably-dead readers (argument pools of the compiled-out debug printf
-    0x020A3ECC)."""
+    0x020A3ECC).
+
+    Audited surfaces: data/patches/code_patches.json AND
+    data/patches/raw_regions.json — the builder applies BOTH through the same
+    put_hex path (utils/arm9_layout.py), so a raw-region write can pave live
+    bytes exactly like a cave body; historically raw_regions was applied but
+    audited by no gate (the hole PR #11's own D4-copy write would have slipped
+    through — closed 2026-07-19)."""
     aj, az = ctx["jp_a9"], ctx["a9"]
     spec = ctx["patches_spec"]
-    entries = spec["entries"]
+    entries = spec["entries"] + ctx["raw_regions_spec"]["entries"]
     problems = []
     spans = []
     for e in entries:
@@ -3378,8 +3393,68 @@ def gate_patch_literal_safety(rep, ctx):
                 f"{len(problems)} unsafe patch construction(s): " + "; ".join(problems[:6]))
     else:
         rep.add("patch_literal_safety", True,
-                f"{len(entries)} patches: no stage/work-buffer literals, no overlaps, "
-                f"every paved donor span reference-free (or allowlisted dead)")
+                f"{len(entries)} patches (incl. raw_regions): no stage/work-buffer "
+                f"literals, no overlaps, every paved donor span reference-free "
+                f"(or allowlisted dead)")
+
+
+# =============================================================================
+# HP format-string liveness — the ISSUE-6 invariant, image-level
+# =============================================================================
+HP_FORMAT_PTR_SITES = (0x23640, 0x240A8)         # -> "D4"  (unit / reaction panel)
+HP_FORMAT_PTR_SITES_SLASH = (0x23648, 0x240B0)   # -> "/D4"
+HP_FORMAT_D4_PTR = 0x021B3E90                    # JP resident address of "D4\0\0"
+HP_FORMAT_SLASH_PTR = 0x021B3E94                 # JP resident address of "/D4\0"
+HP_FORMAT_BYTES = b"D4\x00\x00/D4\x00"           # the 8 bytes at 0x1B3E90
+
+
+def gate_hp_format_liveness(rep, ctx):
+    """Every battle HP readout (focus plate cur/max, reaction panel) is
+    printf'd through the OBJ-text number-format strings "D4"/"/D4" at
+    0x1B3E90/0x1B3E94 — dev-string-band bytes a v1.1 cave once paved,
+    silently blanking every HP number (ISSUE 6; root-caused independently by
+    PR #11).  v1.2 fixed it at the source (cave relocated off the strings),
+    but the final image had no direct pin: 0x1B3E90 sits INSIDE a
+    code_image_parity allowed window (the render-fix cave band) and the four
+    pointer literals are legal repoint targets under the pointer-repoint
+    rule, so a future cave/edit/raw-region re-paving the strings — or a
+    plausible-looking repoint of a consumer literal — passed every gate.
+    Pin the invariant on the built image: the four consumer literals hold
+    the byte-exact JP addresses AND dereference to the format strings
+    (regression-test concept adopted from PR #11; its fix shape — copies at
+    0x0212D768 + repoints — is superseded and would trip this gate)."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    problems = []
+    # anchor honesty: the JP image must itself carry the expected topology
+    for off in HP_FORMAT_PTR_SITES:
+        if struct.unpack_from("<I", aj, off)[0] != HP_FORMAT_D4_PTR:
+            problems.append(f"JP anchor: word @{off:#x} != {HP_FORMAT_D4_PTR:#010x}")
+    for off in HP_FORMAT_PTR_SITES_SLASH:
+        if struct.unpack_from("<I", aj, off)[0] != HP_FORMAT_SLASH_PTR:
+            problems.append(f"JP anchor: word @{off:#x} != {HP_FORMAT_SLASH_PTR:#010x}")
+    if aj[HP_FORMAT_D4_PTR - RAM_BASE:HP_FORMAT_D4_PTR - RAM_BASE + 8] != HP_FORMAT_BYTES:
+        problems.append("JP anchor: D4 bytes missing at 0x1B3E90")
+    # the candidate invariant
+    for off in HP_FORMAT_PTR_SITES:
+        got = struct.unpack_from("<I", az, off)[0]
+        if got != HP_FORMAT_D4_PTR:
+            problems.append(f'"D4" consumer literal @{off:#x} = {got:#010x} '
+                            f"!= JP {HP_FORMAT_D4_PTR:#010x} (HP readouts follow this word)")
+    for off in HP_FORMAT_PTR_SITES_SLASH:
+        got = struct.unpack_from("<I", az, off)[0]
+        if got != HP_FORMAT_SLASH_PTR:
+            problems.append(f'"/D4" consumer literal @{off:#x} = {got:#010x} '
+                            f"!= JP {HP_FORMAT_SLASH_PTR:#010x}")
+    deref = az[HP_FORMAT_D4_PTR - RAM_BASE:HP_FORMAT_D4_PTR - RAM_BASE + 8]
+    if deref != HP_FORMAT_BYTES:
+        problems.append(f'format strings @0x1B3E90 = {deref.hex()} != "D4\\0\\0/D4\\0" '
+                        f"(paved? every focus-plate HP readout blanks)")
+    if problems:
+        rep.add("hp_format_liveness", False, "; ".join(problems[:4]))
+    else:
+        rep.add("hp_format_liveness", True,
+                'four consumer literals byte-exact JP and "D4\\0\\0/D4\\0" live at '
+                "0x1B3E90 (every battle HP readout renders)")
 
 
 GATES = [
@@ -3419,6 +3494,7 @@ GATES = [
     gate_placement_span_safety,
     gate_bark_map_row_liveness,
     gate_patch_literal_safety,
+    gate_hp_format_liveness,
     gate_offline_coverage,
     gate_extraction_fresh,
     gate_zh_reconciliation,
@@ -3665,6 +3741,25 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
         ctx["patches_spec"] = spec
     expect_fail("cave paving JP bytes that live code references (the D4 class)",
                 ["patch_literal_safety"], mut_patch_paved)
+
+    def mut_raw_region_paved(ctx):
+        import copy as _copy
+        spec = _copy.deepcopy(ctx["raw_regions_spec"])
+        spec["entries"].append({
+            "file_offset": "0x1B3E90", "old_hex": "", "new_hex": "aa" * 16,
+            "what": "self-test raw-region write over the D4 format strings (PR #11's surface)"})
+        ctx["raw_regions_spec"] = spec
+    expect_fail("raw_regions.json write paving live-referenced JP bytes "
+                "(the unaudited-writer hole)",
+                ["patch_literal_safety"], mut_raw_region_paved)
+
+    expect_fail("repoint an HP format-string consumer literal to a strings-band copy "
+                "(the PR #11 fix shape; every HP readout follows this word)",
+                ["hp_format_liveness"],
+                lambda c: mut_a9(c, 0x23640, struct.pack("<I", 0x0212D768)))
+    expect_fail("flip a byte of the \"D4\" format string inside the parity-allowed cave band",
+                ["hp_format_liveness"],
+                lambda c: mut_a9(c, 0x1B3E90, b"X"))
 
     def mut_stg(ctx, corrupt):
         real = ctx["cand_file"]
