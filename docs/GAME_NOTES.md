@@ -70,7 +70,7 @@ compressed tile text, session-number chrome).
 | **Parts names/captions** | 編成→一覧→パーツ | `b6e.bin` / `b6f.bin` + arm9 offset tables `0x16B474`/`0x16B518` | 30 real + 10 spare entries |
 | **Briefings** (作戦内容) | BackStage operations tab | arm9 briefing table `0x1985A4..0x1A626B`, ZH blobs in the high autoload pool `0x023E7000` | 1,255 records, 2-line viewer |
 | **Encyclopedia** (図鑑 bios/quotes) | collection menus | `324.bin`, `c4b.bin` (+ `31e.bin` weapon copy) | note: combat does NOT read these |
-| **Menus / stat / info labels** | 情報 panels, HUD | arm9 label arenas (`0x14AC34..0x155B14`, `0x14B1C5+`, stat table `0x3FC30`) | some are raw tiles instead (below) |
+| **Menus / stat / info labels** | 情報 panels, HUD | arm9 label arena (`0x14AC34..0x14BD84`), other pointer-backed pools, stat table `0x3FC30` | `0x14BD84+` is unit-icon graphics, not string space; some UI is raw tiles instead (below) |
 | **Tile-graphic text** (not strings) | BackStage tabs, force-HUD, terrain badges, captain badge | `3d3/3d5.bin`, `478.bin`, `48a.bin`, `388.bin` | repainted as graphics |
 | **Untranslatable by decision** | squad sub-menu 個別指示/全機… | compressed custom tile codec (expander `0x020A0A86`) | owner won't-fix |
 

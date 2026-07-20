@@ -171,8 +171,9 @@ STG_HEADER_MAX = 128
 # words holding a pointer into these bands) are enumerated by the extractor's
 # pointer-graph scan; the committed translations re-aim a subset of them.
 # ---------------------------------------------------------------------------
+POST_DICT_LABEL_BAND = (0x14AC34, 0x14BD84)  # unit-thumbnail graphics follow immediately
 JP_STRING_BANDS = (
     (0xB5000, 0xB94BC),          # in-battle name/title pool (up to the master table)
     (0xF9048, 0xFC650),          # ID-command detail pool (offtab + strings)
-    (0x14AC34, 0x155B14),        # post-dictionary label band (menu descriptors)
+    POST_DICT_LABEL_BAND,
 )
