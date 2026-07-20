@@ -219,6 +219,28 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   (oracle / run_static / build_guide JS) all documented against the cave entry;
   bank-surface oracle-vs-live stroke IoU 1.0 verified on the 阿斯兰(SEED) plate.
 
+### A15. Separate sequential char-tile banks by worst-case reservation (the 配属 third-ID corruption)
+* **Looked like:** another issue-2 row-wrap defect: unit icons were correct, while
+  ID/weapon/ability text in the lower panel showed wrong or missing glyph parts.
+* **Disproven by:** an oracle-vs-live sweep of all 24 配属 slots found 266 text
+  draws; 244 were pixel-exact.  The only systematic failures were 22 nonblank
+  third ID-command titles at `(x=24,y=160)`.  Their expected lower strokes were
+  present at only 52.8–91.5%; weapon, unit, pilot, the first two ID titles and
+  every right ability name were exact.
+* **Truth:** this is the same broad VRAM-aliasing family as issue #2, but not its
+  13-tile plot-row wrap.  The three left titles allocate sequentially from char
+  tile `0x263`; their registered worst case is 3 rows × 2 tile rows × 12 tiles,
+  ending at `0x2AA`.  The JP right-ability bank literal was `0x29F`, inside that
+  reservation.  Ability rendering then overwrote tiles `0x29F..0x2A2`, exactly
+  the later glyph bottoms of title 3.  Move the ability bank to the first safe
+  tile `0x2AB`; its own 72-tile maximum ends at `0x2F2`, below `0x300`.
+* **Guard:** `assignment_id_tile_partition` pins both JP anchor literals, the ZH
+  non-overlap boundary and the `0x300` upper limit.  The py-desmume live test uses
+  a matching cartridge save and normal title→Continue→slot-3→BackStage→编成→配属
+  flow (no savestate/RAM mutation), visits all 24 slots and compares every panel
+  draw with the independent pixel oracle.  The preserved v1.2 build fails 22
+  rows; the fixed build passes all 266.
+
 ---
 
 ## B. Data growth, pointers, alignment
