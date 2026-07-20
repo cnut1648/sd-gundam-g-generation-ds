@@ -114,6 +114,13 @@ alignment law, punctuation tail) is catalogued in `data/renderb_charset.json` �
 trampoline bytes with THAT table, never with the renderA charmap (the JSON `text`
 fields of trampoline banks are renderA NOTATION, not what the player sees).
 
+The speaker plate is a renderA-direct exception with its own Y anchor: style
+immediate `0x2BCA6` (2→3) selects the 12×12 path and `0x2BCE8` (`movs r2,#3`)
+supplies the plate-only penY=3 so the 12px ink-bottom lands on the JP 8×16 ink
+row (rows 2..14 of the plate's 16px line box). Both are required together;
+dialogue-body positioning uses different call sites and is unaffected (gate
+`nameplate_render_path` pins the pair on both images; adopted from PR #4).
+
 ## 4. Block/segment grammar (stage dialogue)
 
 A stage-file dialogue block is:

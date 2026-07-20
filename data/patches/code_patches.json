@@ -86,6 +86,13 @@
    "why": "the speaker-nameplate descriptor init only set style bit 1; setting bits 0+1 routes nameplates through the 12x12 glyph path so CJK speaker names render."
   },
   {
+   "file_offset": "0x2BCE8",
+   "old_hex": "0a1c",
+   "new_hex": "0322",
+   "what": "dialogue nameplate penY 0->3",
+   "why": "the speaker plate is renderA-direct (its 0x2013C00 call is not detoured through the penY+3 trampoline cave), so the 0x2BCA6 style fix left the plate's own penY=0 and 12px ink sat rows 0..11 where the JP 8x16 ink sat rows 2..14, touching the plate's top border; movs r2,#3 drops only this plate's baseline 3px (11+3=14 < 16, cannot clip) to the JP ink rows. Dialogue-body text uses different call sites and is untouched."
+  },
+  {
    "file_offset": "0x326A2",
    "old_hex": "032d00d1",
    "new_hex": "012d00d3",
