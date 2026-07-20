@@ -36,6 +36,7 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `nameplate_render_path` | illegible 8px speaker nameplates / stray bytes at the patched render-path site |
 | `ui_font_atlas_dispatch` | 8px-mush Chinese on the UI-font path — the ZH→atlas trampoline must be intact (or absent) |
 | `code_image_parity` | ANY unexplained code/data byte change vs the JP source (the combat-breakage class); allow-list + pointer-repoint rule, forbidden bands can never be allow-listed |
+| `unit_icon_bank_frozen` | corrupted Turn A / unit thumbnails — all 250 24×24 4bpp slots must remain byte-identical to JP |
 | `dialogue_dict_frozen` | the battle-entry freeze — the dialogue compression dictionary physically overlaps the UI font and must stay byte-identical to JP |
 | `font_relocation` | boot crash / unreadable text from a malformed font autoload or an unraised heap floor |
 | `relocated_pointer_sanity` | the off-by-N name-relocation (a valid-looking pointer in the wrong record field) that data-aborts mid-stage |
@@ -55,9 +56,9 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `unit_weapon_names` | unit/weapon name garbage (out-of-atlas tokens) or translated-count regression |
 | `id_command_names` | ID-command name/summary/detail garbage, squad records reverting to Japanese, coverage regression |
 
-`--self-test` mutates a copy of the ROM under test in seven targeted ways
-(garble NOP, dictionary flip, combat-code flip, VM corruption, heap-window
-pointer, stage CFG corruption, bark gap stray) and requires the matching gate
+`--self-test` mutates a copy of the ROM under test in targeted ways
+(garble NOP, dictionary flip, unit-thumbnail write, combat-code flip, VM
+corruption, heap-window pointer, stage CFG corruption, bark gap stray, and more) and requires the matching gate
 to go RED, then runs the translation gates on the JP ROM and requires them RED
 — the guard for the guards.
 

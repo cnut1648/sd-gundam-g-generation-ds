@@ -187,7 +187,8 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | renderB 8×16 UI font | `0x133F14` | `0x02133F14`, 32 B/glyph |
 | primary dictionary | `0x1444B4..0x14AC34` | `0x021444B4` — dialogue/data macro store. **Clobbering it freezes combat** — treat as read-only |
 | dictionary selector | `0x16B868` | `[0x0216B868]=0x021444B4` (primary), `[+4]=0x0212D770` (alt) |
-| renderB label arena | `0x14AC34..0x155B14` | stat/UI label strings (editable band) |
+| renderB label arena | `0x14AC34..0x14BD84` | stat/UI label strings; bounded immediately before the unit-icon bank |
+| unit-icon graphics bank | `0x14BD84..0x15D6C4` | 250 × 24×24 4bpp thumbnails; immutable vs JP (`unit_icon_bank_frozen`) |
 | OBJ-text path (engine A) | — | `0x0202BC74 → 0x02013C00 → 0x02013220 → 0x02013704` → OBJ VRAM `0x06400000` |
 | dialogue nameplate setup | `0x2BCA6` / `0x2BCE8` | style `2→3` selects renderA 12×12; `adds r2,r1,#0` → `movs r2,#3` supplies the plate-only +3px baseline anchor before the call to `0x02013C00` (renderA-direct — the penY+3 trampoline cave does not cover this plate) |
 | engine-B generic text helper | `0x12EFC` | `0x02012EFC(ctx,Xpx,Ypx,str,[sp]=count)`; init veneer `0x02012F75 → 0x02013D64(ctx,mapbase)` |

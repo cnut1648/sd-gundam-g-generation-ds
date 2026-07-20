@@ -168,8 +168,8 @@
   },
   {
    "lo": "0x14AC34",
-   "hi": "0x155B14",
-   "what": "UI 8x16 font glyph cells ABOVE the dialogue dictionary + resident label arena"
+   "hi": "0x14BD84",
+   "what": "post-dictionary resident label arena; ends before the unit-thumbnail graphics bank"
   },
   {
    "lo": "0x16B474",
@@ -273,6 +273,11 @@
   }
  ],
  "forbidden": [
+  {
+   "lo": "0x14BD84",
+   "hi": "0x15D6C4",
+   "what": "250 unit-thumbnail graphics (gate unit_icon_bank_frozen)"
+  },
   {
    "lo": "0x1444B4",
    "hi": "0x14AC34",
