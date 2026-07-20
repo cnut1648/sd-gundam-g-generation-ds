@@ -56,9 +56,14 @@ Starting from the Japanese arm9 image (1,797,560 B):
 3. **Write string pools** (`data/zh/placements/` + `zh/event_text.json`): in-place pools (battle names, detail pool,
    menu descriptors, resident caves), the 1,267 event/briefing text blocks in
    `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload payloads.
-4. **Apply code patches** (`data/patches/code_patches.json`, 36 entries): render-path
-   trampolines + caves, decoder hooks, one-byte fixes, gameplay threshold tweaks. Every
-   patch asserts its recorded `old_hex` before writing — a shifted base fails loudly.
+4. **Apply code patches** (`data/patches/code_patches.json`, 39 entries, then
+   `data/patches/raw_regions.json`, currently empty): render-path trampolines + caves,
+   decoder hooks, one-byte fixes, gameplay threshold tweaks. Every patch asserts its
+   recorded `old_hex` before writing — a shifted base fails loudly. Both files are
+   audited by the same gates (`patch_literal_safety` scans raw-region writes for paved
+   live bytes and forbidden literals exactly like cave bodies; `placement_span_safety`
+   includes them in the writer-overlap scan; the `hp_format_liveness` invariant pins the
+   ISSUE-6 "D4"/"/D4" HP format strings and their four consumer literals byte-exact JP).
 5. **Append the autoload tail**: 12×12 glyph atlas (`data/font/atlas12.bin`, `0x25F80` B)
    + pool A (`0x2028C` B) + pool B (`0x98FC` B) + the new 5-entry autoload list; patch
    ModuleParams (`0xB0C/0xB10`), the renderer atlas pointer (`0x1315C` → `0x023027A0`)
