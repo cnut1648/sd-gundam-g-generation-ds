@@ -274,14 +274,31 @@ _PLACEMENT_FILES = (
     "zh/placements/resident_caves.json",
 )
 
+_CANONICAL_PLACEMENT_BANDS = {
+    "zh/placements/post_dict_labels.json": L.POST_DICT_LABEL_BAND,
+}
+
 
 def _apply_placements(img: _Image, data_dir: Path):
     for rel in _PLACEMENT_FILES:
         d = _load(data_dir, rel)
         base = _i(d["file_offset"])
+        end = _i(d["end"])
+        if not 0 <= base <= end <= LIST_OFF:
+            raise ValueError(f"{rel}: invalid arena [{base:#x},{end:#x})")
+        expected = _CANONICAL_PLACEMENT_BANDS.get(rel)
+        if expected is not None and (base, end) != expected:
+            raise ValueError(f"{rel}: arena [{base:#x},{end:#x}) does not match "
+                             f"canonical layout [{expected[0]:#x},{expected[1]:#x})")
         for e in d["entries"]:
-            img.put_hex(base + _i(e["offset"]), e["payload_hex"],
-                        f"{rel} @+{e['offset']}")
+            payload = bytes.fromhex(e["payload_hex"])
+            start = base + _i(e["offset"])
+            stop = start + len(payload)
+            if start < base or stop > end:
+                raise ValueError(f"{rel} @+{e['offset']}: write "
+                                 f"[{start:#x},{stop:#x}) outside arena "
+                                 f"[{base:#x},{end:#x})")
+            img.put(start, payload, f"{rel} @+{e['offset']}")
 
 
 def _apply_event_blocks(img: _Image, data_dir: Path):

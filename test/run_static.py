@@ -21,6 +21,7 @@ in-game failure the gate protects against.
   assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
+  unit_icon_bank_frozen       Turn A / unit thumbnails corrupted by misplaced text bytes
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
   font_relocation             boot crash / unreadable text from a bad font relocation
   relocated_pointer_sanity    the off-by-N name-relocation pointer → mid-stage data abort
@@ -526,6 +527,10 @@ RELOC_MAIN_RAM_LO, RELOC_MAIN_RAM_HI = 0x023027A0, 0x02380000
 UI_DICT_OFF = 0x12D770                           # UI dictionary (renderB path)
 PRIMARY_DICT_OFF = 0x1444B4                      # dialogue dictionary (renderA path)
 PRIMARY_DICT_BAND = (0x1444B4, 0x14AC34)         # overlaps the UI font glyph array!
+UNIT_ICON_BANK_LO = 0x14BD84                     # 250 unit thumbnails, 24x24 4bpp
+UNIT_ICON_STRIDE = 0x120
+UNIT_ICON_COUNT = 250
+UNIT_ICON_BANK_HI = UNIT_ICON_BANK_LO + UNIT_ICON_STRIDE * UNIT_ICON_COUNT
 CHAR_DB_OFF, CHAR_DB_STRIDE = 0xDCF18, 0x48      # pilot record table, +0x04 = name ptr
 CHAR_DB_BASE_COUNT, CHAR_DB_FULL_COUNT = 256, 563
 MASTER_TABLE_OFF, MASTER_STRIDE, MASTER_MAX = 0xB94BC, 0xD8, 945
@@ -711,7 +716,6 @@ RESIDENT_POOL_LO, RESIDENT_POOL_HI = 0x02180000, 0x021A0000
 # freeze (LESSONS C1); narrowing it makes the repoint rule a real invariant.
 RELOC_POOL_A_FRONT = (0x02328720, 0x0232C800)
 RELOC_POOL_B = (0x023E7000, 0x02400000)
-RELOC_PTR_SCAN_HI = 0x155B14
 
 # Name-pointer reader band (deploy/nameplate freeze class): unit-name
 # (master 0xB94BC +0x00) and pilot/character-name (char-DB 0xDCF18 +0x04)
@@ -960,6 +964,37 @@ def gate_code_image_parity(rep, ctx):
                 f"all head diffs vs JP are inside {len(regions)} annotated regions "
                 f"+ {repoints} pointer-repoint words; appended tail from 0x{APPEND_TAIL_OFF:X} "
                 f"({len(az) - APPEND_TAIL_OFF} B) validated by font_relocation")
+
+
+def gate_unit_icon_bank_frozen(rep, ctx):
+    """The complete 250-slot unit-thumbnail bank must stay byte-identical to JP.
+
+    A historic arena-boundary mistake placed the grown Chinese labels 运动/移动 in
+    transparent-looking pixels of slot 1 (Turn A).  The write remained inside an
+    over-broad code-image allow-list, so only a typed graphics-bank invariant can
+    prevent that regression class reliably.
+    """
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    jp = aj[UNIT_ICON_BANK_LO:UNIT_ICON_BANK_HI]
+    got = az[UNIT_ICON_BANK_LO:UNIT_ICON_BANK_HI]
+    if len(jp) != UNIT_ICON_BANK_HI - UNIT_ICON_BANK_LO or len(got) != len(jp):
+        rep.add("unit_icon_bank_frozen", False,
+                f"unit-icon bank truncated: expected {UNIT_ICON_BANK_HI - UNIT_ICON_BANK_LO} B, "
+                f"JP={len(jp)} B candidate={len(got)} B")
+        return
+    if jp == got:
+        rep.add("unit_icon_bank_frozen", True,
+                f"{UNIT_ICON_COUNT} unit thumbnails / {len(jp)} B byte-identical to JP")
+        return
+    rel = next(i for i, (a, b) in enumerate(zip(jp, got)) if a != b)
+    slot, within = divmod(rel, UNIT_ICON_STRIDE)
+    tile, tile_byte = divmod(within, 32)
+    changed = sum(a != b for a, b in zip(jp, got))
+    off = UNIT_ICON_BANK_LO + rel
+    rep.add("unit_icon_bank_frozen", False,
+            f"{changed} unit-thumbnail byte(s) differ from JP; first in slot {slot + 1:03d}, "
+            f"tile {tile}, tile-byte {tile_byte} @0x{off:X}: "
+            f"jp={jp[rel]:02x} got={got[rel]:02x}")
 
 
 def gate_dialogue_dict_frozen(rep, ctx):
@@ -3626,6 +3661,7 @@ GATES = [
     gate_assignment_id_tile_partition,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
+    gate_unit_icon_bank_frozen,
     gate_dialogue_dict_frozen,
     gate_font_relocation,
     gate_relocated_pointer_sanity,
@@ -3750,6 +3786,10 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("flip a byte of combat code (outside every allowed region)",
                 ["code_image_parity"],
                 lambda c: mut_a9(c, 0x40000, bytes([c["a9"][0x40000] ^ 0xFF])))
+    expect_fail("write text-like data into a unit-thumbnail tile",
+                ["unit_icon_bank_frozen"],
+                lambda c: mut_a9(c, UNIT_ICON_BANK_LO + 8,
+                                 bytes([c["a9"][UNIT_ICON_BANK_LO + 8] ^ 0xE9])))
     expect_fail("corrupt the stage-VM dispatch code",
                 ["stage_script_integrity", "code_image_parity"],
                 lambda c: mut_a9(c, VM_REGION[0] + 8, b"\x00\x00"))

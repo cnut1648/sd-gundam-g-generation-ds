@@ -7451,6 +7451,32 @@
     }
    ],
    "note": "PR #6 adoption: restore the JP ／ separator; the v1.1 home was an appended tail of the 0x1140 label"
+  },
+  {
+   "date": "2026-07-20",
+   "fix": "turna_icon_label_relocation:运动",
+   "ids": [],
+   "text": "运动",
+   "pool": "data/zh/placements/ui_names_bank.json",
+   "offset": "0xF6",
+   "ram": "0x2328816",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": [],
+   "note": "Move the grown 5-byte UI label into a heap-safe UI-bank gap; the previous target 0x214BD8C is unit-thumbnail pixel data, not a reusable text span"
+  },
+  {
+   "date": "2026-07-20",
+   "fix": "turna_icon_label_relocation:移动",
+   "ids": [],
+   "text": "移动",
+   "pool": "data/zh/placements/ui_names_bank.json",
+   "offset": "0x126",
+   "ram": "0x2328846",
+   "bytes": 4,
+   "reserved": 5,
+   "vacated": [],
+   "note": "Move the grown 5-byte UI label into a heap-safe UI-bank gap; the previous target 0x214BD91 is unit-thumbnail pixel data, not a reusable text span"
   }
  ]
 }
