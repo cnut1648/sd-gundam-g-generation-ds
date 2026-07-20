@@ -7,8 +7,9 @@ tier before shipping; run the VLM tier when render surfaces changed.
 tier      entry                                   runtime   needs
 -------   -------------------------------------  --------  -----------------------------
 static    test/run_static.py <rom>                ~4 s      python venv (ndspy) only
-live      test/live/test_*.py <rom>               1–25 min  per-test dependency: the legacy
-                                                            Xvfb/melonDS harness, or py-desmume
+live      test/live/test_*.py <rom>               1–25 min  Xvfb, fluxbox, xdotool,
+                                                            xautomation, imagemagick,
+                                                            melonDS (see below)
 vlm       test/vlm/vlm_judge.py prepare/verdict   minutes   Pillow + a vision judge
                                                             (model or human)
 ```
@@ -33,10 +34,9 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `audio_header` | broken music/SFX — the sound-data streaming header word must stay retail |
 | `ui_text_dispatch` | the unit-info/ID screen garble — a NOP at the UI decoder branch renders every UI string as raw glyphs |
 | `nameplate_render_path` | illegible 8px speaker nameplates / stray bytes at the patched render-path site |
-| `glyph_row_clip` | issue #2 lower-strip loss from the 13-tile glyph-plot row alias |
-| `assignment_id_tile_partition` | 配属 third-ID-title corruption from the right ability bank overwriting its lower char tiles |
 | `ui_font_atlas_dispatch` | 8px-mush Chinese on the UI-font path — the ZH→atlas trampoline must be intact (or absent) |
 | `code_image_parity` | ANY unexplained code/data byte change vs the JP source (the combat-breakage class); allow-list + pointer-repoint rule, forbidden bands can never be allow-listed |
+| `unit_icon_bank_frozen` | corrupted Turn A / unit thumbnails — all 250 24×24 4bpp slots must remain byte-identical to JP |
 | `dialogue_dict_frozen` | the battle-entry freeze — the dialogue compression dictionary physically overlaps the UI font and must stay byte-identical to JP |
 | `font_relocation` | boot crash / unreadable text from a malformed font autoload or an unraised heap floor |
 | `relocated_pointer_sanity` | the off-by-N name-relocation (a valid-looking pointer in the wrong record field) that data-aborts mid-stage |
@@ -57,17 +57,14 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `id_command_names` | ID-command name/summary/detail garbage, squad records reverting to Japanese, coverage regression |
 
 `--self-test` mutates a copy of the ROM under test in targeted ways
-(garble NOP, dictionary flip, combat-code flip, VM corruption, heap-window
-pointer, stage CFG corruption, bark gap stray) and requires the matching gate
+(garble NOP, dictionary flip, unit-thumbnail write, combat-code flip, VM
+corruption, heap-window pointer, stage CFG corruption, bark gap stray, and more) and requires the matching gate
 to go RED, then runs the translation gates on the JP ROM and requires them RED
 — the guard for the guards.
 
 ## 2. Live tier — `test/live/`
 
-Every test is standalone with `--help`.  `test_assignment_id_render.py` uses
-terminal-driven py-desmume directly with a matching cartridge save and normal
-gameplay flow; it never uses a savestate or mutates RAM.  The older harnesses use
-shared plumbing in
+Every test is standalone with `--help`; shared plumbing in
 `test/live/harness.py` (Xvfb + fluxbox + melonDS, held-key input via xte,
 window-relative touch via xdotool, `import` window captures, melonDS config
 bootstrap: generate-then-patch `~/.config/melonDS/melonDS.toml` — DirectBoot,
@@ -88,11 +85,6 @@ JIT off, software renderer, the 12-button keyboard map, optional gdb stub).
 # category redraw) and the MS development System Tree (entry + selection move);
 # native-resolution lower-strip ink probes (an unfixed build scores 0/6)
 .venv/bin/python test/live/test_row_clip.py <rom> [--sav PATH]
-
-# 配属 ID/ability char-tile partition (~30 s, py-desmume): normal title ->
-# Continue -> slot 3 -> BackStage -> 编成 -> 配属; visits all 24 slots and
-# requires oracle-exact strokes for every lower-panel text draw
-.venv/bin/python test/live/test_assignment_id_render.py <rom> --sav <matching-cartridge.sav>
 
 # in-combat ID cut-in freeze grind (~15-25 min, run 3x for a shipping verdict):
 # fresh grind to combat, queue ID commands, battle start; frame-identity + gdb
