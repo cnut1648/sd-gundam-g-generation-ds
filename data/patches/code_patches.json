@@ -18,9 +18,9 @@
   {
    "file_offset": "0x12FE6",
    "old_hex": "87b0041c",
-   "new_hex": "09f1a3f9",
-   "what": "management-list occluder clip trampoline",
-   "why": "the shared glyph rasterizer is detoured to a cave that clips tile writes past the list-row stride for the management list background only, removing a text occluder band next to wide 12px rows."
+   "new_hex": "09f12ffa",
+   "what": "scoped glyph row-stride clip trampoline",
+   "why": "the shared 12px glyph plot rasterizer (0x2012FE4) has a 2-row tile context with stride8=13 whose row1[col0] aliases row0[col13]; writes crossing the 13-tile row boundary wrap around and erase the lower strip of the row's first glyphs. The prologue is detoured to a cave that early-returns such writes for the audited list surfaces; every other draw replays the stock prologue byte-identically."
   },
   {
    "file_offset": "0x131D8",
@@ -226,13 +226,6 @@
    "why": "re-dispatches control type 6 and un-consumes a >= 0xE0 token high byte for the bark formatter veneer at 0x6588E."
   },
   {
-   "file_offset": "0x11C330",
-   "old_hex": "00000000000000000000000000000000650900650900a60900690a008a02000000000000",
-   "new_hex": "c46d074dac4231d1448a6418e4080589ac4202d3f0bc08bc184787b0041c704700980006",
-   "what": "management-list occluder clip cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 処分-detail abort — into the dead in-image atlas)",
-   "why": "early-returns the rasterizer write when the destination tile column exceeds the row stride, only for the management-list background context."
-  },
-  {
    "file_offset": "0x11C358",
    "old_hex": "00000000000000000000000000502500902a00900000900000900000900000900000900000900000900000502500a02a540900a8090000090000090000090000",
    "new_hex": "02b4e86d0b49884210d1a88813280dd1e88a0949884209d30849884206d8688a482803d902bc288ba442704702bc288b8442704700e0000637010000af010000",
@@ -240,11 +233,11 @@
    "why": "stops the 8px pad-cell loop at the 80px caption strip boundary (caption compose context only); every other context falls through byte-identical."
   },
   {
-   "file_offset": "0x11C39C",
-   "old_hex": "00000900000900000900540900a80a0000502500902a00900000900000900000900000900000900000900000a0000000000000000000000000000009000009000009000009000009",
-   "new_hex": "014dac42cad0d2e700f0200610b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c2df763ff10bdfdc2110264d02702",
+   "file_offset": "0x11C3A8",
+   "old_hex": "00a80a0000502500902a00900000900000900000900000900000900000900000a0000000000000000000000000000009000009000009000009000009",
+   "new_hex": "10b5041c2178012910d10a4b217e022902d0ff20187009e0a0781978884205d01870054b18780a2108431870201c2df763ff10bdfdc2110264d02702",
    "what": "roster navigation cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 処分-detail abort — into the dead in-image atlas)",
-   "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state. Its last-cursor-row scratch byte lives at 0x0211C2FD (tail pad of the relocated clamp/populate cave, init 0xFF): the original scratch 0x0233F800 sat INSIDE the stage load buffer [0x0232C800,0x02340000) where _STG98 reaches offset 0x13000 (press-A abort class), and its interim home 0x021B3EFD was vacated when the 0x1B3E22 cave was relocated off the live 'D4'/'/D4' format strings."
+   "why": "cave body for 0x4A66A: edge-detects cursor movement and re-arms the detail/portrait populate state. Its last-cursor-row scratch byte lives at 0x0211C2FD (tail pad of the relocated clamp/populate cave, init 0xFF): the original scratch 0x0233F800 sat INSIDE the stage load buffer [0x0232C800,0x02340000) where _STG98 reaches offset 0x13000 (press-A abort class), and its interim home 0x021B3EFD was vacated when the 0x1B3E22 cave was relocated off the live 'D4'/'/D4' format strings. Its former 12-byte head (the 0x0620F000 admission of the old clip-cave chain) is retired to JP bytes: the map admissions now live complete in the 0x11C448 scoped clip cave."
   },
   {
    "file_offset": "0x11C3F0",
@@ -252,6 +245,13 @@
    "new_hex": "b7290dd18920000104306b8b834203daab8b834200da16e042218901143110e09a2910d16b8b032b0dd1ab8b9a2b0ad1eb8b892000010430834204db412189010731024b1847024b1847c046aba21102cda21102",
    "what": "12x12 trampoline support cave (relocated 2026-07-19 off the LIVE unit resource-id table 0x1B1FA8 fam rows — B FAIL#1 — into the dead in-image atlas)",
    "why": "overflow helpers for the 12x12-on-8x16 trampoline (special-cases a few slots and jumps back into the trampoline body)."
+  },
+  {
+   "file_offset": "0x11C448",
+   "old_hex": "80990200a600009900406a02908209a4002628002800000094000969420a499202969200a8a400002900404a09409226909224a4602928800a0000005555955555955555955555955555955555955555955555955555955555955555",
+   "new_hex": "c46d124dac4214d0114dac4211d0114dac4202d0104dac4214d14468002c11d104890d2c0ed14489022c0bd1047c032c08d1448a6418e4080589ac4202d3f0bc08bc184787b0041c7047c0460098000600f0200600e0000600f80006",
+   "what": "scoped glyph row-stride clip cave (re-homed from PR #3 — its 0x1B3B54 home sits on the LIVE unit resource-id table)",
+   "why": "one cave now owns the whole clip policy: map 0x06009800 (management/BackStage list) and map 0x0620F000 (info panels) keep the v1.1 whole-map clip; maps 0x0600E000 (MS development system tree) and 0x0600F800 (character/unit Profile lists) are admitted only with the exact context signature origin=(0,0), stride8=13, height=2, style=3 (PR #3's scoping). Matching draws early-return only when (penX+localX)>>3 reaches the row stride; everything else replays the original prologue. Lives in the dead in-image atlas after the 0x11C3F0 cave (band is truly dead: base literal 0x1315C repointed; zero JP word references into 0x11C448..0x11C4A4)."
   },
   {
    "file_offset": "0x1B3F0C",
