@@ -17,6 +17,7 @@ in-game failure the gate protects against.
   audio_header                broken music/SFX (SDAT ROMCTRL header word)
   ui_text_dispatch            the unit-info/ID screen 乱码 (garble) regression
   nameplate_render_path       illegible 8px speaker nameplates / stray code at the patch
+  glyph_row_clip              issue #2 lower-strip glyph loss on Profile/development-tree rows
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
@@ -485,6 +486,16 @@ NAMEPLATE_IMM_OFF, NAMEPLATE_IMM_ORIG, NAMEPLATE_IMM_FIX = 0x2BCA6, 0x02, 0x03
 NAMEPLATE_Y_OFF = 0x2BCE8
 NAMEPLATE_Y_ORIG = bytes.fromhex("0a1c")          # adds r2,r1,#0 (r1 was cleared)
 NAMEPLATE_Y_FIX = bytes.fromhex("0322")           # movs r2,#3
+GLYPH_ROW_CLIP_OFF = 0x12FE6
+GLYPH_ROW_CLIP_ORIG = bytes.fromhex("87b0041c")   # sub sp,#0x1C; mov r4,r0 (stock prologue)
+GLYPH_ROW_CLIP_FIX = bytes.fromhex("09f12ffa")    # bl -> scoped row-stride clip cave
+GLYPH_ROW_CLIP_CAVE_OFF = 0x11C448
+GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
+    "c46d124dac4214d0114dac4211d0114dac4202d0104dac4214d14468002c"
+    "11d104890d2c0ed14489022c0bd1047c032c08d1448a6418e4080589ac42"
+    "02d3f0bc08bc184787b0041c7047c046"
+    "0098000600f0200600e0000600f80006"
+)
 UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
@@ -788,6 +799,42 @@ def gate_nameplate_render_path(rep, ctx):
             f"JP style={jp_style:#04x},penY={jp_y.hex()}; "
             f"ZH style={zh_style:#04x},penY={zh_y.hex()} "
             f"(want style={NAMEPLATE_IMM_FIX:#04x},penY={NAMEPLATE_Y_FIX.hex()}=+3px)")
+
+
+def gate_glyph_row_clip(rep, ctx):
+    """The 12px glyph plot rasterizer's 2-row tile context aliases
+    row1[col0] onto row0[col13] (stride8=13): writes crossing the 13-tile
+    row boundary wrap and erase the lower strip of the row's first glyphs
+    (issue #2 — Profile lists and the MS development tree).  The candidate
+    must keep the scoped clip: hook 0x12FE6 -> cave 0x11C448 admitting maps
+    0x06009800/0x0620F000 whole-map (the v1.1 behavior) and 0x0600E000/
+    0x0600F800 only with the exact (origin 0, stride8 13, height 2, style 3)
+    context signature.  The full body is pinned — a relaxed map/signature
+    check risks clipping unrelated surfaces; a lost literal brings the
+    first-glyph loss back (re-homed from PR #3, whose cave address sat on
+    the LIVE unit resource-id table).  The JP side must carry the stock
+    prologue."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    jp_hook = aj[GLYPH_ROW_CLIP_OFF:GLYPH_ROW_CLIP_OFF + 4]
+    hook = az[GLYPH_ROW_CLIP_OFF:GLYPH_ROW_CLIP_OFF + 4]
+    cave = az[GLYPH_ROW_CLIP_CAVE_OFF:GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE)]
+    if jp_hook != GLYPH_ROW_CLIP_ORIG:
+        rep.add("glyph_row_clip", False,
+                f"JP 0x12FE6={jp_hook.hex()} != stock prologue {GLYPH_ROW_CLIP_ORIG.hex()}")
+        return
+    if hook != GLYPH_ROW_CLIP_FIX:
+        rep.add("glyph_row_clip", False,
+                f"0x12FE6={hook.hex()} != scoped clip branch {GLYPH_ROW_CLIP_FIX.hex()}")
+        return
+    if cave != GLYPH_ROW_CLIP_CAVE:
+        first = next((i for i, (g, w) in enumerate(zip(cave, GLYPH_ROW_CLIP_CAVE)) if g != w),
+                     min(len(cave), len(GLYPH_ROW_CLIP_CAVE)))
+        rep.add("glyph_row_clip", False,
+                f"row-clip cave differs at {GLYPH_ROW_CLIP_CAVE_OFF + first:#x}")
+        return
+    rep.add("glyph_row_clip", True,
+            "management 0x06009800 + info-panel 0x0620F000 whole-map, Profile "
+            "0x0600F800 and development-tree 0x0600E000 13x2-signature contexts pinned")
 
 
 def gate_ui_font_atlas_dispatch(rep, ctx):
@@ -3339,6 +3386,7 @@ GATES = [
     gate_audio_header,
     gate_ui_text_dispatch,
     gate_nameplate_render_path,
+    gate_glyph_row_clip,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
     gate_dialogue_dict_frozen,
@@ -3448,6 +3496,10 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("restore the dialogue speaker plate to penY+0 (names ride the border)",
                 ["nameplate_render_path"],
                 lambda c: mut_a9(c, NAMEPLATE_Y_OFF, NAMEPLATE_Y_ORIG))
+    expect_fail("corrupt a map literal of the scoped row-stride clip cave",
+                ["glyph_row_clip"],
+                lambda c: mut_a9(c, GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE) - 4,
+                                 bytes.fromhex("00e02006")))
     expect_fail("flip a byte inside the dialogue dictionary",
                 ["dialogue_dict_frozen"],
                 lambda c: mut_a9(c, PRIMARY_DICT_OFF + 0x40,
