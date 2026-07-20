@@ -16,7 +16,8 @@ in-game failure the gate protects against.
   --------------------------  ----------------------------------------------------------
   audio_header                broken music/SFX (SDAT ROMCTRL header word)
   ui_text_dispatch            the unit-info/ID screen 乱码 (garble) regression
-  nameplate_render_path       illegible 8px speaker nameplates / stray code at the patch
+  nameplate_render_path       illegible or vertically misaligned speaker names
+  dialogue_nameplate_geometry clipped long names / wrong-green frame extension
   glyph_row_clip              issue #2 lower-strip glyph loss on Profile/development-tree rows
   assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
@@ -486,10 +487,63 @@ def reachable_display_blocks(d: bytes):
 # =============================================================================
 ROMCTRL_OFF, ROMCTRL_EXPECT = 0x60, bytes.fromhex("57664100")
 UI_DISPATCH_OFF, UI_DISPATCH_ORIG, UI_DISPATCH_NOP = 0x1322C, bytes([0x11, 0xD1]), bytes([0xC0, 0x46])
-NAMEPLATE_IMM_OFF, NAMEPLATE_IMM_ORIG, NAMEPLATE_IMM_FIX = 0x2BCA6, 0x02, 0x03
+NAMEPLATE_HEIGHT_OFF = 0x2BCA6
+NAMEPLATE_HEIGHT_ORIG = NAMEPLATE_HEIGHT_FIX = bytes.fromhex("0222")
+NAMEPLATE_FLAGS_OFF = 0x2BCAC
+NAMEPLATE_FLAGS_ORIG = bytes.fromhex("8020")
+NAMEPLATE_FLAGS_FIX = bytes.fromhex("8120")
 NAMEPLATE_Y_OFF = 0x2BCE8
 NAMEPLATE_Y_ORIG = bytes.fromhex("0a1c")          # adds r2,r1,#0 (r1 was cleared)
 NAMEPLATE_Y_FIX = bytes.fromhex("0322")           # movs r2,#3
+NAMEPLATE_GEOMETRY_BYTES = {
+    0x2BB58: (bytes.fromhex("6523"), bytes.fromhex("8523")),
+    0x2BB7C: (bytes.fromhex("eaf702ff"), bytes.fromhex("01f180fd")),
+    0x2BC74: (bytes.fromhex("f0b5"), bytes.fromhex("fcb5")),
+    0x2BC86: (bytes.fromhex("c1b0"), bytes.fromhex("ffb0")),
+    0x2BCC0: (bytes.fromhex("0a20"), bytes.fromhex("0e20")),
+    0x2BCEE: (bytes.fromhex("d8a80021"), bytes.fromhex("01f1e7fc")),
+    0x2BD10: (bytes.fromhex("d8a81e90"), bytes.fromhex("01f1d6fc")),
+    0x2BD2E: (bytes.fromhex("1431"), bytes.fromhex("1c31")),
+    0x2BDE8: (bytes.fromhex("41b0"), bytes.fromhex("7fb0")),
+    0x2BDEA: (bytes.fromhex("f0bc"), bytes.fromhex("fcbc")),
+    0x2BDF0: (bytes.fromhex("80020000"), bytes.fromhex("80030000")),
+    0x2BDF8: (bytes.fromhex("e8100000"), bytes.fromhex("e8110000")),
+    0x2BED2: (bytes.fromhex("0a22"), bytes.fromhex("0e22")),
+    0x2BEF6: (bytes.fromhex("1430"), bytes.fromhex("1c30")),
+    0x2C034: (bytes.fromhex("eaf7a6fc"), bytes.fromhex("01f124fb")),
+    0x2C42C: (bytes.fromhex("6523"), bytes.fromhex("8523")),
+}
+NAMEPLATE_HELPERS_OFF = 0x12D680
+NAMEPLATE_HELPERS_ORIG = bytes.fromhex(
+    "249099655995a5999926599524999924"
+    "a9aa645695a8aaaa2440022454259968"
+    "2aa65595999aa995a595a69aaa955025"
+    "a5a526265a2964a596a82aa800240055"
+    "5595a6aaa6545525a8aa2a555595"
+)
+NAMEPLATE_HELPERS_FIX = bytes.fromhex(
+    "10b583b0059c0094069c0194079c0294"
+    "094ca0470948c18a028b018341838183"
+    "c18302844030c18a028b018341838183"
+    "c183028403b010bd8569010240e40106"
+    "68464621090140181e9000217047"
+)
+NAMEPLATE_FRAME_FILE = "c31.bin"
+NAMEPLATE_FRAME_OFF = 0x4
+NAMEPLATE_FRAME_ORIG = bytes.fromhex(
+    "6b000080ffc0ccccccc0bbbbbb6fc0bbeaeef6ffeaeeeff00d"
+    "ccf3f0bbee160f1c02faff3c0b3c4d0f5c0b00d0dddd6e0f"
+    "7c070c8d0f9c0b00e06c00af0fbd07ce0ffce00fe9f2cccc"
+    "00c0bb2318fa02f701e90ecccc5c0112010e01fce60ff00ab"
+    "b00cbbb23b001c40011081f120900"
+)
+NAMEPLATE_FRAME_FIX = bytes.fromhex(
+    "6b000080ffc0ccccccc0bbbbbb4fc0bbeeeef6f0f9fecc0e00"
+    "00f3f003001600190e000a2d0f150e160f0f00d0dddd6e067"
+    "30f8c0c8c0f0300e06c00af06b00fce03ce0fce0f3fcccc0"
+    "0c0bb23fa01f60180ce0d0e01160112010e00051beb0fbb3f"
+    "00cbbb23b0c40010ce0c000e0d00"
+)
 GLYPH_ROW_CLIP_OFF = 0x12FE6
 GLYPH_ROW_CLIP_ORIG = bytes.fromhex("87b0041c")   # sub sp,#0x1C; mov r4,r0 (stock prologue)
 GLYPH_ROW_CLIP_FIX = bytes.fromhex("09f12ffa")    # bl -> scoped row-stride clip cave
@@ -558,24 +612,23 @@ ID_TITLE_BUDGET_PX = 64          # ID-command box title row (engine truncates + 
 ID_EFFECT_BUDGET_PX = 76         # ID-command effect summary line in the box body
 ABILITY_NAME_BUDGET_PX = 76      # ID-ability name cell
 UNIT_NAME_BUDGET_PX = 144        # widest unit-name context (status/database field)
-SPEAKER_PLATE_CELLS = 7          # dialogue speaker nameplate field (7 glyph cells)
+SPEAKER_PLATE_CELLS = 9          # widened dialogue speaker nameplate (9 glyph cells)
 # Pilot-name pixel cap across EVERY surface a char-DB name reaches: the battle
 # focus/formation plates fit ~81px before the fixed LV badge (pen x=51, badge
 # x=132), the 编成 detail-plate name window is 88px (REALLY widened from the JP
 # 80px: the two width-immediate patches @0x54BE0/0x5487E grow the OBJ-text name
 # widget from 10 to 11 tiles), the roster list fits 88px (name x=8, LV badge
-# x=96), the dialogue speaker plate is 7 cells (84px).  7 cells = 84px is the
-# enforced ceiling (the 3px badge-touch of an exactly-7-cell name on the battle
-# plates is a recorded, accepted residual).  Widths are priced at the TRUE
+# x=96), while the dialogue speaker plate is now 9 cells (108px).  7 cells =
+# 84px remains the default cross-surface ceiling (the 3px badge-touch of an
+# exactly-7-cell name on the battle plates is a recorded, accepted residual).
+# Widths are priced at the TRUE
 # trampoline advance incl. TRAMPOLINE_SLOT_ADVANCE (6px narrow parens, 8px
 # S/E/D burst letters — the 0x11A362 advance-select cave), which brings every
 # burst-variant name to <=84px: 阿斯兰(SEED)=80, 多蒙(明镜止水)=84, 基拉(SEED)=68.
 PILOT_NAME_BUDGET_PX = 84
-# OWNER RULING 2026-07-18 (F9) kept the full JP-faithful burst names; the
-# 2026-07-19 advance fixes (6px parens / 8px letters) + the cid176 rename
-# (希罗·尤尔(零式) -> 希罗(零式), 60px) shrank every former ratchet entry to
-# <= PILOT_NAME_BUDGET_PX, so the per-record allow-list is EMPTY.  Add entries
-# back only with an owner ruling; each is a WIDTH RATCHET (may never grow).
+# The complete state names now fit the shared 84px ceiling; keep this empty.
+# Add an entry only after explicit review in dialogue, roster, assignment and
+# battle-plate views.  Each entry would be a WIDTH RATCHET and may never grow.
 PILOT_WIDTH_ALLOW = {}
 # Runtime-heap windows inside the relocated data bank: a display-string pointer that
 # lands here renders live heap garbage on fresh boot (proven by RAM captures).
@@ -799,22 +852,66 @@ def gate_ui_text_dispatch(rep, ctx):
 def gate_nameplate_render_path(rep, ctx):
     """The dialogue speaker plate is renderA-direct with its OWN penY (the
     trampoline cave's +3 anchor never sees it).  The JP image must carry
-    style 2 at penY+0; the translated build must select the readable 12x12
-    path (style 3) AND compensate the plate's top anchor by +3px (0x2BCE8
-    movs r2,#3) so 12px ink sits rows 2..14 like the JP 8x16 ink.  Checking
-    the pair on BOTH images prevents a future style-only patch from
-    restoring the visibly-high speaker names (PR #4)."""
+    a two-tile surface with flags 0x80 at penY+0; the translated build keeps
+    the two-tile height, sets flag bit 0 separately (0x80->0x81) to select the
+    readable 12x12 path, and compensates the plate's top anchor by +3px
+    (0x2BCE8 movs r2,#3).  Checking all three values on both images prevents a
+    future width edit from reverting the readable path or visibly-high names."""
     aj, az = ctx["jp_a9"], ctx["a9"]
-    jp_style = aj[NAMEPLATE_IMM_OFF]
-    zh_style = az[NAMEPLATE_IMM_OFF]
+    jp_height = aj[NAMEPLATE_HEIGHT_OFF:NAMEPLATE_HEIGHT_OFF + 2]
+    zh_height = az[NAMEPLATE_HEIGHT_OFF:NAMEPLATE_HEIGHT_OFF + 2]
+    jp_flags = aj[NAMEPLATE_FLAGS_OFF:NAMEPLATE_FLAGS_OFF + 2]
+    zh_flags = az[NAMEPLATE_FLAGS_OFF:NAMEPLATE_FLAGS_OFF + 2]
     jp_y = aj[NAMEPLATE_Y_OFF:NAMEPLATE_Y_OFF + 2]
     zh_y = az[NAMEPLATE_Y_OFF:NAMEPLATE_Y_OFF + 2]
-    ok = (jp_style == NAMEPLATE_IMM_ORIG and jp_y == NAMEPLATE_Y_ORIG
-          and zh_style == NAMEPLATE_IMM_FIX and zh_y == NAMEPLATE_Y_FIX)
+    ok = (jp_height == NAMEPLATE_HEIGHT_ORIG and jp_flags == NAMEPLATE_FLAGS_ORIG
+          and jp_y == NAMEPLATE_Y_ORIG and zh_height == NAMEPLATE_HEIGHT_FIX
+          and zh_flags == NAMEPLATE_FLAGS_FIX and zh_y == NAMEPLATE_Y_FIX)
     rep.add("nameplate_render_path", ok,
-            f"JP style={jp_style:#04x},penY={jp_y.hex()}; "
-            f"ZH style={zh_style:#04x},penY={zh_y.hex()} "
-            f"(want style={NAMEPLATE_IMM_FIX:#04x},penY={NAMEPLATE_Y_FIX.hex()}=+3px)")
+            f"JP height={jp_height.hex()},flags={jp_flags.hex()},penY={jp_y.hex()}; "
+            f"ZH height={zh_height.hex()},flags={zh_flags.hex()},penY={zh_y.hex()} "
+            f"(want 2 tiles, 12x12 flag, penY={NAMEPLATE_Y_FIX.hex()}=+3px)")
+
+
+def gate_dialogue_nameplate_geometry(rep, ctx):
+    """Pin the complete nine-cell speaker-nameplate expansion.
+
+    The scratch bitmap, OBJ geometry, tile bases, stack frame, frame tilemap,
+    blend window and compressed frame-edge colours must move as one unit.  A
+    partial edit either clips the ninth glyph, overwrites dialogue-body tiles,
+    exposes a bright-green strip, or corrupts the caller stack."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    problems = []
+    for off, (old, new) in NAMEPLATE_GEOMETRY_BYTES.items():
+        got_j = aj[off:off + len(old)]
+        got_z = az[off:off + len(new)]
+        if got_j != old:
+            problems.append(f"JP @{off:#x}={got_j.hex()} != {old.hex()}")
+        if got_z != new:
+            problems.append(f"ZH @{off:#x}={got_z.hex()} != {new.hex()}")
+    got_j = aj[NAMEPLATE_HELPERS_OFF:NAMEPLATE_HELPERS_OFF + len(NAMEPLATE_HELPERS_ORIG)]
+    got_z = az[NAMEPLATE_HELPERS_OFF:NAMEPLATE_HELPERS_OFF + len(NAMEPLATE_HELPERS_FIX)]
+    if got_j != NAMEPLATE_HELPERS_ORIG:
+        problems.append("JP helper-cave anchor differs from the recorded atlas bytes")
+    if got_z != NAMEPLATE_HELPERS_FIX:
+        problems.append("frame/body helper cave is missing or corrupt")
+    jf = ctx["jp_file"](NAMEPLATE_FRAME_FILE)
+    zf = ctx["cand_file"](NAMEPLATE_FRAME_FILE)
+    if jf is None or zf is None:
+        problems.append(f"{NAMEPLATE_FRAME_FILE} missing from one ROM")
+    else:
+        jedge = jf[NAMEPLATE_FRAME_OFF:NAMEPLATE_FRAME_OFF + len(NAMEPLATE_FRAME_ORIG)]
+        zedge = zf[NAMEPLATE_FRAME_OFF:NAMEPLATE_FRAME_OFF + len(NAMEPLATE_FRAME_FIX)]
+        if jedge != NAMEPLATE_FRAME_ORIG:
+            problems.append("JP dialogue-frame edge anchor differs")
+        if zedge != NAMEPLATE_FRAME_FIX:
+            problems.append("dialogue-frame edge does not use the main background green")
+    if problems:
+        rep.add("dialogue_nameplate_geometry", False, "; ".join(problems[:5]))
+    else:
+        rep.add("dialogue_nameplate_geometry", True,
+                "name surface 14x2 tiles (112px/9 cells), body tile base 808, "
+                "frame x=1..16, WIN1 right=133 and main-green edge all pinned")
 
 
 def gate_glyph_row_clip(rep, ctx):
@@ -3657,6 +3754,7 @@ GATES = [
     gate_audio_header,
     gate_ui_text_dispatch,
     gate_nameplate_render_path,
+    gate_dialogue_nameplate_geometry,
     gate_glyph_row_clip,
     gate_assignment_id_tile_partition,
     gate_ui_font_atlas_dispatch,
@@ -3771,6 +3869,9 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("restore the dialogue speaker plate to penY+0 (names ride the border)",
                 ["nameplate_render_path"],
                 lambda c: mut_a9(c, NAMEPLATE_Y_OFF, NAMEPLATE_Y_ORIG))
+    expect_fail("restore the dialogue speaker surface to ten tiles",
+                ["dialogue_nameplate_geometry"],
+                lambda c: mut_a9(c, 0x2BCC0, bytes.fromhex("0a20")))
     expect_fail("corrupt a map literal of the scoped row-stride clip cave",
                 ["glyph_row_clip"],
                 lambda c: mut_a9(c, GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE) - 4,
