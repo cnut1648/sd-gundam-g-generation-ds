@@ -4010,14 +4010,16 @@
      "offset": "0x9712",
      "span": 11,
      "ram": "0x218F712",
-     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "matching_trait_labels:男性／儿童"
     },
     {
      "pool": "data/arenas/resident_caves.json",
      "offset": "0x9727",
      "span": 11,
      "ram": "0x218F727",
-     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)"
+     "proof": "pass2-relocated master name old home; ptr unreferenced (tables+arm9 word scan)",
+     "reused_by": "matching_trait_labels:女性／儿童"
     },
     {
      "pool": "data/arenas/resident_caves.json",
@@ -7408,6 +7410,47 @@
     }
    ],
    "note": "freezeproof audit W 2026-07-19: reference-free duplicates deleted so bark id-map rows 238/511 (deployable cids) return to byte-exact JP zeros"
+  },
+  {
+   "date": "2026-07-19",
+   "fix": "matching_trait_labels:男性／儿童",
+   "ids": [],
+   "text": "男性／儿童",
+   "pool": "data/zh/placements/resident_caves.json",
+   "offset": "0x9712",
+   "ram": "0x218F712",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/zh/placements/post_dict_labels.json",
+     "offset": "0x294",
+     "span": 9,
+     "ram": "0x214AEC8"
+    }
+   ],
+   "note": "PR #6 adoption: restore the JP ／ separator; old 9-byte in-place home too small for 10 text bytes + NUL"
+  },
+  {
+   "date": "2026-07-19",
+   "fix": "matching_trait_labels:女性／儿童",
+   "ids": [],
+   "text": "女性／儿童",
+   "pool": "data/zh/placements/resident_caves.json",
+   "offset": "0x9727",
+   "ram": "0x218F727",
+   "bytes": 10,
+   "reserved": 11,
+   "vacated": [
+    {
+     "pool": "data/zh/placements/post_dict_labels.json",
+     "offset": "0x114E",
+     "local": 14,
+     "span": 10,
+     "ram": "0x214BD82"
+    }
+   ],
+   "note": "PR #6 adoption: restore the JP ／ separator; the v1.1 home was an appended tail of the 0x1140 label"
   }
  ]
 }
