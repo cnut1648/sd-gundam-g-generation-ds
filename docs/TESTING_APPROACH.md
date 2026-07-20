@@ -74,6 +74,12 @@ Design rules for gates, learned the hard way:
 
 Run headless (Xvfb) against melonDS with deterministic scripted input. Levels:
 
+The 配属 ID/ability partition regression is additionally covered by
+`test/live/test_assignment_id_render.py`, a terminal-driven py-desmume test that
+imports the matching cartridge save, follows the normal menu flow without a
+savestate or RAM mutation, traverses all 24 slots, and compares each native
+framebuffer text draw against the offline pixel oracle.
+
 * **Boot smoke**: fresh DirectBoot → title renders (luma/structure sanity, not black) →
   New Game → intro → first dialogue scene renders; framebuffer changes across inputs
   (a hard freeze gives identical frames).
