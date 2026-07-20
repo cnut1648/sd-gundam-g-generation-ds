@@ -189,7 +189,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | dictionary selector | `0x16B868` | `[0x0216B868]=0x021444B4` (primary), `[+4]=0x0212D770` (alt) |
 | renderB label arena | `0x14AC34..0x155B14` | stat/UI label strings (editable band) |
 | OBJ-text path (engine A) | — | `0x0202BC74 → 0x02013C00 → 0x02013220 → 0x02013704` → OBJ VRAM `0x06400000` |
-| dialogue nameplate setup | `0x2BCA6` / `0x2BCE8` | style `2→3` selects renderA 12×12; `adds r2,r1,#0` → `movs r2,#3` supplies the plate-only +3px baseline anchor before the call to `0x02013C00` (renderA-direct — the penY+3 trampoline cave does not cover this plate) |
+| dialogue nameplate setup | `0x2BB58..0x2C42E`, helper `0x12D680` | 14×2-tile (112 px) name surface with unchanged x=16 and 12 px glyph advance; descriptor height remains 2, flags `0x80→0x81` select renderA 12×12, and `0x2BCE8` supplies plate-only penY+3. Body OBJ tiles move from 800 to 808 after the 28 name tiles; the scoped helper extends frame rows through tile x=16 and WIN1 through x=133. `c31.bin` provides the matching main-green frame edge. Gate: `dialogue_nameplate_geometry` |
 | engine-B generic text helper | `0x12EFC` | `0x02012EFC(ctx,Xpx,Ypx,str,[sp]=count)`; init veneer `0x02012F75 → 0x02013D64(ctx,mapbase)` |
 | engine-B char-tile copy helper | `0x12C40` | `0x02012C40` — advances tile cursor by `r7=(penPx+7)>>3` @ `0x12C4A`; tilemap last-writer `strh` @ `0x02012CCC`. The r7-over-advance is the ghost/aliasing bug family |
 | engine-A copy helper / twin | `0x13590` / `0x136A8` | weapon-name top-screen path; char base `0x06000000`, map `0x0601F000` |

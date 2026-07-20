@@ -77,14 +77,89 @@
    "what": "label-helper ink-value patch (pen LUT: ink value 3 visible; ZH glyphs ink at 3)"
   },
   {
-   "lo": "0x02BCA6",
-   "hi": "0x02BCA7",
-   "what": "dialogue speaker-nameplate render-path immediate (8x16 -> 12x12 fix)"
+   "lo": "0x02BB58",
+   "hi": "0x02BB5A",
+   "what": "dialogue speaker-nameplate blend-window right edge"
+  },
+  {
+   "lo": "0x02BB7C",
+   "hi": "0x02BB80",
+   "what": "dialogue speaker-nameplate frame wrapper call A"
+  },
+  {
+   "lo": "0x02BC74",
+   "hi": "0x02BC76",
+   "what": "dialogue speaker-nameplate enlarged-frame register save"
+  },
+  {
+   "lo": "0x02BC86",
+   "hi": "0x02BC88",
+   "what": "dialogue speaker-nameplate enlarged stack allocation"
+  },
+  {
+   "lo": "0x02BCAC",
+   "hi": "0x02BCAE",
+   "what": "dialogue speaker-nameplate 12x12 renderer flag"
+  },
+  {
+   "lo": "0x02BCC0",
+   "hi": "0x02BCC2",
+   "what": "dialogue speaker-name bitmap width 10->14 tiles"
+  },
+  {
+   "lo": "0x02BCEE",
+   "hi": "0x02BCF2",
+   "what": "dialogue body scratch-pointer helper call A"
+  },
+  {
+   "lo": "0x02BD10",
+   "hi": "0x02BD14",
+   "what": "dialogue body scratch-pointer helper call B"
+  },
+  {
+   "lo": "0x02BD2E",
+   "hi": "0x02BD30",
+   "what": "dialogue body OBJ tile base after 28 name tiles"
+  },
+  {
+   "lo": "0x02BDE8",
+   "hi": "0x02BDEC",
+   "what": "dialogue renderer enlarged-frame release and register restore"
+  },
+  {
+   "lo": "0x02BDF0",
+   "hi": "0x02BDF4",
+   "what": "dialogue speaker-name bitmap clear size"
+  },
+  {
+   "lo": "0x02BDF8",
+   "hi": "0x02BDFC",
+   "what": "dialogue renderer caller-stack reference"
+  },
+  {
+   "lo": "0x02BED2",
+   "hi": "0x02BED4",
+   "what": "dialogue speaker-name OBJ width 10->14 tiles"
+  },
+  {
+   "lo": "0x02BEF6",
+   "hi": "0x02BEF8",
+   "what": "dialogue body creation tile base after 28 name tiles"
   },
   {
    "lo": "0x02BCE8",
    "hi": "0x02BCEA",
    "what": "dialogue speaker-nameplate baseline anchor (penY 0 -> 3px; renderA-direct plate, not covered by the trampoline cave)"
+  },
+  {
+   "lo": "0x02C034",
+   "hi": "0x02C038",
+   "what": "dialogue speaker-nameplate frame wrapper call B"
+  },
+  {
+   "lo": "0x02C42C",
+   "hi": "0x02C42E",
+   "what": "dialogue speaker-nameplate initialized blend-window right edge"
   },
   {
    "lo": "0x0326A2",

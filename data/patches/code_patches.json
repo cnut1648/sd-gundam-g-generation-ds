@@ -79,11 +79,130 @@
    "why": "one store in the OBJ-text plotter wrote the wrong register, keeping ink-value-3 pixels transparent on the aptitude labels; storing r1 renders them."
   },
   {
-   "file_offset": "0x2BCA6",
-   "old_hex": "02",
-   "new_hex": "03",
-   "what": "dialogue nameplate style init #2->#3",
-   "why": "the speaker-nameplate descriptor init only set style bit 1; setting bits 0+1 routes nameplates through the 12x12 glyph path so CJK speaker names render."
+   "file_offset": "0x2BB58",
+   "old_hex": "6523",
+   "new_hex": "8523",
+   "what": "dialogue nameplate blend-window right edge 101->133",
+   "why": "the widened 112px speaker-name surface extends to x=128; moving the WIN1 right edge to x=133 keeps the expanded frame under the same translucent green treatment instead of exposing a brighter strip."
+  },
+  {
+   "file_offset": "0x2BB7C",
+   "old_hex": "eaf702ff",
+   "new_hex": "01f180fd",
+   "what": "dialogue nameplate frame draw wrapper call A",
+   "why": "preserve the original frame-resource draw, then extend both nameplate tilemap rows through screen tile x=16 via the scoped wrapper at 0x12D680."
+  },
+  {
+   "file_offset": "0x2BC74",
+   "old_hex": "f0b5",
+   "new_hex": "fcb5",
+   "what": "dialogue renderer enlarged-frame register save",
+   "why": "save two additional registers so the local stack frame can grow by 0x100 bytes while keeping the original caller state balanced."
+  },
+  {
+   "file_offset": "0x2BC86",
+   "old_hex": "c1b0",
+   "new_hex": "ffb0",
+   "what": "dialogue renderer stack allocation growth",
+   "why": "reserve enough scratch space for a 14x2-tile speaker-name surface and the unchanged dialogue-body surface."
+  },
+  {
+   "file_offset": "0x2BCAC",
+   "old_hex": "8020",
+   "new_hex": "8120",
+   "what": "dialogue nameplate 12x12-renderer flag preservation",
+   "why": "the stock height immediate remains two tiles for the expanded surface; setting the descriptor flag bit separately keeps the established 12x12 CJK render path."
+  },
+  {
+   "file_offset": "0x2BCC0",
+   "old_hex": "0a20",
+   "new_hex": "0e20",
+   "what": "dialogue speaker-name surface width 10->14 tiles",
+   "why": "a 14-tile (112px) surface holds nine 12px glyph cells without changing the text origin or glyph advance."
+  },
+  {
+   "file_offset": "0x2BCEE",
+   "old_hex": "d8a80021",
+   "new_hex": "01f1e7fc",
+   "what": "dialogue body scratch-pointer helper call A",
+   "why": "Thumb-1 cannot encode sp+0x460 in one instruction, so the shared helper at 0x12D6C0 computes the body buffer after the enlarged name surface and restores r1=0 for memset."
+  },
+  {
+   "file_offset": "0x2BD10",
+   "old_hex": "d8a81e90",
+   "new_hex": "01f1d6fc",
+   "what": "dialogue body scratch-pointer helper call B",
+   "why": "reuse the same sp+0x460 calculation when constructing the dialogue-body descriptor."
+  },
+  {
+   "file_offset": "0x2BD2E",
+   "old_hex": "1431",
+   "new_hex": "1c31",
+   "what": "dialogue body OBJ tile base 800->808",
+   "why": "start body tiles after all 28 name-surface tiles so the two surfaces cannot overwrite each other."
+  },
+  {
+   "file_offset": "0x2BDE8",
+   "old_hex": "41b0",
+   "new_hex": "7fb0",
+   "what": "dialogue renderer enlarged-frame release",
+   "why": "release the enlarged final stack-allocation chunk before returning."
+  },
+  {
+   "file_offset": "0x2BDEA",
+   "old_hex": "f0bc",
+   "new_hex": "fcbc",
+   "what": "dialogue renderer enlarged-frame register restore",
+   "why": "restore the two additional registers saved by the expanded prologue."
+  },
+  {
+   "file_offset": "0x2BDF0",
+   "old_hex": "80020000",
+   "new_hex": "80030000",
+   "what": "dialogue speaker-name surface clear size",
+   "why": "clear all 14x2x32 bytes of the widened name surface before rendering."
+  },
+  {
+   "file_offset": "0x2BDF8",
+   "old_hex": "e8100000",
+   "new_hex": "e8110000",
+   "what": "dialogue renderer caller-stack reference",
+   "why": "track the original caller argument after the local frame grows by 0x100 bytes."
+  },
+  {
+   "file_offset": "0x2BED2",
+   "old_hex": "0a22",
+   "new_hex": "0e22",
+   "what": "dialogue speaker-name OBJ width 10->14 tiles",
+   "why": "construct a 14-tile-wide OBJ surface matching the enlarged scratch bitmap."
+  },
+  {
+   "file_offset": "0x2BEF6",
+   "old_hex": "1430",
+   "new_hex": "1c30",
+   "what": "dialogue body OBJ tile base 800->808 (creation path)",
+   "why": "keep the creation-time body tile base aligned with the 28-tile name surface."
+  },
+  {
+   "file_offset": "0x2C034",
+   "old_hex": "eaf7a6fc",
+   "new_hex": "01f124fb",
+   "what": "dialogue nameplate frame draw wrapper call B",
+   "why": "route the second frame-construction path through the same scoped x=1..16 tilemap wrapper."
+  },
+  {
+   "file_offset": "0x2C42C",
+   "old_hex": "6523",
+   "new_hex": "8523",
+   "what": "dialogue nameplate initialized blend-window right edge 101->133",
+   "why": "keep the initialized WIN1 range consistent with the widened nameplate before the first redraw."
+  },
+  {
+   "file_offset": "0x12D680",
+   "old_hex": "249099655995a5999926599524999924a9aa645695a8aaaa24400224542599682aa65595999aa995a595a69aaa955025a5a526265a2964a596a82aa8002400555595a6aaa6545525a8aa2a555595",
+   "new_hex": "10b583b0059c0094069c0194079c0294094ca0470948c18a028b018341838183c18302844030c18a028b018341838183c183028403b010bd8569010240e4010668464621090140181e9000217047",
+   "what": "dialogue nameplate frame and body-pointer helpers",
+   "why": "dead bytes from the relocated original atlas host a 64-byte wrapper that preserves the stock frame draw and expands its two tilemap rows to left border + 14 green interior tiles + right border, followed by a 14-byte sp+0x460 body-buffer helper."
   },
   {
    "file_offset": "0x2BCE8",

@@ -68,7 +68,7 @@ evidence AND owner sign-off.
 巴斯克·奥姆→巴斯克·欧姆 · 玛修玛·切洛→玛修曼·塞罗 · 莎克蒂/莎克缇→夏克蒂 ·
 史汀→斯汀 · 基灵→基林 · 迪基姆→德基姆(·巴顿) · 贝纳黛特→贝尔纳黛特 ·
 玛丽贝尔→梅丽贝尔 · 迈克尔→米哈埃尔(·格恩) · 杜卡奇/德卡契→杜加奇 ·
-格雷米·普露2/普露二→格雷米·普露兹 · 托鲁基斯→多鲁基斯 · 格瓦典→格瓦丹 ·
+格雷米·普露2/普露二→格雷米+普露兹 · 托鲁基斯→多鲁基斯 · 格瓦典→格瓦丹 ·
 塞蕾茵/塞莱茵→瑟蕾因 · 阿尔斯特→阿尔斯塔 · 西罗科→西罗克 · 加拉霍→卡拉豪 ·
 布莱德→布莱特(·诺亚) · 葛雷米→格雷米 · 克莱茵→克莱因 · 威尔基姆→威尔盖姆 ·
 大师亚洲→亚洲尊者 · 卡洛德→加洛德 · 朱多→捷多 · 萨比尼→扎比涅 ·
@@ -80,25 +80,30 @@ evidence AND owner sign-off.
 items (hidden vs-Archangel exercise vs free-battle special exercise) — each line
 follows ITS OWN jp reference. 零/零式: Heero's ZERO(-System) lines are 零式; the
 person 零·村雨 stays 零. Bare surname 特里埃尔 mid-sentence is fine; the full name
-is D·特里埃尔 (boost plate 特里埃尔（增压） — D· doesn't fit the 84px plate).
+is D·特里埃尔 (boost plate 特里埃尔(强化) — D· does not fit the
+cross-surface name budget).
 
 **Owner rejections (do NOT "fix" these):** 强尼莱汀 has no dot; 劳·鲁·克鲁泽 keeps
 the short mainland form; 希罗·尤尔 (moegirl page title — the 尤伊 forms are
 annotation-only); 零式系统 not MD零式系统 (pool budget); 高达Mk20号机 stays (104px
-budget); 特里尔（增压）-class width compromises are recorded per-record.
+budget); 格拉克斯德卡契 has no dot.
 
 **Burst-variant pilot names (OWNER RULING 2026-07-18):** keep the full JP-faithful
 forms — 阿斯兰（SEED）, 基拉（SEED）, 卡嘉莉（SEED）, 拉克丝（SEED）, 真（SEED）,
-希罗·尤尔（零式）, 米利亚尔特（零）, 多蒙（明镜止水）, 特里埃尔（增压） — and fix
+希罗(零式系统), 米利亚尔特零式, 多蒙(明镜止水), 特里埃尔(强化) — and fix
 the "long ()" look at the GLYPH level: pilot-name parens use the minted ZH-band
 narrow-paren cells (the JP renderB thin-paren shape painted into 12×12 atlas
 cells), NOT the fullwidth （） cells and NEVER the renderB one-byte parens
 (A12: the speaker plate renders the same bytes renderA-direct — one-byte 0x7D
-there draws モ; v1.1 shipped that bug).  A shortening pass proposed as the
-alternative was explicitly declined.  Residual, accepted by the owner: 12px cell
-advance means the 8-9-cell names still reach the battle-plate badge/digit area
-(thin strokes make it minor); recorded as per-record width ratchets in
-`gate_glyph_width`'s `PILOT_WIDTH_ALLOW` — new names must still fit 84px.
+there draws モ; v1.1 shipped that bug). State labels themselves are not shortened;
+only parentheses may be omitted when they alone would break the shared budget.
+Residual, accepted by the owner: 12px cell
+advance means the longest names can still reach the battle-plate badge/digit area
+(thin strokes make it minor). Every name must fit the 84px cross-surface budget;
+`gate_glyph_width`'s `PILOT_WIDTH_ALLOW` remains empty. When parentheses alone would
+push an otherwise complete state name over budget, they may be dropped as in
+米利亚尔特零式; names that fit keep parentheses. The dialogue plate itself accepts
+nine 12px cells.
 
 **ID skills & 名台词 (binding style):** a cut-in quote is ALWAYS the full famous
 line in mainland-community wording (websearch 萌娘百科/biligame/百度百科); the skill

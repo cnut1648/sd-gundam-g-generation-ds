@@ -114,12 +114,13 @@ alignment law, punctuation tail) is catalogued in `data/renderb_charset.json` �
 trampoline bytes with THAT table, never with the renderA charmap (the JSON `text`
 fields of trampoline banks are renderA NOTATION, not what the player sees).
 
-The speaker plate is a renderA-direct exception with its own Y anchor: style
-immediate `0x2BCA6` (2→3) selects the 12×12 path and `0x2BCE8` (`movs r2,#3`)
-supplies the plate-only penY=3 so the 12px ink-bottom lands on the JP 8×16 ink
-row (rows 2..14 of the plate's 16px line box). Both are required together;
-dialogue-body positioning uses different call sites and is unaffected (gate
-`nameplate_render_path` pins the pair on both images; adopted from PR #4).
+The speaker plate is a renderA-direct exception with its own Y anchor: its height
+at `0x2BCA6` remains two tiles, descriptor flags at `0x2BCAC` change `0x80→0x81`
+to select the 12×12 path, and `0x2BCE8` (`movs r2,#3`) supplies the plate-only
+penY=3 so the 12px ink-bottom lands on the JP 8×16 ink row (rows 2..14 of the
+plate's 16px line box). All three values are required together; dialogue-body
+positioning uses different call sites and is unaffected (gate
+`nameplate_render_path` pins the set on both images).
 
 ## 4. Block/segment grammar (stage dialogue)
 
@@ -198,8 +199,8 @@ Measured field budgets (px unless noted):
 | ID-command LIST summary | **64 px** (column x176, clipped by the selection bracket at x240) — ≈5 hanzi |
 | ID-command detail box | ~76 px (≈6 hanzi + margin) |
 | ID-command box titles | ≤6 hanzi (≤72 px) |
-| speaker nameplate | 7 glyphs hard |
-| **pilot names (char-DB), all surfaces** | **≤84 px (7 cells) cap for every name — `PILOT_WIDTH_ALLOW` is empty.** Widths are priced at the true trampoline advance (6 px parens / 8 px S·E·D letters, §3), which brings every burst-variant name inside the cap: 阿斯兰(SEED)=80, 多蒙(明镜止水)=84, 基拉(SEED)=68, 希罗(零式)=60 (cid 176 renamed from 希罗·尤尔(零式) by owner decision). The binding fields: battle focus/formation plates (name pen x=51, fixed LV badge x=132 → ~81 px; an exactly-84 px name touches the badge by 3 px — accepted residual), the 编成 detail-plate window (88 px, see below), the roster list (name x=8, LV badge x=96 → 88 px), the speaker plate (84 px at flat 12 px advance — renderA-direct; a burst name spoken in dialogue is a listed residual). Gate: `glyph_width`. Pilot-name parens = the minted ZH-band narrow-paren cells (never one-byte 0x7D/0x7E — A12) |
+| speaker nameplate | **9 glyphs hard** (14×2 tiles = 112 px surface; 108 px text at fixed 12 px advance) |
+| **pilot names (char-DB), all surfaces** | **≤84 px (7 cells) cross-surface cap; `PILOT_WIDTH_ALLOW` is empty.** Widths are priced at the true trampoline advance (6 px parens / 8 px S·E·D letters, §3): 阿斯兰(SEED)=80, 多蒙(明镜止水)=84, 基拉(SEED)=68, 希罗(零式系统)=84, 米利亚尔特零式=84. The binding non-dialogue fields remain the battle focus/formation plates (name pen x=51, fixed LV badge x=132 → ~81 px; an exactly-84 px name touches the badge by 3 px — accepted residual), the 编成 detail-plate window (88 px, see below), and the roster list (name x=8, LV badge x=96 → 88 px). The widened speaker plate is no longer the limiting field. Gate: `glyph_width`. Pilot-name parens = the minted ZH-band narrow-paren cells (never one-byte 0x7D/0x7E — A12); an over-budget form may drop the parentheses only when the state label remains unambiguous, as in 米利亚尔特零式. |
 | 编成 detail-plate name window | **88 px REAL** (11 tiles): the name row is OBJ text (widget tile 0x83, x=64 y=8, sprites 32+32+16+8 px per half-row into OBJ tiles 0x83..0x98); widened from the JP-design 80 px — the JP max name was exactly 80 px — by the two width immediates @0x54BE0 (widget create) + @0x5487E (redraw render), which MUST stay equal (LESSONS §A13) |
 | BackStage weapon-name field | 104 px (was 80 px; widened by a 1-byte field patch, scoped to names ≥14 cells natural width) |
 | unit-list carried-name field | 6 glyphs (longer names clamp; trailing cells blanked) |

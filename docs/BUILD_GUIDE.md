@@ -16,9 +16,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 
 * Input: the Japanese cartridge dump, sha1 `12443b91297a57bcd2ace8da989c26ae635a79fd`.
-* Output: `sd-gundam-g-generation-zh.nds`, 30,324,072 B, sha1
-  `509f7840c9f24f3e09fbd12b8004e64698736e42`; with `--pad32m` also the 32 MiB 0xFF-padded
-  image (sha1 `08b3276fb67a1c95fa4be544a759ec2e3d1289a3`). (`data/manifest.json` is the
+* Output: `sd-gundam-g-generation-zh.nds`, 30,359,400 B, sha1
+  `67a1132b21e2f9f40252aa25e194fdbe6f22323f`; with `--pad32m` also the 32 MiB 0xFF-padded
+  image (sha1 `00fa36d068d1fff331e020df24519d8d0a5b73f6`). (`data/manifest.json` is the
   authoritative record of all three hashes.)
 * The build is a **single deterministic pass** (~5 s). Every component is verified against
   `data/manifest.json`; the final ROM hash is verified last. `--skip-verify` downgrades
@@ -27,7 +27,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Then verify:
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (32)
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (42)
 .venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot
 ```
 

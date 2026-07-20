@@ -69,6 +69,7 @@ DATA_FILE_TABLES = {
     "3d5.bin": "graphics/3d5.json",
     "478.bin": "graphics/478.json",
     "48a.bin": "graphics/48a.json",
+    "c31.bin": "graphics/c31.json",
 }
 
 CUTIN_TERMINATOR = b"\x00\x03\x00\x01"
