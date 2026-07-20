@@ -12,11 +12,15 @@ three known surfaces render complete glyphs in the real engine
 
     * Extra -> Profile -> character list          (map 0x0600F800)
     * Extra -> Profile -> unit list               (map 0x0600F800)
-    * Continue -> slot 3 -> MS development -> System Tree  (map 0x0600E000)
+    * Continue -> slot 3 (BackStage FB) -> MS开发 -> 系統図
+      = the 開発系統図 category-select screen, whose bottom half is the live
+      tree preview with the root unit's name label   (map 0x0600E000)
 
 Both Profile lists are checked on entry and again after changing the kana
 category, so the regression covers their redraw path as well as the original
-issue frames.  The System Tree is checked on entry and after moving selection.
+issue frames.  The System Tree is checked on entry (ザク系 preview, label
+扎古1) and after moving the category selection down (ドム系 preview, label
+里克·大魔) — each move recomposes the whole tree, covering the redraw path.
 
 The verdict is deliberately not a whole-frame golden.  Each route first has
 to match the surrounding screen structure (otherwise it is a navigation
@@ -225,8 +229,8 @@ def capture_system_tree(
     nav = out / "system_tree_nav"
     boot_to_menu(emu, rom, sav, nav)
 
-    # Continue -> slot 3 -> confirm; clear the post-load messages and settle on
-    # the back-stage strategy menu.  This is the fixture's documented route.
+    # Continue -> slot 3 (the BackStage free-battle save) -> confirm the load;
+    # the slot opens on a short story scene, so mash A through it and settle.
     emu.key("A", pause=1.5)
     emu.key("DOWN", count=2, pause=0.7)
     emu.key("A", pause=1.2)
@@ -235,11 +239,16 @@ def capture_system_tree(
     emu.key("A", count=18, pause=0.5)
     time.sleep(10.0)
 
-    # Back stage item 3 (MS开发) -> RIGHT -> DOWN (系统图) -> A.
-    emu.key("DOWN", count=2, pause=0.9)
-    emu.key("A", pause=3.0)
-    emu.key("RIGHT", pause=2.5)
-    emu.key("DOWN", pause=1.2)
+    # The A-mash leaves the BackStage root with the 作戦 submenu OPEN and the
+    # cursor on 作戦内容 (a DOWN×2+A from here lands on the 索敵 confirm, NOT
+    # MS开发).  Unwind with B back to the tab column — extra B presses are
+    # no-ops there — then: DOWN×2 -> MS开发 tab, A -> its submenu (cursor on
+    # 格納庫), DOWN -> 系統図, A -> the 開発系統図 category-select screen whose
+    # bottom half is the tree preview with the root unit's name label.
+    emu.key("B", count=3, pause=1.5)
+    emu.key("DOWN", count=2, pause=1.5)
+    emu.key("A", pause=2.5)
+    emu.key("DOWN", pause=1.5)
     emu.key("A", pause=5.0)
 
     enter = out / "system_tree_enter.png"
@@ -247,7 +256,8 @@ def capture_system_tree(
         raise RuntimeError(f"failed to capture {enter}")
     enter_metrics = tree_metrics(hz.load_gray(enter))
 
-    # A second unit name exercises the same aliased row after selection moves.
+    # Moving the category selection (ザク系 -> ドム系) recomposes the whole
+    # tree with a different root unit name on the same aliased first row.
     emu.key("DOWN", pause=3.0)
     after_down = out / "system_tree_after_down.png"
     if not emu.shot(after_down):
