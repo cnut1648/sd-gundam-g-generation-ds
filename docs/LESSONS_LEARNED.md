@@ -790,6 +790,13 @@ label strings must embed ZH-band digit tokens (NT等级N, 指挥N; there is NO r
 digit append — the digits are baked in the five 指揮レベル strings). The offline
 oracle mirrors the +3 anchor so screenshots and oracle renders agree by construction.
 
+The dialogue speaker plate is the renderA-direct counterpart of the same geometry:
+it does NOT pass through the trampoline cave (its `0x2013C00` call is not detoured),
+so the `0x2BCA6` style fix alone left the plate's own penY at 0 and 12px name ink
+rode the plate's top border, 3px above the JP 8×16 rows. Patch the plate's OWN
+anchor at `0x2BCE8` (`movs r2,#3`; 11+3=14 < 16 cannot clip) — never move the
+shared dialogue-body renderer, whose call sites are separate (PR #4).
+
 ### G5. Growing pooled strings: ledger-mediated relocation, three arenas
 Order: ui-bank heap-safe gaps → resident-cave zero runs → ledger-vacated spans
 (old homes of relocated strings; provably dead = no table ptr and no arm9 word
