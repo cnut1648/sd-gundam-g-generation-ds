@@ -1485,6 +1485,121 @@ def gate_stage_operand_relocation(rep, ctx):
                 f"data-owned/rewritten exempt)")
 
 
+# ---- cinematic narration caption line budget (the 居住在PLANT freeze class) ---
+CAPTION_LINE_BYTES = 36     # cinematic caption line-buffer capacity, in written payload
+                            # bytes per 00-delimited segment.  LIVE-VERIFIED on the
+                            # _STG08A post-battle montage (savestate-splice byte sweep): a
+                            # 36-byte segment renders, a 37-byte segment overruns the buffer
+                            # and corrupts an adjacent pointer -> data-abort double fault
+                            # (BIOS spin 0xFFFF0104) that parks on the last cut-in frame
+                            # (the 居住在PLANT freeze).  This is NOT a slot budget: JP reaches
+                            # 21 rendered slots on this surface but only ~19 bytes (1-byte
+                            # kana + compact 0xF0 macros), whereas ZH glyphs are all 2-byte,
+                            # so the written-byte length is the true invariant (18 all-2-byte
+                            # slots == 36 bytes == the buffer edge).
+
+
+def _caption_seg_bytes(payload: bytes, expand) -> list:
+    """Written-byte length of each 00-delimited segment of a caption payload — what the
+    game copies into the fixed caption line buffer.  Token-aware: a direct 2-byte glyph
+    token counts as 2, a 1-byte code as 1, and a 0xF0 dictionary macro as the byte length
+    of its expansion (macros are decoded into the buffer, so the expanded run is what
+    fills it — counting the raw 2 bytes would under-measure a macro-bearing line)."""
+    segs = [0]
+    i, n = 0, len(payload)
+    while i < n - 1:
+        b = payload[i]
+        if b == 0x00:
+            if payload[i + 1] == 0x00:
+                break
+            segs.append(0)
+            i += 1
+            continue
+        if b >= 0xF0:
+            idx = ((b & 0x0F) << 8) | payload[i + 1]
+            segs[-1] += len(expand(idx) or b"")
+            i += 2
+        elif b >= 0xE0:
+            segs[-1] += 2; i += 2
+        else:
+            segs[-1] += 1; i += 1
+    return segs
+
+
+def gate_caption_line_budget(rep, ctx):
+    """Cinematic CAPTIONS (the between-mission montage / story-digest recap) are
+    displayed INLINE by the 0x04 caption-mode opcode (`.. 04 00 15 <caption>`) and
+    render each 00-delimited segment VERBATIM into a fixed 36-BYTE line buffer.
+    Speaker dialogue is different: `06 <spk> .. 13 CALL <pump>`, which the box wraps
+    by pixel width — so an over-wide dialogue line is harmless.  But a caption
+    segment longer than 36 written bytes overruns the buffer and corrupts an adjacent
+    pointer -> data-abort double-fault (BIOS spin 0xFFFF0104), which parks on the last
+    cut-in frame (the _STG08A post-battle 居住在PLANT freeze; same montage in _STG06SP
+    / _STG08B / _STG98).  The buffer size was pinned live by a savestate-splice byte
+    sweep (36 bytes runs, 37 bytes freezes).  It is a BYTE limit, not a slot limit:
+    JP reaches 21 rendered slots here yet stays ~19 bytes (kana + 0xF0 macros), while
+    ZH glyphs are all 2-byte.  Real captions are identified by the `04 00 15` framing
+    (operand 0x00); the あいうえお warmup/template blocks carry a non-zero operand
+    (0x14) and are not pushed through this buffer, so they are excluded — but every
+    real caption, INCLUDING 1-byte-lead 『…』 openers, is checked."""
+    expand = _make_dict_expander(ctx["a9"], PRIMARY_DICT_OFF)
+    stages_dir = REPO / "data" / "zh" / "stages"
+    bad, checked = [], 0
+    for spec_path in sorted(stages_dir.glob("*.json")):
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+        fn = spec["file"]
+        built = ctx["cand_file"](fn)
+        if built is None:
+            continue
+        edits = [(int(e["jp_offset"], 16), e["jp_len"], bytes.fromhex(e["zh_hex"]))
+                 for e in spec.get("edits", [])]
+        edits += [(int(i["jp_offset"], 16), 0, bytes.fromhex(i["hex"]))
+                  for i in spec.get("inserts", [])]
+        edits.sort()
+        ends = [o + l for o, l, _ in edits]
+        cum, acc = [], 0
+        for o, l, nb in edits:
+            acc += len(nb) - l
+            cum.append(acc)
+
+        def shift(p):
+            k = bisect.bisect_right(ends, p)
+            return cum[k - 1] if k else 0
+
+        for e in spec.get("edits", []):
+            zh = bytes.fromhex(e["zh_hex"])
+            if len(zh) < 3 or zh[0] != 0x15:
+                continue
+            boff = int(e["jp_offset"], 16) + shift(int(e["jp_offset"], 16))
+            # A REAL rendered caption is the inline caption-mode opcode `04 00 15`
+            # (operand byte == 0x00).  A non-zero operand (e.g. 0x14) marks the あいうえお
+            # glyph-warmup / scene-template blocks the game does NOT push through this
+            # buffer (JP ships them oversized -- 43 bytes -- without crashing).  The
+            # dialogue pump (`06 <spk> .. 13 CALL`) wraps by pixel width, so it is safe
+            # and is never `04`-framed.  Deliberately NO low-byte-lead pre-filter here:
+            # 1-byte-lead captions (『…』 openers, 「地球…」) are real and MUST be checked.
+            if (boff < 2 or built[boff] != 0x15
+                    or built[boff - 2] != 0x04 or built[boff - 1] != 0x00):
+                continue
+            term = token_term(built, boff + 1)
+            if term < 0:
+                continue
+            segs = _caption_seg_bytes(built[boff + 1:term], expand)
+            checked += 1
+            if any(u > CAPTION_LINE_BYTES for u in segs):
+                bad.append((fn, e["jp_offset"], segs, e.get("zh_text", "")[:26]))
+    if bad:
+        fn, o, segs, t = bad[0]
+        rep.add("caption_line_budget", False,
+                f"{len(bad)} cinematic narration caption(s) exceed the "
+                f"{CAPTION_LINE_BYTES}-byte line buffer (segment overflow -> data "
+                f"abort; e.g. {fn}@{o} seg-bytes {segs} '{t}')")
+    else:
+        rep.add("caption_line_budget", True,
+                f"{checked} cinematic narration captions: every segment <= "
+                f"{CAPTION_LINE_BYTES} bytes (buffer-safe)")
+
+
 def _bv_headers_terms(oj: bytes):
     """All battle-voice sub-headers `05 ?? ?? 00 06 ?? ??` and terminators
     `00 03 00 0X` in the JP file (byte positions)."""
@@ -3475,6 +3590,7 @@ GATES = [
     gate_inline_dialogue_blocks,
     gate_event_script_pointers,
     gate_stage_operand_relocation,
+    gate_caption_line_budget,
     gate_battle_voice_structure,
     gate_bark_framing,
     gate_untranslated_dialogue,
@@ -3635,6 +3751,18 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("re-bake a _STG20A fork operand 0x17 short (the BUG-1 soft-lock)",
                 ["stage_operand_relocation"],
                 lambda c: mut_file(c, "_STG20A.bin", bake_stale_operand))
+
+    def merge_caption_lines(d):
+        # merge the _STG08A 居住在PLANT narration caption's two 26/20-byte lines into one
+        # ~47-byte line by paving its 00 segment separator @0xcce5 with a glyph — the
+        # cinematic-caption buffer overflow that data-aborts (the post-battle freeze)
+        assert d[0xccca] == 0x15 and d[0xcce5] == 0x00, "caption block/separator moved"
+        d[0xcce5] = 0x41
+        return bytes(d)
+    expect_fail("merge a narration caption's two lines into one >36-byte line "
+                "(the 居住在PLANT cinematic-caption buffer-overflow freeze)",
+                ["caption_line_budget"],
+                lambda c: mut_file(c, "_STG08A.bin", merge_caption_lines))
 
     def merge_bio_lines(ctx):
         # merge two adjacent full prose lines into one over-wide line (>18 cells)
