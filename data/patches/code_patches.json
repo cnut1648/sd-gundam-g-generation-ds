@@ -170,6 +170,13 @@
    "why": "companion of 0x5487E: the page-open widget create (0x2014358: width r2, tile 0x83, x=64 y=8) allocates the OBJ sprite arrangement and tile block for the plate name row.  Width 11 makes the arranger emit 32+32+16+8px sprites per half-row (x=64..152) and the commit chunker copy 4+4+2+1 tiles into OBJ tiles 0x83..0x98 — 0x97/0x98 verified free on every OAM state of this page (the next allocation starts at 0x0C8-band and the portrait stops at 0x52).  Proven live: 艾帕·西纳普斯 renders complete, frame diff vs the 80px build is exactly the 斯-completion pixels."
   },
   {
+   "file_offset": "0x5693C",
+   "old_hex": "9f020000",
+   "new_hex": "ab020000",
+   "what": "配属 ID/ability BG char-tile partition",
+   "why": "the three left ID-command titles share one sequential engine-B char-tile bank starting at 0x263; at the registered 64px title budget each draw can consume r7=12 tiles per 8px row, so 3 titles x 2 rows reserve through tile 0x2AA.  The JP right-ability bank started at 0x29F and therefore overwrote tiles 0x29F..0x2A2 in the third title's lower row, producing wrong/missing glyph strokes.  Starting abilities at the exact non-overlap boundary 0x2AB leaves their own worst-case 72-tile reservation ending at 0x2F2, below the next 0x300 bank."
+  },
+  {
    "file_offset": "0x6588E",
    "old_hex": "062800d0",
    "new_hex": "2af1c1fb",

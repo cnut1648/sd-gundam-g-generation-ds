@@ -18,6 +18,7 @@ in-game failure the gate protects against.
   ui_text_dispatch            the unit-info/ID screen 乱码 (garble) regression
   nameplate_render_path       illegible 8px speaker nameplates / stray code at the patch
   glyph_row_clip              issue #2 lower-strip glyph loss on Profile/development-tree rows
+  assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
@@ -498,6 +499,15 @@ GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
     "02d3f0bc08bc184787b0041c7047c046"
     "0098000600f0200600e0000600f80006"
 )
+ASSIGN_ID_TITLE_TILE_BASE_OFF = 0x56B70
+ASSIGN_ID_ABILITY_TILE_BASE_OFF = 0x5693C
+ASSIGN_ID_TITLE_TILE_BASE = 0x263
+ASSIGN_ID_ABILITY_TILE_BASE_JP = 0x29F
+ASSIGN_ID_ABILITY_TILE_BASE = 0x2AB
+ASSIGN_ID_ROWS = 3
+ASSIGN_ID_TEXT_HEIGHT_TILES = 2
+ASSIGN_ID_MAX_ROW_TILES = 12
+ASSIGN_ID_TILE_LIMIT = 0x300
 UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
@@ -837,6 +847,42 @@ def gate_glyph_row_clip(rep, ctx):
     rep.add("glyph_row_clip", True,
             "management 0x06009800 + info-panel 0x0620F000 whole-map, Profile "
             "0x0600F800 and development-tree 0x0600E000 13x2-signature contexts pinned")
+
+
+def gate_assignment_id_tile_partition(rep, ctx):
+    """The 配属 lower screen draws three left ID-command titles and three right
+    ability names into sequential engine-B BG char-tile banks.  A 64px title
+    can advance to r7=12 tiles (the 12px renderer needs one padding cell), so
+    each three-row, two-tile-high bank must reserve 72 tiles.  JP starts the
+    ability bank at 0x29F, inside the title reservation 0x263..0x2AA; later
+    ability draws overwrite the third title's lower glyph halves.  The ZH
+    build must keep the ability bank at the exact non-overlap boundary 0x2AB,
+    and both worst-case reservations must remain below the next bank 0x300."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    jp_title = struct.unpack_from("<I", aj, ASSIGN_ID_TITLE_TILE_BASE_OFF)[0]
+    jp_ability = struct.unpack_from("<I", aj, ASSIGN_ID_ABILITY_TILE_BASE_OFF)[0]
+    title = struct.unpack_from("<I", az, ASSIGN_ID_TITLE_TILE_BASE_OFF)[0]
+    ability = struct.unpack_from("<I", az, ASSIGN_ID_ABILITY_TILE_BASE_OFF)[0]
+    reserve = ASSIGN_ID_ROWS * ASSIGN_ID_TEXT_HEIGHT_TILES * ASSIGN_ID_MAX_ROW_TILES
+    title_end = title + reserve
+    ability_end = ability + reserve
+    problems = []
+    if jp_title != ASSIGN_ID_TITLE_TILE_BASE:
+        problems.append(f"JP title base {jp_title:#x} != {ASSIGN_ID_TITLE_TILE_BASE:#x}")
+    if jp_ability != ASSIGN_ID_ABILITY_TILE_BASE_JP:
+        problems.append(f"JP ability base {jp_ability:#x} != {ASSIGN_ID_ABILITY_TILE_BASE_JP:#x}")
+    if title != ASSIGN_ID_TITLE_TILE_BASE:
+        problems.append(f"ZH title base {title:#x} != {ASSIGN_ID_TITLE_TILE_BASE:#x}")
+    if ability != title_end or ability != ASSIGN_ID_ABILITY_TILE_BASE:
+        problems.append(f"ZH ability base {ability:#x} != title end {title_end:#x}")
+    if ability_end > ASSIGN_ID_TILE_LIMIT:
+        problems.append(f"ability reservation ends at {ability_end - 1:#x} >= limit {ASSIGN_ID_TILE_LIMIT:#x}")
+    if problems:
+        rep.add("assignment_id_tile_partition", False, "; ".join(problems))
+    else:
+        rep.add("assignment_id_tile_partition", True,
+                f"title tiles {title:#x}..{title_end - 1:#x}; ability tiles "
+                f"{ability:#x}..{ability_end - 1:#x}; next bank {ASSIGN_ID_TILE_LIMIT:#x}")
 
 
 def gate_ui_font_atlas_dispatch(rep, ctx):
@@ -3577,6 +3623,7 @@ GATES = [
     gate_ui_text_dispatch,
     gate_nameplate_render_path,
     gate_glyph_row_clip,
+    gate_assignment_id_tile_partition,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
     gate_dialogue_dict_frozen,
@@ -3692,6 +3739,10 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["glyph_row_clip"],
                 lambda c: mut_a9(c, GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE) - 4,
                                  bytes.fromhex("00e02006")))
+    expect_fail("restore the overlapping JP 配属 ability tile bank",
+                ["assignment_id_tile_partition"],
+                lambda c: mut_a9(c, ASSIGN_ID_ABILITY_TILE_BASE_OFF,
+                                 struct.pack("<I", ASSIGN_ID_ABILITY_TILE_BASE_JP)))
     expect_fail("flip a byte inside the dialogue dictionary",
                 ["dialogue_dict_frozen"],
                 lambda c: mut_a9(c, PRIMARY_DICT_OFF + 0x40,
