@@ -80,6 +80,16 @@ imports the matching cartridge save, follows the normal menu flow without a
 savestate or RAM mutation, traverses all 24 slots, and compares each native
 framebuffer text draw against the offline pixel oracle.
 
+The in-battle 情報 copy-width scope law (LESSONS A16: SPECIAL descriptions at
+dest column 3 widen to 208px, the ID COMMAND full-strip copies at column 1 must
+stay clamped at 80px) is covered by `test/live/test_battle_info_pages.py`,
+another py-desmume test: it plays New Game → stage-1 grind → deploy → 情報,
+hooks the `0x11C1FC` clamp cave to log every (col, row, width)→decision on both
+pages, and applies the scope law as the verdict plus a stray-ink pixel probe on
+the empty ID panels.  Red-tested three ways: the v1.3 build fails the ID rows
+and shows paving ink, the pre-widen build fails the SPECIAL rows, the fixed
+build passes.  Static companion: gate `engine_a_clamp_scope`.
+
 * **Boot smoke**: fresh DirectBoot → title renders (luma/structure sanity, not black) →
   New Game → intro → first dialogue scene renders; framebuffer changes across inputs
   (a hard freeze gives identical frames).
