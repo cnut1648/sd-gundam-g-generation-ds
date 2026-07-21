@@ -318,10 +318,24 @@
   },
   {
    "file_offset": "0x11C1FC",
-   "old_hex": "0000000000000000000000000000000000000000000000000000",
-   "new_hex": "688a0730e96d090d682905d1e9880a2902db582800db50207047",
-   "what": "engine-A tile-copy clamp cave",
-   "why": "row-budget clamp body for the engine-A copy helper (called from 0x1359A), gated on the info-box context."
+   "old_hex": "000000000000000000000000000000000000000000000000000000000000555595aaaaaa5555",
+   "new_hex": "688a0730e96d090d68290bd1e9880a2908db582806dbca0703d0d02802dbd02000e050207047",
+   "what": "engine-A tile-copy clamp cave (+ in-battle SPECIAL-description widen)",
+   "why": "row-budget clamp body for the engine-A copy helper (called from 0x1359A via the 0x1B3F0C cave chain), gated on the info-box context. Base behavior unchanged: OBJ-VRAM copies (ctx[0x5c]>>0x14==0x68) with tile-row>=0xa and width>=0x58 clamp to 0x50 (80px). 2026-07-20: the in-battle 情報->SPECIAL DEFENSE/ABILITY description (bank text on OBJ VRAM 0x06884524, rendered stacked on ODD tile-rows 0xd/0xf/0x11/0x13/0x15 by fn 0x20376d0) was double-capped to ~80px -> truncated e.g. 威力450以下的光束属性射击无效 to 威力450以下的. Scoped fix: for ODD tile-rows only (lsls r2,ctx[6],#0x1f; the even-row out-of-battle box at rows 0xC/0xE/0x10/0x14/0x16 keeps 0x50 via the 0x11C222 exemption), cap the copy width at 0xD0 (208px=26 tiles, the box width) instead of 0x50 — conditional, so shorter lines copy only their actual width. Paired with the glyph-count raise 9->26 at 0x37746/0x37846 (the per-call limit fed to 0x2013C00). Extended 12 bytes into the dead in-image atlas (0x11C216..0x11C221, reference-free); disjoint from the row-stride clip (0x11C448 freeze fix, different maps), so the weapon-select freeze is untouched. Poke-verified live before bake."
+  },
+  {
+   "file_offset": "0x37746",
+   "old_hex": "0920",
+   "new_hex": "1a20",
+   "what": "SPECIAL-description glyph-count limit 9->26 (defense line loop)",
+   "why": "fn 0x20376d0 line loop passes maxGlyphs=9 (movs r0,#9) to the text renderer 0x2013C00 (via wrapper 0x20136A8 -> [sp+0x18] -> ctx[0x18] clamp), truncating in-battle SPECIAL descriptions to 9 glyphs. Raise to 26 (matches the 208px box / effect_line_stops 26-glyph budget). Pairs with the 0x11C1FC copy-width widen (odd-row branch)."
+  },
+  {
+   "file_offset": "0x37846",
+   "old_hex": "0920",
+   "new_hex": "1a20",
+   "what": "SPECIAL-description glyph-count limit 9->26 (effect-row renderer)",
+   "why": "companion call site (fn 0x20377d0 -> ret 0x203785f) with the same movs r0,#9 maxGlyphs; raise to 26 so the SPECIAL description/effect-row lines render full. Pairs with the 0x11C1FC copy-width widen."
   },
   {
    "file_offset": "0x11C222",
