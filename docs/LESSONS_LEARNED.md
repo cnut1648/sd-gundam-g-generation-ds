@@ -241,6 +241,31 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   draw with the independent pixel oracle.  The preserved v1.2 build fails 22
   rows; the fixed build passes all 266.
 
+### A16. A clamp widen scoped by row parity alone hit the sibling page (the 战场情报 ID garble)
+* **Believed:** the in-battle 情報 SPECIAL description truncation (威力450以下的光束属性
+  射击无效 → 威力450以下的) lived in fns `0x20376d0`/`0x20377d0`, so the fix raised their
+  maxGlyphs 9→26 and widened the `0x11C1FC` engine-A copy clamp for ALL odd tile-rows
+  (0x50→0xD0); the SPECIAL page verified clean live and shipped.
+* **Broken by:** an owner screenshot of the SAME 情報 flow one page down — the ID COMMAND
+  page's three 80px panels showed paved/half-erased detail glyphs.  The page dispatch at
+  `0x39162` proves `0x20377d0`+`0x20376d0` are the ID COMMAND page (case 3), NOT the
+  SPECIAL renderer (`0x2038360`, whose description drawer `0x2037ad4` already passes
+  maxGlyphs 0x1a natively) — the raises were dead for SPECIAL and the cave widen was the
+  entire fix AND the entire regression: a py-desmume exec-hook trace of the cave showed
+  BOTH pages copy on odd rows ≥`0xa`, differing only in destination tile column —
+  SPECIAL descriptions at col 3 (x=24, one 208px box), ID pages as FULL-STRIP compose
+  copies at col 1 spanning all three panels, which the widen let bleed 208px of stale
+  compose content across the panel seams.
+* **Truth:** on shared copy paths, row parity does not identify a surface; scope clamp
+  changes by the full destination signature (here: col 3 AND odd row → 0xD0, everything
+  else → the original 0x50), and bound the change by two proven states (fix==pre for
+  col≠3, fix==shipped-widen for col==3 — verified by logging the cave's r0 decisions
+  per copy on all three ROMs).
+* **Procedure:** before shipping ANY shared-cave scope change, drive EVERY page of the
+  affected screen family live (情報 root/SPECIAL/STATUS/ID COM) — the py-desmume
+  `register_exec` trace of (dest VRAM, col, row, width→decision) per page costs minutes
+  and names the discriminator for free.
+
 ---
 
 ## B. Data growth, pointers, alignment
