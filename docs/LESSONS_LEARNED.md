@@ -261,6 +261,15 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   else → the original 0x50), and bound the change by two proven states (fix==pre for
   col≠3, fix==shipped-widen for col==3 — verified by logging the cave's r0 decisions
   per copy on all three ROMs).
+* **Guard:** gate `engine_a_clamp_scope` pins the whole clamp chain byte-exact
+  (hooks `0x1359A`/`0x134AE`, the `0x1B3F0C` dispatch, the `0x11C1FC` cave — red-tested
+  in both failure directions: descoped widen AND lost widen); the behavior itself is
+  proven live by `test/live/test_battle_info_pages.py`, which plays New Game → deploy →
+  情報, logs every cave decision on the ID and SPECIAL pages and applies the scope law
+  as the verdict (v1.3 fails the ID rows + shows paving ink; the pre-widen build fails
+  the SPECIAL rows; the fixed build passes both).  This closed the audit gap that let
+  the v1.3 widen ship through 44/44 gates: `code_image_parity` whitelists the whole
+  cave band, so cave SEMANTICS need their own pin + live oracle.
 * **Procedure:** before shipping ANY shared-cave scope change, drive EVERY page of the
   affected screen family live (情報 root/SPECIAL/STATUS/ID COM) — the py-desmume
   `register_exec` trace of (dest VRAM, col, row, width→decision) per page costs minutes

@@ -19,6 +19,7 @@ in-game failure the gate protects against.
   nameplate_render_path       illegible or vertically misaligned speaker names
   dialogue_nameplate_geometry clipped long names / wrong-green frame extension
   glyph_row_clip              issue #2 lower-strip glyph loss on Profile/development-tree rows
+  engine_a_clamp_scope        战场情报 ID-panel paving / SPECIAL-description re-truncation (A16)
   assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
@@ -544,6 +545,23 @@ NAMEPLATE_FRAME_FIX = bytes.fromhex(
     "0c0bb23fa01f60180ce0d0e01160112010e00051beb0fbb3f"
     "00cbbb23b0c40010ce0c000e0d00"
 )
+ENGINE_A_CLAMP_HOOK_OFFS = (0x1359A, 0x134AE)     # both BL into the 0x1B3F0C chain
+ENGINE_A_CLAMP_HOOK_ORIG = bytes.fromhex("688ac01d")  # ldrh r0,[r5,#0x12]; adds r0,#7
+ENGINE_A_CLAMP_HOOKS = {0x1359A: bytes.fromhex("a0f1b7fc"),
+                        0x134AE: bytes.fromhex("a0f14cfd")}
+ENGINE_A_CLAMP_CHAIN_OFF = 0x1B3F0C
+ENGINE_A_CLAMP_CHAIN = bytes.fromhex(
+    "688a0730e96d144a914201d0134b1847a988122906d1e98814290fdc7028"
+    "0ddb68200be0012903d00b2901d0152905d1e988172902dc582800db5020"
+    "7047688a0730e96d044a9142f8d1e9881429f5db2f28f3d1272070470"
+    "0e00006fdc11102")
+ENGINE_A_CLAMP_CAVE_OFF = 0x11C1FC
+ENGINE_A_CLAMP_CAVE = bytes.fromhex(
+    "090d68290ed1e9880a290bdb582809db"        # OBJ 0x68 gate; row>=0xa; w>=0x58
+    "aa88032a05d1ca0703d0"                    # col==3 AND odd row -> widen path
+    "d02802dbd0207047"                        # min(w,0xD0) for SPECIAL descriptions
+    "50207047")                               # everyone else -> the JP-era 0x50 clamp
+
 GLYPH_ROW_CLIP_OFF = 0x12FE6
 GLYPH_ROW_CLIP_ORIG = bytes.fromhex("87b0041c")   # sub sp,#0x1C; mov r4,r0 (stock prologue)
 GLYPH_ROW_CLIP_FIX = bytes.fromhex("09f12ffa")    # bl -> scoped row-stride clip cave
@@ -913,6 +931,56 @@ def gate_dialogue_nameplate_geometry(rep, ctx):
         rep.add("dialogue_nameplate_geometry", True,
                 "name surface 14x2 tiles (112px/9 cells), body tile base 808, "
                 "frame x=1..16, WIN1 right=133 and main-green edge all pinned")
+
+
+def gate_engine_a_clamp_scope(rep, ctx):
+    """The engine-A OBJ copy-width clamp chain and its column scope law.
+
+    Both engine-A copy-helper detours (0x1359A, 0x134AE) BL into the 0x1B3F0C
+    dispatch cave; its OBJ branch tail-jumps to cave 0x11C1FC, which clamps
+    in-battle info-box copies (>= 0x58 px on tile-rows >= 0xa) to 0x50 (80 px)
+    EXCEPT destination tile-column 3 on ODD rows — the in-battle SPECIAL
+    DEFENSE/ABILITY description rows, the only col-3 odd-row copies — which
+    cap at 0xD0 (208 px, the description box width).
+
+    The column gate is load-bearing both ways (LESSONS A16): the in-battle
+    ID COMMAND page issues FULL-STRIP compose copies at col 1 on the same odd
+    rows, and an unscoped odd-row widen paves its three 80 px panels with
+    stale compose bytes (the v1.3 战场情报 garble — this pin fails on that
+    build); losing the col-3 branch re-truncates the SPECIAL descriptions to
+    80 px (the pre-widen state also fails this pin).  Behavior is covered
+    live by test/live/test_battle_info_pages.py; any intended change here
+    must update pin + live expectations together."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    for off in ENGINE_A_CLAMP_HOOK_OFFS:
+        if aj[off:off + 4] != ENGINE_A_CLAMP_HOOK_ORIG:
+            rep.add("engine_a_clamp_scope", False,
+                    f"JP {off:#x}={aj[off:off+4].hex()} != stock width prologue "
+                    f"{ENGINE_A_CLAMP_HOOK_ORIG.hex()}")
+            return
+        if az[off:off + 4] != ENGINE_A_CLAMP_HOOKS[off]:
+            rep.add("engine_a_clamp_scope", False,
+                    f"{off:#x}={az[off:off+4].hex()} != clamp-chain BL "
+                    f"{ENGINE_A_CLAMP_HOOKS[off].hex()}")
+            return
+    chain = az[ENGINE_A_CLAMP_CHAIN_OFF:ENGINE_A_CLAMP_CHAIN_OFF + len(ENGINE_A_CLAMP_CHAIN)]
+    if chain != ENGINE_A_CLAMP_CHAIN:
+        first = next((i for i, (g, w) in enumerate(zip(chain, ENGINE_A_CLAMP_CHAIN)) if g != w),
+                     min(len(chain), len(ENGINE_A_CLAMP_CHAIN)))
+        rep.add("engine_a_clamp_scope", False,
+                f"0x1B3F0C dispatch chain differs at {ENGINE_A_CLAMP_CHAIN_OFF + first:#x}")
+        return
+    cave = az[ENGINE_A_CLAMP_CAVE_OFF:ENGINE_A_CLAMP_CAVE_OFF + len(ENGINE_A_CLAMP_CAVE)]
+    if cave != ENGINE_A_CLAMP_CAVE:
+        first = next((i for i, (g, w) in enumerate(zip(cave, ENGINE_A_CLAMP_CAVE)) if g != w),
+                     min(len(cave), len(ENGINE_A_CLAMP_CAVE)))
+        rep.add("engine_a_clamp_scope", False,
+                f"OBJ clamp cave differs at {ENGINE_A_CLAMP_CAVE_OFF + first:#x} "
+                "(col-3 SPECIAL-description scope law — see LESSONS A16)")
+        return
+    rep.add("engine_a_clamp_scope", True,
+            "0x1359A/0x134AE -> 0x1B3F0C chain -> 0x11C1FC pinned: col-3 odd-row "
+            "copies cap 0xD0 (SPECIAL descriptions), everything else 0x50")
 
 
 def gate_glyph_row_clip(rep, ctx):
@@ -3759,6 +3827,7 @@ GATES = [
     gate_nameplate_render_path,
     gate_dialogue_nameplate_geometry,
     gate_glyph_row_clip,
+    gate_engine_a_clamp_scope,
     gate_assignment_id_tile_partition,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
@@ -3883,6 +3952,16 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["assignment_id_tile_partition"],
                 lambda c: mut_a9(c, ASSIGN_ID_ABILITY_TILE_BASE_OFF,
                                  struct.pack("<I", ASSIGN_ID_ABILITY_TILE_BASE_JP)))
+    expect_fail("drop the col-3 scope off the SPECIAL widen (the v1.3 ID-panel paving)",
+                ["engine_a_clamp_scope"],
+                # overwrite 'ldrh r2,[r5,#4]; cmp r2,#3; bne clamp50' with nops:
+                # every odd-row copy would widen again, col 1 strips included
+                lambda c: mut_a9(c, ENGINE_A_CLAMP_CAVE_OFF + 0x10,
+                                 bytes.fromhex("c046c046c046")))
+    expect_fail("re-truncate the SPECIAL descriptions (pre-widen 0x50 everywhere)",
+                ["engine_a_clamp_scope"],
+                lambda c: mut_a9(c, ENGINE_A_CLAMP_CAVE_OFF + 0x1A,
+                                 bytes.fromhex("50207047")))
     expect_fail("flip a byte inside the dialogue dictionary",
                 ["dialogue_dict_frozen"],
                 lambda c: mut_a9(c, PRIMARY_DICT_OFF + 0x40,
