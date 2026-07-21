@@ -272,7 +272,12 @@ fall into these classes (each must be reproducible by the build):
    * value-3-ink LUT `0x14510`;
    * engine-B r7 clamp trampoline @ `0x12C4A` → cave `0x1B3E22+` (affinity ghost / roster
      aliasing / info-panel strays; ctx-signature-gated);
-   * engine-A clamp trampoline @ `0x1359A` → cave `0x11C1FC`;
+   * engine-A clamp trampoline @ `0x1359A` → cave `0x11C1FC` (entered only through the
+     `0x1B3F0C` chain with r0=width preloaded; OBJ copies ≥`0x58` px on tile-rows ≥`0xa`
+     clamp to `0x50` — except dest tile-column 3 on ODD rows, the in-battle SPECIAL
+     description rows, which cap at `0xD0`. The column gate is load-bearing: the in-battle
+     ID COMMAND page issues full-strip compose copies at column 1 on the same odd rows,
+     and widening those paves the neighbour panels — the 2026-07-21 战场情报 garble);
    * plot clip trampoline @ `0x12FE6` → cave `0x11C448` (list first-glyph bottom-strip clip;
      scoped: maps `0x06009800`/`0x0620F000` whole-map, maps `0x0600E000`/`0x0600F800` only
      with the exact (origin 0, stride8 13, height 2, style 3) context signature — the
