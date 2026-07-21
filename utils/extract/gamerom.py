@@ -104,13 +104,22 @@ class GameROM:
     def cstr(self, ram: int, maxlen: int = 256) -> bytes | None:
         """NUL-terminated string bytes at a RAM pointer (game name pools).
 
-        A single 0x00 terminates a name string (names never contain a bare
-        0x00 separator the way dialogue blocks do)."""
+        TOKEN-AWARE: a byte >= 0xE0 opens a 2-byte glyph/macro token whose LOW
+        byte may itself be 0x00 (e.g. 0xE700 = atlas/renderB slot 2016 = 'Ⅱ',
+        used by the ...MkⅡ unit names).  A naive find(0x00) truncates such a
+        token mid-way and mis-decodes the orphaned high byte (the サイコガンダム
+        MkⅡ -> 'Mk9' class).  Only a STANDALONE 0x00 (not the low half of a
+        token) terminates the string."""
         r = self.resolve(ram)
         if r is None:
             return None
         buf, off = r
-        end = buf.find(b"\x00", off, off + maxlen)
-        if end < 0:
-            end = off + maxlen
-        return buf[off:end]
+        j, limit = off, min(off + maxlen, len(buf))
+        while j < limit:
+            if buf[j] >= 0xE0 and j + 1 < limit:
+                j += 2
+                continue
+            if buf[j] == 0x00:
+                break
+            j += 1
+        return buf[off:j]

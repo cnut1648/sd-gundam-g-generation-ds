@@ -176,7 +176,7 @@ def id_details(rom: GameROM) -> list[dict]:
         if end <= base:
             continue
         rec = rom.arm9[base:end]
-        stripped = rec.rstrip(b"\x00")
+        stripped = _strip_pad(rec)
         if not stripped:
             continue
         out.append({"didx": didx, "off": _hex(base), "len": len(stripped),
@@ -401,7 +401,7 @@ def bios(rom: GameROM, kind: str) -> list[dict]:
         if o0 >= len(data) or o1 <= o0:
             continue
         rec = data[o0:min(o1, len(data))]
-        stripped = rec.rstrip(b"\x00")
+        stripped = _strip_pad(rec)
         if not stripped:
             continue
         out.append({"index": k, "file": fname, "off": _hex(o0),
@@ -449,14 +449,14 @@ def parts(rom: GameROM) -> list[dict]:
     crec_by_k = {k: (o0, o1) for k, o0, o1 in crecs}
     out = []
     for k, o0, o1 in nrecs:
-        name_raw = nd[o0:o1].rstrip(b"\x00")
+        name_raw = _strip_pad(nd[o0:o1])
         item = {"index": k,
                 "name": {"file": L.PART_NAME_FILE, "off": _hex(o0), "size": o1 - o0,
                          "len": len(name_raw),
                          "text": decode_text(rom, name_raw, "bank", rom.expand_sys)}}
         if k in crec_by_k:
             c0, c1 = crec_by_k[k]
-            cap_raw = cd[c0:c1].rstrip(b"\x00")
+            cap_raw = _strip_pad(cd[c0:c1])
             item["caption"] = {"file": L.PART_CAP_FILE, "off": _hex(c0),
                                "size": c1 - c0, "len": len(cap_raw),
                                "text": decode_text(rom, cap_raw, "bank", rom.expand_sys)}
@@ -745,6 +745,47 @@ def stage_blocks(rom: GameROM, fname: str,
 # ---------------------------------------------------------------------------
 # dictionaries + string-pointer graph (labels / abilities universe)
 # ---------------------------------------------------------------------------
+def _tok_end(buf: bytes, s: int, lim: int | None = None) -> int:
+    """Token-aware NUL terminator scan (mirrors text_codec.make_macro_expander):
+    a 2-byte glyph token (>= 0xE0) may carry a 0x00 LOW byte, so only a
+    STANDALONE 0x00 terminates.  A byte-wise find(0x00) truncated such spans
+    mid-token (the サイコガンダムMkⅡ -> 'Mk9' / 以外 -> '以、' class).  Returns
+    the end index, or -1 if no standalone 0x00 lies within [s, lim)."""
+    if lim is None:
+        lim = len(buf)
+    j = s
+    while j < lim:
+        b = buf[j]
+        if b >= 0xE0 and j + 1 < lim:
+            j += 2
+            continue
+        if b == 0x00:
+            return j
+        j += 1
+    return -1
+
+
+def _strip_pad(rec: bytes) -> bytes:
+    """Drop trailing 0x00 PADDING while preserving internal single {00} breaks
+    AND the low byte of a trailing 2-byte token (完=E1 00, Ⅱ=E7 00 — the Mk9
+    class that rstrip(b'\\x00') truncated).  Scans token-aware and cuts after
+    the last real glyph/token; a run of 0x00 that no glyph follows is padding."""
+    j = 0
+    n = len(rec)
+    last = 0
+    while j < n:
+        b = rec[j]
+        if b >= 0xE0 and j + 1 < n:
+            j += 2
+            last = j
+        elif b == 0x00:
+            j += 1
+        else:
+            j += 1
+            last = j
+    return rec[:last]
+
+
 def dictionary_entries(rom: GameROM, which: str) -> list[dict]:
     """Entries of a 0xF0xx macro dictionary ('text' = dialogue/name store,
     'sys' = system/combat store)."""
@@ -756,7 +797,7 @@ def dictionary_entries(rom: GameROM, which: str) -> list[dict]:
     for idx in range(n):
         off = u16(a, base + idx * 2)
         s = base + off
-        e = a.find(b"\x00", s)
+        e = _tok_end(a, s)
         raw = a[s:e] if e >= 0 else a[s:s + 64]
         if not raw:
             continue
@@ -773,7 +814,7 @@ def _plausible_string(rom: GameROM, off: int, maxlen: int = 96) -> bytes | None:
     are exactly one macro), so any 2-byte token qualifies; bare one-byte
     strings need >= 2 glyphs to filter numeric noise."""
     a = rom.arm9
-    end = a.find(b"\x00", off, off + maxlen)
+    end = _tok_end(a, off, off + maxlen)
     if end <= off:
         return None
     raw = a[off:end]
