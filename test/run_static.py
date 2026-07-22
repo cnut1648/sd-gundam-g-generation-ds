@@ -22,6 +22,7 @@ in-game failure the gate protects against.
   engine_a_clamp_scope        战场情报 ID-panel paving / SPECIAL-description re-truncation (A16)
   assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
+  post_clear_pilot_cids       Kamille/Jerid earned forms reverting after campaign clear
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
   unit_icon_bank_frozen       Turn A / unit thumbnails corrupted by misplaced text bytes
   dialogue_dict_frozen        the battle-entry freeze from a clobbered dialogue dictionary
@@ -586,6 +587,18 @@ UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
 UI_FONT_CAVE_OFF, UI_FONT_CAVE_SIG = 0x11A2A0, bytes.fromhex("89231b01")
+POST_CLEAR_CID_SETTER_OFF = 0xF744
+POST_CLEAR_CID_SETTER_ORIG = bytes.fromhex("34225043014a11527047c046")
+POST_CLEAR_CID_SETTER_FIX = bytes.fromhex("08b50cf1b3fe08bdc046c046")
+POST_CLEAR_CID_CAVE_OFF = 0x11C4B0
+POST_CLEAR_CID_CAVE = bytes.fromhex(
+    "10280bd12b2909d134225043064a105a2c2802d00d2080011152704734225043"
+    "014a11527047c046929f2802")
+POST_CLEAR_CID_STATE_BASE = 0x02289F92
+JERID_POST_CLEAR_STAGE = "_STGSP7S.bin"
+JERID_BASE_CID_OFF = 0xB78
+JERID_ALT_CID_OFF = 0xB84
+JERID_ALT_FLAG_OFF = 0xB8C
 
 DIALOGUE_FONT_PTR_OFF = 0x1315C                  # renderA atlas base pointer literal
 FONT_RAM_RELOCATED = 0x023027A0
@@ -1074,6 +1087,58 @@ def gate_ui_font_atlas_dispatch(rep, ctx):
     else:
         rep.add("ui_font_atlas_dispatch", False,
                 f"0x131D8={got.hex()} != stock {UI_FONT_INJ_ORIG.hex()} / fix {UI_FONT_INJ_FIX.hex()}")
+
+
+def gate_post_clear_pilot_cids(rep, ctx):
+    """Pin the two original-ROM post-clear CID regressions.
+
+    Kamille: slot 16 may legitimately be CID 44 after the normal Hyper event, but
+    post-clear reconciliation can replay the stage-table default CID 43. The
+    setter guard must suppress exactly that 44->43 write and nothing broader.
+
+    Jerid: SP4S-SP6S use baseline CID 84 and flag 0x4F selects earned Turn-X CID
+    85; SP7S alone mistypes the baseline as CID 82. Fix only that u16 and keep
+    the CID-85 branch topology intact.
+    """
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    problems = []
+    jp_setter = aj[POST_CLEAR_CID_SETTER_OFF:
+                   POST_CLEAR_CID_SETTER_OFF + len(POST_CLEAR_CID_SETTER_ORIG)]
+    setter = az[POST_CLEAR_CID_SETTER_OFF:
+                POST_CLEAR_CID_SETTER_OFF + len(POST_CLEAR_CID_SETTER_FIX)]
+    cave = az[POST_CLEAR_CID_CAVE_OFF:POST_CLEAR_CID_CAVE_OFF + len(POST_CLEAR_CID_CAVE)]
+    if jp_setter != POST_CLEAR_CID_SETTER_ORIG:
+        problems.append(f"JP setter anchor @{POST_CLEAR_CID_SETTER_OFF:#x} = {jp_setter.hex()}")
+    if setter != POST_CLEAR_CID_SETTER_FIX:
+        problems.append(f"Kamille setter trampoline @{POST_CLEAR_CID_SETTER_OFF:#x} = {setter.hex()}")
+    if cave != POST_CLEAR_CID_CAVE:
+        problems.append(f"Kamille guard cave @{POST_CLEAR_CID_CAVE_OFF:#x} differs")
+    if len(cave) >= 44 and struct.unpack_from("<I", cave, 40)[0] != POST_CLEAR_CID_STATE_BASE:
+        problems.append("Kamille guard cave lost the 0x02289F92 live-CID table literal")
+
+    jp_stage = ctx["jp_file"](JERID_POST_CLEAR_STAGE)
+    stage = ctx["cand_file"](JERID_POST_CLEAR_STAGE)
+    need = JERID_ALT_FLAG_OFF + 2
+    if jp_stage is None or stage is None or len(jp_stage) < need or len(stage) < need:
+        problems.append(f"{JERID_POST_CLEAR_STAGE} missing/truncated")
+    else:
+        jp_base = struct.unpack_from("<H", jp_stage, JERID_BASE_CID_OFF)[0]
+        base = struct.unpack_from("<H", stage, JERID_BASE_CID_OFF)[0]
+        jp_alt = struct.unpack_from("<H", jp_stage, JERID_ALT_CID_OFF)[0]
+        alt = struct.unpack_from("<H", stage, JERID_ALT_CID_OFF)[0]
+        jp_flag = struct.unpack_from("<H", jp_stage, JERID_ALT_FLAG_OFF)[0]
+        flag = struct.unpack_from("<H", stage, JERID_ALT_FLAG_OFF)[0]
+        if (jp_base, jp_alt, jp_flag) != (82, 85, 0x4F):
+            problems.append(f"JP Jerid anchor = base {jp_base}, alt {jp_alt}, flag {jp_flag:#x}")
+        if (base, alt, flag) != (84, 85, 0x4F):
+            problems.append(f"built Jerid row = base {base}, alt {alt}, flag {flag:#x}")
+
+    if problems:
+        rep.add("post_clear_pilot_cids", False, "; ".join(problems))
+    else:
+        rep.add("post_clear_pilot_cids", True,
+                "Kamille slot-16 CID44->43 guard pinned; SP7S Jerid row "
+                "base84 / earned85(flag0x4F) pinned")
 
 
 def gate_code_image_parity(rep, ctx):
@@ -3830,6 +3895,7 @@ GATES = [
     gate_engine_a_clamp_scope,
     gate_assignment_id_tile_partition,
     gate_ui_font_atlas_dispatch,
+    gate_post_clear_pilot_cids,
     gate_code_image_parity,
     gate_unit_icon_bank_frozen,
     gate_dialogue_dict_frozen,
@@ -3969,6 +4035,12 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("flip a byte of combat code (outside every allowed region)",
                 ["code_image_parity"],
                 lambda c: mut_a9(c, 0x40000, bytes([c["a9"][0x40000] ^ 0xFF])))
+    expect_fail("restore the stock pilot-CID setter (Kamille can regress 44->43)",
+                ["post_clear_pilot_cids"],
+                lambda c: mut_a9(c, POST_CLEAR_CID_SETTER_OFF, POST_CLEAR_CID_SETTER_ORIG))
+    expect_fail("corrupt the post-clear Kamille CID guard body",
+                ["post_clear_pilot_cids"],
+                lambda c: mut_a9(c, POST_CLEAR_CID_CAVE_OFF + 8, b"\x00\x00"))
     expect_fail("write text-like data into a unit-thumbnail tile",
                 ["unit_icon_bank_frozen"],
                 lambda c: mut_a9(c, UNIT_ICON_BANK_LO + 8,
@@ -4012,6 +4084,14 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("strip the `00 03` stops from special-ability records",
                 ["effect_line_stops"],
                 lambda c: mut_file(c, EFFECT_ABILITY_FILE, strip_1df_stops))
+
+    def restore_jerid_sp7s_base(d):
+        assert struct.unpack_from("<H", d, JERID_BASE_CID_OFF)[0] == 84
+        struct.pack_into("<H", d, JERID_BASE_CID_OFF, 82)
+        return bytes(d)
+    expect_fail("restore SP7S Jerid's mistyped baseline CID 82",
+                ["post_clear_pilot_cids"],
+                lambda c: mut_file(c, JERID_POST_CLEAR_STAGE, restore_jerid_sp7s_base))
 
     def bake_stale_operand(d):
         # re-create BUG-1 byte-exactly: the _STG20A replay-branch fork operand
