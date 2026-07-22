@@ -5,17 +5,19 @@ This is the runtime guard for the overlapping BG char-tile banks that corrupted
 the third ID-command title on the lower screen.  It performs the owner-reported
 flow without savestates or RAM mutation:
 
-  title -> Continue -> slot 3 -> BackStage -> 编成 -> 配属
+  title -> Continue -> selected slot -> BackStage -> 编成 -> 配属
 
 It then visits all 24 selectable grid positions.  Every text draw on the lower
-detail panel is captured at the shared helper (0x02012EFC), rendered independently
-with test/render_oracle.py, and compared stroke-for-stroke with the native 256x192
-py-desmume framebuffer.  The historical build fails on x=24,y=160 in every
-non-blank slot; a fixed build has complete oracle stroke recall for all rows.
+detail panel is captured at the shared helper (0x02012EFC).  Plain rows are
+rendered independently with test/render_oracle.py and compared stroke-for-stroke
+with the native 256x192 py-desmume framebuffer; rows carrying inline 0x01 layout
+controls are recorded but excluded because the offline oracle does not model
+that control's positioning semantics.  The historical overlap build fails the
+affected plain row; a fixed build has complete oracle stroke recall there.
 
 Usage:
   .venv/bin/python test/live/test_assignment_id_render.py ROM.nds \
-      --sav /path/to/matching-cartridge.sav [--out /tmp/assignment-id]
+      [--sav /path/to/matching-cartridge.sav] [--slot 1] [--out /tmp/assignment-id]
 
 Exit 0 = pass, 1 = render mismatch, 2 = harness/navigation failure.
 """
@@ -38,8 +40,11 @@ from desmume.controls import Keys, keymask  # noqa: E402
 from desmume.emulator import DeSmuME  # noqa: E402
 
 TEST_DIR = Path(__file__).resolve().parents[1]
+REPO = TEST_DIR.parent
 sys.path.insert(0, str(TEST_DIR))
+sys.path.insert(0, str(REPO))
 from render_oracle import Oracle  # noqa: E402
+from utils.text_codec import iter_tokens  # noqa: E402
 
 DRAW_HELPER = 0x02012EFC
 BOTTOM_Y = 192
@@ -93,7 +98,8 @@ def stroke_present(pixel: tuple[int, ...]) -> bool:
 
 
 def compare_call(oracle: Oracle, frame: Any, call: dict[str, Any]) -> dict[str, Any]:
-    expected = oracle.render_line(bytes.fromhex(call["raw"]), "bank").convert("RGB")
+    raw = bytes.fromhex(call["raw"])
+    expected = oracle.render_line(raw, "bank").convert("RGB")
     x0, y0 = call["x"], BOTTOM_Y + call["y"]
     expected_stroke = present_stroke = 0
     for y in range(expected.height):
@@ -106,6 +112,11 @@ def compare_call(oracle: Oracle, frame: Any, call: dict[str, Any]) -> dict[str, 
                 present_stroke += 1
     return {
         **call,
+        # A low byte 0x01 inside a two-byte glyph token (for example E8 01 = 卡)
+        # is text, not a layout control.  Only a standalone one-byte 0x01 makes
+        # the row non-comparable with the offline oracle.
+        "oracle_comparable": not any(tok == 0x01 and ln == 1
+                                     for _off, tok, ln in iter_tokens(raw)),
         "expected_stroke": expected_stroke,
         "present_stroke": present_stroke,
         "recall": present_stroke / expected_stroke if expected_stroke else 1.0,
@@ -136,8 +147,11 @@ def close_silently(emu: Any) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("rom", type=Path)
-    ap.add_argument("--sav", required=True, type=Path,
-                    help="matching cartridge .sav whose third slot enters BackStage")
+    ap.add_argument("--sav", type=Path,
+                    default=TEST_DIR / "fixtures" / "assignment_slot1_newgame_plus.sav",
+                    help="matching cartridge .sav (default: committed slot-1 assignment fixture)")
+    ap.add_argument("--slot", type=int, choices=range(1, 4), default=1,
+                    help="save slot to select (1-3; default: 1 for the committed fixture)")
     ap.add_argument("--out", type=Path,
                     help="artifact directory (default: a new /tmp directory)")
     args = ap.parse_args()
@@ -151,7 +165,7 @@ def main() -> int:
     trace: list[dict[str, int | str]] = []
     draws: list[dict[str, Any]] = []
     report: dict[str, Any] = {
-        "rom": str(rom), "sav": str(save), "out": str(out),
+        "rom": str(rom), "sav": str(save), "slot": args.slot, "out": str(out),
         "normal_flow": True, "savestate_used": False, "ram_mutation_used": False,
         "trace": trace, "states": [],
     }
@@ -175,8 +189,8 @@ def main() -> int:
         # not an A-mash through story; this save is already post-ending.
         press(emu, "START", settle=60, trace=trace)
         press(emu, "A", settle=90, trace=trace)
-        press(emu, "DOWN", settle=20, trace=trace)
-        press(emu, "DOWN", settle=20, trace=trace)
+        for _ in range(args.slot - 1):
+            press(emu, "DOWN", settle=20, trace=trace)
         press(emu, "A", settle=60, trace=trace)
         press(emu, "UP", settle=20, trace=trace)
         press(emu, "A", settle=1200, trace=trace)
@@ -213,11 +227,15 @@ def main() -> int:
                 "draw_calls": len(state_rows),
                 "third_id_seen": THIRD_ID_COORD in latest,
             })
-            worst = min((r["recall"] for r in state_rows), default=1.0)
-            print(f"  {state}: {len(state_rows):2d} panel rows, worst stroke recall {worst:.3f}", flush=True)
+            comparable_state_rows = [r for r in state_rows if r["oracle_comparable"]]
+            worst = min((r["recall"] for r in comparable_state_rows), default=1.0)
+            print(f"  {state}: {len(comparable_state_rows):2d}/{len(state_rows):2d} comparable rows, "
+                  f"worst stroke recall {worst:.3f}", flush=True)
 
         report["rows"] = rows
-        mismatches = [r for r in rows if r["present_stroke"] != r["expected_stroke"]]
+        comparable = [r for r in rows if r["oracle_comparable"]]
+        control_rows = [r for r in rows if not r["oracle_comparable"]]
+        mismatches = [r for r in comparable if r["present_stroke"] != r["expected_stroke"]]
         third_rows = [r for r in rows if (r["x"], r["y"]) == THIRD_ID_COORD]
         # At least 20 nonblank third-title draws proves the intended 24-slot
         # traversal was reached; a wrong screen must not become a vacuous pass.
@@ -226,6 +244,8 @@ def main() -> int:
         report["summary"] = {
             "states": len(report["states"]), "rows_checked": len(rows),
             "third_id_rows_checked": len(third_rows), "mismatches": len(mismatches),
+            "oracle_comparable_rows": len(comparable),
+            "control_rows_recorded_not_compared": len(control_rows),
             "reached_assignment_grid": reached, "pass": passed,
         }
         (out / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
@@ -236,7 +256,8 @@ def main() -> int:
                       f"stroke={row['present_stroke']}/{row['expected_stroke']} "
                       f"recall={row['recall']:.3f}")
         print(f"\n=== assignment ID render: {'PASS' if passed else 'FAIL'} — "
-              f"{len(rows)} rows / {len(third_rows)} third-ID rows, "
+              f"{len(comparable)}/{len(rows)} oracle-comparable rows / "
+              f"{len(third_rows)} third-ID rows, "
               f"{len(mismatches)} mismatch(es) ===")
         print(f"artifacts: {out}")
         return 0 if passed else (1 if reached else 2)

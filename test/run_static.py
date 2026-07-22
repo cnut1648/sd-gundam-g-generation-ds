@@ -21,6 +21,7 @@ in-game failure the gate protects against.
   glyph_row_clip              issue #2 lower-strip glyph loss on Profile/development-tree rows
   engine_a_clamp_scope        战场情报 ID-panel paving / SPECIAL-description re-truncation (A16)
   assignment_id_tile_partition  配属 third-ID-title corruption from an overlapping ability tile bank
+  assignment_unit_name_tile_partition  配属 long unit-name corruption from pilot-bank overlap
   ui_font_atlas_dispatch      8px mush ZH on the UI-font path / corrupt render trampoline
   code_image_parity           ANY unexplained arm9 byte change vs the JP source (combat!)
   unit_icon_bank_frozen       Turn A / unit thumbnails corrupted by misplaced text bytes
@@ -41,6 +42,7 @@ in-game failure the gate protects against.
   translation_coverage        silent translation regression (kana ratchet)
   glyph_width                 the too-wide-line blank/freeze class (ZH must fit JP field)
   field_width_budgets         box-title overflow / heap-garbage titles on the ID screens
+  assignment_unit_name_budget 配属 unit names wider than its exact 120px reservation
   label_render_consistency    mixed-size "floating" glyphs in one label list
   unit_weapon_names           unit/weapon name garbage or coverage regression
   id_command_names            ID-command name/summary/detail garbage or coverage loss
@@ -582,6 +584,17 @@ ASSIGN_ID_ROWS = 3
 ASSIGN_ID_TEXT_HEIGHT_TILES = 2
 ASSIGN_ID_MAX_ROW_TILES = 12
 ASSIGN_ID_TILE_LIMIT = 0x300
+ASSIGN_UNIT_CLAMP_RETURN_OFF = 0x11C274
+ASSIGN_UNIT_CLAMP_RETURN_BRANCH = bytes.fromhex("1ce1")  # b 0x0211C4B0
+ASSIGN_UNIT_CLAMP_CAVE_OFF = 0x11C4B0
+ASSIGN_UNIT_CLAMP_CAVE = bytes.fromhex(
+    "e86d0d49884215d1a888042812d1e88808280fd1288920280cd16889022809d1"
+    "288a0d2806d1e88a0449884202d10f2f00dd0f27704700bf00f02006ff010000"
+)
+ASSIGN_UNIT_TILE_BASE = 0x1FF
+ASSIGN_UNIT_NEXT_TILE_BASE = 0x21D
+ASSIGN_UNIT_TEXT_HEIGHT_TILES = 2
+ASSIGN_UNIT_MAX_ROW_TILES = 15
 UI_FONT_INJ_OFF = 0x131D8
 UI_FONT_INJ_ORIG = bytes.fromhex("48011618")     # stock 8x16 glyph-blit opening insns
 UI_FONT_INJ_FIX = bytes.fromhex("07f162f8")      # bl -> ZH-to-atlas trampoline cave
@@ -631,6 +644,7 @@ ID_TITLE_BUDGET_PX = 64          # ID-command box title row (engine truncates + 
 ID_EFFECT_BUDGET_PX = 76         # ID-command effect summary line in the box body
 ABILITY_NAME_BUDGET_PX = 76      # ID-ability name cell
 UNIT_NAME_BUDGET_PX = 144        # widest unit-name context (status/database field)
+ASSIGN_UNIT_NAME_BUDGET_PX = 120  # 配属 exact 15-tile row reservation
 SPEAKER_PLATE_CELLS = 9          # widened dialogue speaker nameplate (9 glyph cells)
 # Pilot-name pixel cap across EVERY surface a char-DB name reaches: the battle
 # focus/formation plates fit ~81px before the fixed LV badge (pen x=51, badge
@@ -1055,6 +1069,39 @@ def gate_assignment_id_tile_partition(rep, ctx):
         rep.add("assignment_id_tile_partition", True,
                 f"title tiles {title:#x}..{title_end - 1:#x}; ability tiles "
                 f"{ability:#x}..{ability_end - 1:#x}; next bank {ASSIGN_ID_TILE_LIMIT:#x}")
+
+
+def gate_assignment_unit_name_tile_partition(rep, ctx):
+    """The 配属 unit-name bitmap owns exactly two rows of 15 BG char tiles:
+    0x1FF..0x21C.  Its shared copy helper normally includes three trailing blank
+    8px cells in r7; copying those cells overlaps the pilot bank at 0x21D, whose
+    later draw erases the last unit-name glyphs.  Pin both the tail-branch and the
+    exact-signature guard that caps only this context at 15 tiles."""
+    a9 = ctx["a9"]
+    branch = a9[ASSIGN_UNIT_CLAMP_RETURN_OFF:ASSIGN_UNIT_CLAMP_RETURN_OFF + 2]
+    cave = a9[ASSIGN_UNIT_CLAMP_CAVE_OFF:
+              ASSIGN_UNIT_CLAMP_CAVE_OFF + len(ASSIGN_UNIT_CLAMP_CAVE)]
+    name_end = (ASSIGN_UNIT_TILE_BASE
+                + ASSIGN_UNIT_TEXT_HEIGHT_TILES * ASSIGN_UNIT_MAX_ROW_TILES)
+    problems = []
+    if branch != ASSIGN_UNIT_CLAMP_RETURN_BRANCH:
+        problems.append(f"shared clamp return {branch.hex()} != tail-branch "
+                        f"{ASSIGN_UNIT_CLAMP_RETURN_BRANCH.hex()}")
+    if cave != ASSIGN_UNIT_CLAMP_CAVE:
+        first = next((i for i, (got, want) in enumerate(zip(cave, ASSIGN_UNIT_CLAMP_CAVE))
+                      if got != want), min(len(cave), len(ASSIGN_UNIT_CLAMP_CAVE)))
+        problems.append(f"unit-name partition guard differs at "
+                        f"{ASSIGN_UNIT_CLAMP_CAVE_OFF + first:#x}")
+    if name_end != ASSIGN_UNIT_NEXT_TILE_BASE:
+        problems.append(f"unit-name reservation ends at {name_end:#x}, not pilot base "
+                        f"{ASSIGN_UNIT_NEXT_TILE_BASE:#x}")
+    if problems:
+        rep.add("assignment_unit_name_tile_partition", False, "; ".join(problems))
+    else:
+        rep.add("assignment_unit_name_tile_partition", True,
+                f"exact 配属 signature capped to {ASSIGN_UNIT_MAX_ROW_TILES} tiles/row; "
+                f"unit tiles {ASSIGN_UNIT_TILE_BASE:#x}..{name_end - 1:#x}; "
+                f"pilot bank starts {ASSIGN_UNIT_NEXT_TILE_BASE:#x}")
 
 
 def gate_ui_font_atlas_dispatch(rep, ctx):
@@ -2331,6 +2378,42 @@ def _read_field(a9, ptr, expander):
         return None
     slots = _decode_render_slots(a9, f, expander)
     return _slots_width(slots), len(slots), slots
+
+
+def gate_assignment_unit_name_budget(rep, ctx):
+    """Every real unit extracted from the JP source must fit the 配属 panel's
+    exact 15-tile (120px) row reservation.  This is intentionally narrower than
+    the 144px master-name budget used by the widest status/database context."""
+    a9 = ctx["a9"]
+    exp = _fref_off_expander(a9, PRIMARY_DICT_OFF)
+    source = json.loads((REPO / "data" / "jp" / "units.json").read_text())
+    seen, violations = set(), []
+    checked = max_width = 0
+    for unit in source["units"]:
+        utid = int(unit["utid"])
+        ro = MASTER_TABLE_OFF + utid * MASTER_STRIDE
+        p = struct.unpack_from("<I", a9, ro + MASTER_NAME_OFF)[0]
+        if p in seen:
+            continue
+        seen.add(p)
+        row = _read_field(a9, p, exp)
+        if not row:
+            continue
+        width = row[0]
+        checked += 1
+        max_width = max(max_width, width)
+        if width > ASSIGN_UNIT_NAME_BUDGET_PX:
+            violations.append((utid, p, width))
+    if violations:
+        shown = "; ".join(f"utid{utid} ptr={ptr:#x}: {width}px"
+                          for utid, ptr, width in violations[:15])
+        rep.add("assignment_unit_name_budget", False,
+                f"{len(violations)} distinct 配属 unit name(s) exceed "
+                f"{ASSIGN_UNIT_NAME_BUDGET_PX}px: {shown}")
+    else:
+        rep.add("assignment_unit_name_budget", True,
+                f"{checked} distinct real unit names <= {ASSIGN_UNIT_NAME_BUDGET_PX}px "
+                f"(widest {max_width}px)")
 
 
 def gate_field_width_budgets(rep, ctx):
@@ -3829,6 +3912,7 @@ GATES = [
     gate_glyph_row_clip,
     gate_engine_a_clamp_scope,
     gate_assignment_id_tile_partition,
+    gate_assignment_unit_name_tile_partition,
     gate_ui_font_atlas_dispatch,
     gate_code_image_parity,
     gate_unit_icon_bank_frozen,
@@ -3850,6 +3934,7 @@ GATES = [
     gate_translation_coverage,
     gate_glyph_width,
     gate_field_width_budgets,
+    gate_assignment_unit_name_budget,
     gate_label_render_consistency,
     gate_unit_weapon_names,
     gate_id_command_names,
@@ -3952,6 +4037,10 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["assignment_id_tile_partition"],
                 lambda c: mut_a9(c, ASSIGN_ID_ABILITY_TILE_BASE_OFF,
                                  struct.pack("<I", ASSIGN_ID_ABILITY_TILE_BASE_JP)))
+    expect_fail("raise the 配属 unit-name copy cap into the pilot tile bank",
+                ["assignment_unit_name_tile_partition"],
+                lambda c: mut_a9(c, ASSIGN_UNIT_CLAMP_CAVE_OFF + 0x32,
+                                 bytes.fromhex("1027")))
     expect_fail("drop the col-3 scope off the SPECIAL widen (the v1.3 ID-panel paving)",
                 ["engine_a_clamp_scope"],
                 # overwrite 'ldrh r2,[r5,#4]; cmp r2,#3; bne clamp50' with nops:

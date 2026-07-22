@@ -158,8 +158,9 @@ another build's code+data into RAM and would test the wrong bytes.
 
 ### Fixtures
 
-`test/fixtures/` ships two cartridge saves (early Session-00 sortie;
-deep New-Game+ post-X1 at the strategy map) — see `test/fixtures/README.md`.
+`test/fixtures/` ships three cartridge saves (early Session-00 sortie;
+deep New-Game+ post-X1 at the strategy map; dedicated slot-1 配属 regression)
+— see `test/fixtures/README.md`.
 
 ## 3. VLM tier — `test/vlm/`
 
