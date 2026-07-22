@@ -581,8 +581,14 @@ GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
     "11d104890d2c0ed14489022c0bd1047c032c08d1448a6418e4080589ac42"
     "02d3f0bc08bc184787b0041c7047c046"
     "0098000600f0200600e0000600f80006"
-    "014dac42e7d0efe700e00106"                # +0x601E000 tier-1 (weapon-select map)
+    "014dac42e7d09be700e00106"                # +0x601E000 tier-1 (weapon-select); no-match b -> tier-2 @0x11C3E4
 )
+# Tier-2 whole-map admission of map 0x0600F000 (编成 别働队 detachment nameplate; issue #18),
+# parked in the 12-byte dead-atlas gap between the 0x11C3A8 and 0x11C3F0 caves.
+#   ldr r5,[pc,#4]; cmp r4,r5; beq 0x211C47A (clip test); b 0x211C48C (prologue replay); .word 0x0600F000
+GLYPH_ROW_CLIP_T2_OFF = 0x11C3E4
+GLYPH_ROW_CLIP_T2_ORIG = bytes.fromhex("000009000009000009005409")   # JP dead in-image atlas
+GLYPH_ROW_CLIP_T2 = bytes.fromhex("014dac4247d04fe000f00006")
 ASSIGN_ID_TITLE_TILE_BASE_OFF = 0x56B70
 ASSIGN_ID_ABILITY_TILE_BASE_OFF = 0x5693C
 ASSIGN_ID_TITLE_TILE_BASE = 0x263
@@ -1023,8 +1029,10 @@ def gate_glyph_row_clip(rep, ctx):
     row boundary wrap and erase the lower strip of the row's first glyphs
     (issue #2 — Profile lists and the MS development tree).  The candidate
     must keep the scoped clip: hook 0x12FE6 -> cave 0x11C448 admitting maps
-    0x06009800/0x0620F000/0x0601E000 whole-map (the last is the in-battle
-    weapon-select list, added 2026-07-20 to stop the Mk2-class freeze) and
+    0x06009800/0x0620F000/0x0601E000 whole-map (the third is the in-battle
+    weapon-select list, added 2026-07-20 to stop the Mk2-class freeze) plus
+    map 0x0600F000 whole-map via the tier-2 block at 0x11C3E4 (the 编成 别働队
+    detachment top-screen nameplate, added 2026-07-22 for issue #18) and
     0x0600E000/0x0600F800 only with the exact (origin 0, stride8 13, height 2,
     style 3) context signature.  The full body is pinned — a relaxed map/signature
     check risks clipping unrelated surfaces; a lost literal brings the
@@ -1049,10 +1057,19 @@ def gate_glyph_row_clip(rep, ctx):
         rep.add("glyph_row_clip", False,
                 f"row-clip cave differs at {GLYPH_ROW_CLIP_CAVE_OFF + first:#x}")
         return
+    if aj[GLYPH_ROW_CLIP_T2_OFF:GLYPH_ROW_CLIP_T2_OFF + len(GLYPH_ROW_CLIP_T2_ORIG)] != GLYPH_ROW_CLIP_T2_ORIG:
+        rep.add("glyph_row_clip", False,
+                f"JP 0x11C3E4 tier-2 gap != dead-atlas baseline {GLYPH_ROW_CLIP_T2_ORIG.hex()}")
+        return
+    t2 = az[GLYPH_ROW_CLIP_T2_OFF:GLYPH_ROW_CLIP_T2_OFF + len(GLYPH_ROW_CLIP_T2)]
+    if t2 != GLYPH_ROW_CLIP_T2:
+        rep.add("glyph_row_clip", False,
+                f"tier-2 (0x0600F000) clip block missing/altered at {GLYPH_ROW_CLIP_T2_OFF:#x}: {t2.hex()}")
+        return
     rep.add("glyph_row_clip", True,
-            "management 0x06009800 + info-panel 0x0620F000 + weapon-select 0x0601E000 "
-            "whole-map, Profile 0x0600F800 and development-tree 0x0600E000 13x2-signature "
-            "contexts pinned")
+            "management 0x06009800 + info-panel 0x0620F000 + weapon-select 0x0601E000 + "
+            "detachment-nameplate 0x0600F000 whole-map, Profile 0x0600F800 and "
+            "development-tree 0x0600E000 13x2-signature contexts pinned")
 
 
 def gate_assignment_id_tile_partition(rep, ctx):
@@ -4106,6 +4123,9 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 ["glyph_row_clip"],
                 lambda c: mut_a9(c, GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE) - 4,
                                  bytes.fromhex("00e02006")))
+    expect_fail("drop the tier-2 (0x0600F000 detachment-nameplate) row-clip block",
+                ["glyph_row_clip"],
+                lambda c: mut_a9(c, GLYPH_ROW_CLIP_T2_OFF, GLYPH_ROW_CLIP_T2_ORIG))
     expect_fail("restore the overlapping JP 配属 ability tile bank",
                 ["assignment_id_tile_partition"],
                 lambda c: mut_a9(c, ASSIGN_ID_ABILITY_TILE_BASE_OFF,
