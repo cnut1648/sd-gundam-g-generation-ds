@@ -11,6 +11,7 @@ title menu, choose Continue (つづきから) instead of New Game to load it.
 |---|---|
 | `session00.sav` | An early-game save at **Session 00, the first sortie** (the Zanzibar pursuit stage), player warship with the mobile suits already deployed. The fastest way into a REAL combat stage: Continue → session intro → barks / combat dialogue surfaces within a couple of minutes. |
 | `newgame_plus.sav` | The deep-progress **New-Game+ (二周目) save, session X1 cleared** (in-game clock ≈ 4:55), parked at the back-stage strategy map with a developed roster. Reaches the late-game surfaces the intro cannot: back-stage menus (組織/編成/一覧), the stage-select advance flow (作戦 → 進撃), extra-session stage loads, developed units/pilots with ID abilities. |
+| `assignment_slot1_newgame_plus.sav` | The owner-reported **slot-1 New-Game+ assignment regression** fixture. Continue → slot 1 → BackStage → 编成 → 配属 → DOWN twice reaches `卡碧尼Mk2／普露机`, whose final glyph bottoms were overwritten by the adjacent pilot tile bank before the assignment unit-name partition fix. SHA1: `eeff0df5240f1a9562ea9ea9a58d74d209592e34`. |
 
 Both saves were made on (and are compatible with) the shipped translated ROM;
 they also load on the Japanese source ROM (the save format is the game's own).
