@@ -264,10 +264,11 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   tile `0x2AB`; its own 72-tile maximum ends at `0x2F2`, below `0x300`.
 * **Guard:** `assignment_id_tile_partition` pins both JP anchor literals, the ZH
   non-overlap boundary and the `0x300` upper limit.  The py-desmume live test uses
-  a matching cartridge save and normal title→Continue→slot-3→BackStage→编成→配属
-  flow (no savestate/RAM mutation), visits all 24 slots and compares every panel
-  draw with the independent pixel oracle.  The preserved v1.2 build fails 22
-  rows; the fixed build passes all 266.
+  the committed `assignment_slot1_newgame_plus.sav` and normal
+  title→Continue→slot-1→BackStage→编成→配属 flow (no savestate/RAM mutation),
+  visits all 24 slots and compares every plain panel draw with the independent
+  pixel oracle.  A row carrying a standalone `0x01` layout control is recorded
+  but not oracle-compared; the fixed build passes all 265 comparable rows.
 
 ### A16. A clamp widen scoped by row parity alone hit the sibling page (the 战场情报 ID garble)
 * **Believed:** the in-battle 情報 SPECIAL description truncation (威力450以下的光束属性
