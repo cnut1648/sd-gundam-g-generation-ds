@@ -36,6 +36,7 @@ Exit 0 iff every gate passes.  One line on what each gate protects against:
 | `nameplate_render_path` | illegible or vertically misaligned speaker names — the two-tile descriptor must retain the 12x12 path and +3px baseline |
 | `dialogue_nameplate_geometry` | clipped 8th/9th speaker-name glyphs, body-tile overlap, wrong-green frame extensions, or an unbalanced enlarged stack frame |
 | `ui_font_atlas_dispatch` | 8px-mush Chinese on the UI-font path — the ZH→atlas trampoline must be intact (or absent) |
+| `post_clear_pilot_cids` | original-ROM post-clear weakening — pins Kamille's narrow earned-CID 44 guard and Jerid's SP7S baseline 84 / earned 85 row |
 | `code_image_parity` | ANY unexplained code/data byte change vs the JP source (the combat-breakage class); allow-list + pointer-repoint rule, forbidden bands can never be allow-listed |
 | `unit_icon_bank_frozen` | corrupted Turn A / unit thumbnails — all 250 24×24 4bpp slots must remain byte-identical to JP |
 | `dialogue_dict_frozen` | the battle-entry freeze — the dialogue compression dictionary physically overlaps the UI font and must stay byte-identical to JP |

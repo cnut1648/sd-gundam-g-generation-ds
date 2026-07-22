@@ -4,6 +4,14 @@
  "built_size": 55628,
  "edits": [
   {
+   "jp_offset": "0xb78",
+   "jp_len": 2,
+   "kind": "gameplay",
+   "what": "捷利特通关后普通版本 CID 修正：82→84",
+   "why": "原版 SP4S～SP6S 的捷利特记录均为普通版 CID 84、本人取得倒X时由 flag 0x4F 选择 CID 85；仅 SP7S 的普通版误写为 CID 82，导致通关结算后能力大幅倒退。这里只把该 u16 从 0x0052 改为 0x0054，CID 85 分支及 flag 0x4F 保持不变。",
+   "zh_hex": "5400"
+  },
+  {
    "jp_offset": "0x16f1",
    "jp_len": 79,
    "kind": "dialogue",
