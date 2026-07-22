@@ -500,6 +500,8 @@ NAMEPLATE_Y_OFF = 0x2BCE8
 NAMEPLATE_Y_ORIG = bytes.fromhex("0a1c")          # adds r2,r1,#0 (r1 was cleared)
 NAMEPLATE_Y_FIX = bytes.fromhex("0322")           # movs r2,#3
 NAMEPLATE_GEOMETRY_BYTES = {
+    0x2BA38: (bytes.fromhex("90030000"), bytes.fromhex("94030000")),
+    0x2BB00: (bytes.fromhex("90030000"), bytes.fromhex("94030000")),
     0x2BB58: (bytes.fromhex("6523"), bytes.fromhex("8523")),
     0x2BB7C: (bytes.fromhex("eaf702ff"), bytes.fromhex("01f180fd")),
     0x2BC74: (bytes.fromhex("f0b5"), bytes.fromhex("fcb5")),
@@ -948,6 +950,47 @@ def gate_dialogue_nameplate_geometry(rep, ctx):
             problems.append(f"JP @{off:#x}={got_j.hex()} != {old.hex()}")
         if got_z != new:
             problems.append(f"ZH @{off:#x}={got_z.hex()} != {new.hex()}")
+    portrait_slots = ((300, 459), (460, 619), (620, 779))
+    cursor_bases = [struct.unpack_from("<I", az, off)[0] for off in (0x2BA38, 0x2BB00)]
+    cursor_end = cursor_bases[0] + 3
+    name_base = struct.unpack_from("<I", az, 0x806CC)[0]
+    name_end = name_base + 14 * 2 - 1
+    body_bases = (
+        name_base + az[0x2BD2E],
+        name_base + az[0x2BEF6],
+        name_base + az[0x65308],
+    )
+    body_end = body_bases[0] + 27 * 4 - 1
+    choice_right_base = struct.unpack_from("<I", az, 0x2BA40)[0]
+    if portrait_slots[-1][1] >= name_base:
+        problems.append(
+            f"portrait tiles end at {portrait_slots[-1][1]}, overlapping name base {name_base}"
+        )
+    if name_end >= body_bases[0]:
+        problems.append(
+            f"name tiles {name_base}..{name_end} overlap body base {body_bases[0]}"
+        )
+    if len(set(body_bases)) != 1:
+        problems.append(
+            "dialogue body tile bases disagree: "
+            f"redraw={body_bases[0]}, create={body_bases[1]}, IF-create={body_bases[2]}"
+        )
+    if cursor_bases[0] != cursor_bases[1]:
+        problems.append(
+            f"dialogue cursor tile bases disagree: choice={cursor_bases[0]}, "
+            f"normal={cursor_bases[1]}"
+        )
+    if cursor_bases[0] != body_end + 1:
+        problems.append(
+            f"cursor base {cursor_bases[0]} is not immediately after body end {body_end}"
+        )
+    if choice_right_base != 920:
+        problems.append(f"right-choice tile base is {choice_right_base}, expected 920")
+    if cursor_end >= choice_right_base:
+        problems.append(
+            f"cursor tiles {cursor_bases[0]}..{cursor_end} overlap right-choice "
+            f"tiles {choice_right_base}..{choice_right_base + 3}"
+        )
     got_j = aj[NAMEPLATE_HELPERS_OFF:NAMEPLATE_HELPERS_OFF + len(NAMEPLATE_HELPERS_ORIG)]
     got_z = az[NAMEPLATE_HELPERS_OFF:NAMEPLATE_HELPERS_OFF + len(NAMEPLATE_HELPERS_FIX)]
     if got_j != NAMEPLATE_HELPERS_ORIG:
@@ -969,7 +1012,9 @@ def gate_dialogue_nameplate_geometry(rep, ctx):
         rep.add("dialogue_nameplate_geometry", False, "; ".join(problems[:5]))
     else:
         rep.add("dialogue_nameplate_geometry", True,
-                "name surface 14x2 tiles (112px/9 cells), body tile base 808, "
+                "three portrait slots 300..779, name surface 780..807 "
+                "(112px/9 cells), ADV/IF body 808..915, cursor/left-choice "
+                "resource 916..919 and right-choice resource 920..923, "
                 "frame x=1..16, WIN1 right=133 and main-green edge all pinned")
 
 
@@ -4119,6 +4164,9 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("restore the dialogue speaker surface to ten tiles",
                 ["dialogue_nameplate_geometry"],
                 lambda c: mut_a9(c, 0x2BCC0, bytes.fromhex("0a20")))
+    expect_fail("restore the overlapping normal-dialogue cursor tile base 912",
+                ["dialogue_nameplate_geometry"],
+                lambda c: mut_a9(c, 0x2BB00, bytes.fromhex("90030000")))
     expect_fail("corrupt a map literal of the scoped row-stride clip cave",
                 ["glyph_row_clip"],
                 lambda c: mut_a9(c, GLYPH_ROW_CLIP_CAVE_OFF + len(GLYPH_ROW_CLIP_CAVE) - 4,

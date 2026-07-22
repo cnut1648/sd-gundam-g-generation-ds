@@ -79,6 +79,20 @@
    "why": "one store in the OBJ-text plotter wrote the wrong register, keeping ink-value-3 pixels transparent on the aptitude labels; storing r1 renders them."
   },
   {
+   "file_offset": "0x2BA38",
+   "old_hex": "90030000",
+   "new_hex": "94030000",
+   "what": "dialogue continue/choice cursor OBJ tile base 912->916 (choice path)",
+   "why": "the widened dialogue body now occupies tiles 808..915, so the stock cursor base 912 aliases its final four tiles. Move the choice-path cursor to the adjacent 916..919 resource shared by the left choice selector; the independently allocated right choice bracket starts at 920. Screen coordinates, animation, text spacing and every portrait tile remain unchanged."
+  },
+  {
+   "file_offset": "0x2BB00",
+   "old_hex": "90030000",
+   "new_hex": "94030000",
+   "what": "dialogue continue cursor OBJ tile base 912->916 (normal path)",
+   "why": "companion to the choice-path literal: place the normal wait/continue cursor at 916..919, immediately after the body at 808..915 and before the right choice bracket at 920..923. The three portrait slots end at tile 779, so the relocation does not consume portrait resources."
+  },
+  {
    "file_offset": "0x2BB58",
    "old_hex": "6523",
    "new_hex": "8523",
