@@ -36,7 +36,12 @@ compressed tile text, session-number chrome).
   (Treize / Zechs / Zero / Cerin / Jerid / Matsunaga / Raiden / Cima), un-squadded, downs the
   normal-form Ghingnham — no longer requires that pilot to be **level 30+**; the shared grant
   subroutine's `CALL get-level(api[0x2d]) ; PUSH #30 ; GE` becomes `PUSH #0` (level ≥ 0 = any
-  level) — one byte at file offset `0xcecd` — fixing all eight pilots at once.
+  level) — one byte at file offset `0xcecd` — fixing all eight pilots at once. A fourth
+  gameplay change fixes two original-ROM post-clear CID regressions: the common pilot-CID
+  setter now ignores only a slot-16 CID 43 write when Kamille is already the earned normal
+  Hyper CID 44 (unearned CID 43, true-Hyper CID 45, and the unavailable branch are unchanged),
+  while `_STGSP7S.bin` corrects Jerid's lone baseline typo CID 82→84 and preserves the earned
+  Turn-X CID 85 branch selected by flag `0x4F`.
 * **索敵 (free battle)** both levels the roster and *gates* the SP-arc transitions
   (24a→SP1a, 24b→SP1b, SP2b→SP3b, SP3a→SP4a, SP3b→SP4b, SP2b→SP4b, 11SP→SP4s).
 * **二周目 / New Game+**: clear-count ≥1 unlocks route choices that a first playthrough
