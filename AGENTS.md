@@ -167,11 +167,12 @@ See docs/TESTING_APPROACH.md §3.5.
 * `test/` — the full verification stack (static gates, pixel oracle + parity test,
   offline coverage renderer, live harnesses, `test/golden/` baselines).
 * `docs/` — architecture references (TEXT_SYSTEM, ROM_STRUCTURE, STAGE_FORMAT…).
-* `audit/` — OPTIONAL and fully REMOVABLE: nothing in `build/`, `utils/`, `test/`
-  or `data/` depends on it.  It holds the historical analysis/one-time-migration
-  scripts (incl. `migrate_zh_layout.py`, the applied data/zh migration) and the
-  applied-audit evidence.  Its durable knowledge already lives in the docs:
-  terminology rulings -> docs/TRANSLATION_GUIDE.md §2b; campaign
-  lessons/procedures -> docs/LESSONS_LEARNED.md §G; binding rules -> this file.
+* `audit/` — REMOVED (purged from all history 2026-07-22).  It held OPTIONAL,
+  fully-removable historical analysis / one-time-migration scripts (incl.
+  `migrate_zh_layout.py`, the applied data/zh migration) and the applied-audit
+  evidence; nothing in `build/`, `utils/`, `test/` or `data/` ever depended on
+  it.  Its durable knowledge lives in the docs: terminology rulings ->
+  docs/TRANSLATION_GUIDE.md §2b; campaign lessons/procedures ->
+  docs/LESSONS_LEARNED.md §G; binding rules -> this file.
 
 Follow these instructions exactly. When working in subdirectories not listed above, check for additional project instruction files (AGENTS.md, Claude.md, etc.).
