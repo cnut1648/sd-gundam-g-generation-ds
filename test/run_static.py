@@ -513,6 +513,13 @@ NAMEPLATE_GEOMETRY_BYTES = {
     0x2BEF6: (bytes.fromhex("1430"), bytes.fromhex("1c30")),
     0x2C034: (bytes.fromhex("eaf7a6fc"), bytes.fromhex("01f124fb")),
     0x2C42C: (bytes.fromhex("6523"), bytes.fromhex("8523")),
+    # IF-battle conversation module (rival-pair barks on the battle scene):
+    # it creates the SAME speaker/body widget pair but the text is composed by
+    # the shared renderer 0x2BC74 above — the create-side width and body tile
+    # base MUST track the renderer's 14-tile surface or the plate tears
+    # (LESSONS A13 interleave; owner issue #19).
+    0x652E4: (bytes.fromhex("0a22"), bytes.fromhex("0e22")),
+    0x65308: (bytes.fromhex("1430"), bytes.fromhex("1c30")),
 }
 NAMEPLATE_HELPERS_OFF = 0x12D680
 NAMEPLATE_HELPERS_ORIG = bytes.fromhex(

@@ -107,6 +107,11 @@
    "what": "dialogue speaker-name bitmap width 10->14 tiles"
   },
   {
+   "lo": "0x02BCE8",
+   "hi": "0x02BCEA",
+   "what": "dialogue speaker-nameplate baseline anchor (penY 0 -> 3px; renderA-direct plate, not covered by the trampoline cave)"
+  },
+  {
    "lo": "0x02BCEE",
    "hi": "0x02BCF2",
    "what": "dialogue body scratch-pointer helper call A"
@@ -147,11 +152,6 @@
    "what": "dialogue body creation tile base after 28 name tiles"
   },
   {
-   "lo": "0x02BCE8",
-   "hi": "0x02BCEA",
-   "what": "dialogue speaker-nameplate baseline anchor (penY 0 -> 3px; renderA-direct plate, not covered by the trampoline cave)"
-  },
-  {
    "lo": "0x02C034",
    "hi": "0x02C038",
    "what": "dialogue speaker-nameplate frame wrapper call B"
@@ -190,6 +190,16 @@
    "lo": "0x05693C",
    "hi": "0x056940",
    "what": "配属 right-ability BG char-tile base 0x29F->0x2AB (partition from three left ID-title rows)"
+  },
+  {
+   "lo": "0x0652E4",
+   "hi": "0x0652E6",
+   "what": "IF-battle conversation speaker-name OBJ width 10->14 tiles (mirror of 0x2BED2; create/render mismatch with the shared 14-tile renderer tore the plates)"
+  },
+  {
+   "lo": "0x065308",
+   "hi": "0x06530A",
+   "what": "IF-battle conversation body OBJ tile base +0x14->+0x1C (mirror of 0x2BEF6; realigns the body widget with the shared renderer's commit position)"
   },
   {
    "lo": "0x06588E",

@@ -199,6 +199,34 @@ Guard: a uniformity detector (no label mixes atlas-CJK and renderB-CJK) + vision
   any "field", locate the surface's ACTUAL render path (BG compose vs OBJ text)
   — a budget patch that survives an A/B pixel-diff unchanged is patching the
   wrong path.
+* **Recurred 2026-07 (owner issue #19, the torn IF-battle nameplate):** the
+  create/render split bit again ACROSS MODULES.  The speaker-plate widen
+  (PR #4 family) patched the ADV dialogue module's create sites (0x2BED2
+  width 10→14, 0x2BEF6 body base +0x14→+0x1C) together with the SHARED
+  renderer 0x2BC74 — but the **IF-battle conversation module** (rival-pair
+  barks from bank `1.bin` shown on the combat 演出 screen, e.g. 卡多/浦木宏
+  in `_STG08A`) is a structural clone with its OWN create sites (0x652E4 /
+  0x65308, same widget geometry, same global 0x0227D3C4) that still carried
+  the JP 10-tile layout while the shared renderer composed and committed a
+  14-tile surface: glyph half-rows landed in the wrong sprites (torn 卡多 /
+  浦木宏 plates) and the body text shifted 8 tiles right.  When a shared
+  renderer is widened, EVERY module that registers widgets for it is part of
+  the same logical patch — enumerate them by finding all creators that store
+  widget ids into the dialogue global (+0xc/+0xd), not by fixing the module
+  you happened to be debugging.  Fix: mirror the two create-side immediates
+  (2 bytes); gate `dialogue_nameplate_geometry` now pins BOTH modules'
+  create sites against the renderer's surface (red-tested by reverting one
+  byte).  The third widget-creating module (0x2A1AC, x=0x100 y=0x42,
+  body 24 tiles @+0x1E) composes inline via 0x2013BE0 — NOT through the
+  shared renderer — and stays JP-layout by design.  Deferred cosmetics for
+  8-9-glyph names on the IF plate (WIN1 edge 0x65186/0x6544C, frame-row
+  extension for 0x651AA/0x65404): the ADV frame wrapper 0x12D680 CANNOT be
+  reused blindly — it extends fixed map rows 0x0601E440/0x480, while the
+  battle scene's dialogue-system y ([0x0227D3C4+0x18], set per scene:
+  literal 0x320 @0x648DC vs the ADV scene's runtime value) resolves its
+  frame rows elsewhere; wiring it without a live map-address proof is the A7
+  fixed-VRAM class.  Verify on a save that reaches an IF conversation before
+  extending.
 
 ### A14. Narrow glyph advance = advance patch + ink-left-of-advance repaint, in ALL width models
 * **Believed:** minting narrow-paren glyphs (half-cell ink) was enough to make

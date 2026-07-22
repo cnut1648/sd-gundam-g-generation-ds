@@ -205,6 +205,20 @@
    "why": "dead bytes from the relocated original atlas host a 64-byte wrapper that preserves the stock frame draw and expands its two tilemap rows to left border + 14 green interior tiles + right border, followed by a 14-byte sp+0x460 body-buffer helper."
   },
   {
+   "file_offset": "0x652E4",
+   "old_hex": "0a22",
+   "new_hex": "0e22",
+   "what": "IF-battle conversation speaker-name OBJ width 10->14 tiles",
+   "why": "the mid-battle IF conversation box (rival pilot exchanges from bark bank 1.bin, e.g. \u5361\u591a/\u6d66\u6728\u5b8f in _STG08A) is a structural sibling of the ADV dialogue module: its scene init creates the speaker-name widget at 0x652E8 with the JP 10-tile width, but the text is composed and committed by the SHARED renderer 0x2BC74, which the speaker-plate widen patched to a 14-tile surface (0x2BCC0/0x2BED2).  The create/render width mismatch is the LESSONS A13 interleave: commit chunking and OAM arrangement built for 10 tiles consume a stride-14 scratch, so glyph top and bottom half-rows land in different sprites -- the owner-reported torn/misplaced nameplates (issue #19).  14 matches the shared renderer; same create function, same width value and geometry (x=0x10 y=0x88) as the proven ADV widen at 0x2BED2."
+  },
+  {
+   "file_offset": "0x65308",
+   "old_hex": "1430",
+   "new_hex": "1c30",
+   "what": "IF-battle conversation body OBJ tile base +0x14 -> +0x1C",
+   "why": "companion of 0x652E4, mirror of 0x2BEF6: the shared renderer writes dialogue-body tiles at name base +0x1C (28 name tiles) since the speaker-plate widen (0x2BD2E), while this module's body widget still mapped base +0x14 -- every IF-conversation body line rendered shifted 8 tiles (64px) right, wrapping its tail to the next line band (visible in the issue #19 screenshots).  +0x1C realigns the widget with the renderer's commit position."
+  },
+  {
    "file_offset": "0x2BCE8",
    "old_hex": "0a1c",
    "new_hex": "0322",
