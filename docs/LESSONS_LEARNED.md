@@ -1081,3 +1081,30 @@ and is red-tested by re-baking one 0x17 short.  The general law: **data may
 carry only translation decisions, never layout** — any absolute value inside
 a replacement is a bug waiting for the first upstream size change ("works
 today" just means "the layouts happen to agree today").
+
+### G14. Widened dialogue surfaces must keep the cursor out of the body tile bank
+The nine-cell speaker surface grows from 20 to 28 OBJ tiles. Keeping its base at
+`780` therefore moves the 27×4 body from `800..907` to `808..915`. The stock
+continue cursor still uses `912..915`, so its four uploaded tiles overwrite the
+body tail and appear as a duplicate cursor fragment inside dialogue text.
+
+The safe repair does not move text or reserve more OBJ memory: both cursor
+construction paths change base `912→916`. Tiles `916..919` are already the
+left-choice selector resource; the right-choice bracket begins at `920`, while
+the three portrait slots end at `779`. Thus the fixed partition is portraits
+`300..779`, name `780..807`, body `808..915`, cursor/left choice `916..919`,
+right choice `920..923`. Gate `dialogue_nameplate_geometry` pins both literals
+and derives these boundaries, with a negative test that restores one path to
+`912`. General rule: after enlarging any shared OBJ surface, audit every sibling
+state (normal wait, choice and all portrait counts) and prefer reusing a
+state-compatible resource over claiming a new tile band.
+
+`916..919` is therefore **state-compatible reuse, not globally free space**.
+Re-audit it if the body dimensions, either choice resource, cursor sprite size,
+or portrait allocator changes. Earlier tempting lower candidates are all live:
+`744..747` is the tail of the first portrait's 64×64 **8bpp** face
+(`620..747`, two 32-byte OBJ units per 8×8 tile); `616..619` is the second
+portrait's right frame edge; and `456..459` is the third portrait's right frame
+edge. Do not infer capacity from a one-/two-portrait capture or a 4bpp-only OAM
+calculation, and do not extend this safety claim to `920+` (the right-choice
+bracket already owns `920..923`).
