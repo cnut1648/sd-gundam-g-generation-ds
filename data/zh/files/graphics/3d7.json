@@ -1,6 +1,6 @@
 {
- "file": "3d5.bin",
- "what": "BG tile bitmap for the strategy-hub formation submenu. The translated labels are rebuilt from the committed 12x12 atlas.",
+ "file": "3d7.bin",
+ "what": "BG tile bitmap for the strategy-hub system submenu. The translated labels are rebuilt from the committed 12x12 atlas.",
  "format": "atlas_graphics",
  "repack_tiles": true,
  "palette_indices": {
@@ -9,7 +9,7 @@
  },
  "labels": [
   {
-   "text": "配属",
+   "text": "保存",
    "x": 22,
    "y": 4,
    "clear": {
@@ -22,27 +22,26 @@
    }
   },
   {
-   "text": "列表",
-   "_note": "The Japanese 一覧 raster has stroke/shadow pixels on y=27, one row above the other labels; include that row so no old tile pixels survive above 表.",
+   "text": "读取",
    "x": 22,
    "y": 28,
    "clear": {
     "x": 8,
-    "y": 27,
+    "y": 28,
     "width": 52,
-    "height": 13,
+    "height": 12,
     "sample_x": 8,
-    "sample_y": 3
+    "sample_y": 4
    }
   },
   {
-   "text": "别动队",
-   "x": 16,
+   "text": "设置",
+   "x": 22,
    "y": 52,
    "clear": {
-    "x": 13,
+    "x": 8,
     "y": 52,
-    "width": 43,
+    "width": 52,
     "height": 12,
     "sample_x": 8,
     "sample_y": 4

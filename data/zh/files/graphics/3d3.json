@@ -1,235 +1,61 @@
 {
  "file": "3d3.bin",
- "what": "BG tile bitmap for the strategy-hub tabs: 作戦/編成/MS開発/システム and 別働隊 repainted to 作战/编成/MS开发/系统/别动队 (raw tile pixels, size preserved).",
- "format": "graphics",
- "regions": [
+ "what": "BG tile bitmap for the four strategy-hub tabs. Labels are rebuilt from the committed 12x12 atlas; no host font rasterizer is involved.",
+ "_note": "MS retains its crisp original pixels. 作战 is redrawn as one atlas label so both glyphs have the same raster size. The resource is repacked after repainting because its Japanese tilemap shares letter-bearing tiles between different buttons.",
+ "format": "atlas_graphics",
+ "repack_tiles": true,
+ "palette_indices": {
+  "stroke": 15,
+  "shadow": 2
+ },
+ "labels": [
   {
-   "offset": "0x231",
-   "size": 11,
-   "jp_hex": "f7f27266262f2f66662222",
-   "zh_hex": "676676666666f2666666f2"
+   "text": "作战",
+   "x": 32,
+   "y": 6,
+   "clear": {
+    "x": 28,
+    "y": 5,
+    "width": 38,
+    "height": 14,
+    "sample_x": 20
+   }
   },
   {
-   "offset": "0x250",
-   "size": 12,
-   "jp_hex": "f7722f2ff6622ff22f622f26",
-   "zh_hex": "67762f6222262f2fff222fff"
+   "text": "编成",
+   "x": 32,
+   "y": 38,
+   "clear": {
+    "x": 28,
+    "y": 37,
+    "width": 38,
+    "height": 14,
+    "sample_x": 20
+   }
   },
   {
-   "offset": "0x274",
-   "size": 1,
-   "jp_hex": "62",
-   "zh_hex": "66"
+   "text": "开发",
+   "x": 44,
+   "y": 70,
+   "clear": {
+    "x": 43,
+    "y": 69,
+    "width": 29,
+    "height": 14,
+    "sample_x": 20
+   }
   },
   {
-   "offset": "0x37d",
-   "size": 68,
-   "jp_hex": "f6ffff66f6222f66f6ffff66f6222f66f6ffff6626222f66f6ffff6626222fff62fffff2ff2f22ff222ff6f2622ff6ff622f2f22622f2fff62f2222262fff26266666662",
-   "zh_hex": "6666f2666626f26666f2ff6666f2226666f2626666f2226666f2ff6666f2ff22222fff22ffff2fff222ff2ff222ffff222ff2ff262f262ff22ff22fff2ffff6266666666"
-  },
-  {
-   "offset": "0x3cc",
-   "size": 1,
-   "jp_hex": "62",
-   "zh_hex": "66"
-  },
-  {
-   "offset": "0x4bc",
-   "size": 12,
-   "jp_hex": "66f622fff72f72f228228828",
-   "zh_hex": "222f22ff6762762268668868"
-  },
-  {
-   "offset": "0x553",
-   "size": 9,
-   "jp_hex": "2f6666f62266662ff2",
-   "zh_hex": "666666666666666666"
-  },
-  {
-   "offset": "0x570",
-   "size": 12,
-   "jp_hex": "f7ffffff2622222262ffffff",
-   "zh_hex": "6766666626666626f26222f2"
-  },
-  {
-   "offset": "0x590",
-   "size": 12,
-   "jp_hex": "2f7777772266666662666666",
-   "zh_hex": "667777776666666622626622"
-  },
-  {
-   "offset": "0x5b5",
-   "size": 7,
-   "jp_hex": "6666666666ffff",
-   "zh_hex": "f2226222f2f22f"
-  },
-  {
-   "offset": "0x5d1",
-   "size": 11,
-   "jp_hex": "2f2f77662ff262ffffffff",
-   "zh_hex": "6666776666666666666666"
-  },
-  {
-   "offset": "0x5f8",
-   "size": 165,
-   "jp_hex": "626666666666f2f26666262f6666f6226666ffff6666222f6666662f66662fff66662f2f622f22f262ffffff2f2f22222fffffff2f2f2f2f222f2f2ff2ffffff2f2f2f2f6266666662666666626666662f6666662f6666662f6666662f6666662f66666666662f2266662f6666662f666666ffff66662f2266662f6666662f6666662f66222f2222662f6666662f662f2ff2622f2ff6f2222ff6f2622f262f622f662ff662",
-   "zh_hex": "666666666666666666666626666666266666666666666666666666266666662666666666f222ffff2ff22f22ff2ffffff22f2f22f222ffffff2fffff2f22fffff2ff2fffff2f26ff222f262fff2f262f226226ffff2f262ff22f262fff2ff22fff2ff222ffffff2f22f22f6222f26262fff22f2ff2222f2ff222ff2ff222ff62f222ff22666666666666666666666666666666666666666666666666666666666666666666"
-  },
-  {
-   "offset": "0x6b8",
-   "size": 16,
-   "jp_hex": "6266666666662f2f7777222f88888822",
-   "zh_hex": "66666666666666267777666688888866"
-  },
-  {
-   "offset": "0x6dc",
-   "size": 12,
-   "jp_hex": "222f2f2f772f2f2f88222222",
-   "zh_hex": "ff222fff7766222f88666662"
-  },
-  {
-   "offset": "0x6fc",
-   "size": 9,
-   "jp_hex": "2f6666662f77777722",
-   "zh_hex": "f22ff2f2f27ff77726"
-  },
-  {
-   "offset": "0x71c",
-   "size": 11,
-   "jp_hex": "66f622ff77f77222882882",
-   "zh_hex": "2ff2fff277ff72ff882886"
-  },
-  {
-   "offset": "0x73c",
-   "size": 12,
-   "jp_hex": "22f6f2f2f22f22ff28228822",
-   "zh_hex": "626666666266666668668866"
-  },
-  {
-   "offset": "0x7b2",
-   "size": 10,
-   "jp_hex": "ffff2f662f22f262ffff",
-   "zh_hex": "66662f666626f26266f2"
-  },
-  {
-   "offset": "0x7d0",
-   "size": 10,
-   "jp_hex": "2f77ffff2f662f222f66",
-   "zh_hex": "6677666622222222ffff"
-  },
-  {
-   "offset": "0x7f0",
-   "size": 12,
-   "jp_hex": "2ff7ffff2f2622f22ff62f2f",
-   "zh_hex": "66676666626666262f6662f2"
-  },
-  {
-   "offset": "0x810",
-   "size": 12,
-   "jp_hex": "ff722f77f2f22266222f622f",
-   "zh_hex": "66766677622266662fff6266"
-  },
-  {
-   "offset": "0x85d",
-   "size": 124,
-   "jp_hex": "2f2f226622ffff66662f222f662ff6f2622f26262f2ff6662f2f26f6222f662f662f222f66ffff22662222ffffff62f2f22262ffffff62f2f222622ff262662f26f2222f662f622ffff2ff2f22222f2f66662f2ff6ffff2f26222f2f66f62266f2f22266262f62fffff22f222f2222662f6666ffffff62222f226266",
-   "zh_hex": "6f662666626666666666222f6626fff26226ff266f6622666f6626f6626626f222f22ff262f22ff222f22ffffffffffffffffff222f22f2f66f22f2f66f22f62262ff266262fff6226ffff2f66222f2f6626ff6266f2ff6626fff266f22f2662f22f662f222f66ffff2f6622226266ffff2f6622f22f662fff6266ff"
-  },
-  {
-   "offset": "0x91e",
-   "size": 9,
-   "jp_hex": "2ff622772f27888822",
-   "zh_hex": "66f2227726ff888866"
-  },
-  {
-   "offset": "0x93c",
-   "size": 12,
-   "jp_hex": "22f66266722772f788888828",
-   "zh_hex": "6266f22f7267f22f88888868"
-  },
-  {
-   "offset": "0x95c",
-   "size": 11,
-   "jp_hex": "2f662f622fff2277222282",
-   "zh_hex": "66f222f26626f2ff666686"
-  },
-  {
-   "offset": "0x97c",
-   "size": 12,
-   "jp_hex": "662f662f77f2ff2f88282222",
-   "zh_hex": "ffff22667722ff6288682266"
-  },
-  {
-   "offset": "0x9bb",
-   "size": 1,
-   "jp_hex": "f6",
-   "zh_hex": "66"
-  },
-  {
-   "offset": "0x9d4",
-   "size": 6,
-   "jp_hex": "6666666666f6",
-   "zh_hex": "26222222f2ff"
-  },
-  {
-   "offset": "0x9f4",
-   "size": 8,
-   "jp_hex": "66666666ff2f6666",
-   "zh_hex": "22666622ff6226ff"
-  },
-  {
-   "offset": "0xa16",
-   "size": 6,
-   "jp_hex": "6666ffffffff",
-   "zh_hex": "626622222f22"
-  },
-  {
-   "offset": "0xa34",
-   "size": 24,
-   "jp_hex": "2f6666662f6666666666662666666666666666ff66666622",
-   "zh_hex": "666666666666666666666666666666666666666666666666"
-  },
-  {
-   "offset": "0xa5c",
-   "size": 200,
-   "jp_hex": "f262666626626666626666662f6666f62266662f6666f62266662f6266ff2266662622222f6666662f6666662266666662666666666666f66666662f6666ff22222f6666662f6666f62266f6f66266262f626666f2626666222f666666f262662222222266666666ffffffff22222f2266662f6666662f6666662f6666f622662266666666666666ff6266f6226266f6666666f66666662f6666662f6666ffff2f6666662f6666662266666662662f666266f2626266f662f6ffff2f2f22222f666666f677777727",
-   "zh_hex": "666666666666666666666666666666666666666666666666666666666666666626f22f2226ff22fff2ffff2ff2f22f2226ff2222f2ffffff2622f222222ff2222266262f6266f22f6266f2ff2f6626ffff62262ff22ff2ff2262f2222f6626f2f2ffffff2ff2222262f2222f222ff22f22fffff22ff2f22262f2f2222f2ff2f2626666666666666666666666666666666266666666666666666666666266666666666666666666666666666666666666666666666666666666666666666666666666666677777767"
-  },
-  {
-   "offset": "0xb3c",
-   "size": 6,
-   "jp_hex": "ff2262662272",
-   "zh_hex": "666666266676"
-  },
-  {
-   "offset": "0xb5c",
-   "size": 7,
-   "jp_hex": "66ff2262772272",
-   "zh_hex": "ff22f2627ff2ff"
-  },
-  {
-   "offset": "0xb7c",
-   "size": 7,
-   "jp_hex": "66262f66777722",
-   "zh_hex": "f262f22ff77726"
-  },
-  {
-   "offset": "0xb9c",
-   "size": 8,
-   "jp_hex": "f62f626627227777",
-   "zh_hex": "222ff2f2f762f7ff"
-  },
-  {
-   "offset": "0xbbc",
-   "size": 4,
-   "jp_hex": "66662222",
-   "zh_hex": "62666666"
-  },
-  {
-   "offset": "0xbdc",
-   "size": 8,
-   "jp_hex": "2266662f77777722",
-   "zh_hex": "6666666677777766"
+   "text": "系统",
+   "x": 32,
+   "y": 102,
+   "clear": {
+    "x": 20,
+    "y": 101,
+    "width": 52,
+    "height": 14,
+    "sample_x": 18
+   }
   }
  ]
 }

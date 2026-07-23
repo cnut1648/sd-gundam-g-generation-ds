@@ -58,7 +58,8 @@ overlays and is not compressed).
 | `324.bin` | 58,272 | character/unit encyclopedia (図鑑) biography text |
 | `c4b.bin` | 42,252 | encyclopedia (図鑑) text sibling of `324.bin` (dict-compressed JP → all-atlas ZH re-encode) |
 | `388.bin` | 832 | captain-badge BG tiles (format id 0x000A, 4bpp raw tiles — graphics, not text) |
-| `3d3.bin` / `3d5.bin` | 3,068 / 1,588 | BackStage hub tab labels (作战/编成/MS开发/系统) — raw BG tiles, repainted |
+| `42d.bin` | 20,332 | Title and bonus-menu OBJ tiles (按START键！/开始/继续/附加; 普通模式/特殊模式/返回; 资料/角色/机体; EV回顾; 声音/BGM/SE) — original `START`/`EV`/`SE` rasters retained; Chinese labels use outlined, softened paint |
+| `3d3.bin`–`3d7.bin` | 3,068 / 2,088 / 1,588 / 1,244 / 1,556 | BackStage root + all submenus (作战/编成/MS开发/系统; 作战内容/地图/索敌/进击; 配属/列表/别动队; 格纳库/系统图; 保存/读取/设置) — BG tiles regenerated and fixed-capacity repacked from committed 12x12 atlas cells |
 | `478.bin` | 3,312 | in-combat force-HUD faction table (战舰/自军/友军/敌军) — raw 4bpp BG tiles (file id 949; tile block @ 0x610) |
 | `48a.bin` | 3,312 | terrain/movement badge OBJ tiles (回避/通/宇/飞/地/水) — raw tiles, `offset = tile*32 + 784` |
 | `b6e.bin` | 416 | parts **names** (40 entries: 30 real + 10 予備 spares; arm9 offset table, see map) |
@@ -79,9 +80,9 @@ Everything not listed above (3,133 files incl. `sound_data.sdat`) is byte-identi
 ─ appended payloads (translated build only; contiguous in file AND in RAM) ─
 0x023027A0  glyph atlas       (autoload #3)  0x25F80 B = 4,320 slots × 36 B   file 0x1B6DA0
 0x02328720  relocated pool A  (autoload #4)  0x2028C B                        file 0x1DCD20
-0x023E7000  relocated pool B  (autoload #5)  0x098FC B                        file 0x1FCFAC
-            new 5-entry autoload list @ file 0x2068A8 (RAM 0x022068A8), 0x3C B;
-            arm9 image ends at file 0x2068E4
+0x023E7000  relocated pool B  (autoload #5)  0x09A9C B                        file 0x1FCFAC
+            new 5-entry autoload list @ file 0x206A48 (RAM 0x02206A48), 0x3C B;
+            arm9 image ends at file 0x206A84
 ─ fixed runtime regions (same in JP and translated) ─
 [0x021B6860, 0x023027A0)  crt0 BSS-clear range (StaticBssStart..StaticBssEnd)
  0x0232C800               stage (_STG) load buffer base, size 0x13800 → ends 0x02340000
@@ -89,7 +90,7 @@ Everything not listed above (3,133 files incl. `sound_data.sdat`) is byte-identi
 [0x02340000, 0x023489AC)  upper work buffer
  0x02348A00               arena-lo (heap base) in the translated build (JP: 0x023027A0)
  0x023C0000               arena-hi (heap top; unchanged)
-[0x023E7000, 0x023F08FC)  relocated pool B — ABOVE arena-hi ⇒ never heap-touched (always safe)
+[0x023E7000, 0x023F0A9C)  relocated pool B — ABOVE arena-hi ⇒ never heap-touched (always safe)
  0x027C0000               DTCM (renderer contexts/scratch live here — invisible to main-RAM dumps)
  0x01FF8000               ITCM
 0xFFFF0104 / 0xFFFF0108   BIOS unhandled data-abort spin (every hard "black screen" freeze
@@ -140,9 +141,9 @@ for each 12-byte list entry {ramAddr, size, bssSize}:
   `+0x10` StaticBssEnd (`0x023027A0`). Only the first two words are patched.
 * **JP list** (file `0x1B6DA0`): 2 entries — ITCM `{0x01FF8000, 0x520, 0}`,
   DTCM `{0x027C0000, 0x020, 0}`.
-* **Translated list** (file `0x2068A8`): 5 entries — ITCM, DTCM, then
+* **Translated list** (file `0x206A48`): 5 entries — ITCM, DTCM, then
   `{0x023027A0, 0x25F80, 0}` (glyph atlas), `{0x02328720, 0x2028C, 0}` (pool A),
-  `{0x023E7000, 0x98FC, 0}` (pool B). Adjacency must be exact: the payloads are inserted at
+  `{0x023E7000, 0x9A9C, 0}` (pool B). Adjacency must be exact: the payloads are inserted at
   file `0x1B6DA0` (displacing the old list), and
   `0x520 + 0x20 + ΣpayloadSizes == newListFileOff − 0x1B6860` or the source cursor lands in
   the wrong place. Payload sizes must be multiples of 4 (the copy loop is word-wise).
@@ -160,14 +161,14 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | what | file | RAM / value |
 |---|---|---|
 | autoload copier routine | `0x9C4` | `0x020009C4` (called from crt0 `0x02000888`) |
-| ModuleParams | `0xB0C` | ListStart JP `0x021B6DA0` → ZH `0x022068A8`; ListEnd JP `0x021B6DB8` → ZH `0x022068E4`; AutoloadStart/BssStart `0x021B6860`; BssEnd `0x023027A0` (all others unchanged) |
+| ModuleParams | `0xB0C` | ListStart JP `0x021B6DA0` → ZH `0x02206A48`; ListEnd JP `0x021B6DB8` → ZH `0x02206A84`; AutoloadStart/BssStart `0x021B6860`; BssEnd `0x023027A0` (all others unchanged) |
 | BSS clear range | — | `[0x021B6860, 0x023027A0)` — nothing translated may live here |
 | arena-lo literal | `0xA48F8` | JP `0x023027A0` → ZH **`0x02348A00`** (heap base, bumped above the payloads) |
 | arena-hi literal | `0xA496C` | `0x023C0000` (unchanged; do not touch) |
 | glyph-atlas autoload payload | `0x1B6DA0` | → RAM `0x023027A0`, `0x25F80` B (4,320 × 36) |
 | pool A autoload payload | `0x1DCD20` | → RAM `0x02328720`, `0x2028C` B |
-| pool B autoload payload | `0x1FCFAC` | → RAM `0x023E7000`, `0x98FC` B |
-| new autoload list | `0x2068A8` | 5 × 12 B; arm9 image ends `0x2068E4` |
+| pool B autoload payload | `0x1FCFAC` | → RAM `0x023E7000`, `0x9A9C` B; mission briefings + 18 BackStage help strings |
+| new autoload list | `0x206A48` | 5 × 12 B; arm9 image ends `0x206A84` |
 
 ### 4.2 Text decode / render engine
 

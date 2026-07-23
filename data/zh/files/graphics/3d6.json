@@ -1,0 +1,38 @@
+{
+ "file": "3d6.bin",
+ "what": "BG tile bitmap for the strategy-hub development submenu. The translated labels are rebuilt from the committed 12x12 atlas.",
+ "format": "atlas_graphics",
+ "repack_tiles": true,
+ "palette_indices": {
+  "stroke": 15,
+  "shadow": 2
+ },
+ "labels": [
+  {
+   "text": "格纳库",
+   "x": 16,
+   "y": 4,
+   "clear": {
+    "x": 8,
+    "y": 4,
+    "width": 52,
+    "height": 12,
+    "sample_x": 8,
+    "sample_y": 4
+   }
+  },
+  {
+   "text": "系统图",
+   "x": 16,
+   "y": 28,
+   "clear": {
+    "x": 8,
+    "y": 28,
+    "width": 52,
+    "height": 12,
+    "sample_x": 8,
+    "sample_y": 4
+   }
+  }
+ ]
+}

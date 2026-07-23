@@ -1,7 +1,7 @@
 {
- "_about": "Autoload string bank copied to RAM 0x023E7000 at boot (4th autoload payload; a verified always-zero RAM gap above the heap ceiling). Holds the mission-briefing line blobs referenced by inline pointers from the briefing records (arenas/event_text_blocks.json). Blob start addresses avoid 0x00 bytes in their pointer encoding; 0x01 pad bytes fill the skipped gaps.",
+ "_about": "Autoload string bank copied to RAM 0x023E7000 at boot (5th autoload payload; a verified always-zero RAM gap above the heap ceiling). Holds the mission-briefing line blobs referenced by inline pointers from the briefing records (arenas/event_text_blocks.json), followed by BackStage help strings referenced by ordinary ARM9 pointer words. Briefing blob start addresses avoid 0x00 bytes in their inline pointer encoding; 0x01 pad bytes fill those skipped gaps.",
  "ram_base": "0x23E7000",
- "size": "0x98FC",
+ "size": "0x9A9C",
  "entries": [
   {
    "offset": "0x0",
@@ -8422,6 +8422,96 @@
    "offset": "0x98E8",
    "text": "今后也祝你奋战顺利。",
    "payload_hex": "efb9e7fee7c0ed97e7b8ef46ef28eab4e82e03"
+  },
+  {
+   "offset": "0x98FC",
+   "text": "查看下一章节的相关信息",
+   "payload_hex": "eae9e7f6ef4defb6ed9debece7b4e8b1e8bbe90fec6a00"
+  },
+  {
+   "offset": "0x9914",
+   "text": "进行部队编成相关操作",
+   "payload_hex": "e892efd6ef70e7c9ec89e837e8b1e8bbeac7ef2f00"
+  },
+  {
+   "offset": "0x992C",
+   "text": "进行机体相关操作",
+   "payload_hex": "e892efd6e7e4ef4fe8b1e8bbeac7ef2f00"
+  },
+  {
+   "offset": "0x9940",
+   "text": "进行保存读取及各项设置",
+   "payload_hex": "e892efd6ea47e993eea0e987e9cfe819eec5eb43ea0e00"
+  },
+  {
+   "offset": "0x9958",
+   "text": "进入下一章节",
+   "payload_hex": "e892e891ef4defb6ed9debec00"
+  },
+  {
+   "offset": "0x9968",
+   "text": "进行实战演习并侦察周边区域",
+   "payload_hex": "e892efd6e87fef28ea2feab6e957eeeaea8bea5ce899ef35eaa700"
+  },
+  {
+   "offset": "0x9984",
+   "text": "可查看下一作战的相关信息",
+   "payload_hex": "e7c4eae9e7f6ef4defb6ef2fef28e7b4e8b1e8bbe90fec6a00"
+  },
+  {
+   "offset": "0x99A0",
+   "text": "显示下一章节的战场地图",
+   "payload_hex": "ed73eab0ef4defb6ed9debece7b4ef28e876ef63eb2d00"
+  },
+  {
+   "offset": "0x99B8",
+   "text": "在战舰上配置驾驶员和机体使其可以出击",
+   "payload_hex": "ef29ef28e7d4ef4cea34ea0ee953e975e849e7d3e7e4ef4fe83fe8cfe7c4e7f3efbee7cc00"
+  },
+  {
+   "offset": "0x99E0",
+   "text": "显示驾驶员和机体的信息",
+   "payload_hex": "ed73eab0e953e975e849e7d3e7e4ef4fe7b4e90fec6a00"
+  },
+  {
+   "offset": "0x99F8",
+   "text": "查看正在单独行动的驾驶员",
+   "payload_hex": "eae9e7f6ef3bef29e918e8eeefd6ef30e7b4e953e975e84900"
+  },
+  {
+   "offset": "0x9A14",
+   "text": "显示机体的改造路线",
+   "payload_hex": "ed73eab0e7e4ef4fe7b4e9f0e93ee8d2e91600"
+  },
+  {
+   "offset": "0x9A28",
+   "text": "当前无法选择",
+   "payload_hex": "ef53ef51e7dce84ee966eaaa00"
+  },
+  {
+   "offset": "0x9A38",
+   "text": "进行机体补给处理改造等操作",
+   "payload_hex": "e892efd6e7e4ef4fea81e839e903e872e9f0e93ee826eac7ef2f00"
+  },
+  {
+   "offset": "0x9A54",
+   "text": "保存当前数据",
+   "payload_hex": "ea47e993ef53ef51e914e8cc00"
+  },
+  {
+   "offset": "0x9A64",
+   "text": "从存档继续游戏",
+   "payload_hex": "e88ae993ed78e9d6e9adea94ea3e00"
+  },
+  {
+   "offset": "0x9A74",
+   "text": "进行游戏各项设置",
+   "payload_hex": "e892efd6ea94ea3ee819eec5eb43ea0e00"
+  },
+  {
+   "offset": "0x9A88",
+   "text": "当前没有特别信息",
+   "payload_hex": "ef53ef51e7d8e7cbe7cfe7e5e90fec6a00"
   }
  ]
 }

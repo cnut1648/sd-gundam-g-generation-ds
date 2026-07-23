@@ -36,7 +36,7 @@ Table geometry (bases, strides, field offsets) lives ONCE in
 | `ui.json` | pointer sites / dict index | label+ability literal `sites` (JP word asserted via `old_ptr`), dictionary offset slots + in-place entry rewrites (`payload_hex`), resource offset words |
 | `stages/<_STGxx>.json` | `jp_offset` (JP-file coords) | dialogue/script byte-range replacements (`zh_hex` canonical, `jp_len` span, `built_size` asserted) — `utils/stage_text.py` |
 | `event_text.json` | arm9 `offset` | byte-length-locked story/briefing block payloads |
-| `files/**` | file + `offset`/`index`/`group` | the 20 NitroFS bank rebuilds (barks, battle effects, cut-ins, bios, parts, graphics) — `utils/data_files.py`; the four trampoline banks (1da/1db/1df/1e0) REQUIRE `zh_hex` |
+| `files/**` | file + `offset`/`index`/`group` | the 24 NitroFS bank rebuilds (barks, battle effects, cut-ins, bios, parts, graphics) — `utils/data_files.py`; the four trampoline banks (1da/1db/1df/1e0) REQUIRE `zh_hex` |
 | `placements/*.json` | bank + `offset` | encoded string bytes: in-place pools + verified-free caves inside the image, and the two appended autoload banks (`ui_names_bank` → RAM 0x02328720, `briefing_blobs` → RAM 0x023E7000); `relocation_ledger.json` is the anti-double-allocation record |
 
 Every zh key must exist in the extracted JP universe — verified by
