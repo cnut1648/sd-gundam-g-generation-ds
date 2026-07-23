@@ -200,7 +200,7 @@ RAM = `0x02000000 + file` unless stated. JP→ZH columns show patched literals.
 | engine-B char-tile copy helper | `0x12C40` | `0x02012C40` — advances tile cursor by `r7=(penPx+7)>>3` @ `0x12C4A`; tilemap last-writer `strh` @ `0x02012CCC`. The r7-over-advance is the ghost/aliasing bug family |
 | 配属 ID/ability char-tile banks | `0x56B70` / `0x5693C` | left ID titles start at tile `0x263`; 3 rows × 2 tile rows × max 12 tiles reserve `0x263..0x2AA`. JP placed the right ability bank at overlapping `0x29F`, so its later copies overwrote the third title's lower glyph halves. ZH patches the ability-base literal to `0x2AB`, reserving `0x2AB..0x2F2` below the next `0x300` bank (gate `assignment_id_tile_partition`; live oracle `test/live/test_assignment_id_render.py`) |
 | engine-A copy helper / twin | `0x13590` / `0x136A8` | weapon-name top-screen path; char base `0x06000000`, map `0x0601F000` |
-| glyph plot rasterizer | `0x12FE4` | `0x02012FE4` (trampoline point `0x12FE6`); DTCM 2-row tile ctx `0x027C29D0`, stride8=13, row1[col0] aliases row0[col13]. Row-wrap clip cave `0x11C448` (gate `glyph_row_clip`): maps `0x06009800`/`0x0620F000`/`0x0601E000` (weapon-select) whole-map + map `0x0600F000` whole-map via the tier-2 block at `0x11C3E4` (编成 别働队 detachment top-screen nameplate; issue #18, 2026-07-22) + maps `0x0600E000`/`0x0600F800` under the exact 13×2 list-context signature (instrumented sweep 2026-07-19: sig-matches occur ONLY on the Profile lists / dev tree; all other draws on those maps carry different stride/style/origin) |
+| glyph plot rasterizer | `0x12FE4` | `0x02012FE4` (trampoline point `0x12FE6`); DTCM 2-row tile ctx `0x027C29D0`. Row-wrap clip cave `0x11C448` (gate `glyph_row_clip`): maps `0x06009800`/`0x0620F000`/`0x0601E000` (weapon-select) whole-map + map `0x0600F000` whole-map via the tier-2 block at `0x11C3E4` (编成 别働队 detachment top-screen nameplate; issue #18, 2026-07-22) + maps `0x0600E000`/`0x0600F800` under the exact 13×2 list-context signature. EV 鉴赏 shares `0x0600F800` but uses origin 0 / stride8 24 / height 2 / style 3; its dedicated guard at `0x11C51C` reuses the same per-pixel clip so the stock 24-slot padding cannot wrap into and erase the next row's first glyph (2026-07-23). |
 | scratch buffer for text compose | — | `0x02022854` (0x800 B); memcpy `0x0200D834`, memset `0x0200D85C` |
 | engine-B BG2 (info panels) | — | char base `0x06200000`, map base `0x0620F000`; BackStage list map base `0x06009800`; fixed ID-page cells `0x0620F1B0/B2` |
 | panel compose scratches | — | 1db → `0x027C37D4`; 1da → `0x027C36F4`; defense compose `0x027C37F0`; per-panel scratch `0x0227D5A0` (dispatch `0x0209EBAC`) |
@@ -287,8 +287,9 @@ fall into these classes (each must be reproducible by the build):
      and widening those paves the neighbour panels — the 2026-07-21 战场情报 garble);
    * plot clip trampoline @ `0x12FE6` → cave `0x11C448` (list first-glyph bottom-strip clip;
      scoped: maps `0x06009800`/`0x0620F000` whole-map, maps `0x0600E000`/`0x0600F800` only
-     with the exact (origin 0, stride8 13, height 2, style 3) context signature — the
-     Profile-list / MS-development-tree row wrap, adopted from PR #3 whose own cave address
+     with the exact (origin 0, stride8 13, height 2, style 3) Profile/tree signature, plus
+     the exact EV-list (origin 0, stride8 24, height 2, style 3) guard at `0x11C51C` — the
+     Profile-list / MS-development-tree / EV fixed-padding row wrap, adopted from PR #3 whose own cave address
      `0x1B3B54` sat on the LIVE unit resource-id table; supersedes the 36-byte `0x11C330`
      cave, itself **moved 2026-07-19 from `0x1B35F8`** for the same reason — `0x11C330..`
      is JP atlas bytes again; gate `glyph_row_clip` pins hook + full body);

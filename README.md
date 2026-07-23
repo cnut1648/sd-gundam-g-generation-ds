@@ -139,7 +139,7 @@ python3 -m venv .venv
 预期输出：
 
 ```
-[build] final ROM sha1 6907e944fd699e33d04700ae3fb4b4f44461fe0c  (MATCHES the shipped translation)
+[build] final ROM sha1 d30ac382e6a31c2560d0949fd4cae7d9a893170a  (MATCHES the shipped translation)
 [build] wrote sd-gundam-g-generation-zh.nds  (30,361,448 bytes)
 ```
 

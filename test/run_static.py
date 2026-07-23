@@ -586,7 +586,7 @@ GLYPH_ROW_CLIP_FIX = bytes.fromhex("09f12ffa")    # bl -> scoped row-stride clip
 GLYPH_ROW_CLIP_CAVE_OFF = 0x11C448
 GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
     "c46d124dac4214d0114dac4211d0114dac4202d0104dac4220d14468002c"
-    "11d104890d2c0ed14489022c0bd1047c032c08d1448a6418e4080589ac42"
+    "11d104890d2c56d14489022c0bd1047c032c08d1448a6418e4080589ac42"
     "02d3f0bc08bc184787b0041c7047c046"
     "0098000600f0200600e0000600f80006"
     "014dac42e7d09be700e00106"                # +0x601E000 tier-1 (weapon-select); no-match b -> tier-2 @0x11C3E4
@@ -597,6 +597,13 @@ GLYPH_ROW_CLIP_CAVE = bytes.fromhex(
 GLYPH_ROW_CLIP_T2_OFF = 0x11C3E4
 GLYPH_ROW_CLIP_T2_ORIG = bytes.fromhex("000009000009000009005409")   # JP dead in-image atlas
 GLYPH_ROW_CLIP_T2 = bytes.fromhex("014dac4247d04fe000f00006")
+GLYPH_ROW_CLIP_EV_OFF = 0x11C51C
+GLYPH_ROW_CLIP_EV_ORIG = bytes.fromhex(
+    "0990000990000990000990000990000990000960550a80aa"
+)
+GLYPH_ROW_CLIP_EV = bytes.fromhex(
+    "182cb5d14468002cb2d14489022cafd1047c032cacd1a2e7"
+)
 ASSIGN_ID_TITLE_TILE_BASE_OFF = 0x56B70
 ASSIGN_ID_ABILITY_TILE_BASE_OFF = 0x5693C
 ASSIGN_ID_TITLE_TILE_BASE = 0x263
@@ -1086,8 +1093,10 @@ def gate_glyph_row_clip(rep, ctx):
     weapon-select list, added 2026-07-20 to stop the Mk2-class freeze) plus
     map 0x0600F000 whole-map via the tier-2 block at 0x11C3E4 (the 编成 别働队
     detachment top-screen nameplate, added 2026-07-22 for issue #18) and
-    0x0600E000/0x0600F800 only with the exact (origin 0, stride8 13, height 2,
-    style 3) context signature.  The full body is pinned — a relaxed map/signature
+    0x0600E000/0x0600F800 only with the exact Profile signature (origin 0,
+    stride8 13, height 2, style 3), plus 0x0600F800 with the exact EV-gallery
+    signature (origin 0, stride8 24, height 2, style 3) through the 0x11C51C
+    guard.  The full body is pinned — a relaxed map/signature
     check risks clipping unrelated surfaces; a lost literal brings the
     first-glyph loss back (re-homed from PR #3, whose cave address sat on
     the LIVE unit resource-id table).  The JP side must carry the stock
@@ -1119,10 +1128,20 @@ def gate_glyph_row_clip(rep, ctx):
         rep.add("glyph_row_clip", False,
                 f"tier-2 (0x0600F000) clip block missing/altered at {GLYPH_ROW_CLIP_T2_OFF:#x}: {t2.hex()}")
         return
+    if aj[GLYPH_ROW_CLIP_EV_OFF:GLYPH_ROW_CLIP_EV_OFF + len(GLYPH_ROW_CLIP_EV_ORIG)] != GLYPH_ROW_CLIP_EV_ORIG:
+        rep.add("glyph_row_clip", False,
+                f"JP 0x11C51C EV guard gap != dead-atlas baseline {GLYPH_ROW_CLIP_EV_ORIG.hex()}")
+        return
+    ev = az[GLYPH_ROW_CLIP_EV_OFF:GLYPH_ROW_CLIP_EV_OFF + len(GLYPH_ROW_CLIP_EV)]
+    if ev != GLYPH_ROW_CLIP_EV:
+        rep.add("glyph_row_clip", False,
+                f"EV-gallery 24x2 clip guard missing/altered at {GLYPH_ROW_CLIP_EV_OFF:#x}: {ev.hex()}")
+        return
     rep.add("glyph_row_clip", True,
             "management 0x06009800 + info-panel 0x0620F000 + weapon-select 0x0601E000 + "
             "detachment-nameplate 0x0600F000 whole-map, Profile 0x0600F800 and "
-            "development-tree 0x0600E000 13x2-signature contexts pinned")
+            "development-tree 0x0600E000 13x2 signatures, EV gallery 0x0600F800 "
+            "24x2 signature pinned")
 
 
 def gate_assignment_id_tile_partition(rep, ctx):
@@ -4280,6 +4299,9 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("drop the tier-2 (0x0600F000 detachment-nameplate) row-clip block",
                 ["glyph_row_clip"],
                 lambda c: mut_a9(c, GLYPH_ROW_CLIP_T2_OFF, GLYPH_ROW_CLIP_T2_ORIG))
+    expect_fail("drop the EV-gallery 24x2 row-clip guard",
+                ["glyph_row_clip"],
+                lambda c: mut_a9(c, GLYPH_ROW_CLIP_EV_OFF, GLYPH_ROW_CLIP_EV_ORIG))
     expect_fail("restore the overlapping JP 配属 ability tile bank",
                 ["assignment_id_tile_partition"],
                 lambda c: mut_a9(c, ASSIGN_ID_ABILITY_TILE_BASE_OFF,
