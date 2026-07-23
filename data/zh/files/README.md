@@ -1,6 +1,6 @@
 # data/zh/files — translated miscellaneous NitroFS data files
 
-Twenty flat data files outside the stage-dialogue (`_STG*`) system carry translated
+Twenty-one flat data files outside the stage-dialogue (`_STG*`) system carry translated
 content. Each JSON table here rebuilds exactly one of them; the builder is
 `utils/data_files.py` (`build_data_file(name, jp_bytes)`), which self-checks every
 result against `data/manifest.json`. All files are in-place, size-preserving edits of
@@ -103,3 +103,5 @@ run (the in-combat decoder stops at the first 0x00 of a run).
   战舰/自军/友军/敌军.
 * `48a.json` — in-combat terrain-legend OBJ tiles: 汎→通, 飛→飞 (legend reads
   回避/通/宇/飞/地/水).
+* `c31.json` — dialogue nameplate main-green frame edge matching the widened
+  14×2-tile renderA name surface.

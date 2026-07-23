@@ -38,7 +38,7 @@ index → owning cid/utid; no in-ROM index table exists) and
  "source_rom":        {"sha1": …, "size": …},   // the Japanese dump the build requires
  "output_rom":        {"sha1": …, "size": …},   // the translated ROM
  "output_rom_padded": {"sha1": …, "size": …},   // the 32 MiB padded variant
- "components": {"arm9": sha1, "_STG00.bin": sha1, …}   // all 122 built components
+ "components": {"arm9": sha1, "_STG00.bin": sha1, …}   // all 129 built components
 }
 ```
 
@@ -47,7 +47,7 @@ index → owning cid/utid; no in-ROM index table exists) and
 | key | mapping | role |
 |---|---|---|
 | `one_byte` | char → code 0x00–0xDF | 1-byte codes; the code IS the glyph slot |
-| `two_byte_zh` | char → slot ≥ 2196 | added Chinese glyphs (encode + decode) |
+| `two_byte_zh` | char → preferred atlas slot | Chinese encoding identities (normally slot ≥ 2196; a few liveness-proved, stage-only legacy glyphs occupy candidate-dead JP-band cells) |
 | `jp_slot_chars` | slot 224–2195 → char | original Japanese glyphs (decode aid) |
 | `slot_chars_extra` | slot → char | decode-side identity refinements (incl. the VLM-identified atlas cells); **override decoding only** — encoding preferences are frozen so build output can't drift |
 
@@ -63,6 +63,28 @@ never affect gate behavior (kana-leak detection keys on `kind == "kana"`).
 The 12×12 glyph atlas autoload payload, verbatim: 4,320 slots × 36 bytes (2 bpp,
 12 rows × 3 bytes). Slots 0–2195 = original glyphs, 2196+ = added Chinese glyphs.
 Copied to RAM `0x023027A0` at boot. Slot semantics in `charmap.json`.
+
+## jp/gallery.json + zh/gallery.json (→ `utils/gallery_titles.py`)
+
+`jp/gallery.json` is extractor-owned. It pins SHA-256/size and record identities for
+the six coupled mode0 resources: EV titles (`43f.bin` + `440.bin`), character library
+titles (`322.bin` + `323.bin`), and unit library titles (`b38.bin` + `b39.bin`). The
+metadata files carry relative offsets into their companion banks, so each pair is
+rebuilt together and all owned offsets are read back after repacking. Series IDs are
+assigned from exact `series_raw_hex`, never decoded text. All `*_jp` / `series.jp`
+fields are best-effort decoder annotations and may improve without changing identity.
+Fixed bank prefix/tail padding is extractor-recorded, asserted, and preserved verbatim.
+
+`zh/gallery.json` deliberately contains only 54 EV translations and the 28 unique
+series translations. The 274 character names and 239 unit names are joined by
+`char_id`/`utid` from the canonical rosters; an optional roster `gallery_zh` overrides
+only the constrained display spelling. The gallery renderer uses the mode0/renderB
+trampoline, not the stage encoder: translated glyphs must use safe high atlas slots
+or a native-direct byte already present as a standalone token in that same JP record.
+The source-byte inventory is token-aware, so a two-byte token's low byte never grants
+permission accidentally. Width gates model the actual advances
+(6px narrow parentheses, 8px S/E/D and native direct glyphs, 12px other high slots):
+104px EV, 104px series, 88px character name, 112px unit name.
 
 ## zh/stages/<_STGxx>.json (→ `utils/stage_text.py`)
 
@@ -154,14 +176,14 @@ offsets into arm9, or bank-relative for the autoload banks):
 
 ## zh/files/ (→ `utils/data_files.py`)
 
-`data/zh/files/README.md` documents each of the 20 files; four layouts:
+`data/zh/files/README.md` documents each of the 21 files; four layouts:
 
 | layout | used by | model |
 |---|---|---|
 | `edits` | bark banks `0/1/1dd/1de/c4f`, `1db`, `1df`, `1e0`, `31e`, `324`, `c4b`, `b6f`, `1da` | in-place runs: re-encode `zh` at `offset`, 0x00-pad to `size`; optional `append` block (grown `1da`) |
 | `cutin_groups` | `1dc` | whole-file rebuild: per record `header` + encoded `zh` + terminator `00 03 00 01` + 4-byte alignment padding; the arm9 offset table is derived from this file at build time |
 | `table` | `b6e` | fixed-total-size name table rebuilt from entries at explicit offsets; `name_offset_words` patches the mirroring arm9 table |
-| `graphics` | `388`, `3d3`, `3d5`, `478`, `48a` | raw-tile repaints `{offset, jp_hex, zh_hex}` with original-byte asserts (tiles, not text) |
+| `graphics` | `388`, `3d3`, `3d5`, `478`, `48a`, `c31` | raw-tile repaints `{offset, jp_hex, zh_hex}` with original-byte asserts (tiles, not text) |
 
 ## Cross-component couplings (regenerate together)
 

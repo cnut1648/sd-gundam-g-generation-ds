@@ -14,7 +14,9 @@ One deterministic pass, driven entirely by the data/ folder:
      alignment. (utils/stage_text.py)
   4. Rebuild the miscellaneous data files (menus, barks, cut-ins, graphics).
      (utils/data_files.py)
-  5. Re-assemble the ROM container and verify every component and the final
+  5. Repack the six coupled EV/character/unit gallery metadata + string-bank
+     resources. (utils/gallery_titles.py)
+  6. Re-assemble the ROM container and verify every component and the final
      image against data/manifest.json.
 
 Every step self-checks: a hash mismatch aborts the build with a message naming
@@ -36,7 +38,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from utils import arm9_layout, data_files, rom, stage_text  # noqa: E402
+from utils import arm9_layout, data_files, gallery_titles, rom, stage_text  # noqa: E402
 
 
 def log(msg: str) -> None:
@@ -100,7 +102,15 @@ def main() -> int:
         check(name, built)
         rom.set_file(game, name, built)
 
-    # ---- 5. assemble + verify ----------------------------------------------
+    log("building 6 coupled EV/character/unit gallery title resources")
+    gallery_source = {
+        name: rom.get_file(game, name) for name in gallery_titles.GALLERY_FILES
+    }
+    for name, built in gallery_titles.build_gallery_files(gallery_source).items():
+        check(name, built)
+        rom.set_file(game, name, built)
+
+    # ---- 6. assemble + verify ----------------------------------------------
     log("assembling ROM container")
     out_bytes = game.save()
     out_sha = rom.sha1(out_bytes)

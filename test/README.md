@@ -83,9 +83,11 @@ JIT off, software renderer, the 12-button keyboard map, optional gdb stub).
 # first stage incl. the JOIN choice; FAIL on a frozen window under input
 .venv/bin/python test/live/test_dialogue_grind.py <rom>
 
-# 13-tile row-wrap glyph clip (~2 min): Profile char/unit lists (entry + kana-
-# category redraw) and the MS development System Tree (entry + selection move);
-# native-resolution lower-strip ink probes (an unfixed build scores 0/6)
+# row-wrap glyph clip (~2 min): Profile char/unit 13-tile lists (entry + kana-
+# category redraw) and the MS development System Tree (entry + selection move).
+# The static glyph_row_clip gate additionally pins the EV gallery's exact
+# 24x2/origin0/style3 guard, whose fixed-slot padding otherwise erases the next
+# row's first glyph; native-resolution lower-strip ink probes cover 13-tile rows.
 .venv/bin/python test/live/test_row_clip.py <rom> [--sav PATH]
 
 # in-combat ID cut-in freeze grind (~15-25 min, run 3x for a shipping verdict):
