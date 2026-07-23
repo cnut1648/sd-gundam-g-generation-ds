@@ -182,6 +182,55 @@ def build_dump(rom: GameROM) -> dict[str, dict]:
     }
     out["parts.json"] = {**header, "parts": W.parts(rom)}
     out["library.json"] = {**header, "weapon_list": W.weapon_list(rom)}
+    ev_gallery = W.ev_gallery_titles(rom)
+    char_gallery = W.library_gallery_titles(rom, "character")
+    unit_gallery = W.library_gallery_titles(rom, "unit")
+    # Stable identity is the exact token stream, never the decoder annotation:
+    # renderB/codebook knowledge can improve later without renumbering every
+    # translation key.  Current source data has 28 unique raw streams and each
+    # stream decodes consistently across all 513 records.
+    series_by_raw: dict[str, dict[str, str]] = {}
+    for section in (char_gallery, unit_gallery):
+        for rec in section["records"]:
+            raw_hex = rec["series_raw_hex"]
+            jp = rec["series_jp"]
+            existing = series_by_raw.get(raw_hex)
+            if existing is None:
+                existing = {
+                    "series_id": f"SERIES{len(series_by_raw) + 1:04d}",
+                    "raw_hex": raw_hex,
+                    "jp": jp,
+                }
+                series_by_raw[raw_hex] = existing
+            elif existing["jp"] != jp:
+                raise ValueError(
+                    f"gallery series raw {raw_hex} has divergent decoder annotations"
+                )
+            rec["series_id"] = existing["series_id"]
+    gallery_files = {}
+    for name in (
+        L.EV_GALLERY_TITLE_FILE, L.EV_GALLERY_CATALOG_FILE,
+        L.CHAR_GALLERY_METADATA_FILE, L.CHAR_GALLERY_STRING_FILE,
+        L.UNIT_GALLERY_METADATA_FILE, L.UNIT_GALLERY_STRING_FILE,
+    ):
+        blob = rom.file(name)
+        gallery_files[name] = {
+            "size": len(blob),
+            "sha256": hashlib.sha256(blob).hexdigest(),
+        }
+    out["gallery.json"] = {
+        **header,
+        "_about": (
+            "Gallery identities are source raw bytes/hashes/record ids. The *_jp and "
+            "series.jp fields are best-effort renderB/codebook decoder annotations only; "
+            "build and translation joins must never use them as identity keys."
+        ),
+        "files": gallery_files,
+        "ev": ev_gallery,
+        "series": list(series_by_raw.values()),
+        "characters": char_gallery,
+        "units": unit_gallery,
+    }
     out["ui.json"] = {
         **header,
         "dict_text": W.dictionary_entries(rom, "text"),

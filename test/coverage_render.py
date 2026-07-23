@@ -16,8 +16,10 @@
                         style report, sheet coordinates.
 
 Coverage: stage dialogue segments, barks, cut-ins, battle banks, library and
-hangar banks, arena banks (briefings, pools, caves, ui names).  ~30k lines,
-runs in well under a minute — this replaces "hire people to play the game".
+hangar banks, arena banks (briefings, pools, caves, ui names), plus all six
+candidate-ROM gallery resources: 54 EV titles, 274 character names+series,
+and 239 unit names+series.  ~27k lines, runs in well under a minute — this
+replaces "hire people to play the game".
 
 Usage:
   coverage_render.py <rom.nds> --out /tmp/coverage [--sheets]
@@ -35,6 +37,8 @@ sys.path.insert(0, str(REPO / "test"))
 
 from render_oracle import Oracle, TRAMPOLINE_SPLIT  # noqa: E402
 from utils import text_codec as tc  # noqa: E402
+from utils.extract import walkers  # noqa: E402
+from utils.extract.gamerom import GameROM  # noqa: E402
 
 RENDERB = json.loads((REPO / "data/renderb_charset.json").read_text())["slots"] \
     if (REPO / "data/renderb_charset.json").exists() else {}
@@ -107,8 +111,50 @@ def live_offsets(rom_path: Path) -> dict[str, set[int]]:
     return out
 
 
-def iter_corpus():
-    """Yield (source_id, surface, payload_bytes, doc_text)."""
+def _iter_gallery_corpus(rom_path: Path):
+    """Yield all mode0 gallery strings from the candidate ROM.
+
+    The gallery walkers follow the runtime metadata offsets and terminate
+    strings token-aware, so a 0x00 low byte inside a two-byte glyph does not
+    truncate the rendered payload.  Series strings are intentionally yielded
+    once per metadata record; the contact-sheet layer performs its normal
+    payload-byte deduplication later.
+    """
+    rom = GameROM(rom_path)
+
+    ev = walkers.ev_gallery_titles(rom)
+    for record in ev["records"]:
+        payload = bytes.fromhex(record["title_raw_hex"])
+        yield (
+            f"gallery/ev/43f.bin@{record['title_offset']}",
+            "bank",
+            payload[:-1],
+            record["title_jp"],
+        )
+
+    for kind, key in (("character", "char_id"), ("unit", "utid")):
+        gallery = walkers.library_gallery_titles(rom, kind)
+        bank = gallery["string_file"]
+        for record in gallery["records"]:
+            owner = record[key]
+            for field in ("name", "series"):
+                payload = bytes.fromhex(record[f"{field}_raw_hex"])
+                yield (
+                    f"gallery/{kind}/{bank}@{record[f'{field}_offset']}"
+                    f"#{key}={owner}:{field}",
+                    "bank",
+                    payload[:-1],
+                    record[f"{field}_jp"],
+                )
+
+
+def iter_corpus(rom_path: Path):
+    """Yield (source_id, surface, payload_bytes, doc_text).
+
+    File-backed translation JSON remains the source for legacy surfaces;
+    gallery payloads come from ``rom_path`` because their six NitroFS files
+    are rebuilt string banks whose final offsets and bytes must be covered.
+    """
     for rel, surface in BANK_JSONS:
         p = REPO / rel
         if not p.exists():
@@ -146,6 +192,7 @@ def iter_corpus():
             if isinstance(r, dict) and r.get("zh_hex"):
                 yield (f"stages/{p.name}@{r.get('jp_offset', r.get('offset'))}",
                        "stage", bytes.fromhex(r["zh_hex"]), r.get("zh", r.get("zh_text", "")))
+    yield from _iter_gallery_corpus(rom_path)
 
 
 def glyph_checks(oracle: Oracle, atlas_slots: int):
@@ -188,7 +235,7 @@ def main() -> int:
     baseline = json.loads(baseline_p.read_text()) if baseline_p.exists() else None
 
     n = 0
-    for src, surface, data, text in iter_corpus():
+    for src, surface, data, text in iter_corpus(Path(args.rom)):
         n += 1
         rep = oracle.line_style_report(data, surface)
         issues = []

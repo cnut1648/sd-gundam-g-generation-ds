@@ -35,6 +35,7 @@ in-game failure the gate protects against.
   stage_file_structure        stage-file overrun / dangling pointer → load freeze
   stage_script_integrity      the press-A / mid-stage event freezes (dialogue VM desync)
   inline_dialogue_blocks      overrun of code-embedded dialogue blocks (cutscene abort)
+  event_lookup_table_frozen   replay lookup rows corrupted by an over-broad text region
   event_script_pointers       the ending/cutscene black screen (clobbered jump pointer)
   stage_operand_relocation    the replay-branch soft-lock from a stale in-edit fork operand
   battle_voice_structure      in-combat crash/garble from broken bark record framing
@@ -78,9 +79,14 @@ import ndspy.rom
 
 TEST_DIR = Path(__file__).resolve().parent
 REPO = TEST_DIR.parent
+sys.path.insert(0, str(REPO))
 GOLDEN = TEST_DIR / "golden"
 DEFAULT_JP = REPO / "0098 - SD Gundam G Generation DS (Japan).nds"
 CHARMAP_PATH = REPO / "data" / "charmap.json"
+
+sys.path.insert(0, str(REPO))
+from utils.extract import walkers as extract_walkers  # noqa: E402
+from utils.extract.gamerom import GameROM  # noqa: E402
 
 RAM_BASE = 0x02000000
 
@@ -816,7 +822,9 @@ BIO_NO_LINE_START = set("、。！？…）』」·")   # never start a display 
 BIO_NO_LINE_END = set("「『（")               # never break right after an opener
 
 BATTLE_VOICE_FILES = ("0.bin", "1.bin", "1dd.bin", "1de.bin", "c4f.bin")
-INLINE_DIALOGUE_LO, INLINE_DIALOGUE_HI = 0x198712, 0x1AD536   # code-embedded 0x15 blocks
+INLINE_DIALOGUE_LO, INLINE_DIALOGUE_HI = 0x198555, 0x1AD75E   # extractor-owned 0x15 blocks
+EVENT_LOOKUP_TABLE_LO, EVENT_LOOKUP_TABLE_HI = 0x1AD778, 0x1AD818
+EVENT_LOOKUP_TABLE_SHA1 = "7be19f5b3793a692d748f2433321e6323c5aa3f0"
 
 # JP string/data section (where every original text pointer points):
 JP_STRINGS_LO, JP_STRINGS_HI = 0x020B0000, 0x021B6DB8
@@ -1679,26 +1687,79 @@ def gate_stage_script_integrity(rep, ctx):
                 "every stage file CFG-isomorphic to the JP original")
 
 
+def _fresh_jp_event_blocks(ctx):
+    """Run the canonical extractor once per gate context, never trust a stale
+    committed JSON snapshot for an image-safety decision."""
+    if "fresh_jp_event_blocks" not in ctx:
+        jp = GameROM(ctx["jp_rom_path"])
+        ctx["fresh_jp_event_blocks"] = extract_walkers.event_text_blocks(jp)
+    return ctx["fresh_jp_event_blocks"]
+
+
 def gate_inline_dialogue_blocks(rep, ctx):
     """Dialogue blocks embedded in the CODE image (not stage files) have no
-    relocatable pointer, so their edits must be strictly in-place: each JP block
-    keeps its 0x15 marker at the same offset AND its token-aware terminator —
-    an overrun here corrupts adjacent event-script pointers (cutscene abort)."""
-    aj, az = ctx["jp_a9"], ctx["a9"]
-    region = aj[INLINE_DIALOGUE_LO:INLINE_DIALOGUE_HI]
-    nblk, bad = 0, []
-    for (bs, t) in iter_display_blocks(region):
-        nblk += 1
-        off, term = INLINE_DIALOGUE_LO + bs, INLINE_DIALOGUE_LO + t
-        if az[off] != 0x15 or az[term:term + 2] != b"\x00\x00":
+    relocatable pointer, so their edits must be strictly in-place: every
+    reachable record from a FRESH canonical extraction keeps its 0x15 marker at
+    the same offset AND its token-aware terminator.  Using extractor records is
+    essential: the older ``>= E0`` text heuristic missed valid direct-byte
+    payloads such as EV48 0x1AD6EE, while raw scanning mistakes 0x15 bytes in
+    CALL target operands for text."""
+    az = ctx["a9"]
+    blocks = [b for b in _fresh_jp_event_blocks(ctx)
+              if b.get("reachable") is not False
+              and INLINE_DIALOGUE_LO <= int(b["off"], 16) < INLINE_DIALOGUE_HI]
+    expected_tail = {
+        0x1AD55B, 0x1AD57A, 0x1AD5A4, 0x1AD5E1,
+        0x1AD6EE, 0x1AD733, 0x1AD745,
+    }
+    tail = {int(b["off"], 16) for b in blocks if int(b["off"], 16) >= 0x1AD536}
+    if tail != expected_tail:
+        missing = sorted(expected_tail - tail)
+        extra = sorted(tail - expected_tail)
+        rep.add("inline_dialogue_blocks", False,
+                "fresh extractor tail mismatch: "
+                f"missing={[hex(x) for x in missing]}, extra={[hex(x) for x in extra]}")
+        return
+
+    bad = []
+    for b in blocks:
+        off, length = int(b["off"], 16), int(b["len"])
+        term = off + length - 2
+        if (length < 3 or off >= len(az) or az[off] != 0x15
+                or term + 2 > len(az) or az[term:term + 2] != b"\x00\x00"):
             bad.append(off)
+    nblk = len(blocks)
     if bad:
         rep.add("inline_dialogue_blocks", False,
                 f"{len(bad)}/{nblk} code-embedded dialogue block(s) lost their marker/terminator "
                 f"(first @0x{bad[0]:X}) — in-place overrun into event code")
     else:
         rep.add("inline_dialogue_blocks", True,
-                f"{nblk} code-embedded dialogue blocks keep their 0x15 marker + terminator (JP-anchored)")
+                f"{nblk} fresh-extracted reachable blocks keep their 0x15 marker + terminator "
+                f"(including all {len(expected_tail)} EV40/EV48 tail blocks)")
+
+
+def gate_event_lookup_table_frozen(rep, ctx):
+    """The 0x28-stride lookup immediately after the EV replay scripts is live
+    data, not text capacity: three records plus their zero sentinel must remain
+    byte-identical to the audited JP image.  This catches any future broadening
+    of the inline-text allow-list across the real 0x1AD778 boundary."""
+    aj, az = ctx["jp_a9"], ctx["a9"]
+    size = EVENT_LOOKUP_TABLE_HI - EVENT_LOOKUP_TABLE_LO
+    jp = aj[EVENT_LOOKUP_TABLE_LO:EVENT_LOOKUP_TABLE_HI]
+    got = az[EVENT_LOOKUP_TABLE_LO:EVENT_LOOKUP_TABLE_HI]
+    anchor = hashlib.sha1(jp).hexdigest()
+    if len(jp) != size or anchor != EVENT_LOOKUP_TABLE_SHA1:
+        rep.add("event_lookup_table_frozen", False,
+                f"JP lookup-table anchor mismatch: len={len(jp)}, sha1={anchor}")
+    elif got != jp:
+        first = next(i for i, (a, b) in enumerate(zip(jp, got)) if a != b)
+        rep.add("event_lookup_table_frozen", False,
+                f"lookup table differs from JP at 0x{EVENT_LOOKUP_TABLE_LO + first:X} "
+                f"(jp={jp[first]:02x}, got={got[first]:02x})")
+    else:
+        rep.add("event_lookup_table_frozen", True,
+                f"0x{size:X} B / 3 live 0x28 rows + zero sentinel byte-identical to JP")
 
 
 def gate_event_script_pointers(rep, ctx):
@@ -3173,6 +3234,49 @@ def gate_zh_reconciliation(rep, ctx):
                 fails[0] if fails else r.stderr[-160:])
 
 
+def gate_gallery_titles(rep, ctx):
+    """Six coupled gallery resources must equal the guarded writer output.
+
+    The writer independently proves source identities, complete 54/28/274/239
+    coverage, immutable catalogue metadata, offset/string readback and true
+    mode0 advance budgets.  This image-level gate additionally prevents build
+    integration from omitting one member of a coupled pair.
+    """
+    from utils import gallery_titles, text_codec
+
+    counts = gallery_titles.validate_gallery_data()
+    source = {name: ctx["jp_file"](name) for name in gallery_titles.GALLERY_FILES}
+    if any(blob is None for blob in source.values()):
+        rep.add("gallery_titles", False, "JP source lacks one of six gallery resources")
+        return
+    expected = gallery_titles.build_gallery_files(source)
+    mismatches = [name for name, blob in expected.items() if ctx["cand_file"](name) != blob]
+
+    seed = gallery_titles._mode0_encode(
+        "SEED", "gallery static SEED probe", allowed_one_bytes=frozenset()
+    )
+    seed_slots = [
+        token - 0xE000 + 224 for _, token, length in text_codec.iter_tokens(seed)
+        if length == 2
+    ]
+    seed_ok = (
+        seed_slots == [4222, 4223, 4223, 4214]
+        and gallery_titles._mode0_decode(seed) == "SEED"
+        and sum(gallery_titles.TRAMPOLINE_SLOT_ADVANCE.get(slot, 12)
+                for slot in seed_slots) == 32
+    )
+    ok = not mismatches and seed_ok and counts == {
+        "ev_titles": 54, "series": 28, "records": 513,
+    }
+    detail = (
+        f"54 EV + 28 series + 274 character + 239 unit; six-file byte readback; "
+        f"SEED slots={seed_slots}/32px"
+    )
+    if mismatches:
+        detail += f"; mismatched files={mismatches}"
+    rep.add("gallery_titles", ok, detail)
+
+
 # =============================================================================
 # runner
 # =============================================================================
@@ -4060,6 +4164,7 @@ GATES = [
     gate_stage_file_structure,
     gate_stage_script_integrity,
     gate_inline_dialogue_blocks,
+    gate_event_lookup_table_frozen,
     gate_event_script_pointers,
     gate_stage_operand_relocation,
     gate_caption_line_budget,
@@ -4084,6 +4189,7 @@ GATES = [
     gate_bark_map_row_liveness,
     gate_patch_literal_safety,
     gate_hp_format_liveness,
+    gate_gallery_titles,
     gate_offline_coverage,
     gate_extraction_fresh,
     gate_zh_reconciliation,
@@ -4212,6 +4318,13 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
     expect_fail("corrupt the stage-VM dispatch code",
                 ["stage_script_integrity", "code_image_parity"],
                 lambda c: mut_a9(c, VM_REGION[0] + 8, b"\x00\x00"))
+    expect_fail("erase the terminator of the direct-byte EV48 replay line",
+                ["inline_dialogue_blocks"],
+                lambda c: mut_a9(c, 0x1AD6F5, b"\x09"))
+    expect_fail("alter a live row immediately after the EV replay scripts",
+                ["event_lookup_table_frozen"],
+                lambda c: mut_a9(c, EVENT_LOOKUP_TABLE_LO + 4,
+                                 bytes([c["a9"][EVENT_LOOKUP_TABLE_LO + 4] ^ 0x01])))
     expect_fail("point an ID-command title into the runtime-heap window",
                 ["field_width_budgets"],
                 lambda c: mut_a9(c, ID_CMD_TABLE_OFF + 273 * ID_CMD_REC,
@@ -4234,6 +4347,15 @@ def self_test(rom_path: Path, jp_path: Path) -> int:
                 return corrupt(bytearray(d))
             return d
         ctx["cand_file"] = cand_file
+
+    def corrupt_gallery_title(d):
+        # Corrupt the first rebuilt EV payload byte while leaving all catalogue
+        # offsets valid. The coupled writer oracle must still reject the image.
+        d[4] ^= 0x01              # inside title 1; fixed prefix is e0 30 00
+        return bytes(d)
+    expect_fail("corrupt one rebuilt EV-gallery title token",
+                ["gallery_titles"],
+                lambda c: mut_file(c, "43f.bin", corrupt_gallery_title))
 
     def strip_1df_stops(d):
         # remove every `00 03` stop from the first sizeable record: the drawer

@@ -386,6 +386,140 @@ def barks(rom: GameROM) -> list[dict]:
 # ---------------------------------------------------------------------------
 # encyclopedia bios / weapon list / hangar parts
 # ---------------------------------------------------------------------------
+def _gallery_cstr(data: bytes, offset: int) -> tuple[bytes, int]:
+    """One mode0/renderB-trampoline, token-aware, standalone-NUL string."""
+    if not 0 <= offset < len(data):
+        raise ValueError(f"gallery string offset outside bank: 0x{offset:X}")
+    end = offset
+    while end < len(data):
+        if data[end] >= 0xE0:
+            if end + 1 >= len(data):
+                raise ValueError(f"truncated gallery token at 0x{end:X}")
+            end += 2
+        elif data[end] == 0:
+            return data[offset:end], end
+        else:
+            end += 1
+    raise ValueError(f"unterminated gallery string at 0x{offset:X}")
+
+
+def ev_gallery_titles(rom: GameROM) -> dict:
+    """The 54 EV-gallery labels and their immutable catalogue metadata."""
+    bank = rom.file(L.EV_GALLERY_TITLE_FILE)
+    catalog = rom.file(L.EV_GALLERY_CATALOG_FILE)
+    want_size = len(L.EV_GALLERY_CATALOG_HEADER) + (
+        L.EV_GALLERY_COUNT * L.EV_GALLERY_RECORD_SIZE
+    )
+    if not bank.startswith(L.EV_GALLERY_TITLE_PREFIX):
+        raise ValueError("EV gallery title-bank prefix changed")
+    if len(catalog) != want_size or not catalog.startswith(L.EV_GALLERY_CATALOG_HEADER):
+        raise ValueError("EV gallery catalogue geometry/header changed")
+
+    records = []
+    expected = len(L.EV_GALLERY_TITLE_PREFIX)
+    for index in range(L.EV_GALLERY_COUNT):
+        event_no = index + 1
+        rec_off = len(L.EV_GALLERY_CATALOG_HEADER) + index * L.EV_GALLERY_RECORD_SIZE
+        bit, group, flag, reserved = catalog[rec_off:rec_off + 4]
+        title_off = u32(catalog, rec_off + 4)
+        if title_off != expected:
+            raise ValueError(
+                f"EV{event_no:02d} title offset is not contiguous: "
+                f"0x{title_off:X} != 0x{expected:X}"
+            )
+        raw, end = _gallery_cstr(bank, title_off)
+        macros = sorted({tok - 0xF000 for _, tok, n in text_codec.iter_tokens(raw)
+                         if n == 2 and tok >= 0xF000})
+        records.append({
+            "event_no": event_no,
+            "metadata_offset": _hex(rec_off),
+            "bit": bit,
+            "group": group,
+            "catalog_flag": flag,
+            "reserved": reserved,
+            "title_offset": _hex(title_off),
+            "title_raw_hex": (raw + b"\x00").hex(),
+            # Source titles are mode0: JP-band slots draw from renderB and
+            # 0xF0xx expands through the system/mode0 dictionary.
+            "title_jp": decode_text(rom, raw, "bank", rom.expand_sys),
+            "macro_indices": macros,
+        })
+        expected = end + 1
+    tail = bank[expected:]
+    if tail != b"\x00":
+        raise ValueError(
+            f"EV gallery title bank tail changed at 0x{expected:X}: {tail.hex()}"
+        )
+    return {
+        "title_prefix_hex": L.EV_GALLERY_TITLE_PREFIX.hex(),
+        "title_tail_hex": tail.hex(),
+        "catalog_header_hex": L.EV_GALLERY_CATALOG_HEADER.hex(),
+        "records": records,
+    }
+
+
+def library_gallery_titles(rom: GameROM, kind: str) -> dict:
+    """Character/unit gallery name+series records keyed by runtime roster id."""
+    if kind == "character":
+        meta_name, bank_name, count = (
+            L.CHAR_GALLERY_METADATA_FILE, L.CHAR_GALLERY_STRING_FILE,
+            L.CHAR_GALLERY_COUNT,
+        )
+        roster_off, bio_off, roster_key = (
+            L.CHAR_GALLERY_ROSTER_ID, L.CHAR_GALLERY_BIO_ID, "char_id",
+        )
+    elif kind == "unit":
+        meta_name, bank_name, count = (
+            L.UNIT_GALLERY_METADATA_FILE, L.UNIT_GALLERY_STRING_FILE,
+            L.UNIT_GALLERY_COUNT,
+        )
+        roster_off, bio_off, roster_key = (
+            L.UNIT_GALLERY_ROSTER_ID, L.UNIT_GALLERY_BIO_ID, "utid",
+        )
+    else:
+        raise ValueError(f"unknown library gallery kind: {kind!r}")
+
+    metadata, bank = rom.file(meta_name), rom.file(bank_name)
+    want_size = (count + 1) * L.GALLERY_METADATA_STRIDE
+    if len(metadata) != want_size:
+        raise ValueError(f"{meta_name} size changed: {len(metadata)} != {want_size}")
+    records = []
+    for index in range(count):
+        metadata_index = index + 1
+        rec_off = metadata_index * L.GALLERY_METADATA_STRIDE
+        name_off, series_off = u32(metadata, rec_off), u32(metadata, rec_off + 4)
+        name_raw, _ = _gallery_cstr(bank, name_off)
+        series_raw, _ = _gallery_cstr(bank, series_off)
+        records.append({
+            "record_index": index,
+            "metadata_index": metadata_index,
+            "metadata_offset": _hex(rec_off),
+            "record_raw_hex": metadata[rec_off:rec_off + L.GALLERY_METADATA_STRIDE].hex(),
+            roster_key: u16(metadata, rec_off + roster_off),
+            "bio_id": u16(metadata, rec_off + bio_off),
+            "name_offset": _hex(name_off),
+            "name_raw_hex": (name_raw + b"\x00").hex(),
+            "name_jp": decode_text(rom, name_raw, "bank", rom.expand_sys),
+            "series_offset": _hex(series_off),
+            "series_raw_hex": (series_raw + b"\x00").hex(),
+            "series_jp": decode_text(rom, series_raw, "bank", rom.expand_sys),
+        })
+    name_start = min(int(r["name_offset"], 16) for r in records)
+    series_start = min(int(r["series_offset"], 16) for r in records)
+    marker = u32(metadata, 4)
+    if not 0 < name_start < series_start < len(bank) or marker - series_start not in (0, 1):
+        raise ValueError(f"{kind} gallery name/series regions changed")
+    return {
+        "metadata_file": meta_name,
+        "string_file": bank_name,
+        "record_count": count,
+        "source_name_start": _hex(name_start),
+        "source_series_start": _hex(series_start),
+        "header_series_marker_delta": marker - series_start,
+        "records": records,
+    }
+
+
 def bios(rom: GameROM, kind: str) -> list[dict]:
     """Encyclopedia biography records (kind='char' -> 324.bin, 'unit' -> c4b.bin),
     each keyed by its bio index in the arm9 offset table."""
@@ -530,6 +664,30 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
                     return True
         return False
 
+    def pointer_operand_owner(off: int) -> tuple[int, int] | None:
+        """Return the VM instruction containing a false 0x15 candidate.
+
+        A linear text scan can land on byte 0x15 inside the little-endian u32
+        target of GOTO/CALL/CGOTO.  Validate both the opcode and the complete
+        event-code target before classifying it as an operand; the returned
+        end lets the outer scan resume at the real instruction boundary rather
+        than trusting a coincidental 00 00 inside/following the pointer.
+        """
+        # Preserve the established v1.3 extraction below the former exclusive
+        # bound.  This audit was introduced specifically for the newly exposed
+        # EV40/EV48 tail; applying it retroactively would reclassify hundreds of
+        # legacy linear-scan candidates and belongs in a dedicated migration.
+        if off < L.EVENT_TEXT_VM_OPERAND_AUDIT_LO:
+            return None
+        for distance in range(1, 5):
+            op_off = off - distance
+            if op_off < L.EVENT_TEXT_LO or a[op_off] not in L.STG_JUMP_OPS:
+                continue
+            target = u32(a, op_off + 1)
+            if 0x02180000 <= target < 0x021B0000:
+                return op_off, op_off + 1 + L.STG_OPSZ[a[op_off]]
+        return None
+
     out = []
     i = L.EVENT_TEXT_LO
     run_end = None            # end of the last per-stage briefing block seen
@@ -543,13 +701,14 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
             i += 1
             continue
         payload = a[i + 1:t]
+        operand_owner = pointer_operand_owner(i)
         # A false 0x15 landing inside event bytecode is not real display text:
-        # it either embeds an event code pointer (0x13/0x16 -> event RAM) or
+        # it is itself inside an event-code pointer, embeds such a pointer, or
         # would draw an atlas slot >= 2196 (the JP atlas has only 2196 slots).
         # Mark such blocks reachable:False, exactly like the stage-block walker
         # marks non-VM-reached blocks, so the dump stays honest while every
         # downstream consumer (gates, phase-2/3 exporters) can skip them.
-        spurious = has_ptr(payload) or any(
+        spurious = operand_owner is not None or has_ptr(payload) or any(
             s >= L.TRAMPOLINE_SPLIT
             for s, _ in glyph_stream(rom, payload, "stage"))
         is_brief = (not spurious and L.BRIEF_LO <= i < L.BRIEF_HI
@@ -566,6 +725,8 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
                  "text": decode_text(rom, a[i:t + 2], "stage", rom.expand, True)}
         if spurious:
             entry["reachable"] = False
+            if operand_owner is not None:
+                entry["reason"] = "vm_pointer_operand"
         if is_brief:
             run_end = t + 2
             entry["briefing"] = True
@@ -573,7 +734,10 @@ def event_text_blocks(rom: GameROM) -> list[dict]:
             if ks:
                 entry["descs"] = ks
         out.append(entry)
-        i = t + 2
+        # A pointer operand can contain an early 00 00 or run into a later real
+        # text block.  Continue from its decoded instruction end, never from
+        # the false candidate's apparent text terminator.
+        i = operand_owner[1] if operand_owner is not None else t + 2
     return out
 
 

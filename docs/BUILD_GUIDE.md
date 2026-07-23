@@ -16,9 +16,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 
 * Input: the Japanese cartridge dump, sha1 `12443b91297a57bcd2ace8da989c26ae635a79fd`.
-* Output: `sd-gundam-g-generation-zh.nds`, 30,359,400 B, sha1
-  `3fcfc0e4dcb7acca500f2619ed66058905023b72`; with `--pad32m` also the 32 MiB 0xFF-padded
-  image (sha1 `b9c917483695d1cbd545ade4f6f4cac6d83c1a4d`). (`data/manifest.json` is the
+* Output: `sd-gundam-g-generation-zh.nds`, 30,361,448 B, sha1
+  `6907e944fd699e33d04700ae3fb4b4f44461fe0c`; with `--pad32m` also the 32 MiB 0xFF-padded
+  image (sha1 `81d285e1dc2c06c13b157db71e5a9cd952983b62`). (`data/manifest.json` is the
   authoritative record of all three hashes.)
 * The build is a **single deterministic pass** (~5 s). Every component is verified against
   `data/manifest.json`; the final ROM hash is verified last. `--skip-verify` downgrades
@@ -27,7 +27,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Then verify:
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (46)
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (50)
 .venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot
 ```
 
@@ -38,7 +38,7 @@ the mapping complete in both directions).
 
 ## 2. What the build does, in order
 
-`build/build.py` orchestrates four component builders (all in `utils/`):
+`build/build.py` orchestrates five component modules (all in `utils/`):
 
 ### Phase 1 — code binary (`utils/arm9_layout.py`)
 
@@ -54,8 +54,8 @@ Starting from the Japanese arm9 image (1,797,560 B):
    parts-name offsets `0x16B474`; UI label literal sites; the text-macro dictionary at
    `0x12D770` (offset repoints + re-encoded entries).
 3. **Write string pools** (`data/zh/placements/` + `zh/event_text.json`): in-place pools (battle names, detail pool,
-   menu descriptors, resident caves), the 1,267 event/briefing text blocks in
-   `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload payloads.
+   menu descriptors, resident caves), the 1,297 event/briefing text blocks in
+   `0x1985A4..0x1AD745`, and the two relocated banks that later become autoload payloads.
 4. **Apply code patches** (`data/patches/code_patches.json`, 39 entries, then
    `data/patches/raw_regions.json`, currently empty): render-path trampolines + caves,
    decoder hooks, one-byte fixes, gameplay threshold tweaks. Every patch asserts its
@@ -89,14 +89,21 @@ For each of the 101 `_STG*.bin` files (data in `data/zh/stages/<name>.json`):
 
 ### Phase 3 — misc data files (`utils/data_files.py`)
 
-Twenty files, four data layouts (schemas in `DATA_FORMATS.md`): bark banks (in-place
+Twenty-one files, four data layouts (schemas in `DATA_FORMATS.md`): bark banks (in-place
 re-encoded runs), the grown cut-in quote bank (whole-file rebuild; its offset table lives
 in arm9 and was already written in phase 1 — the two must agree), fixed-size name tables,
 and raw-tile graphics repaints (asserted against original bytes).
 
-### Phase 4 — container assembly (`utils/rom.py` + ndspy)
+### Phase 4 — gallery resources (`utils/gallery_titles.py`)
 
-Replace `rom.arm9` and the 121 changed NitroFS files **by index** in the loaded Japanese
+Repack the three coupled metadata/string-bank pairs (`43f/440`, `322/323`, `b38/b39`).
+The writer joins character and unit names by runtime roster ID, rewrites only owned offset
+words, preserves all other metadata and fixed tails, reads back every record, and enforces
+the mode0/renderB-trampoline glyph identity plus 6/8/12px width budgets.
+
+### Phase 5 — container assembly (`utils/rom.py` + ndspy)
+
+Replace `rom.arm9` and the 128 changed NitroFS files **by index** in the loaded Japanese
 ROM, `rom.save()`, verify final sha1. ndspy reproduces the container byte-identically
 (header CRC16 recomputed automatically; the stale secure-area CRC is correct behaviour —
 see `ROM_STRUCTURE.md` §1). The 12-byte nitrocode footer rides along as `arm9PostData`.

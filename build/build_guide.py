@@ -464,7 +464,7 @@ def extract_briefings_by_stage(jp: GameROM, zh: GameROM) -> list[dict]:
 
 def extract_events(jp: GameROM, zh: GameROM) -> list[dict]:
     """Off-guide event text: every REACHABLE, NON-briefing inline story block
-    in the arm9 event region (0x198555..0x1AD536).  These are the route-ending
+    in the arm9 event region (0x198555..0x1AD75E).  These are the route-ending
     speeches, the 特殊/特别演习 unlock text and the ending-cutscene climax
     dialogue — they render in-game (owner saves prove it) but are not
     briefing-flagged, so nothing surfaced them for review.  That blind spot is

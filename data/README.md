@@ -5,7 +5,7 @@ holds the two sides of the transform, plus the shared glyph system:
 
 ```
 jp/            GENERATED ground truth: build/extract_data_from_game.py dumps the
-               JP game data (characters, units, stages, event text, banks…) with
+               JP game data (characters, units, stages, event text, gallery…) with
                every record's exact ROM address.  Never hand-edit; regenerate.
 extraction/    curated extractor inputs the bytes can't provide (bio ownership,
                stage speaker attribution).
@@ -31,8 +31,9 @@ Table geometry (bases, strides, field offsets) lives ONCE in
 
 | file | keyed by | what the build writes |
 |---|---|---|
-| `units.json` | `utid` (+ weapon `slot`) | name/weapon pointer words re-aimed at relocated strings (`ptr`; absent = in-place pool rewrite); `carrier_capacity` gameplay override |
-| `characters.json` | `cid`, `idn` = cid×3+slot, `didx` | pilot/ID-command name+summary pointer words; effect-detail offset-table slots |
+| `gallery.json` | `event_no`, raw-keyed extracted `series_id` | 54 EV labels and 28 unique series labels for the six coupled gallery resources; character/unit names are joined from the canonical rosters, not duplicated; extracted JP strings are best-effort annotations, never identity keys |
+| `units.json` | `utid` (+ weapon `slot`) | name/weapon pointer words re-aimed at relocated strings (`ptr`; absent = in-place pool rewrite); `carrier_capacity` gameplay override; optional `gallery_zh` is the width-bounded gallery display alias |
+| `characters.json` | `cid`, `idn` = cid×3+slot, `didx` | pilot/ID-command name+summary pointer words; effect-detail offset-table slots; optional `gallery_zh` is the width-bounded gallery display alias |
 | `ui.json` | pointer sites / dict index | label+ability literal `sites` (JP word asserted via `old_ptr`), dictionary offset slots + in-place entry rewrites (`payload_hex`), resource offset words |
 | `stages/<_STGxx>.json` | `jp_offset` (JP-file coords) | dialogue/script byte-range replacements (`zh_hex` canonical, `jp_len` span, `built_size` asserted) — `utils/stage_text.py` |
 | `event_text.json` | arm9 `offset` | byte-length-locked story/briefing block payloads |

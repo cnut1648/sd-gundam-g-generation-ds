@@ -40,7 +40,8 @@ overlays and is not compressed).
 
 ### Text-bearing NitroFS files (the complete changed set)
 
-101 `_STG*.bin` stage scripts (grown; see `STAGE_FORMAT.md`) plus 20 misc files:
+101 `_STG*.bin` stage scripts (grown; see `STAGE_FORMAT.md`) plus 21 misc files and
+six coupled gallery resources:
 
 | file | JP size | role |
 |---|---|---|
@@ -61,10 +62,14 @@ overlays and is not compressed).
 | `3d3.bin` / `3d5.bin` | 3,068 / 1,588 | BackStage hub tab labels (作战/编成/MS开发/系统) — raw BG tiles, repainted |
 | `478.bin` | 3,312 | in-combat force-HUD faction table (战舰/自军/友军/敌军) — raw 4bpp BG tiles (file id 949; tile block @ 0x610) |
 | `48a.bin` | 3,312 | terrain/movement badge OBJ tiles (回避/通/宇/飞/地/水) — raw tiles, `offset = tile*32 + 784` |
+| `c31.bin` | 2,744 | dialogue nameplate main-green frame-edge tiles for the widened 14×2-tile surface |
 | `b6e.bin` | 416 | parts **names** (40 entries: 30 real + 10 予備 spares; arm9 offset table, see map) |
 | `b6f.bin` | 1,936 | parts **captions/descriptions** (own arm9 offset table) |
+| `43f.bin` / `440.bin` | 428 → **633** / 440 | EV-viewer title string bank + 54-record offset catalogue |
+| `322.bin` / `323.bin` | 5,500 / 2,192 → **3,184** | character gallery metadata (274 records) + shared name/series string bank |
+| `b38.bin` / `b39.bin` | 4,800 / 2,160 → **2,838** | unit gallery metadata (239 records) + shared name/series string bank |
 
-Everything not listed above (3,133 files incl. `sound_data.sdat`) is byte-identical to JP.
+Everything not listed above (3,126 files incl. `sound_data.sdat`) is byte-identical to JP.
 
 ---
 

@@ -261,6 +261,37 @@ def main() -> int:
             notes.append(f"31e@{e['offset']}: not a name start")
     rep.add("weapon_names (31e)", total, matched, notes)
 
+    # Gallery title translations are intentionally normalized: data/zh carries
+    # 54 EV rows + 28 unique series rows, while 513 names join the canonical
+    # rosters by runtime id.  Reconcile all three identity sets explicitly.
+    gallery_jp = _j("jp/gallery.json")
+    gallery_zh = _j("zh/gallery.json")
+    live_ev = {row["event_no"] for row in W.ev_gallery_titles(rom)["records"]}
+    total = len(gallery_zh.get("ev_titles", []))
+    matched = sum(row.get("event_no") in live_ev for row in gallery_zh.get("ev_titles", []))
+    notes = [f"EV{row.get('event_no', 0):02d}: no extracted identity"
+             for row in gallery_zh.get("ev_titles", []) if row.get("event_no") not in live_ev]
+    rep.add("gallery EV titles (43f/440)", total, matched, notes)
+
+    referenced_series = {
+        row["series_id"]
+        for section in ("characters", "units")
+        for row in gallery_jp[section]["records"]
+    }
+    total = len(gallery_zh.get("series", []))
+    matched = sum(row.get("series_id") in referenced_series
+                  for row in gallery_zh.get("series", []))
+    notes = [f"{row.get('series_id')}: not referenced by extracted gallery records"
+             for row in gallery_zh.get("series", [])
+             if row.get("series_id") not in referenced_series]
+    rep.add("gallery unique series", total, matched, notes)
+
+    from utils import gallery_titles
+    gallery_counts = gallery_titles.validate_gallery_data()
+    total = gallery_counts["records"]
+    matched = sum(len(gallery_jp[section]["records"]) for section in ("characters", "units"))
+    rep.add("gallery roster-id joins", total, matched, [])
+
     pt = W.parts(rom)
     part_idx = {p["index"] for p in pt}
     cap_offs = {int(p["caption"]["off"], 16) for p in pt if "caption" in p}

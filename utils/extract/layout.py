@@ -132,6 +132,34 @@ PART_CAP_OFFTAB = 0x16B518      # u32[41] -> b6f.bin
 PART_COUNT = 41
 PART_NAME_FILE, PART_CAP_FILE = "b6e.bin", "b6f.bin"
 
+# EV / character / unit gallery title resources (mode0/renderB trampoline).
+# Translated high slots draw from renderA; real advances are mixed 6/8/12px,
+# never a blanket fixed-cell width.
+# These are coupled metadata+string-bank pairs: metadata words contain offsets
+# relative to the companion bank, so the banks must be rebuilt together.
+EV_GALLERY_TITLE_FILE = "43f.bin"
+EV_GALLERY_CATALOG_FILE = "440.bin"
+EV_GALLERY_TITLE_PREFIX = bytes.fromhex("e0 30 00")
+EV_GALLERY_CATALOG_HEADER = bytes.fromhex("37 00 00 00 00 00 00 00")
+EV_GALLERY_COUNT = 54
+EV_GALLERY_RECORD_SIZE = 8
+EV_GALLERY_TITLE_BUDGET_PX = 104
+
+GALLERY_METADATA_STRIDE = 20
+CHAR_GALLERY_METADATA_FILE = "322.bin"
+CHAR_GALLERY_STRING_FILE = "323.bin"
+CHAR_GALLERY_COUNT = 274
+CHAR_GALLERY_ROSTER_ID = 0x0A
+CHAR_GALLERY_BIO_ID = 0x0C
+UNIT_GALLERY_METADATA_FILE = "b38.bin"
+UNIT_GALLERY_STRING_FILE = "b39.bin"
+UNIT_GALLERY_COUNT = 239
+UNIT_GALLERY_ROSTER_ID = 0x08
+UNIT_GALLERY_BIO_ID = 0x0A
+CHAR_GALLERY_NAME_BUDGET_PX = 88
+UNIT_GALLERY_NAME_BUDGET_PX = 112
+LIBRARY_GALLERY_SERIES_BUDGET_PX = 104
+
 # ---------------------------------------------------------------------------
 # stage descriptors + briefing / event-text region (arm9-inline story text)
 # ---------------------------------------------------------------------------
@@ -150,9 +178,16 @@ BRIEF_MAX_GAP = 0x800            # per-stage briefings form ONE contiguous span
                                  # marks the story-digest / gallery cutscenes
                                  # (『宇宙世紀0079…』 recap et al.) that render like
                                  # briefings but own no descriptor — not briefings.
-EVENT_TEXT_LO, EVENT_TEXT_HI = 0x198555, 0x1AD536   # full inline story-text region
+EVENT_TEXT_LO, EVENT_TEXT_HI = 0x198555, 0x1AD75E   # full inline story-text region
                                  # (briefings + route/event blocks; the committed
-                                 # event_text edits span 0x1985A4..0x1AD516)
+                                 # event_text edits span 0x1985A4..0x1AD745;
+                                 # 0x1AD75E is the exclusive end of the final
+                                 # EV replay text block, immediately followed by
+                                 # VM opcode 06 at 0x1AD75E)
+EVENT_TEXT_VM_OPERAND_AUDIT_LO = 0x1AD536
+                                 # former exclusive bound; the newly exposed
+                                 # tail is instruction-audited so 0x15 bytes in
+                                 # CALL/GOTO/CGOTO target operands stay non-live
 
 # ---------------------------------------------------------------------------
 # stage event-VM (dialogue script files _STG*.bin; disassembly-audited)
