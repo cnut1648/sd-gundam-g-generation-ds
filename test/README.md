@@ -88,6 +88,10 @@ JIT off, software renderer, the 12-button keyboard map, optional gdb stub).
 # native-resolution lower-strip ink probes (an unfixed build scores 0/6)
 .venv/bin/python test/live/test_row_clip.py <rom> [--sav PATH]
 
+# py-desmume normal-flow capture of all 4 BackStage roots and all 12 submenu
+# items. No savestate or RAM mutation.
+.venv/bin/python test/live/capture_backstage_tabs.py <rom> [--sav PATH] [--slot 1]
+
 # in-combat ID cut-in freeze grind (~15-25 min, run 3x for a shipping verdict):
 # fresh grind to combat, queue ID commands, battle start; frame-identity + gdb
 # ARM9-PC oracles (BIOS abort spin = freeze)

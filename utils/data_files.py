@@ -1,10 +1,10 @@
 """Builders for the miscellaneous translated NitroFS data files.
 
-Twenty flat data files outside the stage-dialogue (_STG*) system carry
+Twenty-five flat data files outside the stage-dialogue (_STG*) system carry
 translated content: battle-voice barks, battle cut-in quotes, ID command /
 ability effect labels, special ability & defense descriptions, encyclopedia
 biographies, weapon and part names, and a handful of raw-tile UI graphics.
-Their translation data lives under ``data/zh/files/`` in four JSON layouts:
+Their translation data lives under ``data/zh/files/`` in five JSON layouts:
 
   * ``edits``         — in-place rewrites of a fixed-layout text bank: each edit
                         re-encodes ``zh`` (utils.text_codec) at ``offset`` and
@@ -22,6 +22,10 @@ Their translation data lives under ``data/zh/files/`` in four JSON layouts:
   * ``graphics``      — raw-tile bitmap repaints (not text): each region carries
                         the original bytes (``jp_hex``, asserted before writing)
                         and the replacement bytes (``zh_hex``).
+  * ``atlas_graphics`` — static BG labels rebuilt directly from committed
+                        12x12 atlas cells, with explicit text boxes. Shared-tile
+                        resources use a fixed-capacity copy-on-write repack
+                        (no host font rasterizer and no file growth).
 
 Text fields use the game text codec (utils.text_codec): plain characters plus
 byte-faithful escapes — ``{00}`` separators/padding, ``{03}``/``{04}`` control
@@ -42,7 +46,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-from . import text_codec
+from . import static_graphics, text_codec
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 FILES_DIR = DATA_DIR / "zh" / "files"
@@ -64,9 +68,13 @@ DATA_FILE_TABLES = {
     "c4b.bin": "library/unit_bios.json",
     "b6e.bin": "hangar/part_names.json",
     "b6f.bin": "hangar/part_captions.json",
+    "42d.bin": "graphics/42d.json",
     "388.bin": "graphics/388.json",
     "3d3.bin": "graphics/3d3.json",
+    "3d4.bin": "graphics/3d4.json",
     "3d5.bin": "graphics/3d5.json",
+    "3d6.bin": "graphics/3d6.json",
+    "3d7.bin": "graphics/3d7.json",
     "478.bin": "graphics/478.json",
     "48a.bin": "graphics/48a.json",
     "c31.bin": "graphics/c31.json",
@@ -198,11 +206,24 @@ def _build_graphics(table: dict, jp: bytes) -> bytes:
     return bytes(buf)
 
 
+def _build_atlas_graphics(table: dict, jp: bytes) -> bytes:
+    """Static BG labels rebuilt from the committed 12x12 atlas."""
+    charmap = json.loads((DATA_DIR / "charmap.json").read_text(encoding="utf-8"))
+    atlas = (DATA_DIR / "font" / "atlas12.bin").read_bytes()
+    return static_graphics.repaint_atlas_text(
+        jp,
+        table,
+        atlas=atlas,
+        char_slots=charmap["two_byte_zh"],
+    )
+
+
 _BUILDERS = {
     "edits": _build_edits,
     "cutin_groups": _build_cutin_groups,
     "table": _build_table,
     "graphics": _build_graphics,
+    "atlas_graphics": _build_atlas_graphics,
     "bio_bank": _build_bio_bank,
 }
 

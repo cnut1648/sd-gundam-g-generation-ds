@@ -29,7 +29,7 @@ two moves:
 
        [12x12 glyph atlas]   -> RAM 0x023027A0   data/font/atlas12.bin
        [UI/name string bank] -> RAM 0x02328720   data/zh/placements/ui_names_bank.json
-       [briefing blob bank]  -> RAM 0x023E7000   data/zh/placements/briefing_blobs.json
+       [briefing/help bank]  -> RAM 0x023E7000   data/zh/placements/briefing_blobs.json
        [5-entry autoload list]
 
    The autoload loader walks the list forward while its SOURCE pointer advances
@@ -40,8 +40,8 @@ two moves:
        at the byte where clearing STOPS, the byte the original heap began at;
      * the heap floor literal (arena-lo) is bumped past the UI bank so the heap
        can never overwrite it;
-     * the briefing bank lives above the heap ceiling (arena-hi 0x023C0000) in a
-       RAM gap that is zero in every game state, so it needs no heap change.
+     * the briefing/help bank lives above the heap ceiling (arena-hi 0x023C0000)
+       in a RAM gap that is zero in every game state, so it needs no heap change.
    Module-params words at 0xB0C/0xB10 must point at the relocated list, the
    renderer's atlas base literal at 0x1315C at the relocated atlas, and the
    arena-lo literal at 0xA48F8 at the first free byte above the UI bank.

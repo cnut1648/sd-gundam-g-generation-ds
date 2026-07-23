@@ -27,7 +27,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 Then verify:
 
 ```bash
-.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (46)
+.venv/bin/python test/run_static.py sd-gundam-g-generation-zh.nds          # static gates (48)
 .venv/bin/python test/live/test_boot_render.py sd-gundam-g-generation-zh.nds  # emulator boot
 ```
 
@@ -55,7 +55,8 @@ Starting from the Japanese arm9 image (1,797,560 B):
    `0x12D770` (offset repoints + re-encoded entries).
 3. **Write string pools** (`data/zh/placements/` + `zh/event_text.json`): in-place pools (battle names, detail pool,
    menu descriptors, resident caves), the 1,267 event/briefing text blocks in
-   `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload payloads.
+   `0x1985A4..0x1AD520`, and the two relocated banks that later become autoload
+   payloads (pool B also owns the 18 BackStage help strings).
 4. **Apply code patches** (`data/patches/code_patches.json`, 39 entries, then
    `data/patches/raw_regions.json`, currently empty): render-path trampolines + caves,
    decoder hooks, one-byte fixes, gameplay threshold tweaks. Every patch asserts its
@@ -65,7 +66,7 @@ Starting from the Japanese arm9 image (1,797,560 B):
    includes them in the writer-overlap scan; the `hp_format_liveness` invariant pins the
    ISSUE-6 "D4"/"/D4" HP format strings and their four consumer literals byte-exact JP).
 5. **Append the autoload tail**: 12×12 glyph atlas (`data/font/atlas12.bin`, `0x25F80` B)
-   + pool A (`0x2028C` B) + pool B (`0x98FC` B) + the new 5-entry autoload list; patch
+   + pool A (`0x2028C` B) + pool B (`0x9A9C` B) + the new 5-entry autoload list; patch
    ModuleParams (`0xB0C/0xB10`), the renderer atlas pointer (`0x1315C` → `0x023027A0`)
    and the heap floor (`0xA48F8` → `0x02348A00`). Mechanism: `ROM_STRUCTURE.md` §3.
 6. **Self-check** — sha1 vs `data/manifest.json`.
@@ -89,14 +90,16 @@ For each of the 101 `_STG*.bin` files (data in `data/zh/stages/<name>.json`):
 
 ### Phase 3 — misc data files (`utils/data_files.py`)
 
-Twenty files, four data layouts (schemas in `DATA_FORMATS.md`): bark banks (in-place
+Twenty-five files, five data layouts (schemas in `DATA_FORMATS.md`): bark banks (in-place
 re-encoded runs), the grown cut-in quote bank (whole-file rebuild; its offset table lives
 in arm9 and was already written in phase 1 — the two must agree), fixed-size name tables,
-and raw-tile graphics repaints (asserted against original bytes).
+raw-tile graphics repaints (asserted against original bytes), and all five BackStage
+menu resources regenerated from committed 12x12 atlas cells. Their shared tiles are
+copy-on-write repacked/deduplicated within the original fixed capacities.
 
 ### Phase 4 — container assembly (`utils/rom.py` + ndspy)
 
-Replace `rom.arm9` and the 121 changed NitroFS files **by index** in the loaded Japanese
+Replace `rom.arm9` and the 125 changed NitroFS files **by index** in the loaded Japanese
 ROM, `rom.save()`, verify final sha1. ndspy reproduces the container byte-identically
 (header CRC16 recomputed automatically; the stale secure-area CRC is correct behaviour —
 see `ROM_STRUCTURE.md` §1). The 12-byte nitrocode footer rides along as `arm9PostData`.

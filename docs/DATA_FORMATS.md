@@ -154,14 +154,15 @@ offsets into arm9, or bank-relative for the autoload banks):
 
 ## zh/files/ (→ `utils/data_files.py`)
 
-`data/zh/files/README.md` documents each of the 20 files; four layouts:
+`data/zh/files/README.md` documents each of the 25 files; five layouts:
 
 | layout | used by | model |
 |---|---|---|
 | `edits` | bark banks `0/1/1dd/1de/c4f`, `1db`, `1df`, `1e0`, `31e`, `324`, `c4b`, `b6f`, `1da` | in-place runs: re-encode `zh` at `offset`, 0x00-pad to `size`; optional `append` block (grown `1da`) |
 | `cutin_groups` | `1dc` | whole-file rebuild: per record `header` + encoded `zh` + terminator `00 03 00 01` + 4-byte alignment padding; the arm9 offset table is derived from this file at build time |
 | `table` | `b6e` | fixed-total-size name table rebuilt from entries at explicit offsets; `name_offset_words` patches the mirroring arm9 table |
-| `graphics` | `388`, `3d3`, `3d5`, `478`, `48a` | raw-tile repaints `{offset, jp_hex, zh_hex}` with original-byte asserts (tiles, not text) |
+| `graphics` | `42d`, `388`, `478`, `48a`, `c31` | raw-tile repaints `{offset, jp_hex, zh_hex}` with original-byte asserts (tiles, not text) |
+| `atlas_graphics` | `3d3`–`3d7` | static BG labels rebuilt from committed 12x12 atlas cells; clear boxes and clean donor rows are explicit, and shared-tile resources are copy-on-write repacked/deduplicated within their original capacity |
 
 ## Cross-component couplings (regenerate together)
 
